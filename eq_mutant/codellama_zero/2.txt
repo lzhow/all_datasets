@@ -1,0 +1,2 @@
+  
+No. They are NOT sematically equal because of the difference in the `quicksort` function in line 43. In the original code, there is `lower++`, which means that the value of `upper` will be decreased by  `1` each time the loop is executed. However, in mutated code there are `;`, so the code will skip the execution of this line. Therefore the output of these two programs will differ.

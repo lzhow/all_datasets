@@ -1,0 +1,2 @@
+
+The two code snippets are *not* semantic equivalent. While the first snippet defines a method `min` that takes two integer parameters `I` and `J`, and returns the smaller of the values, the second snippet modifies the condition to check if `Min` is less than `++J` instead of ` J<`. This would result in `No` when executed since the post-increment operator returns its value *after* the increment, which in this case would be `0` given that the initial value of Min is `1`. Meanwhile, `Yes` would have been returned for the *first* snippet.

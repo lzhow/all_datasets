@@ -1,0 +1,94 @@
+[eva:final-states] Values at end of function swap:
+  P ∈ {{ &PSt }}
+  c ∈ {{ &a[0] }}
+  PSt{.temp; .[bits 32 to 63]} ∈ UNINITIALIZED
+     .p1 ∈ {{ &b[0] }}
+     .p2 ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function main:
+  PSt{.temp; .[bits 32 to 63]} ∈ UNINITIALIZED
+     .p1 ∈ {{ &b[0] }}
+     .p2 ∈ {{ &a[0] }}
+  pstruct ∈ {{ &PSt }}
+  pa ∈ {{ &a[0] }}
+  pb ∈ {{ &b[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "pstruct": [
+    "PSt"
+  ],
+  "pstruct->p1": [
+    "a"
+  ],
+  "pstruct->p2": [
+    "b"
+  ],
+  "pa": [
+    "PSt->p2"
+  ],
+  "pb": [
+    "PSt->p1"
+  ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "P": [
+        "PSt"
+    ],
+    "c": [
+        "a"
+    ],
+    "c63]}": [
+        "UNINITIALIZED"
+    ],
+    "c.p1": [
+        "b"
+    ],
+    "c.p2": [
+        "a"
+    ],
+    "pstruct": [
+        "PSt"
+    ],
+    "pa": [
+        "a"
+    ],
+    "pb": [
+        "b"
+    ]
+} 
+ 
+ Code ************************** 
+ struct ptrstruct{
+    int temp;
+    char * p1;
+    char *p2;
+}; 
+
+void swap(struct ptrstruct ** pstruct) {
+   struct ptrstruct *P = *pstruct;
+   char * c;
+   c = P->p1;
+   P->p1 = P->p2;
+   P->p2 = c;
+}
+
+ 
+
+int main (){
+    struct ptrstruct PSt;
+    struct ptrstruct * pstruct = &PSt;
+    char * pa, * pb;
+    char b[20];
+    char a[20];
+ 
+    PSt.p1 = a;
+    PSt.p2 = b;
+
+    swap (&pstruct);
+    pa = PSt.p2;
+    pb = PSt.p1;
+}
+
+

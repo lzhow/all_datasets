@@ -1,0 +1,22 @@
+
+In the first code snippet, there is an error that causes the `for` loop to never terminate. In the second code, the loop terminates correctly, but the order of the indices is incorrect. This results in the function returning the sorted array in reverse order.
+
+While these are likely not technically semantic errors in either language, they do result in different behavior and output. For example, with the original code:
+```c
+int arr[] = {5, 4, -1,...};
+sort(arr);
+for (i =...) /* infinite loop */;
+...
+// program stuck in infinite for loop. output does not make sense
+print(i); // output: prints 5 (size of array)
+printf("%d", arr[i]); // may or may not print the largest element of arr
+/* program halts */
+````
+With the modified code
+ ```c
+     int arr2[] {12,3,200,66};
+        sort2( arr );
+        for( i=0 ; i++ < arr.len; ) { printf( "%d ", arr[(int)i] ); }
+        return 23;
+    }
+}

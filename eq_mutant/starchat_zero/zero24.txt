@@ -1,0 +1,6 @@
+
+yes, although one contains an error (a variable that is not defined).
+
+However, both of them are buggy code as they do not handle infinities properly, so the correct result of `sqrt(-1)` is `nan`.
+When compiled in most programming languages, including C++, `std::sqrt` function handles the `inf` and `ninf `values properly.
+The `java.lang.Math` library also handles infinity and nan properly so both `Math::pow` functions return infinity on the given input and both outputs have correct results.

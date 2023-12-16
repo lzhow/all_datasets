@@ -1,0 +1,48 @@
+[eva:final-states] Values at end of function h:
+  b[0] ∈ {0}
+   [1..19] ∈ UNINITIALIZED
+  __retres ∈ {0}
+[eva:final-states] Values at end of function f:
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "b": [
+    "a"
+  ],
+  "a": []
+} 
+ ************************** Frama-c ************************** 
+ {
+    "b[0]": [],
+    "b[1..19]": [
+        "UNINITIALIZED"
+    ]
+} 
+ 
+ Code ************************** 
+ char h(char * a) {
+   *a = 0;
+   return 0;
+}
+
+char g(char * a) {
+    *a = 0;
+    return 0;
+}
+
+char * f(char * a, int flag) {
+   if (flag == 1) h(a);
+   else g(a);
+}
+
+
+int main (){
+    char b[20];
+    char a[20];
+
+    f(b, 1);
+    f(a, 2);
+}
+
+

@@ -1,0 +1,67 @@
+  obj ∈ {0}
+  t ∈ {0}
+  s ∈ {0}
+[eva:final-states] Values at end of function foo:
+  d ∈ {{ &obj }}
+[eva:final-states] Values at end of function main:
+  x ∈ {{ &d }}
+  y ∈ {{ &d }}
+  c ∈ {{ &s }}
+  d ∈ {{ &obj }}
+  e ∈ {{ &t }}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "x": [
+    "c",
+    "d"
+  ],
+  "y": [
+    "e",
+    "d"
+  ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "obj": [],
+    "t": [],
+    "s": [],
+    "d": [
+        "obj"
+    ],
+    "x": [
+        "d"
+    ],
+    "y": [
+        "d"
+    ],
+    "c": [
+        "s"
+    ],
+    "e": [
+        "t"
+    ]
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+int obj, t,s;
+void foo(int**, int**);
+
+void main(){
+	int **x, **y;
+	int *a, *b, *c, *d,*e;
+	e = &t; d = &obj;
+	c = &s;
+	if(t) { x =&c; y =&e;}
+	else { x= &d; y = &d;}
+    foo(x,y);
+    // NOALIAS(c,&obj);
+    // NOALIAS(d,&t);
+	
+}
+
+void foo(int **p, int **q){
+	*p = *q;
+}

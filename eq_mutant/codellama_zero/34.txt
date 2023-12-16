@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different outputs. In the original code, `first` will be incremented by  `1` before the recursive call to `quicksort`. In contrast, in the mutated code `--` operator is used to decrement ` first` by one before making the call. This will result in a different partition of the array and a potentially different output.

@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different outputs. In the original code, if `diff` < `0`, then the value of `m` will be updated to `N`, and the new value for `r` (which is returned) will also be `sqrt(N)`. However, in the mutated code snippet, this condition is always false, so the `if` statement is never executed, and `n` remains unchanged. Therefore the output of the program will differ.

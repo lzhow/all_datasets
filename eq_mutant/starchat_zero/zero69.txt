@@ -1,0 +1,11 @@
+
+The two provided codes snippets are **not** semantic equivalent in both C and Java because of the differences in the for loop condition between the original code and the mutated code.
+
+In C, the condition of a for-loop is evaluated before each loop iteration. Therefore, in your first code snippet, i is incremented before the check on the array length, which would result in an infinite loop when data contains less than two elements. On the other hand, with Java, for loops use an enhanced for syntax which iterates through the elements of an array. When comparing array lengths with the equals operator in Java the result is always false since arrays in java are of type Object[], and integer arrays are incompatible with Object arrays. So the first for statement would always be false. Instead, you should use the length method to compare the lengths of arrays that were already cast to a more specific type. For example:
+```java
+for (Integer i : a)
+    if(i > max) max=i;
+// instead of
+int[] b =...; // assume b is an int array
+Integer max2=Integer.MIN_VALUE; 
+max2 = Math.max(max, b[0]); // note that b's

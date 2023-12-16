@@ -1,0 +1,181 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+Here are three semantically equal examples:  
+The first example pair is
+``` Code 1
+double f(double M, double x) {
+    x = (M + x) / 2;
+    return x;
+ }
+```
+``` Mutant Code 1
+double f(double M, double x) {
+    x = (M + x++ ) / 2;
+    return x;
+ }
+```
+Yes. The two codes are semantically euqal because `M + x++` first does `M + x` and then `x++`. Therefore, `(M + x) / 2` is the same with `(M + x++) / 2`.
+
+
+The second example pair is 
+``` Code 2
+double f(int x, int divisor){
+   return x*divisor;
+}
+```
+```Mutant Code 2
+double f(int x, int divisor){
+    return x*divisor++;
+}
+```
+Yes. The two codes are semantically euqal because `x*divisor` first does `x*divisor` and then `divisor++`. The two functions return the same values.
+
+
+The third example pair is 
+``` Code 3
+int f(int a, int y, int x){
+    int p = a;
+    p = x + y;
+    return p;
+}
+```
+``` Mutant Code 3
+int f(int a, int y, int x){
+    int p = 1;
+    p = x + y;
+    return p;
+}
+```
+Yes. The two codes are semantically euqal because the local value `p` is re-assigned by `x+y`. There, the change `int p = 1;` will not affect the function.
+
+  
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+// This is a mutant program.
+// Author : ysma
+
+public class QuickSort
+{
+
+    private  void quicksort( int[] data, int first, int last )
+    {
+        int lower = first + 1;
+        int upper = last;
+        swap( data, first, (first + last) / 2 );
+        int bound = data[first];
+        while (lower <= upper) {
+            while (bound > data[lower]) {
+                lower++;
+            }
+            while (bound < data[upper]) {
+                upper--;
+            }
+            if (lower < upper) {
+                swap( data, lower++, upper-- );
+            } else {
+                lower++;
+            }
+        }
+        swap( data, upper, first );
+        if (first < upper - 1) {
+            quicksort( data, first, upper - 1 );
+        }
+        if (upper + 1 < last) {
+            quicksort( data, upper + 1, last );
+        }
+    }
+
+    public  void sort( int[] data )
+    {
+        if (data.length < 2) {
+            return;
+        }
+        int max = 0;
+        for (int i = 1; i < data.length; i++) {
+            if (data[max] < data[i]) {
+                max = i;
+            }
+        }
+        swap( data, data.length - 1, max );
+        quicksort( data, 0, data.length - 2 );
+    }
+
+    public  void swap( int[] data, int i, int j )
+    {
+        int tmp = data[i];
+        data[i] = data[j];
+        data[j] = tmp;
+    }
+
+}
+
+```
+```Mutant Code 
+// This is a mutant program.
+// Author : ysma
+
+public class QuickSort
+{
+
+    private  void quicksort( int[] data, int first, int last )
+    {
+        int lower = first + 1;
+        int upper = last;
+        swap( data, first, (first + last) / 2 );
+        int bound = data[first];
+        while (--lower <= upper) {
+            while (bound > data[lower]) {
+                lower++;
+            }
+            while (bound < data[upper]) {
+                upper--;
+            }
+            if (lower < upper) {
+                swap( data, lower++, upper-- );
+            } else {
+                lower++;
+            }
+        }
+        swap( data, upper, first );
+        if (first < upper - 1) {
+            quicksort( data, first, upper - 1 );
+        }
+        if (upper + 1 < last) {
+            quicksort( data, upper + 1, last );
+        }
+    }
+
+    public  void sort( int[] data )
+    {
+        if (data.length < 2) {
+            return;
+        }
+        int max = 0;
+        for (int i = 1; i < data.length; i++) {
+            if (data[max] < data[i]) {
+                max = i;
+            }
+        }
+        swap( data, data.length - 1, max );
+        quicksort( data, 0, data.length - 2 );
+    }
+
+    public  void swap( int[] data, int i, int j )
+    {
+        int tmp = data[i];
+        data[i] = data[j];
+        data[j] = tmp;
+    }
+
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -13 +13 @@
+-        while (lower <= upper) {
++        while (--lower <= upper) {
+
+    ```

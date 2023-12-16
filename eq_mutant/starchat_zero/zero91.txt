@@ -1,0 +1,8 @@
+
+The two programs are **semantically** not equal because they produce different outputs. Here is an example to illustrate this:
+Input: `4 8 3 6 5 9 7 4`
+Output for the first program: `[3,4,5,6,7,8,9]`
+
+Now for mutated program, input becomes: `-4 -8 -3 -6 -5 -9 -7 -4`, and output is: 
+`[-7,-9,-8,-6,-5,-4,-3,-2]` which is different than the output for first unmutated code.
+This shows that the outputs of both programs when fed with same inputs are different, and hence semantic equality cannot be guaranteed.

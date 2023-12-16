@@ -1,0 +1,2 @@
+
+No. Mutating the original code and removing the validation check first < … will result in a stack overflow if an array containing negative numbers is passed in, as the recursive call for quickSort will cause lower to be incremented indefinitely.

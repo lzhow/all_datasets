@@ -1,0 +1,2 @@
+
+Semantic equality means that executing code A and code B will produce the exact same result when given exactly the sam einput. That's hard to tell looking at the code because it's not clear what the inputs are, and because some lines in the input may have side effects that affect later code. However, if you think of the values produced by code as "being in registers" and only "moving around" when assigned, you might be able to understand that `a = b` would not necessarily be semantic equivalent to `b = c; a=b`.

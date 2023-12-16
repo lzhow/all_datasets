@@ -1,0 +1,4 @@
+
+No, these are *not* semantic equivalent in the following ways:
+1) Mutated conditionals, changing `diff<0` to `!diff>0`.
+2) Mutation of the loop termination condition. It is currently `while (absDiff > epsilon)`, while the mutation changes it to while `abs_diff >= epsilon`. This changes the condition from being a strict inequality to a non-strict inequivalent, and as such, will cause the code to continue looping infinitely because absDiff is always positive.

@@ -1,0 +1,2 @@
+
+No, they're not semantic equivalent. This is because, even if all the computations happen in the exact same order, two different interpretations of code may give different results due to the presence of implicit side-effects. In the first code snippet, `i++`, while being a valid expression in many programming languages, is not actually a pure computation that would produce the desired result. That's because it modifies the input variable `a` in-place. So, while the overall result might still be the correct one for the given inputs, it's just not the intended one.

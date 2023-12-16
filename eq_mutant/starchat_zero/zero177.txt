@@ -1,0 +1,4 @@
+
+The two code blocks provided are **NOT** semantic equal, and their meaning is **not** the saame. The original code block sets a variable named `bonus` depending on the input value `i`. The mutated code contains a typo, where it sets the condition for the `if` block such that it is checking if `4*i > 5`, which will never evaluate to true as 4 is less than 1. As a result, the mutant code will produce **different** output for every input, even for values of `0` and `1`.
+
+In short, while both blocks compile and execute, they will not produce the **same** result.

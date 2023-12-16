@@ -1,0 +1,2 @@
+
+The two programs are syntactically and semantic-wise identical. The only difference is in the condition of the innermost if statement. Instead of comparing i to 6'0'3' 0's', it is compared to i % 5'4'8'' 8's'. The result is the exact same, but the second program is safer, as it uses the correct mod operator to avoid integer overflow.

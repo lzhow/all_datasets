@@ -1,0 +1,2 @@
+
+`no`, because in the original code, `t` will be assigned `a` before `c` becomes `b`. In the mutant code `if (a > c)`, `++a;` is executed before the assignment ` t = c;`

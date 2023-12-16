@@ -1,0 +1,7 @@
+
+There are some differences here, and I think you're conflating two different things here:
+
+1. **Code vs Mutated Code:** While it is certainly possible to write mutants, they may not match the behavior of the original code in all cases. To be truly effective, a test suite that contains all possible inputs must be employed. By itself, it's not enough to prove that two code samples have *the same* behavior. They also need to produce the *same* outputs given *similar* inputs. That's what we mean when we say "semantically equivalent."
+2. **`int` vs `Integer`:** Java and C handle integers differently. In Java, primitives like `byte`, `short`, and `char` are all sub-classes of `Number`. However, in some cases, you may need an `integer` object that has a `compareTo()` method, for example. As far as the mutator is concerned, both of these types of integers are treated identically, even though the semantics may be quite different. 
+
+So, while it can be tempting to use an automated tool like a mutation testing framework to generate mutated code and check for equivalence, we need a very careful approach to

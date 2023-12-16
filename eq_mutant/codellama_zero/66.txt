@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, `quicksort` function is called with `data,0,data.length-2`, while in the mutated code it is ` data,0 ~ data. length -2 `. The `~` operator is not defined in Java, so the code will throw a compile error.

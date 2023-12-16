@@ -1,0 +1,4 @@
+
+No. the first code block is calling swap function twice with a and b arguments in the swap call. Since a is an implicit parameter, and Java does not allow rebinding variables, this results in an error. 
+
+In the second block, however, you are redefining first in a way that violates its scope. That could change its behavior at runtime.

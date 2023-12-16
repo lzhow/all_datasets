@@ -1,0 +1,292 @@
+<s> 
+    
+  You are a pointer analysis tool for programs. I will provide a file to you and you do the pointer analysis about it. You analyze what varaibles the pointers points to in the provided code. 
+  The output format is json file. You don't need to give me your explanation.
+
+
+    Here's your input file: int main(){
+    int* a[100];
+    int *b,c,k;
+    int e[20];
+
+	if(b)
+    e[10] = c;
+
+	*a = k;
+
+}
+
+
+    Here's your output:
+
+   {
+    "main": {
+        "a": {
+            "type": "array",
+            "size": 100,
+            "element_type": "pointer",
+            "element_size": 4,
+            "elements": [
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,
+                    "points_to": "k"
+                },
+                {
+                    "type": "pointer",
+                    "size": 4,

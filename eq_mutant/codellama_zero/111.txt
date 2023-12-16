@@ -1,0 +1,2 @@
+  
+No. They are NOT sematically equal because of the difference in the patch. In the original code, there is an `else if` statement that checks if `i` less than or equal to 4 million. However, in mutant code there are two `if` statements that check if i is less or greater than 6 million, and the `return` value is different. Therefore the mutated code will produce different results than the unmutated one.

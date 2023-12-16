@@ -1,0 +1,6 @@
+
+In C, two semantic equal code snippets are either syntactically or structurally equivalent.
+
+By structual equivalence, we mean that an equivalent execution of the code will result in the exact same behavior and output. For example, if two functions are structually equivalent, they will produce the exactly same result when called with the identical inputs. The exact definition of structural equivalency can vary depending on the programming language. Some languages may only consider statements to be structuraully equal if their exact location in memory is the samw, while others may consider them to also be equal even if some statements are moved around in code. 
+
+However, it is worth noting that the notion of semantic equivalance is a much richer and nuanced concept that is not always captured structrurallly. Two functions that are syntatically equivalent but semanticallt different may still behave identically when given identical inupts, but their outputs will likely not be the smae. In fact, the example of mutated variables in your code snippet is an example where this is true.

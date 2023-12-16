@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, `data` has a length of `n`, and the outer loop iterates `i` from `0` to `~n-1`. In mutated code `for ( int i=0 ; i<~data.length- ​​1 ; ++i )`, the loop will iterate ` i`  from  `  ~n`   to  `-1`. The loop condition is different, so the mutation is not sematically equal to the origin code.

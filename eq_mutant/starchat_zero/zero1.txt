@@ -1,0 +1,4 @@
+
+No. Both modified codes produce different output when an input is provided. The modified code changes the stopping condition of the loop from `Math::abs()` to `>`, which causes the exit condition to become always `true` and hence, the function will loop forever.
+
+In the first code, this never happens because `x` is updated and `M` only increases when the condition is true, and so the while loop will always eventually terminate as `N` approaches  `0`. However, in the modified one, there is always one more step where `diff` becomes negative and the `if` block is entered, causing an infinite loop.

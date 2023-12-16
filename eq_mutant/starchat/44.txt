@@ -1,0 +1,4 @@
+
+It looks like the patches are functionally equivalent, but not semanticall equivalent. Both patches change the value of `a` in the main function, since it is used in an if statement to determine which of the `if` branches to take. However, `++t` changes the actual value that is stored in `t`, whereas `b` remains unchanged. 
+
+Thus, while the program may work the way it was intended, it could give different answers depending on how it's compiled.

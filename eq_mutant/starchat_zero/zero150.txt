@@ -1,0 +1,19 @@
+
+In C, the line `b = abs( c );` may have undefined behavior if `c` is negative. This is because `abs()` is defined as `return x <  y? -x : y;`, which can have unexpected results for negative values of `x` and `y`. In Java, `Math.abs(-2)` evaluates to `2`, so the behavior of the mutated program would be the equivalent of:
+```java
+if (a > b) {
+    int temp = a;
+    a = b; 
+    b = temp;
+}
+
+// This block can be further reduced to
+a = Math.max( a,b );
+b  =Math.max (b,c );
+    
+boolean mutant =  ( a <= c ) && ( b <=c ) ;
+return mutants?  :  a == b ?  3   : a== c || b == c?   2 ,  1  ; 
+},
+ // This reduced block of code results in a TCE 
+ // since c and b are compared in the returned expression
+(mutant && a > c && b >c?  return  0  )  else return -

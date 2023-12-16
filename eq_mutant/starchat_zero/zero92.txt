@@ -1,0 +1,13 @@
+
+In C: yes
+
+```bash
+git clone https://github.com/tree-sitter/libgit2-src.git
+cd libgit…
+patch -p1 <<EOF
+--- a/src/map.h
++++ b/tmp.txt
+@@ -119,7 +1207,8 @@
+ #define git_map_iterate(map, iter) \
+         git_##map##_foreach(iter, &((map)->ptr), &(((map) + (map ## _entry_offset))->key), (size_t)1U)
+…

@@ -1,0 +1,53 @@
+{
+  "main": {
+    "Declarations": {
+      "p": {
+        "type": "int **",
+        "location": "stack-0"
+      },
+      "q": {
+        "type": "int *",
+        "location": "stack-0"
+      },
+      "a": {
+        "type": "int *",
+        "location": "stack-0"
+      },
+      "b": {
+        "type": "int *",
+        "location": "stack-0"
+      },
+      "c": {
+        "type": "int",
+        "location": "stack-0"
+      },
+      "d": {
+        "type": "int",
+        "location": "stack-0"
+      }
+    },
+    "Pointers": {
+      "p": {
+        "points_to": [
+          "q"
+        ]
+      },
+      "q": {
+        "points_to": [
+          "c",
+          "d"
+        ]
+      },
+      "a": {
+        "points_to": [
+          "c"
+        ]
+      },
+      "b": {
+        "points_to": [
+          "d"
+        ]
+      }
+    }
+  }
+}

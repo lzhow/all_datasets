@@ -1,0 +1,4 @@
+
+Yes, they're semantic equivalent. In C, the code is executed from top to bottom. The code has the exact same outcome given exactly thesame inputs.
+
+In the provided diff, however, it can be seen that the mutations are only at lines 6-7 and 8-9 in the `Mutated Code`. These small changes do not change the output of the program. That is, in both the original code as well as the mutated code, `a`, `b`, and `c` are treated as `unsigned ints`.

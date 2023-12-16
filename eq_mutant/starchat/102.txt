@@ -1,0 +1,6 @@
+
+No, they're not semantic equal because they do different things to the input array. Here are the resulting arrays:
+Code: ```[-129, -81.5,..., 58.25]```  (the inserted number is at index 8)
+Mutated code:  ```[174896063.0,  18868784.752730023,...,  -535080137.62040364]```` (index 9 is replaced with  the inserted value)
+
+ While the behavior is intended, it is not equal in terms of the semantics of what the program is supposed to do.

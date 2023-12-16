@@ -1,0 +1,6 @@
+
+The codes provided are **not** semantic equal in both C and Java because of the following reasons:
+
+**C:**
+1. C does not support the post-increment operator (the `++` operator) for integers. The `leapy++ == 0` statement on line  **46** is therefore invalid code in the C language, and will not compile.
+2. There are syntactic differences between C (e.g., the `int` data type) and the Java programming language. For example, the variable `day` should be declared as a `long` in Java to accommodate for a larger range of values (32-bit integers can represent values only up to  `2,147,483,64` (2^3**1** **+**  *1*4**7**), while `java.lang.Integer` has a maximum value of `9223...`).

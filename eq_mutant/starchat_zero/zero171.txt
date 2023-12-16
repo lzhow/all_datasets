@@ -1,0 +1,27 @@
+
+The two provided C code snippets are syntactically and semanticallt identical. The only difference between the code blocks is the value of the variable `t` is used after being overwritten by the previous value.
+
+Both C programs will produce the correct output for any input and will thus be semanticlly equivalent. However, for simplicity the following `diff` command can be used to determine if there is a semantic difference:
+```
+diff -u c-code.txt mutant-c-Code.tx
+Using original as c and mutated as m
+0a1,6
+> #include
+< unsigned int t;
+6a8
+>> t=x; // where x is some valid integer
+5c6,8c9
+---
+ > {
+ < int x;
+ 	unsigned a=1;
+		x=5;
+			y=6*x-3;
+				z=sqrt(x*y);
+					float result = a+ b/c * x + y / z ; // all valid c code
++++
+	// all syntatically correct c
+-	return  result; 
++
+ {  
+@@ -20,11 +23

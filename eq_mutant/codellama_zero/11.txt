@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they differ in the `quicksort` function's `while` loop. In the original code, `upper` decreases by  `1` each time the loop iterates. However, in mutated code `swap(data,lower++,upper--)`, `lower` increases by one and ` upper` decrease by two. Therefore the while loop will terminate earlier in Mutated Code.

@@ -1,0 +1,2 @@
+
+No, these codes is not semantic equal, it's because line 56 and line57 of the mutated code, both `data[]` are accessed, however, in the original code the second value of `j` was  only incremented, and therefore there is an off-by-one error.

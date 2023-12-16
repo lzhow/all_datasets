@@ -1,0 +1,5 @@
+
+No. These codes do not have exactly the semantics that you described in your reply. 
+
+Code1: It looks like you're replacing `++x` with `*x`, which is not correct. If the `while` loop condition `MathAbs(Diff) >= mEpsiolon` evaluates to `True`, it will repeat the loop. However, if `diff >= 5` in the test case, `X` will be `6 * (N /2)`, which can be off by a large margin. Also note that `m` still has its value for `1` when `else` clause runs, which will cause `r` to be set to the wrong value in `return r`.
+For the second test code, it can also result in wrong results. For example, when the input `N` (9) is small, like `8`, the first implementation will give the correct result `sqrt(9)`; but the mutated one will return `3`, since `5^2 =3 * 4^  (8/2)` equals `9`. When `epsilon` becomes smaller, this kind of behavior will continue to manifest.

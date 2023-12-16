@@ -1,0 +1,33 @@
+You are an AI trained to detect similar code expressions. Given a code file and a specific code expression, your task is to find and list the most similar expressions within the provided code file. Please analyze the following code file and search for expressions that closely resemble the target code piece provided.
+
+Code file:
+```
+
+// SPDX-License-Identifier: BUSL-1.1
+pragma solidity 0.8.6;
+
+contract BetaRunnerWithCallback {
+  address private constant NO_CALLER = address(42); // nonzero so we don't repeatedly clear storage
+  address private caller = NO_CALLER;
+
+  modifier withCallback() {
+    require(caller == NO_CALLER);
+    caller = msg.sender;
+    _;
+    caller = NO_CALLER;
+  }
+
+  modifier isCallback() {
+    require(caller == tx.origin);
+    _;
+  }
+}
+
+
+```
+
+Target code piece:
+```
+\frac{repay_amount*total_debt_share}{ total_loan }
+```
+Please identify the similar expressions,   their corresponding function name and their corresponding line numbers in the code file. You also identify the differences between similar expressions and the target code piece. You also need replace Math funciton calls using `*`,`/`, `+` and `-`. You also need convert these expressions into trees. In the end, put your results in JSON format. If you do not find anything, just say No.

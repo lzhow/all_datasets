@@ -1,0 +1,4 @@
+
+The two provided codes look semanticly equal, meaning they both produce the exact same outputs given identical inputs.
+
+However, there is a subtle difference in the way the second code handles variable `c` in relation to the first. Specifically, in line 45 of the original code, the value of `t` is assigned `a`, which has no effect on the final result. However, line `48` of mutated code increments the variable, `++c`, instead of just assigning it the next value. The original `if-else` statement does not take this into account, leading to a different result and therefore the provided mutations are considered semantic differences.

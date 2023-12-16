@@ -1,0 +1,11 @@
+
+The semantic equivalence between the first two files can be determined by examining the code and verifying that it performs the exact same function regardless of external inputs. The two programs are both intended to sort an input array of integers in ascending order using the Quicksort algorithm, and they both have a `swap` method that exchanges the values at the specified indices in the array. This leads to two possible interpretations of the `if (low < high)` condition:
+
+* One interpretation is that the indices of `low` and `high` refer to elements of an array that are to be compared, so the condition checks whether the current element at `data[][low]` is less than or equal to the element currently at position `mid`. If it is, `lower` is incremented, otherwise `upper` decrements until the comparison becomes `true`.
+```java
+while ( low < hi ) {
+    while( A[ i ] <= A [ mid ] )
+      ++low;
+   ...
+}
+If `bound` were the median element of A, then the loop would exit after a single pass since all elements to its left are smaller than `A[mid]` and all the elements in `B[ mid +1

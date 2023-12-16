@@ -1,0 +1,69 @@
+[eva:final-states] Values at end of function swap:
+  c ∈ {{ &a[0] }}
+  PSt.p1 ∈ {{ &b[0] }}
+     .p2 ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function main:
+  PSt.p1 ∈ {{ &b[0] }}
+     .p2 ∈ {{ &a[0] }}
+  pa ∈ {{ &a[0] }}
+  pb ∈ {{ &b[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+  "PSt.p1": ["a"],
+  "PSt.p2": ["b"],
+  "&PSt.p1": ["a"],
+  "&PSt.p2": ["b"],
+  "pa": ["b"],
+  "pb": ["a"]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "c": [
+        "a"
+    ],
+    "PSt.p1": [
+        "b"
+    ],
+    "PSt.p1.p2": [
+        "a"
+    ],
+    "pa": [
+        "a"
+    ],
+    "pb": [
+        "b"
+    ]
+} 
+ 
+ Code ************************** 
+  void swap(char **a, char **b) {
+   char * c;
+   c = *a;
+   *a = * b;
+   *b = c;
+}
+
+struct ptrstruct{
+    char * p1;
+    char *p2;
+}; 
+
+int main (){
+    struct ptrstruct PSt;
+    char * pa, * pb;
+    char b[20];
+    char a[20];
+ 
+    PSt.p1 = a;
+    PSt.p2 = b;
+
+    swap (&PSt.p1, &PSt.p2);
+    pa = PSt.p2;
+    pb = PSt.p1;
+}
+
+

@@ -1,0 +1,3 @@
+
+I am afraid the second pair of code snippets is not semantic, as it will output incorrect results for many possible inputs. A simpler example of this is:
+Code: ```int n = -1323 / -5;``` (assuming it is intended to be a division)   Mutated Code: `n = n++;`   Output: `-2646 / +5` (notice how the sign of the numerator has changed)  This may not be the intended effect, but that is because most processors work "around" negative 0 using an internal flag. However, if we look at the "basic" code `sum = sum + day;`, `day` will be an integer. This will cause the code to simply add  integers without consideration for their internal binary representation. If the `abs()` call is removed, this difference is revealed.

@@ -1,0 +1,102 @@
+[eva:final-states] Values at end of function swap:
+  a1 ∈ {{ &p1 }}
+  b1 ∈ {{ &p2 }}
+  c ∈ {{ &a[0] }}
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function main:
+  b[0] ∈ {1}
+   [1..19] ∈ UNINITIALIZED
+  a[0] ∈ {0}
+   [1..19] ∈ UNINITIALIZED
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+  t1 ∈ {{ &b[0] }}
+  t2 ∈ {{ &a[0] }}
+  pa ∈ {{ &p1 }}
+  pb ∈ {{ &p2 }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "a": "char *",
+  "b": "char *",
+  "p1": "char *",
+  "p2": "char *",
+  "t1": "char *",
+  "t2": "char *"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "a1": [
+        "p"
+    ],
+    "b1": [
+        "p"
+    ],
+    "c": [
+        "a"
+    ],
+    "p1": [
+        "b"
+    ],
+    "p2": [
+        "a"
+    ],
+    "b[0]": [],
+    "b[1..19]": [
+        "UNINITIALIZED"
+    ],
+    "a[0]": [],
+    "a[1..19]": [
+        "UNINITIALIZED"
+    ],
+    "t1": [
+        "b"
+    ],
+    "t2": [
+        "a"
+    ],
+    "pa": [
+        "p"
+    ],
+    "pb": [
+        "p"
+    ]
+} 
+ 
+ Code ************************** 
+ void swap(char ***a, char ***b) {
+    char **a1, **b1;
+    char *c;
+    a1 = *a;
+    b1 = *b;
+
+    c = *a1;
+    *a1 = *b1;
+    *b1 = c;
+}
+
+int main (){
+    char b[20];
+    char a[20];
+    char * p1, *p2, *t1, *t2;
+    char ** pa, ** pb;
+
+    p1 = a;
+    p2 = b;
+
+    pa = & p1;
+    pb = & p2;
+
+    swap (&pa, &pb);
+
+    t1 = *pa;
+    *t1 = 1;
+
+    t2= *pb;
+    *t2 = 0;
+
+}
+
+

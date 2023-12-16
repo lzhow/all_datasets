@@ -1,0 +1,66 @@
+  x ∈ {0}
+  y ∈ {0}
+  q ∈ {0}
+  f ∈ {0}
+  e ∈ {0}
+  d ∈ {0}
+[eva:final-states] Values at end of function foo:
+  q ∈ {{ &x }}
+  f ∈ {{ &x }}
+[eva:final-states] Values at end of function main:
+  q ∈ {{ &x }}
+  f ∈ {{ &x }}
+  a ∈ {{ &q }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "q": "x",
+  "e": "y",
+  "f": "x",
+  "p": "f"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "x": [],
+    "y": [],
+    "q": [
+        "x"
+    ],
+    "f": [
+        "x"
+    ],
+    "e": [],
+    "d": [],
+    "a": [
+        "q"
+    ]
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+int x,y,*q,*f,*e,d;
+
+void foo(int **p){
+	f = &x;
+	if(x){
+		p = &e;
+		f = &y;
+	}
+
+	*p = f;
+    // MAYALIAS(q,&x);
+    // MAYALIAS(e,&y);
+    // NOALIAS(q,&y);
+    // NOALIAS(q,&d);
+    // NOALIAS(e,&x);
+}
+
+
+
+int main(){
+	int **a,c;
+	a = &q; f = &d;	
+	foo(a);
+}
+

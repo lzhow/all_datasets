@@ -1,0 +1,6 @@
+
+The two given codes snippets are *not* semanticall equal, because the original code has several semantic errors. Specifically:
+
+* The conditional blocks within the `Profit` function use `++` instead of `+`. This will increment the value of the loop variable `i` in each conditional block, which will cause the calculation of some bonuses to be incorrect.
+ * The calculation for `bonus5` is incorrect: It uses `*` instead `%` for multiplication and therefore produces incorrect results.
+  * There are several other such errors in the code that would also affect the output.

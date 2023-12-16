@@ -1,0 +1,28 @@
+
+In C, the following code is semantic equal to the mutated version:
+
+```
+while (1<2);
+do while(1); while (++c);
+  do
+  {
+    foobar;
+  } while(--c)
+// and
+if(true)
+   int x =3
+else
+   char y = '4';
+assert(x+y == '7');
+int main()
+{
+  if(0)
+  {} else {} //empty block
+  ;
+  for(int n=0;;); //infinite loop
+}
+static_assert ( sizeof(char) == sizeof (short), "Char and Short must be the exact same size!") ;
+typedef char a[5];
+a b = "hello";
+switch(b) {}
+break;

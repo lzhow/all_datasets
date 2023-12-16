@@ -1,0 +1,89 @@
+  y ∈ {0}
+  q ∈ {0}
+  r ∈ {0}
+  f ∈ {0}
+  e ∈ {0}
+  c ∈ {0}
+  d ∈ {0}
+[eva:final-states] Values at end of function foo:
+  q ∈ {{ &d }}
+  r ∈ {{ NULL ; &c }}
+[eva:final-states] Values at end of function main:
+  q ∈ {{ &d }}
+  r ∈ {{ &c }}
+  f ∈ {{ &c }}
+  e ∈ {0}
+  c ∈ [--..--]
+  d ∈ [--..--]
+  a ∈ {{ &q }}
+  b ∈ {{ &r }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+    "q": ["d", "c"],
+    "r": ["c", "d"],
+    "f": ["d", "c", "y"],
+    "e": ["y"],
+    "a": ["d", "c"],
+    "b": ["c", "d"]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "y": [],
+    "q": [
+        "d"
+    ],
+    "r": [
+        "c"
+    ],
+    "f": [
+        "c"
+    ],
+    "e": [],
+    "c": [],
+    "d": [],
+    "a": [
+        "q"
+    ],
+    "b": [
+        "r"
+    ]
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+int y,*q,*r,*f,*e,c,d;
+
+void foo(int **p){
+
+    if(y){
+		p = &e;
+		f = &y;
+	}
+
+	*p = f;
+    // MAYALIAS(q,&d);
+    // MAYALIAS(r,&c);
+    // MAYALIAS(e,&y);
+    // NOALIAS(q,&y);
+    // NOALIAS(r,&y);
+}
+
+
+
+int main(){
+	int **a,**b;
+    e = 0;
+	a = &q; f = &d;	
+	foo(a);
+    b = &r; f = &c;
+    foo(b);
+    NOALIAS(r,&d);
+    NOALIAS(q,&c);
+    NOALIAS(e,&d);
+    NOALIAS(e,&c);
+}
+

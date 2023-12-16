@@ -1,0 +1,5 @@
+
+In C, the code is semantic equal as both have same function.
+
+However, in Java, there is a subtle difference:
+On line 0 of the second code, an extra semicolon is added, which makes the Java compiler interpret the `else` and `break` statements as separate statements. This causes the entire `if` statement to have an unexpected behavior and the program's output will be wrong.

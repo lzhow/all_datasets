@@ -1,0 +1,2 @@
+
+They are *not* semantic equal in general. They differ in the order of the elements in data[] and thus the result of partition. While the original quick sort algorithm uses the last element as the pivot, this mutated code uses an unsorted element. In the former case, elements smaller than the unplaced pivot are placed to the left, while in this case they go to right.

@@ -1,0 +1,24 @@
+
+The two provided codes, while syntactically not equal, are also semanticall equal: as humans we are able to easily discern and identify the differences that the semantic patch represents, and in this case the fix is quite straightforward.
+
+There are only two places in which the mutated code differs from the original in terms of its behaviour:
+1. In the calculation of `bonus` when `i>1k and i<= 2k`, the corrected formula becomes: 
+```
+bonus = bonus - 1 * 7.5%
+(previous)   bonus = 850 + 457 * (i - k) / (k * N)
+ (corrected)  =          462.4 -        76.2 *        i /           1K  ->  (bonus) =           426
+ ```
+ 
+2: In `abs` method, the correction replaces `-` with `--`, which effectively negates the value of a number. Here is the code
+java
+    ```
+   public double abs (double A){
+   if (A < =0){
+    return = --A;
+   }
+   return A;
+    }
+}
+     ```
+
+ The semantic equality of the

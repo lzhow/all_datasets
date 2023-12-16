@@ -1,0 +1,2 @@
+
+No, they do not have identical behavior. If the inputs to `sqrt` are positive and `N` has an integer square root, then the mutated program will fail to halt. That is because it will end up subtracting one from `diff` for each call of the `while` loop, causing the condition to never evaluate to false, and the loop to continue indefinitely.

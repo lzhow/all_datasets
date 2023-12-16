@@ -1,0 +1,2 @@
+
+`no`, because in the original code, `a + b <= c` will return `0` if `c` equals to `b`. However, in mutant code `if (a > b) t = b + c;` is executed, which will make `t` equal to  `2b +  c`. Then, if `(a == b && b == c)`, the mutated code will still return a `1`. 

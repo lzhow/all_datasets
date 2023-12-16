@@ -1,0 +1,25 @@
+
+The two code snippets are syntactically and semanticallt different.
+
+They are both correct and valid C/Java code. However, they do not produce the exact same result for the `Profit` function. Specifically, the version of the code in the second snippet is incorrect and will cause incorrect results.
+
+
+Let's break down the changes we made to each line:
+```
+@@ -14 +13,0 @ line 11
+-  return(profit);
++  }
+ ```
+ The first difference on line `12` is the indentation level changing. Since we added curly brackets on the lines below, this caused the line to be inside the curlies on `line 9`, instead of at the global scope, as is intended.
+ 
+ ```diff
+ @@line9 -bonus=0
+ +  {
+ -  int sum= 5 +5;
+ } 
+ ```
+ 
+ This line only appears on in `Mutated Code` and is invalid syntax. The `--` symbol is not a valid mathematical operator.
+ 
+
+ Overall, these differences only make a minor difference in logic and should not affect the output.

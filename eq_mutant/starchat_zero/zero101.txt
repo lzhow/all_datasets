@@ -1,0 +1,11 @@
+
+No, they're not semantic equivalent. They produce different output for the given inputs. In the first code block, `i` is incremented by 1 in the inner loop whereas in second code `j` starts from 0 and is divided by one in each loop. This difference in behavior results in a different sorting order in both cases.
+
+The output when the input is `[3, 6, -2, "foo", 4.5]` is:
+```
+Mutated Code: -3 2 3 -5 -4
+First Code
+6 5 foo 7 9
+Second Code (-3 denotes a negative)
+-3 foo -8 -6 -7 -9 
+This output means that the array is sorted as per the lexicographic order while the second case means the order of the numbers is ignored (since - comes before a number)  but the strings are still compared based on their alphabetical order.  The program used to sort the elements is printf("4d",a);. Both the programs use %d format specifier to print integers. If the output is modified to use another format like %f or %s instead, the results will be different.

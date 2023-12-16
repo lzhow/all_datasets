@@ -1,0 +1,80 @@
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "Declarations": {
+    "p": {
+      "type": "int **",
+      "location": "stack-0"
+    },
+    "q": {
+      "type": "int *",
+      "location": "stack-0"
+    },
+    "a": {
+      "type": "int *",
+      "location": "stack-0"
+    },
+    "b": {
+      "type": "int *",
+      "location": "stack-0"
+    },
+    "c": {
+      "type": "int",
+      "location": "stack-0"
+    },
+    "d": {
+      "type": "int",
+      "location": "stack-0"
+    }
+  },
+  "Pointers": {
+    "p": {
+      "points_to": [
+        "q"
+      ]
+    },
+    "q": {
+      "points_to": [
+        "c",
+        "d"
+      ]
+    },
+    "a": {
+      "points_to": [
+        "c"
+      ]
+    },
+    "b": {
+      "points_to": [
+        "d"
+      ]
+    }
+  }
+} 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+int main(){
+    int **p,*q;
+    int *a,*b,c,d;
+    if(a){
+        p = &a;
+        q = &c;
+    }
+    else if(b) {
+        p = &b;
+        q = &d;
+    }
+    else{
+      printf("dummy branch\n");
+    }
+    *p = q;
+    // MAYALIAS(a,&c);
+    // MAYALIAS(b,&d);
+    // NOALIAS(a,&d);
+    // NOALIAS(b,&c);
+}

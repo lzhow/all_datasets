@@ -1,0 +1,103 @@
+  b[0..19] ∈ {0}
+  a[0..19] ∈ {0}
+[eva:final-states] Values at end of function swap:
+  c ∈ {{ &b[0] ; &a[0] }}
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function g:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function h:
+  p1 ∈ {{ &a[0] }}
+  p2 ∈ {{ &b[0] }}
+[eva:final-states] Values at end of function main:
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+  pa ∈ {{ &a[0] }}
+  pb ∈ {{ &b[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "p1": [
+    "a",
+    "b"
+  ],
+  "p2": [
+    "b"
+  ],
+  "pa": [
+    "b"
+  ],
+  "pb": [
+    "a"
+  ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "b[0..19]": [],
+    "a[0..19]": [],
+    "c": [
+        "b",
+        "a"
+    ],
+    "p1": [
+        "b"
+    ],
+    "p2": [
+        "a"
+    ],
+    "pa": [
+        "a"
+    ],
+    "pb": [
+        "b"
+    ]
+} 
+ 
+ Code ************************** 
+     char b[20];
+    char a[20];
+ 
+
+void swap(char **a, char **b) {
+   char * c;
+   c = *a;
+   *a = * b;
+   *b = c;
+}
+
+void f(char **a, char **b) {
+  swap(a, b);
+}
+
+void g(char **a, char **b) {
+   swap(a, b);
+   swap(a, b);
+}
+
+void h(char **a, char **b) {
+   f(a, b);
+   f(a, b);
+   g(a, b);
+}
+
+int main (){
+    char * p1, *p2;
+    char * pa, * pb;
+
+    p1 = a;
+    p2 = b;
+
+    h (&p1, &p2);
+    g (&p1, &p2);
+    f (&p1, &p2);
+    g (&p1, &p2);
+    pa = p2;
+    pb = p1;
+}
+
+

@@ -1,0 +1,20 @@
+
+As I am not good at analyzing programming code, I rely on ctags to provide me the information regarding the semantic of the code. Here is the output for the provided two code snippets after applying the patch:
+```
+$ ctag --fields=+l mutant.c 
+mutant	mutantpatch.txt	/^double bonus;/;"	f	typeref:typename:double	line:4
+
+line	language	pattern	kind	file
+4	C	double bon	v	./mutator.patch.mutated
+7	$end
+Total lines: 2
+Found 1 tags in 0 files
+Files that could not be read: mutanthash.dat
+Using read callback.
+Including only the 3938 most common english words. (This is configurable.)
+Read 64Kb of tag file in.022411 seconds
+Tag counts sorted and grouped:
+  13697 function declarations (7912 unique)
+  5689 types (3744 unique 't' prefixes)
+   716 enumerators (630 unique prefix 'k')
+   619 struct/

@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, it is `year % 0 == ​​0 || (year  %4 ==0 && year %1 ==1)`, which is a leap year. However, in the mutant code is changed to ` year%  ==4 &&year -1==  `, which means that the year is divisible by  and is not divisble by. Therefore the output is different, and the codes cannot be sematically equal

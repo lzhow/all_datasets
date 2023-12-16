@@ -1,0 +1,78 @@
+{
+  "main": {
+    "Declarations": [
+      {
+        "pointer": "a",
+        "points_to": [
+          "q"
+        ]
+      },
+      {
+        "pointer": "c",
+        "points_to": [
+          "d"
+        ]
+      }
+    ],
+    "Function Calls": [
+      {
+        "called_func": "foo",
+        "caller_func": "main",
+        "arguments": [
+          {
+            "pointer": "a",
+            "points_to": [
+              "q"
+            ]
+          }
+        ],
+        "return_values": [
+          {
+            "pointer": "f",
+            "points_to": [
+              "d"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "foo": {
+    "Declarations": [
+      {
+        "pointer": "p",
+        "points_to": [
+          "e"
+        ]
+      },
+      {
+        "pointer": "f",
+        "points_to": [
+          "x"
+        ]
+      }
+    ],
+    "Function Calls": [
+      {
+        "called_func": "foo",
+        "caller_func": "foo",
+        "arguments": [
+          {
+            "pointer": "p",
+            "points_to": [
+              "e"
+            ]
+          }
+        ],
+        "return_values": [
+          {
+            "pointer": "f",
+            "points_to": [
+              "x"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

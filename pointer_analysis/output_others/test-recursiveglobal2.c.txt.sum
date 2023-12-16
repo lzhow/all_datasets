@@ -1,0 +1,70 @@
+  p ∈ {0}
+  q ∈ {0}
+[eva:final-states] Values at end of function recursion:
+  p ∈ {{ &b[0] }}
+  q ∈ {{ &a[0] }}
+  i ∈ UNINITIALIZED
+  c ∈ UNINITIALIZED
+[eva:final-states] Values at end of function main:
+  p ∈ {{ &b[0] }}
+  q ∈ {{ &a[0] }}
+  __retres ∈ {0}
+[eva:final-states] Values at end of function swap:
+  p ∈ {{ &b[0] }}
+  q ∈ {{ &a[0] }}
+  i ∈ {9}
+  c ∈ {{ &a[0] }}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "p": "a",
+  "q": "b"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "p": [
+        "b"
+    ],
+    "q": [
+        "a"
+    ],
+    "i": [],
+    "c": [
+        "a"
+    ]
+} 
+ 
+ Code ************************** 
+ char *p;
+char *q;
+
+void recursion (unsigned);
+void swap(unsigned);
+
+void swap(unsigned i) {
+    char * c = p;
+    p = q;
+    q = c;
+
+    recursion (i --);
+}
+
+
+void recursion(unsigned i) {
+    if (i == 0) {
+        return;
+    }
+    swap(i);
+}
+
+int main () {
+    char a[10];
+    char b[10];
+
+    p = a;
+    q = b;
+
+    recursion(10);
+}
+
+

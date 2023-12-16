@@ -1,0 +1,69 @@
+  p1 ∈ {0}
+  p2 ∈ {0}
+[eva:final-states] Values at end of function swap:
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+  c ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function f:
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function main:
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+  pa ∈ {{ &b[0] }}
+  pb ∈ {{ &a[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "pa": "a",
+  "pb": "b",
+  "p1": "a",
+  "p2": "b"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "p1": [
+        "b"
+    ],
+    "p2": [
+        "a"
+    ],
+    "c": [
+        "a"
+    ],
+    "pa": [
+        "b"
+    ],
+    "pb": [
+        "a"
+    ]
+} 
+ 
+ Code ************************** 
+ char * p1, * p2;
+void swap() {
+   char * c;
+   c = p1;
+   p1 = p2;
+   p2 = c;
+}
+
+void f() {
+    swap();
+}
+
+int main (){
+    char b[20];
+    char a[20];
+    char * pa, *pb;
+
+    p1 = a;
+    p2 = b;
+
+    f();
+    pa = p1;
+    pb = p2;
+}
+
+

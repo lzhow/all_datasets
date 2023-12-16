@@ -1,0 +1,12 @@
+
+No, they aren't semantic the codes. 
+
+In Code1 the code calculates the middle of a number by adding the numbers and dividing by two. If the variable `a` holds the value 5, and `b` the 7, then the original code would run as follows: 
+
+   M = ((5 + 6) - 9) = -2
+   x= (8 + -6/2)=-4
+Then, -4 is returned. This is correct, however in the mutant code this is calculated as:
+
+   x=(5+6)/(2-1)=6
+   The expression inside the parenthesis is first evaluated, which is (5), which equals 4, followed by (6), also evaluating to 8. After that it calculates -8/3, thus resulting in  -3.
+   Then it multiplies  with  ((8+5)-9)/2,  which results in -75 (which in turn is divided by  (14-6)/3). Finally the result is added to  6, which  produces the final result -9.

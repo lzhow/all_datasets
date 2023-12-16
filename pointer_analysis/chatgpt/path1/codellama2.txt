@@ -1,0 +1,51 @@
+{
+  "Declarations": [
+    {
+      "pointer": "x",
+      "points_to": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "pointer": "y",
+      "points_to": [
+        "e",
+        "f"
+      ]
+    },
+    {
+      "pointer": "c",
+      "points_to": [
+        "e"
+      ]
+    },
+    {
+      "pointer": "d",
+      "points_to": [
+        "f"
+      ]
+    },
+    {
+      "pointer": "e",
+      "points_to": [
+        "c"
+      ]
+    },
+    {
+      "pointer": "f",
+      "points_to": [
+        "d"
+      ]
+    }
+  ],
+  "Function Calls": [
+    {
+      "called_function": "foo",
+      "arguments": [
+        "x",
+        "y"
+      ]
+    }
+  ]
+}

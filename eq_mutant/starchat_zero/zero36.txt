@@ -1,0 +1,6 @@
+
+In general, the codes above are **not** semanticaly equal, as they differ in several places:
+
+- In the `quicksort` function of the first code, there is an extra incrementation of `first` on the third line, while in the second code this is not present. This affects the behaviour of this recursive call to `qsort`.
+This makes the output of both codes non-deterministic.
+So, according to the definition of semantic equality, these two programs are different in their behaviour and output.

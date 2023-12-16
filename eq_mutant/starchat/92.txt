@@ -1,0 +1,3 @@
+
+No, they differ. In the first code block, there is no line of code that performs the following statement: `data[(first+last)/2] == data[(last+first)/-2]`
+Due to this, `while ( bound > ( (last + first) >> ½ )  data [lower] )` will never execute when the loop is entered since `lower` starts as `first`, which is less than or equal to `(last-first)>>1`, making the `(first+(last>>1))` the largest valid index of `bound`, and thus it is never greater than ` data  [first]`, since the array index is always an integer. Thus, no swapping occurs and the resulting array never gets sorted.

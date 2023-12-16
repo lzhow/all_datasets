@@ -1,0 +1,4 @@
+
+They are both semantic equal in the sense that if given some inputs `a, b, c`, the code will always produce the exact same outputs. However, they differ in how the loop condition is implemented. 
+
+In the first code, `while (absDiff > epsilon)`, the condition checks whether the absolute value of the difference is greater than some epsilon value. In the second code it checks if it is not equal to the epsilon. This can affect whether or not the while loop will terminate correctly.

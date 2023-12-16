@@ -1,0 +1,41 @@
+  z ∈ {0}
+[eva:final-states] Values at end of function main:
+  a.f1 ∈ {100}
+   .f2 ∈ UNINITIALIZED
+  b ∈ {{ &a.f1 }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "z": [],
+  "b": ["a.f1"]
+}
+ 
+ ************************** Frama-c ************************** 
+ {
+    "z": [],
+    "a.f1": [],
+    "a.f1.f2": [
+        "UNINITIALIZED"
+    ],
+    "b": [
+        "a",
+        "f"
+    ]
+} 
+ 
+ Code ************************** 
+ typedef struct{
+    int f1, f2;
+}FOO;
+
+int *z;
+
+
+int main(){
+    FOO a;
+    int *b;
+    b = &a.f1;
+    *b = 100;
+}
+

@@ -1,0 +1,68 @@
+[eva:final-states] Values at end of function f:
+  b ∈ {{ &a[1] ; &b{[1], [2]} }}
+  a[0] ∈ {1}
+   [1..9] ∈ UNINITIALIZED
+  b[0..1] ∈ {1} or UNINITIALIZED
+   [2..19] ∈ UNINITIALIZED
+[eva:final-states] Values at end of function g:
+  b[0..1] ∈ {1}
+   [2..19] ∈ UNINITIALIZED
+[eva:final-states] Values at end of function main:
+  a[0] ∈ {1}
+   [1..9] ∈ UNINITIALIZED
+  b[0..1] ∈ {1}
+   [2..19] ∈ UNINITIALIZED
+  c ∈ {{ &b[1] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "a": ["a"],
+  "b": ["a", "b"],
+  "c": ["b"]
+}
+ 
+ ************************** Frama-c ************************** 
+ {
+    "b": [
+        "a",
+        "b"
+    ],
+    "a[0]": [],
+    "a[1..9]": [
+        "UNINITIALIZED"
+    ],
+    "b[0..1]": [],
+    "b[0..1][2..19]": [
+        "UNINITIALIZED"
+    ],
+    "c": [
+        "b"
+    ]
+} 
+ 
+ Code ************************** 
+ char * f(char * a) {
+   char * b ;
+
+   b = a;
+    *(b++) = 1;
+   return b;
+}
+
+char * g(char * a) {
+    *a = 0;
+    return f(a);
+}
+
+int main (){
+    char a[10];
+    char b[20];
+    char * c;
+
+    f(a);
+    c = f(b);
+    g(c);
+}
+
+

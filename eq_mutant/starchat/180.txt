@@ -1,0 +1,2 @@
+
+No, both of these programs are NOT semantic equivalent. While the resulting behavior of the program may be the SAME, they perform different operations at runtime. Specifically, in the first program, `mid` will always be set to `c`, because it is never reassigned. In the second program `++mid`, which is equivalent to mid + 0, is used, which means that mid gets the value of `a`, `b`, or` c` on subsequent iterations of this if-else block.

@@ -1,0 +1,2 @@
+
+`no`, the codes differ in the `else` branch. In the original code, `a == b || b == c` will be evaluated. However, in mutant code `b ==c --` has been added. Therefore the mutated code will return `2`, while the origin code returns `1`. 

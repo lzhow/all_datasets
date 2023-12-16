@@ -1,0 +1,71 @@
+  ga[0..19] ∈ {0}
+[eva:final-states] Values at end of function mymalloc:
+[eva:final-states] Values at end of function my_malloc:
+  p ∈ [--..--]
+  p1 ∈ [--..--]
+  p2 ∈ [--..--] or UNINITIALIZED
+  __retres ∈ [--..--]
+[eva:final-states] Values at end of function swap:
+  c ∈ [--..--]
+  p1 ∈ [--..--]
+  p2 ∈ [--..--]
+[eva:final-states] Values at end of function main:
+  p1 ∈ [--..--]
+  p2 ∈ [--..--]
+  pa ∈ [--..--]
+  pb ∈ [--..--]
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "p1": ["ga"],
+  "p2": ["ga"],
+  "pa": ["ga"],
+  "pb": ["ga"],
+  "c": ["ga"]
+}
+ 
+ ************************** Frama-c ************************** 
+ {
+    "ga[0..19]": [],
+    "p": [],
+    "p1": [],
+    "p2": [],
+    "c": [],
+    "pa": [],
+    "pb": []
+} 
+ 
+ Code ************************** 
+ void * malloc(unsigned);
+char ga[20];
+void swap(char **a, char **b) {
+   char * c;
+   c = *a;
+   *a = * b;
+   *b = c;
+}
+
+void * mymalloc(unsigned i) {
+   return malloc(i);
+}
+
+void * my_malloc(unsigned i, char **ret) {
+   char * p;
+   p = mymalloc(i);
+   *ret = p;
+   return p;
+}
+
+int main (){
+    char * p1, *p2;
+    char * pa, * pb;
+
+    my_malloc(10, &p1);
+    my_malloc(20, & p2);
+    swap(&p1, &p2);
+    pa = p2;
+    pb = p1;
+}
+
+

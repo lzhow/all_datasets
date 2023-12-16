@@ -1,0 +1,4 @@
+
+In C, `a--` is an invalid statement, as it is a postfix increment, not an expression. C does not allow side effects in expressions, so `mid=a--;` would have no effect on the program's behavior.
+
+On the other hand, in Java, the statement `int mid=c>a?c:a;`, while technically equivalent to `if ( c > a ) mid. =c; else mid.=a;` is not semantic equivalent because it changes the value of mid from the original value to a new value based on some unspecified but arbitrary condition, which could have side-effects and introduce bugs.

@@ -1,0 +1,2 @@
+
+No, these two programs are different. There are multiple ways to write a correct quick sort algorithm, and the changes made in the above patch do not fix any issues with the original quick-sort algorithm. In particular, removing a check (the added `i++)` causes the quick sorting to be incorrect if there are duplicate elements in `data`.

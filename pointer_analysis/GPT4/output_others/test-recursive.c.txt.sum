@@ -1,0 +1,49 @@
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "head": ["list_0", "list_1", "list_2", "list_3", "list_4", "list_5", "list_6", "list_7", "list_8", "list_9", "list_10"],
+  "tmp": ["list_1", "list_2", "list_3", "list_4", "list_5", "list_6", "list_7", "list_8", "list_9", "list_10"],
+  "next": ["list_0", "list_1", "list_2", "list_3", "list_4", "list_5", "list_6", "list_7", "list_8", "list_9", null],
+  "prev": [null, "list_0", "list_1", "list_2", "list_3", "list_4", "list_5", "list_6", "list_7", "list_8", "list_9"]
+}
+ 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ struct list {
+    unsigned field;
+    struct list * next;
+    struct list * prev;
+};
+
+extern void * malloc(unsigned);
+struct list * construct (struct list * head, unsigned i) {
+    if (i > 0) {
+        struct list * tmp = malloc(sizeof(struct list));
+        tmp->field = 0;
+        tmp->next = head;
+        head->prev = tmp;
+        tmp->prev = 0;
+
+        return construct (tmp, i--);
+
+
+    } 
+    return head;
+}
+
+int main () {
+    struct list * head;
+
+
+    head = malloc(sizeof(struct list));
+    head->field = 0;
+    head->next = 0;
+    head->prev = 0;
+
+    head = construct (head, 10);
+}
+
+

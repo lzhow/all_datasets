@@ -1,0 +1,2 @@
+
+Both mutants are equivalent. There are no semantic changes. However, a possible issue with the Java program is that its `while` loop is dependent on signed integer wraparound to work properly, while the C program uses unsigned integers. Unsigned integers do not have this property. This could make the program behave differently on different platforms, even if both programs were semantic equivalent and did the exact same thing.

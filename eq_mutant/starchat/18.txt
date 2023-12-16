@@ -1,0 +1,2 @@
+
+No, these two pieces of code are NOT semantic equivalent, because they represent two different algorithms for the quick sort algorithm, one that uses the first bound < x comparison in its while loop, while the other uses first x < bound comparison. Since these comparisons may have different runtime and space complexities, and the result of the sort is also different in these cases, they cannot be semanticly equivalent.

@@ -1,0 +1,2 @@
+
+Yes, they're semantic equivalent. The only semantic difference between these two programs is in the line `diff = X++` in mutated code. In the original code, `X` is first assigned to `x`, and then the value of `N` subtracted from `m`. In mutagened code `++X`, as `*` and `-` have higher precedence than `+`, is evaluated first, incrementing `n` by  `1`. Thereafter, this new value is used as the input to the square root function `sqrt(x)`. While this won't have any effect on the result, it does change the final value.

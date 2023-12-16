@@ -1,0 +1,141 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+Here are three semantically equal examples:  
+The first example pair is
+``` Code 1
+double f(double M, double x) {
+    x = (M + x) / 2;
+    return x;
+ }
+```
+``` Mutant Code 1
+double f(double M, double x) {
+    x = (M + x++ ) / 2;
+    return x;
+ }
+```
+Yes. The two codes are semantically euqal because `M + x++` first does `M + x` and then `x++`. Therefore, `(M + x) / 2` is the same with `(M + x++) / 2`.
+
+
+The second example pair is 
+``` Code 2
+double f(int x, int divisor){
+   return x*divisor;
+}
+```
+```Mutant Code 2
+double f(int x, int divisor){
+    return x*divisor++;
+}
+```
+Yes. The two codes are semantically euqal because `x*divisor` first does `x*divisor` and then `divisor++`. The two functions return the same values.
+
+
+The third example pair is 
+``` Code 3
+int f(int a, int y, int x){
+    int p = a;
+    p = x + y;
+    return p;
+}
+```
+``` Mutant Code 3
+int f(int a, int y, int x){
+    int p = 1;
+    p = x + y;
+    return p;
+}
+```
+Yes. The two codes are semantically euqal because the local value `p` is re-assigned by `x+y`. There, the change `int p = 1;` will not affect the function.
+
+  
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+import java.util.*;
+
+public class Insert {
+
+    public static void main(int number) {
+        int[] a = new int[] { -14, 6, 28, 0 };
+        int mytemp1, mytemp2, end, i, j;
+        System.out.println("original array is:\n");
+        for (i = 0; i < 3; i++) {
+            System.out.printf("%5d", a[i]);
+        }
+        System.out.printf("\n");
+        System.out.printf("insert a new number:");
+        end = a[2];
+        if (number >= end) {
+            a[3] = number;
+        } else {
+            for (i = 0; i < 3; i++) {
+                if (a[i] > number) {
+                    mytemp1 = a[i];
+                    a[i] = number;
+                    for (j = i + 1; j < 4; j++) {
+                        mytemp2 = a[j];
+                        a[j] = mytemp1;
+                        mytemp1 = mytemp2;
+                    }
+                    break;
+                }
+            }
+        }
+        for (i = 0; i < 4; i++) {
+            System.out.printf("%6d", a[i]);
+        }
+        System.out.printf("\n");
+    }
+}
+
+
+```
+```Mutant Code 
+import java.util.*;
+
+public class Insert {
+
+    public static void main(int number) {
+        int[] a = new int[] { -14, 6, 28, 0 };
+        int mytemp1, mytemp2, end, i, j;
+        System.out.println("original array is:\n");
+        for (i = 0; i < 3; i++) {
+            System.out.printf("%5d", a[i]);
+        }
+        System.out.printf("\n");
+        System.out.printf("insert a new number:");
+        end = a[2];
+        if (number >= end) {
+            a[3] = number;
+        } else {
+            for (i = 0; i < 3; i++) {
+                if (a[i] > number) {
+                    mytemp1 = a[i];
+                    a[i] = number;
+                    for (j = i + 1; j < 4; j++) {
+                        mytemp2 = a[j];
+                        a[j] = mytemp1;
+                        mytemp1 = mytemp2;
+                    }
+                    break;
+                }
+            }
+        }
+        for (i = 0; i < 4; i++) {
+            System.out.printf("%6d", a[i]--);
+        }
+        System.out.printf("\n");
+    }
+}
+
+
+```
+The difference patch is 
+
+    ```
+    @@ -32 +32 @@
+-            System.out.printf("%6d", a[i]);
++            System.out.printf("%6d", a[i]--);
+
+    ```

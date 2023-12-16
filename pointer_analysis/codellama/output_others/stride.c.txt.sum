@@ -1,0 +1,29 @@
+  st[0..2] ∈ {0}
+[eva:final-states] Values at end of function main:
+  x ∈ {0} or UNINITIALIZED
+  i ∈ {3}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "x": "st[i].b",
+  "i": "st[i].b",
+  "st": "st[i].b"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "st[0..2]": [],
+    "x": [],
+    "i": []
+} 
+ 
+ Code ************************** 
+ struct {int a; short b, c;} st[3];
+
+int main(){
+
+	int x,i;
+	for(i =0 ; i < 3; i++){
+		x = st[i].b;
+	}
+}

@@ -1,0 +1,4 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different outputs for the input `data = [100]`.
+In the original code, `max` will be assigned the value 99, because it is initialized to  `0` in the `sort` method, and the loop will iterate until `i` becomes  greater than `98`, because of the condition `if (i < length)`.
+However, in mutated code `quicksort`, `swap` function is called with `j = max` which is `1` because in `for` loop `++i`, so `tmp` variable will have value of `2`, and `upper` value will become `3`. Then, when `lower` reaches `4`, it will swap `5` with 4, which will cause `bound` to become 5, so the while loop condition will fail, but `while` condition in line 64 will pass, it swaps `6`  with  5 and  upper will now be 7, then it checks if `7` < `8`, which it isn't, therefore it won' t swap anything, now `low` = ` 8 `

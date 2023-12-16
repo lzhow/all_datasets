@@ -1,0 +1,13 @@
+
+```c
+// This code is correct and semantic
+int a = (1 == 4)? 5 : 6;
+
+if (a == true)
+    std::cout << "This statement is true";
+else
+    printf("This code won't run");
+}
+This will print "this statement if true".
+Note that while the first part is correctly syntactically equal, the second part still contains a type error (the expected type of a is bool, not int), and the else part will never execute.
+To resolve this issue, you could fix the type issue by changing a to bool in the if statement. Additionally, to make sure the function is semantic correct you can add an assertion at the beginning of the funcion to verify that data has positive length.

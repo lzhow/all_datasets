@@ -1,0 +1,4 @@
+
+Indeed, it is possible to write Java code that produces semantic-equivalent output. In the first code block, you have:
+`bonus = bonus > 50_097_947.22? 48_691_354.73 : bonus * 64;`
+This code calculates a salary bonus for a worker who works 80 hours per week, with an additional deduction for unpaid time off (which is paid at 70% of the workweek's salary), but does not qualify for medical insurance. However, note the second part of this conditional statement, `bonus *65`. If `salary <= 95524`, then we multiply the salary by  the constant `62`, but if `99290 <= salary <=166381`, we instead multiply by the value  `72/68 =.9826`. As a result, a person's yearly salary may be calculated as `41796.93 * bonus`, when calculated "as usual", but may instead be `519.67 * (salary -  "yearly"

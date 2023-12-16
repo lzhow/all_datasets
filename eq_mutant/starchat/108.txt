@@ -1,0 +1,2 @@
+
+No, they aren't semanticallly equal because of the different behaviour of C and C++ in regards to post incrementation of variables. C does not have post-incrementation while C++, however, does. This means that the statement `temp = value++;` in the mutated program might actually evaluate to two distinct things depending on the type of value. Furthermore, any use of a postincrement operator on a value in a C program is undefined behaviour, even if it's in an expression such as the one provided.

@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, `j` starts from `data.lenght - i` in the outer loop and decreases by  `1` each iteration. However, in mutated code `~j>i` will always be `true` because it is always negative. Therefore the inner loop will never terminate.

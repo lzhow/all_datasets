@@ -1,0 +1,5 @@
+
+The two provided codes **are not semanticlly equal**.
+
+When executed, the first code will output **44816.25** when given input **262212**. The second code instead will ouput **0**. This is because the second modified code decrements the output of the `bonus` variable.
+This means that the value of `i` will become smaller for each loop itteration, however, `bouus` is a double, and so it's value will always remain the saem. This will alwyas make the condition in the last if statment true, leading to the "else" block being executed an additional time.

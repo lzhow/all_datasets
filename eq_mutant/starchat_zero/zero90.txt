@@ -1,0 +1,15 @@
+
+The two given C code snippets are functionally equivalent. Semantically, they produce the exact same result when executed on the given input, and have exactly the *same meaning*. The meaning of the code itself is *fully preserved*. This is evident by the fact that, after the removal of all comments, the "mutant" code is identical to the original code, with the exception of one line:
+
+```diff
+-if (a + b <= c )
++if  ( a +b  < c  ) 
+...
+[OUTPUT SNIPPED]
+exit_code = run_test_program(filename, args)
+print(output_results(exitcode))
+assert (exit code ==  output code), "Exit code did not match test output"
+return  "Pass" # success!
+}
+ ```
+I have highlighted the line that is different.

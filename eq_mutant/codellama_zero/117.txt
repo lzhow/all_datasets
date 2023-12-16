@@ -1,0 +1,2 @@
+
+`no`, the codes do not have same outputs. In the original code, `bon6` will be `11250` when `i` equals `65536`. However, in the mutant code `++bon` makes `bouns6 = bonus + 6`, so `+6* 4 =24`. Then `26 + (64516- 52)* 7.5 =131876.2`, which is different from the result of the first code.

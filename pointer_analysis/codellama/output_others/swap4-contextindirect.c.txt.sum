@@ -1,0 +1,122 @@
+  b[0..19] ∈ {0}
+  a[0..19] ∈ {0}
+[eva:final-states] Values at end of function swap1:
+  c ∈ {{ &b[0] ; &a[0] }}
+  pa ∈ {{ &b[0] ; &a[0] }}
+  pb ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function swap:
+  c ∈ {{ &pa }}
+  d ∈ {{ &pb }}
+  pa ∈ {{ &b[0] ; &a[0] }}
+  pb ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f:
+  pa ∈ {{ &b[0] ; &a[0] }}
+  pb ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function g:
+  pa ∈ {{ &b[0] ; &a[0] }}
+  pb ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function h:
+  pa ∈ {{ &a[0] }}
+  pb ∈ {{ &b[0] }}
+[eva:final-states] Values at end of function main:
+  p1 ∈ {{ &pa }}
+  p2 ∈ {{ &pb }}
+  pa ∈ {{ &b[0] }}
+  pb ∈ {{ &a[0] }}
+  pa1 ∈ {{ &a[0] }}
+  pb1 ∈ {{ &b[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "p1": "a",
+  "p2": "b"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "b[0..19]": [],
+    "a[0..19]": [],
+    "c": [
+        "pa"
+    ],
+    "pa": [
+        "b"
+    ],
+    "pb": [
+        "a"
+    ],
+    "d": [
+        "pb"
+    ],
+    "p1": [
+        "pa"
+    ],
+    "p2": [
+        "pb"
+    ],
+    "pa1": [
+        "a"
+    ],
+    "pb1": [
+        "b"
+    ]
+} 
+ 
+ Code ************************** 
+     char b[20];
+    char a[20];
+  
+
+void swap1(char **a, char **b) {
+    char * c;
+    c = *a;
+    *a = *b;
+    *b = c;
+}
+
+void swap(char ***a, char ***b) {
+   char ** c;
+   char ** d;
+
+   c =*a;
+   d =*b;
+   swap1(c, d);
+}
+
+void f(char ***a, char ***b) {
+  swap(a, b);
+}
+
+void g(char ***a, char ***b) {
+   swap(a, b);
+   swap(a, b);
+}
+
+void h(char ***a, char ***b) {
+   f(a, b);
+   f(a, b);
+   g(a, b);
+}
+
+int main (){
+    char ** p1, ** p2;
+    char * pa, * pb;
+    char * pa1, *pb1;
+ 
+    pa = a;
+    pb = b;
+
+    p1 = & pa;
+    p2 = & pb;
+
+
+    h (&p1, &p2);
+    g (&p1, &p2);
+    f (&p1, &p2);
+    g (&p1, &p2);
+
+    pa1 = *p2;
+    pb1 = *p1;
+}
+
+

@@ -1,0 +1,5 @@
+
+No. 
+
+Firstly, in the mutated code, line 41 uses the pre-increment operator on the loop index `first`. Line 61 also uses this same index, and so the condition `if ( first++< upper-1 )` always evaluates to true. Because the first parameter of the recursive call to quickSort is greater than the third parameter, it is always sorted in ascending order of value in this case. Additionally, because line `63` contains `swap(data,first,upper)`, every time the inner recursive calls to `quickSort` are made, `bound` ends up getting set to the last element of `data`.
+In the non-mutated version, only one recursive function call occurs, as the index of that loop is never incremented. Therefore `QuickSort.sort()` can guarantee the correct output of a sorted array.

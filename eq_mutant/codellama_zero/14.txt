@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, `swap(data,first,(first+last)/2)` is used to swap the first element with the middle element of the array. However, in the mutated code `(-first-last)`/2 is calculated instead of `(first,last)`. This will result in a different pivot element being selected, which can affect how the quick sort algorithm works. Therefore the output of these two programs will be different for the given input, and they will have different meanings.

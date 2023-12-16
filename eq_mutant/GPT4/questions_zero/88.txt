@@ -1,0 +1,111 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+// This is a mutant program.
+// Author : ysma
+
+public class Bisect
+{
+
+    double mEpsilon;
+
+    double mNumber;
+
+    double mResult;
+
+    public Bisect()
+    {
+    }
+
+    public  void setEpsilon( double epsilon )
+    {
+        this.mEpsilon = epsilon;
+    }
+
+    public  double sqrt( double N )
+    {
+        double x = N;
+        double M = N;
+        double m = 1;
+        double r = x;
+        double diff = x * x - N;
+        while (Math.abs(diff) > mEpsilon) {
+            if (diff < 0) {
+                m = x;
+                x = (M + x) / 2;
+            } else {
+                if (diff > 0) {
+                    M = x;
+                    x = (m + x) / 2;
+                }
+            }
+            diff = x * x - N;
+        }
+        r = x;
+        mResult = r;
+        return r;
+    }
+
+}
+
+```
+```Mutant Code 
+// This is a mutant program.
+// Author : ysma
+
+public class Bisect
+{
+
+    double mEpsilon;
+
+    double mNumber;
+
+    double mResult;
+
+    public Bisect()
+    {
+    }
+
+    public  void setEpsilon( double epsilon )
+    {
+        this.mEpsilon = epsilon;
+    }
+
+    public  double sqrt( double N )
+    {
+        double x = N;
+        double M = N;
+        double m = 1;
+        double r = x;
+        double diff = x * x - N;
+        while (Math.abs(diff) > mEpsilon) {
+            if (diff < 0) {
+                m = x;
+                x = (M * x) / 2;
+            } else {
+                if (diff > 0) {
+                    M = x;
+                    x = (m + x) / 2;
+                }
+            }
+            diff = x * x - N;
+        }
+        r = x;
+        mResult = r;
+        return r;
+    }
+
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -32 +32 @@
+-                x = (M + x) / 2;
++                x = (M * x) / 2;
+
+    ```

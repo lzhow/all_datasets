@@ -1,0 +1,4 @@
+
+The provided snippets of code are **not** semantic equivalent. The second snippet contains a logic bug that can result in an infinite loop under certain circumstances. Specifically, the line `while ( first < uppper -1 )` in the mutated version of the code incorrectly references the variable `upper`, which is not defined in this scope. This results in `lower` growing without bound, causing an endless loop.
+
+As a result, while the input code may appear to sort the elements of an array in ascending order, it does so by repeatedly swapping two elements that are too close to each other, eventually causing a stack overflow.

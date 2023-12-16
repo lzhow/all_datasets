@@ -1,0 +1,92 @@
+  ptrs[0..9] ∈ {0}
+  my_malloc1_a ∈ {0}
+[eva:final-states] Values at end of function my_malloc:
+  ptrs[0] ∈ {0}
+      [1..2] ∈ [--..--]
+      [3..9] ∈ {0}
+  a ∈ [--..--]
+[eva:final-states] Values at end of function my_malloc1:
+  ptrs[0] ∈ {0}
+      [1..2] ∈ [--..--]
+      [3..9] ∈ {0}
+  my_malloc1_a ∈ [--..--]
+[eva:final-states] Values at end of function malloc2:
+  ptrs[0] ∈ {0}
+      [1..2] ∈ [--..--]
+      [3..9] ∈ {0}
+  curidx ∈ {3}
+  my_malloc1_a ∈ [--..--]
+  __retres ∈ [--..--]
+[eva:final-states] Values at end of function main:
+  ptrs[0] ∈ {0}
+      [1..2] ∈ [--..--]
+      [3..9] ∈ {0}
+  my_malloc1_a ∈ [--..--]
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "malloc2": {
+    "idx": "unsigned",
+    "length": "unsigned"
+  },
+  "my_malloc1": {
+    "idx": "unsigned",
+    "lenght": "unsigned"
+  },
+  "my_malloc": {
+    "idx": "unsigned",
+    "length": "unsigned"
+  }
+} 
+ ************************** Frama-c ************************** 
+ {
+    "ptrs[0..9]": [],
+    "my_malloc1_a": [],
+    "ptrs[0]": [],
+    "ptrs[1..2]": [],
+    "ptrs[3..9]": [],
+    "a": [],
+    "curidx": []
+} 
+ 
+ Code ************************** 
+ 
+extern void * malloc(unsigned);
+
+char * ptrs[10];
+void  my_malloc(unsigned idx, unsigned length) {
+    char * a = malloc(length);
+    free (ptrs[idx]);
+    ptrs[idx] = a;
+}
+
+char * my_malloc1(unsigned idx, unsigned lenght) {
+    static char * a = 0;
+
+    my_malloc(idx, lenght);
+    if (a != 0) {
+        a = malloc(idx +1);
+    } else {
+       a = malloc(idx);
+    }
+    return a;
+}
+
+
+unsigned malloc2(unsigned idx, unsigned length){
+    unsigned curidx;
+    my_malloc(idx, length);
+    my_malloc1(idx+1, length);
+    curidx = idx +2; 
+    if (curidx < 8) 
+        return malloc2(curidx, length);
+    return curidx;
+}
+
+int main () {
+
+    malloc2(1, 10);
+}
+
+

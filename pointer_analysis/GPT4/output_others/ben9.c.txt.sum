@@ -1,0 +1,51 @@
+[eva:final-states] Values at end of function main:
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "l1": ["o1"],
+  "l2": ["o2"],
+  "l3": ["o3"],
+  "l4": ["o4"],
+  "o1.next": ["o2"],
+  "o2.next": [],
+  "o3.next": ["o4"],
+  "o4.next": []
+}
+ 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ typedef struct link{
+	int a;
+	struct link* next;
+}link;
+
+void connect(link* first,link* second){
+	first->next = second;
+}
+
+void dog(){
+	link o1,o2;
+	link* l1 = &o1;
+	link* l2 = &o2;
+	connect(l1,l2);
+}
+
+void cat(){
+
+	link o3,o4;
+	link* l3 = &o3;
+	link* l4 = &o4;
+	connect(l3,l4);
+}
+
+
+int main(){
+
+	
+
+
+
+}

@@ -1,0 +1,4 @@
+
+No, because even though the code block you gave me is semantic equivalent, there is some subtlety to the rules of how the compiler will actually process the program, which your example may be taking advantage of. Your first program will always output the original array, while my version will sometimes output a sorted array and sometimes it will output an array that is in the opposite order. This would affect your function `f` completely, since your program expects the elements in sorted order, and it would be completely incorrect for the second program to not output sorted data to your `sort` function, but for my function it is acceptable to occasionally not sort the data!
+
+    Your second and third programs are similarly incorrect because they do not account for how many times each element is going to be copied and pasted, making them much more efficient than the first.

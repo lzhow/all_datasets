@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different results. In the original code, `diff` will be compared to `mepsilon` in the while loop. However, in mutated code `if ( diff--<0)` will first decrement ` diff` by  `1` then compare it to  zero. This will cause the loop to terminate earlier than the orignal code. Therefore the mutation will produce a different result.

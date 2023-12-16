@@ -1,0 +1,125 @@
+<s> 
+    
+  You are a pointer analysis tool for programs. I will provide a file to you and you do the pointer analysis about it. You analyze what varaibles the pointers points to in the provided code. 
+  The output format is json file. You don't need to give me your explanation.
+
+
+    Here's your input file: void D(char ***ppp) { ***ppp = 0; }
+
+void C(char ***ppp) { ***ppp = 0; }
+
+void B(char ***ppp) { D(ppp); }
+
+void A() {
+  char c;
+  char *p = &c;
+  char **pp = &p;
+  B(&pp);
+  C(&pp);
+} 
+
+
+    Here's your output:
+
+   {
+    "A": {
+        "pp": {
+            "ppp": {
+                "pp": {
+                    "ppp": {
+                        "pp": {
+                            "ppp": {
+                                "pp": {
+                                    "ppp": {
+                                        "pp": {
+                                            "ppp": {
+                                                "pp": {
+                                                    "ppp": {
+                                                        "pp": {
+                                                            "ppp": {
+                                                                "pp": {
+                                                                    "ppp": {
+                                                                        "pp": {
+                                                                            "ppp": {
+                                                                                "pp": {
+                                                                                    "ppp": {
+                                                                                        "pp": {
+                                                                                            "ppp": {
+                                                                                                "pp": {
+                                                                                                    "ppp": {
+                                                                                                        "pp": {
+                                                                                                            "ppp": {
+                                                                                                                "pp": {
+                                                                                                                    "ppp": {
+                                                                                                                        "pp": {
+                                                                                                                            "ppp": {
+                                                                                                                                "pp": {
+                                                                                                                                    "ppp": {
+                                                                                                                                        "pp": {
+                                                                                                                                            "ppp": {
+                                                                                                                                                "pp": {
+                                                                                                                                                    "ppp": {
+                                                                                                                                                        "pp": {
+                                                                                                                                                            "ppp": {
+                                                                                                                                                                "pp": {
+                                                                                                                                                                    "ppp": {
+                                                                                                                                                                        "pp": {
+                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                "pp": {
+                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                                                                                                                                                                                                                                                                    "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                                                        "pp": {
+                                                                                                                                                                                                                                                                                                                                                                                                            "ppp": {
+                                                                                                                                                                                                                                                                                                                                                                                                                "pp": {
+                                                                                                                                                

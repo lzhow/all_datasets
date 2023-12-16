@@ -1,0 +1,33 @@
+[eva:final-states] Values at end of function f:
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "a": "char[10]",
+  "c": "char[10]"
+} 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ void f(char ** a) {
+   int b[10];
+   (*a)++; 
+
+   b[10] = 0;
+}
+
+int main (){
+    char a[10];
+    char * c;
+
+    c = a;
+
+    f(&c);
+    f(&c);
+
+    *c = 0;
+    a[10] = 0;
+}
+
+

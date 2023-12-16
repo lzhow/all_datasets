@@ -1,0 +1,4 @@
+
+The code in both the provided files is syntactically correct. But, the changes made in the loop condition are causing the algorithm to behave differently, and therefore the outputs are different.
+
+In the first code, for the inner while loop, bound is set as the middle element of the array. So in each iteration, `bound` can only be less than the element on the left of `lower` (since `upper` is initially assigned to the last index of arr). As a result, even if `data [upper]` is lesser than ` bound` for some iterations, this will not affect the exit condition of while, resulting in an infinite loop. In other words, arr is not sorted in descending order.

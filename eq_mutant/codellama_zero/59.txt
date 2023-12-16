@@ -1,0 +1,2 @@
+  
+No. They are different. In the original code, `sort` function checks if `data` length is less than  `2`, and if it is, it returns. However, in the mutated code `if ( false )` statement is always false, so the `return` instruction is never executed. Therefore the code will always run the rest of the instructions in `quicksort`.

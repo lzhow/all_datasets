@@ -1,0 +1,2 @@
+
+They are syntactically equivalent, but there is one semantic difference that matters in this case. In the first code, "bonus" will be set to the correct value even if i is greater than 6M. But in the mutant code "abs" function is applied to " bonus" so that bonus will get the negated value when i>=6 M. So technically, it will take the larger of the result of this expression if "i>= 4M" or "if (i < 5M)".

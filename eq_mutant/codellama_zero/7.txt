@@ -1,0 +1,2 @@
+  
+No. They are NOT sematically equal because `--x` changes the value of `diff` in the first iteration. In the original code, `double diff=x\*x-N;` is executed first, and `++x;` or `-- x;` does not change the result. However, in mutated code ` double  diff  =--x \* x- N;` first executes `--X;` and changes `X` to `N-1`. Then, it calculates ` (N - 

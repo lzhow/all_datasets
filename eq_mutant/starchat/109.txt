@@ -1,0 +1,2 @@
+
+Both codes produce the exact same result, when the input is `42`, which is greater than `1` so the `else if` branches will be evaluated and `bonus = bonus + 4.2 * 5% =  0` would be added to the initial value of  `  bonus =1`, however the first code will also enter the `(i>=1 and i<= 99025)` block which computes `abs((1 *.09) + (9,97745 * -0)) = abs(.98927) * i > 80%` for i <5, and the program would crash with a divide by zero error for all i greater or equal to 6. Therefore the second code produces a different output when i is smaller or bigger than 7.

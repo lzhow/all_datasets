@@ -1,0 +1,51 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+int main(void)
+{	int i,j,temp,y,a[5];
+	for(i=0;i<5;i++)
+		scanf ("%d,",&a[i]);
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{			
+			if(a[i]<a[j])
+			{ 
+				temp=a[i];     
+				a[i]=a[j]; 
+				a[j]=temp;
+		} }	
+		printf("%5d ",a[i]);} 
+}
+
+```
+```Mutant Code 
+int main(void)
+{	int i,j,temp,y,a[5];
+	for(i=0;i<5;i++)
+		scanf ("%d,",&a[i]);
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{			
+			if(a[i]<a[j])
+			{ 
+				temp=a[i];     
+				a[i]=a[j]; 
+				a[j]=temp++;
+		} }	
+		printf("%5d ",a[i]);} 
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -13 +13 @@
+-				a[j]=temp;
++				a[j]=temp++;
+
+    ```

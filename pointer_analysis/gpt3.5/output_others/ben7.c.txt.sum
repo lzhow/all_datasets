@@ -1,0 +1,55 @@
+  z ∈ {0}
+[eva:final-states] Values at end of function f:
+  z ∈ {{ &b.f2 }}
+[eva:final-states] Values at end of function main:
+  z ∈ {{ &b.f2 }}
+  a ∈ {{ &b }}
+  c ∈ {{ &b.f1 }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+    "z": ["b.f2"],
+    "x": ["b.f1"],
+    "y": ["b.f1", "b.f2"]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "z": [
+        "b",
+        "f"
+    ],
+    "a": [
+        "b"
+    ],
+    "c": [
+        "b",
+        "f"
+    ]
+} 
+ 
+ Code ************************** 
+ typedef struct{
+    int f1, f2;
+}FOO;
+
+int *z;
+
+void f(int*x, FOO*y);
+
+int main(){
+    FOO *a,b;
+    int *c;
+
+    a=&b;
+    c=&b.f1;
+    f(a,c);
+
+}
+
+void f(int *x, FOO*y){
+    z = &(y->f2);
+    
+}

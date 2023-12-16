@@ -1,0 +1,59 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+// This is a mutant program.
+// Author : ysma
+
+public class BubbleSort
+{
+
+    public  void sort( int[] data )
+    {
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = data.length - 1; j > i; --j) {
+                if (data[j] < data[j - 1]) {
+                    int temp = data[j];
+                    data[j] = data[j - 1];
+                    data[j - 1] = temp;
+                }
+            }
+        }
+    }
+
+}
+
+```
+```Mutant Code 
+// This is a mutant program.
+// Author : ysma
+
+public class BubbleSort
+{
+
+    public  void sort( int[] data )
+    {
+        for (int i = 0; i < data.length - 1; i--) {
+            for (int j = data.length - 1; j > i; --j) {
+                if (data[j] < data[j - 1]) {
+                    int temp = data[j];
+                    data[j] = data[j - 1];
+                    data[j - 1] = temp;
+                }
+            }
+        }
+    }
+
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -9 +9 @@
+-        for (int i = 0; i < data.length - 1; i++) {
++        for (int i = 0; i < data.length - 1; i--) {
+
+    ```

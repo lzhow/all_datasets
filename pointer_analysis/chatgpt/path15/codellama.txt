@@ -1,0 +1,85 @@
+<s> 
+    
+  You are a pointer analysis tool for programs. I will provide a file to you and you do the pointer analysis about it. You analyze what varaibles the pointers points to in the provided code. 
+  The output format is json file. You don't need to give me your explanation.
+
+
+    Here's your input file: // #include "aliascheck.h"
+
+int main(){
+    int **p, *q, **w,*v, *a,a1,q1;
+    a = &a1;
+    p = &a;
+    q = &q1;
+    w = 0;
+    if(p)
+        *p = q;
+    else
+        w = &a;
+
+    v = *w;
+    // NOALIAS(v,&q1);
+    // MAYALIAS(v,&a1);
+
+}
+
+
+    Here's your output:
+
+   {
+    "main": {
+        "Declarations": {
+            "p": {
+                "Type": "int **",
+                "Is_init": 1,
+                "Is_init_with_const": 0,
+                "Is_init_with_global": 0,
+                "Is_init_with_local": 0,
+                "Is_init_with_nonlocal": 0,
+                "Is_init_with_null": 0,
+                "Is_init_with_var": 0,
+                "Is_init_with_zero": 0,
+                "Is_init_with_unknown_value": 0,
+                "Is_init_with_non_zero_value": 0,
+                "Is_init_with_non_null_value": 0,
+                "Is_init_with_non_local_value": 0,
+                "Is_init_with_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_value": 0,
+                "Is_init_with_const_value": 0,
+                "Is_init_with_non_const_value": 0,
+                "Is_init_with_non_const_non_zero_non_null_non_local_non_var_value": 0,
+                "Is_init_with_global_value": 0,
+                "Is_init_with_non_global_value": 0,
+                "Is_init_with_non_global_non_const_non_zero_non_null_non_local_non_var_value": 0,
+                "Is_init_with_local_value": 0,
+                "Is_init_with_non_local_value": 0,
+                "Is_init_with_non_local_non_const_non_zero_non_null_non_var_value": 0,
+                "Is_init_with_var_value": 0,
+                "Is_init_with_non_var_value": 0,
+                "Is_init_with_non_var_non_const_non_zero_non_null_non_local_value": 0,
+                "Is_init_with_non_zero_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_value": 0,
+                "Is_init_with_null_value": 0,
+                "Is_init_with_non_null_value": 0,
+                "Is_init_with_non_null_non_local_non_var_value": 0,
+                "Is_init_with_non_null_non_local_non_var_non_const_value": 0,
+                "Is_init_with_zero_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_value": 0,
+                "Is_init_with_unknown_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_value": 0,
+                "Is_init_with_non_zero_non_null_non_local_non_var_non_const_non_global_non_local_non_var_non_const_non_global_non_local_non_var_non_const_

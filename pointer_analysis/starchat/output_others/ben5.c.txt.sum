@@ -1,0 +1,83 @@
+[eva:final-states] Values at end of function main:
+  a1.k ∈ {{ &obj }}
+  a2.k ∈ {{ &obj }}
+  a ∈ {{ &a1 }}
+  c ∈ {{ &a2 }}
+  obj ∈ {100}
+  b ∈ {{ &obj }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "obj": [
+    "a->k",
+    "c->k"
+  ],
+  "a1": [
+    "a"
+  ],
+  "a2": [
+    "c"
+  ],
+  "a": [
+    "a1",
+    "a2"
+  ],
+  "c": [
+    "a1",
+    "a2"
+  ],
+  "b": [
+    "c->k"
+  ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "a1.k": [
+        "obj"
+    ],
+    "a2.k": [
+        "obj"
+    ],
+    "a": [
+        "a"
+    ],
+    "c": [
+        "a"
+    ],
+    "obj": [],
+    "b": [
+        "obj"
+    ]
+} 
+ 
+ Code ************************** 
+ typedef struct node{
+    char* s;
+    struct node* tail;
+
+}node_t;
+
+typedef struct arc{
+    node_t *tail;
+    struct arc*next;
+
+}art_t;
+
+typedef struct agg1{
+    int *k;
+    
+}agg1;
+
+
+int main(){
+    agg1 a1,a2;
+    agg1 *a = &a1;
+    agg1 *c = &a2;
+    int obj,*b;
+    a->k = &obj;
+    c->k = a->k;
+    b = c->k;
+    *(c->k) =100;
+    *b = 100;
+}

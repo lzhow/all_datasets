@@ -1,0 +1,4 @@
+
+These two programs are functionally equivalent. While the original program assigns the variable a to b and b to c, when the patch program is applied, it decrements a and assigns it to t, which is then assigned to a. After this, t is assigned back to the respective b or c. Therefore the functionality of the program doesn't change. 
+
+However, this might not be true in all scenarios, and as such, comparing the "semantics" of two source codes should be considered when analyzing them for equivalence.

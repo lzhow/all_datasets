@@ -1,0 +1,136 @@
+  obj ∈ {0}
+[eva:final-states] Values at end of function foo:
+  a ∈ {{ &c }}
+[eva:final-states] Values at end of function main:
+  p ∈ {{ &a }}
+  q ∈ {{ &c }}
+  a ∈ {{ &c }}
+  b ∈ {{ &c }}
+  c ∈ {{ &d }}
+  m ∈ {{ &d }}
+  n ∈ {{ &d }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "Declarations": {
+    "a": {
+      "type": "int **",
+      "location": "stack"
+    },
+    "b": {
+      "type": "int **",
+      "location": "stack"
+    },
+    "c": {
+      "type": "int *",
+      "location": "stack"
+    },
+    "d": {
+      "type": "int",
+      "location": "stack"
+    },
+    "m": {
+      "type": "int *",
+      "location": "stack"
+    },
+    "n": {
+      "type": "int",
+      "location": "stack"
+    },
+    "p": {
+      "type": "int ***",
+      "location": "stack"
+    },
+    "q": {
+      "type": "int **",
+      "location": "stack"
+    }
+  },
+  "Pointers": {
+    "a": {
+      "target": "b",
+      "location": "stack"
+    },
+    "b": {
+      "target": "c",
+      "location": "stack"
+    },
+    "c": {
+      "target": "d",
+      "location": "stack"
+    },
+    "m": {
+      "target": "d",
+      "location": "stack"
+    },
+    "n": {
+      "target": "d",
+      "location": "stack"
+    },
+    "p": {
+      "target": "a",
+      "location": "stack"
+    },
+    "q": {
+      "target": "c",
+      "location": "stack"
+    }
+  }
+} 
+ ************************** Frama-c ************************** 
+ {
+    "obj": [],
+    "a": [
+        "c"
+    ],
+    "p": [
+        "a"
+    ],
+    "q": [
+        "c"
+    ],
+    "b": [
+        "c"
+    ],
+    "c": [
+        "d"
+    ],
+    "m": [
+        "d"
+    ],
+    "n": [
+        "d"
+    ]
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+void foo(int ***,int**);
+int obj;
+int main(){
+
+    int ***p,**q, **a, **b, *c, *m,*n,d;
+    m = &d;
+    a = b = &c;
+    if(a){
+        p = &a;
+        q = &c;
+        foo(p,q);
+    }
+    else{
+        p = &b;
+        q = &c;
+        foo(p,q);
+    }
+
+   *a = m;
+   n = *b;
+//    MUSTALIAS(a,b);
+//    MUSTALIAS(m,n);
+}
+
+void foo(int ***x,int **y){
+    *x = y;
+}

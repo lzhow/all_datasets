@@ -1,0 +1,4 @@
+
+No, they do not have exactly the the identical behaviour. 
+
+Rearranging the lines can cause the control flow of the program to change. In the original code, `i` starts at zero and ends at `data_length-1`, which means that the loop will run `length` times. However, in the mutated code `~dataLength-i-2`, `+1` gets added after `Length` evaluates, which changes the end condition to `1`. This means the loops only runs one time.

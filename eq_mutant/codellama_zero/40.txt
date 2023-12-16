@@ -1,0 +1,3 @@
+  
+No. They are different. In the original code, it checks if `year` can be divided by  `4`  or  by   `1`   and  not  divided  equally  to  the  number  of  years  in  a  century  (4  centuries).  In  other  words,  it  checks  if  year  is a leap year.   In   the   mutant  code ,  however,   it   checks   if   year   is   a   leep  day  and   not   equal  zero.   
+In  addition, in the mutated code the `lep= 0` line is moved to the end of the code. This means that the variable `sum` will be incremented by one if it is not a multiple of `3` but the condition `if (lead==  true)` will never be met. Therefore the output of both codes will differ.

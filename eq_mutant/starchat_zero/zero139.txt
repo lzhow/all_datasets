@@ -1,0 +1,6 @@
+
+The two Java codes provided are **semantically not equal**, as they produce different outputs when executed with the provided inputs.
+
+In the first code, the `main` method calls `Math` methods on the parameter `h`. This could result in `ArithmeticException`s or other errors at runtime if `m` is large enough. However, in the second code `abs` (absolute value) is called on `int` `x`.
+This means the output will always be positive, even if h is negative. Additionally, since `sqrt` returns a double and the argument passed to `printf` requires an `argument of type int`, this could potentially result
+in incorrect formatting of `double` values if their fractional parts are non-zero.

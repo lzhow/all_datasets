@@ -1,0 +1,9 @@
+
+Both the codes contain errors. You need to fix them to make them semantic equivalent. 
+
+**Code1**
+*  x is not declared as a variable, so ` x= (m + X)/2 ` is a syntax error. It needs to be ` double X =...`.  The first correction code is `double x( double M, double Y ) { X=(M+Y)/  ; return X ; }`.
+Now it returns the correct output for the test case ` f (2, 5)`
+`x = f(.5,7 );` prints `7.5`
+However, with the second pair of code, it fails to return correct answer for `m = -2`, with runtime error `Error: dereferencing type-punned pointer will break strict-aliasing rules`. Fix the type of `k` to double (or any other type that can contain both positive and negative values), so that the first and third for loop execute the assignment `leep= 0` (instead of a non-existing variable `ke`) in all those cases for which both `i <= k` evaluates to true (not just the positive case). The third correction is:
+ `for (double

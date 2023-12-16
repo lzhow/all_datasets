@@ -1,0 +1,4 @@
+
+These codes look semanticly equal to me. They accomplish the task at hand in the most efficient way possible, but there are some subtle changes, like the use of `abs()` in one example to avoid a potential integer overflow.
+
+The overall logic is the exact same, the only thing that changes is that the multiplication with a decimal results in a floating-point value, while all other computations (addition, subtraction, etc.) result in integers. However, since the final result is an integer, no information is lost and the outputs are still equal for any possible input value.

@@ -1,0 +1,93 @@
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "declaredVars": {
+    "a": {
+      "type": "int**",
+      "location": "stack"
+    },
+    "b": {
+      "type": "int**",
+      "location": "stack"
+    },
+    "f": {
+      "type": "int*",
+      "location": "stack"
+    },
+    "g": {
+      "type": "int*",
+      "location": "stack"
+    },
+    "r": {
+      "type": "int",
+      "location": "stack"
+    },
+    "w": {
+      "type": "int",
+      "location": "stack"
+    },
+    "q": {
+      "type": "int",
+      "location": "stack"
+    },
+    "obj": {
+      "type": "int*",
+      "location": "stack"
+    },
+    "k": {
+      "type": "int",
+      "location": "stack"
+    }
+  },
+  "aliasedVars": {
+    "obj": {
+      "type": "int*",
+      "location": "stack"
+    },
+    "q": {
+      "type": "int",
+      "location": "stack"
+    }
+  },
+  "noaliasVars": {
+    "obj": {
+      "type": "int*",
+      "location": "stack"
+    },
+    "r": {
+      "type": "int",
+      "location": "stack"
+    },
+    "w": {
+      "type": "int",
+      "location": "stack"
+    }
+  }
+} 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+int main(){
+
+    int**a,**b, *f,*g,r,w,q,*obj,k;
+    f = &k;
+    if(a){
+        a = &f;
+        f = &r;
+    }
+    else{
+        a = &g;
+        g = &w;
+    }
+    a = b;
+
+    *a = &q;
+    obj = *b;
+    // MUSTALIAS(obj,&q);
+    // NOALIAS(obj,&r);
+    // NOALIAS(obj,&w);
+
+}

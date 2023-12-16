@@ -1,0 +1,47 @@
+  p ∈ {0}
+[eva:final-states] Values at end of function accessA:
+[eva:final-states] Values at end of function recursion:
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+  "p": [
+    "a[0]",
+    "a[1]",
+    "a[2]",
+    "a[3]",
+    "a[4]",
+    "a[5]",
+    "a[6]",
+    "a[7]",
+    "a[8]",
+    "a[9]"
+  ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "p": []
+} 
+ 
+ Code ************************** 
+ char *p;
+
+char accessA(unsigned i) {
+  return *(p+i);
+}
+
+
+void recursion(unsigned i) {
+    if (accessA(i) > 0) return;
+    recursion(i++);
+}
+int main () {
+    unsigned i = 0;
+    unsigned a[10];
+    p = a;
+    recursion(0);
+}
+
+

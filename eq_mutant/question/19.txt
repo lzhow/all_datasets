@@ -1,0 +1,151 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+Here are three semantically equal examples:  
+The first example pair is
+``` Code 1
+double f(double M, double x) {
+    x = (M + x) / 2;
+    return x;
+ }
+```
+``` Mutant Code 1
+double f(double M, double x) {
+    x = (M + x++ ) / 2;
+    return x;
+ }
+```
+Yes. The two codes are semantically euqal because `M + x++` first does `M + x` and then `x++`. Therefore, `(M + x) / 2` is the same with `(M + x++) / 2`.
+
+
+The second example pair is 
+``` Code 2
+double f(int x, int divisor){
+   return x*divisor;
+}
+```
+```Mutant Code 2
+double f(int x, int divisor){
+    return x*divisor++;
+}
+```
+Yes. The two codes are semantically euqal because `x*divisor` first does `x*divisor` and then `divisor++`. The two functions return the same values.
+
+
+The third example pair is 
+``` Code 3
+int f(int a, int y, int x){
+    int p = a;
+    p = x + y;
+    return p;
+}
+```
+``` Mutant Code 3
+int f(int a, int y, int x){
+    int p = 1;
+    p = x + y;
+    return p;
+}
+```
+Yes. The two codes are semantically euqal because the local value `p` is re-assigned by `x+y`. There, the change `int p = 1;` will not affect the function.
+
+  
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+#include <stdio.h>
+main() 
+{ 
+	unsigned int day,month,year,sum,leap; 
+	printf("\n please input year,month,day\n"); 
+	scanf("%d,%d,%d",&year,&month,&day); 
+	switch(month) 
+	{	case 1:sum=0;
+			break; 
+		case 2:sum=31;
+			break;
+		case 3:sum=59;
+			break; 
+		case 4:sum=90;
+			break;
+		case 5:sum=120;
+			break; 
+		case 6:sum=151;
+			break; 
+		case 7:sum=181;
+			break; 
+		case 8:sum=212;
+			break; 
+		case 9:sum=243;
+			break; 
+		case 10:sum=273;
+			break; 
+		case 11:sum=304;
+			break;
+		case 12:sum=334;
+			break; 
+		default:printf("data error");
+			break; } 
+	sum=sum+day;
+	if(year%400==0||(year%4==0&&year%100!=0))
+		leap=1; 
+	else 
+		leap=0; 
+	if(leap==1&&month>2)
+		sum++; 
+	printf("It is the %d th day.",sum);
+}
+
+```
+```Mutant Code 
+#include <stdio.h>
+main() 
+{ 
+	unsigned int day,month,year,sum,leap; 
+	printf("\n please input year,month,day\n"); 
+	scanf("%d,%d,%d",&year,&month,&day); 
+	switch(month) 
+	{	case 1:sum=0;
+			break; 
+		case 2:sum=31;
+			break;
+		case 3:sum=59;
+			break; 
+		case 4:sum=90;
+			break;
+		case 5:sum=120;
+			break; 
+		case 6:sum=151;
+			break; 
+		case 7:sum=181;
+			break; 
+		case 8:sum=212;
+			break; 
+		case 9:sum=243;
+			break; 
+		case 10:sum=273;
+			break; 
+		case 11:sum=304;
+			break;
+		case 12:sum=334;
+			break; 
+		default:printf("data error");
+			break; } 
+	sum=sum+day;
+	if(year%400==0||(year%4==0&&year-100!=0))
+		leap=1; 
+	else 
+		leap=0; 
+	if(leap==1&&month>2)
+		sum++; 
+	printf("It is the %d th day.",sum);
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -35 +35 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year-100!=0))
+
+    ```

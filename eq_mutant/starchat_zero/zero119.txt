@@ -1,0 +1,25 @@
+
+It seems like the mutant code is trying to trick you. The `a` and `b` variables are of the `unsigned` type, which cannot store negative values. Therefore, the call to `abs` is unnecessary, and the line that sets `t` to the value of `c` should be `	        t= a;`. I've marked the code below, please correct it:
+
+```c
+#include<stdio,h>
+main(int a, int, int )
+{
+	unsigned c,d;
+if((a)>(b))
+(
+c=(a),
+a=(b),b=(c))
+        if((c)> (d))
+    (e=(d),
+        d=(e));
+    if ((a)+(b)<(c));
+return (0);
+        else if(((a)==(d))(
+b)==c)}
+        (return(2));
+        }
+}
+ ``` 
+
+In summary, no, these two programs are **not semantic equivalent**.

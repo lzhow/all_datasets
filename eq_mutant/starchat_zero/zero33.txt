@@ -1,0 +1,2 @@
+
+The two programs are **not** semantic equivalent, as the second program has a bug in the line containing ```upper++```. The program will never enter the loop, because the condition in line 38 is never satisfied, and therefore ```lower``` and ```uni``` are never updated.

@@ -1,0 +1,2 @@
+
+No, they're not semantic equal because they produce different outputs for the inputs. In the first code snippet, `a[++j]` is evaluated first, then the condition `if (a[*i] < a[--j] )`is checked. While in the mutated version, it's the opposite. First the comparison happens, and afterwards the increment is applied. Therefore the order in which the operations are executed is different, resulting in different results.

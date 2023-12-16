@@ -1,0 +1,6 @@
+
+No. While the difference in syntax is similar (the % operator is used in the mutated code instead of the / operator), the semantic meaning of these two pieces of code is very different. In the original code, x is assigned the result of ( M + X ) divided by  two. Thus, each iteration of this loop, we calculate the midpoint of [ M, X ] and assign the value of X to X. This results in a sequence of numbers that approach square root of N. 
+
+In the modified code X is updated using the % operation. Therefore, instead  of calculating midpoints, % is being used to perform arithmetic operations between  X and M. Here the expression X = X % M is executed. M here is taken as  the  result obtained from the previously run iteration. With this code, the sequence will contain remainders which are the square roots of  N. 
+
+       This semantic difference makes these codes semanticaly different, as their output is mathematically different and will give different results for the inputs.

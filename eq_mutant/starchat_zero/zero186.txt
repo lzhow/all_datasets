@@ -1,0 +1,2 @@
+
+The two provided codes aren't semantic equivalent. Their behavior is different given identical inputs, and they produce different outputs. This is due to different considerations made during code optimization. For example, the first code uses one less assignment in the inner loop, while the mutant code increments the loop counter outside the conditional block. Therefore, even if both loops terminate at the exact same point, they still produce distinct outputs due, in this case, to the differences in how variables are treated.

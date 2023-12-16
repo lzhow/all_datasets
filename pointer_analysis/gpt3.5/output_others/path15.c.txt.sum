@@ -1,0 +1,36 @@
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+    "p": ["q1"],
+    "q": ["q1"],
+    "w": ["a"],
+    "v": ["a1", "q1"],
+    "a": ["a1"],
+    "a1": [],
+    "q1": []
+} 
+ ************************** Frama-c ************************** 
+ {} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+int main(){
+    int **p, *q, **w,*v, *a,a1,q1;
+    a = &a1;
+    p = &a;
+    q = &q1;
+    w = 0;
+    if(p)
+        *p = q;
+    else
+        w = &a;
+
+    v = *w;
+    // NOALIAS(v,&q1);
+    // MAYALIAS(v,&a1);
+
+}

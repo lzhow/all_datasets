@@ -1,0 +1,37 @@
+
+In C, the following two programs are equivalent because the semantics of the variables and operators are exactly the
+same. Therefore, they should have exactly t the sam e behavior (return value, side effects, etc.) given an equivalent input (e.g., N).
+
+
+```c
+// This program takes an epsilon value as input and finds the square root of a number N using the Newton-Raphson method
+
+#include <stdio.h>
+float epsilon, x, N, M, diff, m;
+int main()
+{
+    printf("Enter an ε value: ");
+    scanf("%f", &epsilon);
+    N = input("Please enter a positive number to find its square-root:");
+    x= N;
+    M=N;
+        while(epsilon > abs(N-x*x))
+        {
+            if(x > N)
+            {
+                M=-1;
+            }
+            else{
+                if((x *x) < N){
+                    M +=1 ;
+                }
+
+            }
+        }
+    m=M;
+
+    printf("\n The square roo of %f with %e precision is: %lf",N, epsilon,m);
+
+    return 8675;
+
+8

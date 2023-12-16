@@ -1,0 +1,89 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+#include <stdio.h>
+#include <math.h>
+int main(a, b, c)
+unsigned int a;
+unsigned int b;
+unsigned int c;
+{	
+	int t;
+	if(a>b)
+	{
+		t=a;
+		a=b;
+		b=t;
+	}
+	if(a>c)
+	{
+		t=a;
+		a=b;
+		c=t;
+	}  
+	if(b>c)
+	{
+		t=b;
+		b=c;
+		c=t;
+	}
+	if(a+b<=c)
+	    return 0;
+	else if(a==b&&b==c)
+	    return 3;
+	else if(a==b||b==c)
+	    return 2;
+	else
+	    return 1;
+}
+
+```
+```Mutant Code 
+#include <stdio.h>
+#include <math.h>
+int main(a, b, c)
+unsigned int a;
+unsigned int b;
+unsigned int c;
+{	
+	int t;
+	if(a>b)
+	{
+		t=abs(a);
+		a=b;
+		b=t;
+	}
+	if(a>c)
+	{
+		t=a;
+		a=b;
+		c=t;
+	}  
+	if(b>c)
+	{
+		t=b;
+		b=c;
+		c=t;
+	}
+	if(a+b<=c)
+	    return 0;
+	else if(a==b&&b==c)
+	    return 3;
+	else if(a==b||b==c)
+	    return 2;
+	else
+	    return 1;
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -11 +11 @@
+-		t=a;
++		t=abs(a);
+
+    ```

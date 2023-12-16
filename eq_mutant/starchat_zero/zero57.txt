@@ -1,0 +1,3 @@
+
+In C language, they  are **NOT** semantic equivalent, as the `%` operator is only defined for signed integral types, while in Java it is defined both for integral and floating-point types.
+If you change the type of `x` to `long` in the second code, you can see that the mutated line still gives the wrong answer, since `% 3` on a `3.0` double produces a remainder of  `1.99...`, which is not equal to the value of the difference between its argument and  its result.

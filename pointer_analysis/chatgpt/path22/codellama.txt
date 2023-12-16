@@ -1,0 +1,86 @@
+{
+  "main": {
+    "Declarations": {
+      "a": {
+        "type": "int **",
+        "location": "stack"
+      },
+      "b": {
+        "type": "int **",
+        "location": "stack"
+      },
+      "c": {
+        "type": "int *",
+        "location": "stack"
+      },
+      "d": {
+        "type": "int",
+        "location": "stack"
+      },
+      "m": {
+        "type": "int *",
+        "location": "stack"
+      },
+      "n": {
+        "type": "int",
+        "location": "stack"
+      },
+      "p": {
+        "type": "int ***",
+        "location": "stack"
+      },
+      "q": {
+        "type": "int **",
+        "location": "stack"
+      }
+    },
+    "Pointers": {
+      "a": {
+        "target": "b",
+        "location": "stack"
+      },
+      "b": {
+        "target": "c",
+        "location": "stack"
+      },
+      "c": {
+        "target": "d",
+        "location": "stack"
+      },
+      "m": {
+        "target": "d",
+        "location": "stack"
+      },
+      "n": {
+        "target": "d",
+        "location": "stack"
+      },
+      "p": {
+        "target": "a",
+        "location": "stack"
+      },
+      "q": {
+        "target": "c",
+        "location": "stack"
+      }
+    }
+  },
+  "foo": {
+    "Declarations": {
+      "x": {
+        "type": "int ***",
+        "location": "stack"
+      },
+      "y": {
+        "type": "int **",
+        "location": "stack"
+      }
+    },
+    "Pointers": {
+      "x": {
+        "target": "y",
+        "location": "stack"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+[eva:final-states] Values at end of function main:
+  p ∈ {{ &x1 }}
+  q ∈ {{ &x1 }}
+  x ∈ {{ &x1 }}
+  y ∈ {{ &x1 }}
+  a ∈ {{ &a1 }}
+  b ∈ {{ &b1 }}
+  x1 ∈ {{ &n1 }}
+  m ∈ {{ &n1 }}
+  n ∈ {{ &n1 }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+    "p": ["n", "n1"],
+    "q": ["n", "n1"],
+    "x": ["x1"],
+    "y": ["x1"],
+    "a": ["a1"],
+    "b": ["b1"],
+    "m": ["n", "n1"]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "p": [
+        "x"
+    ],
+    "q": [
+        "x"
+    ],
+    "x": [
+        "x"
+    ],
+    "y": [
+        "x"
+    ],
+    "a": [
+        "a"
+    ],
+    "b": [
+        "b"
+    ],
+    "x1": [
+        "n"
+    ],
+    "m": [
+        "n"
+    ],
+    "n": [
+        "n"
+    ]
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+
+int main(){
+
+    int **p,**q;
+    int **x,**y;
+    int *a,*b,*x1,a1,b1;
+    int *m,*n,n1;
+    /// Note that n needs to be initialized
+    n = &n1;
+    a = &a1;
+    b = &b1;
+    x = y = &x1;
+    p = q = &a;
+    if(a){
+        p = x;
+        q = y;
+    }
+
+    *p = n;
+    m = *q;
+
+    // MAYALIAS(p,&a);
+    // MAYALIAS(p,&x1);
+    // NOALIAS(m,&a1);
+    // NOALIAS(m,&x1);
+    // MUSTALIAS(n,m);
+
+}

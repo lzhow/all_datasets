@@ -1,0 +1,4 @@
+
+The two provided codes snippets have a difference in the value of the variable `upper`. In the first code snippet, `last` is set to a value before the loop, thus the last element in `data` will not be considered for the partitioning. In contrast, in second code snipped, the `++` operator is used in a post-increment, which increments `lower` after the conditional statement.
+
+Therefore, these two snippets are **not semanticallly equal** and will result in different output.

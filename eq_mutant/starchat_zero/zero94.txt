@@ -1,0 +1,24 @@
+
+This is the source code for Quicksort in both C and Java, which are both object-oriented programming languages. While the syntax and basic structure of these programs are similar, they differ in several key ways:
+
+- The function definitions are slightly different between C (without parameter types) and C++. C++ includes type information for functions, while C does not
+C++
+```c++:quicksort.cpp:
+    // This function uses the partition scheme described above to sort an
+    /* arr[] : Array to be sorted,
+    low  : Starting index, 
+    high : Ending index */
+    void Quick_Sort(int arr[], int low,int high)
+    {
+        if(low < high){
+            int pi = partition(arr,low,high);
+            Quick( arr, low, pi-1);  // Recursively sort elements before partition
+            Quic( ar, pi+1, high); // recursively sort after partition
+        }
+    }
+Java
+public void Sort(String[] arr){
+    QuickSrt(ar,0 ar.Length-2);
+}
+static void Quciksort2(Comparable[] a, in r, fin l){ // 4-way quick sort
+    if r

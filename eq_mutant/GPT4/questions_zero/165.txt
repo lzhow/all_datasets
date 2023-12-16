@@ -1,0 +1,63 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+import java.util.Scanner;
+public class Bubble {
+public static void main(int b, int c, int d, int e, int f)
+{	int i,j,xyz,y;int[]a=new int[5];
+	a[0] = b;
+	a[1] = c;
+	a[2] = d;
+	a[3] = e;
+	a[4] = f;
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{
+			if(a[i]<a[j])
+			{
+				xyz=a[i];
+				a[i]=a[j];
+				a[j]=xyz;
+		} }
+		System.out.printf("5d ",a[i]); }
+}
+}
+
+```
+```Mutant Code 
+import java.util.Scanner;
+public class Bubble {
+public static void main(int b, int c, int d, int e, int f)
+{	int i,j,xyz,y;int[]a=new int[5];
+	a[0] = b;
+	a[1] = c;
+	a[2] = d;
+	a[3] = e;
+	a[4] = f;
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{
+			if(a[i]<=a[j])
+			{
+				xyz=a[i];
+				a[i]=a[j];
+				a[j]=xyz;
+		} }
+		System.out.printf("5d ",a[i]); }
+}
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -14 +14 @@
+-			if(a[i]<a[j])
++			if(a[i]<=a[j])
+
+    ```

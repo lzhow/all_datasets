@@ -1,0 +1,73 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+#include "math.h" 
+main() 
+{ 
+	int m,i,k,h=0,leap=1; 
+	printf("\n"); 
+	for(m=1;m<=100;m++)
+	{ 
+		k=sqrt(m+1);
+		for(i=2;i<=k;i++) 
+		{    
+			if(m%i==0) 
+			{
+				leap=0;
+				break;
+			}
+		}
+		if(leap) 
+		{
+			printf("%-4d",m);
+			h++; 
+			if(h%10==0) 
+				printf("\n"); 
+		} 
+		leap=1; 
+	} 
+	printf("\nThe total is %d",h); 
+}
+
+```
+```Mutant Code 
+#include "math.h" 
+main() 
+{ 
+	int m,i,k,h=0,leap=1; 
+	printf("\n"); 
+	for(m=1;m<=100;m++)
+	{ 
+		k=sqrt(m+1);
+		for(i=2;i<=k;i++) 
+		{    
+			if(m%i==0) 
+			{
+				leap=0;
+				break;
+			}
+		}
+		if(leap) 
+		{
+			printf("%-4d",m);
+			h++; 
+			if(h%10==0) 
+				printf("\n"); 
+		} 
+		leap=1; 
+	} 
+	printf("\nThe total is %d",h--);
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -26 +26 @@
+-	printf("\nThe total is %d",h);
++	printf("\nThe total is %d",h--);
+
+    ```

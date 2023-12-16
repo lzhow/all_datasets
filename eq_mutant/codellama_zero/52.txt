@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different outputs. In the original code, `quicksort` function calls itself recursively with `first` less than `upper -1`. In mutated code `if ( first < ( upper-1 ) )` changed to ` if( first<(upper/1))`. This change will cause the program to sort the array in a different order.

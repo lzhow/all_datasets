@@ -1,0 +1,127 @@
+  b[0..19] ∈ {0}
+  a[0..19] ∈ {0}
+[eva:final-states] Values at end of function swap:
+  c ∈ {{ &b[0] ; &a[0] }}
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f1:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f2:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f3:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f5:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function f8:
+  p1 ∈ {{ &a[0] }}
+  p2 ∈ {{ &b[0] }}
+[eva:final-states] Values at end of function g:
+  p1 ∈ {{ &b[0] ; &a[0] }}
+  p2 ∈ {{ &b[0] ; &a[0] }}
+[eva:final-states] Values at end of function h:
+  p1 ∈ {{ &b[0] }}
+  p2 ∈ {{ &a[0] }}
+[eva:final-states] Values at end of function main:
+  p1 ∈ {{ &a[0] }}
+  p2 ∈ {{ &b[0] }}
+  pa ∈ {{ &b[0] }}
+  pb ∈ {{ &a[0] }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "p1": "a",
+  "p2": "b",
+  "pa": "b",
+  "pb": "a"
+} 
+ ************************** Frama-c ************************** 
+ {
+    "b[0..19]": [],
+    "a[0..19]": [],
+    "c": [
+        "b",
+        "a"
+    ],
+    "p1": [
+        "a"
+    ],
+    "p2": [
+        "b"
+    ],
+    "pa": [
+        "b"
+    ],
+    "pb": [
+        "a"
+    ]
+} 
+ 
+ Code ************************** 
+     char b[20];
+    char a[20];
+ 
+
+void swap(char **a, char **b) {
+   char * c;
+   c = *a;
+   *a = * b;
+   *b = c;
+}
+
+void f1(char **a, char **b) {
+  swap(a, b);
+}
+
+void f2(char **a, char **b) {
+  swap(a,b);
+  f1(b, a);
+}
+
+void f3(char **a, char **b) {
+  f1(a, b);
+  f2(b, a);
+}
+
+void f5(char **a, char **b) {
+  f3(a, b);
+  f2(b, a);
+}
+
+void f8(char **a, char **b) {
+  f3(a, b);
+  f5(a, b);
+}
+
+
+void g(char **a, char **b) {
+   swap(a, b);
+   swap(a, b);
+}
+
+void h(char **a, char **b) {
+   f8(a, b);
+   f5(a, b);
+   g(a, b);
+}
+
+int main (){
+    char * p1, *p2;
+    char * pa, * pb;
+
+    p1 = a;
+    p2 = b;
+
+    h (&p1, &p2);
+    g (&p2, &p1);
+    f5 (&p1, &p2);
+    g (&p2, &p1);
+    pa = p2;
+    pb = p1;
+}
+
+

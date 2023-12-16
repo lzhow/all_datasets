@@ -1,0 +1,2 @@
+
+I ran a simple semantic analysis on the code and found that the mutant code is not semantic equivalent to the original code. The mutated code increments the loop variable `i` in the else statement of the if-else chain in order to compensate for the fact that it didn't enter the `if` statement at all. This causes the calculation of `bonus` to become incorrect.

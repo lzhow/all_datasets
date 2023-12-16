@@ -1,0 +1,71 @@
+  agg ∈ {0}
+[eva:final-states] Values at end of function main:
+ 
+  ************************** ChatGPT  ************************** 
+ {
+  "a": {
+    "agg": {
+      "i": {
+        "b": {
+          "f": {
+            "f": {}
+          }
+        }
+      }
+    }
+  },
+  "b": {
+    "f": {
+      "f": {}
+    }
+  },
+  "c": {
+    "f": {
+      "f": {}
+    }
+  },
+  "d": {
+    "w": {
+      "w": {}
+    }
+  },
+  "f": {
+    "f": {}
+  },
+  "w": {
+    "w": {}
+  }
+} 
+ ************************** Frama-c ************************** 
+ {
+    "agg": []
+} 
+ 
+ Code ************************** 
+ // #include "aliascheck.h"
+
+struct agg{
+	int **i;
+}agg;
+
+int main(){
+	int *b,*c,*d,f,w;
+	struct agg ag1, *a;
+	a = &ag1;
+
+	if(a){
+        if(f){
+		    a->i = &c;
+		    b = &f;
+        }
+	}
+	else{
+		a->i = &d;
+		b = &w;
+	}
+	*(a->i) = b;
+    // MAYALIAS(c,&f);
+    // MAYALIAS(d,&w);
+    // NOALIAS(c,&w);
+    // NOALIAS(d,&f);
+}

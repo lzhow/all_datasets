@@ -1,0 +1,107 @@
+Please analyze the two following provided code files in C or Java. Identify if they are semantically equal. 'Semantically equal' means two codes have the same meaning, that they have the same output given the same input.
+Here are three semantically equal examples:  
+The first example pair is
+``` Code 1
+double f(double M, double x) {
+    x = (M + x) / 2;
+    return x;
+ }
+```
+``` Mutant Code 1
+double f(double M, double x) {
+    x = (M + x++ ) / 2;
+    return x;
+ }
+```
+Yes. The two codes are semantically euqal because `M + x++` first does `M + x` and then `x++`. Therefore, `(M + x) / 2` is the same with `(M + x++) / 2`.
+
+
+The second example pair is 
+``` Code 2
+double f(int x, int divisor){
+   return x*divisor;
+}
+```
+```Mutant Code 2
+double f(int x, int divisor){
+    return x*divisor++;
+}
+```
+Yes. The two codes are semantically euqal because `x*divisor` first does `x*divisor` and then `divisor++`. The two functions return the same values.
+
+
+The third example pair is 
+``` Code 3
+int f(int a, int y, int x){
+    int p = a;
+    p = x + y;
+    return p;
+}
+```
+``` Mutant Code 3
+int f(int a, int y, int x){
+    int p = 1;
+    p = x + y;
+    return p;
+}
+```
+Yes. The two codes are semantically euqal because the local value `p` is re-assigned by `x+y`. There, the change `int p = 1;` will not affect the function.
+
+  
+
+Please identify if the two following codes are semantically equal. Please only answer `yes` or `no`. `yes` means they are semantically equal. `no` means they are not. 
+Input :
+    ```Code 
+// This is a mutant program.
+// Author : ysma
+
+public class BubbleSort
+{
+
+    public  void sort( int[] data )
+    {
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = data.length - 1; j > i; --j) {
+                if (data[j] < data[j - 1]) {
+                    int temp = data[j];
+                    data[j] = data[j - 1];
+                    data[j - 1] = temp;
+                }
+            }
+        }
+    }
+
+}
+
+```
+```Mutant Code 
+// This is a mutant program.
+// Author : ysma
+
+public class BubbleSort
+{
+
+    public  void sort( int[] data )
+    {
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = data.length - 1; j > i; --j) {
+                if (data[j] < data[++j - 1]) {
+                    int temp = data[j];
+                    data[j] = data[j - 1];
+                    data[j - 1] = temp;
+                }
+            }
+        }
+    }
+
+}
+
+```
+The difference patch is 
+
+    ```
+    @@ -11 +11 @@
+-                if (data[j] < data[j - 1]) {
++                if (data[j] < data[++j - 1]) {
+
+    ```

@@ -1,0 +1,42 @@
+  agg ∈ {0}
+[eva:final-states] Values at end of function main:
+  str1.a ∈ UNINITIALIZED
+      .fgg.k ∈ {100}
+  str2 ∈ {{ &str1 }}
+  __retres ∈ {0}
+ 
+  ************************** ChatGPT  ************************** 
+ 
+
+{
+    "str2": [
+        "str1.fgg.k"
+    ]
+} 
+ ************************** Frama-c ************************** 
+ {
+    "agg": [],
+    "str1.a": [
+        "UNINITIALIZED"
+    ],
+    "str1.a.fgg.k": [],
+    "str2": [
+        "str"
+    ]
+} 
+ 
+ Code ************************** 
+ struct agg{
+    int a;
+    struct fgg{
+	int k;
+    }fgg;
+}agg;
+
+int main(){
+    struct agg str1;
+    struct agg* str2 = &str1;
+
+    str2->fgg.k = 100;    
+
+}

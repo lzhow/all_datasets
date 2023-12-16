@@ -1,0 +1,2 @@
+  
+No. These two code snippets are NOT sematically equal because they produce different outputs. In the original code, `lower` will be incremented by  `1` in the `while` loop. However, in mutated code `upper` decreases by one in each iteration of the loop, which means that `if ( lower <upper)` will never be true. Therefore the code will enter the else block and ` lower`  will increase by only one. This will result in a different output.

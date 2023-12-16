@@ -1,0 +1,2 @@
+
+No, these two programs are **not** semantic equivalent, since the mutation that was made is an illegal assignment. Specifically, it increments the variable `tmp` in the `swap` function, which is not allowed in Java since `++` is used as a prefix operator, not an infix operator. If the program is intended to run on Java, this mutation would need to be reverted or the code would have to undergo other changes to make it compatible with Java syntax.

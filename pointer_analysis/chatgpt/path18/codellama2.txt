@@ -1,0 +1,38 @@
+{
+  "Declarations": [
+    {
+      "pointer": "a",
+      "points_to": [
+        "q"
+      ]
+    },
+    {
+      "pointer": "c",
+      "points_to": [
+        "d"
+      ]
+    }
+  ],
+  "Function Calls": [
+    {
+      "called_func": "foo",
+      "caller_func": "main",
+      "arguments": [
+        {
+          "pointer": "a",
+          "points_to": [
+            "q"
+          ]
+        }
+      ],
+      "return_values": [
+        {
+          "pointer": "f",
+          "points_to": [
+            "d"
+          ]
+        }
+      ]
+    }
+  ]
+}

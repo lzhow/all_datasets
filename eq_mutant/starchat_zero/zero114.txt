@@ -1,0 +1,10 @@
+
+In C:
+
+Yes, these two programs are "semantically equivalent", meaning they do the exact same thing when executed on input they receive. In this case, the input is hard-coded, but this can be changed easily to make the programs more flexible and easy to use.
+You can see this by compiling and executing each program separately, and then seeing if their outputs are the exactly the equal, as they should be. Note that for floating-point types, exact equality may not be the only way to check for equality: it's possible for there to be slight differences due to rounding errors, which are usually not considered equal to anything.
+
+
+Java:
+
+ No, they aren't semantic equivalent. While the program produces the correct output when compiled and executed, it does not produce the expected output for certain inputs. Specifically, when the salary is exactly $1 million or $2 million, then the output is not what the programmer intended. This happens because Java uses a technique called "automatic casting" to convert between different data types. When converting from a double to a float, for example, sometimes the result will be different from what is expected.

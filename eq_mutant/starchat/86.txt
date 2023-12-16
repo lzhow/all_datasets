@@ -1,0 +1,2 @@
+
+They are different. In the original code, while the bound (the middle value) is greater than the next value, it increments lower to go to the new position. However, in the mutated code that you provided, if bound is equal to data [lower], then it will always return true, as the condition will never be met. Thus, this while loop will run indefinitely. This issue will cause the program to run very slowly and not terminate at all, which is not ideal.
