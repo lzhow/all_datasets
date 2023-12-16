@@ -1,0 +1,4 @@
+  
+The variable 'newpendingimplementation' in function '_setpengingimplementation is labeled as 'Yes'. The reason is that the value of the newpendentimplementation variable is set by a user-controlled input, which is msg,sender.
+
+In the code, the msg sender is checked to ensure that it matches the admin address. If the sender does not match the address, then the transaction is reverted. Therefore, if a malicious user attempts to set the pending implementation to an arbitrary address that is different from the current implementation, they will not be able to do so. This ensures that only the owner of this contract can set a new pendingimplementation.

@@ -1,0 +1,5 @@
+  
+The variable `repayTaken` in function `liquidateCalcualteSeizetokns` is labeled as 'Unknown'.
+
+This is because the `repaidAmount` variable is passed as an argument to the external function, which means that it can be controlled directly by a user who calls the contract. However, the exact value of the repaid amount is determined by other factors, such as the amount of tokens that the borower has borrowed and the interest rate, so it cannot be determined whether the value is user-controlled or not.
+ 

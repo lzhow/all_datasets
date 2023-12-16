@@ -1,0 +1,5 @@
+  
+No, the ` oldpendingadmin` variable in function `_setpengingadmin()` is NOT controlled  by user because it's a local variable that is created in that function.
+
+The `set_panding_admin_owner_check` function checks if `msg_sender` is equal to `admin`. If it isn't, then the transaction is reverted. This means that only the admin can call the `_ set_ pending_ admin` method. Therefore, `p_ending_Admin_` cannot be controlled directly by a user, and it can only be changed by calling the method `_accept_ Admin()`.
+ 

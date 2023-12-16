@@ -1,0 +1,5 @@
+  
+No, the ` err` variable in mul scalar is uncontrolled by user because it's a local variable that is created in a function and it can't be modified by any external user input.
+
+The `mulScaler` function takes two parameters, `a` and `scaler`, and returns a `Math Error` object and an `Exp` memory object. It first calls the internal ` mul` method to multiply ` a` by ` scalar`, which returns an error object `error` if there is an overflow. If there' s no overflow, then it returns the scale `scale`d `m`antiss`a`.
+ 

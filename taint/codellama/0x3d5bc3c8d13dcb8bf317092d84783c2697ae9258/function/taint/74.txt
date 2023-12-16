@@ -1,0 +1,5 @@
+  
+The variable `transferToks` in function ` transferAllwed` is labeled as 'Unknown'.
+
+This is because the `cToken` parameter is passed as an argument to the contract, which means that the caller of the method can control the value of `ctoken`. However, the other parameters, such as `src` and `dst`, are not passed by reference, so they are considered to be controlled only by internal logic of contract.
+Therefore, we cannot determine whether the transfer is allowed or not based on the current information.

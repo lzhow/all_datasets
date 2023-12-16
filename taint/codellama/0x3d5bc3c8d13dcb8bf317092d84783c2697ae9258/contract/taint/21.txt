@@ -1,0 +1,5 @@
+  
+The variable `cToken` in function `exitMarked` is a parameter of the external function. It is passed as an argument to the `enterMarkeds` function, which is called by another contract. Therefore, the value of `ctoken` cannot be controlled directly by a user, and it should be labeled as 'No'.
+
+In general, when a variable is declared as a function parameter, its value is determined by whoever calls the contract and cannot directly be changed by users. This is because the parameter is set when the call is made, not when it enters the smart contract, so it cannot change during the execution of that function call.
+ 

@@ -1,0 +1,4 @@
+  
+No, the ` err` variable in get Exp is uncontrolled by user because it's a local variable that is created inside the get exp function. It is only used to store the result of the mul UInt function, which is a library function that performs a multiplication operation on two unsigned integers. Therefore, err is an internal variable and is never directly exposed to the outside world, so it cannot be controlled or manipulated by a user directly.
+
+The reason for this is that the err variable is declared as a private variable inside getexp function and it can only be accessed within the scope of that function . Therefore , it does not have any external dependencies and cannot  be influenced by any user input. 

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `Comtroller` interface, the contract has a function called `enterMarkts` which takes an array of `cToken` addresses as input. This function allows the caller to enter the markets and start earning interest on their deposits.
+However, this function does not have any checks to ensure that the input `address` array is valid or that it contains only valid `CToken` contract addresses. Therefore, an attacker could potentially pass in an invalid or malicious `ctoken address` to this input, which could lead to a security vulnerability. 

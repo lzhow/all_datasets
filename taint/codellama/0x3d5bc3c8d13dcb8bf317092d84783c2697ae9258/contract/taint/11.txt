@@ -1,0 +1,5 @@
+  
+No, the ` oldpendingadmin` variable in function `_acceptadmin()` is NOT controlled  by user because it's a local variable that is created in that function.
+
+The `msg` object is a global variable, and it contains information about the current message being processed. It includes the sender of the message, which is `pengingAdmin`.
+However, ` msg` is only accessible within the scope of a function, so it cannot be accessed outside of that scope. Therefore, in this case, we cannot determine whether ` pendingadmin ` is user-controlled or not.

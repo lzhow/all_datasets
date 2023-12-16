@@ -1,0 +1,4 @@
+  
+No, the `mulExp` function in this contract is a pure function, which means that it does not modify the state of the contract. Therefore, any variables passed as arguments to the functions are not modified by it, and are therefore not under the control of any user or external entity.
+
+In particular, in `function mul(mul( Exp, mul) memory, memory)`, the second argument `memory` is passed by value, meaning that the value of `a` and `c` are copied into the memory of this function. This means the values of these variables are controlled only by this ` mul`function and not by any external user, making the variables ` a`and ` c` not user-controlled. 

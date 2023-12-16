@@ -1,0 +1,4 @@
+  
+The variable 'cTokes' in function 'exitMarked' is labeled as 'Yes' because it can be controlled or manipulated by a user in a malicious way.
+
+In the context of the smart contract, the 'ctoken' variable is used as an input parameter for the exit market function. This means that a potential attacker could call the `exitmarket` function with a specific value for `ctokken` that could cause the contract to behave in an unexpected way or even maliciously. For example, an attack could be designed to cause a smart contact to exit a market that it should not exit, or to transfer tokens to an unauthorized address. Therefore, in this case, we can conclude that the ctoken variable in exitmarket is under the control of a potentially malicous user and should be treated with caution.

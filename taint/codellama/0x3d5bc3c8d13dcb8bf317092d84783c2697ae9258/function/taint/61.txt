@@ -1,0 +1,4 @@
+  
+No, the ` descaleMentissa ` variable in function `divScaler` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters `a` and `scaler`. The value of `descalerMantiissa is` not directly derived from user input, and it cannot be manipulated by a user to cause a security vulnerability.
+
+The reason for this is that the value is derived by dividing the mantisa of the Exp struct by an integer scalar. This operation is performed in a pure function, which means that it does not modify the state of any external contract or variable. Therefore, there is no risk of a malicious user manipulating the result of this operation to exploit a vulnerable contract.

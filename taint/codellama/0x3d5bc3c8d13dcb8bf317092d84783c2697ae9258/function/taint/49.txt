@@ -1,0 +1,4 @@
+  
+The variable 'cTokes' in function 'borrowVerif' is labeled as 'Unknown'. The reason is that the contract does not have any information about the source of the 'ctoken' variable. It is possible that it was passed as an argument to the method, but it could also be a local variable that was created within the scope of that method. Therefore, the tool cannot determine whether the value of 'CToken is user-controlled or not.
+
+In general, when analyzing Solidiy contracts, you should be aware of how the variables are defined and used throughout the code. If a variable is defined as a parameter to a function, then it can be considered as user controlled. However, if a varible is created as local within a method or function scope, and it's value is never changed, or it only changes based on the input of other variables,  then the it may not be user controllable. 

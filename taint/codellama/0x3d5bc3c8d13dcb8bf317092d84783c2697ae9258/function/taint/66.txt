@@ -1,0 +1,4 @@
+  
+No, the `m_result' variable in sub_Exp function of the contract is NOT controlled  by user because it's a local variable and it can't be modified by any external user or transaction.
+
+The `sub_exp` function takes two `Exp` memory arguments `a` and `b` as input and returns a new `Math_Error` error code, and an `exp_memory` object.  The function first calculates the difference between the two input arguments using the subtrahend `mul_` method, which returns the product of two numbers. Then, if there is an error in calculating the result, an appropriate error message is returned. If there are no errors, then the resulting `uint` value is stored in a `math_error` variable. Finally, a tuple containing the error and the calculated result is created and returned as the output of this function.

@@ -1,0 +1,4 @@
+  
+No, the `` variable in function ``_set_pending_implementation`` is NOT controlled  by user because it's a local variable and it can only be modified by a function call.
+
+The ``msg`` variable is a global variable that contains information about the current message, such as the sender and the data. It is set by Solc when the contract is deployed or when a message is sent to the smart contract.  The `` msg``  variable can be used to access the message data and sender. However, since it cannot be changed by any function calls, It' s not considered as a user-controlled variable.

@@ -1,0 +1,4 @@
+  
+No, the ` admin` variable in function `failOopaque` is NOT controlled  by user because it's a local variable.
+
+The ` failOpqaue` function is called by `Unitroller` contract, and it takes three parameters: `Error`, `FailureInfo`, and `opqaqueError`. The ` opqaqeError` parameter is a uint256 value that is passed to the contract as an argument. It is used to store the error code that the smart contract returns when it fails.  The function emits a ` Failue ` event with the three parameter values.   The variable  `  admin ` is defined in ` UnitControllerAdminStorag`e contract and is inherited by  the  Unit Controller contract. Therefore, ` Admin ` variable is also controlled the the User.

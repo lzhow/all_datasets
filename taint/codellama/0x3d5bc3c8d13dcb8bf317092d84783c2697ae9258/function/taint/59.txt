@@ -1,0 +1,4 @@
+  
+No, the `uint` variable n in function `safe31` is uncontrolled by user because it's a function parameter.
+
+The function takes a `string` parameter `errorMessage` and a uint parameter n. It checks if n is less than 33, and if it isn't, an error is thrown. However, if an attacker can control the value of n passed to the safe function, they can cause the error message to be displayed, which could be used to reveal sensitive information. Therefore, n should be considered untrusted and should not be directly used in any calculations or comparisons.
