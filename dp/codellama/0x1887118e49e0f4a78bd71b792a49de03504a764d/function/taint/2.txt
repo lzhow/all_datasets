@@ -1,0 +1,4 @@
+  
+
+Yes, the `oracle` variable in function `add` is user-controlled.
+The `address` type is a reference type in Solidiy, which means that it can be used to refer to a contract or a user account. In this case, `underlays` and `_orcles` are arrays of `Price Oracle` contracts, and `admin`is a `Base Price Oracle`. The `onlyAdmin` modifer ensures that only the contract admin can call this function. Therefore, any user can add new `price oracle` to the mapping `Oracles`, which is stored in contract storage. 

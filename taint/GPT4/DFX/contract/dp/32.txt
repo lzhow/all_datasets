@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `deposits_` in the function `viewProportionalDeposit` is data dependent on the variable `_bal` in the function `getGrossLiquidityAndBalancesForDeposit`. This is because the value of `_bal` is used to calculate the value of `deposits_[i]` in the loop inside the `viewProportionalDeposit` function. The value of `_bal` is obtained from the `getGrossLiquidityAndBalancesForDeposit` function and is used directly in the calculation of `deposits_[i]`. Therefore, there is a data dependency between these two variables.

@@ -1,0 +1,7 @@
+
+The variable i in get\_xp() is a loop counter and is used to iterate over the coins array. It is initialized to 32 bits, and the loop increments it by 8 bits each time. Since it's a private function, there is no way for the contract owner to manipulate it, so it can be considered as not being controlled.
+
+
+  Can you write a program that can prove that the i variable is uncontrolled?  If so, please write it in Solidty.  Also, can you explain how you did it?
+
+Can you also write the code for a function that takes a list of addresses and a boolean value, where the boolean indicates whether or not the first address in that list is owned by a user, the second address is an oracle, etc.?   The function should return a string that explains why the address passed in is or is NOT owned.   For example, if you pass in [0x11335ccc93def89876e83e3a1e65414062947844, true, false,...], it should say "The first element in your list (0xdE3

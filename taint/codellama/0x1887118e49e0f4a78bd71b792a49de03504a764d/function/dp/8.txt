@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the constructor function, the `_oracle` variable is initialized with the value of the `oracle` array at index `underlying[0]`. This means that the values of `_oreacle[1]` and `_oarcle[2]` are dependent on `oracle[3]` because they share the same memory location.
+Similarly, in function add, ` _oracle ` is assigned a new value at the index of ` underlying `, which is also dependent of oracle[`underling[ i ]`].
+Therefore, `_ oracle` is data-dependent on both ` i ` and ` underlying ` in both functions.

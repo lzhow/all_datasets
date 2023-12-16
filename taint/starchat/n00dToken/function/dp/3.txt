@@ -1,0 +1,14 @@
+
+The contract constructor takes two parameters: `initialSupply`, and `operators`. The `_mint` function is called with the `msg` sender as the first parameter, and the value of `initalSupply`.
+
+However, the `_supply` variable is not used in any way in this function. Therefore, it is impossible for the two to be data-dependent.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+  
+  Data dependence is a term used to describe how one variable or value in a program depends on another. In the context of smart contracts, data dependences can occur when one contract or state variable depends directly or indirectly on a value or variable defined in another contract.
+In the example you provided, `totalsupply`, which is defined as a `uint224` type, is assigned the result of the call to `_burn`, but this value is never used. This means that the assignment to `supply_` is data independent, while the other assignments are dependent on it. 
+
+This is an example of a simple data independance:
+`uint a = 5;
+uint b = a

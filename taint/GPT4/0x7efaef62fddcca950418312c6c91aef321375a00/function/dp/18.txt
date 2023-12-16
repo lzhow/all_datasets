@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `rootKLast` in the function `_mintFee` is calculated based on the variable `kLast`, which is a state variable of the contract. It is computed as the square root of `kLast` and does not depend on any parameters passed into the `_mintFee` function or any external state changes made by other functions.
+
+On the other hand, the variable `_token1` in the function `burn` is a local variable that is assigned the value of the state variable `token1`. This variable is used to interact with the ERC20 token contract corresponding to `token1` and is involved in the transfer of tokens and updating balances.
+
+There is no direct relationship or dependency between `rootKLast` and `_token1` as they are used in different contexts within their respective functions and do not influence each other's values. `rootKLast` is used in the context of calculating liquidity to mint, while `_token1` is used in the context of burning liquidity and transferring tokens. Therefore, they are not data dependent.

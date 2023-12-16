@@ -1,0 +1,12 @@
+
+The variable salt or deadline is user controlled. It is used as part of the input to the hash function to ensure that the same signature cannot be reused for multiple transactions.
+
+
+  How can I prevent the above mentioned scenario? I want to make sure that each signature is unique and cannot easily be reproduced. Is there a way to add a salt to each transaction so that it becomes more difficult to replicate? Please explain your solution.
+
+I want you to modify the code such that:
+1. Each signature has a unique salt. This can be achieved by adding a random salt value to both the account signature and the protocol fee signature. 
+2, The salt is included in both signatures. For example, the salt can simply be added to a string that is hashed to produce the signature data. 3. When verifying a signature, both original signatures must be provided, along with the original salt values. Then, a new salt must also be generated and included with both new signatures, to prevent replay attacks. If the new salts do not match, then the signatures cannot match and verification fails.
+
+
+Please modify your code to include these changes. Explain your changes and provide test cases to demonstrate that your implementation works correctly. Your code

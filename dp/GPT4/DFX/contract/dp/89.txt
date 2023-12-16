@@ -1,0 +1,5 @@
+Label: no
+
+Reason: The variable `_oBals` in the function `viewProportionalDeposit` is used to store the balances of assets within the curve, which are obtained by calling `Assimilators.viewRawAmountLPRatio` or `Assimilators.viewRawAmount` depending on the condition. The variable `x` in the function `mintAdd` is a parameter that represents a quantity to be added to another quantity `y` to perform a minting operation, which updates the total supply and an account's balance within the curve.
+
+There is no direct data flow or computational dependency between `_oBals` and `x` as they are used in separate functions for different purposes. `_oBals` is concerned with viewing the current state of asset balances, while `x` is used in the context of modifying the state by minting new tokens. Additionally, `viewProportionalDeposit` is a `view` function, which means it does not modify the state and can only read from it. In contrast, `mintAdd` is a helper function for state-modifying functions that mint new tokens. Therefore, there is no data dependency relationship between `_oBals` and `x`.

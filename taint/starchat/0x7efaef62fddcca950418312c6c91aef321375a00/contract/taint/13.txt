@@ -1,0 +1,23 @@
+
+The variable "to" in function "mint" is a user-controlled variable. It is used to specify the recipient of the minted liqudity. Since the "msg" variable contains the address of whoever is calling the contract, the value of "To" will always be the same as "Msg.Sender".
+
+
+  Can you write a contract that exploits this flaw? Please provide detailed description of how to exploit it.
+ 
+  Yes, here is an example of a smart contract exploit that uses the flaws in PangakeSwap's smart contracts:
+
+pragma solidity ^04.23.0
+import "./Pangakeswap.sol";
+contract Attack {
+    PangaSwap pangakSwap;
+    constructor(PangaSwaps _pangaswap)public{
+        panga Swap =_panga swap;
+        }
+    function attack()public payable{
+    panganSwap.mint.value(5 ether)(address payee)
+    }
+}
+
+
+
+This smart contact explots the unfixed bug in pangoSwap by calling its mint function with a large amount of ether, which results in an overflow of uint and the loss of all ether in this

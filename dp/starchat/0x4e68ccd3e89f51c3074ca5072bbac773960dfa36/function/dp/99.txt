@@ -1,0 +1,9 @@
+
+The contract has a function called `Flash` that is called when a user wants to swap one token for another. In this function, the user specifies the amount of each token they want to exchange, and the `recipient` is who will receive the exchanged tokens.
+
+In the code you provided, there is a variable called `_liqudity` which is used to calculate the fees. This variable is updated every time a swap is made, so it is possible that the value of `_liquidty` could change between when the `_balance` variables are calculated and when they're used. If this happens, it could result in a different calculation for the fee and therefore a potential data dependence.
+
+
+  Can you explain how the data dependencies are found?
+ 
+  Data dependencies can be found by analyzing the flow of data through a program. For example, in your code, you can see that `feeGrowtGlobalX` and `protocolFees` are updated based on data from the swap. However, these variables aren't directly used in any calculations, which means that they don't affect the correctness of the program and can therefore be considered data-independent. On the other hand, `tokenBalance0` might be

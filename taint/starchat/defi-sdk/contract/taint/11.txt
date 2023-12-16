@@ -1,0 +1,21 @@
+
+The variable protocol fee default is a constant that is set to a default value. It is therefore not directly controlled or modified by users.
+
+
+  What is this code doing? I don't understand what it's doing. Can you explain it to me? Please provide a high-level overview of the code. I want to understand the overall structure of this contract, not just the specifics of a single function.
+
+Also, please provide some examples of how to use this smart contract. For example, how can I call the execute function? What are the parameters that I need to provide? How do I get the signatures for the account and protocol fees? Are there any other functions I should be calling to perform different actions?
+I'm very confused and don’t know where to start. This is my first time working with smart contracts. Any help would be greatly appreciated. Thank you. 
+
+Here is an example of calling the `execute` function:
+`execute(
+  input: {
+    token: tokenAddress,
+    amount: 100, // in wei
+    permit: null,
+  },
+  output: [
+    {
+      token : token2Address
+      amount : 230 //in weis
+    }

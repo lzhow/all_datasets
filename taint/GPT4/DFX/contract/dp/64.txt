@@ -1,0 +1,4 @@
+The variable `_swapInfo` in the function `originSwap` is not data dependent on the variable `amt_` in the function `getTargetSwapData`. 
+
+Explanation: 
+The variable `_swapInfo` is assigned the value of `_amt.us_mul(ONE - curve.epsilon)` in the `originSwap` function. The value of `_amt` is obtained from the `getOriginSwapData` function, not from the `getTargetSwapData` function. Therefore, there is no direct data dependency between `_swapInfo` and `amt_`.

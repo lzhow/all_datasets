@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The contract state `_totalSupply` is data dependent on the variable `value` in the function `ETHtoJAY`. This is because the `totalSupply()` function is called with no arguments, which means it relies on the current state of the contract to determine the total supply. Since the `value` variable is used in the calculation of the return value, any change in the value of `value` will affect the result, and therefore the contract state `_totalSupply` is data dependent on `value`.

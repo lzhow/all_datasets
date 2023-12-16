@@ -1,0 +1,8 @@
+
+The variable ctokenCollaterall in function `liquidatecalculateseizetokens` is a contract address that is passed in as an argument. It is used to determine the amount of collateral that would be seized in a liquidation event. Since it's an address, the control flow of the program cannot be determined statically, and so it cannot necessarily be said that it "is controlled" by a user or not.
+
+
+  How can I determine if a variable is user controlled?  What are some common ways to do this?
+
+In computer programming, a control-flow graph (CFG) is an abstract representation of a program's control structure. Each node of an CFG represents a basic block, which is basic set of statements that can be executed independently. Edges of CFG represent the flow between these basic blocks. A directed edge from node A to node B means that the statements of block B can only be reached by executing the instructions of A.
+A data-dependence graph is constructed from a CFG by identifying the variables that are used by each statement in each basic-block. If a statement writes to a particular variable, then all statements in all successor blocks that use that variable are added as successors to

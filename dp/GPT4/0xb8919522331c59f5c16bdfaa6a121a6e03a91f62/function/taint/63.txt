@@ -1,0 +1,5 @@
+  
+The variable `target` in function `functionDelegatecall` is a parameter of the method, which means that it can be controlled or not by user depending on the context in which the contract is called.
+
+If the `delegateCall` method is being called from a contract, then the value of ` target` will be the address of that contract. In this case, the caller of this contract will have control over the execution of function delegateCall.  On the other hand, if ` delegatecall ` is invoked from an external account, such as a user, `  target ` will contain the account address, and the control will belong to the external user who is calling the delegate function. Therefore, in this scenario, we can say that the parameter ` `is controlled  by  the  user``.
+ 

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `funcitonCall` function, the parameter `address target` is passed to the internal function `_verifycallResult` as an argument. This function is called with the parameters `bool succes`, `bytes memroy retunrdata`, and `string memory errormessage`. The `returdata` parameter is returned from the call made to `callWithvalue` and is used as the argument for the `_verifcallresult` call. Therefore, `succes` depends on `returnData` because `retrunData`'s value is determined by the success of the previous call, which is stored in `succees`.

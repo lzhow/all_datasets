@@ -1,0 +1,4 @@
+  
+No.
+
+The variable totalSuppply is a state variable in a contract, and it's not directly controlled or modified by any user input. It' s value is determined by other contract functions, such as `_mint` and `_burn`, which are called by internal functions like `_transfer` or `_approve`. Therefore, the value of total supply is indirectly controlled and modified, but not by user inputs.

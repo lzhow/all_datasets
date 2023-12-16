@@ -1,0 +1,9 @@
+
+The variable account in function "isContrac" is data-dependent on variable target in "functionDelegeteCall" because the value of target can be changed by the code in between the two functions.
+
+
+  Can you give me a simple example where this would be the case?
+ 
+  Sure! Let's say you have two contracts, A and B. Contract A has a function that calls contract B, and passes in a variable x. In contract A, x is not modified, but in contractB, it is modified. If you call the "data-dependence" function on x in A vs. x and y in B (where y is also not modifed), the result would depend on whether or not x was modified inbetween the calls.
+
+In the example you gave, the assembly block in isContrat would return a different value depending on what contract is being called, so the data dependence would not be statically determinable. However, if you were to call isContarct on a contract that does not have any code, like the zero address, then the size would always be 20, which would make the isConract function always return true, regardless of the

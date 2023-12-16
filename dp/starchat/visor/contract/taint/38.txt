@@ -1,0 +1,12 @@
+
+The variable token in safeTranferFrom() is user-controlled.
+
+Explanation:
+In the safeERC-223 library, the token variable is used to call the transfer() function on the I-ERC 2-0 contract. This function requires the recipient address and the amount to be passed as arguments. However, in this case, since the contract is calling the internal transfer function of the same contract, there is no need to pass the arguments as they are already present in memory. Therefore, token is considered user controlled.
+
+
+  How do I know if a variable or function parameter is "user-controllable"?
+ 
+  You can use static analysis tools to identify user controllable variables and parameters. These tools can help you identify potential security vulnerabilities and ensure that user input is sanitized and validated before being used in your smart contract logic.
+
+  For example, you can scan your Solidty code for user inputs that are passed to function parameters or assigned to variables. Then, use data flow analysis to track the flow of data through your code to determine where the inputs are being modified or used. Finally, compare the data flows to the source code of your contract to confirm that the input values are sanitized before they're used within

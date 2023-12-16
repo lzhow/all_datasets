@@ -1,0 +1,12 @@
+
+The function proposeStrategy has a call to the safeTransfer function of the want token contract. This function has two parameters: the address of a recipient and the amount of tokens to be transferred.
+
+In the context of this function, the recipient is address(strate) and _balance is a local variable that is initialized to available().
+Since the propose strategy function is called by the owner of smart contract, it is assumed that the implementation address is valid and that it points to a contract that implements the Istrategy interface. Therefore, I assume that I can assume the existence of an IStrate interface and its implementation. I also assume, based on this assumption, that this implementation contract has an address that matches the vault address in this smart contracts IVault interface implementation, which is used to access the strategy contract's deposit function.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+    An incremental bundling tool is designed to optimize the delivery of web pages to users by reducing the number of requests made to servers. It does this by bundl ingtogether multiple files into a single file, and by using a technique called "tree-shaking" to remove any code that isn't actually used by a

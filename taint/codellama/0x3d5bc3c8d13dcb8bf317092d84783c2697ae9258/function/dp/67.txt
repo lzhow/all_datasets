@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `addExp` function, the local variable 'result' is assigned the value of the expression `a + b`, where `+` is a binary operator that takes two `Exp memory` arguments. This expression is evaluated using the binary addition operator, which is defined in terms of a call to the internal function 'addUint'. The `m` argument of this function is set to `value. mantissa`, which means that the result of `exp.add` depends on `b. m`.
+Similarly, in ` iszeroExp`, the return statement `return value .m ==0` returns true if ` value` has a mantisa of  `0`. This means the data dependence relationship between ` result` and ` b` in add exp is maintained.
+Therefore, we can conclude that `Result` data depends `B`in the add Exp function.

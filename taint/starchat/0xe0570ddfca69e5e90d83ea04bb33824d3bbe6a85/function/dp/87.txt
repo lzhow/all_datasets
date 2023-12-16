@@ -1,0 +1,12 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates the amount of tokens that the sender should receive based on how much of the total supply they own.
+
+It does this by dividing the balance of want multiplied by the shares owned by them by totalSupply. This is then stored in r as a temporary variable. 
+
+Then it calls the internal function _Burn that burns the tokens the user has withdrawn. Then it calculates how many tokens want has in its balance. If this is less than the calculated amount that r should be, it will call the withdraw function of strategy and withdraw the difference between the two amounts. After this, the want contract will have more tokens than it did before, so it needs to calculate the new amount to send to the recipient.  If the _After variable is greater than r, then it sets r to _ After. Finally, want is sent to msg.Sender with the value of r
+So in summary, yes, if the balances variable was data-dependent on _ after, this would be the case.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure! The tool analyzes the code by examining

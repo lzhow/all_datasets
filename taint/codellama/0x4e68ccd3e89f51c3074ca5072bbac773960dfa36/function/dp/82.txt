@@ -1,0 +1,4 @@
+  
+No, the variables ` step` and ` balance ​​1 Before` are independent.
+
+The variable` step ` is defined in function` swap ` and is used to calculate the amount of liquidities to be transferred in each step of the swap process. It is not dependent on any external variable, and its value is determined by the current state of ` slot  `, ` tick `and other internal variables.  The variable  balance `1` Before `is defined and used in` flash `function, which is a separate function from`swap`. The value of` balance`1 `Before `in`flash` is calculated based on`balances` of tokens`0`and`token` before the transfer of funds. However, this value does not affect the calculation of variable step in `swap` function. Therefore,`step `variable is independent of  variable balance before`in flash`function.

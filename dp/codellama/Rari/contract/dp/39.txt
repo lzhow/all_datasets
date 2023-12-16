@@ -1,0 +1,5 @@
+  
+No, the `CompMarkedState supply state` is data-dependent on `SuppliedState`.
+
+The `UpdateComp Supply Index` function updates the supply index of the given ctoken and distributes the supplementary comp to all supporters. It does this by first checking if the c token is listed and if so, it updates its supply speed and block number. Then, if its index is greater than zero, we update its block and index. Finally, We distrubute the comp supporter to each suppler.
+However, The `distribute suppllier comp` method does not depend on any variable in `updatcomp supplyindex`. It only depends on its own variables. Therefore, `comppAccured` and ` supplystate` are independent.

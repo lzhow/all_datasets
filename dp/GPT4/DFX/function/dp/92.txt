@@ -1,0 +1,3 @@
+The variable `leaves` in the function `multiProofVerifyCalldata` is not data dependent on the variable `hashPos` in the function `processMultiProofCalldata`. 
+
+Reason: The variable `leaves` is only used as an input parameter in the function `processMultiProofCalldata`, and its value is not modified or affected by the variable `hashPos`. Therefore, there is no data dependency between these two variables.

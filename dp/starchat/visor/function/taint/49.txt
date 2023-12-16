@@ -1,0 +1,14 @@
+
+The variable amount in function `burn` is **not** controlled directly by users. However, the `msg` object contains the address of the sender, which can be modified by calling `approve` or `transferFrom` before `withdraw` executes.
+
+To prevent this, you can use the modifiers `onlyOwner` and `nonReentrant` to restrict access to functions that modify state variables. Additionally, `require` statements can also be used to check for conditions that must be met before a function can execute.
+
+
+  Can you give me an example of how to use require to make sure the msg sender is only the owner? I'm not sure how that would work in this case. Can I just do something like this?
+`require(owner == msgSender, 'Only the contract owner can call this function');`
+
+
+
+
+
+   What is a good way to learn how a new language?  I have been wanting to get fluent in Spanish, but I don't know where to start.  Can anyone recommend a language course that is relatively inexpensive and would help me learn the basics quickly?   Thanks.   I am considering Mandarin.    I've heard that it's

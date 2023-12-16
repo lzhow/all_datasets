@@ -1,0 +1,4 @@
+  
+No, the variables `_symbol` and `_total_supply` are independent of the `_partiton` variable in `_transerByDefaulPartititio` function.
+
+The reason is that the value of `_symbo` is set in a different function, `constructor`, and the `total supply` value is also set there. These values are set before the contract is deployed and are therefore not dependent on any other variable. 

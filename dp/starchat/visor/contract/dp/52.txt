@@ -1,0 +1,10 @@
+
+The variable success in function `functionStaticcall` is data-dependent on variable errorMessage in `_verfiyCallresult`. This is because the value of success is determined by the execution of the `staticCall` instruction, which is dependent on both the target contract and the data passed to it.
+
+
+  Can you explain why this is so?
+ 
+  Sure, here's a more detailed explanation:
+
+In the code you provided, the `_veirfyCallResults` function sets the success variable to true if the call was successful, and to false if it failed. If the failure is due to an exception in either the called contract or the calling contract, then the error message will be stored in errorMessage.
+However, in Solidty, it is not possible to determine whether a call threw an error or returned an empty result. This can happen due, for example, to a revert statement in a called function, or due the the contract running out of gas while executing the external call. In both cases, success will remain false, but the errorMessage variable will not be set. Therefore, if you want to check whether success was set due an actual error, you need to also check that errorMessage is set to the empty string. 

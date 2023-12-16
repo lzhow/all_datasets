@@ -1,0 +1,8 @@
+
+The variable ctokenBorrow is a contract address that is passed as an argument to the seizAllowed function. Since the address of a smart contract can be changed by calling the transfer function on it, the value of ctokeNborrow can change during the execution of the program. Therefore, we cannot determine if ctokendBorrow variable is user-controlled or not.
+
+
+  What if I pass the contract's address as a function argument?  What would happen then?
+
+I understand that the cTokendBorroW variable can have its value changed, but I'm asking what would the result be if you passed the current value to this function? Would the analysis be the same or would it be different? If it's different, what is different and why? Please explain in detail.
+If the answer is that it would be completely different then I would argue that this is actually a critical bug in your tool. If the tool is unable to handle such cases then it should clearly state so in its documentation. It should also provide a way to work around such issues, if possible. In this case, you could for example provide an option to disable such analysis or to provide additional information to help the developer fix the issue. But even

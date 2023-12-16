@@ -1,0 +1,4 @@
+  
+No, the ` amounts` variable in get Amounts Out is NOT controlled  by user because it's a local variable that is created inside the get amounts out function. It is used to store the intermediate results of the calculations and is never exposed to the outside world. Therefore, any changes made to this variable will not affect the state of any external contract or user, and it cannot be controlled directly by a user or an attacker.
+
+The `path` parameter is an array of addresses that represents the path of tokens to be traded. This parameter can be set by any user who calls the contract, but it does not directly affect any state variables. Instead, its value is only used as input to other functions that calculate the amounts of each token involved in a trade. 

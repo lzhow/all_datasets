@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ blockTimeStampLast is not dependent on _ token 1 in function burn. This is because the _ getreserves function is called before the burn function, and the value of _ reserves  is passed as an argument to the get reservations function. Therefore, the values of the variables _ reserve  and _ balance  are updated before they can be used in any way.

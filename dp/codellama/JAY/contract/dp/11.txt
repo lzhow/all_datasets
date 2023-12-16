@@ -1,0 +1,5 @@
+  
+No, the variables ` success` and ` _ price` are independent.
+
+The variable  `succeess` is a local variable in function  sell, and it is not used in any other function. Therefore, it cannot be data-dependent on any variable.  The variable _`price`, on  the other hand, is defined in  function`updatefees` as a parameter of the `priceFeed` function, which is an external function that is called in ` updatefee`. Therefore , it can be considered as data -dependent. However, this dependency is indirect, as it depends on a variable that depends indirectly on another variable, `nextFfeUpdate`, which depends directly on `_ price`.
+ 

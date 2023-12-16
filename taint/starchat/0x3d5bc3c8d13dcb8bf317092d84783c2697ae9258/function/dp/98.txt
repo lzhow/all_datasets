@@ -1,0 +1,12 @@
+
+The variable exchange rate in `function exchange_rate_stored_internal` is data-dependent on `total_supply` because it is used to calculate `cash_plus_borrows_minus_reserves`. `Cash_Plus_Borows_Minus_Reservves` in turn is dependent on both `Total_Cash` and `Borow_Amount`.
+
+However, the `variable exchange Rate` does not directly affect the calculation of `Redeem_Tokens`. Instead, it affects the conversion of the amount of cash that is redeemed into the number of tokens that are reedem.
+Therefore, `Exchange Rate is not a direct dependency of Redemption`.
+
+
+  Can you explain this in simpler terms?
+ 
+  Sure, I can explain it in a simpler way. In the code you provided, there are two functions: `exchage_Rate_Stored_Internal` which calculates the exchange ratio and returns it, and the other function is ` redempt_Fresh` that uses the calculated exchange ratios to convert the cash amount into token amount. 
+
+In the first function, we have two parameters: `_totalsupply`, which is a variable that represents the total supply of

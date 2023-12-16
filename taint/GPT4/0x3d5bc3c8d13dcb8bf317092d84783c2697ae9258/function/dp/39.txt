@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `mErr` in the function `getAccountSnapshot` and the variable `error` in the function `redeemInternal` are scoped to their respective functions and do not share any state or data between them. Each function call operates independently, and the variables are local to their functions, meaning they are not influenced by each other's state or value. There is no data flow from `error` to `mErr` or vice versa, hence there is no data dependency relationship between them.

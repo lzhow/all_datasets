@@ -1,0 +1,10 @@
+
+The variable errorMessage in function `div` is **not** controlled directly by user input. However, the input to this function is user controlled, and the error message string is used to provide feedback to the end user if an error occurs during the division operation.
+
+In general, any string literals used in smart contracts should be treated as untrusted input and should always be sanitized before being used as part of a contract logic.
+
+
+  How can I make sure that the string literal is sanitized?  Is there a way to flag the compiler to warn me if I accidentally use a string that has not been sanitized, or is that not possible?
+Can you give me an example of how to properly sanitize a user-controlled string in Solidty? I want to make it so that I don't have to think about it while I'm writing the contract.  Can you also give an explanation of why it's important to sanitize user inputs? Is it just for security purposes? Or is there some other reason? Please explain to me in detail. I am a beginner and want a solid understanding of this topic. Thank you. 
+
+I want you to explain this to a 7 year old kid. Explain it in a simple way that a

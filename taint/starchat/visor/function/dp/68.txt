@@ -1,0 +1,21 @@
+
+The variable "owner" in function "_approve" is used to index the storage array _allowed, which is declared as a mapping in Solidty. This means that the value of owner is stored in memory and can be accessed later.
+
+However, the "approve()" function does not store the owner variable in any way. Therefore, it is not possible to access the stored value later, and therefore it cannot be data-dependent on owner.
+
+
+  Can you give me a list of all the variables that are used in this code?
+ 
+  The following variables are declared in both the approve() and _approval() functions:
+- spnder
+ - amount
+owner
+This means the spnders and amount variables in approve are dependent on both owner and spenders variables. However, owner in _approvals is only used as an index to _approved, so it doesnot affect the data dependence of spnnder and ammount. 
+
+In summary, both sprender and owner are only data dependencies if they appear in a function that is called by approve().
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did George Lucas

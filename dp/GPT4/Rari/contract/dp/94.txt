@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `lastContributorBlock` is a mapping that tracks the last block number at which rewards were calculated for a contributor. It is updated in the function `_setContributorCompSpeed` and `updateContributorRewards`. On the other hand, the function `grantCompInternal` is responsible for transferring the reward token to a user and does not reference or update the `lastContributorBlock` state. There is no interaction or dependency between `lastContributorBlock` and any variable within the `grantCompInternal` function, hence there is no data dependency relationship between them.

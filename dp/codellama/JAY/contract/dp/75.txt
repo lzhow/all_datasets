@@ -1,0 +1,5 @@
+  
+No, the amount variable in buy ER1C51 is not dependent on ids in function  buy J1YWith ER C1 5  .
+
+The reason is that the value of amount is calculated using the amounts array in  the buy function, which is passed as an argument to the  function. This array is independent of the ids array, and its values are used to calculate the total amount of NFT tokens to be bought.
+On the other hand, in   the   function , the id array  is used  to  calculate  amount  using  amounts  array.  This  means  that  if  ids  changes, amount will also change. Therefore, there is a dependency between amount and ids .

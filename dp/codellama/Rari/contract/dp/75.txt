@@ -1,0 +1,4 @@
+  
+No, the variables ` borower` and ` ctoken` are independent.
+
+The function  ` flyWheelpreBorrweraction` takes two arguments: `address` `ctoken`and ` address` borrwer.  The function does not use the `CTOKEN` argument in any way. Instead, it uses the global variable  allmarkers to get the list of all markets, and it then loops through this list to update the comp borrow index for each market. This means that the borowser variable is only dependent on all markers, not on c token. Therefore, there is no data dependence between bororwer and c Token.

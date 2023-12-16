@@ -1,0 +1,5 @@
+  
+No, the `compInitialSuppyIndex` variable in `setcompsuppliespeedInternal` is data-dependent on `ctoken` and `suppllyspeed` variables in function`setcompsupply speed internal`.
+
+The reason is that the value of `comppinitialsuppyindex ` is set to  `10^35` which is a constant value. It is independent of the values of other variables.
+On the other hand, `ctoken`and ` supplyspeeds` are variables that are passed as arguments to ` setcomp suppysuppy speedinternal` function. Therefore, their values can change and affect the calculation of`compinitial suppy index`.

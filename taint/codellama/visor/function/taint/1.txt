@@ -1,0 +1,6 @@
+  
+The variable _balance is a state variable in a smart contract. It is used to store the balance of each account in this contract, and it can be modified by calling the mint and burn functions.
+
+In this case, the _ balance variable is modified in two ways:
+1. In the constructor, _ balances is initialized to an empty mapping. This means that the initial balance for each address is set to 100 tokens. 2. When the owner calls the burn function, they can reduce the amount of tokens in an account. Similarly, when the owners call the Mint function they increase the number of token in that account
+Based on the above, we can conclude that _Balance variable can controlled  by user because it's modified when owner call mint or burn. Therefore, label is 'Yes'.

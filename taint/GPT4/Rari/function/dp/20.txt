@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `seizeTokens` in the function `liquidateCalculateSeizeTokens` is data dependent on the variable `actualRepayAmount` in the same function. This can be observed from the line `seizeTokens = mul_ScalarTruncate(ratio, actualRepayAmount);` where the value of `actualRepayAmount` is used to calculate the value of `seizeTokens`. Therefore, there is a data dependency relationship between these two variables.

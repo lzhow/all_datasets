@@ -1,0 +1,5 @@
+  
+No, the variables ` blocknumber` and ` amount` are independent.
+
+The function  `updateCompborrrowindex` is called in `distributeborowercomp` which is in turn called by `flywheePreborweraction` . The function`flywhelPre boroweraction ` is triggered by the event `compborrowspeedupdated` , which means that the value of ` compborowspeeds` has changed. Therefore, ` updatecomp borrwoindex ` will be called with a new value for ` borrows peed`.
+On the other hand, The variable` amount ` in function is only used to calculate the new amount of comp to be granted to a user. It is calculated based on a number of factors, including the amount that has already been granted, and the current valueof ` rewardtoken`. However, this calculation does not depend on any external factors that could change the state of the contract.  Therefore , the change in value  of` block number` doesnot affect the calculation of  the ` amout` variable.

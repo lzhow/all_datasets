@@ -1,0 +1,4 @@
+  
+No.
+
+The variable reserveout is not dependent on amountout in getamountin. This is because the reserve out is calculated by calling the getreserves function, which is a separate function from get amount in. Therefore, the value of reserve Out is determined by the state of the contract at the time of calling get reserves, and not by any state changes that occur during the execution of get Amount In.

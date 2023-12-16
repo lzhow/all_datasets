@@ -1,0 +1,23 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in `OrinMultipoolLibrary` reads from the balances of `msgSender` and `pair`.
+So, if `to` is `address(this)`, then `balances[msgsender]` and  `balance[pair]` will be updated.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by changing the order of the operations in `_swap` to ensure that `from` has enough balance before the transfer. This can be done by swapping the lines 109 and  112 in OrinPool.sol. 
+
+Here is a diff of how the changes would look like:
+--- a/contracts/OrnMultiPools. sol
++++ b/ contracts/ Orn MultiPools.sol
+@@ -139,8 +140,9 @@ contract OrniMultipools is IERC20 {
+     }
+ 
+     function _swap(
+-        uint amountIn,
++        bytes32 poolId,
+         address from, address recipient, bytes calldata data
+     ) private {
+ +        require (balances [from] >=amountIn, "Not enough

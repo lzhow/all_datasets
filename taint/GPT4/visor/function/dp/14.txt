@@ -1,0 +1,3 @@
+yes
+
+The contract state `_HASHED_NAME` is directly assigned the value of the variable `hashedName` within the constructor. The line `_HASHED_NAME = hashedName;` establishes a data dependency relationship where `_HASHED_NAME` is dependent on the value of `hashedName`, which is computed from the input parameter `name` using the `keccak256` hashing function. Therefore, any change in the input `name` will affect `hashedName`, which in turn will affect `_HASHED_NAME`.

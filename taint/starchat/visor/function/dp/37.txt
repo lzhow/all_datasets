@@ -1,0 +1,16 @@
+
+The variable low is not dependent on array in this function. It is used to keep track of the current lower bound of where to search in array, but it is independent of array itself.
+
+
+  Can you explain why?
+ 
+  The variable "low" is only used within the while loop, and is therefore not a direct dependency on "array". The loop uses "high" and "mid" to determine the next search range, which is then used in a conditional to check if the element is within that range. If the loop exits without finding the index, then the return value is simply the length of "arr".
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did George Lucas have when he died?
+  a. Did Georg Lucass have any children?
+
+George Washington Luca (/ˈluːkas/; born July 22, 30 August 47 AD) was an American filmmaker, actor, writer, producer, director, screenwriter, musician, composer, philosopher, painter, poet, social reformer, educator, political activ

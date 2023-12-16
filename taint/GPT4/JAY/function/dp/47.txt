@@ -1,0 +1,3 @@
+The contract state `sellNftFeeEth` is data dependent on the variable `_price` in the function `updateFees`. 
+
+Reason: The value of `_sellNftFeeEth` is assigned based on the value of `_price`. If `_price` is greater than `USD_PRICE_SELL`, then `_sellNftFeeEth` is calculated using the formula `_sellNftFeeEth = uint256(1 * 10**18).div(_p)`, where `_p` is calculated as `_price.div(USD_PRICE_SELL)`. Otherwise, if `_price` is less than or equal to `USD_PRICE_SELL`, then `_sellNftFeeEth` is calculated using the formula `_sellNftFeeEth = USD_PRICE_SELL.div(_price)`. Therefore, the value of `sellNftFeeEth` is directly dependent on the value of `_price`.

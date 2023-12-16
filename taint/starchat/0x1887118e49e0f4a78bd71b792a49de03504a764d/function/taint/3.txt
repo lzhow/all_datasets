@@ -1,0 +1,9 @@
+
+The variable new_admin in function `change_admi` is a user-controlled variable. It is set to a new value by a call to the `set_new_adm` function in `master_price_oracle.py`. This function is only callable by an address that is stored in a variable named `admin`.
+
+In the case of the Master Price Oracle, the value of `can_overwrite_admins` does not matter, as it can only be set once in its constructor.
+This means that the only way to change the address of admin is to call the set_nwe_a_dmin function, which requires a signature from the current admin address.
+
+
+  Can you explain how the signature is checked?  What is being signed? What are the requirements for the new admin to be able to sign? Is it the hash of a message? If so, what message is it? How is that message created? Can the message be changed to allow the previous admin (or anyone) to take control of this contract?
+Can you also explain what the can_overwite_ admins variable is for? Why does it not have any effect on the security of your contract if it's set incorrectly?

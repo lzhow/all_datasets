@@ -1,0 +1,22 @@
+
+The contract function is:
+
+function upgradeAndBecomeImplementation(address newBeacon) public onlyOwner {
+    _setImplementation(_implementation());
+    emit Upgraded(msg.sender, _implementation(), newAddress);
+    // Set the new beacon
+    Beacon(beacon).upgrade(keccak256(abi.encodePacked(this)));
+    beacons[newBeacon].owner = msg.sendder;
+    delete beacs[msgSender];
+}
+In this function, the data variable is not used.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being told I should "just learn python" and that I will never be good at it. I have tried that and it didn't seem to help.
+   Give me a plan that will help me learn the basics and move on from there. Make it easy for me to do and I'll do it!
+   
+
+  What are some good ways to get started with Python? I'm terrified of it and want to make sure I don't waste my time. Can you recommend me some beginner-friendly Python projects that are good for a first PR? Please

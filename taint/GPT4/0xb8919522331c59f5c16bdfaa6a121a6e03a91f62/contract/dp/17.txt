@@ -1,0 +1,3 @@
+Yes
+
+The variable `returndata` in the function `functionStaticCall` is data dependent on the variable `target` because `returndata` is assigned the result of a `staticcall` to the address contained in `target`. The `staticcall` is a read-only operation that executes the EVM bytecode at the address `target` with the provided `data` as input. The output of this execution is stored in `returndata`, making `returndata` directly dependent on the value of `target`. If `target` changes, the bytecode executed and thus the resulting `returndata` may also change.

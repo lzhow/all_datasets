@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `setPool` function, the `_totalborrows` and `_totaBorrrowShare` are set to the values passed as arguments. These values are not user-controlled, as they are passed directly to `pools` without any validation or sanitization.
+On the other hand, `_poolreserves` is set by calling the external function `giveAlphatoAltoken`, which is also not under the control of the end user, since it requires the approval of `distributor` to transfer the alpha token. 

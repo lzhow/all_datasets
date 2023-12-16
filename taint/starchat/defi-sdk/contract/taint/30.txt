@@ -1,0 +1,7 @@
+
+The variable amount in with fee is a value that is derived from the amount of input token that the contract is swapping. This value is used to calculate the output amount, and is therefore controlled indirectly by users who are providing input tokens to the smart contract.
+
+In the case of the Unipool contract, the input amount is provided by a user, who is sending ether or an ERC-223 token to a specific address. When the ether is received, or the token is transferred, a call is made to this smart contact, which calculates the required output token amount based on the current exchange rate. In this case, since the exchange is between two tokens, there are two variables that are derived based off of user input: the fee amount and the intermediate token amounts. These variables are then used in a calculation to determine the final output amounts for the two input assets. However, these variables can be influenced by malicious users, as they can manipulate the values of these intermediate variables to manipulate how the swap is executed.
+
+
+  Can you explain how this is possible?  I'm not sure I understand the explanation you gave.  Can I ask you to explain it again, but this time in simpler terms?   I

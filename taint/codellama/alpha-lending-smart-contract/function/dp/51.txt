@@ -1,0 +1,4 @@
+  
+The label is 'Yes'.
+
+In the `calculateRoudUpLiqidtySharAmount` function, the local variable `_token` is used to access the pool object in `pools` mapping. This means that the value of `_amount` depends on `address (_token)` which is a function parameter in  ` withdraw Reserve` . Therefore, ` _ amount` and ` pool` are dependent on each other.

@@ -1,0 +1,5 @@
+  
+No, the ` comp Accrueds` contract is data-dependent on ` delta Blocks`.
+
+The ` update Contribution Rate` function updates the contributors' rewards based on their contribution speed and the number of blocks that have passed since their last contribution. It does this by calculating the amount of recompense that each contributer should receive based the the difference between the current block number and their previous contribution block, and multiplying it by their contributing speed.
+However, this function does not directly use the value of `DeltaBlock` to calculate the reward amount. Instead, it uses the block difference to determine how many blocks have elapsed since the last reward was granted, which is then used to update the reward amount basedon the contribution rate. Therefore, `CompAccumulated` is dependent on`Delta Block` indirectly through the calculation of the elapse time.

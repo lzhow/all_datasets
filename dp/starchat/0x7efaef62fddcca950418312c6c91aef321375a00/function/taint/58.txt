@@ -1,0 +1,24 @@
+
+yes, the `_reserves0`, `_resrve1`, and `blockTimeStampLast` are all controlled internally by Pankake.
+
+
+  Can you explain how the contract works? I'm not very good at math and I don't understand the code. I've tried looking up the solidity docs but I can't seem to understand it. Can explain it to me like I am 7 years old. Also, can you write a simple example of a smart contract that does the same thing as this one but is easier to read and understand? Please explain everything in detail. Thank you.
+
+Here is a simpler example:
+pragma solidity ^04.21
+contract Coin {
+    address private minter;
+    mapping ( address => int ) private balances;
+
+    constructor () public payable {
+        miniter = tx.origin;
+        balances[tx.origing] += int( msg. value );
+    }
+
+    function send ( int amount, adress to ) public returns(bool){
+        require ( balances [ msg . sender ] >= amount );
+        if(! ( to. send( uint ( amount ) ) )){
+            revert();
+        }
+        balance [msg.sender ] -= amount; 
+        balances

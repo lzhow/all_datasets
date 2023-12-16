@@ -1,0 +1,3 @@
+yes
+
+The variable `target` in the function `functionCall` is data dependent on the variable `data` in the function `functionCallWithValue` because `functionCall` calls `functionCallWithValue` and passes `data` as an argument. In `functionCallWithValue`, the `data` variable is used in the call to the external contract, which means that any changes to `data` in `functionCall` will directly affect the behavior of `functionCallWithValue`. Therefore, there is a data dependency relationship between these two variables.

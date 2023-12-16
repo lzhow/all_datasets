@@ -1,0 +1,3 @@
+The variable `hasRights` in the function `_toggleAdminRights` is not controlled by the user. 
+
+Reason: The value of `hasRights` is determined by the condition `adminHasRights == hasRights`, which is controlled by the contract itself. The user does not have any influence over this condition. Therefore, the variable is not controlled by the user.

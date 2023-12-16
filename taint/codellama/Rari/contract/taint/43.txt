@@ -1,0 +1,5 @@
+  
+No, the ` borrow Index` variable in this function is NOT controlled  by user because it's a local variable that is defined in a function and it can't be modified by any external user or smart contract.
+
+The ` borrowIndex ` variable is calculated using the formula `exp(sum(rate * time, 1))`, where `rate` is a variable defined inside the contract and `time`is a parameter passed to the  function.  The `sum` function calculates the sum of the elements in an array, and the result is stored in `totalBorrows`.
+ 

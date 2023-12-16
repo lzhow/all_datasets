@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `delegate` function, the `_data` parameter is constructed by calling `abi. encodeWithSelecor` with the selector of the target function (`outputRaAndgetBalanc`) and the arguments (`_dst`, `_amt`). The `data ` variable is then passed as an argument to the` delegatecall` method of `_calle`.
+  The` outputRAnd getBalan`ce function then decodes the data returned by the delegate call using `ab. decode`. The first argument of `decode` is `return Data_`, which is a variable that is defined in ` delegate` and is passed to ` decode` as the second argument.
+Therefore, ` return Data _`  is data-dependent on ` am t_ ` in`output RawAnd GetBalancer`.

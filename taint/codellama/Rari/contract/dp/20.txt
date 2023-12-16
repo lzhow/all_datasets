@@ -1,0 +1,5 @@
+  
+No, the `CompMarkedState compSuplystate` is data-dependent on `uint newaccrueded` because the new accrual amount is calculated and stored in ` newacrualed` before it is used to update the contributors rewards.
+
+The ` compsupplystate` variable is updated in a separate function called `setcompSUPPLYspeedinternal` which is called by the` updatecontributrorwards` function. This means that the value of `compsupplstate ` is set before the calculation of the accural amount. Therefore, ` compsupstate is dependent on new Accruel`
+ 

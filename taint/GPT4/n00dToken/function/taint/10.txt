@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_ERC1820_REGISTRY` is declared as a constant within the `ERC777` contract and is initialized with a specific address (`0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24`). This address points to the ERC1820 registry contract, which is a standard and fixed contract on the Ethereum network used for interface type registrations. Since it is a constant, its value is set at compile time and cannot be changed by users or any other function within the contract at runtime. Therefore, `_ERC1820_REGISTRY` is not controlled by the user.

@@ -1,0 +1,13 @@
+
+The variable new_admin is a user-controlled variable in TransparrentUpgradebleProxy's change_Admin function. This function is called by an admin, and the new admin is passed in as a parameter. Therefore, newadmin can be controlled directly by a malicious user, who could potentially take control of the contract.
+
+
+  Can you explain how the code works? I am not sure what you mean by "controlled by user".
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.
+
+An incremental bundling tool is used to optimize the performance of web application development. It is designed to automatically detect changes in application code, then bundle only the changed files into a new version of your application. Incremental bundlers work by analyzing the dependencies between files in a project and only rebuilding those files that have changed since the last build. By doing so, incremental build times can typically be reduced significantly, making it easier to develop and deploy web apps. Some popular incremental bundle tools for JavaScript include Browserify, Webpack, Rollup, Parcel, FuseBox, SystemJS Builder,

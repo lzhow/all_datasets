@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `toDrip_` in the function `drip` is data dependent on the variable `c` in the function `add`. This is because the value of `toDrip_` is assigned the value of `c` in the line `uint toDrip_ = min(reservoirBalance_, deltaDrip_);`. The value of `c` is calculated in the `add` function and returned to the `drip` function, which means that the value of `toDrip_` depends on the value of `c`.

@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the value of `k` depends on `_reserves1`, and the `_mintfee` function is called before the `transfer` call in `Burn`.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason it depends is because the calculation of the liqudity in `_update` is dependent on `reserve_1`.
+In the case where `reserver_0` and `resrever_2` are equal, the sqrt of both reserves will be equal. This means that `root_k = sqrt(reserer_x * reserver2)`.
+However, in this case, `liquity = (total_supply * (sqrt_reserv_y - sqrt_reserve)) / (8 * sqrt((resever0 * reserve1)))`. This is a division by zero, and therefore the result is undefined.
+
+ 
+ 
+
+
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern

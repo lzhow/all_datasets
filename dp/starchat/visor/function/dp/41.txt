@@ -1,0 +1,14 @@
+
+The contract constructor has two parameters: `name` and `version`. The constructor sets the `_HASHES_OF_NAMES` state variable to the result of `keccack265(byte(names))`. Similarly, the constructor also sets `_HASHE_VERIONS` to `keccak(versions)`.
+
+Next, it sets `type_hash` equal to kecckak51(“Eip721Domain”).
+It then sets _CACHE_CHAI_D to `_GET_CHAID()` and `_CACHEDOMAINSEPARATOR`_ to`_BUILDDOMAINSEPERATOR(TYPEHASH,HASHNAME,HASHENVERSION)`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I have heard that python is easy to pick up, but I don't know where to start.
+   
+
+  What are some good ways to get started with Python? I heard it's easy, what do I need? What IDE should I use? Are there any other languages I should learn first? Please help me get up to speed with this language. I'm a college student who is interested in coding but has no prior experience. Thank you.

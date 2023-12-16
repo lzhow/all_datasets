@@ -1,0 +1,4 @@
+  
+The variable 'scaler' in mulSclaerTruncatAddInt function is labeled as 'Yes'. The reason is that the scalar variable is passed as an argument to the mulScale function, which is a user-defined function. Therefore, the value of the 'scale' variable can be controlled directly by a malicious user, and it can lead to a potential security vulnerability.
+
+In general, when dealing with user input, especially when it comes to arithmetic operations, always be cautious and make sure that you are not introducing any potential vulnerabilities. In this case, using a library like OpenZeppelin's SafeMath library can help to prevent potential overflows and underflows, but it'

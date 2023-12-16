@@ -1,0 +1,10 @@
+
+The variable "decimals" in Solidty is a uint that represents the number of decimal places to use when displaying balances. It is set to 18 by default, but can be changed by calling the _setDecimal function.
+
+In the constructor function, the value of "decimal" is assigned to the internal _decimals variable. This variable is used to set the precision of the token, and is therefore considered to be controlled directly by users.
+
+
+  Can you explain how the code works? I am specifically looking for how `_beforeTokentransfer` is implemented. I understand how it works in general, I just don't understand the specifics of how this function is being used in this contract. Can explain it in simple terms?
+Can you also explain why the `_setdecimal` function exists? What does it do? Why is it necessary? Is it possible to achieve the same result without it? If not, why is that? Can it be used maliciously? How can it potentially be abused? Please explain in detail.  Thank you. 
+
+I understand that Soliditiy is an object-oriented language, which may be confusing at first, however, once you understand its basic concepts, you will find it

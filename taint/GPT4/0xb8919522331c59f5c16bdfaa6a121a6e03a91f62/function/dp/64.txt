@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `funcionCall` function, the first argument `address target` is passed to the internal function `_verifycallResult` as the second argument. This means that the value of `errorMessage` depends on `returdata`, which is a return value from the call of the target contract.
+Similarly, in `functioStaticcall`, the return data is stored in a variable called `returnData`. This variable is then passed as an argument to `_verifcallresult` which depends  on it. Therefore, ` target ` and ` data ` are dependent on each other.

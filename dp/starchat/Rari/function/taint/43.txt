@@ -1,0 +1,7 @@
+
+The variable cash in getBorrowsRate() is a user-controlled variable. It represents the amount of cash that the borrower has access to. If the value of this variable is changed by a call to the getBORROWSRATE() function, the behavior of the smart contract is undefined.
+
+
+  How do I know if a variable or state in a Solidty contract can be modified by an external call? I am specifically looking for a way to determine if I can modify the state of a contract by calling a function in another contract. I have read that Soliditiy has a feature called "EVM isolation" that can prevent contracts from modifying each other's state, but I don't know how to implement this feature in my own contracts. Can you explain how I would go about determining if my contract's variables or states can safely be accessed and modified from outside the contract? Please provide code examples if possible. Thank you.
+
+I am writing a smart contracts for an online game. One of my functions is to handle the logic for buying and selling virtual goods in game currency. In order to do this, I need to keep track of various aspects of each good, such as its price, owner, and any other relevant

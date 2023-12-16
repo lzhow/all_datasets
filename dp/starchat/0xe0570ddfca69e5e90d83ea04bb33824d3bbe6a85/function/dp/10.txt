@@ -1,0 +1,12 @@
+
+The contract function is `nonReetrant`, which means that it cannot be called again until the current call has returned. This means there is no risk of the `_balance` variable changing between the time it is retrieved and the `safeTranferFrom` call.
+
+However, the code does not check if `_amount` is greater than or equal to `_pool`, so it could be possible for `_after` to be less than `_before`, and thus the calculation of `share` could result in a division by zero.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+ 
+  Data dependency is a term used in computer science to describe how one variable or value depends on another. In the context of smart contracts, data dependencies refer to how changes in one value or state can affect another value. For example, if a variable is used to store the value of another variable, then the first variable depends upon the second. If one state variable affects another state or local variable in some way, it can also be considered a dependency. 
+
+In the case of your code, there are two data dependancies:
+1.

@@ -1,0 +1,4 @@
+  
+No, the ` currentvalue` variable in function `_updateSnashot` is NOT controlled  by user because it's a local variable that is created and used within the scope of the `_updatesnapshot` function. It is a private variable and it can only be accessed within this function, so it cannot be controlled or manipulated by any external user or smart contract.
+
+The ` _updatSnapshot`function is called by other functions in this contract, such as `_beforeTokentransfer` and `_valueat`, and these functions pass in a `snaptshosts` parameter, which is an object that contains the current snapshot ID and the corresponding snapshot value. These functions use the snapshot values to update the local `currenvalue ` variable, but the value of ` currenValue ` is determined by these other function calls and cannot  be directly controlled. 

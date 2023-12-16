@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the given code, the `delegateCall` function is called on `address target` with `bytes` memory `data` as arguments. This function returns a tuple of two values: `bool` `success` and `memory` bytes `returnData`. The `require` statement checks if the target is a contract address, and if it is not, it throws an error.
+Since the return data is dependent on both the success and the data, we can say that the retunData is data-dependent on target and data.

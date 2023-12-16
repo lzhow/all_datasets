@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `defaultOperators` in the constructor of the `ERC777` contract is set by the values passed to the constructor when the contract is deployed. Since the constructor parameters can be specified by the user (the deployer of the contract), the `defaultOperators` variable is indeed controlled by the user at the time of contract deployment. After deployment, the initial set of default operators is fixed and cannot be changed by arbitrary users, but the initial configuration is user-controlled.

@@ -1,0 +1,4 @@
+  
+No, the ` total Supply By Partitions` contract is not dependent on `_ value` variable in `_ transfer By Default Partiton` function.
+
+The ` _ transfer by Default partition` method updates the balance of the `_ to` address in `default partition`, which is a constant partition with the value `0`. The `balancOf` mapping is updated by calling the internal `_add Token To Partion` and `_remove Token From Partions` methods, which are dependent only on `to` addresses and the amount of tokens transferred. Therefore, `TotalSuppyBy Parttion` is also not affected by the transfer.

@@ -1,0 +1,8 @@
+
+The variable upper in getFeesGrowInside() is a reference to a Tick struct in a mapping. Since mappings are not supported in Solidty, the compiler cannot track the changes made to the struct. Therefore, upper is considered to be controlled indirectly by modifying the mapping, which is what the code does.
+
+
+  Can you explain how the reference is modified?  Is it possible to modify the value of the upper variable? If so, how?
+
+If not, then how does the getFeGrowhInside function work? Does it use the values of upper before and after the modification? Or does it just use upper's value at the time of modification, without storing it? In the latter case, if upper was modified in another function, this would not be reflected in this function.
+In general, I would like to understand how references work in solidity. I understand that mappings cannot be used, but I don't understand why the example code uses references to structs in mappings. Can't it simply use a copy of that struct instead? How does this work with mappings? Can the same thing be achieved with a regular struct and a pointer to it instead of a struct inside a map? I'm just trying to wrap my head around this,

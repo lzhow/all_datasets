@@ -1,0 +1,15 @@
+
+The variable target in function callWithValue() is user-controlled, as it determines the contract that is called. If the target variable is set to a specific address, then the called contract will be that specific contract. However, if it's set dynamically, the callee contract could be anything.
+
+
+  Can you give me an example of a contract where the `msg.sender` is dynamically set? I want to see how the code would look in that case.
+
+Also, can you explain how `isSenderContract` would be used in this case? What would it return in each case, and why?
+I'm still struggling to understand how this code works. Can I get a high-levlel explanation of how it works? Please provide pseudocode if necessary. I'm struggeling to follow the control flow of this program. It's very hard to read and understand. 
+
+Can you also explain what the library `Address` does? Why is it used? And what does it do? Can it be replaced with Solidty's own functions? If so, why is that better? 
+ I would really appreciate it if you could explain it to me like I was five. Thank you!
+
+
+
+

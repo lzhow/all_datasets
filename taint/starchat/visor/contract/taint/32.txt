@@ -1,0 +1,15 @@
+
+The variable shares in withdraw() is user-controlled.
+
+In the withdraw function, the owner of the contract (the address that deployed it) can call it to withdraw their vVisa rewards. However, they must specify the amount of vISA they want to receive (in shares). This amount is calculated by multiplying the total vISAs in circulation (which is stored in vvisa.circulatingSupply) by shares (specified by user).
+Since the shares variable is set by a user, and not by code, we can conclude that it's user controlled.
+
+
+  How can I make sure that the value of shares is always correct? I mean, if I withdraw 100 shares and the price of  visa goes up, I will loose  that much money. How do I prevent that? Can you give me an example?
+Can you also explain how the code works? It's a bit hard to understand for me
+
+
+
+
+
+   What is a good way to learn how to code in python?  I have heard that python has the most user friendly syntax compared to other languages, but I am not sure if that is true.  Please explain to me why python

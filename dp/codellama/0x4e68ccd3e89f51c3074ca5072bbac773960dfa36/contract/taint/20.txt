@@ -1,0 +1,15 @@
+  
+No, the ` quotinent_ scope_  ` variable in get NextS qrt Price From Amount1 Rounding Down is NOT controlled  by  the  user .
+
+The `getNext S q rt PriceFrom Am o u t  function` is a public function that takes in four parameters: `sqrt P X9 6`, `liqu idity`,` amount`, and `add`. The function calculates the next square root price from the amount and liquidty.
+In the first if statement, if `amount` equals  zero, then the quotie nt is set to ` sq r t PX 9  6`.
+If ` add`is true, `quo tient` will be set equal to the result of `Full Math. mul Div R ounding Up` with the parameters `numer ator  _  , sqr tP X 8  _, and denomin ato r`. If `denom inator` greater than or equal ` numer at o r`, then ` quo ti ent`will be returned. If not, an error will occur.  The `mul Div` function is used to calculate the product of two numbers and divide them by another number. It is an internal function in ` Full Math`.  It returns the rounded up result.   The` mul div`function is defined as follows:
+`
+function muldiv ( uint  x , uint y ,uint denominato r )internal purereturns ( uin t result ) {
+uint prod  o ;
+ uint prod  1 ;  assembly{
+let mm : =mul mod ( x  y  not (  ) )
+prod  O :=mul (x  Y )  prod   1 :=sub ( sub ( mm  pro d  ), l t (mm  pr o d  ))
+}
+if ( prod _1  ==  0 )   {  require ( denominat o  r  >   ) ; assembly  {result :  =div  ( pro  d _0  denomin  at  or ) }
+return result ; }   require  denom  i nator  g t prod_1   uint remainder ;assembly {rem ai nder : mul mod  a  b  de nomin at or }assembly  p r o _   _ : sub  sub   ( pr  od _ _ , g  t   remainder ))  uint tw os  : -

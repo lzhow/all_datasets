@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `structhash` variable is created by hashing the input parameters of the permit function using the keckak 265 hash function. This ` structhash ` variable  is then used to create the hash variable by calling the `_hashTypeDatav4` function which is a part of solidity.
+Then the address of ` signers` is recovered from the signature using `ECDA.Recover` method.  The `require` statement checks if the recovered address is equal to the owner address. If it is not equal, then the transaction is reverted. Then the nonce of owner is incremented and the approval is given to spendee.  

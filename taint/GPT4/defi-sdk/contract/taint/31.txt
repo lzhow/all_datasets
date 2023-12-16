@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `inputToken` in the function `callBytes` is extracted from the `callerCallData` parameter, which is provided by the external caller of the function. Since `callerCallData` is a `calldata` parameter, it is supplied by the user when they invoke the `callBytes` function. Therefore, the user has control over the contents of `callerCallData`, including the `inputToken` variable that is decoded from it.

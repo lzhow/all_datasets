@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the function `splitRewardExternal`, the contract state `pools` is indexed by the address of the `_token` variable, which is passed as an argument to the function. The expression `pools[address(_token)]` creates a direct data dependency between the state `pools` and the variable `_token`, as the state of the pool being accessed is determined by the value of `_token`. Therefore, any changes or interactions with the `pools` mapping within this function are dependent on the value of `_token`.

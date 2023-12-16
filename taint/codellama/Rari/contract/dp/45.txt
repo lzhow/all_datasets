@@ -1,0 +1,4 @@
+  
+No, the variables ` new Accrual` and ` comp Speed` are independent.
+
+The variable new accruals is calculated in function  ` update contributors rewards` using the formula `mul_ ( delta Blocks , comp Speeds )`. The variable delta blocks is obtained by subtracting the last contributing block from the current block number. This means that the value of new accumulated is dependent on how many blocks have passed since the contributer last received rewads. However, this does not depend on compSpeeeds directly.  The comp speeds are used to calculate the new amount of rewords that should be granted to a contribuer. But the amount that is granted is determined by the comp balance of the contract, which is independent of compspeeds . Therefore, there is no data dependence between newaccrueds and compspeed.

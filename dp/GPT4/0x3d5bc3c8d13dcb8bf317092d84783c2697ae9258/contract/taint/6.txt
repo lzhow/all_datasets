@@ -1,0 +1,29 @@
+Label: No
+
+Reason: The variable `admin` in the `Unitroller` contract is initially set to the address of the creator of the contract (`msg.sender`) when the contract is deployed, as seen in the constructor function:
+
+```solidity
+constructor() public {
+    admin = msg.sender;
+}
+```
+
+After deployment, the control over the `admin` variable is restricted to the current `admin` itself, as only the current `admin` can set a `pendingAdmin` and only the `pendingAdmin` can accept the role of `admin`. This is enforced by the following functions:
+
+```solidity
+function _setPendingAdmin(address newPendingAdmin) public returns (uint) {
+    if (msg.sender != admin) {
+        return fail(Error.UNAUTHORIZED, FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK);
+    }
+    ...
+}
+
+function _acceptAdmin() public returns (uint) {
+    if (msg.sender != pendingAdmin || msg.sender == address(0)) {
+        return fail(Error.UNAUTHORIZED, FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK);
+    }
+    ...
+}
+```
+
+In both `_setPendingAdmin` and `_acceptAdmin`, the use of `msg.sender` ensures that only the current `admin` can propose a new `pendingAdmin`, and only the `pendingAdmin` can accept the role of `admin`. This means that the `admin` variable is not directly controlled by arbitrary users, but rather by the designated `admin` or the `pendingAdmin` that the current `admin` has chosen. Therefore, it is not user-controlled in the sense that any user can change it, but it is controlled by specific privileged addresses.

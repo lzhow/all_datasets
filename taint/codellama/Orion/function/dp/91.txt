@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `_ swap` function, the `amount` variable is used to calculate the amount of tokens to be swapped. This amount is calculated based on `supportFactor` and `reserves` of the pool.
+`reserver` is a state variable of `IOrinPoolvV1Pair` interface, which is implemented by the contract.  The `getreserv` method of this interface is called to get the reserves of a pool, and the result is stored in `pair`.
+Then, `OrignMultiPollLibrary` library is imported and used in `_Swap` to call the`getamountoutuv2`method to obtain the output amount. Finally, this amount will be used as the input amount for the next swap. Therefore,`amount `is data-dependent on`curbal`
+ 

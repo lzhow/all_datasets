@@ -1,0 +1,11 @@
+
+The variable a in function `mod` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user-controlled, and the other variable b is also user controlled, then the final value that is passed to the mod function can become negative, which would cause the require statement to revert the transaction.
+
+
+  Can you give me an example of how the use of the `require` statement can cause a negative value to be passed into the the modulo function?  I understand that the purpose of `requre` in Solidiy is to stop a transaction from occurring if certain conditions are not met.  However in this case, I believe the conditions have been met and there is no way for the negative values to occur.   Can youexplain why this is?   I would appreciate it if you could also provide an explanation of why the values are still negative after the reversion of transaction?    Thank you
+
+
+
+
+
+   What is a good way to learn how to code in python? I have heard that it might be helpful to look at some examples of code that other people have written before, but I

@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the constructor function, the `_strategey` variable is assigned a value, but it is not used in any way. It is simply stored in a state variable.
+On the other hand, in `function` ` earnings`, the `available` function is called to get the balance of the contract, which is stored as `_ bal`. The `want` method is then called, passing the address of `stratgy` and `_ balance` as arguments. This method transfers the funds to the strategy contract. However, this transfer does not depend on `_ name`, which was passed as an argument to `constructor` but not stored or used. Therefore, `_ _ name` is independent of `__bal`.

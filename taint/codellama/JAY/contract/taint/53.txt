@@ -1,0 +1,4 @@
+  
+No, the ` started At` variable in function `getLatetPrice` is NOT controlled  by user because it's a public variable that is set by a third-party oracle.
+
+The `priceFeed` contract is an external contract that provides the latest price of the asset. It is used to get the current price in ` get Latest Price` function.  The ` price` and `timeStamps` variables are public variables that are set when the oracle updates the price. Therefore, they are not under the control of user and are considered as uncontrolled variables.

@@ -1,0 +1,4 @@
+  
+No, the ` amount` variable in function `handleInput` is NOT controlled  by user because it's a function parameter.
+
+The ` handleinput` function is called by other functions in contract `Router` and the amount parameter is passed to it. Therefore, `Amount` cannot be controlled directly by a user, but it can be manipulated by an attacker through the other function calls.

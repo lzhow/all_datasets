@@ -1,0 +1,12 @@
+
+The variable borrowedAmount is data-dependent on variable assetindex in function _unsuptportMarket because the value of the borrow amount is used to calculate the total borrows in Ctoken, which is then used in a require statement in borrowallowed.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how the code works.
+
+In the first function, the `require` statement checks if the BorrowGuardians are paused. If they aren't, it then checks to see if `islisted` is true for the market. 
+
+If it is, then it checks the accountMembership of `Borrowers`. If it isn't there, and the sender is `cTokens`, it will add the user to the list of users for that market using the internal function `addToMarket`.
+This function checks a few things, including if there is an oracle set for this market, if enforceWhitelist is set to true, checks that the address is in `whitelist`, and checks for any borrow caps set. It then calculates the hypotetical account liquidity using `getHypotethicalAccounLiqudityInternal`, which checks how much of this asset the person has,

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `calculateTraade` function, the `_omega` variable is calculated using the curve and weights, and it is used to calculate the output amount.
+Then, in `for` loop, `_psi` is also calculated in a similar way, but using different values of `_oGliq`, `_inputAmount`, and `_weighs`.
+Finally, `outputAmount` and `prevAmount ` are compared, if they have the same value, then the loop continues, otherwise, it breaks.  In the latter case,  `_nextutil` , `_prevutil`,  and  `diff `are calculated, which are all dependent on `_omeg`a and`_psi`.  Therefore,` _omega`and`psi `have a dependency on`diff`.

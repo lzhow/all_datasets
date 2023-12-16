@@ -1,0 +1,4 @@
+  
+No, the ` price ​​1 cumulative last` contract is not dependent on `_ reserve  `1`.
+
+The ` mint` function updates the `_ reserves` and `block timestamp last`, but it does not use the updated `_ reserved` values to update the cumulatives. Instead, it uses the old `_ residue` value to calculate the new cumulate. Therefore, ` _ reservoir` is independent of `reserved`.

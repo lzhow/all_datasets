@@ -1,0 +1,3 @@
+Yes
+
+The variable `data` in the function `decodeI128` is data dependent on the variable `data` in the function `decodeI256` because the latter calls the former within its body. Specifically, `decodeI256` calls `decodeI128` twice to construct the 256-bit integer from two 128-bit parts. The `data` variable passed to `decodeI256` is used as an argument for `decodeI128`, which means that the output of `decodeI128` (and thus its behavior) directly depends on the input `data` provided by `decodeI256`.

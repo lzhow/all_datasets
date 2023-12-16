@@ -1,0 +1,4 @@
+  
+No, the variables ` tick` and ` delta` are independent.
+
+The variable tick is updated in function `_updatePostion` based on `liquitydelta`, which is a parameter of the `update` function. However, this does not affect the value of `deltatick` which remains constant throughout the execution of function swap. Therefore, `tic` is not dependent on delta.

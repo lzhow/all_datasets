@@ -1,0 +1,4 @@
+  
+No, the ` account balance` variable in function `_burn` is NOT controlled  by user because it's a private variable and it can only be accessed by internal functions.
+
+The ` _ burn` function is an internal function that is called by other internal or external functions to burn tokens. It takes three arguments: `address` account is a user address, `uint` amount is amount of tokens to be burned, and `string` reason is reason for burning tokens, which is optional.  The function first checks if account address is zero, then it checks the balance of the account and ensures that the amount to  be burnt is less than or equal to account' balance. If the conditions are met,  the `_balance[ account]` is decremented by amount and the total supply of token is also decrements by `amount`. The `_aftertokenTranser` internal  function  is then called to emit the transfer event. Finally, `_approval` and `_spendingAllowances` functions are called.

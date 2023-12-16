@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `withraw` function, the `_sharess` variable is used to calculate the amount of tokens to be withdrawn. However, this calculation is not directly dependent on any variable in ` propose Strategy`. The `_withdra` and `_after` variables are also not dependent directly on `_implementaion`.
+However, in some cases, it is possible that the value of `_implentation` could affect the outcome of the calculation in `_witdraw`. For example, if the implementation of a strategy changes, then the balance of `want` tokens could also change, which could in turn affect how much is withdrawable.
+Therefore, while the variables in these two functions are independent of each other, there is a potential for indirect data dependence between them.

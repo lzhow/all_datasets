@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `buyNFT` function calls the price feed contract to get the latest price of Jay. If the value of `price` is updated after the call to `latestPrice`, the data dependence will be violated.
+
+  What is a good way to test this?
+
+
+
+

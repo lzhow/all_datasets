@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `calculateRoudUpborRowAmount()` function, the `_token` parameter is used to access the pool data, which is stored in a mapping called `pools`. The `totalborrows` and `totaBorrrowshares` variables are used in this function to calculate the borrow share amount.
+On the other hand, in `BORROW()`function, `_Amount ` is passed as a parameter to `claimCurrentAlpharewards()` and `_Token` is also passed to the same function.  `_SharEAmount`, which depends on `_ Amount`, is calculated in`calculatRouUp BorRow AmounT()`and passed on to`cLAIMCURRENTALPHARewARDS()`.
+Therefore,`_SharaMoun t`is data-dependent on` _Amount`.

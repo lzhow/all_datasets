@@ -1,0 +1,11 @@
+
+The variable _ to in function callPretransferHooks() is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  If a contract has a user-controlled variable, then the contract owner can modify the value of the variables at any time. This can have serious security implications, as the owner could potentially make the smart contract behave in unintended ways.
+
+To determine if any variables in a smart contracts are user control, you can use a tool like Mythril to analyze your contract. MythX is another option. These tools can help you identify any potential security vulnerabilities in your smart contact. Additionally, if you are using a library or framework, the library/framework owner may have made the decision to make certain variables user controllable. In this case, consult the documentation or contact the developer for more information. 
+
+In general, user controls variables should be avoided whenever possible. If you need to use user variables, make sure you fully understand the implication of doing so and why it's necessary. It's also important to keep in mind that user variable can be modified by anyone, so it should only be used in situations where it makes sense. For example, a

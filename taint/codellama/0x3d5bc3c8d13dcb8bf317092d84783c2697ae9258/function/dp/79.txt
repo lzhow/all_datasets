@@ -1,0 +1,5 @@
+  
+No, the ` borrow IndexNew ` variable in `accruteInterst` is not dependent on ` allowed ` in` liquidationBrowFres`.
+
+The reason is that the` borrow Index New` variable is calculated based on other variables such as ` borrow rate mantissa`, `block delta`, and `simple interest factor`, which are all calculated within the same function.
+On the other hand, `allow`ed is a variable that is passed as an argument to the liquidityBowFress function and is used to determine whether the borrow can be liquidated. However, this variable does not affect the calculation of the new borrow index. Therefore, there is no data dependence between the two.

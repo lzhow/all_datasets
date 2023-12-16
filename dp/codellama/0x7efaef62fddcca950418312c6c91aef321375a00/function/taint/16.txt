@@ -1,0 +1,7 @@
+  
+No, the ` price ​​1 cumulative last` variable in function `m int` is NOT controlled  by user .
+
+The ` m int ` function is a part of the Panacea Pairs contract, which is used to mint new liquidities. This function updates the price of token  and the total supply of liquidty.
+  The `  price  1  cumulativelast`variable is calculated by dividing the cummulative price by  the  total  supply  of  liquid  . The  ` cummulated  Price`is  calculated  using  a  formula  that  takes  into  account  both  token  0  reserve  amount  ,  Token  2  Reserve  Amount  And  Total  Supply  Of  Liquid  In  Contra  Ct  (  see  below  for  more  details  ).
+   The   ` total   supply   of   liquid`   is   calculated   by   multiplying   the   amount   to  be  minted  with  two  factors  :   one  is   1   and  another  one   which  depends  on  whether  or  not  there  are  any  fees  to   be   paid  when  creating  new  liqudity  -  if  so  then  it  will  depend  upon  how  much  fee  has  been  paid.  If  no  Fee  Has  Been  Paid,  Then  It  Will  Depend  Upon  How  Much  Fees   Have  Already  Being  Charged   .   If   There  Are  No  Previous  Mints  Or  Burns  Have   Be  Made,   Then   It   Will   Dependent  On  Whether  There   Are   Any  Initial  Reserves  Set  For  Each  Individual  Tokens  When  Creating  New  Pools  With  These  Two  Factors  Multiplied  Together  To  Get  A  Final  Value  Which  Is  Used  As  An  Input  Parameter  By  Function  `_mInt` .   
+    The `_ mInt `function  also  updates  other  variables  such  as  reserves, total Supplies, and k

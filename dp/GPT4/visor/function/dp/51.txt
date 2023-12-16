@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The function `burn` takes two parameters, `account` and `amount`, and calls an internal function `_burn` with these parameters. There is no mention or use of the contract state `_symbol` within the `burn` function. Since `_symbol` is not referenced or modified in the function, and its value does not influence the behavior of the `burn` function, there is no data dependency relationship between `_symbol` and the variable `account`. Therefore, the contract state `_symbol` is not data dependent on the variable `account` in the function `burn`.

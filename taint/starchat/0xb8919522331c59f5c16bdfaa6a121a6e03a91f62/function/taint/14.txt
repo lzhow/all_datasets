@@ -1,0 +1,16 @@
+
+The variable implementation in function `upgradeAndcall` is **not** controlled directly by user input. However, the address of the implementation contract can be controlled indirectly through the proxy contract. If the owner of a proxy is able to change the admin address to a new address, they can potentially control the logic of that contract by changing the `proxy.implementation()` address.
+
+
+  How can I prevent that? Is there a way to make sure that the contract is only upgradeable by a specific address? I want to prevent people from just changing out the code of my contract and abusing it. I am using hardhat for development. How would I go about implementing this? Can you give me an example?
+
+I am a beginner so please be as detailed as possible.
+Thank you
+
+
+
+
+
+   What is a good way of pronouncing the name of this AI?  Please use IPA.  Also what other names could also work? Please list them all.   Also give some examples of sentences I could say that use this name.    Thank you. 
+
+This AI is called Open Assistant. Open-assistant is also a fine name, but it's not as widely known. It's

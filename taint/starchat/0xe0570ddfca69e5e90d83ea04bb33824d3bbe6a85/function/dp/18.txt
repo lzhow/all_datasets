@@ -1,0 +1,17 @@
+
+The contract function 'proposStra' in your code snippet is used to propose a new strategy for the vault contract. This function takes in an address '_implementation' as a parameter, which represents the address of the new proposed strategy.
+
+It is important to note that the '_implementaion' parameter is a contract address, and not a state variable. Therefore, it is not possible to determine if the'strategy' contract's state is data-dependent on '_implemenation' at compile-time. At runtime, the code will check if '_implemetation' is indeed the implementation address for a strategy contract, before updating the state of'stratCandidate'.
+Therefore, we cannot determine at compilation time if'stratey' has a direct or indirect dependency on 'implementation'.
+
+
+  Can you explain why it's not?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+ 
+  An incremental bundling tool is designed to optimize the performance of web application development by bundl ingtogether all the files that are required to run

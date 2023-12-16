@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `updateCompIndex` function, the value of `suppliedAmount_` is calculated as `mul_(cashPrior, index_)` and `claimedAmounts_[holder_]` is set to `add_(mul(deltaIndex_, suppliedAmount), claimedAmount)` where `delta_index` and  `index_ ` are both derived from the same `compMarketingState` struct.
+Similarly, in ` distrubuteBorrwercomp` the values of  borrwer amount and borowerAccured are calculated using the  same struct `CompMarkedState`.
+Therefore, ` borowwer Accrude` depends on `BowowerAmount`.

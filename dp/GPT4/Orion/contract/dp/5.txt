@@ -1,0 +1,3 @@
+yes
+
+The contract state `WETH` is data dependent on the variable `_WETH` in the function `constructor`. This is because the value of `_WETH` is assigned to the contract state `WETH` using the statement `WETH = _WETH;` in the constructor. Therefore, any changes to the variable `_WETH` will affect the value of the contract state `WETH`.

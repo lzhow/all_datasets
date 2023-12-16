@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `ETHtojay` function, the value of `total supply` is calculated using the formula `return value * totalSuppply() / address( this ).balnce - value`. The `address` and `balanace` are properties of the contract, and the values of these properties are determined by the state of other variables in this contract.
+On the other hand, in `updatFeess` the `_price` variable is set to the result of a call to `priceFeed` contract's `latestroundData` method. This method returns a tuple of values, including the price. Therefore, `_ price` depends on `pricFeed`.
+Since ` _ price ` is used in calculating the total supply in EThtoJaY, it is data-dependent on `_ p_ scope_ 0`.

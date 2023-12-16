@@ -1,0 +1,11 @@
+
+The variable 'tick' in both functions is not related to the 'flipping' variable.
+
+However, the variables 'liquidiyDelta' is related. In the get function, it is used to calculate the liqudity gross before and after the update. If the flippin variable is true, then the delta is subtracted from the gros before, otherwise it's added. This means that the tick variable will be updated based on whether the net liquidity is positive or negative.
+
+
+  I'm sorry, but I don't understand what you mean by "the variable ‘tick’ in getFunction is unrelated to ‘flips’ variable." Could you please explain further?
+ 
+  In your first code block, there is a function called `getFeeGrownInside` that takes in a `mapping(uint => Info) self` and two `uint`s, `int` tickLow and `upper`. It then calculates the fee growth for the two ticks, and returns them as two uints. 
+
+In your second codeblock, you have another function that is called update, which takes a mapping of `Info` structs, a tick, an int, int li

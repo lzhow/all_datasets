@@ -1,0 +1,4 @@
+  
+No, the ` swap type` variable in function `callBytes` is NOT controlled  by user because it's a constant value that is passed as an argument to the contract.
+
+The `Swap Type` enum is defined in `Enum.Sol` and it has three possible values: `Fixed Inputs`, `Minimum Output` or `Exact Input`. The `fixed side amount` argument is also passed to `getAmount` functions, which are used to calculate the amount of tokens to be transferred. These values are not user-controlled and are determined by other factors such as the liquidity pools and the direction of the swap. Therefore, `swaptype` cannot be controlled directly by a user and is considered as a non-user controlled variable.

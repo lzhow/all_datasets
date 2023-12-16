@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `ETHtojay` function, the value of `total supply` is calculated using the formula `return value * totalSuppy() / address( this ).balnce - value`. The `address (this)` is a reference to the current contract, and the balance of the contract is used to calculate the total supply.
+Therefore, ` total Supply` depends on ` address ( this )` which in turn depends  on `_ price` because the `_ Price` variable is updated in ` update Fees` and ` _ price ` is also used in calculating the new `Total Suppy`.

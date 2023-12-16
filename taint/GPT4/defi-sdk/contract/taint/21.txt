@@ -1,0 +1,3 @@
+Yes
+
+The variable `callTarget` in the function `callBytes` is assigned from the `callerCallData` parameter, which is provided by the external caller of the function. Since `callerCallData` is an external input and is decoded within the function to set the value of `callTarget`, it means that the value of `callTarget` is indeed controlled by the user who invokes the `callBytes` function.

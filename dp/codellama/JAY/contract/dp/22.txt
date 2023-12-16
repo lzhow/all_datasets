@@ -1,0 +1,5 @@
+  
+No, the `contract state nfstSolds` is not dependent on `variable er7cTokenAdress` because the state is updated in a different function called `sale` and the variables are used in `function buyjay`.
+
+The `state nfsSld` keeps track of the number of NFT tokens sold, and it is only updated when the user calls the`sales` function. This function takes in an amount of Ether as an argument and burns the corresponding amount from the caller's balance.
+On the other hand, `variables er1c2Tokenaddress` are passed as arguments to the buy function, which is used to transfer the NTF tokens from this contract to another address. However, this function does not update the value of `states ntfSols`. Therefore, there is no data dependence between the two.

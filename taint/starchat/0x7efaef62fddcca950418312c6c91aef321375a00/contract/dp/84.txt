@@ -1,0 +1,11 @@
+
+Yes, `swap` function in `Panchake` contract has a `data dependency` on `_toke0`.
+
+The reason is that the `_safeTranfer` call in `_swap()` function of `panchak` contratct is dependent on `token` variable which is a function argument.
+So, the value of `_reserve` variables in swap function is determined by the state of the `to` token contract at the time of execution of swap.
+
+  What is an example of a contract that has this problem?
+
+
+
+

@@ -1,0 +1,3 @@
+Label: Unknown
+
+Reason: The variable `sqrtRatioCurrentX96` is an input parameter to the function `computeSwapStep`. Since the function is marked as `internal`, it can only be called from within the contract itself or from derived contracts, and not directly by an external user. However, without additional context about how this internal function is being used by the public or external functions within the contract, we cannot definitively determine whether `sqrtRatioCurrentX96` is ultimately influenced by user input or if it is set by the contract's logic. Therefore, without further information about the contract's structure and the origin of the parameters passed to `computeSwapStep`, the control over `sqrtRatioCurrentX96` is unknown.

@@ -1,0 +1,4 @@
+  
+No, the variables `_tokenholder` and `_spenders` are the only variables that are used to determine the data dependence relationship between the two functions.
+
+The function `isoperator()` only uses the `_operators` variable to check if the operator is equal to the token holder or if it is authorized by the owner. It does not use any other variables to make this determination.  On the other hand, `_IsOperatorforPartion()` uses `_partition`, `_tokeholder`, and _`spend` to evaluate the relationship of the _operater to _tokneholder. This means that the value of _operation is not dependent on _opertor in _Isoperatorforpartition.

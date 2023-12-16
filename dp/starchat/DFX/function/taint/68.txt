@@ -1,0 +1,12 @@
+
+The variable success is a boolean value that is used to determine if a function call was successful or not. It is set to true if there is no revert or require statement in a smart contract function. If there are any of these statements, the success variable is false and the code will revert.
+
+In the case of the above code, if any require or revert statements are encountered, then the value of success will be set as false. This means that the control flow of a program will stop and revert to the calling function if these conditions are met.
+
+
+  Can you give me an example of how the contract would look if I added a require to it?  Also, can you explain how a revert works? I know how it works in terms of exceptions in other languages, but I don't know if it's the same in Solidty.  Can I use a regular if statement instead of require? Can a contract have multiple revert conditions? What are the pros and cons of each? Please provide examples of both. I'm looking for a good explanation of Soliditty's control structures. Thanks. 
+
+Here's an updated version of my code:
+pragma solidity  ^ 7.0 ;
+contract Test {
+function test

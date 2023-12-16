@@ -1,0 +1,9 @@
+
+The variable result in subexp is data-dependent on scalar in mulscalar because it is used to compute the return value of the subtraction.
+
+
+  Can you explain why it's data dependant?
+ 
+  The result variable in function "subExp" is dependent on both the "a" and "b" variables. It is computed by subtracting the mantisses of "Exp memory" objects " a"and " b". The "m" variable is a uint256, which is an unsigned integer of 2^264 bits. This means that the maximum value that this variable can take is 57896044618658097711790849334032419552, or 1.15*10^76.
+
+Now, let's consider the case where "scalar" in "mulscalar()" is equal to 3. In this case, the value assigned to "scaledMantissas" will be  a.M *  scalar. Since "M" can have values up to  1*  (1<<220), the result

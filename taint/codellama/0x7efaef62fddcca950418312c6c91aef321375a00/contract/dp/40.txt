@@ -1,0 +1,5 @@
+  
+No, the `sucess` variable in `_safeTranfer` is not dependent on `_toke1n`in the`burn` function.
+
+The `safeTrasnfer()` function is called in `mnt()` and `swap()` functions, and it is used to transfer tokens between accounts. It takes three arguments: `token`, `to`, and`value`. The `value` argument is dependent only on `amount` and not on any other variable. Therefore, `succeess` cannot be dependent  on`_token` because it only depends on a local variable,`amount`.
+ 

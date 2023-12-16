@@ -1,0 +1,3 @@
+yes, the variable `newAccrued` in the function `updateContributorRewards` is data dependent on the variable `compSpeed` in the same function. 
+
+Explanation: The value of `newAccrued` is calculated by multiplying `deltaBlocks` and `compSpeed`. Since `compSpeed` is used in the calculation of `newAccrued`, there is a data dependency between these two variables.

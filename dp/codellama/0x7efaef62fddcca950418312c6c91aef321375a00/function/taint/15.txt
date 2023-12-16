@@ -1,0 +1,4 @@
+  
+No, the ` price ​​0 cumulative last` variable in function `m int` is NOT controlled  by user, because it's a local variable that is calculated based on the current state of the contract and the previous state, and it does not depend on any user input.
+
+The reason for this is that the value of `reserves0` and ` reserves1` are obtained from the external calls to the ERC-2 tokens, which are not under the control of any single user and are determined by market forces. Therefore, `total supply` can be calculated using the formula `sqrt (reserver0 * reservoir1)`, which is a deterministic function that does depend only on external inputs. 

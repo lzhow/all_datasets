@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `depositEth` function takes an `uint` amount as input, and the getAmounIn function also takes and `int` as an input. Since `integers` and unisgned integers are different types, the compiler will not be able to deduce that `reserve` is a `signed integer` which means that it can be negative. This means the value of `numer` can become negative, which would result in an error.
+
+  What is an example of a contract that is not a Unicorns?
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+yes, the `_status` variable in `ReentrencyGuard` is a state variable that is used to prevent reentrance attacks. It is set to  `_ENTERD` when the modifier is called, and reset to `_NO_ENTRED` after the call is complete. Since it's value is only modified within the scope of the `nonReenterant` modifier, there is nothing the users can do to manipulate its value.
+
+
+  Can you explain how the re-entracy guard works? I'm having a hard time understanding how it works. I understand that it prevents a function from being called multiple times, but I don't understand how this is possible. Can someone explain it to me? Please provide an example if possible
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+
+A J-Pert P LL algorithm is any algorithm that solves a Rubik's Cube using the J, P, or LL moves. J and P algorithms are generally considered easier than LL algorithms, as they require fewer turns and are therefore faster to solve.
+The J algorithm, also known as the "J-algorithm" or "Fridrich" algorithm,[1] is based on the

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `address pool` is passed as an argument to the internal function call `pairForCure(address factory, address,address)`. The `factory` argument is also passed to this function.
+Then, in this internal call, `ICurveregistry( factory). getA (pool)` is called. This function returns the value of `uint 248 A` which is then used in `curve decimal to base unit( from uint 8 x)`.
+Therefore, we can conclude that the data of the A variable is dependent on pool.

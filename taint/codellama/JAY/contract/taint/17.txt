@@ -1,0 +1,4 @@
+  
+No, the `_ address` variable in function `updateDevwallet` is NOT controlled  by user because it's a private variable and only the owner of the contract can update it.
+
+The `onlyOwner` modifier in this function ensures that only an owner can call this method, and the `dev` address is set in constructor, so it can't be changed by any user, only by an authorized owner.

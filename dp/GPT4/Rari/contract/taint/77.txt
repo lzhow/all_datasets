@@ -1,0 +1,3 @@
+The variable `hasRights` in the function `_toggleFuseAdminRights` is not controlled by the user. 
+
+Reason: The value of `hasRights` is determined by the condition `if (fuseAdminHasRights == hasRights)` which compares the current value of `fuseAdminHasRights` with the input value `hasRights`. The input value `hasRights` is provided as an argument to the function `_toggleFuseAdminRights` and is not influenced by any user input within the contract. Therefore, the variable `hasRights` is not controlled by the user.

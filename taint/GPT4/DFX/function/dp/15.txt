@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_nGLiq` in the function `viewOriginSwap` is data dependent on the variable `nBals_` in the function `viewOriginSwapData`. This is because the value of `_nGLiq` is calculated based on the values of `nBals_` in the for loop of `viewOriginSwapData` function. Specifically, `_nGLiq` is incremented by the values of `nBals_[i]` in each iteration of the loop. Therefore, any changes in the values of `nBals_` will affect the final value of `_nGLiq`, indicating a data dependency relationship.

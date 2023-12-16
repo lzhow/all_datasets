@@ -1,0 +1,9 @@
+
+The contract selector is not directly data-dependent on any variables in this function. However, the `_reserve*` variables are used in a calculation of the `sqrt` function, which is a non-deterministic operation and can have side effects on other variables. Therefore, it is possible for the value of `k` to change between the time that it was calculated and the point at which it's used, leading to the potential for a change in data dependence.
+
+
+  I'm not sure if I understand you correctly. Do you mean that the result of a `select` statement is datadependent?
+  
+  Yes, that is correct. A `selector` is used to identify which function is being called, and it can affect the behavior of that function in subtle ways. For example, if a contract inherits from multiple contracts that have the same function signature, then the selector will be used by the EVM to determine which implementation of said function to call. If the selectors are different, there is no way for Solidty to know which contract's function should be called.
+
+In short, a selector can be thought of as a "tag" that identifies a specific function call, but it does not itself have any data dependencies

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_HASHED_NAME` is not present in the provided function `_hashTypedDataV4`, nor is it passed as an argument or referenced within the function body. The function `_hashTypedDataV4` takes `structHash` as an input and combines it with the result of `_domainSeparatorV4()` and a constant byte prefix to compute a new hash. Since `_HASHED_NAME` is not used or affected by this computation, there is no data dependency relationship between `_HASHED_NAME` and any variable in the function `_hashTypedDataV4`.

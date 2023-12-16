@@ -1,0 +1,16 @@
+
+The variable "value" in safeTranfer is a parameter of the safeERC library. It is used to determine the amount of tokens to be transferred. Since it's a value that is passed into the library, the value is considered controlled.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!   An incremental bundlers job is to take all the files that make up a web application and combine them into a single file that can be served to the users browser. This makes the application load faster since the browser only has to download a smaller file instead of many larger files.
+
+An incremental build system only updates the parts of a project that have changed since last build. For example if you only change one file, only that file will be rebuilt. Other files can simply be copied from the previous build without rebuilding them. 
+
+This makes development much faster because you don't have to wait

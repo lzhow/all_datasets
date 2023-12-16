@@ -1,0 +1,5 @@
+Label: no
+
+Explanation: The variable `Dprev` in the function `get_D` is not data dependent on the variable `j` in the function `getAmountInCurve`. 
+
+Reason: The variable `Dprev` is only used within the function `get_D` and is not passed as an argument or accessed from any external function. Therefore, there is no direct data dependency between `Dprev` and `j`.

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `to` in the function `skim` is an argument provided by the caller of the function. Since any user can call the `skim` function and provide the `to` address, it is controlled by the user. The function does not impose any restrictions on what the `to` address can be, as long as the caller of the function has the necessary permissions to call `skim`.

@@ -1,0 +1,9 @@
+
+The variable `value` in `isZeroEXP` is a struct type and is therefore not directly accessible by users. However, the `mantisa` field of the struct can be accessed, which is an `uint` type. Since Solidty does not have a native `bool` data type, we can use an enum to represent a boolean value, where `true` corresponds to `1` and `false` to  `0`.
+
+In the case of `Exp` struct, `zero` can have multiple values, such as `exp({ mantssa:0})`, ` exp({manstisa: halfScale})` or ` Exp ({mansrsa : expscale})`. Since the value of mansissa is unknown, and the only thing that matters is whether it's equal to zero, or not, a better representation would be an unsigned integer.
+To represent the boolean values of true and false, Solidit uses an Enum, with the values `True` = `  uint(1)` and` False`=`uint(0)`.
+Therefore, to answer your question, yes, variable value in iszeroExp can potentially be controlled.
+
+
+  Can you explain how to use the tool

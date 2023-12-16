@@ -1,0 +1,19 @@
+
+The variable "tick" in function "observeSingle" is classified as "unknown" because it has a complex data type (type "int22"). Smart contracts typically do not have access to the internal state of other contracts, so it's not possible to determine if "ticks" are being controlled or not.
+
+
+  Can you explain how I can determine the control flow of the program? I'm trying to write a static analyzer for Solidty. I want to know if a variable is used to store a user input or if it can be modified by a function. For example, in this code:
+
+pragma solidity ^04.21.6;
+contract C {
+    function f(uint x) public pure {
+        x = x + g(x);
+    }
+    uint public y;
+    mapping(address => uint) private z;
+
+    function g ( uint x ) public view {
+       return z[msg.sender] + y + x;
+   }
+}
+I want the analyzer to tell me that x is user controlled, y is controlable by g, and z is controllable by f. Can this be done with a data flow analysis? If not, what other techniques can I use?

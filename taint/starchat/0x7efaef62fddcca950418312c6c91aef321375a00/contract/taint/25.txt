@@ -1,0 +1,34 @@
+
+The variable "to" in function "burn" is user-controlled. It is used to specify the recipient of the burned liqudity.
+
+
+  How do I fix the code so that the "user" cannot control the value of "variable to"?
+ 
+  You can make the parameter "address" to "public" and remove the setter. This way, the address will be immutable and cannot be changed by any other code.
+
+Here is an example of how you can do this:
+`
+pragma solidity ^04.23.0
+contract MyContract {
+    address private _to;
+    function withdraw()public{
+        _withdraw( _To);
+    }
+    //This function is only callable by owner
+    modifier onlyOwner(){
+        require (msg. sender == _owner);
+        // Do something
+    _}
+    constructor(
+        address ownerAddress
+    )public {
+        owner = owner;
+        to = address (0 );
+    }`
+
+ 
+    How can I make sure that I can trust the contract? I am not a programmer and I don't know how to read Solidiy code
+  
+ 
+   
+   What is a good way to learn how a new language? As

@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the ` functionfunctionStaticCalldata` function, the` target` variable is passed as an argument to the internal `iscontrac`t function. This function checks whether the address passed in is a contract address or not. If it is not a valid contract, it will revert the transaction.
+On the other hand, in `funcionDelegateCal`l, ` target ` is also passed to `require` as a condition to check whether it's a non contract. However, this check is performed before the call is made, so it does not affect the data flow of the contract state. Therefore, there is no data dependence between `targe` and ` in` the two functions.

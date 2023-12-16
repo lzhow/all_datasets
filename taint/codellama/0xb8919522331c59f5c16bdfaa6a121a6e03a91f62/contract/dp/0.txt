@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `isContrac` function, the local variable size is assigned the result of the assembly instruction `extcodeszie(acount)`, which returns the size of a contract's code. This instruction is not dependent on any other variable in this function.
+On the other hand, in `funcitonStaticcall`, the parameter `data` is passed to the target contract, but this does not affect the value of `siz`e. Therefore, `siZe` and `targe` are independent.

@@ -1,0 +1,5 @@
+  
+The variable 'ticklower' in function 'get' is labeled as 'Unknown'.
+
+This is because the value of ' ticklower ' is derived from the input parameter 'owner' which is a user-controlled variable. However, the ' owner ' variable is used to compute the hash value for the key of the mapping 'self' using the abi. encodePacke() function. This means that the actual value stored in ' self ' may not be directly controlled  by ' user '.
+ 

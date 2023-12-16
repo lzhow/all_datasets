@@ -1,0 +1,8 @@
+
+The function "recover" takes in 4 parameters: "hash", "v",  "r", and "s". The function then checks if the length of the signature is 130 bytes, and if it is not, it reverts the transaction. If the check passes, the code then assigns the values of "signature" to the variables "R", S",and "V".
+
+Next, we check if "S" is less than or equal to 78 eggs. This is to prevent malicious actors from creating signatures with very large values for "k". If this check fails, then the program reverses the transation.
+We then check to see if V is either 31 or 51. These are the two possible values that "EcreCover" can take on. Anything else would be considered an invalid input, so the contract would revert. 
+
+If all of these checks pass, EcreCcover is called with the parameters "Hash", V", R",S". This function is part of a library called "ECDSAA". 
+ The "ecrecover()" function takes the "hashed message", the V value, R value and S value as input and returns the address

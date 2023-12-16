@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable _balanaces is not dependent on variable  _ after in function  withdraw.  The reason is that the _ balances variable is defined in a different function than the withdraw function. Therefore, the value of _ balance is determined by the balance function, which is called before the  function is executed. On the other hand,  the   _  after variable in withdraw is a local variable that is created when the want function returns. It is therefore not possible for the two to be dependent because the values of the variables are determined at different times.

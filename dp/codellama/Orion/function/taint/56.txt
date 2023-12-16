@@ -1,0 +1,4 @@
+  
+The variable spende in safe decrease allowence is labeled as 'Unknown'. The reason is that the speneder variable is passed as an argument to the safe decreas allowenace function. However, the value of the argument is determined by a previous function call, which is safe transfer from. Therefore, we cannot determine whether the  spener variable in this function is user controlled or not.
+
+In general, when analyzing the control flow of a smart contract, you need to consider the values of variables that are passed to functions as arguments, as well as the return values from those functions. If the variables are not explicitly initialized or assigned values within the contract itself, then it may be difficult to determine their control status.

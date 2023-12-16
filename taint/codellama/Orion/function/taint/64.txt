@@ -1,0 +1,4 @@
+  
+No, the `_I` variable in function `getD` is NOT controlled  by user because it's a local variable that is used in a for loop to iterate over the number of co-ins in curve pool. It' s not possible for the users to control the value of this variable.
+
+The reason is that the `for` loop is executed within the context of the smart contract, and the loop variable is automatically incremented by  the contract. Therefore, there is no way for a user to directly control its value. 

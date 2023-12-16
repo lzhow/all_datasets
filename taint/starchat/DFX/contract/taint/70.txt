@@ -1,0 +1,13 @@
+
+The variable i in getfee is a loop variable that is used to iterate over the two assets in an array. Since the array is fixed, and the length of the assets array in this contract is always 4, the value of i is never controlled directly by a user input. Therefore, i cannot be considered to be controlled or influenced by user inputs.
+
+
+  Can you explain how the code works? I'm not very good at maths
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.
+
+An incremental bundling tool is designed to optimize the performance of web development by reducing the number of requests made to the server during development. It does this by bundLING together (or aggregating) all the files that are required to render a web page, including JavaScript files, CSS files and images. This results in a single file that can be served to users, reducing latency and improving performance. An incremental build tool can also detect changes to individual files during the development process and only rebuild those files which have changed, significantly reducing build times. Incremental bundlers are commonly used in web application development,

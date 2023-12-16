@@ -1,0 +1,3 @@
+Label: No
+
+Explanation: The variable `curveId` in the function `newCurve` is not controlled by the user. It is derived from the concatenation of `_baseCurrency` and `_quoteCurrency` using the `keccak256` hash function. The values of `_baseCurrency` and `_quoteCurrency` are provided as arguments to the function, but they are not influenced by user input within the function. Therefore, the `curveId` variable is not controlled by the user.

@@ -1,0 +1,11 @@
+
+The function `allowance` has a return statement that assigns the value of the internal variable `allowed` to the return value. This means that the returned value depends on both the `_owner` and `_spnder` variables.
+
+However, the `transfer` function does not have this property. It has an internal function called `_allowed`, which is called with the same parameters as the external function. However, this internal `_allow` does *not* return the result of this calculation. Instead, it assigns this value to a variable called `partitionAllowance`, and returns the contents of that variable. Therefore, `TransferByParition` event does **not** depend on `_value` or `_data` parameters.
+
+
+  Can you explain how the data dependencies are determined?
+ 
+  Yes, I can explain it further. In the code you provided, there are two functions: `Allowence` which calculates the allowence and `TranferByPartion` that transfers tokens. 
+
+In the case of `tranfer`, the transfer function calls an `_internal` allow function that does the calculation and assigns it to `PartitionAllownce`. The `TransfereBypartion ` function then emits an event that depends

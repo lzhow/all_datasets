@@ -1,0 +1,13 @@
+
+yes, it is.
+
+The reason is that the `_newshells`, which is calculated in `proportionaldeposit` function, is used to calculate the `curvess` and `deposits_` variables. And the value of `_shellstotal` is also used in calculating the grosliquidity and the balances in  ` getgrosulipidityandbalancesfordeposit`.
+So, the two variable have data dependence relationship, and therefore, are labeled as yes.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure, I'd be happy to explain!
+In the code you provided, there are two functions: ` proportinalDeposit`and `ggetg rosuliplicityandbalanceforDeposit`. The ` gget g rosliplicity and balance for Deposit`function calculates the liquidity of the curve and its balances for each asset in it. This information is then used by the` proporitionalDeposit `function to determine the amount of new shells to mint and to intake depositors' assets into the system. 
+
+To calculate these dependencies, Solidty uses a technique called "static analysis" to analyze your code at compile time. When you compile your

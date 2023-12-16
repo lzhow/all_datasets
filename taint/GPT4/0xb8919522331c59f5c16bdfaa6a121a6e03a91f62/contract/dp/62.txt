@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `target` in the function `functionCall` is an input parameter that specifies the address of the contract on which the low-level call will be performed. The variable `returndata` in the function `functionCallWithValue` is the data returned from the low-level call to the `target`. There is no direct data flow from `target` to `returndata`; instead, `target` is used to determine where the call is made, and `returndata` is the result of that call. The value of `returndata` depends on the execution of the call and the state of the contract at `target`, not on the value of the `target` variable itself. Therefore, there is no data dependency relationship between `target` in `functionCall` and `returndata` in `functionCallWithValue`.

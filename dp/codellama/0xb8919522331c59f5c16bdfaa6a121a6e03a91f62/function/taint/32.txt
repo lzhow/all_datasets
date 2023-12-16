@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the given code, the `upgradeto` function is called on the proxy contract, which is passed as an argument to the upgrade function. This function call is made by a user, but the argument passed to it, `implementation`, is a variable that is defined in this contract and is therefore controlled internally. Therefore, while the call to ` upgradeto ` is initiated by an external user (the owner of the contract), the value of ` implementation` is determined by this smart contract itself and not by any external input.
+ 

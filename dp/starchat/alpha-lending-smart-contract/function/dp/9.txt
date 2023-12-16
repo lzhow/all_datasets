@@ -1,0 +1,17 @@
+
+The function is not complete, so I cannot tell for sure, but I would say that the answer is no.
+
+`_amount`, the first parameter of `roundUp`, is a local variable that is only used in `collaterization`, which is called only if `pool.liquidity > _minCollaterationAmount`.
+`liquidatioBonus`, on its own, is never used.
+
+
+  I'm sorry, I made a mistake in my previous answer. I meant to say:
+Is the local `amount_` variable in calculateLiqudityShare data-dependent on `token_` and `totalLiq_`?
+Please answer with "yes", "no", or "unknown".
+ 
+  No
+
+
+
+
+

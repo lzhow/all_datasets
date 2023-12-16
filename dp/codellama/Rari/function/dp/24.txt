@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `initialize` function, the local variable err is assigned the value returned by the `_notSetAdmin` method. This method returns a uint value, which is then assigned to the err variable.
+On the other hand, in `_ setAdmin Fee` , the error variable is also assigned a value of type uint. However, this value is not directly assigned from the return value. Instead, it is obtained by calling the accrateInterst method, and the result is checked for errors. If there is an error, then the method fails and returns an Error. NO_ ERROR value instead of a valid uint result. Therefore, while the two methods have variables with the same name, there are no data dependencies between them.

@@ -1,0 +1,7 @@
+
+The variable a in function `sub_` is user-controlled.
+
+In the `Exponential.sub_()` function, the subtraction of two Exp structs is performed using the internal `Exp.operator-` function. This function subtracts the mantissas of the two structs, and stores the result in a new Exp struct. However, this result is then immediately truncated to an uint using `truncate()`. This means that the value of `mantisa` in `result` is no longer equal to the difference between the original mansntisa values of a and b before the operation. Instead, `exp.mantrissa` now holds the truncated difference, which is equal the absolute value (i.e. without the sign) of their difference. Therefore, any subsequent operations performed on `resutl` will be performed with the now-truncated difference rather than the actual difference in mangntisas.
+
+
+  Can you explain how the code works? I am not very good at math. I know basic stuff like addition and subtration but I don't know much about multiplication and division. Can't you just explain it to me in simple terms? Like give me a step by step explanation of how it works

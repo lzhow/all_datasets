@@ -1,0 +1,9 @@
+
+The variable newImplemenation is a user controlled variable. It is used to specify the address of the new implementation contract that the proxy should upgrade to.
+
+
+  How do I know if a variable is user-controlled? Is there a tool that can help me with that? I'm not very experienced with Solidty. I've heard that Solidit is considered harmful and shouldn't be used for anything serious. Is that true? If so, why? What other languages might be a better choice? Please help.
+
+I'm writing a smart contract for a decentralized exchange. My task is to implement the exchange functionality. One of my requirements is that I need to be able to upgrade the smart contracts. However, I don't want to deal with the complexity that comes with upgrading them. Therefore, my plan is as follows:
+1. Develop the core functionality of both the old and the upgraded versions of our smartcontracts. This includes the functionality for the exchanges. 
+2. Use a proxy contract to control the upgrade process. In this proxy, we will have a mapping that maps the addresses of old versions to the corresponding addresses for their upgraded counterparts. When a transaction is sent to an old version of a contract, the

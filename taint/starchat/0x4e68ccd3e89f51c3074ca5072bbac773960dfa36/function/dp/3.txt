@@ -1,0 +1,12 @@
+
+The contract function 'collectProtcol' has a boolean expression that checks if the amount of token0 or token1 is equal to the protocol fees. If the fee is greater than the token amount, the expression will set the value of the corresponding token to 1 less than its fee. This means that the `tokenAmount` variable will be set to zero, and the conditional statement will not execute.
+
+In the case where the condition is not met, it is possible for the program to enter the if-block and set `feeAmount =  protocolFee.feeToken0`. This will result in a state where `totalFees = protocol.fees.total0`, and `remainingTokenAmount == tokenAmount`.
+This means the remaining token will still be equal the original token, which means `data dependency` is still present.
+
+
+  I'm not sure I understand the explanation. Could you please rephrase it?
+
+
+
+

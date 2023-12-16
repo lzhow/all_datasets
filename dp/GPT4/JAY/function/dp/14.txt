@@ -1,0 +1,3 @@
+The variable `eth` in the function `sell` is data dependent on the variable `value` in the function `ETHtoJAY`. 
+
+Reason: The variable `eth` is assigned the value returned by the function `JAYtoETH(value)`, where `value` is an input parameter of the `sell` function. The value of `eth` is directly derived from the value of `value`, indicating a data dependency between the two variables.

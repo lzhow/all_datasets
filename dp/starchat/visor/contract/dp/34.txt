@@ -1,0 +1,9 @@
+
+The variable high is not dependent on array in findUppperBound. This is because the loop in this function is used to find the index of the first element in array that is greater than element. If there is no such element, the value of high will remain unchanged, and the while loop will not execute.
+
+
+  Can you explain why it is data-dependent?
+ 
+  The variable "high" is dependent upon the array variable in order to determine the stopping condition for the "while" loop. When the condition is met, "low" will be incremented by  "1", and "array" and element will continue to be compared. However, if the element is less than or equal to the midpoint, then the high value will become the new mid point. In this case, it will always be less that the length of array because of how the average function works. Therefore, when the low value is increment by "  +1", it can never exceed the current high. Thus, there will never be a case where the if statement in line 30 is true, which means that high and low will have the same value after the increment.
+
+This means the final value for high can be either

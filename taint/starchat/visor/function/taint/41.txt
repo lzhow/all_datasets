@@ -1,0 +1,10 @@
+
+The variable owner in permit() is a user-controlled variable. It is used to validate the signature of the permit request, which is provided by a malicious user who may be trying to steal funds from the contract.
+
+
+  How do I prevent maliious users from stealing funds?  How can I make it so that the owner variable is always set to the address of a trusted user, and that user is responsible for approving all permits?
+
+I'm trying out a new smart contract that uses the Permit() function.  I'm concerned that malleable signatures could be used by malign actors to deny service to legitimate users.
+How can the mere act of writing a contract using the ERC-2613 standard be considered safe? How does the existence of this standard make the code more or less secure than if it didn't exist? Please explain in detail. I understand that there are many factors to consider when evaluating the security of smart contracts, but this is an important one that I feel needs to be addressed. Thank you. 
+
+Please provide a detailed response. Include any relevant information that may help me understand the issue. If you feel that you need to refer to additional sources

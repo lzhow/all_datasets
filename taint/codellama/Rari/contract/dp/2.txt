@@ -1,0 +1,5 @@
+  
+No, the variables ` borower` and ` holder` are independent.
+
+The function  `distributeborowerComp` is called in `flywheePreborweraction` which is triggered by the event `BORROW` emitted by a ctoken. This event is emited when a borwer borrows tokens from a Ctoken contract.  The function takes two arguments, `address borowwer`, and  the `Exp memory` borrow index. It updates the comp borrwer index and distributes comp to bororwer.   The `compborrrowstate` variable is updated in this function. However, this variable does not depend on `holdr` or `suppllier` variables in function`claimedRwards`.
+ 

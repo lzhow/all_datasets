@@ -1,0 +1,9 @@
+
+The function is a non-reentrant function, which means that it cannot be called recursively. This means there cannot exist a call stack where the `_mint` function would be on top of the callstack when the `safeTranferFrom` call returns.
+
+However, the code still has a potential issue. If the balance of `this` contract is 100, and the user calls `withdraw(50)`, the withdraw function will call `want().transfer(user, 5)` and `_burn(sender_, 20)`. This will set the total supply to 80. However, if the next call to `balance()` is `uint2 _before = balanace()` and `user` calls another `withDraw(30)` the first call will have set `_before` to be 70 and thus the second call would have `shares = (35 * 60 / 3) =  22` instead of 40 as it should.
+
+
+  Can you explain how the reentrancy guard works in this case?
+ 
+  The re-entrance guard is implemented by the OpenZeppelin library, specifically the ReentracyGuard contract. When a function

@@ -1,0 +1,5 @@
+  
+No, the `bool` variable is `listed`, which is a state variable of the contract, is set to `true` if a market has been added to a list of markets, and `false` otherwise. It is therefore not a variable controlled directly by a user and is instead a system-generated value.
+
+The `checkCTokenn` function is used to check if an address is listed as a comp market, which means that it has already been approved by an admin. This function checks if `ctoken` is in a `markers` array, if it's not, then it checks the address of `ctoken` against the list `allMarkers`. If the ctoken is found in either of these lists, `distributedAdd` will be set `True`.
+ 

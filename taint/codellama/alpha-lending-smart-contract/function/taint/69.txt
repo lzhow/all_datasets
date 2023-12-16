@@ -1,0 +1,4 @@
+  
+The variable 'raw' in function 'decodeBytes' is a user-controlled variable.
+
+This is because the 'data' parameter of the decode function is passed as a parameter, which means that the caller of this function can control the value of 'offset' field of data and therefore the contents of raw. Therefore, the raw variable is user controlled.

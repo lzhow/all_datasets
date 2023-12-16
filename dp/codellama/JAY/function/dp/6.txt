@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the first function, the `require` statement checks if the value of `value` is greater than `MIN`. If it is not, then the transaction will be reverted.
+However, in function 2 the same ` require` function is used, but the condition is different. It checks whether the result of the expression `msg .sender .call {value : eth .mul (9 0) .div (1 9)} ("")` is true. If the call fails, it will revert the entire transaction.  The ` eth` variable is passed as an argument to the second function. Therefore, ` success  ` is dependent on `  eth`.

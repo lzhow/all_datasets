@@ -1,0 +1,7 @@
+
+The variable amount is a user controlled variable in this contract. It is used to calculate the amount of LP tokens to mint based on the current reserves and the total supply of the LP token contract, and is updated every time the reservse changes.
+
+
+  Can you explain how the contract is vulnerable to reentrancy attacks? Please provide an example of such an attack.
+
+In computer programming, a reentrant function or method is any function that calls itself either directly or indirectly. Reentrant functions are often used in embedded systems to prevent infinite loops or other undesirable behavior. If a function is re-entered while it holds a resource that it needs to access, the system may enter an infinite loop or otherwise malfunction. This can be especially dangerous in situations where the resource is shared, such as a semaphore or a mutex. In such cases, reentering the same function can cause unpredictable and unintended behavior, including corruption of data or system crashes. A reentry attack is possible if a malicious user can enter the protected function more than once, causing the program to enter a state that is unsafe for the intended use. For example, if an attacker can call a vulnerablility function repeatedly

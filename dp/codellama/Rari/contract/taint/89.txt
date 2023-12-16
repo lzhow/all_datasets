@@ -1,0 +1,4 @@
+  
+No, the ` reserve factor plus fees max mantissa ` variable in this function is NOT controlled  by a user because it's a constant value that is set in a constructor.
+
+The `constructor` function sets the value of ` reserverFacotrPlusFessMaxmantiss` to `0` and it does not change throughout the lifetime of the contract. Therefore, this variable is determined at the time of deployment and is fixed for the entire lifetime. 

@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the value of `_totalsupply` is used to calculate the amount of shares to mint, and `_pool` (the balance of the vault) is also used in this calculation. Since the `_mint` function updates the total supply, the calculation of `shares` becomes more complicated.
+
+
+  Can you explain why this is so?
+ 
+  The reason why the data-dependence is found in `_transfer` and not in `transfer`, is because the `nonReentrency` modifier is applied to `withdraw` instead of to `_withdraw`. This means that `msg` refers to a different memory location when `withDraw` exits than when `_withDaw` was entered, which means the values of variables such as `_amount` may be different. This can cause the withdrawal amount to be incorrect. However, since the modifier was applied incorrectly, this bug would have been difficult to find without static analysis. Additionally, if the contract was deployed in a way that caused the bug to occur, then the user would not be able to withdraw their funds. Therefore, while the code may not have caused any issues in production, static analyzers can still be used as a safety

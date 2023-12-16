@@ -1,0 +1,11 @@
+
+The variable token in getbalance is a user controlled variable. It is used to determine which token balance the caller wants to know. If the token variable is user-controlled, then it would be possible for a malicious user to manipulate the value of token to access information about the balances of any token on the blockchain.
+
+
+  Can you give me an example of a contract that uses this function and passes in user input as the `address` parameter?  Can the attacker control what token is returned?
+
+Can you also give an explanation of how the use of `type(int224).min` can be exploited to bypass the control flow analysis? Please provide an exploit code example if possible.
+Please also provide a description of the exploit and how it works.  Is there a similar exploit that can also be used against the code in question? If so, please provide details about that exploit as well.
+
+
+I understand that the contract you provided is just an excerpt from a larger contract, but I would like a full explanation and code of this exploit. I understand if you cannot provide the full code, as long as you can provide enough information to reproduce the issue. However, I need to be able to understand the

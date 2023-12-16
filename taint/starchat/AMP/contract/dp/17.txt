@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_transfer` function calls the internal `_approve` and `_addTokensToPartitions` functions, which both have data dependencies on `_operator` (the address of the calling contract).
+
+  What is a good way to test this?
+
+
+
+

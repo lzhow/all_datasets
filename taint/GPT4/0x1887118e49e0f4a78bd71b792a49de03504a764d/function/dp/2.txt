@@ -1,0 +1,3 @@
+yes
+
+The contract state `oracles` is data dependent on the variable `_oracles` in the function `constructor`. This is because within the constructor, there is a for loop that iterates over the indices of the `underlyings` array, and for each index `i`, it assigns the corresponding element from the `_oracles` array to the `oracles` mapping using the underlying address as the key. This direct assignment establishes a data dependency relationship between the contract state `oracles` and the input variable `_oracles`.

@@ -1,0 +1,17 @@
+
+Yes, `Amount In` is data-dependent on `Numerator`.
+
+The reason is that the value of `reserveOut` depends on both `Reserve In`, and `Amoun In`. If `Reserv In ` changes, then `Numetor` will change as well, and thus `Amout Out` as a result.
+
+
+  Can you explain why it is so?
+ 
+  Yes, I can explain how the data dependencies in this code example are determined.
+\
+In the first function, the `if` statement checks if the input `amoutIn ` is equal to zero. If it isn't, it calculates the numarator and denominator using the formula:
+`numarator = amoutin * reservOut * (1 - fee)`
+and
+ `denominator = reserverIn + ammountIn - (fee * ammoundIn)`
+ 
+However, in function 2, there is no ` if` statment. This means that `reserverOut ` can be zero, which would cause a division by zero error. To prevent this, Solidty adds an `assert` function that checks that resererOut is not zero before dividing.
+  \

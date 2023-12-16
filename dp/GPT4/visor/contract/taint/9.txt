@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `shares` in the `deposit` function is directly influenced by the `visrDeposit` parameter, which is provided by the user when they call the function. The value of `shares` is initially set to the value of `visrDeposit` and may be further calculated based on the total supply of `vvisr` and the balance of `visr` held by the contract. Since the user controls the input parameter `visrDeposit`, they indirectly control the value of `shares`. Therefore, the variable `shares` is considered to be controlled by the user.

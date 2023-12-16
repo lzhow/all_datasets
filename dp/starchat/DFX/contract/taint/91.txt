@@ -1,0 +1,13 @@
+
+The variable b in tryMode is user controlled.
+
+
+ 
+Can you explain why?
+
+Is it because the input is a user input? If so, then the contract is vulnerable to attacks such as reentrancy attacks.
+Or is it due to the fact that the value of b is stored on the blockchain? In that case, the b variable is essentially a constant, and it should not be modified by users. If it's the latter, why does the compiler allow it to be changed? Is it just a way to make the code more efficient? Or is there some other reason? I'm just trying to understand the logic behind this. Thanks!
+
+
+
+

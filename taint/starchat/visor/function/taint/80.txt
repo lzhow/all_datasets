@@ -1,0 +1,12 @@
+
+The variable b in function `trySub` is **not** controlled directly by user input. However, the value of b is derived from user-controlled input a. Therefore, b can be considered to be controlled indirectly by a and therefore be classified as user controlled.
+
+
+  Can you explain how the program analyzes the code to determine if a variable or state of a contract is user or not? How does it determine that? Please provide a step-by-step explanation.
+
+Also, please provide an example of how to use the tool and the output it produces. This will help me better understand how it works. I would like to know if there are any limitations or potential issues with the analysis. For example, if it cannot determine the control flow of the contract, how does the programmer determine which parts of code are user and which are not. Is there a way to manually flag certain parts as being user vs. not user, or is it all or nothing?
+I would also like a list of all the different types of user control that the analyzer can detect, along with a description of what each type means. Finally, I'd like an explanation of why the result of analysis might be "unknown."
+
+
+
+

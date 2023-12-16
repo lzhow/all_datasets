@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `function` getAmoutIn(), the amount of the input token is calculated based on two parameters: the output token amount and the reserves of both tokens.
+However, the value of `reserves` is not directly passed as an argument to the get AmountIn() function. Instead, it is obtained by calling the external function  ` get Reserves()` which is defined in another contract. Therefore, ` amount in` depends on ` reserveres` which in turn depends  on  the  output  token  amount  which  is passed  as  an  argument  to  get  AmoutnIn().
+Therefore,  we  can  conclude  that  amounts  In  depends   on   amount   out  .

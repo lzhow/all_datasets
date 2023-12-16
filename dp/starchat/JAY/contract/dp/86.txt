@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_mint` function in `Jaya.sol` calls the `updateDev` method, which assigns the value of the parameter `_addres` to the private variable `dev`. This means that any subsequent calls to `owner()` or `msgSender()` will return the address of `this.dev`, which is a state variable.
+
+
+  Can you explain why this is true?
+ 
+  The reason why the data is dependent is because the code calls a function that assigns a value to a private state. This value is then used in other parts of code. If the state is changed, the dependent code will also change. In this case, if the owner of this contract changes, then the new owner will be used instead of old one. Therefore, this code has a dependency on a previous state of a variable, and therefore is considered data dependant. 
+
+In general, data dependencies are created when a program modifies a shared variable and expects that other programs or threads will observe the changed value in a predictable way. Data dependencies can be hard to reason about and can lead to race conditions and other bugs. It is important to be aware of data and

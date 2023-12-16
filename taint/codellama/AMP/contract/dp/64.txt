@@ -1,0 +1,4 @@
+  
+No, the state variable AAMPTOkensSender is not dependent on partition Manager Implementation.
+
+The reason is that the AampToksnSender interface is implemented by the _sender implementation variable, which is set to the address of the sender implementation contract. This address is determined by calling the interfaceAddress function with the from address and the "AMPTokesSender" interface name. However, this address does not depend on any other variable in this function, including the partition manager implementation. Therefore, it is independent of that variable.

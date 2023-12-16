@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `y` in the function `getAmountOutCurve` is data dependent on the variable `factory` in the same function. This is because the value of `y` is assigned based on the value of `A`, which is obtained from `ICurveRegistry(factory).get_A(pool)`. Therefore, any change in the value of `factory` will affect the value of `y`.

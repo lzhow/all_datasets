@@ -1,0 +1,5 @@
+  
+No, the `share` variable in `depost` is data-dependent on `strategCandiate.implemenation` and not on `_implementaion` of `propseStrate`.
+
+The reason is that `Shares ` is calculated based on  `bal` which is a local variable and is only dependent on`_pool` , which in turn is dependent only on balance of the contract.
+`strateCadidate`is a global variable that is updated in`proposStrateg` but it is never used in calculating the value of`sharess`

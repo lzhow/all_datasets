@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_token` in the function `giveAlphaToAlToken` is an argument passed to the function when it is called. Since external entities, which include users, can call this function and pass any `ERC20` token address as the `_token` argument, the variable `_token` is controlled by the user.

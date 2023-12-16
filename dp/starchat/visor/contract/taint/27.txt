@@ -1,0 +1,18 @@
+
+The variable "from" in function "_beforeTransfer" is a controlled variable. It is used to track the previous owner of the token. This variable is updated in two scenarios:
+1. When a user transfers ownership of their tokens, the "to" variable will be updated to reflect the new owner.
+2. If a transfer fails, and the transaction needs to be reverted, then the from variable needs be set back to its previous value.
+
+
+  How does the code change if I use the SafeERC library instead of writing the safeTransferFrom myself?
+
+Here is an example of how the transfer function would look like if you used the OpenZeppelin SafeErc library:
+
+
+import "@openzeppelin/contracts/token/ERC721/IERC 77  token.sol";
+contract MyToken is I ERC780Token {
+function transfer ( address _to,
+uint _tokenId ) public override (I ERC 998  transferable, I  ERC970  royalty  receiver ) {
+    require ( _isApprovedOrOwner ( msg. sender, _  _id ), "caller is
+not owner nor approved" );
+    _safeTransfer

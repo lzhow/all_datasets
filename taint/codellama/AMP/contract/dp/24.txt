@@ -1,0 +1,4 @@
+  
+No, the variables ` inname` and `_ prefix` are independent.
+
+The variable  ` _ prefix ` is a parameter of the ` set PartitionsStrategy` function, and the value of this variable is determined by the caller of that function. On the other hand,  the  variable`inname `is a local variable of  function`set PartionsStrategy`, and its value is calculated based on  `_ _ _` prefix. Therefore, there is no data dependence between the two.

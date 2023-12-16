@@ -1,0 +1,7 @@
+
+The variable `baseBorowRate` in `getBaseBorrowrate` is **not** controlled directly by a user, but rather is calculated based on other variables in that function.
+
+To determine the base borrow rate, the contract first calculates the utilisation rate. This is done by dividing the total borrows by total liquidity. If the calculated utiliation rate is greater than 80%, the excess utiliastion rate (i.e. the difference between the  utilitation rate and  the optimal utilitaion) is divided by 20% to get the ratio of excess rate to optimal rate:
+`exessUtilizationRatio= (calculatedUtilization - OPTIMAl_UTILIZATION) / EXCES_ UTILIZATIO`
+Then the final base rate for borrowing is equal to the sum of the slope1 and slope2 multiplied by this ratio:  `finalBaseRate= baseRate + slope_1 + (slope_2* excessUtilisationRatio)`
+If the calculation utilitization rate  is less than or equal  to 79%, then the the rate slope  multipled by utilitzation rate divided  by optimal  rate gives the result: `rate= slope

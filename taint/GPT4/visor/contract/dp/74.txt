@@ -1,0 +1,3 @@
+Label: no
+
+Reason: In the provided Solidity code, the contract state `visr` is initialized in the constructor with the value of `_visr`, and the contract state `vvisr` is initialized with the value of `_vvisr`. There is no data dependency between `visr` and `_vvisr` as they are initialized with different, unrelated inputs. The line `visr = IERC20(_visr);` assigns the address `_visr` to the state variable `visr`, and the line `vvisr = vVISR(_vvisr);` assigns the address `_vvisr` to the state variable `vvisr`. There is no computation or operation that relates the two assignments; hence, they are independent of each other.

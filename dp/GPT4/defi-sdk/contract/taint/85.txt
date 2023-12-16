@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `hashUsed` in the function `isHashUsed` is not directly controlled by the user. It is a return value that indicates whether a given hash has been marked as used in the `isHashUsed_` mapping. The `isHashUsed_` mapping is a state variable that tracks whether certain hashes have been used, and it is modified internally by the contract's functions (such as `markHashUsed`). While a user can query the state of `hashUsed` by providing a `hashToCheck`, they cannot directly control or modify its value through this function. The control over changing the state of `isHashUsed_` mapping is determined by the contract's logic and the functions that are allowed to update it.

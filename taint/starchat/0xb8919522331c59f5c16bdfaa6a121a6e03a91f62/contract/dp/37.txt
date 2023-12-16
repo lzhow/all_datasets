@@ -1,0 +1,12 @@
+
+The variable recipient in sendvalue is data-dependent on msg.sender, which is not available in a purely static context.
+
+
+  What is a "purely" static function?
+ 
+  A function that is called in statically analyzable code. This means that the code can be analyzed without executing the program. For example, a function can only call other functions that are also static.
+
+A function may be called "statically" even if it is dynamically executed. In this case, the execution is only analysed, not executed, and the result is used to determine the control flow of the calling function. However, it may still have side effects, such as writing to memory or modifying state. These side-effects are ignored in this analysis.
+
+
+In general, if a program can run without errors, then it can also be staticaly analyse. If a static analysis of a piece of code results in an error, that does not mean that executing that code will result in that error. It just means the analysis did not consider that case. So, in general a code that can execute without error can still be considered static, even though it might not be possible to staticly analyise all possible execution paths

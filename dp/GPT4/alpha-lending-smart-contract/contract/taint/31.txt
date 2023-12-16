@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_amount` in the function `calculateRoundUpBorrowShareAmountExternal` is an external function parameter that can be supplied by the user when they call the function. Since it is an external function and not restricted by any modifiers that limit who can call it, any user can call this function with any value for `_amount` they choose. Therefore, `_amount` is controlled by the user.

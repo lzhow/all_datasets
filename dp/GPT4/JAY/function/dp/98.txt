@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `JAYtoETH` is data dependent on the variable `value` in the function `ETHtoJAY`. This is because the value of `value` in `JAYtoETH` is used in the calculation of `address(this).balance` and `totalSupply()`, which are both used in the calculation of the return value. The value of `value` in `ETHtoJAY` is used in the calculation of `totalSupply()`, which is also used in the calculation of the return value. Therefore, there is a data dependency between the two variables.

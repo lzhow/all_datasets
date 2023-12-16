@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `blockDelta` in the function `finishInterestAccrual` is used as an input parameter to calculate the variable `borrowIndexNew`. The value of `borrowIndexNew` is then assigned to the variable `borrowIndex` in the `accrueInterest` function. Therefore, there is a data dependency relationship between the variable `blockDelta` in the `finishInterestAccrual` function and the variable `borrowIndex` in the `accrueInterest` function.

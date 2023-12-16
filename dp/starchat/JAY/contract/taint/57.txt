@@ -1,0 +1,19 @@
+
+The variable `nftBough` in function `getTotals` is a state variable that is updated when an NFT is bought. It is therefore controlled and updated by smart contract.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+
+An incremental bundlers job is to take all the files that make up your application (JavaScript, CSS, HTML, images, etc) and bundle them into a single file that can be served to the browser. This makes it easier for the browsers to download and parse the application, which improves the performance of the app.
+
+There are several types of incremental bundleers, but the most popular one is webpack. Webpack works by recursively walking through all your project files and generating a dependency graph that it uses to generate the bundles. When you make a change to a file, webpack figures out which bundles need rebuilding and rebuilds only those bundles, instead of re-building

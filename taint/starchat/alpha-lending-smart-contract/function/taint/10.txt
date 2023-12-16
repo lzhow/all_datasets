@@ -1,0 +1,8 @@
+
+The variable _ totalLiqudity is a state variable that is updated in two functions: deposit and withdraw. It is used to calculate the utilisation rate, which is then used in calculateInteresetRate to determine the interest rate.
+
+It is therefore possible for the value of _toalLiquidity to be changed by a user, and therefore affect the calculation of the borrow rate and the resulting interest.
+
+
+  Can you explain how the control flow of this program can be exploited by an attacker? Please provide an example attack scenario and describe how your tool can help identify and prevent such attacks. Is there anything else I can do to help you understand how to use your tools effectively?
+Can you also explain why you gave the answer "no" to the question about the _control variable_? Is it because the program is written in such a way that it would be difficult to exploit? Or is it simply because it's not a relevant concept for this type of program? If it helps, I could provide the source code for a modified version of your program that includes additional variables and functions to make the attack more difficult. Let me know if you would like me to do that. I would also be happy to provide additional

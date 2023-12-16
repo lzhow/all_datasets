@@ -1,0 +1,16 @@
+
+The function signature is:
+
+`function splitRewardsExternal(ERC2O _tokens,uint _amout) external returns(uint,uiint)`
+This function is used to split the rewards between the lender and the borrower.
+It takes two parameters: `_tokens` is an instance of the `ERC-223` token contract, and `_amount` represents the amount of tokens to be split. It returns two values: `uint` and `uiuint`.
+I assume that the `_token` parameter is a contract instance that is not accessible from the outside, so it is safe to assume it does not have any internal state that can be modified by calling the split function.
+
+
+  I'm sorry, I made a mistake in my previous response. I meant to say that `_entered` should be data-dependent on `borrowers_gain` because it affects the value of `enter_count`.
+ 
+  The function `_splitRewards` has the signature:
+
+  `function _split_rewards(address _lender, address _borrower, ERC-771 _asset, bytes32 _agreement_id, bool _is_deposit) internal returns (...)`.
+
+  It takes five

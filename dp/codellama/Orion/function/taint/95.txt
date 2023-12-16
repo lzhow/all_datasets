@@ -1,0 +1,5 @@
+  
+The variable 'success' in function 'sendValue' is labeled as 'Unknown'.
+
+This is because the value of 'sucess' depends on the result of the call made to the recipients address. This call is made using the 'call' function, which is a low level function that allows the contract to interact with other contracts.
+  The result returned by this call can be either 'true' or 'false', depending on whether the interaction was successful or not. However, the success of this interaction is ultimately determined by whether or the target contract accepts the transfer of value. If the transaction is successful, then the return value will be 'True', otherwise it will return 'False'.  Therefore, whether 'Success' will have a value or will not be controlled directly by user input.

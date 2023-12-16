@@ -1,0 +1,4 @@
+  
+No, the ` accruilBlocknumber` variable in this function is NOT controlled  by user because it's a local variable and it doesn't have any user input.
+
+The `mantle` function in `CEthDelegate` contract is a public function that allows users to mint new tokens. It takes in a `uint24` parameter called `amount` which is used to calculate the amount of tokens to be minted. However, this amount is calculated using the current exchange rate and the total supply of the token, which are both controlled variables. Therefore, ` amount` is also controlled and not user-controlled. 

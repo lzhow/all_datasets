@@ -1,0 +1,13 @@
+
+The contract function '_toggleAutImplementaions' is a modifier that is used to enable or disable the automatic implementation of certain functions in a smart contract. This function is called by the admin of the smart contracts and is only accessible if the caller has the appropriate permissions.
+
+In the '_toogleAutoImplementation' function, the 'enabled' variable is set to the value of 'autoImplementaiton'. The 'hasAdmingRights' modifier is then called to check if calling the functon has been authorized by an admin. If the call is not authorized, an error is returned. 
+
+If the check passes, then the autoImplemention variable in set the the new value 'enbled'. An event is emitted to indicate that the state of autoImplemenation has changed. Finally, a uint value is retured to indiacte that there was no error.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is designed to optimize the delivery of web pages by reducing the number of requests made to a server for a given page. It does this by bundlung together all the files that are required to render a page, including scripts

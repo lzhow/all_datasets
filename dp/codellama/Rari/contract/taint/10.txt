@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `mul` function, the value of `a` is passed as an argument to the contract, and the code does not modify it. Therefore, `b` and `errorMessage` are the only variables that can be controlled directly by a user, but the values of these variables are not used to determine the result of the multiplication.
+Therefore, we cannot determine whether the output of this function is under the control of a single user or not.

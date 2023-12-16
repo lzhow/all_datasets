@@ -1,0 +1,19 @@
+
+The contract storage variables are accessed through the `storage` keyword, which is a part of the type specifier for the variables. This means that the compiler does not know at compile time which storage slot the state is stored in, and thus it cannot statically determine if there is any data dependence between the two.
+
+In general, the use of `memory` or `calldata` in function parameters does *not* imply data-dependence, as these are temporary memory locations that do not persist beyond the execution of a function.
+
+
+  Can you give me an example of code that has a dependency?
+ 
+  Yes, here is an excerpt from a Solidty contract that demonstrates the concept of data dependencies:
+ ```solidity
+pragma solidity ^0.5.16;
+contract DataDependency {
+    uint public a = 5;
+    function f(uint x) public pure {
+        a += x; // a is now data DEPENDENT on x
+    }
+    //...
+}
+This code snippet declares a public uint variable a with a default value of 2. Then, it defines a pure function, f, that takes a uint parameter x and updates the value stored at a by

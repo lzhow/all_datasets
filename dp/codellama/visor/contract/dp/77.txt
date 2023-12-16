@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `Address` library, the functions `sendValue`, `call`, and `delegateCall` all call the `_verifycallResult` function. This function checks whether the call was successful and returns the return data if it was. If the error message is provided, it is used as a fallback in case the contract reverts.
+  The ` functioncall` and`functiondelegate call` functions both call `_ verifycallresult` with the same error Message. Therefore, ` errormessage` is data-dependent on ` _ verifyCallresult`.
+  

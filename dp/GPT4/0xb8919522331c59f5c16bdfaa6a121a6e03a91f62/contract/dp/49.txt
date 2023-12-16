@@ -1,0 +1,3 @@
+yes
+
+In the Solidity code provided, the variable `target` in the function `functionCallWithValue` is data dependent on the variable `success` in the same function. This is because the value of `success` is determined by the outcome of the `call` operation, which is directly influenced by the address held in `target`. The `call` operation is executed with `target.call{ value: value }(data)`, and the success of this call sets the `success` variable. If `target` is not a contract or the call fails for some other reason, `success` will be `false`, and if the call succeeds, `success` will be `true`. Therefore, there is a data dependency relationship between `target` and `success` as the value of `success` depends on the address referred to by `target`.

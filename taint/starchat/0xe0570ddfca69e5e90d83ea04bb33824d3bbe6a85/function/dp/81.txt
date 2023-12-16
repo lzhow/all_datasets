@@ -1,0 +1,12 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates the amount of want that should be withdrawn based on how much of the total supply is being withdraw.
+
+It does this by dividing the balance of all the shares times the number of shares being withdrew by the entire totalSupply. This is stored in r as a unit22. Then it burns the sender's shares. 
+
+Next, it calculates how many units of Want are currently in this contract. If this number is less than the calculated amount that needs to be withrawn, then it calls the withdraw function of strategy contract with the difference between the two. (This is to make sure that the strategy has enough WANT to withdraw)
+After this, the want contract is called to get the current balance. And then the new balance is subtracted by b, which is how ever many Wants were in there before.  If the result of this subtraction is negative, this means that there are more Wanted than what was previously in here, so the r value is set to the value of b plus the absolute value.
+
+
+ 
+ 
+   What is a good way to learn how to code in

@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the `_origin` and `_target` fields of the `Targetswapdata` struct are used to index into the curve's `assmilitators` mapping, which is a state variable. This mapping is updated by the two calls to `getOriginandTarget`, which are executed before the call to either `originSwap` or `viewOriginswap`.
+So, the data dependence is introduced by these two function calls.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `_assi` variable is used as a key to the mapping `curve -> assimilitator`. The mapping itself is not modified, but the value of `_asim` is modified by `Assi.ViewNumerireBalanace`.
+  
+ 

@@ -1,0 +1,15 @@
+
+The contract function ```upgrade``` calls the internal function `_upgrade` which assigns the value of the ```newImplemenation``` parameter to the storage slot ```_IMPLEMENTAION_SLOT```. This means that the state variable ```implementation``` is now data-dependent on ``` newImplemetation```, and any function or modifier that accesses ``` implementation``` will now be affected by the change.
+
+
+  Can you give me a list of all the functions and modifiers that will be affeced by this change?
+ 
+  Yes, here is a complete list:
+
+- ``` _setImplementation ``` in ``` Proxy ``` contract
+ - ``` upgrade ``` function in Proxy contract.
+This function calls ``` setImplementation``` and ``` initialize``` functions. 
+
+In ```Proxy``` contract, ```initialize``` function is called by ```setImpelementation ```. ```Initialize``` sets the initial value for the implementation variable.  ```Upgrade```  function sets ```initialValue``` to ```0``` in order to prevent reentrancy attack.
+
+ - All the modifiers and functions that access ``` implemenatation variable``` such as ```onlyProxyOwner``` modifier in  Proxy.sol contract and  all functions in implementation contract such ```update

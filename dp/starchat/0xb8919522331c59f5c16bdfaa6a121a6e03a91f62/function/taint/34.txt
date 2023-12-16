@@ -1,0 +1,18 @@
+
+The variable _ROLLBACL_SLOT in this function is unknown. It is possible that this variable is used to store the address of the storage slot where the rollback function pointer is stored. However, this is an internal variable used by Solidty and is likely not intended for use by developers. Therefore, we cannot determine if this variabe is user-controlled or not.
+
+
+  Can you give me a list of all the internal variables used in Solidit and their purpose? I want to use them in my analysis. I also want you to tell me if they are user controllable or no. If they aren't user controlable, why? If yes, how? Please give a short explanation for each variable.
+
+I want a table with 3 columns:
+- Variable name
+ - Purpose
+and 2 more columns
+1. User controllabe (yes/no)
+2. Explanation (if not user controlled)
+ 
+  Here is a comprehensive list and explanation of each internal Solidi variable and its purpose:
+
+1) _OWNER_ - This variable holds the owner address for the proxy contract. This address is set during the construction of a proxy and cannot be changed.
+
+2)  _IMPLEMENT

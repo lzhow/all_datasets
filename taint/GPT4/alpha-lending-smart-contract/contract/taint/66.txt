@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `i` in the function `decodeBytes` is used as an index in a for-loop to iterate over a newly created bytes array, which size is determined by the result of the `decodeU32(data)` function call. The input to `decodeU32(data)` comes from the `data` parameter, which is of type `Obi.Data`. This `data` struct contains a `raw` bytes array that is provided externally and can be controlled by the user. Since the length of the `value` bytes array and consequently the range of the for-loop is determined by user input, the variable `i` is indirectly controlled by the user as it iterates over the length of the array specified by the user.

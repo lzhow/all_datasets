@@ -1,0 +1,5 @@
+  
+No.
+
+The variable `amount` is not directly dependent on `_value` or `_allowedValueByTokenHolder` because it is assigned a value of `swap.token.balOf(_owner)` and `allowancesByOwner[_owner]` is never modified in `transerFrom`.
+Therefore, the value stored in `_balancedByHolder[_holder]` and `_allowancedValue[_spende]` are never changed, and the data dependencies between the two functions are broken.

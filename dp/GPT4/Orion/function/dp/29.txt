@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `liquidity` in the function `addLiquidityFromExchange` is data dependent on the variable `tokenB` in the same function because the value of `tokenB` is used as an argument in the `mint` function of the `IOrionPoolV2Pair` contract, which determines the value of `liquidity`.

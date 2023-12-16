@@ -1,0 +1,4 @@
+  
+No, the `timestamp` variable in function `getLatstPrice` is NOT controlled  by user because it's a public variable that is set by a third-party oracle.
+
+The `priceFeed` contract is an external contract that provides the latest price of the asset. It is used to get the current price in `USDC` and convert it to `JPY`. The `latestPriceData` function is called to retrieve the price data from the oracle, and the timestamp is obtained from this function. Therefore, `timestmap` in this case is a variable controlled externally and not by any user input.

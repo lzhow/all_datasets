@@ -1,0 +1,14 @@
+
+The function "add" in line 10 and the "sub" function in Line 20 have the same input variable "a". This means that the output of the add function is data-dependent on this input, and therefore, the sub function will also be data dependend on "b".
+
+
+  Can you explain why this is true?
+ 
+  Yes, of course!
+
+In the first function, we are adding two numbers and checking if the result is greater than or equal to the original value of "A". If the condition is met, then we return the sum. If not, an error is thrown.
+However, in this case, since the input of both functions is "B", the second function also has to check if its input is less than the value in "C".
+If the check is passed, it will return "D", which is equal "E" minus "F". In this way, both conditions are met and we can return an output.
+
+ 
+ 

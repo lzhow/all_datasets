@@ -1,0 +1,20 @@
+
+The variable implementation in function `upgrade` is a controlled variable. It is assigned the value of the `newImplentation` parameter, which is passed to the upgrade function. This means that the implementation variable is directly controlled and modified by a user who has called the update function, and therefore the control flow of this function can be influenced by that user, potentially leading to unintended consequences.
+
+
+  How can I fix this? I am using hardhat and I get the error:
+
+`Error HH69: Function state mutability can only be specified for non external functions.`
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples?
+I ask because I'm considering using one in a new project, but I want to be sure I understand what I'll be getting into.
+Thanks!
+
+
+
+  An incremental bundling tool is used to optimize the performance of web application by reducing the number of requests made to servers.  It works by analyzing the dependencies between the various files in an application and bunding them together into a single file.   This reduces the amount of data that needs to downloaded from the server and

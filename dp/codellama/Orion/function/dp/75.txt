@@ -1,0 +1,4 @@
+  
+No, the variables ` token B` and ` amount AMin ` are independent.
+
+The reason is that the `add LiquidtyFrom Exchange` function does not use the value of `AmountAMIN` directly. Instead, it passes the converted value to the `_AddLiuqidy` internal function. Therefore, any changes to ` AmountAMIn` will not affect the calculation of the liquidty.

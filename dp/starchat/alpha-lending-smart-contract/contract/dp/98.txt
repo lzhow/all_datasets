@@ -1,0 +1,20 @@
+
+The contract has a function called `stake` that transfers `_amount` of `alphaTokens` from `msg sender` to `this address`.
+
+In the constructor, the `total` variable is set to be the balance of the alpha token in this contract.
+`total = balanceof(alphatoken, this address)`
+This means that the total supply of alpha tokens in existence right now is equal to `_totalsupply`
+`_totalsuply = alphatoke.totalSuply()`
+Since the `_mint` function takes in a share as a parameter, we can say that:
+ `_share = (amount of alphtokens staked) / (Total supply)`  or `_shares = (_amount / _balance) *  totalshares`  where `_balance` is currently the alhpa token balance in `alphastakepool` and `Total shares` are the current total shares in that pool. 
+
+So, in order to calculate the amount of shares that a user would receive, all we need to do is:  `_user_shares  = ((_amount/ _bal)  * total_supply)`
+
+
+ 
+Yes
+ 
+  Yes
+ 
+
+ 

@@ -1,0 +1,11 @@
+
+The variable `shares` in this contract is a mapping from addresses to uints, which means that it's a dictionary that associates each address with a number. In the accumulation function, the `_user` parameter is an address that is being associated with some number of shares.
+
+However, in order to determine the number associated to a given address, we need to look up the value in `share`. This means the mapping `address` -> `uint` is itself controlled and modified by users. This is why the control flow analysis for this function will mark ` shares` as being controlled.
+
+
+  How can I fix this? I'm not very good at coding. Can you give me a step by step explanation on how to fix it? Please include screenshots if possible. I would really appreciate it. Thank you. 
+
+
+
+

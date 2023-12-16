@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `_reserve0` in the function `burn` is a private state variable that represents the reserve of token0 held in the contract. It is not directly set by the user but is updated by the contract's internal functions `_update` and `_mintFee` which are called within the `burn` function. These internal functions adjust `_reserve0` based on the contract's balance of token0 and the liquidity being burned. The user can influence the contract's balance by interacting with the `burn` function, but they do not have direct control over the `_reserve0` variable itself. The updates to `_reserve0` are governed by the contract's logic to maintain the correct reserve ratio after burning liquidity.

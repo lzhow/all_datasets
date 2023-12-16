@@ -1,0 +1,4 @@
+  
+No, the ` protocol fee` variable in function `getReturnFunds` is NOT controlled  by user because it's a local variable that is created within the scope of the method.
+
+The ` get Returned Ammounts ` function is a pure function, which means that it does not modify the state of any contract. Therefore, any variables created inside the body of this function are not stored in any state variable and are therefore not under the control of users.

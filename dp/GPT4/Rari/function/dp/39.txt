@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `marketBorrowIndex` in the function `updateCompBorrowIndex` is data dependent on the variable `borrowIndex` in the function `flywheelPreBorrowerAction`. This is because the `updateCompBorrowIndex` function is called with `borrowIndex` as an argument, indicating that the value of `borrowIndex` is used in the execution of `updateCompBorrowIndex`. Therefore, there is a data dependency relationship between these two variables.

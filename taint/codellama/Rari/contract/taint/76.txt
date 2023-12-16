@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `mul` function, the first argument `a` is a public variable that is set in a constructor. It is initialized with a value that the contract owner can set, but it cannot be changed by any other user after it has been set. Therefore, ` a` cannot controlled directly by a user, and its value is determined by an external factor.
+On the other hand,  the second argument  `b`  is also a  public  variable  that  can  be  set  by  an  external  user  through  a call  to  function  transfer  from  another  contract.  Therefore  it  cannot  controlled  directly  and  its  value  may  change  over  time.   Therefore the  label  for  this  argument is unknown.

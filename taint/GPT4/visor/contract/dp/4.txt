@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `size` in the function `isContract` is used to store the code size of the address `account` to determine if the address is a contract. This is done by using inline assembly to call `extcodesize(account)`, which is independent of any other function's variables.
+
+On the other hand, the variable `target` in the function `functionDelegateCall` is used as the address on which the delegate call will be performed. It is used to ensure that the address is a contract and to perform the actual delegate call with the provided `data`.
+
+There is no direct data flow or dependency between `size` and `target` as they are used in separate functions for different purposes and do not share state or influence each other's values. Each function's variables are scoped to that function and do not interact unless passed as arguments or accessed via state variables, which is not the case here.

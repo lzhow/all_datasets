@@ -1,0 +1,13 @@
+
+Yes, `interesAccumulado` is data-dependent on `repaymentAmount`. This is because the value of `accumulatedInterest` depends on how much the borrowers have repaid, which in turn depends directly on their net worth.
+
+
+  How does the compiler know that `acccualInterest ` is dependent on  ` actualRepayment `?
+ 
+  The compiler does not know this information, but it can be inferred from the code. Specifically, the `require` statements in `liqudateBorrow` function ensure that the values of the variables `borrowersNetWorth` and `totalBorrrowBalance` are the same before and after the call to `repyAmount`, which means that these variables are dependent upon each other. Similarly, in function` accruedInterest`, the require statement ensures that all the other variables in that function are unchanged before the assignment to the local variable` accumulatedInterest`.
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on to more complex projects. I have heard that there are many free coding courses available online, however I do

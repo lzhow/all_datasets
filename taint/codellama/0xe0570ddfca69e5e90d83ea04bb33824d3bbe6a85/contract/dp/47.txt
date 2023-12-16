@@ -1,0 +1,4 @@
+  
+No, the `_status` variable is data-dependent on `_msg` because it is used in a `require` statement to check if the reentrance guard is in an unlocked state.
+
+The reason is that the `nonReentry` modifer is applied to `withDraw` and `earn` functions, which are called in `beforeDepsit` function. Therefore, when `depose` is called, it will check the status of the guard, and if it's not in unlock state, then it won't allow the depositing. 

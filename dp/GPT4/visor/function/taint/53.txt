@@ -1,0 +1,2 @@
+  
+The variable 'success' in function staticCall() is labeled as 'Unknown'. The reason is that the value of 'sucess' is determined by a low level call, which is a function call that is made directly to the contract's code. This call is executed by Solidiy and is therefore not under the control of the end user, who is only able to interact with the smart contract through its public interface. Therefore, the outcome of this call cannot be predicted by an end-user and the 'Success' variable is considered to be unknown.

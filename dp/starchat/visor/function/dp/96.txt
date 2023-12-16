@@ -1,0 +1,11 @@
+
+The function mod has two parameters: a and b. It also has a string parameter errorMessage.
+
+In the first line of the mul function, the value of a is checked to be non-zero. If a = 1, then the result of b * a will be 2. However, if a=0 then b*a will also be zero. Therefore, it is not possible to determine whether the multiplication will overflow or not. This means that the data dependence relationship between a, b and the return value c is unknown.
+
+
+  I'm sorry, I made a mistake. I meant to say that `a` is data-dependent on `c` in `mul`.
+  
+  The function "mul" has three parameters, a uint  and two uints.  It is possible that a parameter is dependent on two other parameters. In this case, we can say the parameters are dependent, but we cannot say for sure that they will always be dependent or that there is a relationship at all. For example, in this function the parameter "a" is only dependent upon the other two. We cannot determine if the relationship is direct or indirect. 
+
+If we were to analyze this code further, there

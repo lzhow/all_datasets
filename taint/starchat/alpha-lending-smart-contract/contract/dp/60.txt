@@ -1,0 +1,13 @@
+
+The contract constructor does not have any parameters, so there is no data-dependence relationship between the `_entered` state and the `altokenDeploy` variable.
+
+
+ 
+I'm sorry, I made a mistake. I meant to say that the constructor has a parameter `Altokendeployer`.
+ 
+  The constructor of the Mock LendinPool Light contract has no parameters. Therefore, there cannot be a dependency between `_entred` and `_AltokeDeploy`.
+
+However, the parameter `_token` is used in two functions: `setPool`and `giveAlphaToken`. These functions are called by the owner of this contract, and therefore, it is possible that these functions could be called with a different token than the one used to deploy the LenderPool contract. In this case, `_pool` would be dependent on `_toekn`. However, this is not the case.
+`_token`, `_user`, and`_amount` are all used as parameters in functions that are only called internally, therefore they do not affect the state of `_Pool`. Therefore there can be no dependency. 
+
+In conclusion, no, `entere` does is data depend on `token`. The reason is

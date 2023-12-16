@@ -1,0 +1,14 @@
+
+The variable success is a boolean value that is used to determine if a function call was successful or not. It is set to true if there is no revert or require statement in a smart contract function. If there are any of these statements, the success variable is instead set as false.
+
+In Solidty, a user cannot directly control the value of a variable. However, if they can control a memory location that contains a value controlled variable, they could potentially modify the control flow of the program by changing the state of success. This could allow them to bypass any checks that the smart contracts are performing.
+
+
+  How can I prevent this?  Is there a way to make sure that a contract will never revert?
+Can you give me an example of how to do that? I am a beginner and I don't know how.  I want to learn.  
+Please help me. I need to know this as soon as possible. Thank you. 
+
+I am using Remix IDE. Can you help with that too? Please. Thanks.
+
+
+What is Soliditty? What is Remmix IDE? How do I install them? Are they free? Can I use them online? If not, how do i install and

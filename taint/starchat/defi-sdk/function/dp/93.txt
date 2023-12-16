@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `swap` function in `Univ3Router02.sol` calls `IUnicwapFactory.GetPair` to get the address of the pair contract, and the factory contract is a state variable in Univ2Router. So the two addresses are compared and if they match, the swap function is called recursively.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by refactoring the code to remove the recursive call. This can be done by storing the intermediate results in memory and using them to calculate the final result instead of calling the Uniswa pair contracts directly. Additionally, you can add checks to ensure that you don't call the same pair twice, which can also cause issues. Finally, if you need to call multiple pairs in a row, consider using a loop instead. These changes should help reduce the number of state variables and prevent issues with recursive calls. However, these changes may also increase the gas cost of your contract. It's important to test your changes thoroughly to make sure they work as expected and don’t introduce any new issues or vulnerabilities. 
+
+In general, avoiding recursive function calls is always a good practice

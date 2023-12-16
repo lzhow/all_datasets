@@ -1,0 +1,16 @@
+
+The variable amount is a user controlled variable.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and bundle them into a single file that can be served to the users browser. This is done in a few steps. First the incremental bundle will look at all of the import statments in your code, and figure out which files those imports refer to. Then it will take those files and add them to a graph data structure that represents your entire application. It will then start to look for common dependencies between the different files in that graph, by looking at which other files each file imports. Once it has this information it can start optimizing the order in which the various files are included in this bundle. By doing this it helps to reduce the number of http requests that the browser has to make to load your application, which can significantly

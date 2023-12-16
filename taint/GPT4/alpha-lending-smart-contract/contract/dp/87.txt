@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The contract state `startBlock` is used within the function `getReleaseAmount` to determine the `lastBlock`, to adjust the `fromBlock` if it is less than `startBlock`, and within the `findWeekByBlockNumber` and `findNextWeekFirstBlock` functions that are called from `getReleaseAmount`. The value of `startBlock` directly influences the control flow and the calculations within `getReleaseAmount`, establishing a data dependency relationship between `startBlock` and the variable `fromBlock` within the function.

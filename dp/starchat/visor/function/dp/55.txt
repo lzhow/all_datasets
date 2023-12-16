@@ -1,0 +1,17 @@
+
+The function `transferFrom` has a call to `_approve` which has the effect of modifying the `_allowance` state variable. This means that the value of `_amount`, which is passed as an argument to `approve`, is now a state that is dependent on `sender` and `_msgsender`.
+
+However, the call in `transfereFrom`, to transfer `_amout` from `send` to recipient`, does not modify the allowances state. Therefore, it is not dependent upon the `allownace` variable, and so the two are independent.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to determine if there are any data dependencies between variables. It does this by analyzing the flow of data through the program and determining if any variables are used to store the result of computations that depend on other variables in scope.
+\
+For example, in this code:
+def f(x):
+  y = g(h(z))
+  return y
+f(a)
+If the values of z, h(y), and g are all dependent only on x, then the data flow graph for this program would look like this:
+ 

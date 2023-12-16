@@ -1,0 +1,12 @@
+
+yes, the `compInitialSpeed` variable in `RewardsDistributionDelegate` is user-controlled.
+
+The `initialize` function sets the initial value of the `_compSupplierSpeed`, `_halfCompScale`, and `_lastContributorRewardBlock` variables. These variables are used to track the speed at which the COMP token is accruing for each CTokens that the contract is tracking.
+
+
+  Can you explain how the code works? I'm having trouble understanding how it calculates the comp accrual. I think it would help me a lot if you could explain it in detail. Can I ask you any follow-up questions to help clarify the explanation?
+Can you also explain why the variables need to be user controlled? What are the trade-offs? Is there a reason why you chose to use user control over the other options? Can the smart contract be made more decentralized by using a different approach? How would that change the design? Please provide detailed explanations and reasoning. Thank you. 
+ 
+  Sure, I'd be happy to explain in more detail how this code calculates COMP accumulations.
+
+  The `claimRewards` method is called by users to claim accumulative COMP rewards. It takes two

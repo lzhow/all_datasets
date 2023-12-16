@@ -1,0 +1,5 @@
+  
+The variable 'target' in function 'functionDelegatecall' is 'Unknown'.
+
+This is because the 'delegateCall' function in Solidiy is a low level function that allows a contract to call another contract without using the call or send function. It is used to delegate the execution of a function to another address.
+In this case, the target address is passed as a parameter to the delegateCall function, and it can be controlled or not by a user depending on the context in which the contract is being used. If the address of the other contract that is calling the current contract, then it will be under the control of that contract. However, if it's a random address that the developer has hardcoded, or if there is no other address, in that case it would be considered as unknown.

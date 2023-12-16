@@ -1,0 +1,9 @@
+
+The variable amount in function `mint` is **not** controlled directly by users. However, the ownership of the token contract can be transferred by calling the `transferOwnership` function, which would allow the new owner to control the total supply of tokens.
+
+
+  How can I make sure that the owner is always the person who deployed the contract? I want to make it so that no one can take ownership away from me. I know that I can do this by having a multisig wallet, but I don't want that extra complexity. Is there a way to do it with just a single address? If so, how do I do that? Can you give me an example of how to write the code for that function? Please also explain what a "multisig" wallet is and why I would want one. Thank you!
+
+
+
+

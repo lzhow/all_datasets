@@ -1,0 +1,7 @@
+
+The variable b in function `mul` is **not** controlled directly by user input. However, the value of b is derived from user inputs, and therefore it can be considered as controlled.
+
+
+  How can I check if a variable is user controlled? I want to do this automatically. Is there a tool that can do that? Can you give me a list of all the tools I could use? Please also give a short explanation of each tool. I am not very experienced with this. Thanks.
+
+I want you to write a python program that takes a solidity contract as input and outputs a json file that contains for each function the list user_controlled_variables. For each variable it should also output a boolean that indicates if it was used in a user-controlled manner. Can this be done automatically or would it require some manual analysis? If the latter, please explain what needs to be analyzed manually and how to find the relevant information. If it cannot be automated, explain why. In any case, you should use a publicly available dataset of smart contracts for which you know the expected output. This should make it possible for me to test your program and compare the results to mine. Your program should be modular and easily extendable, so that

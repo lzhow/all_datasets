@@ -1,0 +1,12 @@
+
+The variable "xp" in getAmoutInCurver() is a dynamic array that is used to store the balances of each token in a curve pool. It is declared as a local variable in this function and is therefore not accessible to the caller. Therefore, the value of "x" is derived from the state of the curve contract, and it cannot be modified by any user input.
+
+
+  Can you write a program that can prove this?  I want to see how you can use formal methods to prove the correctness of your program.  You can write the proof in Coq or Agda, whichever you are more comfortable with.
+
+If you prefer not to do this, please tell me so, but I will still award you full marks for your help in answering my question. I just want you to know that I appreciate your work.
+
+  If you do decide to write this proof, you may find the Ivy formal verifier useful for this task. Here is an example of how to use IVy to verify the getA() function:
+<ivy-code>
+include math
+type curve = {factory: address, coins: list(nat), balances: map(pos, nat)}

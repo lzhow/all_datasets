@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `target` in the function `functionCallWithValue` is an input parameter to the function. In Solidity, input parameters can be supplied by the user when they call the function. Since `target` is not assigned within the function and its value is determined by the caller of the function, it is controlled by the user.

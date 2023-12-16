@@ -1,0 +1,3 @@
+Yes
+
+The variable `week` in the function `getReleaseAmount` is data dependent on the variable `fromBlock` in the same function. This is because `week` is calculated based on the value of `fromBlock` through the call to `findWeekByBlockNumber(fromBlock)`. The `findWeekByBlockNumber` function takes `_block` as an argument, which is assigned the value of `fromBlock`, and uses it to calculate the week number relative to the `startBlock` and `blockPerWeek`. Therefore, any changes to `fromBlock` will directly affect the value of `week`.

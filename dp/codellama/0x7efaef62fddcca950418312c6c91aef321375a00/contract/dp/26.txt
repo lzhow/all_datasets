@@ -1,0 +1,4 @@
+  
+No, the `total_supply` is data-dependent on `reserves` and `amounts` but not on liquidities.
+
+The `getReserve` function is called in `update` to get the current reserves of the tokens. This function returns the reserver0 and reserve  and the total supply of liquidty.  The `updates` method is then called to update the balance of each token and to calculate the new reservations. However, this function does not use the liquiditity variable. Therefore, it is not dependent on it.

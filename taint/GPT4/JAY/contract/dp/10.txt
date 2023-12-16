@@ -1,0 +1,35 @@
+Yes
+
+The contract state `nftsSold` is data dependent on the variable `amount` in the function `buyJayWithERC1155`. This is because the `amount` variable represents the total number of ERC1155 tokens being bought in the `buyJayWithERC1155` function, and this total is added to the `nftsSold` state variable in the `buyJay` function.
+
+In the `buyJay` function, we see that `total` is initially set to the length of `erc721TokenAddress`, which represents the number of ERC721 tokens being bought. Then, if there are any ERC1155 tokens being bought, the `total` is incremented by the return value of the `buyJayWithERC1155` function call:
+
+```solidity
+if (erc1155TokenAddress.length != 0)
+    total = total.add(buyJayWithERC1155(erc1155TokenAddress, erc1155Ids, erc1155Amounts));
+```
+
+The `buyJayWithERC1155` function calculates the `amount` by summing up the `amounts` array, which represents the quantity of each ERC1155 token being bought:
+
+```solidity
+function buyJayWithERC1155(
+    address[] calldata _tokenAddress,
+    uint256[] calldata ids,
+    uint256[] calldata amounts
+) internal returns (uint256) {
+    uint256 amount = 0;
+    for (uint256 id = 0; id < ids.length; id++) {
+        amount = amount.add(amounts[id]);
+        // ...
+    }
+    return amount;
+}
+```
+
+Finally, the `nftsSold` state variable is incremented by the `total` value, which now includes the `amount` from the `buyJayWithERC1155` function:
+
+```solidity
+nftsSold += total;
+```
+
+Therefore, there is a direct data dependency between the `amount` variable in the `buyJayWithERC1155` function and the `nftsSold` contract state.

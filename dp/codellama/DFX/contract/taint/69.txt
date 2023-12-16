@@ -1,0 +1,4 @@
+  
+No, the `_nbals ` variable in target swap is uncontrolled by user because it's a local variable that is created in a function and is only accessible within that function. It is also not a parameter of the targetswap function, so it cannot be controlled directly by a user input.
+
+The `_oBal` variable is a different story. it can be influenced by external factors such as the balance of other tokens in other contracts, which can make it unpredictable. However, if we assume that the other token balances are not changed by any external factor, then the value of `_obal` can still be determined by internal factors within the contract.

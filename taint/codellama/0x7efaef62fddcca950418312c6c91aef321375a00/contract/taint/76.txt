@@ -1,0 +1,4 @@
+  
+No, the `to` variable in `_safeTranfer` is a function parameter and is therefore not under the control of the contract user, but rather the caller of this function.
+
+The `safeTrasnfer()` function is called by other functions in this contract, such as `maint()`, `burn()`, and `swap()`, which are all public functions that can be called from outside the smart contract. These functions pass the address of a token contract as the first parameter to `safetransfer()`, so the value of `address` in `transfersafe()` is determined by these functions and not by any user input. Therefore, `tokent` cannot be controlled directly by a user and should be considered as an unknown variable.

@@ -1,0 +1,16 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in line 59 of the code, which is called by the `constructor` and `buyNFT` functions, modifies the state variable `totalsupply`.
+This means that any function that reads the value of `toalSupply`, such as the one in `getBuyNayNtf` or `sell`, will be affected by this modification.
+
+
+  Can you explain why this is a problem?
+ 
+  Yes, of course!
+Data dependency is an important concept in computer science, and it helps to understand how different parts of a program interact with each other. In this case, the data dependencies in this program are as follows:
+1. If the price of Jay Pegger's NFTs changes, then the amount of ether required to buy them will change. This means the buyer will have to spend more ether to purchase the NTFs.
+
+2. Similarly, if the ether price changes then it will affect the number of Nayt Peggers Nfts that can be bought. 
+
+In both cases, there is data dependence between the variables `_sellNFTfeeEth` (line 

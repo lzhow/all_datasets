@@ -1,0 +1,18 @@
+
+The contract variable _balance is not directly data-dependent on _Value, but it is indirectly data dependendent.
+
+_Value is used to update the _Balance variable, which is then used in other calculations. Therefore, it can be inferred that _Balances is datadependent.
+
+
+  How can I check if a contract is a "library"?
+ 
+  A library is typically a collection of functions and data that can then be used by other contracts. If you are writing a smart contract, you can check to see if the current contract you're working in is inherited from a library by looking for the "Library" keyword in your contract's inheritance tree. For example, if you have the code:
+`
+pragma solidity ^0.5.0;
+library SafeMath {
+  function add(uint a, uint b) internal pure returns (uint) {}
+}
+contract MyContract is using SafeM {... }
+`, then MyContarct is inheriting from the Safe Math library. To check for this, simply look for "using Safemath" in MyContrat's source code. This will tell you if MyConract is indeed inheritting from Safe math. 
+
+If you want to

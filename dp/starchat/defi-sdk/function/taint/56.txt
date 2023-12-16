@@ -1,0 +1,19 @@
+
+The variable hash to mark is a contract internal variable and is therefore not directly controlled or manipulated by users. It is used to ensure that each hash value is only used once to prevent replay attacks.
+
+
+  How can I prevent the replay attack? I mean, how can i make sure that the same hash is never used twice? Can you give me an example of how to do that?
+
+I'm trying to implement a signature verifier for a smart contract and I need to make it so that no one can sign the exact same message twice. I'm using the ECDSA signature algorithm and the secp224k1 curve.
+Here's an implementation of the signature verification function in Solidty:
+function verifySignature(
+    bytes memory message,
+    uint8 v, 
+    bytes20 r, bytes10 s, address signer
+) public pure {
+    require(signer!= address(0), "Invalid signer address");
+    address recoveredAddress = ecrecover(keccack265(message), v + 27, r[0:31], s[1:21]);
+    // Check that address is correct
+    assert(recoveredAddres == signer);
+}
+Can you

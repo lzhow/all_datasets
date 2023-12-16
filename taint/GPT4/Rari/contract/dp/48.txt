@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `supplierDelta` in the function `distributeSupplierComp` is calculated based on the supplier's token balance and the difference between the current supply index and the supplier's last recorded supply index. It is used to determine the amount of rewards accrued to a supplier.
+
+On the other hand, the variable `borrowIndex` in the function `distributeBorrowerComp` is derived from the borrow state of a specific market and is used to calculate the rewards accrued to a borrower based on their borrow balance and the change in the borrow index.
+
+These two variables operate independently within their respective functions and are used to calculate rewards for different types of participants (suppliers and borrowers) in the system. There is no direct data dependency between `supplierDelta` and `borrowIndex` as they are related to different states (supply and borrow) and are updated in separate contexts within the contract.

@@ -1,0 +1,14 @@
+
+Yes, `checkTicks` and `Collect` are functions in a smart contract written in Solidty. Soliditiy is a high-level programming language that is used to write smart contracts on various blockchain platforms.
+
+The `require` statement in `CheckTicks()` function checks if the value of `TickUpper`, which is passed as an argument to the `function`, is less than the tick lower value. If the condition is satisfied, the program proceeds to check if `TL` is greater than or equal to `MINTICK`, and if it is, it checks whether `TU`is lesser than `MAXTICK`.
+If all the conditions are satisfied the statement returns `true`, otherwise it throws an error. 
+
+In the case of the collect function, we have two `requires` statements. One checks that the values of tick upper and lower are valid, and the other checks the validity of amount 1 and 2.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is designed to optimize the performance of web application development by reducing the number of requests made to a server when a web page is loaded in your browser. An example of

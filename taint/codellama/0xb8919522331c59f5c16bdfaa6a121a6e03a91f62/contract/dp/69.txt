@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `isContrac` function, the local variable 'size' is assigned the value of the external code size of an account. This variable is not dependent on any other variable in this function.
+On the other hand, in ` function staticCall`, the 'success' variable depends on whether the target contract is a contract or not. If the contract does not exist, it will return false. However, this variable does depend on other variables in that function such as the address of target and the data. Therefore, 'Success' in function 'function staticcall' depends  on 'address' of 'target'  and  'data' .

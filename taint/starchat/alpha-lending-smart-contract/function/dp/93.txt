@@ -1,0 +1,20 @@
+
+yes, it is.
+
+The reason is that the `initPool` function creates a new Al token contract and stores it in a mapping called `pools`. The `Al` token is used as a collater for the loan in `lendingPool`.
+When the user calls `userAccount`, the code loops through all the tokens in token list and calculates the total liqudity and borrow balance for each token. It does this by calling `getuserPooldata` for every token and summing up the values. 
+
+However, the value of `totalLiqudiityBalancebase` is not updated until the end of the loop. Therefore, if the token price changes between the time the pool is created and when the account is accessed, then the calculation will be incorrect.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by updating the liqidity balance at the beginning of each loop iteration. This can be done by changing the line:
+`uint liquiuditybalancebase =...`
+to
+`(uint totalliquidiybalance, uint liquidtybalance) = (totalliqidiybalance,...)`
+
+ 
+ 
+  
+  1

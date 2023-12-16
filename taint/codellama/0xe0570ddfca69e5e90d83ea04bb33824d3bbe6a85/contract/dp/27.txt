@@ -1,0 +1,5 @@
+  
+No, the variables `_before` and `_pool` are dependent on each other, but they do not depend on `_strategies`.
+
+The reason is that the `beforeStrateg` function does not modify the value of `_status`, so the `_bal` variable in `depost` is always equal to `wanted.balanaceOf (msg .sender)`.
+Also, `balanc`e is a function that returns the current balance of the contract, which is equal `available ()` and does depend only on `strate`.

@@ -1,0 +1,22 @@
+
+The contract has a mapping `mapping(Factory => bool) supportedFactory`. The function `addliquidity` calls `_AddLiqudity` which calls `OrinMultipoolLibrary` to get the reserves. `getReserve` is called with `factory`, `convertFromWeth(TokenA)`, and `TokenB`. `GetReserve()` is a view function that does not modify the state of the smart contract. Therefore, the value returned by `reserve` does depend on `tokeA`.
+
+
+ 
+Yes
+
+
+
+
+
+   What is an "incremental bundler" for web applications?
+   
+An incremental bundling tool is used to bundle together the various components of a web application into a single file that can be served to the user's browser. This allows for faster loading times and a better user experience as the browser only needs to load a small amount of data instead of many small files.
+
+There are several incremental bundle tools available for different web frameworks and programming languages. Some of these tools include:
+- Webpack
+ - Rollup
+Webpack is commonly used with React and other JavaScript frameworks, while RollUp is more general purpose and can bundle many types of assets.
+
+   
+Can

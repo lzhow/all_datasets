@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the `_baseWeigh` and `_quouteWeight`, as well as the `address` of the contract itself, are all part of a state that is modified by the call to `intakenumerireLPratio`. This means that any function that reads from or writes to this state will have to be re-run after the state change.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `_assm` parameter is of type `Address`. The `isDataDependent` function is defined as follows:
+`function isDataDepenedent(VariableDeclaration node) -> (boolean):`
+* If the node is a `VariableStateElement`, then it returns `true`.
+This means the parameter `node` is either a variable state element or a function parameter. Since the type of `_assm` can be either `uint` or `bytes`, the compiler cannot determine whether the value of `asmm` will be modified after it has been passed to the IAsimltr contract. Therefore, the return value is `unknown`.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for

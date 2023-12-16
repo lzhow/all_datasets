@@ -1,0 +1,5 @@
+  
+No, the ` from PartitionsValidator Implementation ` variable in `_call PreTransfersHooKs` is not dependent on `_ operator` variable from `_ mint` function.
+
+The ` _ callPretransfershooks` method is called from the `_transerBydefaultpartition` and `_ transferbypartition ` methods, which are called by the user. These methods are responsible for calling the pre-transfert hooks, and the implementation of these hook is determined by a specific interface, `IAmp Tokens Sender`.
+In the case of the mint function, it does not call the _ transfer methods and therefore doesnot call _ _CallPretrasferhooK. Therefore, there is no dependency between the`from PartitonsValidator implementation`variable and`_ operator `variable.

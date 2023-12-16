@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `success` in the function `sell` is data dependent on the variable `value` in the function `JAYtoETH`. This is because the value of `success` is determined by the result of the `msg.sender.call{value: eth.mul(90).div(100)}` statement, which depends on the value of `eth`. The value of `eth` is calculated using the `JAYtoETH` function, which takes `value` as an input. Therefore, there is a data dependency between `success` and `value`.

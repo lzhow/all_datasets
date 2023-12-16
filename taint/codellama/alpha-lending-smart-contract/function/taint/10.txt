@@ -1,0 +1,4 @@
+  
+The variable _ totalL liquidity in function  get Utilization Rate is labeled as 'No'. The reason is that the _TotalL Liquidty variable is a function parameter, which means that it can be passed in by a user when calling the get utilisation rate function. However, the value of this variable cannot be changed within the scope of the contract, as it has been passed as a parameter to the external function call. Therefore, this value is determined by an external entity and is therefore not considered to be controlled directly by any user within this contract.
+
+In contrast, variables such as base borrow rate, rate slope 2 and collate percent are labled as "yes" because they are directly controlled within contract by user through constructor function and can change their value.

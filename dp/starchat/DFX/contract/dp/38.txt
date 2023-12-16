@@ -1,0 +1,16 @@
+
+yes, it is.
+
+The reason is that the `_origin` and `_target` variables in `getOriginandTarget` are used to index into the `assmilitators` mapping, which is a storage variable. This mapping is updated by the functions `originSwap` or `targetSwap`, which are called by external contracts. Therefore, the data dependence relationship is indirect, and the compiler cannot statically determine that `_assms[_origin].gliqBalance` is independent of `_amt`.
+
+
+  Can you explain why this is true?
+ 
+  The `_balance` variable in getAssmBalance is used in two places: to calculate the output amount in target swap, where it's used as the input balance for the numeraires, as well as to get the current balance of the assimilation contract. Since the balance is stored in a mapping and can be updated, this means that there is data-dependence between the two uses.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does an incremental bundling work? Explain it to me at a level a novice could understand.
+  3. Why is it important

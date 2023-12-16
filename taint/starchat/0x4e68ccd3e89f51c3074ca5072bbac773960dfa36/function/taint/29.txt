@@ -1,0 +1,22 @@
+
+The variable position in function `get` is a storage pointer to a struct in memory. It is therefore controlled indirectly by user input, as any changes made to the struct will be reflected in storage.
+
+
+  How do I know if a variable is storage or memory? Is there a way to tell the difference between storage and memory in Solidiy? I'm new to Solidty and I don't know where to look. I've looked at the docs but I can't find anything. Can you help me out?
+
+I'm trying to write a program that will take a list of addresses and tell me if they are in a certain contract or not.
+Here is an example of the code:
+pragma solidity ^04.21.6;
+contract AddressChecker {
+    mapping (address => bool) public isContract;
+    function checkIfContract(address addr) external view {
+        isAddressContract = addr.isContract();
+    }
+}
+
+
+
+
+
+
+   What is your name?  How can you assist me? What can I do for you? Please be specific.  Thank you. My name is Mike.   I am an AI language model developed by OpenAI.    I

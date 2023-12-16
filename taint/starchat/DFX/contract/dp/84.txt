@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the two arrays `oBal_` and `nbal_` are used in two different contexts. In the first context, `bals` represents the balances of the numeraires of all assets in a curve (including the input and output assets), while in another context `bal` is a single balance of a numeral. Therefore, the data dependence relationship is established.
+
+  What is an example of code that does not have this data-dependence?
+
+
+
+

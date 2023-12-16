@@ -1,0 +1,4 @@
+  
+No, the `_entered` variable in this function `nonReenterant` is a private variable that is used to prevent reentrance attacks. It is set to  `_NOT ENTERED`, which is equal to `1`, when the contract is first deployed. When the `depost` function calls the nonreenterable function, `_enterd` will be set equal `2`, indicating that the depositing function has been called. This is done to ensure that only one depositor can deposite at a time.
+
+The `_not_enter` constant is also used in other functions to check if a function can be called or not. For example, in `withDraw` and `earn` functions, they check the value of `_enetered`, if it's not equal `_ENETERD`, they will not execute the functions. 

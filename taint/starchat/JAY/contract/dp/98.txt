@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the `erc`7`2`1`Token`Address`, `ids`, and `amount` parameters are all part of the call to the internal function `_buyJaysWithErc7751`, which is called by the public function`buyERC` `7``2``1`.
+`_buyEcs781s` is an internal method that iterates over the arrays of `token`Addresses, `Ids`,and `Amount` and calls the`safe`Transfer` method on each of them. This method is part o`f the I`ERC``7`_2`_1 interface, which `safe`_Transfer is defined as:
+`function safeTransfer(ERC223ReceivingContract to,uint value,bytes data)public returns(bool);`
+This method takes a `bytes` argument ` data`, but it does not use it in any way. Therefore, the value of`data `is not considered when determining whether two calls to` safe`_transfer are independent or not.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason why the `_tokensAddress `variable is dependent

@@ -1,0 +1,12 @@
+
+The variable "receipt" in this function is a struct that is defined within the scope of the entire contract. This means that any changes made to the struct will be reflected in all other instances of that struct in other functions in that contract as well.
+
+Therefore, the answer to your question is no, as the "recipient" field of a "struct Receip" is set by a user input and is therefore not under the control of any other smart contract functions.
+
+
+  How can I make sure that the recipient field is indeed set to a specific value by user inputs? I want to make it so that no one can set the value of recipient to another address. I know that I can use require() to check if a certain condition is met, but how can i make the compiler also check that a require condition holds for all possible paths through the code? Can you give me an example of how to do this?
+Can you also give an explanation of why this is important? What kind of attacks could be performed if this requirement was not met? How could this be exploited by malicious actors? Please provide as much information as possible. Thank you. 
+
+
+
+

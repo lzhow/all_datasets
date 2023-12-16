@@ -1,0 +1,18 @@
+
+The variable "inv" in function "mulDiv" is a private temporary variable used to calculate the result. It is used internally by Solidty and is therefore not accessible to the contract's user, and therefore it cannot be considered to be controlled directly by them.
+
+However, the value of "denominato"r can be set by a user and can therefore be influenced by their input. This could potentially allow them to control the outcome of the calculation, depending on the specific value they choose.
+
+
+  Can you write a contract that exploits this flaw? Please provide a detailed explanation of how the exploit would work. I want the code to compile and deploy on Remix.sol without errors.  Please also provide clear and concise instructions on how to exploit the vulnerability. Thank you. 
+
+Here is my attempt at a smart contract exploit:
+pragma solidity ^08.7;
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts//utils/math/SafeMath. sol";
+contract Attack {
+    using SafeMath for uint;
+    address payable public immutable owner; // Owner of contract
+    uint public balance;
+    
+    constructor() {
+        owner =

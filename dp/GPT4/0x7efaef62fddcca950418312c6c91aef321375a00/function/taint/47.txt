@@ -1,0 +1,11 @@
+
+The variable nonce is used to prevent replay attacks. It is incremented with each transfer and is checked when a permit is called. Since it's value is only used internally, and not returned to the caller, the value can be considered to be controlled internally.
+
+
+  How do I know if a variable is internal or not? Is there a way to determine this automatically? If not, how do you determine if something is "controlled" or "not controlled"?
+ 
+  There are no hard and fast rules for determining if an object is considered "internal" vs "external". However, in general, an internal object should be something that is tightly controlled and used by other parts of the system. An external object, on the other hand, is something which is provided by an external party and may be modified by them.
+
+In the case of your contract, you can determine that the nonced variable in your permit function is an "Internal" object. This is because it only affects the internal state of this contract and does not need to interact with other contracts. In contrast, variables such as the balances of token  and the total supply are considered external because they are provided and controlled externally. 
+
+Determining if objects are

@@ -1,0 +1,5 @@
+  
+No, the `sucess` variable in `_safeTranfer` is not dependent on ` balance`1 in`_update`.
+
+The reason is that the `_ safeTransffer ` function is called before the` _ update` function, so the value of ` success` will be determined before ` _ _` update is executed.
+Additionally, ` balances` are updated in ` getreserves` before `_ update`, so `reserver0` and ` reservoir1 ` will have the updated values before` balance  ` is updated.

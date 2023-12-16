@@ -1,0 +1,3 @@
+Yes
+
+The variable `_withdrawal` in the function `proportionalWithdraw` is data dependent on the variable `_bal` in the function `getGrossLiquidityAndBalances`. This is because `_withdrawal` is used to calculate `_multiplier`, which is then used to multiply each `_oBals[i]` (which is the same as `_bal` from `getGrossLiquidityAndBalances`) to determine the amount for each `withdrawals_[i]`. The `_oBals` array is populated by the `getGrossLiquidityAndBalances` function, which assigns each `_bal` to the array. Therefore, there is a direct data dependency between `_withdrawal` and `_bal` through the `_multiplier` and the calculation of `withdrawals_`.

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `calculateRoudUpLiqidtySharAmount` function, the `_token` parameter is used to access the pool data, which is stored in a mapping called `pools`. The `pool` variable is then used in several places in this function to retrieve data from the mapping.
+However, in `BORROW` the same `_toke`n is passed as a parameter to the`calculatRouUpLoqdityShaerAmount ` function. Therefore, ` _tokens` is data-dependent on ` borrowerShre`s.

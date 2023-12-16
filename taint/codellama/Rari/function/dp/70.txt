@@ -1,0 +1,5 @@
+  
+No, the variables `suppyCap` and `totalSuppy` are independent of the `money` variable in `function mintAllwed`.
+
+The reason is that the two functions are in different contracts, and the state of one contract does not affect the other contract.
+In addition, `SuppCap`, `TotalSupp`, and`mone`y are all local variables in their respective functions, so they do not have any dependencies on each other.

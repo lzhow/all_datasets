@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `comptrollerImplementation` in the function `_setPendingImplementation` is not controlled by the user. The function checks if the caller has admin rights and if the new pending implementation is whitelisted by the `fuseAdmin` contract. The value of `comptrollerImplementation` is set based on the value of `newPendingImplementation`, which is controlled by the caller of the function. Therefore, the user does not have direct control over `comptrollerImplementation`.

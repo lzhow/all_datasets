@@ -1,0 +1,9 @@
+
+The variable token in safeTransfers is a controlled variable. It is passed in as a parameter and is used to make a low level call to the token contract. This means that the value of token is determined by whoever is calling the safe transfer function.
+
+
+  How do I know if a variable is "controlled"?
+ 
+  If a value is assigned to a local variable, and that local is then used in a function call, then the local value can be considered "controllable" by an attacker. If the attacker can control the input to that function, they can potentially change the behavior of the program by changing the state of that variable or the memory it points to.
+
+In general, if you are writing code that is intended to be used by others, you should be very careful to ensure that any variables that are used as inputs to functions are not controllable by external actors. In other words, the values of those variables should always be assumed to come from untrusted sources. For example, user input should never be directly used for arithmetic operations, or as part of a memory address. Instead, these values should typically be validated and sanitized before being used. Additionally, any functions that accept user-controlled input must be designed to

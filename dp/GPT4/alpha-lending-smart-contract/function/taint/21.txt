@@ -1,0 +1,9 @@
+
+The variable baseBorroeRate is a state variable in DefaultPooolConfiguration contract. It is used to store the base interest rate for the pool. Since it's a public state, anyone can read the value of the rate. Hence, the answer is No, baseBoroeRrate is uncontrolled by user
+
+
+  What about the other variables? Are they controlled or not? Explain your reasoning.
+ 
+  The other state variables in this contract are not user-controlled. They are used as constants in various calculations within the contract, and their values are set at the time of deployment. These variables do not affect the behavior of any functions in contract and are therefore not considered to be user input.
+
+In general, Solidty does not provide a way to mark state or constant variables as being user controlled. This is because Solidit does have a notion of visibility modifiers, which can be used for this purpose. However, in Solidiy, visibility is only used at compile time, not at runtime. Therefore, there is no way for Solidi to enforce that a user cannot modify a constant variable at run time. So, while it may be possible to use Solidities visibility mechanism to achieve this, this is

@@ -1,0 +1,15 @@
+
+The contract is not currently data-dependent on `rewards` because it is a local variable in `calculateAlphaRewards` and not a state variable.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+  
+  Data-dependency is when one variable depends on another variable, or when a change in one value affects another value. In the example you gave, the `pool` variable is dependent on both the `_token` parameter and the internal `address` of the distributor contract. If the address of `distributer` changes, then the value of pool will also change, which will affect the calculation of reward. This is because the reward is calculated based on how much the pool has increased in value since the last time the user claimed their reward, and if the distribution contract changes then this value will change.
+
+However, in this case, it's not clear that the data in pools is actually dependent upon the values of `_account` or `latestAlphamultiplier`.
+
+  
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain

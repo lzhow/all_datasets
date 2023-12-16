@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `borrowerAccrued` in the function `distributeBorrowerComp` is data dependent on the variable `borrower` in the function `flywheelPreBorrowerAction`. This is because the value of `borrower` is passed as an argument to the `distributeBorrowerComp` function and is used to update the `borrowerAccrued` variable through the line `compAccrued[borrower] = borrowerAccrued;`. Therefore, any changes to the value of `borrower` will affect the value of `borrowerAccrued`.

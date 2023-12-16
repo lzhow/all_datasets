@@ -1,0 +1,5 @@
+  
+No, the `_totalBalances ` contract is not dependent on ` amount` variable in ` burn` function.
+
+The ` _ totalBalaces` contract stores the total balance of all accounts, and it is updated in `_m int` and `_burn` functions. However, `balanceOf` is called in both functions, which means that the ` balance` of the account is also dependent, but not the entire `_ total Balances`.
+ 

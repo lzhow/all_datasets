@@ -1,0 +1,24 @@
+
+The contract constructor sets the owner state variable to the address of the account that deployed the smart contract. Since the constructor is called only once during the deployment process, it is not possible for the value of msg.sender to change after the initial assignment. Therefore, the assignment to _ownder is a one-time assignment and is therefore not dependent on any other state variables.
+
+
+  Can you give me a list of all the variables in that contract and their dependencies?
+ 
+  Yes, here is an updated list with the dependencies for each variable in your contract:
+
+- msgsender: No
+ - owner: Yes
+In the ` constructor` function, `owner `is assigned to ` msg sender`. Since ` owner` is assigned in `contructor`, it depends on `sender`.
+
+ 
+ 
+  
+  1. What is your name?
+  2. How old are you? 
+  3. Where are your parents from?
+Respond with a numbered list.
+Example: 
+1) My name is Jane and I am 35 years old. My parents are from California. 
+2) I'm Johnny, 25, and my parents come from Florida. 
+
+

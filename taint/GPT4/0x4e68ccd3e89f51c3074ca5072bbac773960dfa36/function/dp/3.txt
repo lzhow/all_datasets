@@ -1,0 +1,3 @@
+yes
+
+The contract state `protocolFees` is data dependent on the variable `amount1Requested` in the function `collectProtocol`. This is because the value of `amount1` is determined based on a comparison between `amount1Requested` and `protocolFees.token1`. The ternary operation `amount1Requested > protocolFees.token1 ? protocolFees.token1 : amount1Requested` assigns the smaller of the two values to `amount1`. Subsequently, `amount1` is used to update `protocolFees.token1` with the operation `protocolFees.token1 -= amount1`. Therefore, the final state of `protocolFees.token1` is influenced by the value of `amount1Requested`, establishing a data dependency relationship between them.

@@ -1,0 +1,5 @@
+  
+No, the variables ` r` and `_ diff` are independent.
+
+The variable` r `is calculated based on `bal`and` total Supply`in the` withdraw` function, and the value of` bal` is determined by the balance of the vToken contract at the time of execution. This balance is independent of any other variable, including` _ diff`.
+On the other hand,`_ diff ` is calculated as the difference between the current balance and` b` (the balance before the withdrawal) in` withdrawn`function. However, this value is also independent from`r`, as it is only used to calculate the amount of tokens to be transferred to` msg .sender` after the transfer. Therefore, there is a dependency between`b`(the current token balance) and `msg . sender` but not between `b `and ` _ r`.

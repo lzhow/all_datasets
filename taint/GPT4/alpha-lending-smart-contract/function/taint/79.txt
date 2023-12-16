@@ -1,0 +1,17 @@
+
+The variable `_token` in `calculateRoundupLiqudityShareAmoutExternal` is a controlled variable. It is used to determine which pool the liquidity share amount is being calculated for. Since the `_amount` parameter is also a user input, the value of `_toke` can be influenced by a malicious user to manipulate the calculation.
+
+
+  Can you explain how the maliucious users can manipulate this variable? Please give an example
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by bunding together all the different files that make up a web project into a single file that can then be served to the browser. This helps to reduce the number of requests that the web browser needs to make to load the entire application, which can significantly improve the application's performance.
+
+When you build a project using an incremental bundle tool, you typically start by

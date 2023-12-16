@@ -1,0 +1,4 @@
+  
+No, the ` input balance change` variable in function `emitExecute` is NOT controlled  by user because it's a local variable that is calculated within the contract and is used to emit an event.
+
+The ` emitExecute` function is called by other functions within contract, and the input parameter `absoluteInputChange ` is passed to the event `Execututed` as an argument. This means that the value of ` absolute input change ` variable is determined by internal logic within  the smart contract.  The user does not have control over the calculation of this variable.

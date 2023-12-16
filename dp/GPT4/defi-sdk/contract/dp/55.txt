@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `weth` in the constructor is used to initialize the state of the contract by setting the address of the WETH token, which is a wrapped version of Ether to allow it to be traded like an ERC20 token. This address is set once during contract deployment and does not change throughout the contract's lifecycle.
+
+On the other hand, the variable `token` in the function `callBytes` is a local variable that is assigned a value based on the first pair's token0 or token1, depending on the direction of the swap. This value is determined during the execution of the `callBytes` function and is independent of the `weth` variable set in the constructor.
+
+Since the value of `token` is not influenced by the value of `weth` and vice versa, there is no data dependency relationship between these two variables. They are used in different contexts within the contract for different purposes.

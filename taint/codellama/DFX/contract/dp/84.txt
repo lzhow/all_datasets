@@ -1,0 +1,4 @@
+  
+No, the variables ` n GLi q_ ` and `  n Bals _ ` are independent.
+
+The variable  ` _ n G Liq _ ​​` is calculated in `getOrigin Sw apData` by adding the balances of all the assets in a curve pool, except for the input asset. This calculation is based on `Ass imil ators. viewNum eraire Balance` which is a view function that returns the balance of an asset in an assimilated pool. Therefore, it is not dependent on any variable in any other function.  On the other hand, ` view Target Sw a pData ` calculates the amount of the output asset that will be received by the user, based only on their input amount and the current balan ces of assets. It does not use any information about the curve or the assimilation process. As a result,  `_ nG Li q _` and `_n B als _​ ` in  view Origin Sw  ap Data are completely independent of each other.

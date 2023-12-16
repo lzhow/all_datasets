@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_token` in the function `totalBorrowInUSD` is an input parameter that represents an ERC20 token. It is used to query the price oracle and calculate the total borrow amount in USD for that specific token. On the other hand, the variable `_share` in the function `repayByShare` is also an input parameter that represents the amount of the loan share that is being repaid. There is no direct relationship or computation in the provided code snippet that indicates `_token` is dependent on `_share`. They are used in separate functions for different purposes, and there is no data flow from `_share` to `_token`. Therefore, they are not data dependent.

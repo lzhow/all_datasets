@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `cash` in the function `getBorrowRate` is a parameter passed to the function when it is called. Since this function is marked as `external`, it is meant to be called from outside the contract, typically by users or other contracts. Therefore, the value of `cash` is provided by the caller, which means it is controlled by the user.

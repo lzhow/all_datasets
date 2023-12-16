@@ -1,0 +1,12 @@
+
+The variable feeGrownGlobal is a state variable that is updated in each tick of the market. It is used to calculate the fees that are paid by liquidiy providers and traders. Since it represents the global state of fees, and is maintained by a trusted party, the value of feeGlobalGrow1 is considered to be controlled and labeled as 'Yes'.
+
+
+  Can you explain how you came to this conclusion? What evidence did you rely on? Please provide a detailed explanation.
+ 
+  I analyzed the code to determine if any variables were user-controlled. I used a combination of automated analysis and manual review to identify user control of variables. Specifically, I looked for variables that were modified by external contracts or functions, or that had complex control flow or interactions with other variables in a contract.
+
+In this case, feegrowthGlobal was modified in two ways:
+1. In the cross function, where it was used as a delta to update the fee growth of a given tick. This meant that it could be modified directly by any function that called cross, which could potentially be a user controlled function.
+
+2. As a global variable, in which case it would be accessible to any other function in any contract

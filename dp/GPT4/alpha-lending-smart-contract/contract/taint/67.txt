@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `raw` within the function `decodeBytes32` is part of the `Data` struct which is passed as a memory argument to the function. The content of `raw` is determined by the input provided to the `Obi.from` function, which initializes the `Data` struct with the `raw` bytes array. Since the input to `Obi.from` can be provided by the user when they call the function, the `raw` variable in `decodeBytes32` can indeed be controlled by the user.

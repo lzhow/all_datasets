@@ -1,0 +1,16 @@
+
+The contract has a function called `claim` that allows users to withdraw their accumulated ALPHA tokens. This function uses the `withdrawalPortions` variable to calculate the amount of ALPPH tokens that can be withdrawn.
+
+To determine if the state of `share` is data-dependent on `totalShares` and `alphaSupply`, we need to determine how the values of these variables are used in `calculateAlphaAmount`.
+1. `uint share` = `_share`. This line assigns the value of `_shares[user]` to ` share`. Since the `_user` parameter is provided by the caller, it is possible that the program state could change between the time of the call and the assignment. Therefore, the data dependence relationship between ` shares`  and `_amount` cannot be determined.
+
+2.  ` uint amount`= `_ share. mul (supply).div (totalshare)`. This calculates the withdrawal amount based on `_ shares`. Again, since the user input is untrusted, this calculation could result in an inconsistent state.
+
+
+ 1
+ 
+ 2
+ 
+
+  1) The code defines a contract called EscrrowAlpah.
+  2) It inherits from two

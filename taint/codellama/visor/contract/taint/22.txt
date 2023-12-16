@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `transferOwership` function, the input parameter `address` is passed to the `_owner` variable. This means that the value of `owner()` is assigned to `msg.Sender()`. Therefore, `NewOwner`, which is a variable in `Owenable`, is also controlled.
+ 

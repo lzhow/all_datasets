@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `for` loop iterates over the elements of the array `tokenList`. For each element, it retrieves the corresponding `Pool` object from the mapping `pools` using the address of each `ERC-2`0 token as the key. It then calls the internal function`getuserPooldata` to retrieve the liquid balance and borrow balance of a user in a specific pool, and checks if the user has any liquid or borrowed balance in that pool by comparing the retrieved values with  `0`. If the balance is not ` ​​0`, it calculates the total liquid and total borrow balances of all pooled assets for the given user.
+  The `if` statement checks whether the collate percent is greater than 1 and whether user use pool as collatoral. If so, It calculats the compound liquid balace and adds it to the  total collated balance base.  It also calculatesthe compunded borrowbalance and add it tot the totla borrow base balance.   The function returns the calculated values. In the second function , it does the same thing as in first one. So, ` compondedLiquefitybalace` is data depend on ` totalcollatedbalancbase` because it is used to calculate the value of `totalliqueditybase`.

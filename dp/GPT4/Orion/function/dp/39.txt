@@ -1,0 +1,7 @@
+Label: no
+
+Explanation: The variable `j` in the function `get_y` is not data dependent on the variable `to` in the function `getAmountOutCurve`. 
+
+In the function `get_y`, the value of `j` is passed as an argument to the function `get_y`, and it is not modified or affected by any other variables or states in the function.
+
+In the function `getAmountOutCurve`, the variable `to` is used to determine the `pool` address, which is then used to obtain the values of `i` and `j` from the `ICurveRegistry` contract. However, the value of `j` is not used or modified in any way that would create a data dependency with the variable `to`. Therefore, there is no data dependency between `j` and `to`.

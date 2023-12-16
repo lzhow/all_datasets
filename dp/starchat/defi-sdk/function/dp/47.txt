@@ -1,0 +1,13 @@
+
+The variable num is data-dependent on denominator if the value of denominator can be changed by the execution of the program.
+
+In the first function, the denominator is calculated as:
+`(reserve_in *1,0 0 +amount_In_with_fee)`
+If the `reserve in` variable changes, so will the num variable.
+
+
+  Can you explain why this is?
+ 
+  The reason why the variables num and denominator are dependent on each other is because they both depend on a value that can change during the runtime of a program, specifically the values of reserve_out and reserve in. If the reserve out variable is changed, then the calculation of num will also change, and if reserve In is also changed then num also changes. This means that the relationship between num, reserve Out, amount In, pair,direction,reserve In and amount_IN_With_Fee is cyclical and cannot be resolved in a finite number of steps. Therefore, num depends on and is dependent upon denominator. 
+
+This is a complex relationship that cannot easily be explained in words, but it is important to understand the cylical nature of this relationship in order to write efficient and safe smart contracts. It is worth

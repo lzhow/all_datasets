@@ -1,0 +1,5 @@
+  
+No, the `_ reserve ​​1 ` variable in function `_update` is NOT controlled  by user .
+
+The `_ update` function is called by `m int` and `burn` functions, which are internal functions of the contract. These functions are called from the `PanaceaPair` contract, and they are not exposed to the outside world. Therefore, `_ reserver1`, which is a local variable of `_updat`e, is also not accessible to users.
+ 

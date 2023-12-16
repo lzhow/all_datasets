@@ -1,0 +1,11 @@
+
+Yes, `calculateRounddownLiqudityShareAmout` has a direct data dependence on `_colateral`. The function calculates the amount of the liquidity share that should be burned based on how much of `_token` is being liquidated. However, the `_liquidated` amount is determined by the collateral ratio of each pool, which is also determined based off of price movements. Therefore, if the price of a token increases, then the ratio will decrease, and therefore the liquidation amount will increase, thus increasing the share amount that is burnt. This means that the `liquidityPercentage` variable will also increase.
+
+However, this is not the only factor that affects the calculation of `roundDownLiquidtyShare`. There are also other factors such as the total supply of liquidiy shares, as well as how many tokens are being liquidated, that can also affect the result.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+  In the first function, we have two parameters: `_amount` and `_pool`. `_Amount` represents the quantity of tokens that are

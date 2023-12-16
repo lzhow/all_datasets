@@ -1,0 +1,16 @@
+
+The contract has a mapping of `address` to `Price Oracle` called `oracle`. The function that sets the value of the mapping is `add`.
+
+In the `for` loop, the code checks if the address of each oracle is equal to the underlying address. If it is, it sets `canAdd` equal `true`. If `!canadd`, it checks to see if there is already an oracle set for that underlying.
+If `msgSender` is an admin and `adminCanOverwrite` equals `false`, the oracle for the given underlying is set to `_oracle[j]`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning howto code python.  The best way is to find a tutorial that is beginner friendly and has simple examples.   You can find many of these online.    Another good option is attending a local python meetup.
+   
+    What are some good local meetups? I live in Austin, TX. I'm looking to attend one soon. Can you recommend some? Thanks!
+   
+    A good place to meet local Python developers is at the

@@ -1,0 +1,5 @@
+  
+No.
+
+The variable 'output' in function 'hashAccountSigature' is not dependent on variable fee in 'function hash'.
+This is because the 'fees' variable is only used in a nested function call to 'keccack224' which is used to hash the data.  The 'input' parameter is passed to the nested call, but the fee variable itself is never used.

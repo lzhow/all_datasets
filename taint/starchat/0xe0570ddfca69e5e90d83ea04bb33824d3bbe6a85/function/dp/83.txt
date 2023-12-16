@@ -1,0 +1,15 @@
+
+The contract function 'incaseTokensgetStuk' is a function that allows the owner of the smart contract to withdraw any tokens that may have been sent to the address of this contract.
+
+It first checks that the '_token' variable is not equal to address 'want'. This is because the'strategy' contract variable holds the token address that is being used for farming. If '_tokem' was equal 'to want', then the balance of '_toekn' would be sent directly to'msg sender', which would not be the intended behavior. 
+
+Next, the amount of tokens held by the current contract is retrieved from the IER2O contract, and stored in a variable 'amount'.
+Finally, Ierc2o contract's'safetransfer' function is called, transferring the tokens from this smart contracts address to '_sender'. 
+ The '_sendder' in this case would most likely be a wallet address, where the user would like to receive the withdrawn tokens.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundlers job is to take in many files and combine them into a few files that can be served to users

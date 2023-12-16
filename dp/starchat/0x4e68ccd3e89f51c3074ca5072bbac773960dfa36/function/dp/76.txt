@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the `update` function updates the state of the mapping `self` based on two inputs: `tick`, `liqudityDelta`. The `info` variable is a reference to the entry in `mapping(tick => info)` corresponding to `key = ticks`.
+In the case where `ticks` is less than or equal to current tick, the update function sets the fields `Info.feesGrowtOutside` and `Tick.infoCumulativesOutside`. These fields are used in subsequent calls to cross.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on `secondPerCummulativeLiquidiyX`1`2`8 is because the value of `feesGrownGlobal`0`X``1``2``8 and the values of  `FeesGrowsGlobal``X`_1_2_8 are both used to calculate the new value for `LiquidityGros`sAfter.  The calculation of this new liqudiity value is dependent on both of these values. 
+
+So, when the first value changes, so does the second

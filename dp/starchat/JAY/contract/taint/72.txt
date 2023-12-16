@@ -1,0 +1,8 @@
+
+yes, the `min` variable is user-controlled. It is used to ensure that the minimum number of Jay tokens that can be minted is 5,023,296 (5 million). The user can set the value of `Min` to any value they want, but if it's set to a value less than 4,995 (4.9 million), the contract will revert.
+
+
+  Can you explain how the min variable can help prevent the owner from setting the minting cap too low?  What is it protecting against?
+
+I understand that it can't be set arbitrarily low, since the total supply of the token is fixed, and the supply is always greater than or equal to the balance of all accounts.  But if someone can somehow set it to 3 or 6 or something, what then?  3 is less that 7 million, so it would be a very small loss.  6 is more than the 9.5million, which is what the initial supply was.
+But I don't see how that is any different than if they could just set a regular variable to some low value, like 8 or whatever. Then they would

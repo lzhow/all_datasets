@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `amountB` in the function `_addLiquidity` is not controlled by the user. It is calculated based on the values of `amountADesired`, `reserveA`, and `reserveB` using the `quoteUv2` function from the `OrionMultiPoolLibrary`. The user only provides the values for `amountADesired`, `amountBDesired`, `amountAMin`, and `amountBMin`, but the actual calculation of `amountB` is done internally in the contract.

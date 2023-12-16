@@ -1,0 +1,11 @@
+
+The function ``buyERC20`` has a loop that transfers tokens from the contract to the buyer. Since the token transfer is a state change, it is dependent on both the ``ids`` and ``amount`` variables.
+
+However, the loop in ``updateFee`` is not dependent directly on these variables, but rather on their values at the end of the iteration. Therefore, these two functions do not have data-level dependencies.
+
+
+  Can you explain this in a simpler way?
+ 
+  Yes, I can explain it in simpler terms. In the first function, we have an internal function called buyerc123 that takes in an array of addresses, an integer array, and an amount array. We loop through the arrays and call the safeTransfer function on each address in order to transfer the corresponding amount of tokens to msg sender. 
+
+In the second function we call a function in another contract called pricefeed that returns the latest round data. This function takes the price from that data and multiplies it by  a constant value of  (1*1e16). We then divide the result by the current price of JAY in USD. If the resulting value is greater than the sellNFTfeeEth variable

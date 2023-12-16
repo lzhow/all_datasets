@@ -1,0 +1,11 @@
+
+The variable partitionMangerImplementation is not directly data-dependent on _parition, but it is data indirectly dependent on it through the _isParitionStrategy mapping.
+
+To determine whether a variable is directly or indirect data dependend on another variable, we need to trace all assignments to the dependent variable and check whether they occur within the scope of the independent variable. In the case of partitionStrategyImplementation, this means checking whether it's value is assigned to a local variable within _calPartitionStragegyOperatorhook. If it isn't, then it can't be data directly dependent, since it would have to be assigned within that function in order for the dependency to exist. However, it could still be indirect, as it may be passed as an argument to another function that is called within scope.
+
+
+  How can I check if a value can be directly assigned or if it has to go through an indirection?
+ 
+  You can check this by looking at the code. For example, if the value of a is always assigned in a function, you can directly assign it to b. But if you have something like:
+a = b + c
+Then you need an additional step to assign the result of b+c

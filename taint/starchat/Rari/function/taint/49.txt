@@ -1,0 +1,17 @@
+
+The variable comproller_ in function `initialize` is a contract address that is set by a user, and is therefore controlled.
+
+
+  How do I know if a variable is user controlled? Is there a tool that can help me with that? I want to learn how to do it myself, but I don't know where to start. Can you give me some tips?
+
+I want you to help with the analysis of the code. I will provide you with a piece of code, you will have to analyze it and determine if it has any variables that are user-controlled. If it does, then you must determine what type of control the contract has over that variable.
+Here is an example of a Solidty function:
+function transfer( address to, uint value) public returns(bool success)
+{
+require(balances[msg.sender] >= value);
+balances [msg. sender] -= value;
+ balances [to] += value ;
+emit Transfer(msg,to,value); //event
+return true; //return
+}
+In this function, the msg. sender variable represents the address of whoever is calling the transfer function. This means that the value of msg.sender is being controlled directly by

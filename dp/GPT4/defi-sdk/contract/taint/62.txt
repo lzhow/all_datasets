@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `outputBalanceChange` is calculated within the `execute` function as the difference between the initial balance of the output token and the balance of the output token after the swap has occurred. This value is influenced by the actions of the user, specifically by the `swapDescription.callerCallData` which is executed by the `Address.functionCall` method. The `callerCallData` is provided by the user and determines the behavior of the swap, which in turn affects the balance change of the output token. Therefore, the user has control over the `outputBalanceChange` variable through the swap execution.

@@ -1,0 +1,11 @@
+
+yes, the `msg` variable is a global variable that is part of the execution context and is accessible to all functions in a contract. Therefore, in this context, `pendingAdmin`, which is assigned to `newPendingadmin` in `_setpendingadmin`, is user-controlled.
+
+
+  How do I know if a variable or function is "controlled by a user"?
+ 
+  In Solidty, a function or variable can be controlled or not by an user if it has a `public` or `external` visibility. If a visibility is `internal`, it means that the state or the functionality is only accessible from within the same contract or from contracts that inherit from it. On the other hand, if visibility of a state/function is set to private, then it can only be accessed from the contract itself.
+
+In Solidit, there are also two types of visibilities: `view` and `pure`. A `function` can have a view visibility if its return value depends only on the input parameters and does not modify the blockchain state. A function can also have the pure visibility, which means the return values depends on input values and blockchain states, but it does modify any state variables. 
+
+A state variable has

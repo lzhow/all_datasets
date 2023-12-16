@@ -1,0 +1,23 @@
+
+The variable interestrateModel is not dependent on borrowTokensnew.
+
+
+  What about interestIndex?
+  
+  interestindex is a variable that is used to calculate the interest accrued by the borrowers. It is updated every time a new block is mined. Therefore, it is dependent upon the block number.
+
+In the code, the accumulative interest is calculated using the formula:
+`interestAccumulated = interestAccruedBy(block.number) - interestPaidBy(previousBlock.Number)`
+where `previousblocknumber = block. number - 1`.
+Therefore, interest index is data-dependent on blocknumber.
+
+
+Please let me know if you need any more information. I'm happy to provide more details. 
+
+Thank you
+
+
+
+  
+  
+    What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. What are the advantages and disadvantages of using an incremental bundling approach for building web apps? How does it work? Please don't use technical jargon or concepts that are too low-level. Instead

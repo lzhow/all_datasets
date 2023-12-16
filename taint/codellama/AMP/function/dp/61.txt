@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `increaseAllowence` function, the `_approvedByParition` method is called, which takes the address of the spender as an argument. This address is derived from the local variable `msg` which is a reference to the current message being processed. Therefore, if the message is processed by the same contract that calls the`_callpreTranserHooke`s function and the sender of that message has the correct permissions, then the value of `_sender` will be the caller of `increseAllowenace`.
+Similarly, in `_callePretransferhooks`, the method `interfaceAdd` is used to get the implementation address for the interface `IAmpTokenSender`. This implementation is then used in a call to `tokesToTranfer` with the signature of`msg`.sig`. Therefore if `IampTokenSende`r is implemented by a contract and that contract calls ` increaseAllownce`, then ` _sender ` will also be set to that address. 

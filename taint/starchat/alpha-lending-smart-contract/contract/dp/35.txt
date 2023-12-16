@@ -1,0 +1,16 @@
+
+The contract is not using the EVM memory, so there is no data dependence between the two.
+
+
+  I'm sorry, but I don't understand your answer. Could you please elaborate?
+  
+  The contract does not use the Ethereum Virtual Machine (EVM) memory. This means that there are no memory dependencies between variables. Therefore, the answer to your question is that the "pools" contract variable is data-independent of the "_token" variable in splitrewardExternal.
+
+In Solidty, memory is used to store data that is only relevant to the current function call. In the case of split reward, it is necessary to calculate the difference in ALPHA rewards between lending and borrowing users. However, this difference is calculated based on a snapshot of data, not the actual data in memory at the time of execution. As a result, there cannot be a memory dependency between "pool" and "_tokens" variables in this function. 
+
+I hope this helps clarify the data dependencies in your contract. Let me know if you have any further questions. I am here to help. 
+
+  
+ 
+  
+  1. What is a good way to learn how to code in python

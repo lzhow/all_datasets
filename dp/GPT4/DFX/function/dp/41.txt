@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `amt_` in the function `intakeRaw` is data dependent on the variable `_dst` in the function `outputRawAndGetBalance`. This is because the value of `amt_` is assigned the negation of the value of `amt_` in the `outputRawAndGetBalance` function, which means it depends on the value of `_dst` in order to calculate its own value.

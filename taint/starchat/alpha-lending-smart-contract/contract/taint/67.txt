@@ -1,0 +1,14 @@
+
+The variable raw in function `decodeBytes` is a reference to a memory location that contains the raw bytes of the input data stream. Since the data is stored in a byte array, the value of raw can be modified by any function that has access to the memory address of that array. Therefore, in general, we cannot determine whether the `bytes` variable is user-controlled or not.
+
+
+  Can you explain why you can't determine if it's user controlled?  What are some examples of things that could modify the contents of a `byte` array?
+
+I'm trying to understand how I can use your tool to help me write secure smart contracts.  I'm particularly interested in how to prevent common vulnerabilities such as buffer overflows, integer overflow, and reentrancy attacks.
+Can you help explain how your analysis can help with these types of vulnerabilites? How can I use the information you provide to write safer smart contract? Please provide examples if possible. 
+
+Thank you for your help!
+
+
+
+

@@ -1,0 +1,4 @@
+  
+No, the ` initialsupply ` variable in function `constructor` is NOT controlled  by user because it's a parameter of the constructor function.
+
+The constructor of a contract is a special function that is called when the contract instance is created. It is used to initialize the state of  the  contract.  The constructor can take arguments, which are passed to it when it  is invoked. These arguments are typically used  to set the initial state  ofthe contract, such as the balance of an account or the name ofa token. In this case, `initalSuppply`is an argument of ` constructor` function, so it can't be controlled directly by a user, but it could be manipulated by an attacker who has access tothe constructor.

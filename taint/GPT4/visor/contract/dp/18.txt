@@ -1,0 +1,9 @@
+yes
+
+The contract state `visr` is directly assigned the value of the variable `_visr` in the constructor function of the contract. This assignment creates a data dependency relationship between `visr` and `_visr`, as the state of `visr` is determined by the value passed to `_visr` at the time of contract deployment. Here is the relevant line of code:
+
+```solidity
+visr = IERC20(_visr);
+```
+
+This line indicates that the state variable `visr` is being initialized with the value of the input parameter `_visr`, which is an address expected to conform to the IERC20 interface. Therefore, there is a data dependency between `visr` and `_visr`.

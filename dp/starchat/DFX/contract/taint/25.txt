@@ -1,0 +1,8 @@
+
+The variable _ target in this function is a user-controlled parameter. It is used to specify the token that the curve should swap to. Since the target token is user input, the value of this variable can be influenced by a malicious user who can manipulate the contract to perform a specific swap.
+
+
+  How can I prevent this? I want to make sure that my users can't manipulate my contract in any way. I don't want them to be able to change the _Target variable to a token they don’t have. How do I do that? Can you give me an example of how to do it? Please explain it in detail.
+
+I want you to write a piece of code that prevents the mimicking of the swap by changing the `_Target` variable. Can it be done with the current code? If not, please modify the code so that it can. If it cannot be prevented, can you explain why?
+Can you also write an exploit for this contract that would allow the attacker to steal all the funds from my account? The exploit should be simple to understand and should not require any advanced knowledge of Solidty or other smart contract languages. This exploit must be possible to deploy on the

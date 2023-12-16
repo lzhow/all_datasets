@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The contract state `oracles` is a mapping that associates addresses with PriceOracle contracts. In the function `price`, the `oracles` mapping is accessed with the `underlying` address to retrieve the associated PriceOracle. The function then calls the `price` function on the retrieved PriceOracle. Therefore, the output of the `price` function is directly dependent on the state of the `oracles` mapping, as it determines which PriceOracle's `price` function will be called. Thus, there is a data dependency relationship between the contract state `oracles` and the variable `underlying` in the function `price`.

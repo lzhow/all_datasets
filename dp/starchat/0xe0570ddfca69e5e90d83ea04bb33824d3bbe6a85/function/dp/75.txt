@@ -1,0 +1,8 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates the amount of want that the sender should receive based on how much of the total supply they own.
+
+First, it calculates r, which is equal to (the balance of all the want multiplied by the shares the user owns) divided by (total supply of shares).
+Then, the program checks if the balance in this contract is less than r (if not, then the strategy contract would have more want than this one, and the withdraw function would fail). If the condition is met, we then call the _Burn function, where it transfers the ownership of _Shares from the msg.Sender to the address of this smart contract. 
+
+Afterwards, b is set to equal the current balance (want) of that contract (address). 
+ If b <r, meaning that this balance is smaller than the calculated r value, this means that there is more of a want balance than what the r calculation shows. This means we need to call withdraw on our strategy, but we only want to withdraw the difference between the b and r values. So, if b > r we set withdraw equal r - b, otherwise we just set it equal b (because

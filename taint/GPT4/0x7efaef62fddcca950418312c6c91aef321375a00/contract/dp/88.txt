@@ -1,0 +1,20 @@
+Yes
+
+The variable `_reserve1` in the function `_mintFee` is data dependent on the variable `balance1` in the function `mint`. This is because `_reserve1` is used to calculate the liquidity minting fee, and its value is determined by the current state of the reserves, which are updated based on the `balance1` during the `mint` function execution.
+
+In the `mint` function, `balance1` is calculated as the current balance of `token1` held by the contract subtracted by `_reserve1`, which represents the amount of `token1` added to the pool:
+
+```solidity
+uint balance1 = IERC20(token1).balanceOf(address(this));
+uint amount1 = balance1.sub(_reserve1);
+```
+
+Then, the `_mintFee` function is called, which uses `_reserve1` (among other things) to determine if a fee should be minted and how much:
+
+```solidity
+bool feeOn = _mintFee(_reserve0, _reserve1);
+```
+
+The `_mintFee` function uses `_reserve1` to calculate the liquidity fee based on the K value (product of the reserves) before and after the liquidity event. If there's an increase in the K value, a fee proportional to the growth is minted to the feeTo address.
+
+Therefore, `_reserve1` is data dependent on `balance1` because the calculation of `balance1` in the `mint` function directly influences the state of `_reserve1` used in the `_mintFee` function.

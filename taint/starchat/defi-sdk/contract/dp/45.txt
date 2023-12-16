@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the expression `reserve * (1 - fee)` in `Unipool.amount_out` is evaluated at compile time, and the value of `fee` depends on `pair` and `direction`.
+So, if `unipair` has a function like `function fee() public view virtual returns(int24)`, then `uint116` can be used to store the result of the call to `IUniPair023.fee()`.
+However, since Solidty does not support function calls in constant expressions, the compiler cannot evaluate the `1-fee()` expression at compilation time. Instead, `0` will be stored in a `2**132` sized array, which is used as a lookup table to get the correct value for `uni_amount`.
+
+
+  Can you explain how the data dependencies are determined?
+ 
+  Sure! Data dependencies in computer programs are relationships between variables that affect the behavior of those variables. For example, in an if-else statement, one variable may depend on another if the condition of that if statement depends upon the state of its dependent variable. In a smart contract, data dependence can occur when

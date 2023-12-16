@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the ` functionfunctionCall` function, the` errorMessag` variable is passed as an argument to the `_verifycallResult` internal function. This function checks the success of the call and reverts if the transaction fails. If the error message is not provided, it reveres with a default error messag.
+On the other hand, in `funcionDelegatecall` , the same ` errormessage` is used as a parameter for the internal `_verifcallresult`function. Therefore, `errormessage` in`funcioneDelegatecal`l is data-dependent on ` errormessag ` in  ` funcioneCall`.

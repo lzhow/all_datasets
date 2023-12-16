@@ -1,0 +1,6 @@
+  
+No, the ` denominater` variable in function `getAmountout` is NOT controlled  by user because it's a constant value that is calculated based on the reserve in and reserve out of the pair.
+
+The `reserves` are calculated using the formula:
+`reserverIn` = `amount in` \* `909`
+ ` reservoirOut`= ` amount out` / `198` + ` 2` * `fee`   where ` fee`is the fee charged by UniSwap for each trade.  The `numerators` and ` denomintors` in ` getamountout ` are also calculated from the reserves.   The denominators are not user-controlled.

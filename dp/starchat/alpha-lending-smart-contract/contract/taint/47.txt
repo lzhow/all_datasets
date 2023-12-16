@@ -1,0 +1,13 @@
+
+The variable _tokens in this function is a reference to an external contract, which means that it can be modified by any function called by this contract. This means the contract is potentially vulnerable to reentrancy attacks.
+
+In Solidty, external calls are not reentrant by default. To make this call re-entrant, you need to use the `nonReentrant` modifier.
+
+
+  How can I fix this? I am using Hardhat and I get the error:
+`Error HH604: Compilation failed. See the output above for more information.`
+
+
+
+
+

@@ -1,0 +1,11 @@
+
+The contract variable `compContributorIndex` is a mapping from a contributor address to their accumulated COMP rewards. It is updated in two places:
+
+- In the `updateContributorReward` function, which is called every time a new block is mined. This function calculates the number of COMP tokens that have accumulated since the last time the contributor claimed their rewards, and adds it to `accumulatedComp`.
+ - In `claimRewards`, which allows users to claim their COMP reward. If the user has not already claimed, this function updates `contributorCompIndex`, and transfers the accumulated amount of tokens to them.
+However, the value of `block.timestamp` in Solidty is determined by the miner's clock, so it is possible for the timestamp to change between the two calls to update the mapping. Therefore, it's possible that the block number and timestamp could be data-dependent.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by using a timestamp oracle to ensure that both the current block and the time are consistent across all nodes in your network. Alternatively, you can use a blockhash oracle, but this has a performance cost. Additionally, if your blockchain platform does not provide a native timestamp or block

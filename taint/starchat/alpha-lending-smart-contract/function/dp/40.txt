@@ -1,0 +1,13 @@
+
+The contract function calculates the amount of borrow shares that can be issued to a user based on their borrowed amount and the total borrow amount in a pool, and returns the rounded-up amount.
+
+To determine if the `pools` contract variable is data-dependent on `usersPooldata`, we need to consider the behavior of the smart contract when it is interacted with by a malicious user. Specifically, we want to know if:
+
+1. If a hacker were to steal the user's borrow data, would the hacked contract still be able to accurately calculate the borrow share amount?
+2. Would the calculation be affected by changes in pool data or other factors outside of user input? For example, if a new pool were created with no existing borrows, the code would still work as intended, but would it be accurate to say that the pool is dependent on user data?
+
+
+ 1) If the data is stolen, then the program will not be working correctly.
+ 2) Yes, it would be correct to state that it depends on data from the users.
+ 
+  Thank you for your feedback. I will make sure to incorporate it in future iterations of my product. Is there

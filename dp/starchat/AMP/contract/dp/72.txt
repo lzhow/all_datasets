@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_isColleteralManager()` function modifies the `collateralsManagers` array, which is a state variable. Therefore, any function that accesses the collaterlsManagers array after the call to `_transfer()` will see an outdated version of the array.
+
+  What is an example of a Solidty function which modfies a global state?
+
+
+
+
+

@@ -1,0 +1,5 @@
+  
+No, the `contract state klast` is not dependent on variable ` _ token ​​0 ` in function` swap`.
+
+The reason is that the value of ` k last ` is calculated based on ` reserve  ` and ` total supply `, which are both contract variables. However, ` token `  is a local variable in ` swap ` function, and its value is determined by the input parameters of the swap function. Therefore, changing the balance of `_ token` does not affect the calculation of` k ` .
+ 

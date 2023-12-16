@@ -1,0 +1,5 @@
+  
+No, the variables `_ reserve ​​1 `and` amount  `are not dependent on each other in function` _ mintF  `.
+
+The reason is that the`_reserver1  'variable is defined as a local variable in` getreserves  ', which is a separate function from` mint  '. The`amount  `'variable, on  the other hand, is passed as an argument to the ` mint` function.
+Therefore, changes to` reserve _  _1 'in`getreserv  ''will not affect the value of`res erve _ _  1'in the' mint' function, and vice versa.

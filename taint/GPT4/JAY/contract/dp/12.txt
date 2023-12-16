@@ -1,0 +1,3 @@
+Yes
+
+The contract state `sellNftFeeEth` is data dependent on the variable `price` in the function `updateFees`. In the `updateFees` function, the `price` variable is obtained from the `priceFeed.latestRoundData()` call and is used to calculate the new value of `sellNftFeeEth`. The calculation checks if `_price` (which is derived from `price`) is greater than `USD_PRICE_SELL` and then sets `sellNftFeeEth` based on the result of this comparison and calculation. Therefore, there is a direct data dependency between `sellNftFeeEth` and `price`.

@@ -1,0 +1,4 @@
+  
+No, the ` amounts` variable in `getAmount` is NOT controlled  by user because it's a local variable that is created inside the contract and is used to store the amounts of tokens that are being transferred. It is initialized with the value of the input parameter ` amount` and the values of `p`airs and `d`irection are used in a loop to calculate the amount of each token that needs to be transferred in each step of a swap.
+
+The ` get` function is called in two places in this contract: in  `callBytes` to get the  amount out of one token and in`get`Amount to  get  the`amount` in of another token.  The `swap`function is also called twice in both cases, once to swap the tokens and once again to transfer the final amount to the destination address. Therefore, `amoun`ts`is`not`controlled`by`the`user`because`it`does` not`come`from`an`external`source`and`cannot`be`modified`or`altered` by` theuser.

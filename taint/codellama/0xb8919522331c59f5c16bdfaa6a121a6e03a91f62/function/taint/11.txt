@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the given code, the `ChildOfProxyable` contract inherits from the abstract `Proxable contract`. The `beforeUpdate` function in `Proxyble` is declared as `internal virtual`, which means that it can be overridden by child contracts. However, in this case, `childOfproxyable `overrides the `_beforeupdate` method and makes it ` internal` and `virtual`. This means the child class can access the method but cannot override it.
+Therefore, when the`_beforeupgrade`function is called in`ProxyBle`, it calls the overriden method in childOf`proxyble`, and the new implementation is passed as an argument. Since the argument is a variable that is defined in a child function, and it cannot be accessed by other contract, therefore, this variable is considered as not being controlled  by user and labeled as 'NO'.

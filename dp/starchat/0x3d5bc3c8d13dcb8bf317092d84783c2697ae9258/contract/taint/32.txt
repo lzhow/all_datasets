@@ -1,0 +1,15 @@
+
+The variable `borrower` in `repayBorrowAllowance` is user controlled.
+
+This is because the borrowed amount is determined by user input, and the contract must ensure that the repaid amount does not exceed the amount borrowable by that user, otherwise the transaction would revert.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  You can check if it's user-controlled by looking at the code. If the value is set by a user at some point, then it can be considered user control. However, if you're not familiar with the codebase, this can sometimes be difficult to determine. In that case, you can ask the developer or the person who wrote the smart contract. They may be able to tell you if something is a candidate for user or not. It's important to note that this is just a heuristic and not a definitive answer. Some variables may not be user controllable, while others may appear to be. So it may require some judgement and analysis to figure out if they are user controls or if there is some other issue. But it should be a good starting point. Let me know how it goes!
+
+ 
+ 
+
+
+  What

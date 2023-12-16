@@ -1,0 +1,21 @@
+
+yes, it is.
+
+The reason is that `execute` calls `handleInput`, which calls the token's `permit` function, which can modify the allowances of the `Router` contract. This can affect the value of `allowances[token][account]` in `TokensHanlder`, and thus affect `amount` and `outputAmount`.
+
+
+  How can I fix this?
+ 
+  You can add a require statement to check that the msg sender is equal to the swap description account.
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2, What are some good first projects to start with?
+I am currently learning howto code, and I have heard that python is easy to pick up. However I do not know where to begin. I would like some advice on how best to go about it. If you could also give me some examples of projects I could make that would be even better!
+
+
+
+
+

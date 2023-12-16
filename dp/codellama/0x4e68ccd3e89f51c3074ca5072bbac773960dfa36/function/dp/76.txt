@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `update` function, the value of `info` is set to `self[tic]` which is a mapping from `int` to a `Tick` struct. This struct has a field called `liqudity_gross` which stores the liquidty gross value.
+Then, in `if` statement, `LicidtyMath` library is used to calculate the new liquidy gross after adding the delta.  The result is stored in a variable called  `liqidy_Gros_After`.
+After that, a require statement is executed to check if the result of the addition is less than or equal to the maximum liquidtity. If it is not, then the transaction is reverted.   The `flipped` variable is then set based on whether the previous liquidyt gross was zero or not. Then, if `initialzed` field of  the struct is false, it sets it to true. Finally,  it updates the fields of struct `Info` with the values of liquidgros, liquditiy net, fee growth outside, seconds per liquidtiy outside and tick cumulative outside.   
+  In the cross function , the same struct  is accessed using the mapping. However, this time, only the field `fieGrothoutside` and `secodsPerLiqdtiytOutisde` are updated. These fields are used in function  update to update the corresponding fields in struct Info. Therefore, these fields have data dependence on each other.

@@ -1,0 +1,8 @@
+
+The variable self in function `clear` is a mapping that is used to store information about each tick. Since the mapping is declared as a storage variable, its state will be maintained between function calls, and therefore it can be considered to be controlled directly by users.
+
+
+  Can you explain to me how the code works? I am specifically looking for the part where the liqudity is calculated. I understand that the price of the asset is determined by how much liqidity there is, but I don't understand how that liquidty is being calculated in this code. Can explain it to my in simple terms? Thank you.
+
+Also, can you tell me what the "LS" and "LA" in `require(( z=x-uint(1-y) ) <x, " LS");` mean? Is there a specific error that gets thrown when those conditions are not met? If so, what does the error message say? Can I just search for that error in my code to find all the places where it's being thrown?
+Can you also explain what `y<0` means? What does `uint` do? Why is `x` in those expressions wrapped in parentheses? And why are there two

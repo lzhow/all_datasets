@@ -1,0 +1,15 @@
+
+The contract has a function called `updateCompSupplierAndBorrowersIndex`. This function is called in two places: `flywheelBorrowPreAction` and `claimRewards`.
+
+In ` flywhelBorrowrAction`, the `compSupplierState` is updated, and the borrow index is calculated. Then, the two lines `Double memory newSupplierindex =add_(newSupplierMantis, fraction);` are executed.
+`newSuppliermantis` depends on `newDeltaIndex`, which is a local variable in ` distributeSuppliersComp`. So, ` mantisOne ` is data-dependent on` deltaInde`.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is used to optimize the performance of web pages by combining multiple files into a single file. This reduces the number of requests made to a server when a webpage is loaded, which can significantly improve the page load time. Some popular incremental bundle tools for modern web development include Webpack, Rollup, Parcel, Browserify, SystemJS, esbuild, etc.
+
+ 
+    What are some of the pros and cons of using an incremental web bundlers like Webpack? How

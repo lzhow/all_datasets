@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `_TYPE_HASH` is a bytes32 immutable variable that is assigned a value during contract deployment and cannot be changed afterwards. It is computed from the string literals representing the EIP712 domain type and does not depend on any other state variables or function parameters. The variable `amount` in the `burn` function is a parameter that specifies the amount of tokens to burn from a particular account. The `burn` function modifies the state variables `_balances` and `_totalSupply` but does not interact with or modify `_TYPE_HASH`. Therefore, there is no data dependency relationship between `_TYPE_HASH` and `amount` in the `burn` function.

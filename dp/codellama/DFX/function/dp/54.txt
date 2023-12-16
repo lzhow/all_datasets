@@ -1,0 +1,4 @@
+  
+No.
+
+The variable paid  is not dependent on total_ in liquidty. This is because the paid variable is calculated based on balance  before and after the transfer of tokens, and the total variable in Liquidty is a view function that returns the current total liquidities of the curve pool. Therefore, the value of paid is determined by the balance of token before the transaction and not by total.

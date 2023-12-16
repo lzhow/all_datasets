@@ -1,0 +1,9 @@
+
+The variable errorMessage in function "sub" is not dependent on any of the variables in "trySub". The reason is that the require statement in sub() function checks if the value of b is less than or equal to the a value. If the b value is greater than the current a variable, then the condition will be false and the code will revert. Therefore, the errorMessage variable is irrelevant to this check.
+
+
+  Can you explain why the `require` statement is used in this function?
+ 
+  The require() statement throws an exception if its condition evaluates to false. This is useful for enforcing preconditions and invariants in your code. In this case, we use it to ensure that our math operations don't result in overflow or underflow. By using require(), we can catch these errors early and prevent potential security vulnerabilities.
+
+In general, it's a good practice to use require statements to check for conditions that should always be true, and to revert the transaction if they're not. It can also be useful to add error messages to these statements so that developers can easily understand what went wrong if their transaction is reverted. However, you should use caution when using these checks, as they can have performance

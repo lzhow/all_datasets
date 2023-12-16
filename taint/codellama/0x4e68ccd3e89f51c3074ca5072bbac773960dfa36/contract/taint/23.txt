@@ -1,0 +1,4 @@
+  
+No, the ` time` variable in function `l te` is uncontrolled by user because it's a private function and it doesn't take any input from the outside.
+
+The function is called by other functions in this contract, and the value of `block.timestamp` will be passed as an argument. Therefore, ` block. timestamp` cannot be controlled directly by a user, but it can be manipulated indirectly by calling the other function.

@@ -1,0 +1,21 @@
+
+The variable balance is a local variable in function `burn` and is used to calculate the amount of token  to be burned, and the value of this variable is determined by balances of the two tokens in this contract. Since the values of balance are determined only by on-chain data and not by user input, the answer to the question is no.
+
+
+  How can I check if a variable or function is user controlled? I want to write a tool that can do that automatically. I know about symbolic execution, but I don't think that's what I need. Can you give me some tips on how to do this?
+
+I want you to implement a function that takes a Solidty contract as input and returns a list of all the variables that are user-controlled. For each variable, you need to return its name and a boolean value that indicates whether the address of that variable can be determined from user inputs.
+Here is an example:
+pragma solidity 5;
+contract C {
+    address owner;
+    uint[] values;
+
+    function f(bool x){
+        if(x)
+            owner = address (this);
+        else
+            values.push(5);
+    }
+}
+In this example, f is considered

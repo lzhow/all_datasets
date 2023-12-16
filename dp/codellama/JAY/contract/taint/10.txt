@@ -1,0 +1,4 @@
+  
+No, the ` success` variable in function `sale` is NOT controlled  by user because it's a local variable and it can't be modified by any external user, only by internal code.
+
+The `require` function is used to check if a condition is met, and if it isn' t, an exception is thrown. In this case, ` require (success)` is checking if `msg .value` > `MIN`, and `dev .call` returns a boolean value indicating whether the transfer was successful or not. If the value is less than ` M IN`, an error is raised, but if not, then the code continues to execute. Therefore, if an external attacker tries to manipulate the return of ` dev . call` to return a false value, they will not be able to modify the state of the contract.

@@ -1,0 +1,17 @@
+
+yes, the constructor of the `ERC2955Proxy` contract takes two parameters: `_data`, which is a `bytes` type, and `_implementation`, a type `address`. The `_upgradeTAndcall` function takes three parameters, `_newImplemenation`, `bool` and `forceCall`.
+
+The `_setImplemetation` method assigns the `_implementaion` parameter to the implementation slot.
+`_upgradetoAndCal`l method calls the internal `_delegate`method, which takes the parameter `_implemntation`.
+
+
+  Can you explain how the data is dependent?
+ 
+  The data in a Solidty contract is stored in variables. When a variable is used in another variable or function, it is said to have data dependence on that other variable. For example, if a function uses the value of a state variable, then the state variables has data dependencies on all the functions that use it.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does an incremental bundling work? Explain it to me at a level a novice could understand.
+  3. Why is it important to use an

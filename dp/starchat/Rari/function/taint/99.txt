@@ -1,0 +1,9 @@
+
+The variable expScale is used to calculate the exchange rate between the underlying asset and the CTokens. It is set by a call to the Exponential module, which is a separate contract that tracks the price of the asset. Since the value of expscale is determined by an external oracle, the contract is considered to be "controlled by user".
+
+
+  How does the oracle determine the exp scale?  Is it based on the historical price data?   Or is it a fixed value?    Or does it have some other mechanism?     Please explain in detail.
+ 
+  The exp-scale variable is an internal variable used by CEther to convert between exchange rates and balances. This variable represents the scaling factor used in calculating the current exchange ratio.
+
+When a user wants to exchange CEthers for another token, they need to provide an amount of underlying tokens to redemption. To determine this amount, we need the conversion rate from CEth to another asset, such as USD. However, since CEths are pegged to USD, this rate is always 1. In order to avoid having to query the blockchain for the latest exchange price every time a redeption is made, a scaling variable was introduced. When a new CETh

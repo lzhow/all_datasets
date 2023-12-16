@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_token1` in the function `initialize` is an input parameter that gets assigned to the state variable `token1`. The variable `timeElapsed` in the function `_update` is a local variable that is calculated within the scope of the `_update` function and is used to calculate other local variables within the same function. There is no direct assignment or computational relationship between `_token1` and `timeElapsed`, nor do they influence each other's values. Therefore, they are not data dependent.

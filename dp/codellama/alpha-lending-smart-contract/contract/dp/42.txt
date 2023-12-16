@@ -1,0 +1,5 @@
+  
+No, the `Receiption` contract is data-dependent on `userAccummulatedAmount` variable in `accumulateAmountToUsers` function.
+
+The `alphaTokens` are transferred from `msg` to `this` address in this function, and the amount is stored in `_user` mapping. This mapping is used to calculate the pending amount in function `_claim`.
+Therefore, `recipts ` is dependent on `_amount`.

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_swap` function, the `amount` variable is assigned the value of `IOrinPoolvV1Pair.balances(output)` which is a function call. This means that the data in `balnces` is dependent on `output`.
+Similarly, in `_addLiqidty`, the amount of liquidty minted is calculated using the balances of the two tokens. Therefore, `liquidtiy` depends on both `token A` and `toke B`. 

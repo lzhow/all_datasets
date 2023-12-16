@@ -1,0 +1,9 @@
+
+The variable _ADMIN\_SLOT in this function is unknown because it does not follow the naming convention for variables that are "internal" to a contract. Additionally, the code does appear to be a proxy contract, which is a type of contract that is used to upgrade other contracts. However, this code snippet does contain some important information about the implementation of the proxy pattern.
+
+In the OpenZeppelin library, there is an implementation called "TransparentUpgradableProxies" that inherits from the "UpgradeabbleProxy" contract in OpenZepplin. This contract has an internal slot called \_ADMINSLOT that stores the address of an administrator for the contract (the address that can upgrade the logic contract).
+\
+When the constructor is called, a new proxy is created and the \_adminSlot variable is initialized to the admin parameter. Since the parameter is payabel, and this contract inherits the payablity from TransperantUpgraderProxy, then the new contract will also be payble.
+
+
+  Can you explain what the internal slots are? I've heard that they're a way to store data in a Solidty contract without using the storage variable. Can't you access the data from outside the smart contract? If so,

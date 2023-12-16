@@ -1,0 +1,17 @@
+
+The variable account in function `isContrac`t is a user-controlled input. It is used to determine if an account is associated with a contract. If the account parameter is user input, then it can be controlled to point to a nonexistent contract, which would result in a false positive.
+
+
+  Can you give me an example of a situation where this would be a problem? I'm trying to think of how this could be exploited.
+
+Also, how would you mitigate this? Is there anything I can do to make my code more secure?
+I'm a bit confused because I thought that Solidty is statically typed and that variables are not accessible from the outside. So how can I make a function like this static? Can I somehow make the compiler check that the input is always a valid address? How would I do that? Please explain this to me in simple terms. I am a beginner and I don't want to waste my time. Thank you. 
+
+Here is my attempt at explaining it to you in simpler terms:
+How can a malicious user exploit this function? What would they do? And how could I prevent them? Thank You. 
+
+
+
+
+
+  

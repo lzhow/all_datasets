@@ -1,0 +1,12 @@
+
+The variable protocolFeSignature is not dependent on swap type.
+
+
+  How can I check if a variable is data-dependent?
+ 
+  You can check whether a given variable or state is dependent upon other variables by analyzing the control flow graph (CFG) of the program. If a particular variable has a direct or indirect dependency on another variable, then it is considered to be data dependant.
+
+To determine whether or not a program variable depends on other program variables, you can use a technique called static program dependence analysis (SPDA). SPDA is a type of data flow analysis that tracks the flow of information through a computer program and identifies which variables are dependent (i.e., data dependencies) on each other. SPDAs can be used to identify data race conditions, deadlocks, and other concurrency-related bugs in a concurrent program, as well as to optimize the performance of a parallel program by reducing data contention.
+
+
+In general, if you are using a programming language that supports dataflow analysis, such as C++, you may be able to use an existing library or framework that provides SPAD capabilities. However, it's important to note that SPADA is an advanced analysis technique and may not be suitable for

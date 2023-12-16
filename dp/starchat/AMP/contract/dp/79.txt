@@ -1,0 +1,18 @@
+
+yes, it is.
+
+The reason is that the `_callTransferPreHooks` function in `Amp.sol` calls the `tokensTransferred` method on any contract that implements the IAMPTokensValidator interface. This method takes the sender and recipient addresses, as well as the amount of tokens being transferred. If the recipient contract is a partition strategy, then it will need to know the partition in which the tokens are being sent. However, the value of the from partition is only known in `_transfer` and `_approve` functions, which are called after `_validatePretransfer`. Therefore, `amp.tokensValidator` will be set to the address of a contract implementing the ISwapsValidator, but the actual partition will not be known until `_transfe` is called.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by moving the call to `_addtokenTopartition` to after the line where `_value` has been set. That way, `_from` always has a valid partition. Here's the fixed code:
+ ```
+   function mint(... ) {... }
+  ...
+   _addToPartition(...);
+   emit...;
+ }
+ function... {
+   uint value =... ;
+  

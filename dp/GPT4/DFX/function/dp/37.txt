@@ -1,0 +1,9 @@
+Label: yes
+
+Explanation: The variable `_newShells` in the function `proportionalDeposit` is data dependent on the variable `_baseWeight` in the function `getGrossLiquidityAndBalancesForDeposit`. This is because the value of `_newShells` is calculated using the value of `_baseWeight` in the following line of code:
+
+```
+_newShells = _newShells.div(_oGLiq);
+```
+
+Here, `_oGLiq` is calculated in the `getGrossLiquidityAndBalancesForDeposit` function, and its value depends on `_baseWeight`. Therefore, there is a data dependency relationship between these two variables.

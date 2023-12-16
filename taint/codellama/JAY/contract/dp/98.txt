@@ -1,0 +1,5 @@
+  
+No, the variables `_address` and `from` are both data-dependent on `msg` but not on each other.
+
+The variable  `_tokensAddress ` is a parameter of the `buyerJawWithErc` function, which is called by the  `seller` contract. Therefore, it is not dependent on any other variable in this contract, including ` data`.
+On the other hand, ` from` is also a variable of ` onErC 51Received` which receives the data from the caller of this function. However, this data is passed to the contract by ` msg`, which means that it can be accessed by any function in ` seller`. Therefore `  from `is data - dependent  on` msg`. 

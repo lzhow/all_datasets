@@ -1,0 +1,7 @@
+
+The variable _ amount in calculate round up liquidity share amount external is a user-controlled variable. It is used to calculate the amount of liqudity shares to be minted for a given amount. Since the liqidity shares are used as a representation of the borrowed amount, the value of _ amoun tshould be proportional to the actual borrow amount and the total supply of borrow shares. If the _ amout is user controlled, then it can be manipulated by a malicious user to increase or decrease the number of shares mintted, thereby affecting the supply and demand for borrowing.
+
+
+  Can you explain how the moral hazard is relevant to this contract?  What is it trying to prevent?
+
+In computer science, a common concept is that of a "moral error", which is an error in reasoning that can result in unintended consequences. In the case of smart contracts, mere human oversight can lead to vulnerabilities that could be exploited by attackers. For example, if a contract allows users to withdraw their funds without requiring them to pay a fee, an attacker could exploit this feature to repeatedly withdraw all the funds from the contract, potentially causing a

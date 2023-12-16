@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the ` decode I8` function, the value of the local variable 'value' is set to the result of a bitwise shift operation on a memory location that is stored in a variable called 'data'. The memory address of this location is determined by the 'offset' property of ' data'. Therefore, ' value' depends on ' offset' which is a property in ' Data' struct.
+Similarly, in `DecodeI 64`function, a similar bitshift operation is performed on another memory region that depends directly on `offset` property. Therefore ` value` is data-dependent on`data`.
+ 

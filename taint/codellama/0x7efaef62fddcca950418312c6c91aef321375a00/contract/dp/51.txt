@@ -1,0 +1,4 @@
+  
+No, the `contract state klast` is not dependent on `variable liquidty`in the mint function.
+
+The `reserves` are updated in `getReserve` function, which is called in `_update` and `_maintFess` functions. However, ` liquidy`is not used in these functions, so it is independent of ` k last`.

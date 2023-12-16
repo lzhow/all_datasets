@@ -1,0 +1,4 @@
+  
+No, the ` ratio` variable in update Comp Borrow Index is NOT controlled  by user because it's calculated based on the current borrow index and the total borrows of the ctoken.
+
+The `borowIndex` is a public variable that is set by calling the borrow function of a c token, and it represents the interest rate that the borower has to pay.  The `total borows` of ctokens is also a variable set when the contract is deployed, so it can't be controlled directly by a user but it could be manipulated by an attacker. Therefore, `comp accrual` could also be used to manipulate the system.

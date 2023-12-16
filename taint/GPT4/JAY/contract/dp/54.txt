@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_address` in the function `updateDevWallet` is an input parameter that represents the new address to be set for the developer's wallet. It is independent of any other state variables or logic within the contract. On the other hand, the variable `total` in the function `buyNFTs` is a local variable that is used to calculate the total number of NFTs being purchased within that function. There is no direct relationship or dependency between `_address` and `total` as they are used in completely separate contexts within the contract. `_address` is solely for updating the `dev` state variable, while `total` is used for transactional logic within the `buyNFTs` function.

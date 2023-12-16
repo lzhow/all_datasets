@@ -1,0 +1,16 @@
+
+The variable factory is a contract address that is set in a constructor and is therefore controlled automatically by Solidty.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can be served to the users browser. This is done in order to reduce the number of requests that the browser has to make to your server inorder to get all your code. An example of a popular incremental bundle tool is webpack. It takes in entry points, which are the main files of your application, and recursively processes all of the dependencies of those files, combining them all into one file. Then it optimizes that file by minifying and uglifying it, removing any comments and other unneeded code, in an effort to keep the file size as small as possible. Finally it generates a manifest file which contains a

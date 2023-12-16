@@ -1,0 +1,4 @@
+  
+The variable 'retundata' in function 'functionStaticcall' is labeled as 'Unknown'. The reason is that the value of ' retunddata' depends on the input parameter 'data'. If the data is a user-controlled input, then the 'return data' will also be user controlled. However, if ' data ' is hardcoded or a constant, the return data will not be controlled user input.
+
+In the case of the given code, ' function staticCall' calls the target contract's staticcall function with the provided data. If 'target' contract is user control, and the static function call is successful, return the result of staticfunction call.  If static functions call fails, revert with error message. In this case, we cannot determine whether the returned data from the contract call will be a controlled input or not. Therefore, labeling the retuned data as unknown.

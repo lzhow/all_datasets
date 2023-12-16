@@ -1,0 +1,5 @@
+  
+No, the ` balanceOf ` contract is not dependent on ` denominators ` in function ` _ mintFees `.
+
+The reason is that the `_ mint` function is called only if `feesOn` is true, and ` fees On ` is only true if the address of the fee recipient is non-zero. Therefore, if `_klast` and `_reserver0` are nonzero, then `liqudity` will be non zero, but this does not mean that ` balancesOf[feeto]` is dependent  on` denominatior`.
+ 

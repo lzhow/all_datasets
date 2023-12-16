@@ -1,0 +1,7 @@
+
+Yes, `CtokenCollatera` is data-dependent on `Liquidator`. This is because the `seizeToken` variable in `liqudateBorrowVerfiy` function is assigned the value of `actualRepyAmount` multiplied by the exchange rate between `collateralToken`(cCollToken) and `borrowToken `(cBorrowToken). This exchange-rate is determined by calling the price function on each of the two cTokens.
+
+The `price` functions are implemented as modifiers in each ctoken contract. These modifiers are used to calculate the current exchange rates for each token. For example, the USD price of cColltoken is calculated by multiplying the collateralFactor of each market by its exchangeRate. If the cBorrowtoken price is 100 USD, and the market's collaterFactor is.5, then the modifier calculates the rate as 50USD. 
+
+When the liquidation function executes, it calculates `exchangeRate` as the ratio of total borrows to total supply. It then calculates seizedTokens as `repaymentAmount * exchange Rate`.
+Since `Collatoral` and` Liquidator `are data dependencies, when the program analyzes the code, 

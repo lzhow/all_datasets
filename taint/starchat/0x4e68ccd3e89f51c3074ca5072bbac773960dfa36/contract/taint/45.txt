@@ -1,0 +1,15 @@
+
+The variable "i" in function "observe" is a loop counter and is therefore not directly controlled or influenced by user input. However, the values of "secondsAges" and "tick" are user-controlled and can influence the output of the "transform" function, which is called in "write" by "grow" which in turn is used by function" observe".
+
+
+  Can you explain how the code works? I'm not very good at maths
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain it to me at a level a data scientist can understand.
+  
+  An incremental bundlers job is to take all the files that make up your web application and bundle them into a single file that can be served to the users browser. This makes it much easier for the browser to load the application since it only has to download a small file instead of many small files.
+
+  The incremental part of an incremental bundle means that it will only update the portions of code that have changed since the last time the bundling was done. For example, if you are working on a react application, and you only change one line of javascript code

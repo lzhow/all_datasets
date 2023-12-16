@@ -1,0 +1,4 @@
+  
+No, the variables `ctoken` and `Comp` are independent.
+
+The function  `setcompborrowspeedinternal` is called in `flywheelpreborrweraction` which is a public function. This function is only called by the `Redeem` function in another contract. Therefore, `Ctoken` cannot be data-dependent on `COMP` because it is never called. 

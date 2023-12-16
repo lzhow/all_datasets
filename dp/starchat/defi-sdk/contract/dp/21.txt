@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `IuniswaPV2pair.tokenX()` function is called in `callBytes` function, which is a public function and can be called by other contracts. Therefore, the value of `pair` and `direction` can change, and the control flow can reach the line where `token` is assigned a new value.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `UnswapCaller` contract calls the UnswapV1 library to perform a swap. This library contains a function called `swap` that takes 4 parameters: `amount0In`, `amoun1In`,`to`,`data`. The value assigned to `to` depends on whether the current iteration of the loop is for a token0-token2 pair or a pair of token1-toke2. If the token is token2, then the swap is performed from token 2 to token one, so the to parameter is set to the address of that token. However, if the iteration is on a `t0t2` pair then `from` should be set as the contract address. 
+
+This means that `unswapv1.swap

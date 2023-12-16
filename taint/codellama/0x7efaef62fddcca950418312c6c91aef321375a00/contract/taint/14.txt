@@ -1,0 +1,5 @@
+  
+No, the ` klast` variable in function `burn` is labeled as 'No' because it does not appear to be user-controlled.
+
+The ` burn` function is called by a user who wants to burn a certain amount of liquidty from the pool. However, `amount` and `to` are the only user inputs to the contract. `balances` of the tokens are also not user controlled.  The `reserves` in `getReserve` can be controlled, but they are not used in this function. Therefore, there is no user input that controls the value of `klast`.
+ 

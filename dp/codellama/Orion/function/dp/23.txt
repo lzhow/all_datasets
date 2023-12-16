@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `pairForCure` function, the variables `factory`, `tokeA`, and `tokB` are passed as arguments. However, `pool` is not passed, but it is returned by the call to `ICurvRegistry.findPoolForCoins`.
+  The `findpoolForcoiins` method takes three arguments: `address factory`,`address tokena`,and `addresstokenb`. It returns a value of type `uint` that represents the pool address.
+   In the`getamountIncurve`function,the`pool `variable is assigned the value returned from the previous call. This means that the address of the curve pool is determined by calling the method ` findpoolforcois` with the same arguments as the current function. Therefore,`tokena` and`tokb`are data-dependent on`from`.

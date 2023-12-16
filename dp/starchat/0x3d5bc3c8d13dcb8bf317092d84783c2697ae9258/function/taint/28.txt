@@ -1,0 +1,12 @@
+
+The variable seiZeTokens in function liqudateBorrowVeify is a return value and is therefore not directly controlled. It is calculated by subtracting the amount of collateral that would be seized from the total collaterized value of the cETH contract.
+
+
+  How does the contract know the value?  It doesn't look like it's using the seizetokens to calculate the new collated value.  Also, the calculation is done in terms of raw ether, not in ctokens.   So, how does it know how much ether to seise?   It's not using ether directly, so how can it calculate how many seizing tokens to return?
+
+I'm not sure what you mean by "The calculation done is in raw Ether, and not ctoken".  The calculation in question is to determine how to split the repaid amount between the collatoral and the borrowed token.
+If the tokens are cEth, then the ether value is already in wei, which is what the math needs.  
+
+So, I don't think the code does what it says it does.    It looks like a copy/paste error from another function. 
+
+Please explain how the algorithm

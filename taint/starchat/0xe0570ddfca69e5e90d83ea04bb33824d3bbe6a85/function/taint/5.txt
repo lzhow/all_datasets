@@ -1,0 +1,11 @@
+
+yes, the `_amount` variable in `earn()` is user controlled. It is set to `_available()` which is a view function that returns the balance of the strategy's want token (e.g. WETH). The user can call `deposit()` and `withdraw()` to change the value of `_balance()`.
+
+
+  Can you explain how the code works? I'm having trouble understanding how `_msgsender()` works.
+ 
+  Sure! The `_` in front of `msg` is just a naming convention to make it clear that the `sender` property of msg is being accessed.
+
+`_msg Sender()` returns `address` payabl`e` which means that it returns an address that can be used to pay ether. In Solidty, `payable` addresses can receive ether, so this is what is returned. `view` means the method does not modify the state of contract. This means you can't use it to modify state, but you CAN use the returned value to read state. 
+
+The reason you are calling it in a require statement is because you want to ensure that only the person who deployed the contract can set the initial strategy for the vault. If you were to call it outside of a

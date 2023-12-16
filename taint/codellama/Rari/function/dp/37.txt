@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `subExp` function, the expression `a` is passed as an argument, which is a `Exp memory` type. This means that the memory location of `exp` will be passed by reference, and any changes made to `m` inside the subtraction function will also be reflected in `b`.
+Similarly, in function mulscaler, `scaledmanti`s is also passed to the mul function as a reference.
+Therefore, both ` result` and ` scaledmantiss` are dependent on ` scalar`.

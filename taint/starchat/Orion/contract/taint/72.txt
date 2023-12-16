@@ -1,0 +1,15 @@
+
+The variable "b" in function "mod" is user-controlled.
+
+Explanation:
+In the "tryMod" function, the value of "a" and "m" are used to calculate the remainder of a division operation. If the divisor "0" was passed as a parameter, then the result would always be "false" (as "division by  zero" would result in a "denominator equal to zero"). However, in this case, Solidty will revert the transaction, as the provided divisor is "zero".
+Therefore, if "user input" for "divisor" equals "Zero", then "result" will be equal "to zero", and the code will enter the require statement, which will throw an error.
+
+
+  Can you explain how the control flow analysis works? I'm having trouble understanding how it determines that "variable b is control by user".
+
+
+
+
+
+   What is a good way to learn how to code in python?  I have heard that python has the most "bang for your buck" when it comes to coding.  However I also heard it can be very difficult to pick up.   What do you think?   Is there a way I can

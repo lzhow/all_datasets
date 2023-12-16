@@ -1,0 +1,17 @@
+
+The function calculateAlpharward has a loop that iterates over all the users and calculates the pending rewards for each user. It does this by subtracting the latestAlphaMultipliers from the alphaMultipiers and multiplying them by the borrowShares and dividing by 100,0.0 This is then added to the totalAlphaRewards.
+
+However, the loop does not use the pool variable. Therefore, it is not dependent on it.
+
+
+  How can I modify the code to make the `payBackAmount` dependent of the `_token` variable?
+ 
+  You can modify your code by making the payBack amount dependent upon the token variable by using the pricePerShare variable in your calculation. Here's an example of how you could modify it:
+ ```  solidity
+uint price = priceFeed.getPrice(token);
+payoutAmount += price * payoutShares /  priceperShare;
+}
+This code calculates a price for the given token using a PriceFeed contract, and uses the calculated price to calculate the amount of tokens that will be paid out. This ensures that the correct amount is paid for every token in circulation.  ```
+
+ 
+    How do I get

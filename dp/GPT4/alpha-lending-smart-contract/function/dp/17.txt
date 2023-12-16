@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `data` in the function `decodeU8` is data dependent on the variable `data` in the function `decodeBool` because `decodeBool` calls `decodeU8` and passes its `data` parameter to it. This means that the output of `decodeU8` (and thus the value of the `value` variable within it) directly depends on the `data` argument provided by `decodeBool`. The `data` parameter in both functions refers to the same memory location, and any changes to the `data`'s `offset` or `raw` within `decodeU8` would affect the interpretation of `data` in `decodeBool`.

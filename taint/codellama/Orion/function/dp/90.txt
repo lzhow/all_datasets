@@ -1,0 +1,4 @@
+  
+No, the variables ` supportFactor` and ` amountDesire` are independent.
+
+The variable  ` supporting Factor ` is a local variable in function  `_swap` that is not used in any other function. It is only used to determine whether the `pair. swap` function is called with the  'supportFacotr' parameter set to true or false. This parameter is used by the swap function to calculate the amount of tokens to be swapped. However, this calculation is done using the local variables  amountInput and amountOutput, which are also local to the `_ swap ` function and are only dependent on each other. Therefore, there is no data dependence between the two functions.

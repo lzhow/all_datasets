@@ -1,0 +1,11 @@
+
+The variable permit in function "handleInput" is data-dependent on variable totalFeesShare in "getReturnAmount" because the value of permit is determined by the state of the contract at the time of execution.
+
+
+  How can I check if the data is dependent on a variable?
+ 
+  You can check the dependencies of data by using a tool called "Data Dependency Analysis" (DDA). This tool analyzes the code of a program and identifies which parts of code depend on which other parts. If a piece of information is used in multiple places in your code, it is likely to be data that is being depenedent on other variables.
+
+To use DDA, you will need to write a test case for the specific function in which the dependency is occurring. This test will involve setting up the conditions that will cause the dependent data to change. Then, the tool will run the test and record the changes made to the variables in question. By analyzing the differences between the original and modified states of these variables, DAA can determine which variables are dependent and which are independent. 
+
+It's important to note that DDD is a complex and challenging task that requires a thorough understanding of programming and computer

@@ -1,0 +1,4 @@
+  
+No, the variables ` amount 1 In` and `_ reserve0 ` are independent.
+
+The reason is that the `balances` of the two tokens are calculated independently in each function call, and the `_update` function is called after the balances are updated. Therefore, changes to the balance of one token do not affect the other token's balance. 

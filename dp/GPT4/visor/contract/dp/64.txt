@@ -1,0 +1,3 @@
+no
+
+The variable `target` in the function `functionCallWithValue` and the variable `target` in the function `functionStaticCall` are function parameters that are scoped to their respective functions. Each function has its own separate execution context, and the `target` in one function does not depend on or affect the `target` in the other function. They are independent variables, and changes to one will not impact the other. Therefore, there is no data dependency relationship between these two instances of the `target` variable.

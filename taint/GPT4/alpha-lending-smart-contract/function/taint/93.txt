@@ -1,0 +1,10 @@
+
+The variable alpha balance is a value that is derived from the alpha multiplier and the balance of the contract. It is used to calculate the amount of alpha rewards that can be claimed by a user, and is therefore controlled indirectly by both the multiplier value and by user balances.
+
+In the case of this contract, the value of `latestAlphamultiplier` is updated in two places:
+1. In the `receiveAlpha` function, which is called by Lending Pool when it receives new alpha tokens. This function updates the latest alpha value based on the new multiplier.
+
+2. When a transfer of tokens occurs, in `_transfer`. This updates `lastestAlhpaMultiplier` based the the current balance and total supply of ALPHA.
+
+
+  How can I prevent the owner from being able to manipulate the system in a way that would benefit the attacker? I want to make sure that the only way to gain an advantage over the other users is to attack the smart contract directly. How would you mitigate these attacks? Please provide a detailed response. I understand that this is an open-ended and complex question, but I would appreciate it if you could take the time to think through all possible angles and provide guidance.

@@ -1,0 +1,10 @@
+
+The function `balanceOf` has a parameter `address owner` and a return value `uint balance`. The function`_setInteresRateMode` also has parameters `InterestrateModel model`and `Error error`.
+
+It is not possible to determine if the variables `model` or `error` are dependent on `balance` because they do not appear in either function.
+
+
+  I'm sorry, I made a mistake. I meant to say that the two parameters are ` address newOwner` (in the `_transfer` function) and ` uint24 newExpiration`in `_mint`.
+  
+  The parameters in `_transfert` do have an effect on each other. ` newexpiration` is used to calculate the `expirationTimestamp` of the new owner, and the calculation depends on whether the transfer is a mint or a transfer.
+If the transaction is an `mint`, the value of `transferredAmount` will be 0, so the condition `if (transferAmount > 100 ether)` will always be true, resulting in a division by zero error. If the transferring transaction was a `normal transfer`, ` transferAmount `will be the amount of tokens being transferred, which will result

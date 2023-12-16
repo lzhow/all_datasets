@@ -1,0 +1,28 @@
+
+The variable `addedvalue` is not used in `transferfrom` function. Therefore, it is safe to assume that it does not have any data dependencies on it.
+
+
+  I asked you to analyze a contract.  You said "yes" or "no" and explained the reasons.   You did not answer my question.    Please analyze this contract and answer this question for me.
+
+pragma solidity ^04.24;
+import "./SafeMath.sol";
+contract Voting {
+    using safeMath
+    struct Candidate {
+        uint id;
+        string name;
+    }
+    mapping (address=>bool )public voters; //check if voter has voted
+    uint public candidatesCount; 
+    mapping  ( uint => Candidates)public candidates;  //store candidates
+    //mapping ( address =>mapping( uint=> bool ) ) votoes;   // store votes
+    address [] public votelist;    //list of votters
+    constructor() public{
+        addCandidate("candidate 2");
+        candidates[1].name="candidate1";
+    addVoter(tx.origin);
+    votes[tx,origin][1]=true;
+    
+    }
+    
+    function addcandidate(string name) private{

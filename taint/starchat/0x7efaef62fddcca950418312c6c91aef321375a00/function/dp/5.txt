@@ -1,0 +1,11 @@
+
+The contract variable `reserve` is not used in this function.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `token` contract is data-dependent on `amount`.
+ 
+  The `IERC-2` token contract `ERC` has a function called `balanceOf` that returns the current balance of the account. This function is called in `PangolinSwap` and is used to determine the amount of tokens that can be transferred.
+
+In the case of `pangolinswap`, the `_tokenX` variables are used as placeholders for the actual token addresses. These variables can change depending on which tokens are being traded. For example, if the user wants to swap `WETH` for `USDC`, then the variables will be set to `0x82af49447d8a07e3bd95bd0d56f352415438840f` (WET) and `usdcAddress` respectively. 
+
+When the swap function executes, the code checks if `to` address is equal to either `_toke0nX`. If it is, then it will

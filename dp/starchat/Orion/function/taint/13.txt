@@ -1,0 +1,13 @@
+
+The variable with_factory in do_swap_through_orion_pool is user-controlled. This variable is used to determine whether or not to use the factory address as the first element in swap_data.paths. If the path contains more than two elements and the address of the current factory is in that list, then with factory will be set to True.
+
+If with Factory is True, the swap will use a different path than the one provided. Instead of swapping directly from the token being spent to the desired token, we will first swap from token  to token1 using the given factory. Then, from that new token (which will now be token2) we swap to get the final desired output token.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was five. Thanks!
+
+
+
+
+
+   What is a good way to learn how to code in python?  I currently have a degree in English and have used it for a number of years to write essays, but I have never taken a formal class in computer programming.  If there is something I should learn first

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `TranspareUpgrdeableproxy.sol` contract, the `_getproxyAdmin` function calls the static `staticCall` method of the proxy contract to retrieve the admin address. This method takes the address of a target contract and a caldata as input, and returns the result of calling the target's `implementation` view function.
+Here, `address.implementation()` is called on `msg_sender` and the return value is stored in `returnData`.
+Since the value of `addr` is passed as an argument to the call, it is data-dependent on it. Therefore, we can conclude that the retunData variable is dependent on proxy variable.

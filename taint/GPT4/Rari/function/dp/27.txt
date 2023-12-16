@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The contract state `dripped` is data dependent on the variable `dripStart_` in the function `drip`. This is because the value of `dripStart_` is used in the calculation of `deltaDrip_`, which in turn affects the value of `dripped`. Specifically, `deltaDrip_` is calculated as the difference between `dripTotal_` and `dripped_`, and `dripTotal_` is calculated using the value of `dripStart_`. Therefore, any change in the value of `dripStart_` will affect the value of `dripped`.

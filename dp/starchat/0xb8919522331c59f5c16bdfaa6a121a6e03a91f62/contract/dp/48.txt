@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the `target` variable in `staticCall` is a contract address, while the address of `this` contract is not known at compile time. Therefore, the compiler cannot statically determine if the call will revert or not.
+
+
+  How can I fix this?
+ 
+  You can add a check to see if `iscontract` returns true for the target address before calling `delegateCall`.
+
+ 
+   How do I do that? I'm not very good at coding. Can you give me an example? Please also explain what the code does. I don't understand what "target address" is in this context. Is it the contract that I am analyzing? If so, how do i find the other contract's address? Is the "data" variable the entire contract? How does the delegateCall work? What is it used for? Can I just copy and paste the fixed code into my contract and it will work, or do other changes need to be made? Thank you. This is important for my thesis project. If you could also give a few tips on how to debug solidity code, that would be great. For example, if I have an error,

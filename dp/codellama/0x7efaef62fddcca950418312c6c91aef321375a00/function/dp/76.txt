@@ -1,0 +1,5 @@
+  
+No, the variables ` balance 1 ` and ` amount ​0 ` are independent.
+
+The reason is that the ` burn ` function is called twice in this code, and the two calls have different values for the input parameter ` to `. Therefore, when the first call to ` _ burn` is made, ` address (this) ` is not the same as `to`, and therefore the value of ` liquid ` in that call is different from the one in subsequent calls. As a result, there is no data dependence between `liquid` and` amount `, so the answer is "no".
+ 

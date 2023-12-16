@@ -1,0 +1,5 @@
+  
+No, the ` borrwer delta` variable in function `distribute borowerComp` is data-dependent on variable`suppliespeeds ` in `_ setcompSpees` function.
+
+The reason is that the `_updateCompborowIndex` method in ` distrubuteBorrwercomp` calls the`_ setcompspeed` internal method, which updates the value of the global variable `_compborrowspee`d. This variable is then used in`distrubeBowrdercomp ` to calculate the borowwerdelta. Therefore, ` borrowerdelta` depends on ` suppliesspees`.
+ 

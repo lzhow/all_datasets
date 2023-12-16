@@ -1,0 +1,9 @@
+
+The contract constructor takes two parameters: `initialSupply` and `operators`. The `_mint` function is called with the `msg` sender as the first parameter, and the value of `supply` as its second parameter.
+
+However, the `_supply`, `_name`, and `_decimals` variables are declared as `internal` rather than `private`, which means that they can be accessed by other functions in this contract. This means the values of these variables can change over time, which could result in unintended consequences if they were used in a mathematical operation.
+
+
+  Can you explain why the _symbol variable is declared internal and not private?
+ 
+  The _supply, _name,  and _decimals variables in ERC20 are internal because they should be accessible to other contracts that inherit from the ERC-223 contract, but not to contracts outside of the inheritance tree.  The internal keyword allows the variables to be used by the inheriting contract but prevents them from being accessed directly by contracts other than the one in which they're declared.   This is to prevent accidental or malicious changes to the state of those variables that could have serious consequence.    The private keyword would prevent the inherited contract from

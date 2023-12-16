@@ -1,0 +1,5 @@
+  
+No, the ` factory` variable in this function is a constant and is set to the address of the contract that created this contract. It is therefore not user-controlled.
+
+The `constructor()` function sets the value of `address factory;` to `msg .sender`, which is equal to address that deployed the current contract, which in turn is also the creator of this current smart contract .
+Therefore, ` address factory ` is initialized with the same address as the one that deploys the smart contact, and it cannot be changed by any user input.

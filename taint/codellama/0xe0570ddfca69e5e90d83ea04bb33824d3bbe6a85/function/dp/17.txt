@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data connection between them.
+In the `withDraw` function, the `_burn` method is called, which burns the shares of the user. This method takes the address of a user as an argument. In the context of this function call, it is not clear whether the argument is related to the current user or the owner of `_strategy`.
+On the other hand, in `Propose Strategy`, the method `require` is used to check if the proposal is valid. It checks if `address (this)` is equal to `IStrategy (_implementation) .vaule()`. This means that the implementation address is compared to a value that is stored in a contract. If the value is different, an error is thrown.  It is possible that this value could be related in some way to `_share` or `_implementations`. However without more information, we cannot determine a direct connection.

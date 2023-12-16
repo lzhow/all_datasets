@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `price0CumulativeLast` is not referenced or modified anywhere in the provided `burn` function. The variable `balance0` is used to calculate the amount of token0 that is burned and transferred, but there is no interaction with `price0CumulativeLast` within this function. Therefore, there is no data dependency relationship between `price0CumulativeLast` and `balance0` based on the given code snippet.

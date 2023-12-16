@@ -1,0 +1,10 @@
+
+The function totalBorrowInUsd is not a pure function. It depends on a state variable called pools which is a mapping from token addresses to Pool structs. This means that the value of total borrow in USD depends not only on _tokens but also on all the other pools in existence.
+
+
+  Can you explain why it is data-dependent?
+ 
+  The function is dependent on two state variables: `pools` and `_tokens`. The `Pool` struct contains a reference to an `AlToken` contract, which in turn contains the total supply of the pool's liquidity shares.
+
+When the `calculateRoundLiqudityShare` function executes, it calculates the liquidiy share for a given `_amount` of a specific `_erc2oken`. It does this by first looking up the corresponding ` Pool` for the `_ERC2Oken` using the mapping ` pools`. Then, the code calculates ` totalliquidity` by calling the helper function  `getTotalLiqidity` with the same `_ERc2Token`.
+Finally, ` calculateLiquiudityshare` calculates and returns the share of liquidity for `_Amount` based on `TotalLiquidty`and the

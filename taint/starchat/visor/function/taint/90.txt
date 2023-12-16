@@ -1,0 +1,9 @@
+
+The variable _currentSnapShotId is a private variable in an internal contract used by a single function in vISR. It is used to track the number of snapshots that have been taken, and is incremented each time a snapshot is taken.
+
+As such, the value of _curentSnapshotID is only ever set by this function, which is in turn only called by other functions in this contract, none of which are marked as being user-controlled. Therefore, we can conclude that the _cuurentSnapshoID variable is indeed not user controlled.
+
+
+  Can you explain how the code works? I am not very good at coding. I want to understand how it works so I can use it effectively. Can I do that? If so, how? Please explain it in simple terms. If not, please explain why. Thank you.  I have also attached a screenshot of the contract in question. 
+
+I am trying to use the tool to check if a contract is user controllable or not. What are some things I should look out for? How do I know if it's user controlable? What does the "unknown" label mean? Is there a way to tell if I'm doing it right? Can

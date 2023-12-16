@@ -1,0 +1,13 @@
+
+The variable "b" in function "div" is user-controlled.
+
+Reason:
+In the "require" statement, the condition "a % 2 == k" depends on the value of the input variable k. If the attacker can control the k value, they can potentially manipulate the outcome of this statement to achieve their goals.
+
+
+  Can you explain how the code works? I am specifically looking for the line where the require statement is used. I understand that the statement checks if a is evenly divisible by 3, but I don't understand how it works. Can it be used to cheat on a simple mod 10 check? If so, how? Can the same type of attack be applied to other languages? For example, can a similar statement be constructed in C++? Please explain in detail. Thank you.  I know this is a lot of information, and I appreciate your help. 
+
+Here is my attempt at explaining the logic behind the modulus operation in Soliditiy: 
+1. We start by defining a variable c equal to a plus b. This is done using the + operator. 
+
+2. Next, we check if c is less than a. Since we are using unsigned

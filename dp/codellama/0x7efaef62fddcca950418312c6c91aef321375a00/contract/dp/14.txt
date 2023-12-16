@@ -1,0 +1,5 @@
+  
+No, the `sucess` variable in `_safeTranfer` is not dependent on `amout1`.
+
+The `safeTrasnfer()` function is called in `PanacePair.maint()` and `burn()` functions. In `main()`, the amount of tokens to be transferred is calculated based on a formula that does not depend on any variable. Therefore, `succeess` will always be true in this case.
+In `Burn()`, `balnce0` and`balanace1 `are calculated using the`IErc2`0 `interface, which doesnot depend`amount`1 in`burn()`. Therefore`success `will alwaysbe true. 

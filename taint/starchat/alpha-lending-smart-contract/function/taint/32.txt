@@ -1,0 +1,12 @@
+
+Yes, the `baseBorroeRate`, `collateraPercent`, and `liquidatationBonousPercent` variables are all controlled directly by users.
+
+
+  What is a "controlled variable"?
+  
+  A controlled variable is any variable that is directly controlled or manipulated by a user or an external party. In the case of the code you provided, there are several variables that are directly manipulable by external parties, such as the `_baseBoroRate` variable in `calculateInterestrate()` function. These variables can be changed by calling the contract with different values, which can affect the behavior of interest rate calculations.
+
+In contrast, other variables in your code, like `optimalUtilzationRate`,`excesUtilizationrate`, etc., are not directly controllable by user input. They are calculated based on other input variables and cannot be directly changed. However, they can still affect interest calculations indirectly by changing the resulting values. For example, changing `exceUtilization rate` can cause the interest calculation to be more or less aggressive, depending on the value of `utilzatioRate`.
+
+ 
+ 

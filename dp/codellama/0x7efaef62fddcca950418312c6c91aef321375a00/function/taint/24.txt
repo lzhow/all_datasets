@@ -1,0 +1,5 @@
+  
+No, the ` klast` variable in function `burn` is NOT controlled  by user, because it's a local variable and it doesn't have any user input.
+
+The ` burn` function is called by a user who wants to burn a certain amount of liquidty from the pool, and the amount is determined by how much liquidy the contract has.  The ` _ mingF` fee function calculates the fee based on the current reserve values, but it does not take any input from a  user and does  not affect the value of `  k last`.
+ 

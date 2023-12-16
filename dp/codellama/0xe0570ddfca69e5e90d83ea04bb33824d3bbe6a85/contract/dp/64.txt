@@ -1,0 +1,5 @@
+  
+No, the ` approvaleDelay ` contract variable is independent of the `_ after` variable in function` deposite`.
+
+The ` _ after ` variable represents the balance of want tokens after the deposited amount is transferred to this contract. It is a local variable and is only used in this function.
+On the other hand, `appovalDelay`, which is defined as a contract constant, is an independent variable that is used to determine the delay period for the proposal of a new strategy in `proposeStrate`. It does not depend on any other variable or state in any way.

@@ -1,0 +1,20 @@
+
+yes, it is.
+
+The reason is that the `Flash` function calls the flashCallback function of the msg sender. This function can access the variables in scope of `Curve` contract. In this case, the fee variables are in-scope.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by making the data dependencies explicit by passing them as arguments to flash callback. For example, instead of accessing fee directly, you can pass it as an argument. Here's an example:
+function flash (..., uint fee)
+{
+ ...
+  ICurveFactory(ICURVE_FACTORY_ADDRESS).getFlashCall(flash_callback_address, token0_amount,token_1_amout,fee);
+ ....
+}
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+The variable `isUsedHash` in `hash` is a mapping from `bytes` to `bool`. This means that it's a state variable that is modified by calling the `markHashUse` function. However, the mapping is only used to check if a given hash has already been used, so it doesn't affect the control flow of the program. Therefore, we can conclude that the state of `mapping(byte => boolean) isUsed` does not affect whether the contract is user-controlled or not.
+
+
+  Can you explain how you arrived at this conclusion?  What is your reasoning?
+
+I'm trying to understand how the code can be user controlled without modifying the value of a variable.  I understand that a user can call the markUsed function, but I don't see how that can change the behavior of isUserControlled.
+Can you please explain your thought process? 
+
+Thank you
+
+
+
+

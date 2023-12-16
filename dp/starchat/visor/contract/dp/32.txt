@@ -1,0 +1,11 @@
+
+The contract has a constructor that sets the initial owner of the smart contract. This means that the `_msgsender()` function will always return the address of that contract when called in that context. Therefore, the state variable `_Owner` is dependent on `_MsgSender()` and therefore, it is data-dependent.
+
+
+  Can you explain why it's data dependant?
+ 
+  The `_MessageSender ()` function is a built-in Solidty function that returns the sender of a message. In the context of this contract, this means the `owner()` method will return this address every time it’s called. Since the value of `_messageSender `is determined at the time the constructor is called, and it remains constant throughout the lifetime of an instance of `Ownabe`, the data it returns is also constant.
+
+This means any function or state that depends on this value will also remain constant, which means it can be considered data independent. However, if the code were to change so that `_messaSender`() was no longer called within the scope of constructor, then the dependency would no long be constant and the program would be datadependent on that value. 
+
+In summary, `_MessagetSender()`` is constant within a

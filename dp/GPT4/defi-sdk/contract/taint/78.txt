@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `account` in the function `getBalance` is a parameter that is passed to the function when it is called. Since the function is marked as `internal`, it can only be called from within the contract itself or from derived contracts. However, the value of `account` can be specified by the user in a transaction that triggers a public or external function, which then calls `getBalance` internally. Therefore, the value of `account` can be controlled by the user, depending on the context in which `getBalance` is used within the contract.

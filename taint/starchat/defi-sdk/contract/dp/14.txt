@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the value of `pair` is used to index into the `pairs` array, which is then used in a call to `Iuniswappair.swap`. The value assigned to the index `i` depends on whether `direction[j]` is true or false, where `j` corresponds to a value in `range(len(direction))`.
+If `directions[k]` evaluates to true, then `k` will be less than `len / 2`, and the corresponding index in pairs will refer to an element in positions `2 * k` and `1 + (2*k)`. If ` directions [k] ` evaluates as false, then the indices will correspond to positions`2*(k+1)` and `(2k)+1`.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how the code works. When the contract is deployed, the constructor function is called, and it sets the address of the WETH token contract. This address is stored in an internal variable called wether, so that it can be accessed later. 
+
+When the call function in UniscwapCaler is executed, a

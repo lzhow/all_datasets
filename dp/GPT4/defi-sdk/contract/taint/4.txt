@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `weth` in the constructor function is set by the value passed to the constructor at the time the contract is deployed. This value is provided by the user who deploys the contract. Once the contract is deployed, the value of `weth` is fixed and cannot be changed, but the initial control over what value is set comes from the user who initiates the deployment.

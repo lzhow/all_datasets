@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_data` struct is passed as an argument. This struct contains the field `path`, which is an array of addresses representing the tokens involved in a swap.
+Within the _`swap function`, the`amount` array is created and initialized with the value of the amount of tokens to be swapped.  The`_do swap`function then calls the swap function for each pair of token in ` path`.
+For each swap, it calls `_ swap`, passing the current token pair and the corresponding amount from the amounts array. Therefore, ` amount` is data-dependent on ` amounts` because it is used to determine the number of input tokens for the next swap in `_ do_ swap`.

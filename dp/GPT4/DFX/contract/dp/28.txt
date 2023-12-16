@@ -1,0 +1,3 @@
+Yes, the variable `oGLiq_` in the function `getOriginSwapData` is data dependent on the variable `oBals_` in the same function. 
+
+Explanation: The value of `oGLiq_` is calculated by summing up the values of `oBals_` in a loop. Therefore, any changes in the values of `oBals_` will affect the final value of `oGLiq_`. Hence, there is a data dependency between these two variables.

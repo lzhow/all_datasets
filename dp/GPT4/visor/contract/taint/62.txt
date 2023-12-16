@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `data` in the function `functionCall` is an input parameter that is passed to the function when it is called. Since this function is marked as `internal`, it can only be called from within the contract itself or from derived contracts, not directly by an external user. However, the data that is passed to this internal function can originate from a public or external function that is exposed to users. Therefore, the content of `data` can be crafted and controlled by the user when they call the public or external function that eventually calls `functionCall`. Thus, we consider that `data` can be controlled by the user.

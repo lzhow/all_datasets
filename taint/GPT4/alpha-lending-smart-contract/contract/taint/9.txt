@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_amount` in the function `setPoolReserves` is an external input parameter to the function, which means it can be set to any value by the caller of the function. Since the function is marked as `external`, it is part of the contract's interface and can be called by external users. Therefore, `_amount` is controlled by the user who invokes the function.

@@ -1,0 +1,11 @@
+
+The variable result in function " exchange rate stored " is data-dependent on total cash in " exchangeratestoredisternal ".
+
+Explanation:
+In the "exchangeratestore" function, the result variable is returned as a result of the call to the internal function exchangetoredisinternal. This function calculates the value of result based on various variables such as totalsupply, etc.
+However, in this case, since the total supply is not equal to zero, it is possible that the calculation of cashplusborrowsminusreserves in exchnagestoreinternal may result to a division by zero error. In such cases, Solidty will throw an exception and revert the transaction.
+
+
+  Can you explain why this is?
+ 
+  The reason why the code throws an error is because the line `uint totalcash =getcashprior();` is inside an if-statement that checks if `_totalsupply` equals  zero. If `_totalseupply` does not equals zero then the `getExp` function is called, which requires that `_cashplusborrowminusreserve` be greater than or equal zero and `_totaLsupply ` be greather than zero as well. However, if the `_

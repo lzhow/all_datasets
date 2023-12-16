@@ -1,0 +1,9 @@
+
+yes, the `msg` variable is a reference to the message that was sent to this contract. Since the `_acceptImplentation` function is called by `pendingImplementation`, which is set by a user, `sender` is user controlled.
+
+
+  Can you explain how the compiler determines if a variable or state variable in a contract is "user controlled"?
+ 
+  The compiler can determine if an object is considered user-controlled if it can be modified by an external actor. This can include modifying the object's value, or modifying its type. For example, if you have a function that takes a `uint` as an argument, and you pass a storage pointer to that function, then the pointer can modify the value of the argument. In this case, since the storage location pointed to by that pointer is external to your function call, you can say that the uint is being user control.
+
+However, this is just one way that a compiler might determine user controllability. Other factors could include the presence of modifiers or other restrictions on the access of a particular object. It's important to note that this determination is made at compile time, so it's not a guarantee that an attacker can't modify a value at runtime.

@@ -1,0 +1,4 @@
+  
+No, the ` utilisationRate ` variable in function ` calculate InterestRate  ` is NOT controlled  by user because it's calculated based on the total borrows and total liquidity of the pool, which are not user-controlled.
+
+The ` get Utilization Rate ` function calculates the utilized rate of a pool based the the ratio of total borrowed amount to total pool liquidty. This function is called in `calculateInteresRate`, which uses the calculated utilised rate to determine the interest rate. Therefore, `Utilisation Rates` is calculated by a function that is executed by smart contract, not by users.

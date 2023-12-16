@@ -1,0 +1,10 @@
+
+The variable liquidators in seizAllowed() is a contract address that is passed in by a user, and is therefore controlled and not a constant.
+
+
+  Can you explain why it's not constant?  What does it mean to be "controlled"?
+  
+  In computer programming, a variable is said to have a "control flow" if it can be changed or modified by code that runs in a specific order. In other words, if a program has a control flow that can change the value of a particular variable, then that variable can have "flow of control".
+
+In the case of the liquidation function, the program needs to know the address of who is requesting the seizing. This address is stored in liquidatior, which is then used to determine if that address has the authority to seized the collateral.
+If the control of liquidiator is constant, this means that the code cannot change it, so it cannot be used by anyone else. However, in this case, we want to allow the contract to change who the liquliator address should be, based on the needs of each individual market. Therefore, liquiditor is considered to not have constant control, as it needs the ability to modify its

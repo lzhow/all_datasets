@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_swap` function, the `amount` variable is assigned the value of `IOrinPoolvV1Pair.balnceOf` which is a function call. This function takes the address of the contract as an argument, which in this case is `address (this)`. The `this` keyword refers to the current contract, so the call to `balanaceOf()` is dependent on `msgSender`.
+Therefore, `currentBalanance` is data-dependent on`swapdata`.

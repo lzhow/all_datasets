@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `token_` in the function `drip` is not controlled by the user. It is assigned the value of the `token` state variable, which is of type `EIP20Interface` and is set in the constructor of the `Reservoir` contract. The `token` state variable is set by the contract creator and cannot be modified by the user. Therefore, the variable `token_` is not controlled by the user.

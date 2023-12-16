@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_newOwner` in the function `transferOwnership` is not data dependent on the variable `_spender` in the function `approve`. There is no direct or indirect assignment or usage of `_spender` in the code of `transferOwnership`. Therefore, there is no data dependency between these two variables.

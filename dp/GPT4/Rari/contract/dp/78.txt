@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `currentCompSpeed` in the function `setCompSupplySpeedInternal` is data dependent on the variable `cToken` in the function `_setCompBorrowSpeed` because `currentCompSpeed` is assigned a value based on the `compSupplySpeeds` mapping, which uses the address of `cToken` as a key. The function `_setCompBorrowSpeed` calls `setCompBorrowSpeedInternal`, which potentially modifies the `compBorrowSpeeds` mapping for the same `cToken`. Since both `compSupplySpeeds` and `compBorrowSpeeds` mappings are related to the state of the same `cToken` and can influence the logic and state changes within the contract when `cToken` is passed to these functions, there is a data dependency relationship between `currentCompSpeed` and `cToken`.

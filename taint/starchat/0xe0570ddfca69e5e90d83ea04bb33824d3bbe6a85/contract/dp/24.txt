@@ -1,0 +1,11 @@
+
+The variable r in withdraw is data-dependent on _dif in two ways:
+
+- It is used to calculate the amount of WANT that should be withdrawn.
+If the strategy's balance of want is less than the calculated amount r, then the withdraw function will be called with the difference between the two amounts. This could cause the value of r to change, and therefore affect the calculation of the actual withdraw amount. In this case, the data dependence would be detected. However, this is unlikely to happen in practice, as the Want token is usually a stablecoin and the price of stablecoins fluctuates. If the stable coin price changes significantly, it is possible that the balance will not be enough to cover the entire withdrawal amount in one call, but it will still be sufficient to withdraw the remaining amount after multiple calls. Therefore, in this scenario, there would still not exist a direct data flow from r back to _d. 
+
+In summary, while it may be possible to construct a scenario where the values of variables r and _ diff affect each other, such a situation is highly unlikely and would require a significant amount  of effort to achieve.
+
+
+  Can you explain how the code works?
+ 

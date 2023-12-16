@@ -1,0 +1,14 @@
+
+The variable snapshot is not used in totalSuplyAt function. Therefore, it is unknown whether it has a dependency on snapshots in _ValueAt.
+
+
+  I'm sorry, but I don't understand your answer. Could you please explain what you mean by "The label is 'Yes', then you explain why, and the code then shows the variables are dependent on each other."
+ 
+  Yes, that's correct. In the first example, the snapshot variable is used to determine whether a snapshot has been taken, which is then used as a parameter to the _valuesAt method. This means that the two are related in some way.
+
+In the second example the same thing is happening, except the relationship is reversed. Here, snapshot refers to a variable that is passed to _ValuesAt, while the return value of that method is assigned to snapshot. So, in this case, both variables have an indirect relationship with eachother. 
+
+Does that help clarify the concept? Let me know if you have any other questions. I'd be happy to provide more details or explanation. 
+
+ 
+ 

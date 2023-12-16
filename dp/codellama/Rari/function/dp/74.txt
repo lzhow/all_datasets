@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `_acceptImplentation` function, the `comptrolerImplemenation` variable is assigned a new value based on `pendingComtrollerImplmentation`. However, this assignment does not depend on any other variable in this function.
+On the other hand, in `_toggelFusAdminRight`s function , the`fusaeAdminHaseRigths`variable is set to a different value depending on whether the current user has admin rights. This variable depends on`hasRighs`, which is a parameter of thefunction. However , this parameter is not used in any way in`_acceptimplementation`. Therefore, we cannot say that`oldimplementation` is data-dependent on it.

@@ -1,0 +1,4 @@
+  
+No, the ` fee to` variable in function `_m intF ee` is NOT controlled  by user because it's a constant value that is set by a factory contract.
+
+The `factory` contract is responsible for setting the fee address, and the `_ mintF fee` function is called by `m i n t` and `b ur n` functions, which are called only by external users. Therefore, ` feeto` cannot be controlled directly by an external user, but it can be changed by changing the factory address.

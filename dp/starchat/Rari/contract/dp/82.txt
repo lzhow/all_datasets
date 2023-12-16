@@ -1,0 +1,15 @@
+
+yes, it is data-dependent.
+
+The reason is that the `pendingAdmin`, `admin`, and `allMarket` variables are all modified within the scope of the `_acceptadmin` function, which is called by the external `_accepthadmin()` function. This means that any function that is executed after the call to `_accetadmin()`, including the internal `_setpendingadmin(newpendingadmin)` function and the public `setcompspeed(ctoken, speed)` and `_claimrewards(addresses,ctoke,bool,boold)` functions, will all have access to an outdated version of these variables.
+
+
+  Can you explain why this is so?
+ 
+  The reason why the variables `newPendingadmin`,`oldpendingadming` and`allmarkt` are dependent on `Ctoken` is because these are modified in `_updatecompsupplyindex` which gets called in `flywheelpresupplieraction`, which in turn is triggered by `transfer` or `approve` functions. These functions are called after `__accept_admin`.
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple

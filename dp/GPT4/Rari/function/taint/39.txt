@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `success` in the function `doTransferOut` is not controlled by the user. It is a local variable that is assigned the result of the `call.value` function, which is a low-level function used to call another contract and send Ether. The value of `success` depends on the success or failure of the `call.value` function, which is determined by the execution of the called contract. Therefore, it is not directly controlled by the user.

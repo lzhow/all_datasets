@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `amount1Out` in the function `_swap` is data dependent on the variable `amountB` in the function `addLiquidityFromExchange`. This is because the value of `amount1Out` is assigned the value of `amountOut` in the `_swap` function, and the value of `amountOut` is determined by the value of `amountB` in the `addLiquidityFromExchange` function. Therefore, there is a data dependency relationship between these two variables.

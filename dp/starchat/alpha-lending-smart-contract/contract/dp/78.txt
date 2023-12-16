@@ -1,0 +1,15 @@
+
+yes, because it is used to initialize the `altoken` variable in `LenderPool` contract.
+
+
+  Can you explain why?
+ 
+  The `_token.balanceOf(address(this))` expression in Lenderpool.calculateRoundupBorrowshareamount() function is data-dependent on `_totalborrows` and `_borrowshares` variables.
+
+The `_user.balance` is also data dependend on these two variable. 
+
+So the `_pool` struct is dependent on them. And the entire `_pools` array is depenedent on it. So the whole contract is dependant on this
+
+
+
+

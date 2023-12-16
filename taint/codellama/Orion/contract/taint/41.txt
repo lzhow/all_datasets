@@ -1,0 +1,4 @@
+  
+The variable 'amount B' in add liquidty from exchange is labeled as 'No'. The reason is that the amount B is calculated based on the desired amount of A and the reserves of the pool. It is determined by internal logic and not by user input.
+
+In the code, the `add liquidy` function calculates the optimal amount A based the the reserve A, B, and desired amounts of both tokens. This calculation is done using the internal `quote` method of `OrinMultiPollLibrary`. The resulting amount is then used to calculate the corresponding amount for token B. Therefore, ` amount b` is a calculated value and is dependent on other variables, such as the amounts desired and reserver, which are not user-controlled.

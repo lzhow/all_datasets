@@ -1,0 +1,3 @@
+The variable `tAmt_` in the function `originSwap` is not data dependent on the variable `_oBals` in the same function. 
+
+Reason: The variable `tAmt_` is assigned the return value of the function `Assimilators.outputNumeraire`, which does not use or depend on the variable `_oBals`. Therefore, there is no data dependency between these two variables.

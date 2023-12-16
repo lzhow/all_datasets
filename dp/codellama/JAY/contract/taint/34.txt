@@ -1,0 +1,4 @@
+  
+No, the ` dev` variable in this function is a private variable and is only accessible within the contract. It is initialized in a constructor function and cannot be changed by any external user, so it cannot controlled.
+
+The `updateDevwallet` function allows the owner of the smart contract to update the value of `Dev` to a new address. However, this is done by calling the internal function `lockdevwallets` which sets the private `bool` ` lockdev ` to true. This means that the address of dev cannot change until the lock is released. Therefore, ` Dev` is still controlled within this contract and not by an external party.

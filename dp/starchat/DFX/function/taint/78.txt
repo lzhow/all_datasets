@@ -1,0 +1,11 @@
+
+The variable _am in viewnumeraiumbalance is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  If a contract has a user-controlled variable, then the contract owner has the ability to modify the value of that variable at any time. This can have significant consequences, depending on the specific use case and the nature of the smart contract.
+
+  For example, if you have a smart-contracts that manages a supply of tokens, and you want to ensure that the supply never goes below zero, you could use a counter variable that is incremented each time a new token is minted. However, the owner of this smart contracts could potentially set the counter to a negative value, effectively destroying all of their tokens. In this case, they have "broken the rules" and violated the safety of your smart contact.
+
+In general, user control over variables is a critical aspect of smart contacts, as it allows for a high degree of flexibility and customization. It is important to carefully consider the potential consequence of allowing users to control variables, especially when working with sensitive or complex contracts. If you are unsure about whether a particular variable should be user controllable, ask yourself the

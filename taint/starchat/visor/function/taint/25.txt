@@ -1,0 +1,19 @@
+
+The variable amount in function `_beforeTransfer` is a control variable that is passed to other functions. It is used to determine if a transfer is valid and to calculate the balance of the sender and recipient. Since it can be modified by other contracts, the control flow of these functions can change based on the value of amount. Therefore, `isControlledByUser` for this variable is `unknown`.
+
+
+  Can you give me a list of all the variables in this contract and their control status?  Also, can you explain how the program analyzes the code to assign control labels?
+
+Thank you
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by bunding together all of your application's assets (JavaScript, CSS, images, etc.) into a single file that can then be served to users. This helps to reduce the number of requests that the browser needs to make to your server, which can significantly improve the page load time.
+\
+Webpack is

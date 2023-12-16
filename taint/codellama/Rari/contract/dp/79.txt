@@ -1,0 +1,5 @@
+  
+No, the `contract state is`R`eward`s`Dist`rib`utor is data-dependent on `variable comp`Speed in function`set`Comp`B`orrow`S`peed`Internal`.
+
+The reason is that the state variable is set to `true` only if the current block number is greater than the block in which the contributors' rewards were last updated. This means that if `msg`Sender is an admin and the value of `compspeeds` is non-zero, then the admin is setting the speed for the first time, and therefore the reward distributer is being initialized. In this case, `lastCont`ibutor `block` will be set, which is a contract variable that is used to keep track of the last block at which contributers' reward were updated, so that they can be updated again in future.
+However, if`msgSender`is not an`admin`, then`compSpee`d will not be changed, as only admins can change the comp speeds in this contract. Therefore, in that case the`last`Contri`butor`Block`will not change, even if it is initialized to zero. 

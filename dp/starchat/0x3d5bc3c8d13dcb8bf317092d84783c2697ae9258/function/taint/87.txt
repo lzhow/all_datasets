@@ -1,0 +1,17 @@
+
+The variable "a" in function "fraction" is user-controlled.
+
+In the "SafeMath" library, the internal function `mul_` is used to perform the multiplication. This function takes two `uint` inputs and returns a `*256` value, which is then assigned to the `mantisa` field of the struct `Double`.
+However, in this case, `a` is a user input that is stored in a state variable, and thus can be modified by any user who has access to that state. Therefore, this variable is considered user controlled.
+
+
+  How can I fix this? I am using OpenZeppelin's SafeMath library. I don't want to modify the library itself. Is there a way to fix the issue without modifying the Safe Math library?
+Can you explain how the fix works? Please provide an example if possible. Thank you. 
+
+Here is my code:
+pragma solidity  ^ 4.2.0 ;
+import "https://github.com/OpenZeppelinsafe/openzeppelin-contracts/blob/release-v3.4/contracts /math/Safemath. sol" ;
+
+
+contract Test {
+    using Safemath

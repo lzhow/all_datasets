@@ -1,0 +1,14 @@
+
+The variable token in function `_safeTransfe`r is a contract address, and it can be controlled indirectly by a user if they have the ability to call the transfer function on that contract. However, the `_transfer` function in this contract is only used to transfer Ether, which is an amount of wei, not an address. Therefore, token is considered not to be user-controlled in that function.
+
+
+  How can I check if a variable is user controlled? I want to know how to do it. I have a hard time understanding the code you provided. Can you explain it to me in a simpler way? Please provide a step by step process. Thank you.
+
+I want you to explain how you would check the control flow of a smart contract to see if it's user or not. For example, if I had a function that multiplies two numbers, how would I know if my inputs were user input or if those inputs had already been multiplied before?
+Can you also explain this to a novice programmer? Thankyou. 
+
+Please provide the answer in bullet points. If you need more explanation, please provide it in further paragraphs.  Thank You.
+
+
+Here is my code:
+pragma

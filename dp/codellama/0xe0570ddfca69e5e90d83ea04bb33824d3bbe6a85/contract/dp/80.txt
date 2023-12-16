@@ -1,0 +1,4 @@
+  
+No, the variables `_bal` and `r` are dependent on `w` but not on `_poo`l.
+
+The reason is that the `bal()` function returns the current balance of the vaule, which is calculated by calling the balance function of `IErc2`0 and adding the result to `IStrat`egies balance. This value is then used to calculate the amount of tokens to transfer into the strategy, and the value of `_bala` is also used in a similar way to determine the number of shares to mint. Therefore, `_poll` does not affect the calculation of these values.

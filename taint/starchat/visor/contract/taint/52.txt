@@ -1,0 +1,6 @@
+
+The variable "b" in function "div" is user-controlled.
+
+Reason:
+In the "require" statement, the condition "a % 2 == k" can be rewritten as "k == a mod 3".
+If "n" (the input to the mod function) is public, then "m" and "q" are also public. Therefore, if "p" was public as well, we could compute "r = n - p * q" to get "0 <= r < p" which would allow us to set "x = r / p". This would give us "y = k - x * m" with "1 <= y < m". Then we would have "z = y / m", which is what we want. However, since "mod" takes "2^248" steps to compute, this would take "O(2^(223 * 8))" time, which means that an attacker could try to find a "nonce" that makes the computation take less time. This is why "block.timestamp" must be used instead of "now" or "keccak264" since these functions are not guaranteed to take the same amount of

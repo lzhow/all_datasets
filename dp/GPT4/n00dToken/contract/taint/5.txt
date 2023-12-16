@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `_defaultOperatorsArray` is set during the deployment of the contract and is not modified by any function that allows for arbitrary user control. It is initialized in the constructor of the `ERC777` contract and is only ever directly manipulated by the contract's internal logic, not by external user input. The constructor parameters, including the initial list of default operators, are provided by the deployer of the contract, and after deployment, there is no function exposed that allows users to modify the `_defaultOperatorsArray`. Therefore, it is not controlled by the user after the contract has been deployed.

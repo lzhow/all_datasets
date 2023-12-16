@@ -1,0 +1,14 @@
+
+The contract is data-dependent on `pool` and `userPool` because the `latestAlphamultiplier` variable is updated in `sendAlphaRewards`.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The `calculateAlphaRewar` function uses the values of `totalAlhpaTokenRewards` from the pool and the user's `alphaRewardsClaimed` to calculate the reward. However, the value of the multiplier is also stored in a separate variable called `alphamultipler`. This means that the two values are dependent on each other.
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did George Lucas have in his bank account when he died?
+  Georges Lucassen (/ˈluːkəsən/; born August 29, 1955) is an American filmmaker, actor, and producer. He is known for directing the films The Godfather (1), The Wizard of Oz (2), and The Departed (3). Luca is best known as the lead actor of The Wizarding

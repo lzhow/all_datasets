@@ -1,0 +1,5 @@
+  
+No, the variables `_types` and ` curbalances` are independent.
+
+The variable  `_ types` is a parameter of the constructor function and is not modified within the contract. It is only used to initialize the `supportedFactory` mapping. Therefore, it is independent of any other variable in this contract, including ` _curbalanced`.
+On the other hand, `Curbalancer`is a local variable within `_doswaptokens` function. Its value is calculated based on other variables within this function, such as `amountin`and ` amountout`. However, these variables are also local to the `_ doswaptokenn`function and are only modified by the code within that function . Therefore , ` Curbalancers` value depends on these other local variables, but it does not depend on any external variables.

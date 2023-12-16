@@ -1,0 +1,10 @@
+
+The variable "index" in function "_removePartitionsFromTotaPartitions" is used to get the index of the partition in total partitions array. This index is then used in "pop" function to remove the last element in partitions of array and replace it with the element at the specified index.
+
+However, the "remove" operation in array is an O(n) operation, where "n" represents the length of an array, and the more elements are in an arrays, it takes longer time to execute the operation. In this case, since the array length is not fixed, this operation can be very costly.
+
+
+  Can you explain why this is a problem?
+ 
+  Yes, of course. Here's why:
+1. If the total number of partitions is large, then the time complexity of this function can become very high. For example, if there are 2^24 partitions, each containing 50 tokens, a single transfer operation might take up to 30 seconds to complete. That's because the transfer function needs to iterate through all 4,1943,040 partitions to find the right one, which is why the complexity is O((2 ^ 80 -

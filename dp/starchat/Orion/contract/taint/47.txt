@@ -1,0 +1,20 @@
+
+The variable amountBDesire is a user input and is therefore controlled.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and serving of web content works under the hood. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can be served to the users browser. This is done in a few steps:
+
+1. First the incremental bundle needs to find all of the dependencies that are required by your application. These dependencies can come from npm packages, local files, or other URLs.
+
+2. Next the bundle has to figure out which files are actually used by you application, and which are not. For example if you are using a CSS framework like Bootstrap, you probably don't want to include the entire library in your bundle, only the styles that you actually use. Similarly if your are importing a large image file, that is only used in one place, the

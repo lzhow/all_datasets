@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `userPoolData` is not mentioned or referenced anywhere in the provided function `calculateRoundUpBorrowShareAmount`. The function only references and manipulates the `pool` variable, which is a local instance of a Pool struct obtained from the `pools` mapping using the address of the `_token` parameter. Since there is no interaction or reference to `userPoolData` within the function, there is no data dependency relationship between `userPoolData` and the `pool` variable within the context of this function.

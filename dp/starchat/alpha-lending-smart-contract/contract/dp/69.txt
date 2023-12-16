@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_token` parameter in `setPool` is used to index the `pools` mapping, and the value of `pool` at that index is then used in a call to `receiveAlphas`. This means that `_poolTotalBorows` and `_alAmount` are both data-dependent on `_tokens`.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on _tokens is because the mapping pools is indexed by the address of the token.
+  
+ 

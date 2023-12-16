@@ -1,0 +1,3 @@
+yes
+
+In the provided Solidity function `isContract`, the variable `size` is directly assigned a value that depends on the input variable `_addr`. The `extcodesize` opcode in the Ethereum Virtual Machine (EVM) is used to get the size of the code at a specific address. The assembly block sets the `size` variable based on the code size of the address `_addr`. Therefore, there is a data dependency relationship between `size` and `_addr` because the value of `size` is determined by the code size at the address contained in `_addr`.

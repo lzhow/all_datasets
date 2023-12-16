@@ -1,0 +1,11 @@
+
+The variable `msgSender` in `function transferfrom(Storage storage self,address sender_,address recipient_,uint amount_)` is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  If a contract has a user interface, then it can be assumed that any variables that are displayed to or modified by that interface are user-controlled. If the contract does not have a UI, the assumption is that all variables are not user control.
+
+In general, if you are writing a program that analyzes Solidty code, you should assume that every variable can potentially be user controllable. This is because Soliditiy does allow for arbitrary code execution via `delegatecall` and `callcode`, and it's not possible to statically determine whether a given variable will be modified or not. However, in practice, most variables in Solidities are either not modified at all, or are modified in ways that can't be predicted by a static analysis. So in most cases, a conservative analysis will assume all user variables can control all other variables. 
+
+If you want to do a more precise analysis, there are some additional techniques you can use. One approach is to use symbolic execution, which

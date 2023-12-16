@@ -1,0 +1,11 @@
+
+The variable `optimalUtilisationRate`, which is used to calculate the interest rate in `calculateInterestrate` is set to `100` in line 30 of the contract. This value is then used in a comparison in lines 40-41 to determine the borrow rate.
+
+In the case that `_totalBorrow` and `_toalLiqudity` are both `0`, the utilisation rate will be `Infinity`, and the calculation will result in an underflow. In this case, the result will also be zero. Therefore, this variable is considered to be controlled.
+
+
+  What is an overflow and under flow in Solidty? How can I prevent them? Please provide an example
+
+
+
+

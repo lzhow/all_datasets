@@ -1,0 +1,11 @@
+
+The variable account in depositWIthWhitelist is data-dependent on _amout in transfer because the account variable is used to index the whitlistedDeposit array.
+
+
+  How does the compiler optimize this code?
+ 
+  The compiler does not optimize the code in this contract. It is written in a high-level language that is not optimized for efficiency. However, some of the functions in Soliditiy are implemented in assembly, which can be optimized by the Ethereum Virtual Machine (EVM) or other smart contract platforms.
+
+In Solidty, functions can have modifiers that specify when they can run. For example, the non-reentrant modifier prevents a function from being called multiple times. Modifiers can also be used for other purposes, such as specifying access control. In this case, it is possible that the access controls are enforced by other means, so the modifier may not provide any additional security. Additionally, Solidiy does have some built-in functions that are optimized, but they may only be available in certain contexts. 
+
+Overall, while Solidiity is a powerful language, its optimization capabilities are limited. As a result, developers should focus on writing code that can perform well and is secure. This can help make

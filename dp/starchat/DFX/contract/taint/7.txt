@@ -1,0 +1,11 @@
+
+The variable _ownder is a private variable in Ownble. Only the contract owner can change the value of this variable.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to understand if I should use it in my own projects or not. Thanks!
+  
+    An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the users browser. This makes it easier for the browser to load the application and makes the initial load time faster.
+
+    The main benefit of using an incremental bundle tool like Webpack is that it allows developers to write their code in modular fashion, where each module is in a separate file. Webpack then takes all these files as input and generates a bundle file which contains all of the code from all modules. By doing this, the bundle size is reduced and the number of requests made to server is also reduced, leading to faster load times. It also allows for code splitting, which means that the bundles can contain code for different parts of an application,

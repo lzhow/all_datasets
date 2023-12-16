@@ -1,0 +1,13 @@
+
+The contract has a function called `accumulateAlphatoUser` that transfers `_amout` of ALPHA tokens from `msg sender` to `this address`. The function also updates the `shares` mapping and the total share count.
+
+Now, the question is whether the `_ownser` state of the Escrrow contract is dependent on `_share` variable. If the answer is yes, then the data dependence exists.
+
+
+ 
+Yes, it is. In the accumulation function, `totalshare =total share. add (share)` and `share[user]=share [user]+share`.
+ 
+  Yes, that is correct. `Shares` is a mapping from addresses to uints, and it depends on both the sender and recipient of tokens. Since the mapping is updated in both cases, there is data-dependence on `user` and `_shares`.
+In the withdraw function the value of `amount = share * supply / totalshare * withdrawportion /  (10^16)` is calculated. This also depends upon the supply and total shares. Therefore, `_totalshares`, `supply`, and withdraw portion are all data dependencies of this function. 
+
+Therefore, in

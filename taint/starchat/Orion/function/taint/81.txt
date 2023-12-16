@@ -1,0 +1,18 @@
+
+The variable factory in getAmoutInUniveral is a contract address that is set by a user and is therefore controlled.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn as much as I can so I could help others, too. Thanks!
+
+
+
+  An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the end user's browser. This allows for faster page loads and less overhead when the application is loaded into the browser, as the entire application code does not need to be downloaded and parsed separately by each browser's JavaScript engine.
+
+Webpack is probably the most widely used incremental bundle tool, but there are others such as Rollup and Parcel. They all work in a similar way, by recursively analyzing the dependencies between the various files in your project and generating a graph of how they all fit together. Then they use various optimization techniques to generate the final bundle file. Some of these tools are

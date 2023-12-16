@@ -1,0 +1,5 @@
+  
+The variable `_subtrahend` in function `decreaseAllowence` is a parameter passed to the method, which means that it can be controlled directly by a user of the contract. Therefore, the answer is 'Yes'.
+
+In Solidiy, parameters are passed by value, meaning that the value of a variable is copied and passed as an argument to a function. This means the original variable cannot be modified by calling the functions, but the copy of it, passed in as a argument, can.
+Therefore, if a contract has a method that takes a value as parameter, and that value is used to modify the state of that contract, then it means this value can potentially be manipulated by an attacker. In this case, `_value` can modify `_allowedbyPartion` which is part of contract's state. 

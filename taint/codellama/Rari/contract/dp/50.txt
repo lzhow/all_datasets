@@ -1,0 +1,4 @@
+  
+No, the `setSuppComp` function does not depend on `compSpecs` or `suppSpeecs` because they do not appear in its parameter list or body.
+
+The `updateCompSuply` and `distributeSpplier` functions are called in `flywheePreAction`, but they only depend  on  `address` `ctoken` which is passed as a parameter to `fyewheel` but not on any of the variables in  the parameter lists of `updatCompSuplly`, `distrubuteSuppllier`, or  any other function. 

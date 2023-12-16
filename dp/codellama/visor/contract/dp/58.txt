@@ -1,0 +1,4 @@
+  
+No, the `_balance` state is not dependent on ` amount` variable in `_ beforeToken Transfer` function.
+
+The `_ noncess` mapping is used to keep track of the number of times a particular address has approved a transfer of tokens. This mapping does not depend on any specific amount of token transfer. It is only updated when a token is transferred or approved. Therefore, it is independent of ` _ balance` and `balanaceOf` functions.

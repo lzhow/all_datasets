@@ -1,0 +1,11 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates the amount of want that should be withdrawn based on how much of the total supply is being withdraw.
+
+However, the code does not take into account the fact that the strategy contract could have an internal balance that could be greater than the want balance. This means that if the balance of strategy is greater, then the withdraw function will not withdraw all of its balance and the rest of it will remain in this contract. 
+
+Therefore, it is possible for the _totalsupply to be data-dependent on _withraw.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in simple terms. Let's say we have two functions, one that calculates how many tokens a user can withdraw, and another that checks if a withdrawal is valid. If the two are dependent on each other, we say that they have data dependencies. In this case, if we withdraw from the smart contract, there's a chance that we could end up with a negative balance in our token, which would make the check for a valid withdraw fail. So, in short, data dependence means there

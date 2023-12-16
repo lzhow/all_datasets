@@ -1,0 +1,11 @@
+
+The contract variable borrowAccrual is data-dependent on borrow speed because it is used to calculate the new value of the borrow index.
+
+
+  Is the `block` variable in `CompMarketstate` also data dependend on `deltaBlock` and `marketBorrowindex`? If so, why?
+ 
+  Yes, the block variable is also dependent on deltaBlock and market borrowIndex. This is because the calculation of compAcruedByBlocks uses the current block number and the previous block's borrow amount and borrow rate, which are both dependent variables.
+
+In the case where delta blocks is 1 and there is no borrowing, block will remain the same, but the index will increase by the accruing interest rate. In this case, delta block is dependent upon block and index, and block itself is not dependent, so the entire calculation is still dependent and data is dependant. 
+
+However, in cases where there are multiple blocks and accrueing borrow amounts, this will cause the value to increase, causing the data to become dependent again. For example, if there were 5 blocks with accumulating borrow rates, then the delta would be 4, making the comp accured variable dependent once again

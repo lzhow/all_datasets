@@ -1,0 +1,17 @@
+
+The contract function 'transferOwnerShip' has a 'data dependency' relationship between the two contract variables: 'owner' (the current owner) and the new owner (variable 'newowner').
+
+In the body of the 'tranferOwnership' function, the value of 'ownder' is assigned to the parameter'newowner'. This means that the state of variable'owner' depends on variable new 'Owner'.
+Therefore, in this case, we can conclude that 'the contract variable owner is data-dependent on new Owner'.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+A data dependence relationship is a relationship that exists between two or more variables in computer programming, where the change in one variable may affect the behavior of another variable. In the case of Solidty, it's important to note that data dependencies are only possible between variables and not between functions or contracts. 
+
+Let's take a look at the code example you provided:
+function transferOwner(address newOwer) external {
+  owner=newOwe
+}
+Here, 'address' represents a variable that holds an

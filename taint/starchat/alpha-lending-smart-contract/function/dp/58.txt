@@ -1,0 +1,11 @@
+
+The contract is not in equilibrium if the `_token` variable is changed between the two lines of code.
+
+`_token.balanceOf(address(this))`
+`userBorrowBalances[addressOfToken] = balanceOf(userAddress, addressOfUser)`
+If the token balance changes between these two statements, the calculation of `userPool.borrowBalance` will be incorrect.
+
+
+  What is a good way to test if a contract has data dependencies?
+ 
+  One way is to look for the use of the storage keyword in Solidiy. If the keyword is used, then the state variable will have data dependancies. However, this is just a heuristic and not a definitive way of determining if there are any data depndancies in a smart contract. It is important to note that data depends can also be created by using memory variables, which are only available for a single function call. So, it is always important when reviewing a Solidty contract to ensure that all data variables are declared as either storage or memory, depending on their usage. Additionally, data dpendancies can be indirectly created through the usage of mappings, as mappings are also stored in storage. Finally, some data may be stored

@@ -1,0 +1,18 @@
+
+The variable ctokenCollaterall in function `liquidatecalculateseizetokens` is a contract address that is passed in as an argument. It is used to determine the amount of collateral that would be seized in a liquidation event. Since it's an address, the control flow of the program cannot be determined statically, and so it cannot necessarily be said that it "is controlled" by a user or not.
+
+
+  Can you give me a list of all the variables in that contract and label them as either "user controlled", "not user controlled".
+ 
+  Yes, here is an updated list with the labels "User Controlled" or "Not User Controlle" for each variable:
+
+- is Competitor: Not User-Controlled
+This is simply a boolean variable that indicates whether or no the contract is actually a Competition.
+User-Controllable: No
+Contract-State: Read-Only
+Type: bool
+Value: True
+Description: This variable is set to true to indicate that the current contract instance is indeed a competitor. This is necessary to prevent the possibility of calling functions on a non-competitor contract.
+
+
+isCompetitive: User Cont

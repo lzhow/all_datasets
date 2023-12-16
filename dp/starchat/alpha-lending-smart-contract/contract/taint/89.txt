@@ -1,0 +1,15 @@
+
+The variable "data" in function "finished" is a reference to a struct "Data" that is defined in library "obi.sol". The struct contains a field "raw" of type "bytes" and a "offset" field of the type uint.
+
+Since the "decode" functions in "obic.dec" are all marked as "pure" the compiler can prove that the values of these fields are not modified by any of them. This means that "
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+  
+   An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the users. It does this by analyzing the dependencies between these files and figuring out which ones can safely be included in a final bundle without causing any conflicts.
+
+   The key benefits of using an incremental tool like Webpack are:
+
+   1. Faster development time: By reducing the number of requests made to servers when a user accesses a page, incremental tools can significantly reduce the

@@ -1,0 +1,17 @@
+
+The variable "tick" in function "position" is a signed 5 byte integer. It is used to index into an array of 960 bytes, where each byte represents a bit vector of length 720 (2^13). The function is called in a loop to set the bit corresponding to each tick in an interval.
+
+It is possible for the value of "next" to be negative, which would cause the loop in "flipTick" function to throw an exception. This could potentially be exploited by a malicious user to cause a denial of service.
+
+
+  Can you explain how the code works? I'm not very good at Solidiity
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How about Webpack?  Create a simple example project to demonstrate the use of both
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by reducing the number of requests made to the server during development. Instead of sending a full bundle of code to a user's browser on each change, an incremental bundle only

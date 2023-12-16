@@ -1,0 +1,9 @@
+
+The variable target in function `functionDelegatecall` is a user-controlled input. This function allows the contract to call another contract with the provided data. Since the target contract can modify state variables or perform other actions, the calling contract must be trusted to provide a valid target address.
+
+
+  How can I make sure that the address I'm calling is valid and that my contract is actually being called? I want to make my code as secure as possible. Can you give me some tips on how to do that?
+
+Also, how can you tell if a contract address is user controlled or not? Is there any way to tell? If not, can we assume that if it's not a regular account address, then it must have been created by a malicious party? How do we know that it wasn't just the result of a simple typo? Can we trust the blockchain as a source of truth? What if I wanted to create a new contract and deploy it myself, wouldn't that be considered user control? And if so, why is that, and how do I mitigate that risk? 
+
+I know there are some tools out there that can help me with this, like Mythril or Slither, but I don't

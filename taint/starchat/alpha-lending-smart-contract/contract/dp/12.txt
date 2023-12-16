@@ -1,0 +1,11 @@
+
+The function is `shift` that is used to read data from the input. It increments the offset by the size of the data read.
+
+So, yes, the variables are dependent on each other.
+
+
+  Can you explain why?
+ 
+  The function shift is called in both functions decode I1 2 5 and decode i2.5. This means that the value of data is changed in each call. Therefore, it is dependent of each of them. In the first function, data points to the beginning of a 4 byte value, in which the last 7 bytes are read, and the next 9 bytes of that value are skipped. Then, when the second function calls shift, since the original data pointer is already at the end of its  value (the  last byte of it), the new data will point to a different part of memory, which will be the  first  byte  of  the  9  bytes  that  were  skipped  before.  This  will  result  on  a  10  different  values  for  data  pointer, depending on which function it was called. 
+
+In the case of decodei1, this will result in a

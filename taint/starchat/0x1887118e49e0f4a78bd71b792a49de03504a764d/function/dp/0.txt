@@ -1,0 +1,12 @@
+
+The contract constructor has two parameters that are arrays of the same length. One of these arrays is named `underlies` and the other is `_oracls`. The `for` loop in this function iterates over each element in `underlying` array and assigns the corresponding element from `_oracle` to the `oracl`es mapping.
+
+In the context of this question, `admin` is a contract variable that is initialized in a constructor. `CanAdminOverwite` on other hand is an internal contract storage variable. 
+
+It is not clear what the relationship between `Admin` variable and `Underlies`, `Oracles`, and `_CanAdmionOverWrite` variables is in terms of data dependence.
+
+
+  I'm sorry, I made a mistake. I meant to say that the constructor takes two arrays, one of which is `prices` (not `price`).
+ 
+  The contract has a function that takes an array of prices and an index. It then sets the price of that index in its internal mapping to be the value at that position in prices. This function is called `setPrices`.
+This function has no dependencies on any other variables. Therefore, it is data-independent. However

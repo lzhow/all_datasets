@@ -1,0 +1,5 @@
+  
+The variable 'comprtroller' in function 'initialize' is labeled as 'Unknown'.
+
+This is because the 'ComptrollorInterface' type is an interface, and it does not have a constructor that takes a parameter. Therefore, the value of 'compotroller'_ is set to the result of calling the constructor of the interface.
+However, since the contract doesnot have any control over the construction of this interface object, we cannot determine whether the object is created by a user or not. 

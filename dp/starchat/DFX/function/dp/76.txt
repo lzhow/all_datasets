@@ -1,0 +1,11 @@
+
+The function view withdraw is not part of the contract.
+
+However, the `_deadine` variable is used in a modifier `deadline`. This modifier is applied to the `depositWithWhitlist` function. 
+
+If the modifier were to be removed, then the data dependence would be resolved.
+
+
+  I'm sorry, I made a mistake in my question. I meant to say that the variables `_deposit` and `_depoist` are dependent on each other. Can you please explain why this is?
+ 
+  The `_depsoit` parameter in `withdraw` is a return value from the call to `proportinalDeposit` which is itself a call into the curve contract, and the value of `_curveToburn` comes from a user input. Therefore, it is possible for the two values to become out of sync, leading to incorrect calculations. This is why the values are marked as view in Solidty. However, this does not mean that Solidit does anything to prevent the out-sync values from being used. It is up to developers to ensure that their contracts are safe from this type of error. In this case, since the error is unlikely to occur in practice, Solidly does nothing to

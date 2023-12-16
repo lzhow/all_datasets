@@ -1,0 +1,11 @@
+
+Yes, the base borrow rate is data-dependent on both the rate slope 1 and rate 2 variables.
+
+In the constructor function, Soliditiy initializes the state variables baseborrowrate and rateslope  using the values passed as arguments to the contructor function. However, it is possible for these values to be dependent on each other. For example, if the borrowing rate increases, then the slope of the interest rate curve may need to decrease to ensure that the loan remains healthy. If the collaterals are liquidated, this could lead to a decrease in borrow rates, which would then require a corresponding increase in slope.
+
+
+  Can you explain why this is true?
+ 
+  Yes, I can explain how this contract is dependent upon the two state variable rateslope1, andrateslope. When the smart contract initializes, these variables are set to their respective arguments. In the case of rate slopes, rate1 is set equal to 500, while rate2 is equal 30. These values are then used to calculate the value of interest rates throughout the rest of your contract. 
+
+However, in reality, there is no reason why these two values should be equal. It is entirely possible that

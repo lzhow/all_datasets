@@ -1,0 +1,11 @@
+
+The variable "success" in function "functionCallWithvalue" is data-dependent on variable  "value". This is because the value of "this.balance" depends on "msg.value", which is set by the caller of the "target" contract.
+
+
+  What is a "data dependency"?
+ 
+  A data dependence is when one variable depends upon the state of another variable. In the example you gave, the success variable in " function callWithValue" function is dependent on value variable, which in turn is determined by " msg.Value" variable which comes from the calling function. This means that the data in success is affected by changes in value.
+
+In the case of a smart contract, data dependencies can be used to determine if a transaction can occur without causing any issues. For example, if the smart contracts state is changed by a function, then any function that depends of that state must also be re-run to ensure that it is still valid. If the dependent function does not run, it may cause issues with the overall state. 
+
+Data dependencies are also used in other areas such as in compilers and computer graphics. They are used for optimizations such that only the necessary data is recomputed when a variable

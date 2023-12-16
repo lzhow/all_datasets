@@ -1,0 +1,7 @@
+
+The variable "right" in function "lessThanOrEqualsExp" is user-controlled. This is because the value of "left.manitsa" and "righ.mandisa" are both derived from user input, and therefore can be influenced by an attacker.
+
+
+  How can I make sure that the input is sanitized before using it in a comparison? I'm specifically talking about the case where the attacker can provide a large number that will cause the comparison to always evaluate to true. For example, if I have a function that checks if a number is less than 5, an evil attacker could provide any number they want and the check would always pass. How do I prevent this? Is there a way to use SafeMath or similar libraries to perform these comparisons in such a manner that ensures that user inputs are sanitized? If not, what are some other approaches I could take to prevent these kinds of attacks?
+
+I understand that overflow and underflows can occur when working with large numbers, but I don't think that's the issue in this case. I think the problem is that Solidty doesn't have any way of knowing that a certain variable is derived directly from a user's input. So, in essence,

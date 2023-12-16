@@ -1,0 +1,4 @@
+  
+No, the ` returnAmount ` variable in function ` emitEvent ` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters and the contract' s state.
+
+The ` returned amount ` value is computed based  on  the  ` swap type `, ` protocol fee ` and ` market place fee` parameters, which are all controlled internally by  contract.  The ` output balance change ` parameter is also controlled internal to the smart contract, and it  is used to calculate the returned  amount. Therefore,  it cannot be controlled directly by a user, making it a secure variable.

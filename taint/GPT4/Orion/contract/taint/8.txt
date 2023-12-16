@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `tokenAOrWETH` in the function `addLiquidityFromExchange` is not controlled by the user. Its value is determined by the code logic and is set to `tokenA` initially. It is only changed to `WETH` if `tokenA` is equal to address(0). The user does not have control over the value of `tokenAOrWETH`.

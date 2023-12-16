@@ -1,0 +1,4 @@
+  
+No, the `soldNFTs` contract variable is not dependent on `timestamp` variable in `function updateFess`.
+
+The reason is that the value of `nextFfeeUpdate` is calculated based on current `timestam` value, but it is never used to update the state of the smart contract. Therefore, there is no data dependence between the two.

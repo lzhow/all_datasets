@@ -1,0 +1,5 @@
+  
+No, the variables `available` and `_witdrawal` are independent.
+
+The `bal` variable in `earn` function depends on `wanted` balance, which is a state variable of the contract. However, `strateg` is also a contract state, but it is independent of `availble` as it does not depend on it. Therefore, there is data dependence between `b` (which is `avaiable`) and `r`(which depends only on `_bal`).
+ 

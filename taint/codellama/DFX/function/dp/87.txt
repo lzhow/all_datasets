@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `getOriginSwaData` function, the local variable  `oBa_ls` is initialized with the value of `new int[1](curves.assests.lenght)`. The `length` variable is a state variable of the contract, and it is not modified within the scope of this function. Therefore, `nbals` in ` getOriginswapdata` depends on `curv. assets. length` which is also a contract state.
+ 

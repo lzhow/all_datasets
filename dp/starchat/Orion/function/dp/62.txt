@@ -1,0 +1,11 @@
+
+The variable pair in function swap is data-dependent on variable output in _SwapCurve because the value of pair is determined by the call to Iorionpoolv2pair.sol, which is a Solidty library contract. This library is deployed on a blockchain and is used by multiple smart contracts. Therefore, the code in swap function is dependent on code from _SwapeCurve function, even if the two functions are in different files.
+
+
+  Can you explain this in simpler terms?
+ 
+  Yes, I can explain it in a simpler way.
+
+In the _swape function in Orionswap.so, there is an internal function called _SWAP. In this function there are two loops. One loop is for the number of elements in path array minus one. And the other loop iterates over the elements of the path from the second element to the last element. 
+
+For each iteration of this loop, it assigns the input and output variables to be the current element and the next element respectively. Then it creates a new variable called pair that is assigned the address of a pair contract using the OrinMultipoolLibrary contract and passing in curfactory,input andoutput as parameters. It then assigns a variable token  to

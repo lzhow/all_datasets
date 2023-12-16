@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `amount` in the function `swap` is set to the value of `swapToken.allowance(_from, address(this))`. The `_from` parameter is an address provided by the user who invokes the `swap` function. The allowance is a value that indicates how much the `swapToken` contract allows the `Amp` contract to transfer on behalf of the `_from` address. This allowance is set by the user through the `approve` function of the `swapToken` contract. Since the user controls the `_from` address and sets the allowance for the `Amp` contract to transfer tokens, the `amount` variable is indeed controlled by the user.

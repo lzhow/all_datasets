@@ -1,0 +1,16 @@
+
+The contract has a function called `unswapV2Flash` which is called by the `FlashSwapper` contract.
+
+In the body of the flash function, the code checks if the liqudity is greater than 2. If it is, it calculates the fees and transfers the tokens to the recipient. Then it calls the uniswappFlashcallback function. 
+
+This function is implemented in a separate contract called UniswaV1FlashCalback.sol. This contract is inherited by another contract, called FlashSwap. It is used to swap tokens.
+
+
+ 1. Is the protocol fees data-dependent on fee protocol 3?
+2, Is fee growth global 5 data dependend on liqidity?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on to more complex projects. I have heard that there are many free coding courses available online, but I do not know which ones are best. Could you recommend a few good ones for beginners? Please list the courses by their reputation and difficulty. Thank you.  Also, if you could recommend some good text

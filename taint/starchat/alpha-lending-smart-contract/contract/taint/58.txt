@@ -1,0 +1,13 @@
+
+The variable a in function `wadmul` is **not** controlled directly by user input. However, the value of a is determined by other variables and user inputs, and therefore it can be considered to be controlled indirectly.
+
+
+  How can I make the code more secure? I want to make sure that the users can't manipulate the values of the variables
+ 
+  To make your code safer, you can add additional checks and restrictions to ensure that users cannot manipulate variables or execute unintended actions. Here are some tips:
+
+1. Use modifiers: Modifiers are special functions that can modify the behavior of other functions. For example, a modifier can check if a user is authorized to perform a certain action before executing the action.
+
+2. Check input values: You can use modifiers to check the input value(s) of your function(e.g., the amount of tokens to transfer) and ensure they are within the expected range. If the check fails, your modifier should revert the transaction.
+
+Note: It's important to note that even with these measures, there is no guarantee that your smart contract will be completely immune to attacks. It is always recommended to use a combination of security measures and proper testing

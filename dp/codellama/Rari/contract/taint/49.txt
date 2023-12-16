@@ -1,0 +1,4 @@
+  
+The variable 'comptr_' in function contructor is labeled as 'Unknown'. The reason is that the contract does not have any information about the source of the value of 'compotr_'. It is possible that it was set by a user or it could have been set to a default value.
+
+In general, when analyzing a contract, you should consider all possible sources of data, including user input, external data sources, and default values. If you cannot determine the origin of a variable, then it should be labled as "Unknown".

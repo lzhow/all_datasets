@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `pool` in the function `_swapCurve` is not controlled by the user. It is assigned the value returned by the function `OrionMultiPoolLibrary.pairForCurve`, which takes the parameters `curFactory`, `input`, and `output`. The values of these parameters are not controlled by the user, as they are passed as arguments to the function. Therefore, the variable `pool` is not controlled by the user.

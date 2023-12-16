@@ -1,0 +1,22 @@
+
+The contract function is `function calculateLiqudationAmount(address _reserve, bytes32 _txId,  uint _loanAmount)`
+
+This function calculates the amount of collateral that should be returned to the user after a loan is liquidated.
+It takes in three parameters:
+`_reserve`: The address of the reserve that the loan was taken out of
+` _id`: A unique identifier for the transaction
+ `_loanAmmount`: the size of loan that was liquidatd
+In this function, the `_reserve` parameter is used to access the `pools` mapping, which stores information about each reserve.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Some of them include:
+
+   1. Codecademy: This is an interactive website that offers a variety of courses and tutorials to get you started with Python programming.
+
+   2. Udemy: UDEMY has a wide range of Python courses that are available for free. Many of these courses are taught by experts in their field and are designed to be easy to follow.
+
+  3. Coursera: Courera also offers

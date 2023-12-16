@@ -1,0 +1,4 @@
+  
+No, the ` curve` variable in function `includeAsset` is NOT controlled  by user because it's a local variable and it can't be modified by any external user, only by other functions in this contract.
+
+The ` includeAssset` function is a private function, which means that it cannot be called from outside the contract, and therefore, any changes made to the local variables in that function will not affect the state of the smart contract outside of that scope. 

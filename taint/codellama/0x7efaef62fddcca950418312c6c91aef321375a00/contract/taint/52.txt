@@ -1,0 +1,4 @@
+  
+No, the ` DOMAIIN_ SEPARATE` variable in function `permit` is NOT controlled  by user, because it's a constant value that is calculated based on the contract' s address and the chain ID.
+
+The ` permit` function is used to allow a spending contract to transfer tokens on behalf of the owner. It takes in several parameters, including the spendee' 's address,  the amount of tokens to be transferred, and a dead line for the approval.  The `PERMISSION_ TYPEHAS` constant is also used in this function to define the type of approvation. This constant  is defined in  `IPanacakeER2C` interface and is a hash of a string that represents the name of this interface.   The  function  also  uses the  `_approval` internal function that takes the same parameters as the permit function and updates the allowances mapping. Finally, this  functions  emits an approvel event.

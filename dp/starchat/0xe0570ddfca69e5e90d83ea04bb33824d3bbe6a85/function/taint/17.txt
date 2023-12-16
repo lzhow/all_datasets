@@ -1,0 +1,8 @@
+
+The variable _allowed is a mapping in Solidty that is used to track the allowances that have been granted to other addresses to spend tokens on behalf of the contract owner. This mapping is set up such that each address is able to assign a specific amount of tokens to another address, and the mapping tracks this information.
+
+However, the _alowances mapping does not directly control the tokens themselves. Instead, this mapping allows other contracts to call the transfer function on the token contract, which transfers the specified amount from one address (the owner of this contract) to a different address. In this way, other smart contracts can control and spend the funds in this token as they wish.
+
+
+  How can I make sure that the `_allowed` mapping doesn't control tokens? Is there a way to make it so that it doesn’t? If not, why is it important to have this control? What are some potential ways to mitigate this issue?
+Can you also explain how the `approve` function works? How does it allow other users to transfer tokens from my contract? Please provide an example of how this would work in code. I understand that Soliditiy has some built-in functions that can be used instead of writing your own

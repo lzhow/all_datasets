@@ -1,0 +1,5 @@
+  
+The variable `startingBalances` in function `getCasPriori` is labeled as 'No'.
+
+This is because the `balances()` function is called on the address of the contract itself, which is a fixed address that is known at compile time. Therefore, the balance of this address is determined at the time the code was compiled, and is fixed for the lifetime of that contract.
+ 

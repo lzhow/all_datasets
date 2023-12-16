@@ -1,0 +1,5 @@
+  
+No, the `contract state expScale is not dependent on variable allowresgin`in the `_ setImplemenationSaFe` function.
+
+The `set Implementation Safe`function is defined in `CDelegate Interface` and it is called by the`_set implementation` method in`C Erc 2 1 Delegate`. The ` _ set Implemntation SaFe ` function is used to set a new implementation for the delegate contract. It takes three parameters: `implementation_`, ` allow Resign`, and `becom Implementa tion Data`.
+In the implementation of the method, it checks if the caller has the required permissions to change the current implementation. If the call is successful, then it sets the new ` implementation_` as the active implementation and emits a `NewImplementati on` event.  The`exp Scale` contract variable is never used in this function, so it cannot be data-dependent on `AllowResgin`.

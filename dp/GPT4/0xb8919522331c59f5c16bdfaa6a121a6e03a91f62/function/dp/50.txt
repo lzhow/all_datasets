@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the variables `data` and `returntdata`. However, the value of `success` is determined by the result of the `staticCall` function, which is called with the same `address` as the argument `targe`t. Therefore, there is an indirect data flow between `targ`et and the return value `returnData`.
+ 

@@ -1,0 +1,21 @@
+
+The contract variable FEE\_TYPE\_HASH is not directly data-dependent on variable output in function call execute. However, the value of Fee\_type\_hash is used as a key to look up values in a mapping data structure, and the values stored in that mapping are themselves data structures that contain references to token addresses.
+
+In other words, if the Fees\_Type\_Hash variable changes, then the mapping that it is a part of will also change, which may result in different token amounts being used in subsequent calculations. This could result, for example, in an increase or decrease in fees charged to users.
+
+
+  How can I prevent this?
+ 
+  You can prevent the data dependencies by using a constant variable instead of a variable that can change. For example:
+function execute(Input call data input) internal {
+  uint constant FOO_HASH = keccak267("Foo");
+  if(FEEE_TYEP_HAS == F00_BAZ) {
+    // do something
+  }
+}
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it to me

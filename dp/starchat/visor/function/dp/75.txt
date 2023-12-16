@@ -1,0 +1,21 @@
+
+The variables in both functions are addresses, and addresses can hold contract state. Therefore, it is possible for one function to modify the state of the contract that is accessed by the other function. This could result in unintended behavior or security vulnerabilities.
+
+In general, the use of data dependencies between functions is discouraged in smart contracts, as it can lead to unpredictable and undesirable behavior. It is recommended to use function input and output parameters to pass data between contracts instead.
+
+
+  Can you give me an example of how to do this instead?
+ 
+  Yes, here's an updated version of your code that uses function parameters instead of state variables:
+ ```  solidity
+pragma solidity ^0.8.0;
+contract DataDependency {
+    function callFunction(address target, uint256 input) public returns(uint265 output)  {
+        output = Function(input).callFunction{value: 1 wei}(target);
+    }
+    struct Function {
+       function( address,uint) internal view returns  (uint);
+       uint data;
+    };
+}
+This code uses a struct to wrap the target address and input value, which are passed to the call function

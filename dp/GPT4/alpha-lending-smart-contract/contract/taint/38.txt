@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `_underlyingAsset` in the constructor of the `AlToken` contract is set by the value passed to the constructor at the time of contract deployment. The argument `_underlyingAsset` is provided by the user (deployer) who is deploying the contract. Therefore, the initial value of `_underlyingAsset` is controlled by the user. Once set during deployment, it becomes a part of the contract's state and cannot be changed unless there is a function within the contract designed to change it, which does not appear to be the case in the provided code.

@@ -1,0 +1,18 @@
+
+The variable _toke1 is a controlled variable in swap function. It is used to transfer the token to the address specified in to parameter.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!
+
+
+
+  An incremental bundlers like Webpack is designed to bundle together all the different files that make up a web application, such as JavaScript, CSS, HTML, images, and other assets, into a single file that can be served to users. This makes it easier for users to download and use the application since they only need to load a small amount of data instead of many small files.
+
+However, this bunding process can also introduce some problems, particularly when it comes to caching. Since the files are combined into one large file, the browser needs to make more requests to get all of the necessary assets. If any of these files change, then the entire bundle needs re-bundling, which can

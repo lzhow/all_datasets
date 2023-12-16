@@ -1,0 +1,7 @@
+
+The variable c in function `add` is **not** controlled directly by user input. However, the value of c is derived from user inputs a and b. Therefore, if a or b is user controlled, then c will also be user-controlled.
+
+
+  Can you explain how the control flow graph is generated and analyzed?  What is a basic block? How are the basic blocks related to the source code? What are dominance and post-dominators? Can the program be analyzed using a single static analysis or do multiple analyses need to be done? If so, what are they? Are there any tools that can be used to perform these analyzes? Please explain your reasoning.
+
+I am specifically asking about the analysis of Solidty code. If you are able to provide this information for other languages, that would also help me. I am particularly interested in how control-flow is modeled in those languages. Are all loops implemented as while-do loops? For example, in C, do-while loops are not allowed. Is the set of all possible executions of a program a lattice, or is it a graph? In other words, can all paths from the entry point to a return statement be the

@@ -1,0 +1,4 @@
+  
+No, the `address account` variable in function `handleTokenInpu` is NOT controlled  by user, because it's a function parameter.
+
+The `input` parameter is passed to the contract by a user when calling the execute function. However, `token` and `amount` are not user-controlled variables, they are derived from the input parameter and are used to check the allowances of the token. 

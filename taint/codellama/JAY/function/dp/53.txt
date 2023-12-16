@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `_seller` is not dependent on `timestamp` because it is assigned a value based on a different variable, `price`, which is obtained from the `latestroundData` function of the price feed contract.  The `sellers` variable is also not affected by the value of `nextFfeeUpdate` since it depends on `_price` which in turn depends only on`price`.
+ 

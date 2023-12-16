@@ -1,0 +1,15 @@
+
+The variable spnder in approve() is a user-controlled input. It is used to specify the address of the spending contract, and therefore it must be considered user input and be included in a transaction.
+
+
+  Can you explain how the code works? I'm not very good at Solidiity
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.
+
+An incremental bundling tool or bundlers is any tool that takes a set of files that make up a web application and combines them into a single file that can be served to a client's browser. This combined file is often referred to as a "bundle" or "asset".
+There are several types of incremental bundle tools, but the most common are:
+- bunders: these tools take a graph of dependencies between modules and generate a bundle that includes all the necessary code, inlining any dependencies that are already available in that bundle. They are designed to optimize the size of a resulting bundle by removing any code that is already included. Examples of bundlers include Webpack, Rollup, Parcel, Browserify, etc. 

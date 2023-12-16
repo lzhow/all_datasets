@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `mErr` in the function `balanceOfUnderlying` and the variable `vars` in the function `mintFresh` are scoped to their respective functions and do not share any state or data dependency. The `mErr` variable is used to capture the result of the `mulScalarTruncate` function within `balanceOfUnderlying`, while `vars` is a local struct used within `mintFresh` to hold temporary data during the execution of that function. Since `mErr` and `vars` are local to their respective functions and there is no interaction between these functions that would create a data dependency, they are not data dependent.

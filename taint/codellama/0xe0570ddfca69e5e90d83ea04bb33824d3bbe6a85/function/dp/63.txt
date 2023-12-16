@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `available` function, the return value is calculated by calling the balanceOf function on a token contract, which is stored in a variable called `want`. The `balances` variable is not directly dependent on `share` because it is a separate variable that is used to store the token balance of the contract.
+However, `total supply` is dependent ` shares` as it's used in calculating the amount of tokens to be minted in `_mints`
+Therefore, we can say that ` available` and ` deposits` are dependent because ` total supply ` is affected by ` share` .

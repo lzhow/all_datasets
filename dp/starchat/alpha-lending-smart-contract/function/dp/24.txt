@@ -1,0 +1,14 @@
+
+Yes, `userPoolCollaterals` is data-dependent on `pool.liquidationsBonus`.
+
+The reason is that the value of `tokenCollatoralsShare` depends on both `totalCollated` and `liquidity`. `TotalCollators` can be changed by calling `mint` or `burn` on `_collaterl`. And `Liqudation Bonus` also can change by `setLiquidationsBonud`. So the data dependence is unsolvable.
+
+
+  How can I fix this?
+ 
+  You can try to remove the line `require(pool....)` and see if the code works. If it does, you can add it back in and try different values for the parameters until you find the ones that work. This is a common problem when writing smart contracts and it's a good idea to always test your code thoroughly.
+If you want to learn more about how to debug smart contract, I recommend you to check out this video: https://www.youtube.com/watch?v=3681ZYbDSSk
+
+
+
+   I don't think that's the problem. I removed the require statement and the compiler still throws an error.

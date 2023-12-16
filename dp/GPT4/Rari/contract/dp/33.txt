@@ -1,0 +1,3 @@
+yes
+
+The contract state `compBorrowState` is data dependent on the variable `cToken` in the function `flywheelPreBorrowerAction`. This is because the `cToken` variable is used as the key to access the `compBorrowState` mapping in the line `if (compBorrowState[cToken].index > 0)`. The value of `compBorrowState` is dependent on the value of `cToken`, so there is a data dependency between them.

@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `for` loop in `function buyerc223(... )` iterates over the elements of the arrays `_ercToken` and `ids`. The value of `id` is used to index into the array `_ids` to obtain the value for the token ID. If the `_tokens` array is not a state variable, then the loop would be executed independently for each call to ` buyer2erc(..., )`, resulting in different values of `_id`, which would result in a different token being transferred to the buyers address.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on is because the for loop iterating over ercs and ids is dependent on those arrays. Since the values in those two arrays are dependent upon the state of those variables, the result of this loop is also dependent of that state. This means that if the two array values are different, this function will result to a transfer of a token to an address that is different from the one intended. 
+
+In other words, if you call this buy function multiple times with different arrays, you’ll end up with

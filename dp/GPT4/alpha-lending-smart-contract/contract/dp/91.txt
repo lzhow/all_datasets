@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `userData` in the function `setUserPool` and the variable `pool` in the function `setPoolReserves` are both instances of struct storage pointers, but they point to different data structures within the contract's state. `userData` is a storage pointer to a user's specific pool data (`userPoolData[_user][address(_token)]`), which holds information about a user's interaction with a particular token pool, such as whether they are using it as collateral and their borrow shares.
+
+On the other hand, `pool` in the function `setPoolReserves` is a storage pointer to the pool's general data (`pools[address(_token)]`), which holds information about the pool's reserves.
+
+Since `userData` and `pool` point to different parts of the contract's state and there is no direct assignment or computation in the provided code that indicates `userData`'s values are derived from `pool`'s values or vice versa, they are not data dependent.

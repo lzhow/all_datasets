@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the first function, the `_burn` function is called, which modifies the `total_supply` variable. This means that the value of `r` is dependent on `balances` and `share` variables, and therefore, `_withdrawn` depends on them.
+Similarly, in function 2, `want().withDraw()` is also called which changes the balance of the contract. Therefore, both functions have data dependencies on each other.

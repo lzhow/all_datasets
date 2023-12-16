@@ -1,0 +1,10 @@
+
+The variable `a` in `greaterThan(A, B)` is a user-controlled input. It is used to compare two exponential numbers, `A` and `B`, and determine if `|A| > |B|`.
+
+In the `Exponential` contract, the exponential type is defined as:
+`struct Exp{ uint  mantisa; }`
+where `mantssa` represents the mantiass of the number in units of `10^17`. The `getExp` function takes two inputs `num` (the numenator) and  `denom`  (denominator) to create a new `Exp struct`. This function first multiplies `n` by `expscale` to scale the nummber to the same scale as the other exponentials in this contract. Then, this function calls `divUInt` on the scaled nummerator and the denominator to get the ration. Finally, we return the new Exp struct with the calculated rantional mantaiss.
+This function does not modify any state variables or have any other side effects. Therefore, all variables in Exp are considered user controlled.
+
+
+  Can you explain how the code works? I'm having

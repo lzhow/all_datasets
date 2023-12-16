@@ -1,0 +1,12 @@
+
+The contract has a function called `transfer` that transfers `_value` of the token from `_token` to `_to`. The function `_transferDefaultPartition` is called by `transfers` and it transfers the `_amount` from the sender's address to the receiver's.
+
+In the `Amp` contract, the total supply is stored in `_balances` mapping. In the swap function, we are transferring the allowances of `SwapToken` which is an external contract to `msgSender` address. Since the transfer is external, it is not a part of contract's state and does not affect the state of `_balance` or `_allowances`.
+Therefore, `_balanceOf` doesnot depend on `_operator` variable.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning how code python.  The best way is to find a tutorial online and follow it step by step.   You can also find many youtube videos that can help you learn.    Another way would be to attend a bootcamp.     You could attend one at a local community college or university.      Another option is enroll in a online course

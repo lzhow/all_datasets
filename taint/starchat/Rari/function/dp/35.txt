@@ -1,0 +1,13 @@
+
+The contract function ```update_comp_borrow_index``` is a helper function for the ```borrow``` function in a Compound.finance smart contract. It is used to update the borrow index for a particular cDAI token.
+
+In the Compound protocol, the supply and borrow indices are used as a measure of the interest rate for each asset. When a user borrows an asset, their borrow balance increases, and their supply balance decreases. This results in an increase in both the asset's supply index and the user's borrowing index. Conversely, when a borrow is repaid, both indices decrease. 
+
+To calculate the new borrow and supply indices, we need to know the current borrow amount and market borrow rate. We can get the market rate by looking up the most recent block number and using that to look up a stored borrow speed for that ctoken. Then, using the delta in blocks and this borrowspeed, calculate how much COMP accruing has occurred. Finally, add this accrual to the existing borrow or supply rate to get a new index value.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is designed to optimize

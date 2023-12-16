@@ -1,0 +1,7 @@
+
+The variable ctokenCollaterall in function liqudateBorrowallowed is a contract address that is passed in as an argument. It is used to determine the collateralization ratio of the borrowed c token. Since it's an address, the compiler does not know if it can be modified by a user, so it cannot be considered a controlled variable.
+
+
+  Can you explain why it could be a bad idea to use a library like OpenZeppelin in this case? I understand that it makes the code more secure, but I'm worried about the potential for bugs and vulnerabilities that could arise from using a complex library. Is there a way to mitigate these risks? For example, could I implement some of these functions myself to make my code safer? Or is it better to just stick with the basics and not use any libraries at all? Please explain your reasoning. Thank you.
+
+I'm new to Solidty and smart contracts in general, and I want to write secure and bug-free code. I don't want my contracts to have any vulnerabilites that can potentially be exploited by hackers. Can Open Zeppelin be used in a safe and secure way? If not, are there any other

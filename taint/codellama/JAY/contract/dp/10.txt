@@ -1,0 +1,5 @@
+  
+No, the `contract state nfstSolds` is not dependent on `variable amount` from the  `function buyjaywithERc 51`.
+
+The reason is that the value of ` nfsSld`  is only updated in `sale` function, which is called in  the`buyjay`function.
+In the buy jay function , the amount is used to calculate the eth value to be transferred to the dev wallet, but it is never used in calculating the number of nFTS sold. Therefore, there is no data dependence between the two.

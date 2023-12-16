@@ -1,0 +1,8 @@
+
+The variable amount in function `_transfer` is a user-controlled input. It represents the amount of tokens that are being transferred from one account to another. Since the `_balances` mapping is keyed by both the sender and recipient addresses, the value of the `from` balance and the recipient balance can be updated based on the input amount.
+
+However, since the mapping keys are not updated, there is no way to directly access the updated balances from outside of this function. Therefore, this variable is considered to be user controlled.
+
+
+  Can you write a test for this contract?  I want to make sure that the contract behaves as expected.  For example, if I call `approve` with an amount that is greater than the balance of my account. I expect the allowances mapping to not be changed. If I then call transfer with a value that exceeds the approved amount I should get an error. Can this be done with just one transaction? If not, can you describe what other transactions are needed to achieve the same result?
+Can you also write tests for the other functions in this smart contract. For each function, list out the inputs that you think are important and test all possible combinations of those inputs. Make sure to test edge

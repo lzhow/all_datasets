@@ -1,0 +1,11 @@
+
+The variable _lenght is used to iterate through the curve assets array. It is therefore controlled indirectly by user input.
+
+
+  What is a curve? What does it mean to be "controlled by a user"?
+  
+  A curve is an equation that describes the relationship between two variables. In the context of the code, the two variable are the number of shells and the price of each shell. A user can control the shell count by changing the weights of different assets in a pool. This can affect the overall curve equation, which can in turn affect how much each user is able to buy or sell.
+
+In the case of this code snippet, a "user" is someone who is interacting with the smart contract. They can call the proportinalDeposit function to add liquidity to the pool, and proprtionalWithdraw to remove liqudity from the poool. These functions allow users to specify the amount of assets they want to deposit or withdraw, as well as the proportion of that asset they wish to use in each pool in order to make the trade. 
+
+However, in this case, since the _lengths variable is iterated through in both the deposit and withdraw functions, this variable can

@@ -1,0 +1,5 @@
+No, the variable `curves_` in the function `viewProportionalDeposit` is not data dependent on the variable `_bal` in the function `getGrossLiquidityAndBalancesForDeposit`. 
+
+The reason is that the variable `curves_` is assigned the value of `_newShells.mulu(1e18)` in the `viewProportionalDeposit` function, while the variable `_bal` is assigned the value of `Assimilators.viewNumeraireBalanceLPRatio(_baseWeight, _quoteWeight, curve.assets[i].addr)` in the `getGrossLiquidityAndBalancesForDeposit` function. 
+
+There is no direct assignment or calculation between these two variables, so they are not data dependent.

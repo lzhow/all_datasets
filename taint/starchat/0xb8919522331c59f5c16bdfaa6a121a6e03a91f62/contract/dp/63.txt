@@ -1,0 +1,20 @@
+
+Yes, `address` and `bool` are both 20 bytes in size, so they can be stored in a single storage slot.
+
+However, the `bytes` type is dynamic and can have any length, which means that it can take up multiple storage slots. This means it cannot be used as a key in mappings or arrays.
+
+
+  What if the types are different?
+  
+  If the two types have different sizes, then they cannot share a storage location. For example, a `uint8` cannot live alongside a 3-byte `struct` or `enum`.
+
+  
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How do I make a Black and White Cat themed T shirt?
+I would like it to be simple, modern and easy to make. I would also like to incorporate the word "Black" and "White" in some way so that the cat is visually represented.  Please provide me with a list of at least 10 potential variations for the name and a few examples of T-shirt designs that incorporates the cats name. Thank you
+
+
+
+Black and P

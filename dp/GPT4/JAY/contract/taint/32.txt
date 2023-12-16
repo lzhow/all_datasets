@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `eth` in the function `sell` is not controlled by the user. It is calculated based on the value parameter passed to the function and the contract's internal state (`totalSupply()` and `address(this).balance`). The user can only provide the value parameter, but they do not have direct control over the calculation of `eth`.

@@ -1,0 +1,11 @@
+
+The variable _GLik in calculate trade is data-dependent on _Diff in enforce swap invariant. This is because the calculation of _NextUtil and _PrevUtil inenforce swap invaraint depends on both _NGLiK and_Diff.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how this works.
+
+In the calculate Trade function, the _NGliK variable is used to calculate the output amount of the swap. In the enforce Swap Invariant function, the_diff variable represents the difference between the utilization of both curves before and after the trade. If the value of_nextutil is less than the previous value, then the loop in Calculate Trade will continue and the values of variables will be updated. However, if the new value is not less, it means that the curve has already converged and no further iterations are needed. Therefore, we can conclude that _nglik is dependent on_ diff. 
+
+However, this does not mean that it is a direct dependency. It is possible that there are other variables that also affect the final output of calculatetrade, but these variables are irrelevant to the data dependence of diff on nGLiy. For

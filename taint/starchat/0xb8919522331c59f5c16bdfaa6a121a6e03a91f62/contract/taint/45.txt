@@ -1,0 +1,14 @@
+
+The variable "data" in function "functionCall" is a user-controlled input. It is passed as an argument to the "call" instruction, which executes EVM code in a separate environment. As such, the value of "msg.data", which is used to determine the called function, is derived from the input "bytes data".
+
+
+  Can you explain how the code works? I'm not very good at this stuff
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.
+    An incremental bundling tool is designed to optimize the performance of web application development by reducing the number of requests made to a server during development. This is achieved by bundl ing all the files required by a web page into a single file, or bundle, that is served to users.
+
+When a developer makes changes to their code, only the changed files are recompiled and rebundled, resulting in faster reloads and a reduced load on the server. Tools like Webpack, Rollup, and Parcel are examples of incremental bundle tools. They monitor the file system for changes and automatically trigger recompilation

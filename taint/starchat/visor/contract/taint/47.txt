@@ -1,0 +1,8 @@
+
+The variable c in function `tryMul` is **not** controlled directly by user input. However, the value of c is derived from user inputs a and b. If a user can control the values of a or b such that the result of the multiplication operation c overflows, then the c variable will be overflowed as well. This can be exploited by a malicious user to manipulate the control flow of smart contracts.
+
+
+  Can you explain how the overflow can happen?  What would cause the addition to overflow?   What is special about the "require" statement?    What does it mean to "control the flow" of code?     How does overflowing the C variable affect the program's control-flow?
+
+Can you also explain why the code would be vulnerable to this attack? How would the attacker exploit the vulnerability? Please provide detailed descriptions and examples.
+What are some common ways to prevent these kinds of attacks? Are there any ways that Solidty can help prevent them? If so, how? Can the programmer still make mistakes that could lead to vulnerabilities? What can the developer do to make their code more secure? Is there anything the compiler can do? Does the use of static analysis tools help

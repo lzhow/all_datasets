@@ -1,0 +1,9 @@
+
+The variable swapDescritpion in cancelAccounSignature is data-dependent on swaptype in getReturnAmount because it is used to validate the signature.
+
+
+  How does the code change if the swap type is not known?
+ 
+  If the Swap Type is unknown, the Router contract can use a heuristic to determine the correct swap method. For example, if a swap is initiated with a 100 DAI input and a USDC output and the user has sufficient USDT and USDS balances, it may be assumed that the intended swap was between Dai and Dollars, and that a DEX swap would be more efficient. In this case, a Router could use the DSR (Decentralized Stablecoin Reserve) oracle to estimate the price of DOLLARS in USD, then use this price to calculate the expected output amount. This heuristics could be used as a fallback if no Swap type was specified. However, this would require the contract to have access to an oracle, which could introduce additional risks and complexity.
+
+In summary, while it would technically be possible to implement a more robust heurisitic swap selection method, in practice it could lead to unint

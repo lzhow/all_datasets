@@ -1,0 +1,9 @@
+
+The variable "c" in function "add_" is not directly used in "greaterThanEqExp" function. However, "require" statement in  "function greaterThenEq" checks if the value of "left.manitssa" is greater than or equal to the "right.mannitsa" value. Since "manitsa" variable is a part of the Exp struct, it is possible that the struct "Exp memory" could be changed by another function between the time of assignment and the require statement. In this case, the result of require would be false and "return" would not be executed. Therefore, we can conclude that "variable c in add_" function is indirectly used by " greaterthanEq function".
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain in detail how my tool analyzes Solidty contract codes and classifies data dependencies.
+
+Solidity is an object-oriented programming language specifically designed for implementing smart contracts on Ethereum, a decentralized blockchain platform. Smart contracts are programs that run on blockchain networks and are designed to handle transactions and data in a secure and decoupled manner. Soliditiy is used to write

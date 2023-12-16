@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `require` statement in line 10 of the library `ECDsa` contains a reference to the memory location of `sig`. This means that if `hash` and `sign` are changed, the value of s will also be changed.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason why the s variable is data dependant is because the require statement contains the reference of sig. This reference means the program will have to keep track of changes made to sig in order to determine if the statement is true or false. If the data is not dependent, then the changes to s would not affect the outcome of this statement. In this case, since the v variable also depends on sig, and the ecrcover function also uses sig as an input, both s and v would be data dependencies. However, if s is only used in one require function, such as the one in Ecdsa, only s needs to be a dependency. 
+
+In general, data that is used by multiple functions in a program is likely to have multiple dependencies, so it would make sense for the programmer to label it as such. It is also worth noting

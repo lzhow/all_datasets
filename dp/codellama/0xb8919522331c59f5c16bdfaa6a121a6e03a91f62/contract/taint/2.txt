@@ -1,0 +1,4 @@
+  
+The variable 'implementation' in function 'upgrateAndCal' is labeled as 'Yes' because it can be controlled directly by a user who calls the upgrade function.
+
+In the code, the 'implementaion' variable is passed as an argument to the '_upgradetoAndcall' function, which is a function in ER186Upgrde contract. This function takes the implementation address as a parameter and calls it using delegateCall. Therefore, if a malicious user calls this function with a different implementation contract address, they can potentially execute arbitrary code on the target contract, including changing the state of the contract and stealing assets. 

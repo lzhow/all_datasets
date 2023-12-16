@@ -1,0 +1,9 @@
+
+The function `flywheel` is part of the Composable protocol, which is a decentralized finance (DeFi) protocol that enables users to borrow and lend assets. It is used by many DeFi applications, such as lending and borrowing assets, providing liquidity, and trading.
+
+In the `Comptroller` contract, the `_mintComp` function is called to mint new COMP tokens. This function updates the total supply of COMP and the supply index for each user's COMP balance. However, it does not update the borrow index or the COMP speed for any users. Therefore, if a user borrows COMP using the cTokens, their borrowed amount and their supply amount will remain unchanged, but their COMP balances will be out of date. If the user then transfers their cTOKEN balance to another address, there is no mechanism to update their total borrow balance or their new supply balance, so their data will still be incorrect.
+
+
+  Can you explain how the data is incorrect?
+ 
+  The data in this case is that the transfer of ctoken balance from one address to the other doesnot update borrow balances and supply balances. So the calculation of borrow APY and Supply Apy will not be

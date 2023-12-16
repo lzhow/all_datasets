@@ -1,0 +1,12 @@
+
+The variable borrowcaps is a mapping of addresses to uints. It is used to store the borrow caps for each Ctoken.
+
+It is important to note that the mapping is public, and can be modified by anyone. This means that if a user can modify the value of a borrow cap, they can potentially bypass the restrictions on borrowing. Additionally, if there is no borrow limit for a particular CTOKEN, then the address will not be present in this mapping, which could allow anyone to borrow an unlimited amount of the token.
+
+
+  How can I prevent this? Is there a way to make sure that only the owner of this contract can change the values of borrowcap? If so, how can this be enforced?
+Can you give me an example of how to do this in Solidty? I am not very experienced with Solidiy. I would appreciate it if you could give an explanation that is easy to understand. Thank you. 
+
+
+
+

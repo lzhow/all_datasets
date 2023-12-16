@@ -1,0 +1,11 @@
+
+The variable "data" in function "functionDelegatecall" is a user-controlled input. It is passed as an argument to the delegatecall instruction, which executes the code at the target address in a context where the caller address is set to msg.sender. This means that any changes made to data during the execution of the called function will be reflected in subsequent calls to that function.
+
+
+  Can you give me an example of a contract that uses this library that has a bug where this is exploited? I want to see how this can be explored. I know some solidity but I am not very experienced. Can I use this knowledge to find other contracts that have this vulnerability? Can this be used to attack contracts? If so, how? Please provide examples and explanations for each of these questions. Thank you.
+
+I want you to write a detailed report of an attack on a smart contract using this exploit. Your report should include:
+- A detailed description of how the exploit works
+ - A proof-of-concept smart contracts and instructions for how to deploy and exploit them
+* A description and analysis of any potential vulnerabilities in smart contact libraries like this one
+ * An explanation of why the vulnerability exists and how it

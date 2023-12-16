@@ -1,0 +1,14 @@
+
+Yes, `Mint` event is emitted when `Pandake` pair contract is called by `user` to `deposit` liqudity. In the `swap` function, the `_mint` and `_burn` functions are called to update the reserve balance of the two tokens. These two functions call the internal `_update` method to calculate the new price and liqulidity.
+
+The `_safeTranfer` is a internal function that is used to transfer tokens from the contract to an address. It is important to note that the transfer function can fail for a number of reasons, including insufficient balance, so the return value of this function is checked to ensure that it succeeded.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Yes, sure! The data dependence analysis is performed by analyzing the code of a smart contract and determining whether one variable or state depends on another. This analysis can be done using various techniques, such as control flow analysis, use-def analysis and data-flow analysis. For example, in this case, we can use a use def analysis to determine that `reserve` depends `balance`.
+
+ 
+ 
+  
+  150 words about the history

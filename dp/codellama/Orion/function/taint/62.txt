@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `safeTranser` function, the parameter `to` is passed as an argument to the `_callOprionalReturn` internal function. This function is defined in another contract, and it calls the external function `transerFrom` on the token contract.
+Since the argument `from` in `safetransfer`is not passed to `_calloptionalReturn`, it means that the value of `address (this)` is used as the sender of the transaction. Therefore, `this` address is controlling the transfer. 

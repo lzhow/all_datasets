@@ -1,0 +1,11 @@
+
+The variable _am in intakereRawAndGetBalance() is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  You can check if it's user-controlled by looking at the code. If the value is set by a user input, then it can be considered user control. However, if you're not sure, you can also check the documentation or ask the developer.
+
+In Solidty, user inputs are typically passed as function parameters or read from storage. For example, the "msg.value" variable in Solidit represents the amount of ether sent with the transaction. This value can only be set when the contract is called, so it would be user controllable. On the other hand, variables that are set in a constructor or are part of the state of a contract are not user controls. 
+
+It's important to note that Solidities's type system is statically typed, which means that the type of every variable must be known at compile time. So even if an input is passed to a function as a "uint" or "address", it will still be stored as raw bytes in memory. To access the actual value, a conversion function must first be called.

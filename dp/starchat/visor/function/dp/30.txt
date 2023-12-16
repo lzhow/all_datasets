@@ -1,0 +1,12 @@
+
+The contract function is used to build a domain separator for EIP-712 signatures. A domain seperator is a hash of the domain specific information used in an ECDSA signature. In this case, the information is comprised of:
+
+- The type hash, which is unique to the signature type (in this example, it is `0x8b73c3cc7aa2e4cb4976214f337944c478f89c667c1d1c51998a90640b3929a`)
+ - The name of this contract (e.g. `"MyToken"`)
+* The version of our contract, e.G. `1`
+ * The chain ID, so that signatures are unique across different networks (1 for mainnet, 3 for Ropsten, etc.)
+** The address of *this* contract.
+In this function, we are computing the kecckak-265 hash (a 224-bit hash) of all of these values, and returning it.
+
+
+  I'm sorry, but I don

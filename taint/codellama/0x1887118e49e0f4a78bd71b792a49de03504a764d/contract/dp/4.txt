@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `oracle` is a mapping of addresses to Price Oracle contracts, and it is initialized in a constructor. It is therefore not dependent on any external variable, including `_oracle`.
+On the other hand, the `_ oracle` variable is an array of Price Oracles that is passed as an argument to the `Add` function. This means that the value of `_ oracl`e is determined by the caller of the Add function, which is external to this contract. Therefore, ` oracle` and `_ Oracle` are independent of each other.

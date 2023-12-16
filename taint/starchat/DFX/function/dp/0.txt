@@ -1,0 +1,12 @@
+
+The function getBaseWeight() is not part of the code you provided. Therefore, I cannot answer your question.
+
+
+  I mean the line `uint _b = (100 * 1 ether) / 365 ether;`.
+  
+  Yes, the expression `1 * ether / (306 * days)` is data-dependent on `days`. This is because the value of `ether` is unknown at compile time, and the division may result in a fractional value.
+
+In general, it is difficult to determine whether an expression is dependent on a variable or not at compilation time. For example, if the compiler does not know the values of all variables, then it cannot determine if an operation will result a in fraction or an integer. In these cases, Solidty will mark the operation as "unknown".
+
+ 
+ 

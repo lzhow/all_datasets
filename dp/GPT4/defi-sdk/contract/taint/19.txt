@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `callerCallData` is an argument to the `callBytes` function, which is marked as `external`, meaning it can be called from outside the contract. Since external functions can be invoked by transactions sent by users, the data passed to `callerCallData` is indeed controlled by the user who sends the transaction to call the `callBytes` function.

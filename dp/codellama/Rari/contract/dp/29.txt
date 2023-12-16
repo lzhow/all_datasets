@@ -1,0 +1,5 @@
+  
+No, the variables ` comp Accru_ ` and ` src ` are independent.
+
+The variable  `  comp  Accrue_  `_ is a local variable in function  _updateComp Supply Index_ and is only used to calculate the new index of the ctoken. It is never used outside of this function.  On the other hand,  the  variable _src_ is an argument of function_flyWheel Pre Transfer Action_ which is used in other functions. Therefore, it is possible that the value of  src  may change between the time it was passed to  flyWheeL Pre Transf er Action  and the call to update Comp Suppl y Index. However, this does not mean that there is any data dependence between  Comp Acc rue _ and  Src .
+ 

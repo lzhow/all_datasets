@@ -1,0 +1,9 @@
+Yes
+
+The contract state `buyNftFeeJay` is data dependent on the variable `_price` in the function `updateFees`. This is because within the `updateFees` function, `_price` is used to calculate the new value of `buyNftFeeEth`, which is then used to update `buyNftFeeJay` through the following line of code:
+
+```solidity
+buyNftFeeJay = ETHtoJAY(buyNftFeeEth);
+```
+
+The `ETHtoJAY` function is called with `buyNftFeeEth` as an argument, which was previously calculated using `_price`. Therefore, any changes to `_price` will affect the calculation of `buyNftFeeEth`, and consequently, the value of `buyNftFeeJay` is indirectly dependent on `_price`.

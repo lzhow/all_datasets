@@ -1,0 +1,3 @@
+yes
+
+The variable `amount0` in the function `burn` is data dependent on the variable `_totalSupply` in the same function. The reason for this is that `amount0` is calculated using `_totalSupply` as part of its formula. Specifically, `amount0` is assigned the value of `liquidity.mul(balance0) / _totalSupply`, which means that the value of `amount0` is directly influenced by the value of `_totalSupply`. Any changes to `_totalSupply` would affect the calculation and the resulting value of `amount0`.

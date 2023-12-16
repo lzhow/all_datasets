@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `addExp` function, the local variable error is not dependent on any external variable. It is only dependent upon the internal variables `m` and `n`.
+On the other hand, in ` mul Exp3` the external variables are ` a`, `b`, and`c`. The local variables in this function are also `err`and `ab`.  The ` err` variable is dependent only on ` ab` which is a local function variable and not on external `c` or ` b`. Therefore, ` error` is independent of ` c`or `  b`in ` add Exp`.

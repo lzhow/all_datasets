@@ -1,0 +1,16 @@
+
+The variable "b" in function "add" is not modified in this function, so it is safe to remove it.
+
+However, the library "library Safe Math" contains a function called "sub" that has a similar signature to the one in "Math.sol". This function subtracts two numbers and checks that the result is non-negative. If the check fails, it reverts the transaction. This means that if "a" and "c" are dependent on "x" then "y" will also be dependent, since the revert will cause the state to revert.
+
+
+  Can you explain why the code still works?
+ 
+  The code works because the "require" statement in Soliditiy is used to check if the condition is true. In this case, if b >a, then the require statement will revert the execution of the contract. Therefore, no changes will be made to "state" or "variable a".
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is that true? If not, why is it so? 
+  3. Can python be used for web development

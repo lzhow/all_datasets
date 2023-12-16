@@ -1,0 +1,15 @@
+
+The function `isDataDependent` takes two strings as input, the first being the solidity code of the contract, and the second being a variable name. It uses the solc compiler to compile the code, extract the AST, then search the tree for references to the given variable. If it finds any, it returns true, otherwise it return false.
+
+For the example code you provided, here's the output of `dataDependent("contract test { function f(uint a) public pure returns(bool)  { return a > 1; } }", "a")`:
+- `true`
+This means that the `a` variable in line 4 of your function is data-dependent on `uint` a in your input code.
+
+
+  Can you explain how the algorithm works?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being stuck on simple problems and wanting to move on to more complex projects. I also want to be able to use this knowledge to help my family and friends, as they have expressed an interest in me learning to program.  I have tried taking classes in school, but they always seemed to fall short of what

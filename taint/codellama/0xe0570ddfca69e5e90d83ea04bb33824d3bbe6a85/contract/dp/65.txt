@@ -1,0 +1,4 @@
+  
+No, the variables `_name` and `_decimal` in function constructors are independent of the `strategies` variable in `withDraw` function.
+
+The reason is that the constructor function only initializes the values of `_names`and `_decmials` variables, and the value of ` strategies ` variable is initialized in a separate function called `upgradeStrategy`. Therefore, there is a clear separation between the initialization of these variables and their use in other functions. 

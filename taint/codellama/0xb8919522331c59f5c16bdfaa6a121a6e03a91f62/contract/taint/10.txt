@@ -1,0 +1,4 @@
+  
+No, the ` new Implementation ` variable in function `upgradeto` is NOT controlled  by user because it's a function parameter.
+
+The ` upgrade to` function takes an address as a parameter, which is passed by a user when calling the contract. This address is then used to set the implementation slot in storage. Therefore, `NewImplemenation` variable is a variable that is set by an external user and is therefore not under the control of the smart contract itself.

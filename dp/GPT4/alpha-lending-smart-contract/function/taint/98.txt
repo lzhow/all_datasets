@@ -1,0 +1,9 @@
+
+The variable idx in function `poke` is used to iterate over the arrays `reveivers` and `values`. It is therefore not strictly necessary to make it controllable by users. However, if it were to be made controllabe by a user, the attacker could potentially manipulate the length of the array, causing the loop to run more times than intended, or cause the program to revert prematurely. Therefore, making the index variable controled by user would not be a good idea.
+
+
+  What is a possible attack scenario? Please describe it in detail.
+
+Please note that I want you to describe the attack in great detail, including any potential edge cases or gotchas you might think of. I am specifically looking for a proof of concept in Solidty that exploits the vulnerability. If you can provide that, then I will reward you in alpha coins. But please make sure that you clearly explain in your response how the exploit would work, and what the potential attackers would need to do to exploit the bug. It's fine if you need some guidance on Soliditty or smart contract security to write a successful exploit, but please provide as much of that guidance as you feel comfortable with. 
+
+Here are

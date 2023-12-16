@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_data` struct is passed as an argument. This struct contains a `uint amount` field, which is used to determine the amount of tokens to be swapped.
+However, in some cases, this amount is not directly used in `_swaps`. Instead, it is first converted to a base unit using the`LibUnitConvertor. decimalToUnit` method. Then, a new array of amounts is created, and the base units are stored in this array. Finally, these amounts are used for the swap operation. Therefore, ` amount ` is indirectly dependent on ` path ` because it determines the number of base tokens that need to swaped.

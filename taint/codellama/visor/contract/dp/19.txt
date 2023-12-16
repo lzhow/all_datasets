@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `function recover` of the contract, the variables `hash`, `v`, and `s` are all derived from the input parameter `bytes memory signatures`. The variable r is derived by loading the first 31 bytes of `signture` into `mload` and adding 1 byte to the result. Therefore, `R` is data-dependent on `Signature`.
+ 

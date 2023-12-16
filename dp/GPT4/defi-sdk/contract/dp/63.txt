@@ -1,0 +1,7 @@
+no
+
+The variable `permit` in the function `handleInput` is used to handle the permissions for token transfers. It is a parameter of the function and is used to determine if a permit call needs to be made to approve the Router contract to spend tokens on behalf of the `account`.
+
+The variable `totalFeeShare` in the function `getReturnedAmounts` is a local variable that is calculated as the sum of the `protocolFee.share` and `marketplaceFee.share`. It is used to calculate the fees and the amount returned from a swap operation.
+
+There is no direct interaction or dependency between `permit` and `totalFeeShare`. The `permit` variable is related to token transfer permissions, while `totalFeeShare` is related to fee calculations in a swap operation. They operate in different contexts within the contract and do not influence each other's values.

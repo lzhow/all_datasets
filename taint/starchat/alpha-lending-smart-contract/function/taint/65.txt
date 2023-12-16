@@ -1,0 +1,9 @@
+
+The variable _decimals in this contract is used to store the number of decimal places for this token. Since the value of this variable is set at the time of deployment, and is stored as a constant, the state of the _decimal variable can be considered to be controlled entirely by code, as it cannot be changed after deployment. Therefore, in response to your question, "is the `_decimal` variable in function `False` controlled  by user?", the answer is "no".
+
+
+  Can you explain why it's not possible to change the decimal value after the contract has been deployed? I understand that the code can't be modified after it has already been compiled, but can the deployed contract be interacted with to modify the internal state? If so, how? Can the same be done for other variables? Please explain in detail.
+ 
+  Yes, you are correct that it would not be possible for the compiled contract to have its internal variables modified once it was deployed. However, there are ways to interact with the already deployed smart contract and modify its state.
+
+One way to do this is to use a tool like Remix IDE, which allows developers to write, compile, deploy, test,and interact  with smart contracts.

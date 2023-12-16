@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `_add_liquidty` function, the `token_or_Weth` variable is assigned the value of `address (0)` if the token is not supported by the pool. This means that the address of the Weth token will be used as the input token in place of any unsupported token.
+Then, in `_ swapCurves`, the` input_Ind`, `output_ Ind`, and `pool` variables are assigned values based on ` cur_Factory`,` token_Or_weth`,and ` token`.
+Therefore, ` input _Ind ` is data-dependent on` cur _Factory`.

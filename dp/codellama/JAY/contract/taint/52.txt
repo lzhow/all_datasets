@@ -1,0 +1,4 @@
+  
+No, the ` price` variable in function `updateFee` is NOT controlled  by user because it's a public function and it can be called by anyone.
+
+The ` updateFess` function is called in `buynft` and `sale` functions, and the price is calculated based on the current price of the token on a decentralized exchange. Therefore, any user can call the update function to update the fees, which means that the value of `prices` can change at any time and is therefore not under the control of a single user or entity.

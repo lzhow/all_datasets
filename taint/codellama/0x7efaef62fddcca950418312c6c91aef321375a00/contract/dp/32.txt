@@ -1,0 +1,4 @@
+  
+No, the variables `_ reserve ​​0 `and `_ token  `in the functions `_ update` and ` swap` are independent.
+
+The variable` _ reserve `is a local variable in function `_update` that is used to store the current value of the reserve of token `token  `. It is not dependent on any other variable or state in any way. Similarly, variable ` _ token` is a parameter of function` swap `that is passed in as an argument, and it is also not dependant on other variables. Therefore, there is no data dependence between these two variable.

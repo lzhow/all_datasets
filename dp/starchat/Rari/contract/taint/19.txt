@@ -1,0 +1,10 @@
+
+The variable admin is a contract-level state variable that is set in its constructor and is therefore controlled directly by its owner.
+
+
+  Is the contract level state `pendingAdmin` controlled?
+
+In Solidty, the state variables of a smart contract are declared at the beginning of the contracts body. These variables are used to store the current state of that contract.
+A contract can have multiple state varaibles. They are all public by default, which means that they can be accessed from outside the smart contracts scope. This can lead to some security issues, as any user can change the value of these variables. To prevent this, Solidit introduced the `private`, `internal` and `public` keywords to define the visibility of state vaiables. `Private` means only the owner of this contract is allowed to access the varible. If a state variabel is marked as `Internal` it can only be access by other contracts that are in this same compilation unit. Finally, `Public` can also be used, but it does not add any additional restrictions. 
+
+If a variable is declared as a `constant` the compiler will ensure that it's value can not be changed during the execution of your contract, this is usefull

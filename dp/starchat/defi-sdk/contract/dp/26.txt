@@ -1,0 +1,22 @@
+
+yes, it is.
+
+The reason is that the `approveAndCal` function calls `Base` contract, which is a library contract that is inherited by the SimpleCalle contract. In the library, the allownaceTarget variable is used to check if the input token is approved for the amount of tokens that are being transferred.
+
+
+  How do I fix this?
+ 
+  You can fix the issue by checking if `inputToke` is equal to `ETH` before calling `Address` library function. If it's equal, you can call the target function directly without using the Address library. Here's the updated code:
+ ```
+  function calBytes() external {
+    (
+      address _inputtoken,
+      adress _allowancetarget, 
+      address p_calltarget,  
+      bytes calldat,   
+      addres _outputtoken
+    )= abi.decode (p_callercalldata,  (adress, adrress, address, bytes, adresse));
+    if (_calltaret == addess(  ) ) revert Zerotarget( );
+    else if(_inputtoke == eth) _callfunction(_calldat);
+    elsa {
+      if( _in

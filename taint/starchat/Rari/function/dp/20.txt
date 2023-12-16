@@ -1,0 +1,8 @@
+
+The function "liquidationCalculateseizetokens" is a helper function for the "LiquidateBorrow" function in a CDP contract. It calculates the amount of seized collateral and seizure proceeds based on a user's actual repayment amount and the current exchange rates for both the borrowed and collaterized assets.
+
+To determine if the seization amount is dependent on an input parameter, we need to examine the code that calls the helper. In this case, the calling code for "seizedTokens" appears to be the body of the Liquidate function. Specifically, it appears that the value of "actualRepaymentAmount" passed to the call to "calculateSeizedCollAmounts()" is equal to msg.value. This means that "msg.sender" (the borrower) is responsible for paying the collatoral seizing fee, and therefore "collateralAmountToSeiz" will be equal "0" in this context. Therefore, "totalSeizableColl" and "amountToLiquidator" are both dependent upon "repayment".
+In summary, yes, seizable coll is data-dependent on repay amount.
+
+
+  Can you explain how the data dependencies

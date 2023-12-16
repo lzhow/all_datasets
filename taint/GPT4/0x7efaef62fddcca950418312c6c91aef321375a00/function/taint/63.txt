@@ -1,0 +1,8 @@
+
+The variable _Reserve0 in swap() is a private variable that is used to calculate the amount of token  that needs to be sent to the recipient. It is updated every time the swap function is called, and is determined by subtracting the balance of the pair contract from the reserve of each token in it.
+
+As such, the _Reserver0 variable is in fact not directly controlled or influenced by any user input, but rather is calculated based on the current balances of both tokens in a pair. Therefore, we can conclude that the value of _reserver0 cannot be directly influencing the outcome of a swap transaction.
+
+
+  How can I check if a variable or function parameter is user controlled? I want to implement a tool that can automatically detect if any of my code has user-controlled inputs. What are some common ways that user inputs can be controlled, so that I can create a list of heuristics to look for?
+Can you give me an example of how I could implement such a heuristic for finding user control in Solidty code? How would I go about implementing this heurisitc? Please provide pseudocode if possible. I am a beginner programmer, please be gentle. Thank you

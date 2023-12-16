@@ -1,0 +1,5 @@
+  
+No, the variables ` input` and ` amount` are independent in this contract.
+
+The function  `cancelAccount Signatures` takes an `Input` parameter as an argument, which contains a `Token Ammount` field. This field contains the `token` address and the amount of tokens to be transferred.  The `Amount Type` is not used in ` cancel Account Signatues`.
+On the other hand, ` get Absolut Input Amout` function takes ` Token Ammout`, ` Amoun Type`, and` account` as arguments. `Account`is not passed to `Cancel Account signature`.  Therefore, there is no data dependence between ` Input`and ` Account`in ` Cancel Account signatures`.

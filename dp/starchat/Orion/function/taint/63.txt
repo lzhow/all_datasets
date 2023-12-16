@@ -1,0 +1,8 @@
+
+The variable token in function `_callOpitonalReturn` is a contract address that is passed in as an argument. It is therefore controlled indirectly by user input, as the address of the token contract is determined by code execution.
+
+
+  How do I know if a variable is user controlled? I'm not sure how to tell if it's user or not. Can you explain it to me?
+
+I'm trying to write a program that can analyze Solidty code to determine if certain variables are user-controlled or if they are safe to use. I want to know how I can tell the difference between a user controlling a value and a smart contract automatically controlling it.
+Can you help me understand how this is possible? How can I tell when a certain value is being controlled automatically by a Smart contract vs when it comes from user interaction? Can I do this with just the code that I have access to? Or do i need to look at other aspects of a Solidit contract? For example, can you tell me if an address is set to a specific value vs being set by some other code? If so, how do you know what the value should be? Is there some way to figure this out just from the contract's code itself

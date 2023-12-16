@@ -1,0 +1,4 @@
+  
+No, the `_ quoteWeight ` variable in function `proportionDeposition` is NOT controlled  by user because it's a constant value that is defined in line 11 of the code.
+
+The `_baseweight` variable is also not user-controlled because its value is derived from the `curv.weight[ ​​0 ]` array, which is a publicly accessible variable. However, this value can be changed by anyone who has access to the contract' s storage. Therefore, both `_ baseweight ` and `_ quotewight ` are not considered user controlled.

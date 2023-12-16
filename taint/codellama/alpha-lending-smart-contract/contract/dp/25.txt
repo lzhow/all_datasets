@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `Alpha Release Rule Selector` contract, the `_getAlphareleaseRulest` function returns two arrays: `receivertRule` and `Amounts`. The `ReceiVertRule ` array is populated with the addresses of the receipts and the corresponding release rules.
+ The`Amount` array contains the amount of alpha tokens that each receiver is entitled to receive based on their corresponding rule.  The amount is calculated by calling the`getreleaseAmount()` function of each rule in `Receiverrule`.
+  In the implementation of `IalphaRelease Rule`, the release amount depends on both the from block and to block. Therefore, `alpha` is data-dependent on `fromblock` because the value of`alpha `is calculated based  on`from block`and`to block`.

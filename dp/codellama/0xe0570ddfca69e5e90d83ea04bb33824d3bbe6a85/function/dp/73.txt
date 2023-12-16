@@ -1,0 +1,4 @@
+  
+The label is 'No'.
+
+In the `wants` function, the return value is `IErc2O(Strategy.Want())`, which is a call to the Strategy contract's `Wants()` function. This function does not use the value of the local variable amount. Therefore, there is no data dependence between the two functions.

@@ -1,0 +1,8 @@
+
+The variable duration in this function is a result of a calculation that is performed on the data that the program has access to. It is calculated as the difference between the current time and the time at which the receipt was created, and is then used in a comparison to determine how much of the original amount of Alpha Token was vested.
+
+However, the exact value of duration is determined by a mathematical operation that takes place on data provided by users. Therefore, while it may be possible to deduce the value that duration will take on a particular execution of this code, there is no way to guarantee that it will always take the same value, even if all of its inputs are known. This means that while the duration variable may appear to be a "controlled variable," it cannot be considered to have any direct control over the outcome of any part of that code.
+
+
+  What is an example of an input that would cause the calculation of `now.now() - receiptCreated` to result in different values on different runs of your program?
+Can you provide an explanation for why this is? Is it because the system clock on your computer is set incorrectly? Or is it something else entirely? If it's the latter, what would be some other way

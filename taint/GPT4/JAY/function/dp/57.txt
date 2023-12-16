@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The variable `_tokenAddress` in the function `buyJayWithERC721` is an input parameter and its value is determined by the caller of the function. On the other hand, the variable `nftsBought` in the function `getTotals` is not directly related to the value of `_tokenAddress`. Therefore, there is no clear data dependency between these two variables.

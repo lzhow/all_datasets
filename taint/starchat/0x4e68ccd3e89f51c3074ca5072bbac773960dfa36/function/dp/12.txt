@@ -1,0 +1,10 @@
+
+Yes, `Delta` is data-dependent on `BlockTimestamp`.
+
+In the `transform` function, the value of `last` depends on both `Last.Blocktimestamp` and `tick`. However, in `Write`, the only value that is passed to `Transform` for `Tick` comes from the storage location `self[Index].Tick`. Since `Index` can change between calls to write, this means that the data flow for the call to transform is different depending on whether the index is even or odd. This means `Ticks` will be different for each call, and thus `Deltas` as well.
+This means the values of the variables `SecondsPerliqudityCumulativex102`and `TicKcumulative` are dependent on data that can vary between different calls.
+
+
+  Can you explain this in simpler terms?
+ 
+  Yes, I can explain it in a simpler way. In the code you provided, there are two functions: `read` (which is not shown) and the two `update` functions. `Read` takes in an array of observations and a timestamp, then it returns the most recent observation before the given timestamp. These observations are stored in

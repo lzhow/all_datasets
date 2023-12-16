@@ -1,0 +1,4 @@
+  
+No, the `input_typehash` variable in this function is a constant and is therefore not user-controlled. It is defined as a public constant in a separate contract and imported into this contract using the import statement. Therefore, this variable is under the control of the contract's author and cannot be modified by users.
+
+The reason for this is that the value of `typeHash` is derived from the ABI of a specific contract, which is known at compile-time. This means that it cannot change at runtime, and therefore it does not need to be user controlled. Additionally, since it' s a hash of an AMI, any changes to the underlying contract would result in changes in its AMB, making the hash invalid.

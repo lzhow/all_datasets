@@ -1,0 +1,5 @@
+  
+No, the variables `_from` and `_value` are dependent on `_data` but not `_operatordata`.
+
+The function `transerFrom` is called with the arguments `_spende,_to`, and`_value`. The function then calls the internal function` _tranferbydefaultpartition` with arguments`msg,sender`,`from`, `_ to`, `value`, `""`, "". The internal `_transfebydefaultpartion` function calls `_trnasferbypartition` which calls`__callposttransfershook` passing the argument `_dat` to the `_calpostransferhook`.  The `_callsostrategyoperatorhook ` function does not use the` operatormdata`. Therefore, `_tot`is not dependenton`operatrdata `.
+ 

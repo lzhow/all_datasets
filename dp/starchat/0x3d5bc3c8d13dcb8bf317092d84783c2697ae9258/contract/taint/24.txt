@@ -1,0 +1,14 @@
+
+The variable is `false` is **not** controlled directly by a user, but it can be indirectly controlled through the value of other variables.
+
+In this case, the `InterestModelRate` contract inherits from the OpenZeppelin `Ownable` library, which provides the `_owner` variable. This variable can indirect control of the contract's `owner`, which is ultimately controlled indirect by `msg.sender` in Solidty.
+
+
+  How can I fix the code? I want to make sure that the owner is set to the address that deployed the smart contract. I don't want anyone else to be able to control the ownership of my contract, even if they have the source code. Can you write me a new version of this code that meets these requirements?
+Please also include comments in my code explaining what each section of code does. Thank you!
+
+
+
+
+
+   What is a good way to learn how to code in python?  I have heard that python has the most job opportunities, is that true? If so, how can i get hired in this field? Please respond in iambic pentameter.  Thankyou.   ̶h̷e̸l

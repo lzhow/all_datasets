@@ -1,0 +1,4 @@
+  
+The variable _ spender in function `increaseAllowances` is labeled as 'Yes' because it represents the address of the spending account, which is a user-controlled variable.
+
+In the context of a smart contract, the `_approval` function allows the owner of an account to grant permission to another account (the spendee) to spend a certain amount of tokens on their behalf. This function takes in three parameters: the sender's address, a spendre address (which is user controlled), and the amount to be approved.  The spenser address is used to determine the maximum amount that the approved spenndee can spend on behalve of sender. Therefore, this variable is under the control of user and can be used maliciously.

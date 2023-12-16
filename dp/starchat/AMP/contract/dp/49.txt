@@ -1,0 +1,12 @@
+
+The contract has a function called `_removeFromPartitions`. This function removes a token from all partitions.
+
+`_removePartitionsFromAll` is called in two places:
+1. In the `_approve` function, which is used to approve an allowence for a spender. This means that the allownace is removed from the default partition. Since the `default partition` can be changed, this means the old allowances are removed. 
+2. When a transfer is made, the token is first removed form the from partition, and added to the to partition (or the defualt partition if no to-partition is specified).
+This means, that if the transfer function changes the partition of the tokens, all previous allowences are invalidated.
+
+
+  I'm sorry, but I don't understand what you mean by "the contract's state is data-dependent on a variable." Could you please explain further?
+ 
+  In Solidty, a contract can have state variables that are used by other functions in that contract. For example, if a state variable `x` has the value 5, then any function that uses ` x` will have access to that value. However, it is possible for the state of a

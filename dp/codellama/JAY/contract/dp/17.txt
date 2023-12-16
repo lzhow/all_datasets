@@ -1,0 +1,4 @@
+  
+No, the state variable _total_supply is not dependent on variable  _P_Scope_  in function  update_fees.
+
+The reason is that the value of _ total_Suppy is set in constructor and is never changed. It is only used to calculate the price of Jay in Ether. On the other hand, _ P_ Scope_ is a local variable in update fees function and its value is calculated based on current price feed. Therefore, there is no data dependence between the two.

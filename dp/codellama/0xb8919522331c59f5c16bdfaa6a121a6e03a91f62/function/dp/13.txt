@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `isContrac` function, the local variable 'size' is assigned the value of the external code size of an account. This value is dependent on 'account' which is a parameter of 'isContrct' function.
+On the other hand, in 'functionDelegatCall' the 'target' variable is used to call the delegatecall function on an address. However, this function does not use the size variable. Therefore, 'Size' in isContrat is not dependent to 'Target' of functionDelegatedCall.

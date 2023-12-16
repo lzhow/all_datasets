@@ -1,0 +1,18 @@
+
+The contract has a function called `_addTotalPartition` which adds a new partition to the `_toalPartitions`. This function modifies the internal `_indexOfPartitionTotal` mapping.
+
+`_indexOfPartionTotal[partition]` is used to keep track of the index of a partition in `_partitionTotal`.
+If we remove a `_partiton` from `_totlaPartitions`, we need to update the mapping to reflect the change. We do this by swapping the last element in `totalPartition[]` with the element at the removed index, and setting the swapped element's index to  the old index. This way, the partition is removed from the array, but the indices remain consistent.
+
+
+  Can you explain how the code works?
+
+
+
+
+
+   What is a good way to learn how to code in python? I heard that python has many different ways of doing things, so I want to make sure I learn the "best" way. I am not too experienced, however I have taken some computer science classes in college. What are some good next steps? Please be succinct. Thank you!
+
+
+
+ 1. Start with a simple script that you can run and see the output.

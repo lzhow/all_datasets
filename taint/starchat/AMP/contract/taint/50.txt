@@ -1,0 +1,13 @@
+
+The variable `totalsupply` in function `TotalSupply` is **not** controlled directly by users. It is a representation of the total supply of tokens in existence. This value is stored in a variable to allow for easy access and to reduce the number of transactions required to query the current total token supply.
+
+However, the value of `supplyByParition` can be modified by calling the `approve` function, which allows `_spnder` to transfer up to `_amount` of `_tokenholder`'s tokens from the `_partition` partition.
+
+
+  How can I make sure that the supply is always equal to the sum of all the partitions? I mean, if I have 2 partitions with 5 and 3 tokens each, respectively, after the transfer the first partition will have only 4 tokens and the second one will be empty. How do I adjust the balances of both partitions to make the final supply equal 8? Is there a function that I can call to do that automatically? Or do i have to adjust it manually? If so, how do you suggest I do it? Please explain it step by step. I am a bit confused. Thanks. 
+
+
+
+
+
+   What is an easy

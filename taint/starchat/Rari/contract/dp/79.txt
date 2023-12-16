@@ -1,0 +1,10 @@
+
+The contract is a library contract, and it is used by other contracts. It cannot be directly interacted with by users.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `RewardsDistribution` contract has a function that sets the speed of the COMP token for a particular ctoken. This function is called `_setBorrowCompIndex`.
+ 
+  The function `_grantBorrowersComp` is an internal function of `RewardDistribution`. It is only called by the admin of that contract. Therefore, it cannot have any effect on whether the state variable is data-dependent on `borrowSpeed`.
+
+However, the `_borrowCompAccrual` function in `Ctoken` can be called directly by anyone. If the user has not called `claimComp`, then the amount of COMP accruing to them will be added to their balance every time they call `_mint` or `_redeem`. This means that `supplySpeed * deltaTime` will always be greater than or equal to `totalBorrow * borrowAccIndex`, and thus `accruedComp >= totalBorrow`. Therefore the data dependence of `_supplyCompRate` on `_compSupplierSpeed[msgSender]` is `unknown`. 
+

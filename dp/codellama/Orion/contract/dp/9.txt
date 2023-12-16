@@ -1,0 +1,5 @@
+  
+No, the ` amount Out` variable in function ` _ swap` is not dependent on ` reserve  ` variable  from function  `_ swap`.
+
+The reason is that the `_do_swap_tokens` function calls the  function` _get _amount _out` which is a function from the library `OrinMulti Pool Library`. This function calculates the amount of tokens that will be received based on a set of parameters, including the reserve of the token being received. However, this function does not use the value of ` reserves` from `_get reservers` to calculate the output amount. Instead, it uses the values of other parameters such as the input amount and the path of token pairs. Therefore, ` amountout` and `  reserve` are independent variables.
+ 

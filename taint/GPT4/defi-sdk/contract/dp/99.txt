@@ -1,0 +1,3 @@
+no
+
+The variable `absoluteInputAmount` in the function `emitExecuted` is not data dependent on the variable `returnedAmount` in the function `getReturnedAmounts`. The `absoluteInputAmount` is calculated in the `execute` function based on the `input` parameter and is passed through to `emitExecuted` without being influenced by the `returnedAmount`. The `returnedAmount` is calculated independently within `getReturnedAmounts` based on the `outputBalanceChange` and the fees, and it does not affect the calculation or value of `absoluteInputAmount`.

@@ -1,0 +1,5 @@
+  
+No, the variables ` fee Grow thBel ow0 X1 88 ` and `F ee G row th Glob al  O X 9 6 ` are independent.
+
+The variable  ` F e e G r o w t h B e l o  w  o X  1  8 7 ` is calculated in function  get Fee G ro w I n s i d e  as the difference between the  F  e   G  r  a  W  G l  b  A l   O  X   1   2   8   and  the   F   e    G   r   o   w   t   h   B   E   L   a   W  0   X    1    8   7   of the lower tick.  The  lower  tick  is passed as an argument to the get  fee  growth  inside  function.   The   lower   tick   is   not   modified  within  this  scope. Therefore,  it  does  not  affect  whether  or  how  much  of  its  value  will  be  used  to  calculate  variable   fee   growth   below   zero  x  2  5  6 .
+  On  th  other  hand,   the    variable    fee    growth    global   0    x   9   6   in  cross  can  change  due  t  h  i  s  being  modified   by  subsequent  calls  and   updates  made  by   other   functions.    Therefore  ,  there  exists  an  unknown  data  dependency  between  these  two  variables.

@@ -1,0 +1,5 @@
+  
+No, the state variable `AM_PTOkens_Sender` is not dependent on `_implementaion` variable in function`setParitionStratgy`.
+
+The reason is that the `amp_tokes_sender` state is defined as a constant string with the value "ampTokesSender", which is independent of the `_implentation` parameter.
+On the other hand, `_ implementation`is a parameter of type address that is passed to the` setParititionstratg` function, which means that it can have different values depending on how thefunction is called. However, this does not affect thevalue of ` amp_tokens_ sender`, which remains constant. Therefore, there is no data dependence between the two.

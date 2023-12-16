@@ -1,0 +1,6 @@
+  
+No, the ` timeElpased` variable in function `_update` is NOT controlled  by user because it's calculated using the current block timestamp and the last block timestamps.
+
+The `blocktimestamp` function returns the timestamp of the most recent block, and ` blocktimestampLast` stores the value of `timestamp()` from the previous block (i,e, `uint31( block .timestamp%  (2 ** 40)`).
+So,`timeElpsed` can be calculated as the difference between the two values, which is a constant value that is determined by blockchain network and cannot be controlled directly by a user .
+Therefore, this variable is considered as not being controlled or influenced by users.

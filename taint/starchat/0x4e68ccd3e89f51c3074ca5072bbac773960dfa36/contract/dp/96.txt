@@ -1,0 +1,19 @@
+
+yes, it is.
+
+The reason is that the `transform` function updates the state of the oracle based on a new observation, which depends on both the current state and the new data. Specifically, the update depends both on `blocktimestamp` and `tick`.
+However, `cardinalty` is not updated in this function, so it remains the same throughout the execution of `update`.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `binarySearch` method in `Oracle.sol` uses a binary search algorithm to find the two observations that bracket the target observation in time. This method is data dependendent on two things: the observations in memory and their order.
+
+ 
+  1. What is a "binary search" algorithm?
+  2. How does the order of observations affect the performance of a search?
+3. Why is `oracle.cardinailty ` data independent? Is it because it doesn't change? If so, why does it need to be data independet? What does this mean for the overall performance and correctness of this algorithm, and how can it be improved?
+
+ 
+  
+   A binary Search algorithm is an algorithm used

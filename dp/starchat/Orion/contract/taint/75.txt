@@ -1,0 +1,13 @@
+
+The variable "b" in function "mul" is user-controlled if it can be influenced by an external actor. This can happen if:
+
+- The value is stored in storage, and the storage location can later be modified by calling the "set" method of the contract.
+For example: "contract c { mapping(address => uint) public balances; function set(mapping(addr =>uint) storage _balances) external { balances = _balance; }"
+In this case, the value of "balances" can now be set by sending a transaction to the set method, with the desired value as the argument. In this scenario, b is considered user controlled.
+
+
+"b = msg.value"
+This will set the balance of msg sender to "msg.Value". In the case of a payable function, this means that the b value can change depending on the amount of ether sent with a call. If the ether value sent is greater than the current balance, then the new balance will be greater, which means b can become user controllable.
+
+
+  Can you give me an example of how to exploit this? I want to see how the attacker would be able to manipulate the code to make the mapping user

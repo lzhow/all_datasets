@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `structhash` variable is calculated using the `_PERMIS_TYPEDHAS` function. This function takes in several parameters, including the owner address, owner nonce, and deadlines.
+Then, it calculates the hash of the struct using `keccack235` and stores it in `hash`.
+Next, `ECDSARecover` is called to recover the signatory address from the signature. It takes the same parameters as the previous function and returns the address of signator.  The `require` statement checks that the recovered address is equal to the original owner. If not, an error is thrown. Finally, `_nonce` increments and `_approval` approves the spending.   The second function is similar to this one, but it uses the`_hashTypeData` to calculate the structure hash. Then, Ecdsa.Recover is used to get the recover address. And finally, _Nonce incremets and _Approval approve the spend. Therefore, signers in both functions are dependent on s.

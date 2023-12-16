@@ -1,0 +1,13 @@
+
+yes, the `_amount` variable in `earn()` is user controlled. It is set to `_available()` which is a view function that returns the balance of the strategy's want token (e.g. WETH). The user can call `deposit()` and `withdraw()` to change the value of `_balance()` but they cannot directly change `_want()` or `_pool`.
+
+
+  Can you explain how the code works? I'm having trouble understanding how `_balances` and `_allownances` are used.
+ 
+  Sure! The `_transfer` function transfers `_value` amount of tokens from `sender` to `recipient`. The `nonReentrency` modifier prevents re-entrance by requiring that the contract has entered the "entered" state. If the state equals `_ENTERD`, the transaction will revert.
+
+The `_mint` method increases the total supply of a token by `_totalsupply`.
+`_burn` decreases the supply by subtracting `_burnvalue`. 
+
+`approve` sets allowances for `spenders` for `_spendvalue`, and emits an `Approval` event. 
+ `increaseAllownace` increases allownaces for a `snder` by `added

@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `MintableAlpacaToken` contract that is used in `MockLenderPool` is a modified version of the standard `AlpacaCoin` token contract. This modified contract overrides the transfer function to allow the owner of `MakableAplcaToken`, in this case the mock lending pool, to mint new tokens for the user. 
+
+In the case where the `_token` parameter is an instance of this modified token, the call to `pool = pool[...]` will fail because the mapping `pools` does not contain a key for this token. Therefore, `address (pool. alToken)` will evaluate to the zero address, and the subsequent call ` pool.altoken. mint` will revert.
+
+
+  Can you explain how the modified transfer method works?
+ 
+  The modified `transfer` method in AlpacaCoin is intended to be used as a way to implement a token sale. When the token is sold, instead of transferring the tokens to a new owner, a fixed amount of ALPACAs is minted and sent to each user who has previously transferred ownership of their APLACA tokens. In this

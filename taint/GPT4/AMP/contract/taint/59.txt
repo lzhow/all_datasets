@@ -1,0 +1,7 @@
+
+yes, the index variable in _ removeTokenPartition function in Amp.sol is user controlled.
+
+  What is a user-controlled variable?  How does this relate to the concept of user control?
+
+User-controllable variables are variables that can be changed by a human user, either directly or indirectly. For example, a variable that stores a person's name can typically be set by that person, but a counter that is incremented each time the program runs can also be user controllable.
+In the context of smart contracts, user controls variables can refer to variables whose values can only be modified by an authorized party, such as a contract owner or a privileged user account. This can include variables in storage, as well as variables used in control flow, for example in if-statements or loops. In general, any variable whose value can affect the behavior of the contract can potentially be considered user controlling. However, determining whether a particular variable is truly user or not can require a deep understanding of how the smart contract operates and the specific requirements of a given use case. It is important to note that while user variables may be modifiable by users, they may not always reflect the true state of affairs. A common example

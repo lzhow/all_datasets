@@ -1,0 +1,9 @@
+
+The variable success in both functions is not dependent on each other. Success is a boolean value that is set to true if the transaction is successful and false if it fails. In the buyNay function, success is used to determine if an NFT was successfully sold. If the NTF was sold successfully, the value of success will be true and the user will receive their Jay token. However, in buyNJaynoNFT, there is no Nft being sold, so success does not have any affect on whether the Jays are received or not.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is part of a smart contract for a decentralized application (dApp) called J.A.Y. (Just A Yacht). The dApp allows users to buy and sell Near-Earth objects (NEOs) such as yachts, boats, and submarines.
+
+When a user buys a yach, a function called buyYacht is called in which the contract checks if trading has started. Trading is only allowed during a specific time frame, which is defined in a variable called start. Once trading is started, other checks are performed to

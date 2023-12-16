@@ -1,0 +1,3 @@
+yes
+
+The contract state `canAdminOverwrite` is directly assigned the value of the variable `_canAdminOverwrite` in the constructor function. This means that the state of `canAdminOverwrite` depends on the value passed to `_canAdminOverwrite` when the contract is being deployed. Therefore, there is a data dependency relationship between `canAdminOverwrite` and `_canAdminOverwrite`.

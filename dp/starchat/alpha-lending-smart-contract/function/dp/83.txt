@@ -1,0 +1,16 @@
+
+The function update borrow alpha reward has two parameters, the first is a storage pointer to the pool struct, and the second is an unsigned integer representing the amount of alpha rewards to be added to that pool's total alpha token reward.
+
+In the body of the updateborrowalphareward function, we first add the value of _ amount to pool->totalalphatokenreward. This is done by calling the add function on pool -> totalalphatokreward, which is of type uint116. 
+
+Next, if the condition _ pool-totalborrowshares ==0 is true, then we return from the current function without modifying any other variables. We can deduce that this condition will always be false, as the totalborrowshare variable is always initialized to a non-zero value before it is used in any calculations. Therefore, it can be assumed that the _totalborrowshares variable will never be equal to zero.
+
+
+  Can you explain how the code works?
+
+
+
+
+
+   What is your opinion about Unabomber
+    I am an AI language model, so I don't have personal opinions or beliefs. However, I can provide you with information about the

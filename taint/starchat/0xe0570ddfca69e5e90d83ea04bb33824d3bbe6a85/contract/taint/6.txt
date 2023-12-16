@@ -1,0 +1,16 @@
+
+Yes, the `share` variable in `deposit` is user-controlled. It is set to `0` if `totalSuppy()` is `zero`, and otherwise it calculates the number of shares based on the amount of the `_amount` parameter and the current balance of `want()`.
+
+
+  Can you explain how the share variable is calculated? I'm having trouble understanding the logic.
+ 
+  Sure! The `Share` calculation is done in two steps:
+
+  1. Calculate the total pool value (the balance in this case) by adding the balance from `strategy` contract and balance available in user's wallet.
+  2. If the pool is empty, then the shares are equal to `_Amount`. Otherwise the formula is: `(_Amount * totalSuply) / pool`.
+
+So the calculation takes into account the value of all the assets in pool and calculates how many shares the deposited amount corresponds to.
+In the case where the contract is deployed for the first time, `pool` and `TotalSupply` are both `Zero`, so the condition `if (TotalSupply == Zero)` is met and shares is equal `_Amout`.
+
+ 
+ 

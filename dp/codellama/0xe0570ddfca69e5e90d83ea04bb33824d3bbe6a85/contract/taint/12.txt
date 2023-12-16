@@ -1,0 +1,4 @@
+  
+No, the `_deciamls` variable in this function `constructor ( string  memory  name_ , string   memory   symbol_ )  public  {  _ name  =   name ;  `_symbol  `=  symbol ; `_ decima  ls  ; } ` is a constant and is set to  the value  of  "1 8"  and  is therefore not  controlled  by  a  user .
+
+The  variable  "_decimal" is defined  as  private  constant  within  this  function  constructor  ,  which  means  that  it  cannot  be  changed  or  modified  after  its  initialization  .   The  value  1  8  for  decimal  places  was  chosen  because  most  tokens  have   a   decimal   point  with   eight  digits  to   the  right  side  (  ETH  has   six  decmial  points  ) . This  choice  allows  users  who  are  using  these  contracts  on  exchanges  such  us  Uniswap  V2  can  easily  convert  between  different  token  types  without  having  any  issues  related  conversion  errors .

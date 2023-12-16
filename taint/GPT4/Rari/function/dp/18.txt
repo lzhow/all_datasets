@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `cashPlusBorrowsMinusReserves` in the function `exchangeRateStoredInternal` is data dependent on the variable `_totalSupply` in the same function. This can be observed from the line `(mathErr, cashPlusBorrowsMinusReserves) = addThenSubUInt(totalCash, totalBorrows, add_(totalReserves, add_(totalAdminFees, totalFuseFees)));` where the value of `_totalSupply` is used as an argument in the `getExp` function. Therefore, there is a data dependency between these two variables.

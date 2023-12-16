@@ -1,0 +1,9 @@
+yes
+
+The variable `reward` in the function `unstake` is data dependent on the variable `_share`. This is because `reward` is calculated using `_share` in the following line of code:
+
+```solidity
+uint256 reward = _share.mul(alphaToken.balanceOf(address(this))).div(totalShares);
+```
+
+Here, `_share` is used as a multiplier to determine the proportion of the `alphaToken` balance that should be assigned to `reward` based on the total number of shares (`totalShares`). The dependency is direct and explicit, as the value of `reward` is derived from the value of `_share`.

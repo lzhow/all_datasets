@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `newAdmin` in the function `changeAdmin` is a parameter that is passed to the function by the caller. Since the caller of the function is an external entity (potentially a user of the contract), the value of `newAdmin` is indeed controlled by the user. The function `changeAdmin` is designed to allow the current admin to change the admin address to a new one, and the new admin address is provided by the user calling the function. The only restriction is that the caller must be the current admin, as enforced by the `onlyAdmin` modifier, but the choice of the `newAdmin` address is at the discretion of the caller.

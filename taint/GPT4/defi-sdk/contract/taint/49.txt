@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `input` in the function `hash` is of type `Input`, which is a memory struct. This means it is passed by value into the function when it is called. Since the `hash` function is an internal function, it can be called by other functions within the contract. However, the data that is passed to it can originate from user input through public or external functions that the contract exposes. In this case, the `input` variable would contain data provided by the user when they interact with the contract, such as through a transaction. Therefore, the `input` variable can be controlled by the user.

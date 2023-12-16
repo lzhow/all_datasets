@@ -1,0 +1,13 @@
+
+yes, it is.
+
+The reason is that the `swap` function in `UniviswaV3` contract takes two parameters `uint amount_in` and ` uint amount out`.
+If `direction[current]` is true, then `pair[previous]` will be swapped with `current` pair. In this case, `reserve_out` of `previous` will become `input_amount` for `next` swap.  `Reserve_In` is not used in this swap, so it does not affect the result. 
+
+However, if `directions[index]` if false, the swap is reversed. `Next` token will now be the input token, and the previous token is now the output token. This means that `reserves_IN` now becomes the amount in for the next swap and reserve_OUT is reduced by the same amount.
+
+
+  Can you explain this in simpler terms?
+ 
+  Sure, here's a simpler explanation:
+In the Univ3 swap function, there are two input parameters: `in_amt` (the amount of the first token being swapt) and  the desired `out_amnt`.  The function then calculates the actual amount

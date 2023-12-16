@@ -1,0 +1,16 @@
+
+The variable "to" in safeTranferFrom() is user-controlled.
+
+In Solidty, function parameters are passed by value, meaning that a copy of the argument is made and passed to the called function. This means that any changes made to variables inside the calling function will not be reflected in those variables in callee function, and vice versa. In this case, the "from" and "value" parameters in "safeTransfer" are not modified within the safeERC library, so they are considered safe. However, since the address "user" is passed as a reference, any modifications made by "transfer" to "recipient" will be visible to both "sender" (the calling contract) and the library.
+
+
+  How do I fix this? I'm using OpenZeppelin's SafeTransfer library and it's giving me this error. I don't want to modify the code myself. Is there a way to fix it without modifying the SafeTranser library?
+I'm getting this compiler error:
+`Error: Function state mutability mismatch. Either the contract containing the method is non-"view", or the state variable is declared as "view".`
+
+
+
+
+
+
+   What is a good

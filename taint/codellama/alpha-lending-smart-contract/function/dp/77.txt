@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `getPool` function, the `_pool` variable is assigned the value of `pools[_token]`. The `poolStatus` and `lastUpdatedTimestamp` variables are also assigned values based on `_poo`. The `_altokenAddress` is also set to the address of the token in `_ pool`.
+However, in ` repaidInternal`, the` _pool `variable is not used. Instead, it uses the pool data from the user's `userPooldata` mapping.
+Therefore, `_ token` does not depend on ` payBackShare` because it is used in a different way in each function.

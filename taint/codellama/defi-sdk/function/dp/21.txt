@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `depostitET` function, the amount of Ether to be deposited is passed as a parameter. This amount is then used to call the deposi`t` method of the WET contract.
+On the other hand, in ` getreserves` , the reserve of two tokens is obtained from the Uniswapt contract, and the direction of token flow is determined.  The reserve in and reserve out are then returned.   The `direction` parameter is used in this function to determine the token direction. If the parameter ` direction` is true, then the first token is reserved, otherwise the second token. Therefore, if the value of ` amount` changes, it will affect the return value ` reservein` and ` reserverout` . Therefore , ` amoutn` depends on ` Reservein`.

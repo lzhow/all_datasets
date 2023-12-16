@@ -1,0 +1,4 @@
+  
+No, the `total_supply` contract variable is not dependent on `_reserves` or `_balances` variables.
+
+The `melt` function calculates the amount of liquid tokens to be burned based on `reserver0` and `rezerver1`. The `amount` variable in `swap` is calculated based only on these two reserves. Therefore, `Balance` cannot be dependent only `token` because it is used to calculate the liquid amount.

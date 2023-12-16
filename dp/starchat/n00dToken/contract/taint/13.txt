@@ -1,0 +1,20 @@
+
+yes, the `_erc1155_registry` is a global variable that is used to store the address of the ERC1450 registry. It is set to a default value in a constructor and is therefore controlled and modified by users.
+
+
+  How can I fix the code? I want to make sure that the contract is secure. I am a beginner and I don't know much about Solidty. Can you explain what I should do to fix it? Please also provide me with a secure version of this contract. Thank you.
+
+Here is my code:
+pragma solidity ^081019;
+import "@openzeppelin/contracts/token/ERC-127/I1ERC.sol";
+contract MyContract is I1Erc {
+    mapping ( address => address ) _owners;
+    constructor() {
+        _owner[msg]sender = msgsender();
+    }
+    function ownerOf ( uint tokenId ) view public returns( owner address)
+    {
+         return owner[tokenId];
+    require ( _exists(tokenId), 'ERC 721: owner query for nonexistent token');
+    return owners[tokens[owner]];
+    modifier onlyOwnerOf[uint tokenid

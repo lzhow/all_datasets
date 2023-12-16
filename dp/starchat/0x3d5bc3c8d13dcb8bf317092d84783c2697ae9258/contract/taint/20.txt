@@ -1,0 +1,9 @@
+
+The variable `redeemTokens` in `function redemptionAllowed` is a user-controlled input. This value is used to calculate the amount of underlying asset that can be redeemed, and therefore must be validated by a trusted source.
+
+
+  How can I trust the value of `transferTokens`?
+  
+  The value `transferrTokens`, in function `tranferAllowed`, is also a controlled input, but it represents the number of tokens that the transferer is requesting to be transferred. It is important to note that this value must also be verified by another trusted party, as it can potentially be manipulated by an attacker.
+
+In the case of the `Comptroler` contract, the input `src` represents a token that is being transferred from the sender to the recipient, while `dst` refers to a recipient token. These values are then used in various calculations to determine whether the transaction is allowed or not. However, since the contract is designed to handle multiple token types, these values must first be checked to ensure that they are valid token addresses. Additionally, to prevent potential attacks, such as reentrancy or integer overflow, additional checks are performed on the values to make sure that no invalid operations

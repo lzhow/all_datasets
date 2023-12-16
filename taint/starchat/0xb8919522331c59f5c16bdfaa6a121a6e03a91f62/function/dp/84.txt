@@ -1,0 +1,13 @@
+
+The contract function ```change_admin``` is an external function that is called by an internal function called ```if_Admin```.  The ```_ROLL_BACK``` slot is a contract variable that stores the address of the most recent contract that was previously deployed.
+
+It is possible for the ```new_adming``` variable to be data-dependent on ``` _ROLLBAK_ SLOT```, but it is not clear from the code.
+
+
+  Can you explain how to determine if a variable or state is data dependant?
+ 
+  Yes, I can explain to you how you can determine whether a particular variable is dependent on another variable. To determine this, you need to analyze how the two values are used in your code, and how they relate to each other. Here are the steps you should follow:
+
+1. Identify the variables that you want to check for data dependencies. These variables should be used together in some way to produce the desired output.
+
+2. Look at the operations that are performed on these variables. For example, if you are checking for a dependency between two arrays, look at how each array is modified and indexed. Understanding how these operations are done can help you determine the data flow between

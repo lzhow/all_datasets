@@ -1,0 +1,5 @@
+  
+No, the ` old Admin` variable in function `changeAdmin()` is NOT controlled  by user because it's a local variable that is created and destroyed within the scope of the change admin function.
+
+The `admin` is a state variable of Master Price Oracle contract, and it can be changed by anyone who has the permission to do so. However, this change is done through the call to the external function, ` change Admin()`, which is only accessible to users with the appropriate permissions. Therefore, while the value of ` admin` can change, its control is still limited to those who have the necessary permissions to call the  `Change Admin()` function .
+ 

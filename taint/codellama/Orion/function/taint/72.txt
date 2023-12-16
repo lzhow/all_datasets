@@ -1,0 +1,4 @@
+  
+No, the ` Ann` variable in function `getD` is NOT controlled  by user, because it's a constant value that is passed as an argument to the  function.
+
+The `amp` argument is a parameter of the contract, and it can be set by anyone who interacts with the smart contract. However, once the value of ` amp` has been set, all subsequent calls to ` getD()` will use the same value, which is determined by whoever set the initial value. Therefore, `ann` can not be controlled directly by a user interacting with this contract directly.

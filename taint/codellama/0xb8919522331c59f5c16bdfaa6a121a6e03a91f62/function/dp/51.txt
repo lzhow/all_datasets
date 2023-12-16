@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the `_beacon_slot` contract variable and the `new_implementation` variable in this function. However, the data in `calldatas` is used to call the internal function `_upgradetoAndcall`, which may modify the value of `_BeaconSlot`. Therefore, it is not possible to determine whether there is a direct dependency between these two entities without further analysis.
+ 

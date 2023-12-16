@@ -1,0 +1,5 @@
+  
+The variable 'data' in function 'functionCall' is labeled as 'Unknown'.
+
+This is because the 'call' function in Solidiy is a low level function that allows the contract to call another contract. It does not have any parameters that allow the caller to specify the data to be passed to the called contract, so it cannot be controlled directly by a user input.
+However, the callee contract can still read the input data from the call function, and it can be influenced by user inputs. Therefore, we cannot say for sure that the ` data` variable is completely controlled or not by users.

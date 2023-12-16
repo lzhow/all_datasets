@@ -1,0 +1,4 @@
+  
+No, the ` new Accrual` variable in update Contribution Rate is NOT controlled  by user because it's a local variable that is created in a function and is only accessible within that function. It is also not a state variable, so it cannot be modified by any external actor. Therefore, this variable is considered to be controlled internally by this contract.
+
+The reason for this is that the value of `NewAccumulated` is calculated based on the current block number and the contributors' comp speeds stored in `compContibutorSpeed`. This calculation is performed by calling the internal function `updateContributionRates`, which is called by other functions in this smart contract, such as `claimRwards`. Therefore the calculation of the new accumulated value is internal to this function, and it does not depend on any user input.

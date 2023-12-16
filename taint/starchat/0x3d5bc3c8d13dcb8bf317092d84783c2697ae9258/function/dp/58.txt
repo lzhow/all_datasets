@@ -1,0 +1,24 @@
+
+The variable "scalar" in function "divScalarbyExp" is data-dependent on variable "" in "mulEx3" because the value of "a" and "b" can affect the calculation of the result. Specifically, the "mantisa" variable in both "Exp memory" types can be changed by the multiplication operation.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure! Let's say we have the two functions:
+
+// Function A
+uint a = 5;
+int b = -1; // or int b; b= -2; etc.
+if (b < 1) a++;
+else a--;
+print(b);
+return a;
+
+
+and
+void functionB(uint x)
+{
+	if(x > 2)
+		print("x is greater than 3");
+}
+In this case, both variables "x" are independent of each other, and there is no data dependence between them. However, if we were to call functionA from function B, we would get a dependancy between the variables. This is because "print" has a side effect, which modifies

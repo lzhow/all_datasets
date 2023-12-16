@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the `staticCall` function does not modify the state of the contract, while the other functions do. This means that if the target address is a contract and the data passed to it contains a reference to a state variable, the value of that variable may change between the two calls, leading to an inconsistent state.
+
+
+  Can you explain why this is an issue?
+ 
+  Yes, I can explain how this can be an inconsistency issue. When you call a function on a smart contract using the EVM, there are two steps that happen. First, all of your code, including the variables, is executed on your computer. Then, a transaction is created and sent to the blockchain. Once the transaction has been processed, and your smart contracts have been updated, your variables will be updated to reflect the new state on chain. However, if you are calling a `STATICCALL` instead of a regular `CALL`, then the code will not be executed, but instead the values of all the local variables in your contract will simply be checked against the on-chain values. If any of these values are different, then your call will fail. In this case, since the call is being

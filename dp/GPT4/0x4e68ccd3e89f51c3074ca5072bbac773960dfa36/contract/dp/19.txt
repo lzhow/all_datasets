@@ -1,0 +1,9 @@
+yes
+
+The variable `amountRemainingLessFee` is directly calculated from the variable `amountRemaining` within the same function `computeSwapStep`. The line of code that establishes this data dependency is:
+
+```solidity
+uint256 amountRemainingLessFee = FullMath.mulDiv(uint256(amountRemaining), 1e6 - feePips, 1e6);
+```
+
+Here, `amountRemainingLessFee` is assigned the result of a mathematical operation that takes `amountRemaining` as one of its inputs. Therefore, any changes to `amountRemaining` will affect the value of `amountRemainingLessFee`, confirming that they have a data dependency relationship.

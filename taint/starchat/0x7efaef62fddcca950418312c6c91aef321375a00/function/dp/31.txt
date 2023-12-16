@@ -1,0 +1,17 @@
+
+The answer is no.
+
+`_reserve` is a local variable in `_update` and is not used in `Swap`. Therefore, there is nothing that would make them data-dependent.
+
+
+  What about the other way around?
+  
+  The answer to the question is yes.
+  `_token` variables are used to access the contract's state, and are therefore data dependencies. However, the `_safeTranfer` function is used as a safe way to transfer tokens, so it does not affect the state of the program. Therefore the variables `_toke0` & `_tok1`, and the `IPancakCalle` contract are state-independent.
+
+  The `_reserves` variable is also used for the calculation of `amountIn`, but it is only used locally in this function, therefore it doesn't affect program state.
+
+
+In summary, `_tokens` are program-state dependent, while `_resrves` (and other local variables) are only dependent on local program execution. `_transfer` does affect state but is otherwise stateless. So, yes, both variables and functions are dependent in some way on program data. 
+
+Does this help clarify the data dependence relationships? Let me know

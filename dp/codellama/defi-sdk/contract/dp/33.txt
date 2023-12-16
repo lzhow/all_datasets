@@ -1,0 +1,4 @@
+  
+No.
+
+The variable reserve in get reserves is not dependent on reserve 2 in function GetReservers. It is a local variable in Get Reserves and is assigned a value based on whether the direction parameter is true or false. If the parameter direction is false, the value of reserve is set to reserve2.  Otherwise it is equal to the reserve.

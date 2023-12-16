@@ -1,0 +1,4 @@
+  
+No, the `partitonStratgies ` contract is not dependent on `_ value` variable in `_ addTokenTOPartition` function.
+
+The ` partitionStrategy` contract stores the list of partition strategies that are used to validate the transfer of tokens between partitions. It is a separate contract from the main AMB contract, and it is only used for validating the transfers between different partitions, not for the internal transitions within a partition. Therefore, it does not depend on any variable or state in any function of the AMD contract.

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `liquidateborrowInternal` function, the local variable  `error` is assigned the value returned by the internal function `accruInterst()`. The `cTokencollaterl` parameter is also passed to the `_ functionCall` internal method.
+  The `_FunctionCall()` function returns a `bytes` memory object named `returnData`. The local ` error` variable is then assigned a value of `uint( Error. NO_ ERROR)` if the call to `_ FunctionCall() ` is successful. If the return value is not successful, it is set to `Error ( error)`.
+   The variable` error ` in ` liquidatborowInternal ` depends on ` retu rnda ta `in `_ funtionCall ` because the former is initialized with the result of the latter.

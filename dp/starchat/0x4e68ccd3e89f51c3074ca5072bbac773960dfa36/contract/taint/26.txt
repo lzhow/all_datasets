@@ -1,0 +1,20 @@
+
+yes, the numeral2 is a user controlled variable.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the end user's browser. This makes it easier for the browser to load the application since it only needs to download a small amount of data instead of having to request multiple files from the server.
+
+The incremental part of the bundlers job is to only update the portions of code that have changed since the last time the tool was run. For example, if you are working on a React application and make a change to a component, only the component that was changed will be rebuilt and included in subsequent builds. Other parts of your application that haven't changed won't be included. 
+
+Webpack is probably the most popular example of an incremental web bundiler. It can take in

@@ -1,0 +1,12 @@
+
+The variable "data" in function "functionCall" is data-dependent on variable "" in " function" functionstaticCall". This is because the value of " data" depends on whether the target contract of the "static call" has changed its state between the time the call is made and the execution of that call.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+In the code you provided, there are two functions: "FunctionCall()" and " FunctionStaticcall()".
+"Functioncall()" is used to call a function on a contract, while "FuctionStaticcal()" can be used for static calls. 
+
+When you call " Fuctionstaticcal()", the compiler will check if the contract has been modified since the last time it was compiled. If it has, the compilation will fail. This means that if you make a "Static Call" to a modified contract after modifying the original contract's code, it will not work. However, if "Call() " is called, then the modified code will be executed.  This can cause problems if there is a dependency between variables in different contracts. For

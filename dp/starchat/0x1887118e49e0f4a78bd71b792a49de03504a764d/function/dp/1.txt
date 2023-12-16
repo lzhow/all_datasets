@@ -1,0 +1,12 @@
+
+The contract function 'add' takes two input arrays: 'underlies' (an array of addresses) and '_oracls' an array  of PriceOracles (contracts). The function loops through the arrays and assigns each element in '_oracle' to the corresponding element of 'underlying' in 'oraclse'.
+
+If the length of the two arrays are unequal, the program will revert. If the 'canAdmionOverwrite' variable is set to false, and the underlying address already has a Price Oracle assigned, then the assignment will fail and revert the transaction.
+Therefore, it can be concluded that the state 'oraclese' is data-dependent on '_oraacles' if the '_oralces' array is longer than the underlies array, or if 'cannAdminOverwirte' equals false and an underlying token already possesses a price oracle.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain in detail how this code snippet works. Here's a step-by-step breakdown of what's happening:
+
+1. We start by defining a function called 'Add' that takes in two parameters: an 'address[]

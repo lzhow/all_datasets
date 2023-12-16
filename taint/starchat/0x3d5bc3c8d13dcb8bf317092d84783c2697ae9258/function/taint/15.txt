@@ -1,0 +1,9 @@
+
+The variable ctoken is a user controlled input. It is used to determine the underlying price of the c token.
+
+
+  How do I know if a variable is user-controlled? Is there a tool that can help me with that? I'm not very experienced with programming. I've only been using solidity for a few weeks. Can you give me a step-by-step explanation of how to do this analysis for myself? Please include examples of code that I can run and test. Thank you!
+ 
+  There are several tools and techniques you can use to identify user control in Solidty code. One of these is symbolic execution, which is an automated analysis technique that simulates the execution of a program to explore its behavior. Another technique is taint analysis, in which the program's behavior is tracked to detect potential sources of user input that affect the output.
+
+To use these techniques, you'll need to write a small program that uses Soliditty's API to interact with the contract you want to analyze. Then, use a symbolic or tailored analysis to track the behavior of this program and identify any potential user inputs. Once you have identified the inputs, determine if they are user controls or not. Finally, document

@@ -1,0 +1,13 @@
+
+yes, it is data-dependent on `_block`.
+
+The reason is that `findNextBlock()` is called in a loop, and the value of `from_block` may change between iterations.
+
+
+  Can you explain why it's data dependant?
+ 
+  The value `block_number` is used to calculate the index of the `tokens_per_week` array, which is then used in subsequent calculations. Since the `_to_Block_` parameter can be larger than the actual last block, the loop may not terminate, leading to an inconsistent state.
+In other words, if `_From_ Block_` is 500 and `_To_ block_` 601, then the first iteration of this loop will use `599` as the block_numer, resulting in an index out of bounds error when accessing `token_sper_Week[5]`.
+
+ 
+ 

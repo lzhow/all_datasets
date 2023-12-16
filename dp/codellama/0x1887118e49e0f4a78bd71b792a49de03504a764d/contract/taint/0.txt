@@ -1,0 +1,4 @@
+  
+No, the ` can AdminOverWrite` variable in function `MasterPrice Oracle` is NOT controlled  by user because it's a public variable and can be changed by anyone.
+
+The `onlyAdmin` modifiers in `add` and `changeAdmin ` functions restrict access to these functions to the contract' s admin only, but they do not affect the value of the public `admin` or `CanAdmin Overwrite ` variables. Therefore, any user can change the values of these variables, which could potentially compromise the security of your contract.

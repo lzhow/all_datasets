@@ -1,0 +1,14 @@
+
+The variable reserve in getamountin is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  If a contract has a user-controlled variable, then the contract owner can manipulate the value of the variables at any time. This can lead to unintended consequences and security vulnerabilities. Therefore, you should always be cautious when using user control variables.
+
+To determine if your variable has user controls, consider the potential consequence of changing the values of user variables and the impact on the system. If the consequeces are severe, the program should not have user controll variables, and you can use other methods to achieve the same result. 
+
+If you are unsure about the implications of a particular variable or function, always refer to the documentation or source code to ensure that the code does what you expect it to do. Additionally, if you suspect that a function or variable may have unwanted side effects, such as modifying state variables or triggering events, be sure to test the functionality thoroughly before deploying the smart contract.
+
+
+In general, user input should be validated and sanitized before being used to affect state changes or other operations. It is also important to consider

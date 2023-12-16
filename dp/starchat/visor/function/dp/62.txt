@@ -1,0 +1,14 @@
+
+The function sub has a require statement that states that b must be less than or equal to a. This means that if a is changed to be greater than b, the require will fail and the sub function will not execute. Therefore, it can be concluded that a and errorMessage are dependent on each other.
+
+
+  Can you explain how the analysis works?
+ 
+  Sure! The analysis is done by analyzing the control flow graph (CFG) of the program and analyzes the data dependencies between variables and contract state.
+
+First, we construct the CFG of each function in a contract. Then, for each variable in each scope, if the value of that variable is only assigned once, then we can determine that the two are independent of one another. If the same variable has multiple assignments, but each assignment is to the result of a function call, and if each of those function calls only read the input variables, or only write to output variables that are also inputs to other function, etc., then the variables are considered dependent, otherwise they're independent. 
+
+For example, in this code:
+`a = 1;
+b = a + 2;`,
+the value assigned to `b` is dependent only

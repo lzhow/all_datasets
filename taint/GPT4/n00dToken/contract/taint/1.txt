@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `_totalSupply` in the ERC777 contract represents the total supply of tokens in the contract. It is modified by the internal functions `_mint` and `_burn`, which are called by the `constructor`, `burn`, `operatorBurn`, and `_mint` functions. These functions contain access control mechanisms that restrict who can call them (typically only the contract owner or authorized operators). The initial value of `_totalSupply` is set in the constructor, which is only called once when the contract is deployed, and not by arbitrary users of the contract. Therefore, `_totalSupply` is not directly controlled by arbitrary users, but rather by the logic defined in the contract and the permissions set by the contract's owner or operators.

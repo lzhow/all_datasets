@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `data` in the function `decodeU8` is an instance of the struct `Data`, which is passed as an argument to the function. Since Solidity functions can be called externally by users (assuming the function is exposed to the public or external interface), the `data` variable can be supplied by the user, and thus its contents are controlled by the user. The user can construct the `bytes memory data` input in any way they choose before calling the function that utilizes `decodeU8`.

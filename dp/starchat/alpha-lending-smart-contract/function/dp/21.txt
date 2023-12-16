@@ -1,0 +1,16 @@
+
+The function withdrawReserver is called by the owner of the contract. It transfers `_amount` of `_tokens` from the pool to the caller.
+
+It is possible that the value of `pools[token].poolLiquidiy` changes between the time the balance is checked and the transfer is made. This could result in a transfer of more tokens than are available in `balance`.
+This could be fixed by using the `nonReentrency` modifier on `calculateRoundupLiquiudityShareAmout` and `updatePoolwithIntersetsAndTimeStamp`
+
+
+  I'm sorry, but I don't understand what you mean by "nonreentrant". Could you explain it to me?
+ 
+  The nonreentrancy modifier is used to prevent reentrance attacks in smart contracts. When a function marked with the non-reentrent modifier calls another function, the first function will not be able to be called again until the second function has finished executing.
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is that true? If not, why do people like it?

@@ -1,0 +1,9 @@
+
+The variable "c" in try_add is a temporary variable used to store the sum of "a" and "b". Since "try_Add" is used in a context where the result of the addition is being stored in "result", it can be considered that "C" may be controlled indirectly by "Result".
+
+
+  Can you explain how the analysis works? I don't understand why "control" has anything to do with "user"?
+ 
+  Sure! In the context of smart contracts, the term "Controlled" refers to the ability of a variable or state to be modified or accessed by a specific party or entity. In this case, we are analyzing the code of an Ethereum smart contract, which is executed on the Ethereum Virtual Machine (EVM). The EVM is designed to execute code in such a way that it cannot be tampered with or modified by any external party, including malicious actors.
+
+In the case of Solidty, variables and state are typically declared as "public" or "private", depending on their intended use. When a contract is deployed to an Etheruem blockchain, all of its public variables become accessible to any other contract or user that has access to

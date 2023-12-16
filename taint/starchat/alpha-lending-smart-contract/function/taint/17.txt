@@ -1,0 +1,15 @@
+
+The variable _**totalBorrow**_ is a state variable that is updated in two functions: _deposit()_ and _withdraw()_. The function _calculateInterest()_, which is called by _borrow() and repay() functions, reads the value of _currentTotalBorroe_ from the state.
+
+Therefore, the _utilisationRate_ variable is calculated based on the current value in _pool.totalBoroows_ which can be modified by calling the two aforementioned functions. 
+
+Hence, we can conclude that the utilisation rate is dependent on user input and is therefore not controllable by user inputs.
+
+
+  Can you explain how the code works? I'm not very good at Solidty
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Webpack or Rollup? Why might you choose one over the other?  Expound on your answer with examples taken from real-world projects. Include details on how to set up and use the bundling tools you mention. Provide a TL;DR at

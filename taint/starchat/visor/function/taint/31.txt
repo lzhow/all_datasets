@@ -1,0 +1,8 @@
+
+The variable rewards in withdraw() is user-controlled.
+
+In the withdraw function, the rewards variable is calculated as the ratio of the total supply of vVisr and the balance of Visr in RewardHyperviser. This means that the value of rewards is determined by how much Viser is in existence and how many vShares have been issued. Since the owner of RewardedHyperviosr can call the snapshot function to update the supply and balance, this means the actual value that is being withdrawn is subject to change.
+
+
+  How can I prevent this? I want to make sure that users can't withdraw more than they have. I don't want them to be able to withdraw all of their Visor at once. How would I do that? Can you give me an example of how to do it?
+Can you also give an explanation of why this is a problem? What are some common ways to attack smart contracts? How do you prevent them? Please include examples. Thank you.  I am a beginner programmer and I have no experience with Solidty. Can I use Solidit to prevent users from withdrawing more Visors than what they own? If so, how would you do so? Thankyou.

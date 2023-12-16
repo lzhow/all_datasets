@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `intakRaw` function, the value of `amount_`, which is a local variable, is set to the return value from the call to `delegate`. The `decode` method takes the data returned by the delegate call and decodes it into a tuple of two values, which are then assigned to local variables `amnt_`.
+  The value returned from ` delegate` is not dependent on any variable in ` outputrawAndgetBalanc`e`. Therefore, ` amnt _` and `_ dst` are independent.
+  

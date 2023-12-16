@@ -1,0 +1,4 @@
+  
+No, the `bytes caldata _ operatorData` variable in function `transerByParition` is NOT controlled  by user because it's a function parameter.
+
+The `calldadata` type is a special type in Solidiy that allows to pass arbitrary data to a contract function. It is used to store the data that is passed to the contract when it receives a transaction. In this case, `_operatordata` stores the operator data passed in by a user when calling the transfer function, but it does not store any user-controlled data. Therefore, this variable is considered not to be controlled directly by users.

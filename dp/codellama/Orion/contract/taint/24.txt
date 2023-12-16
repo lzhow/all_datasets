@@ -1,0 +1,4 @@
+  
+The variable 'supportFactor' in function '_swap' is labeled as 'Unknown'. This is because the value of 'Supporting Fee' can be set by either the contract creator or the external user who calls the 'add liquidty from exchange' function.
+
+In the constructor of the Pool Functionality contract, the creators of this contract can set the initial value for 'supportedFacotry' to 'Factory Type. UNSupported'. However, this value can also be changed by an external caller of function 'updateFactors' which can change the supported factory to a different value. Therefore, we cannot determine if 'suppporting fee' will be controlled or not by a user without further analysis.

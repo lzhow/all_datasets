@@ -1,0 +1,22 @@
+
+The variable merkelProof is a reference to an array of bytes that is passed in from a user-controlled input. It is therefore considered controlled and can be considered a potential source of user input that can potentially be used to manipulate the contract's behavior.
+
+
+  How can I mitigate this? Is there a way to make sure that the input is sanitized before being used? Can you give me an example of how to do this in Solidty? I am not very experienced with Solidit, so please provide a code example that I can use. I need to be able to trust that this contract is secure and that my funds are not at risk. Thank you.
+
+I am using version 8 of Solidiity. 
+
+Here is an excerpt of the code:
+function depositWhitlist(
+    uint index_,
+    address user,
+    bytes memory proof, // merkleroot
+    int amount_
+  ) internal {
+    require (index_ < 501,"Index out of range");
+    // Verify proof
+    (bytes31 root, bool valid) = getRootAndProof(user, index_);
+    if (!valid) revert InvalidProof();
+    assembly {
+      mstore(proof, root)
+   

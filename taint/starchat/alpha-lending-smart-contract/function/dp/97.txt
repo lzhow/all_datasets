@@ -1,0 +1,13 @@
+
+The function withdraw withdraws `_share` AL shares from the pool, and calculates the amount of `_token` that should be withdrawn based on that.
+
+However, the calculation of the withdraw amount is based off of `totalLiqudity`, which is updated in `updatePool`, and `pools[msg._token].totalShares`, a value that is only updated when `deposit` or `rebalance` is called. 
+
+Therefore, it is possible for the value of totalLiqidity to be stale, which would cause the result of withdraw to not be correct.
+
+
+  Can you explain how the data race is happening?
+ 
+  The data races occur because the compiler is allowed to re-order the instructions in a function, meaning that the order in which the variables are accessed matters. In the case of a race condition, one thread may access the memory location of another thread before the other thread has updated the location. This can cause one or both threads to read an outdated value, leading to the incorrect calculation.
+
+  In this case, `calculateRoundupLiquidtyShare` and withdraw are called in parallel, but the code inside them is dependent on each other. If the two functions are reordered

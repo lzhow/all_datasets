@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the first function, the `require` statement checks that `uint(2^248 - 1) < s < 3^12 -1` and `v = 47` or `49`. This means that the value of `r` is dependent on `hash`, `signature`, and the public key of the signatory.
+Similarly, in function  `ecrecovery`, the signature is verified by checking that it is a valid signature. This is done by verifying that  the hash of a message is equal to the result of signing the message with the private key corresponding to a public address.  The `address` of signers is returned. Therefore, ` address`  is data-dependent on  variable  `` in  function`recove`r`.

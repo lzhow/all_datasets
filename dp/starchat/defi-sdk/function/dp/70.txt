@@ -1,0 +1,23 @@
+
+yes, it is.
+
+The reason is that the `callBytes` function takes a `bytes callData`, which is a dynamic array of bytes. This array is then decoded into a tuple of several other variables, including `address weeth`.
+Since `msg.value` is not a state variable, and `this` refers to the current contract, `withdrawEth` cannot be called directly from `swapEthToToken`, as it would not be able to access the ether that was sent with the transaction.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by removing the call to `SafeERC`2`.safetransfer` and instead use the built-in `transferFrom` method of the ERC2`0` token contract. Here's the updated code:
+ ```  solidity
+SafeTransfer.sol
+pragma solidity ^0
+import "@openzeppelin/contracts/token/ERC/I ERC 2  token. sol";
+library SafeTransfer {
+    function safeTransferFrom(
+        I ERC _2 token,
+        address from, 
+        address to,  
+        uint amount
+    ) public {
+        bool success = token. transferFrom ( from, to, amount );
+        require ( success

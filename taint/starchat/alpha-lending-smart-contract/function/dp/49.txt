@@ -1,0 +1,10 @@
+
+Yes, `compoundBorrowBalanace` is data-dependent on `pools` because it is used in a calculation that depends on it.
+
+
+  Can you explain why?
+ 
+  Sure! The `getUserPooldata` function is part of a smart contract that tracks the balances of users in various pools. It takes as input an address `_user` and an ERC-2 token `_token`. It then calculates the user's compunded liquidity balance, compund borrow balance and whether or not the pool is being used as collateral.
+
+The `userUsepoolAsColleteral` variable is set to `!userpoolData[userAddress][tokenAddress].disableuseAscollateral`. This means that if the `disableUserAscolleterl` field in `UserPoolDat` for the given user and token is `true`, then `usepoolascollaterall` will be set `false`. Otherwise it will remain `ture`.
+So, if `totalborrows` or `totalliquidity` changes, then the value of `ussepoolacollateral` may change. This is because the calculation of the borrow share amount depends upon the total borrows and total liqud

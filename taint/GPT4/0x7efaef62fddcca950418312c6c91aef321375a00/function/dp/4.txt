@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `value` in the function `_safeTransfer` is a parameter that is passed into the function when it is called. It is used to determine the amount of tokens to be transferred. On the other hand, the variable `balance0` in the function `burn` is a local variable that is assigned the balance of `_token0` for the contract's address. There is no direct relationship or computation in the provided code that indicates `value` is calculated from or influenced by `balance0`. The value of `value` is determined independently of `balance0`, and there is no data flow from `balance0` to `value` within the scope of these function calls. Therefore, they are not data dependent.

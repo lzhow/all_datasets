@@ -1,0 +1,13 @@
+
+yes, it is data-dependent on `_toblock`.
+
+The reason is that the loop in `while` loop increments `fromblock` and `nextweekblock`, which are used to calculate `totlaamount`. If `totaLamount` is calculated before `week` or `blockperweek`, then the values of these variables will be incorrect.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on toblock is because the while loop depends upon the value of to block. If the to Block is changed, the calculation of total amount will change. This is due to the fact that totalamount is dependent on fromblock and nextweek block, which in turn are dependent upon tobblock, week and blockperWeek.
+In order to understand this better, you can try to trace the flow of the program and see how the variables are calculated. It’ll help you better understand how data dependencies work. Let me know if you need any more help. I’m here to help!
+
+ 
+ 

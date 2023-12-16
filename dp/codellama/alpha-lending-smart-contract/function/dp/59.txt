@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+Explanation:
+In the `setPool` function, the local variable pool is assigned a value based on a parameter `_totalSharess` and a local state variable. It is not dependent on any external state or variable, including `_amount` from the other function.
+On the contrary, in ` calculate RoundUp BorrowSharingAmount`, the `_ amount` parameter is used to calculate the return value, but it is a separate variable from ` pool` that is defined in a different function and has no direct connection to it. Therefore, ` _ amount ` is independent of ` Pool`.

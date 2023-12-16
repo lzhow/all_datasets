@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ useAs Collaterals is not dependent on _ token in calculate RoundUp Borrow Share Amount External. This is because the _ user variable is passed as an argument to the set User Pool function, which is called before the calculate round up borrow share amount external function. Therefore, the value of _ UseAs collaterial is set before it is used in calculating the borrow shares.

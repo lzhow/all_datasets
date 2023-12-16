@@ -1,0 +1,4 @@
+  
+The variable _ account in mint function of Altoken contract is labeled as 'No'. The reason is that the _ amount variable is passed as an argument to mint, which is a public function. Therefore, the value of _ accounts is determined by a user and is therefore not under the control of the contract.
+
+In addition, since the minting function does not modify the balance of any user, there is no risk of reentrance.

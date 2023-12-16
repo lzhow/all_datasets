@@ -1,0 +1,5 @@
+  
+No, the `_allowed` variable is a mapping that stores the allowances of the users to spend the tokens on behalf of another user, and it's not directly controlled or modified by any user input. It' s a private variable that' 's only accessible and modified within the contract.
+
+The `_approved` function, which is called in `transerFrom`, is responsible for updating the value of `_allows` and is only called by `approver`, which means that the approver is in control of updating `_alows`.
+ 

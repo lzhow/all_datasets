@@ -1,0 +1,13 @@
+
+The variable index in function `observe` is **not** controlled directly by users. However, the value of index is determined by other variables and is used to access the elements of an array. Therefore, we can say that the index variable is indirectly controlled, as it influences the access to the array elements.
+
+
+  How can I make the code more secure? I'm not a security expert, but I'd like to learn. Can you give me some tips?
+
+I'm trying to write a smart contract that allows users to bet on the outcome of a coin flip. I want to make sure that if a user loses their bet, their money is returned, and if they win, they get to keep their winnings.
+Here's the basic idea of how the contract works:
+- There's a contract balance that stores all the funds of all users
+ - Each user can place a bet and specify the amount of money they want bet
+ * The contract generates a random number that represents the result of the coin toss
+ + If the random num is even, all bets are doubled
+++ If a player wins, that player gets paid out their entire bet amount + half of each subsequent bet that was made on

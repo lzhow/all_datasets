@@ -1,0 +1,7 @@
+
+The variable curve in function `includeAsset` is a struct defined in `Storage` library, which is imported from `Curve.so`, and is declared as `storage` in Orchestor contract. Therefore, the state of curve is maintained by Orechestrator contract, and it can be modified by calling `setParams` and `initialize` functions.
+
+However, in this case, since the `numerire` asssimilate is also included in curve assets, so the curve state can also be influenced by changing the balance of `reserve` token. For example, if `reserves` balance is changed by transfering some amount of token to Oorchestrator, then the new balance will be added to the numeral balance, thus changing curve parameters.
+
+
+  How can I prevent this? Is there a way to make sure that the reserve token balance does not change? I want to be able to call `viewCurve` function to get the current curve values. I need to use the same curve instance in multiple places. Is it possible to do this without modifying the Ochestor contract? If not, how can i make a copy of the instance? Can you give me an example of how to modify the

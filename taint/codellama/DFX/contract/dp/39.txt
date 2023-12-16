@@ -1,0 +1,5 @@
+  
+No, the variables `_o` and `_t` are dependent on `_origin`and `_target` respectively in `originSwaps` function.
+
+The reason is that the `_swapdata` variable is passed as an argument to the `viewOriginSwaData`function, which is called in`originSwipe` to get the data for the swap. This function uses the`_origin`, `_inputix`, and` _amount` variables to calculate the amount of the input asset that will be swapped. However, it does not use the value of `_outputix` or `_recipent` from the original`swap data` object. Therefore, `_amt` is not dependent directly on`assimb`.
+ 

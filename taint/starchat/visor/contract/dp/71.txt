@@ -1,0 +1,10 @@
+
+Yes, `ECDA.sol` is a smart contract written in Solidty programming language. Soliditiy is statically typed, and does not allow for implicit type conversion. This means that the value of `r` and `S` must be explicitly cast to the correct type, in this case `bytes` or `uint8`.
+
+The function signature for `ecrecover` expects the `V` parameter to be of type `byte`, not `int`. This can be fixed by changing the line `require(int2str(r) == "0704377f997989e9f787e7c917494f88f18e6939a8471fbef959096e829c8b9", "Invalid signature r value")` to ` require (uint(byte(1, int(2))) == v)`
+`int` does no exist in solidity, only `signed` integers.
+
+
+  I'm sorry, but I don't understand what you mean by "signed integers". Could you please explain it to me?
+ 
+  In Solidiy, the

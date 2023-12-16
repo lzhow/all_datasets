@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `require` statement checks if the balance of the contract is greater than or equal to the amount to be sent. If the condition is not met, it reverts the transaction.
+However, in this case, `amount` is a function parameter, and it is passed as an argument to `call` function. Therefore, if `address.balances` changes, then `balace` will also change.  Therefore `sucess` depends on `recepient`.

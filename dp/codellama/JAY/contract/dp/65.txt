@@ -1,0 +1,4 @@
+  
+No, the state variable `_owners` is not dependent on ` roundId` because it is a state of the smart contract and not a variable that is passed as an argument to the ` updateFess` function.
+
+The ` _owner ` variable is set in a constructor and is used to store the address of a smart contact owner. It is independent of ` RoundId `, which is an internal variable of Aggregrator V3 Interface. Therefore, it does not affect the data dependence relationship between the two.

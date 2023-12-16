@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `implementation` in the function `_setImplementation` is not controlled by the user. The function `_setImplementation` can only be called by the `admin` address, as specified by the `require` statement `require(msg.sender == admin, "RewardsDistributorDelegator::_setImplementation: admin only")`. Therefore, the `implementation` variable can only be modified by the `admin` and not by the user.

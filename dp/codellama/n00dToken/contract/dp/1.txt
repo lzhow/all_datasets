@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `_total_supply`, which is initialized in `ER7_7` constructor, is data-dependent on `initalSuppy` because it is used to calculate the balance of the sender in `_mints` function. However, the `_ balances ` variable is only used in internal functions and is never returned or exposed to external calls. Therefore, it cannot be considered data depend on initial supply.

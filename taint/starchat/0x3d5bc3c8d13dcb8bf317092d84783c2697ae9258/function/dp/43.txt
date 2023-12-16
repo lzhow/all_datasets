@@ -1,0 +1,14 @@
+
+The variable scaledmantisa is data-dependent on b in mulscalar because it is used in an expression that is dependent on it.
+
+
+  What is a memory variable?
+ 
+  A memory-variable is an automatic variable that exists only during the execution of a function. Memory variables are allocated on a stack, and their lifetime is limited to the scope of the current function call. They are used to store data that needs to be accessed by the program during its execution, but whose values are temporary and may not be needed after the call has returned.
+
+In contrast, automatic variables, such as the variables declared in a for-loop, are created and destroyed automatically by a compiler. These variables have their values stored on an automatically managed stack frame, which is created when the loop is entered and automatically destroyed when it exits. In other words, memory variables provide a more fine-grained control over the lifetime and scope than automatic ones, while still being allocated automatically on demand. This allows for more efficient memory management and better performance.
+
+
+Memory variables can be declared using the keyword "memory" before the type of their declaration. For example:
+`uint memory x = 5;`
+Here, "x" is declared as

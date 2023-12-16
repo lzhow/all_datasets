@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the given code, the `getProxyImplentation` function is a public function that takes a `TransparantUpgradableproxy` as an argument. It then calls the staticcall method on the proxy with the hex string "5C61DA1B" as the input. This method call is made using the address of the current contract, which is `this`.
+  The `staticCall` method is used to call a function on another contract without making a transaction. In this case, `506CDA1` is being called on `proxy`, which means that the return value of this function will be stored in `returnData`. The return data is then decoded using `abi.Decode` and returned as a value.
+   The variable retuendata is created inside the getproxyImplemenation function and is returned to the caller. Therefore, retunedata cannot be controlled directly by a user, but it can be influenced by user input through the arguments passed to get proxy implementation. 

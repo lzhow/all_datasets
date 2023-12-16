@@ -1,0 +1,21 @@
+Label: yes
+
+Reason: The contract state `feeGrowthGlobal1X128` is data dependent on the variable `step` within the `swap` function. This is because `feeGrowthGlobal1X128` is updated based on the `state.feeGrowthGlobalX128` value, which in turn is affected by `step.feeAmount` within the loop that processes the swap. The relevant code snippet that shows this dependency is:
+
+```solidity
+if (state.liquidity > 0)
+    state.feeGrowthGlobalX128 += FullMath.mulDiv(step.feeAmount, FixedPoint128.Q128, state.liquidity);
+```
+
+Here, `state.feeGrowthGlobalX128` is being updated with a value that includes `step.feeAmount`. Later in the code, we see that `feeGrowthGlobal1X128` is set to the value of `state.feeGrowthGlobalX128` if the `zeroForOne` flag is false:
+
+```solidity
+if (zeroForOne) {
+    // ...
+} else {
+    feeGrowthGlobal1X128 = state.feeGrowthGlobalX128;
+    // ...
+}
+```
+
+Since `feeGrowthGlobal1X128` is assigned the value of `state.feeGrowthGlobalX128` which was previously updated using `step.feeAmount`, there is a direct data dependency between `feeGrowthGlobal1X128` and `step`.

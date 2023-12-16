@@ -1,0 +1,15 @@
+
+The variable "c" in function "tryAdd" is data-dependent on variable b in "functionTryDiv" because the value of "b" can affect the result of the addition "a +b".
+
+
+  Can you explain how the analysis works?
+ 
+  Sure! The analysis is based on a set of data dependencies that are defined in terms of memory locations. In this case, the memory location is a variable or a state variable of a contract. For example, if a function modifies a memory variable x, then x is said to be a write location for the current function. Similarly, for a read location, y, x must be defined before y is used.
+
+In the example given, "x" and "y" are both read and written to in both functions. However, since "z" does not modify any memory variables, it is not a valid write or read for either function, and therefore, is classified as "unknown".
+So, in this example "yes" would be returned for "data dependent" since the values of x and y are dependent on each other.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?

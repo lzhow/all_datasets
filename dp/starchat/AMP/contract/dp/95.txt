@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `tokensToSend` function in `Amp.sol` has the signature `function tokensToSender ( bytes _signature,bytes _senderPartition, address operator,address from,  address to,uint value,byte[] callData, byte[] operatorData)` and the `_sender` variable is set to `_from`.
+
+  What is a partition strategy?
+
+
+
+
+

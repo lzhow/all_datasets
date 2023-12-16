@@ -1,0 +1,12 @@
+
+The variable denominator in getAmoutOut is data-dependent on reserve 0 in IUniSwapV1Pair.getReserve.
+
+
+  What does it mean for a variable to be data dependant?
+ 
+  A variable is said to have data dependencies if it is used to compute another variable. For example, if a function computes the value of a dependent variable based on an input variable, then the input variables are said have dependent data. In the above code, the variables reserve in and reserve out in function "getAmountout" are dependent on each other. This means that the values of these variables depend on which pair and direction are passed as input to the getAmountout function.
+
+In general, data flow analysis is a technique used in computer programming to determine the dependencies between variables in a program. It is an important step in ensuring that programs are free of errors and that their behavior is as intended. Data flow analyses can be used for various purposes, such as:
+1. Checking for errors in programs, where data types are inconsistent or incompatible. 
+2. Optimizing the performance of programs by reducing the number of memory accesses or other resources used.  
+3. Providing information to developers about the behavior

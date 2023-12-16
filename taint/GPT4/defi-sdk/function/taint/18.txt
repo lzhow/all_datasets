@@ -1,0 +1,4 @@
+  
+No, the ` pendingOwner` variable in this function is NOT controlled  by user, because it's a private variable and it can only be accessed by this contract.
+
+The `setPendingOwer` function sets the value of the private `pendinOwner ` variable, but it does not allow the caller to specify the new value. Instead, this value is determined by a complex calculation that involves the current owner, a delay period, and a random number. This means that the pending owner is only controlled internally by  the contract, not by any external user input or interaction.

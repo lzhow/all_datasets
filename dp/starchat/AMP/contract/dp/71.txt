@@ -1,0 +1,9 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_removeFromPartitions` function removes a token from a partition, and the `totalSuplyByPartiton` variable is updated based on that token's value. If the token being removed is equal to the total supply of the partition (i.e., the last token in that partition), then the value of `partition` is removed from the list of total partitions. This means that `indexOfPartition` will no longer be valid, as it's an index into the array of partitions, which may have changed due to removing the element. Therefore, the index of `_partition`, which is used to access the correct element in `_totalPartition`, is also invalidated.
+
+
+  Can you explain why it’s data dependant?
+ 
+  The reason it depends on `_from` and `_to` parameters is because the code tries to remove the tokens from `_partitions` array and update `_indexOfPartions` mapping. It also updates the balances of both `_operator` (the sender) and `msg` sender. So, if `_value` parameter is 5 and there are 2 partitions in total, then `_balanceOf` for `_sender` would be reduced

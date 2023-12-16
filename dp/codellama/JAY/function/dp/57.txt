@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `buyJAYWithErc712` function, the `_tokeAddress[]` array is passed as an argument, but it is not used in any way in that function. It is only used as a parameter for the internal function call to `IERc20.transerFrom`.
+On the other hand, in `GetTOTALS` the variables `nfTsBOUGHT` and `NFTsSOLD` are used to return the values of the contract state variables.
+Therefore, there is no data dependence between the two functions.

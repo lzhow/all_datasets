@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `updateFees` function calls the price feed aggregator, which in turn sets the value of `priceFeed` and `roundID`. The `latestPrice` is then used to calculate the new fees, and the updated values are stored in `sellNFTFee` (which is data-dependent on `nextFeeUpdateTime`) and in other variables.
+
+  What is a good way to test this?
+
+
+
+

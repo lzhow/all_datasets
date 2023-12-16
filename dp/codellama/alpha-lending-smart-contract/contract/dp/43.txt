@@ -1,0 +1,4 @@
+  
+No.
+
+The variable 'data' in decode U6 is not dependent on ' data'  from decode u2.  The reason is that the decode function is a modifer, which means it is called before the main function. Therefore, the data variable in 'decode U2' is already updated before ' decodeu6' function can be called.

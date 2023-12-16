@@ -1,0 +1,10 @@
+
+yes, it is data-dependent on `_reserves1`.
+
+The reason is that the `_mintfee` function is called by the `Swap` method, which is itself called in response to a user-initiated swap transaction. In the case where the user is swapping from token A to token B, the contract will first transfer the input amount of tokenA from the sender to the Pancakeswap contract, and will then call the _MintFee function to determine whether or not to transfer a fee to fee recipient.
+In the event that fee is to be transferred, this function will calculate the square root of the product of both input reserves, `_Reserve0` and `_Reserv1`, and compare it to its own internal variable, `klast`. If the new value of `rootk` is greater than the current value stored in `klaster`, then the internal `mint`function will be called to mint the fee amount.
+
+
+  Can you explain why it's data dependant?
+ 
+  The `_k_last` variable is used to track the previous value for the sqrt(k) calculation. This value is updated every time the swap function runs, but it does not get updated if the

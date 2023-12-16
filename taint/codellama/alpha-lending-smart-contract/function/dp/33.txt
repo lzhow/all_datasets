@@ -1,0 +1,4 @@
+  
+No, the variables ` pool` and ` reward` are independent.
+
+The reason is that the `liqudateInternal` function is an internal function, which means it is only accessible within the same contract. Therefore, it cannot be called from outside the contract, and it does not have any external dependencies.  On the other hand, ` claimAlpha Rewards` is a public function that can be accessed from the outside world. It has an external dependency on `distribute` which is not defined in this contract and is therefore unknown.

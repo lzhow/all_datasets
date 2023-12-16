@@ -1,0 +1,13 @@
+
+The variable `owner` in `function owner()` is a view function that returns the address of the contract owner. Since it does not modify the state of any contract, and does only return information about the current state, there is no reason to consider it as being controlled directly by a user, as it cannot be modified by them.
+
+However, the `_owner address` variable in line 10 is private and is used to store the actual owner address. This means that any changes made to this variable will be restricted to the functions that have access to it, which in this case are the only functions in which it can be changed. Therefore, while the `view` function `getOwner()` does return the value of `_ownder`, it also means the the returned value is only a snapshot of what the true owner value may be at any given time.
+
+
+  Can you explain how the code works? I am not very good at coding. I have no idea what "address private owner" means. Can I just make it public? Can the public owner be hacked? If so, how? And how does the "modifier onlyowner" work? What does it mean for a function to be "virtual"?
+
+
+
+
+
+ 

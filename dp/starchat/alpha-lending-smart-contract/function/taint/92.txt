@@ -1,0 +1,10 @@
+
+The variable "data" in function "decode_i63" is user-controlled.
+
+This is because the "shift" modifier in this function reads from the input "Data" structure, which is a user input, and updates the offset field.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it has something to do with the way the data is stored in memory, but I don't know enough about that to be sure. Can explain it in a way that requires as little previous knowledge as possible?
+Can you also explain what the other functions do? What are they used for? Can I use them to help me understand the first function? If so, how? Please provide examples if possible.  I would appreciate it if you could also provide some examples of how to use the functions to decode different data types. For example, I want to know how I can use decode_u8 to get a uint from a byte array. How do I do that?  Please include all the necessary information in your explanation. Thank you. 
+
+I'm trying to write a program that can read data from an API and store it into a smart contract. This API is returning data in

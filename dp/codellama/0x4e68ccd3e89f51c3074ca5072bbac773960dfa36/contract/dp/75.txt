@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `Tock.getfeegrowthiside` function, the variables `feegoalow` and `tickeupper` are used to calculate the fee growth inside the tick range.
+`ticklower` is used as an index to access the corresponding `Info` struct in a mapping, which contains the liquidities and fee growhts outside the range of the current tick.  The `liquitygross` field of this struct is then used in calculations to determine the total fee grown inside. Therefore, ` tickupper ` is data-dependent on ` ticlower ` because it is derived from the same ` Info ` struct.

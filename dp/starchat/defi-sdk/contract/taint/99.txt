@@ -1,0 +1,13 @@
+
+The variable PERMISSION_HASH is used to create a unique hash for each permit, and is therefore not user-controlled.
+
+
+  How can I check if a variable is user controlled? I want to know how to do it myself. I have a good understanding of programming and computer science. Can you give me a step by step process to check it? Please include code examples. If it's too complicated, please provide a list of questions to ask to figure it out.
+
+I want you to use the code I provided. It is a solidity contract. 
+
+Here is some information about the contract:
+- The contract has a function called `hash` that takes in a few different types of data, including `Input`, `AbsoluteAmount`, and `Swap Description`.
+ - The `isUserControlled` function should return true if any of the variables passed in are userControlle, false otherwise.  It should also have some examples of how the data is structured. For example, if it takes a struct, you should include the struct definition.
+  - You should be able to run the `testIsUserControledTrue` test and see that it passes. 
+  - If you run ` testIsHashUsercontrolledFalse

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `ETH` is declared as `internal constant` with a hardcoded address value. This means it is a constant within the contract that cannot be changed after the contract is deployed. It is not controlled by the user, as users cannot modify `internal` or `constant` variables. These types of variables are set by the contract developers at the time of writing the contract and remain unchanged throughout the contract's lifecycle.

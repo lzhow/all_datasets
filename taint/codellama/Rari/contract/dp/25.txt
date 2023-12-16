@@ -1,0 +1,4 @@
+  
+No, the variables ` comp Accrueds_ ` and ` delta Index ` are independent.
+
+The variable  `CompAccured_  is defined in function  update Comp Borrow Index  and is used to calculate the amount of comp to be distributed to a borrwer. It is calculated based on  the borrow index and the number of blocks that have passed since the last time comp was distributed.  The variable delta index is also defined  within the same function and it is a difference between the current borrow  index  of the ctoken and  a previous borrow Index. This variable is then used in  function Distribute Borrowe Comp to update the borower index. However, these two variable are  independent and do not depend on each other.

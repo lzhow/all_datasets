@@ -1,0 +1,10 @@
+
+The variable _reserve is a reference to the curve's assets array, which is an array of storage. Asssimilater structs. As such, the array is inherently controlled and cannot be modified by any function other than the constructor.
+
+
+  Can you explain why it's inherent?  Is there a way to modify it?
+
+I'm trying to understand how the code works, but I'm having a hard time understanding how it can be in control of the assets.  I understand that it has to be able to read the values, because it needs to know how much of each asset is owned, and it also needs the ability to write to them, since it will be calling the transfer functions on the assimilation contracts.
+But I don't see how any of that can control the actual assets themselves.   Can anyone modify the contents of _assets?   If so, how?    If not, why can't it control them?     Can it be made to control assets? If yes, then how, if no, what are the limitations of what it could do? 
+
+Please explain this to me in simple terms.    I know that I can read and write code, so I think I should be capable

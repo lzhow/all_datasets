@@ -1,0 +1,9 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_mint` function in `Jaya.sol` calls the `onMint` method in each of the NFT contracts that are passed in as parameters. This method contains a loop that iterates over the list of NTFs and transfers ownership of each one to the buyer. Since the order in which the contracts are processed is not specified, the result is non-deterministic and can vary depending on which NTFS are transferred first.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason why the _tokensAddress variable in buyerc 751 is dependent on er1c 5tids is because the transferfrom function is called on each token address in _tokendaddress, and the token id is taken from the corresponding element in er7c2 3t5. So the ordering of these two lists matters. If the two are out of order, then the resulting transfer will be incorrect. In the case of buying Nfts, this is important because it determines the ownership and transferability of those Nft. For example, if the seller has a non transferable NFt, but the user is

@@ -1,0 +1,8 @@
+
+The function in `withdraw` has a loop that calculates the amount of `want` tokens that should be withdrawn. This amount is calculated as `r = balance() * _share / totalSupply()`. The function then transfers `_shares` of the total supply from `msgSender` to the contract, and calculates how much `Want` token the strategy contract has. If the balance of this contract is less than the calculated amount, the loop calculates an additional amount `_withdraw`, which is then withdraw from the `strategy` contract.
+
+After the withdrawal, `_want.balanceOf()` is called again to get the new balance. Then, `uint _Diff = after - b` is computed, which represents the difference between the old balance and the current balance after the first withdraw. Finally, if `_diff` (the difference) is smaller than `_Withdraw`, the value of r is set to `b + _difference`.
+In the case where `_tokens` are sent to this function, it is checked that `_Token` does not equal the address of want. In this case, all of `_Tokens` balance is sent back to `_msgsender`.
+
+
+  I'm sorry, but I don't understand what you mean by "data de

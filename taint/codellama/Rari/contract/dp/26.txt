@@ -1,0 +1,5 @@
+  
+No, the `comp` variable in `updateCompComplySuppyIndex` is data-dependent on `suppllyRate` and `totalComp` variables in `_updateRates` function.
+
+The reason is that the `_updaterates()` function is called before the updatecompcomplysuppyindex() function, and the variables `SupplryRate`, `TotalComp`, and`Blocknumber` are updated in this function before they can be used in updatecompsupplyindex().
+Therefore, `Ratio` cannot be datadependent.

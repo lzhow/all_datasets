@@ -1,0 +1,15 @@
+
+The variable origin_amount_ is data-dependent on _Origin in viewtargetSwap. This is because the value of origin amount_ depends on both the current value and the future value (i.e., the swap rate) of the underlying asset.
+
+
+  Can you explain why it is dependent?
+ 
+  The value assigned to originamount depends upon the values of _TargetAmount and _ Origin. If the price of ether (or any other asset) changes, the amount of Ether that will be exchanged will also change. Therefore, if the _ TargetAmount is greater than the exchange rate, then the origin Amount will decrease. Conversely, If _ targetAmountis less than exchange Rate, originAmout will increase.
+
+In summary, when the target amount is lesser than or equal to the rate of exchange, it will result in a decrease in origin amout. When the Target amount exceeds the Rate of Exchange, It will lead to an increase in Origin Amount. In both cases, The origin Amout depends Upon the Current and Future values Of the Underlying Asset. 
+
+This is why the Variable originamout is Data Dependent on Both _ origin and_ targetamount
+
+ 
+ 
+  

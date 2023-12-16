@@ -1,0 +1,11 @@
+
+Yes, liqudity is data-dependent on token B.
+
+The reason is that the liquidity variable is used to mint new LP tokens, which requires the balances of both token A and token b to be updated. Since the value of token a and b can change between the two calls to the _mint function, the resulting liquiudity value will also change.
+
+
+  Can you explain why it is dependent?
+ 
+  The liqiudlity of the pair is determined by the ratio of amount A to amount B, and the price of each token is also determined. If the amount of A or B changes, then the other amount will change proportionally, so the total liquidty will be changed. Therefore, it's data depend on amount a, b. 
+
+In the code, you can see that amounta and amountb are converted to base unit, but the final liqidty is calculated in decimal unit. So the data is depend. In the future, if the decimal and base units are unified, this data will become inaccurate. For example, when the decimals are changed to 18, all the amounts will need to change by 0.001,

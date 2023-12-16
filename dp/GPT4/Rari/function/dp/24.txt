@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `err` in the function `initialize` is data dependent on the variable `error` in the function `_setAdminFee`. This is because the value of `error` is returned by the function `_setAdminFeeFresh(newAdminFeeMantissa)` and is assigned to `err` in the `initialize` function. Therefore, any changes in the value of `error` will affect the value of `err`.

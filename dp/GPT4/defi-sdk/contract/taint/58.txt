@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `swapType` in the function `getReturnedAmounts` is an argument passed to the function. This variable is derived from the `swapDescription` struct, which is provided by the caller of the `execute` function. Since the caller of the function is an external user, they have control over the contents of the `swapDescription`, including the `swapType`. Therefore, the `swapType` variable is controlled by the user.

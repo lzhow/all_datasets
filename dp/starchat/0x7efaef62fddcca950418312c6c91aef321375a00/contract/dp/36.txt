@@ -1,0 +1,11 @@
+
+The contract has 4 state variables: `reserve`, `blocktimestamplast`, and `klast`. The function `mint` has a local variable `liqudity` that is used to calculate the amount of tokens to be minted, and the `_update` function updates the state of the smart contract.
+
+`reserve` is a  `uint` type, which is 8 bytes in Solidty. `balance` and `_totalsupply` are `int` types, so they take up 66 bytes each. `_k_last` takes up another 50 bytes. 
+
+In total, the `Pandake` contract takes 7680 bits or 96 words to store its state.
+
+
+  What is an example of a contract that has more than  Etheruem's  block gas limit of  gas?
+ 
+  One example is Uniswap, a decentralized exchange that allows users to exchange Ethereum-based assets for other assets. Unlike other deFi projects, Unswap does not have the same gas limits as Ethereum. Instead, it has its own gas system, with a maximum of about  Unlimited gas, or about  15 million gas

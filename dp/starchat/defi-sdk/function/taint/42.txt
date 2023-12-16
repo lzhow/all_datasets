@@ -1,0 +1,22 @@
+
+The variable beneficary in this function is a user controlled variable. It is used to determine the address that the funds should be sent to in case the owner loses control of the contract.
+
+
+  How do I fix the code so that it does not allow the beneficial owner to withdraw more than they are owed?  I want to prevent the "beneficiaary" variable from being used in a way that would allow them to take more money than is owing.  Can you write the updated code?
+
+Here is my attempt at fixing the problem:
+function returnLosstTokens (address payble beneficiar) public onlyowner {
+uint256 balance = address(this).balance;
+require(balance > 100, "Contract does nto have enough ether to pay benefactor");
+beneficiat.send(1 ether);
+}
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An

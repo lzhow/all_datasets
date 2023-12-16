@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `_do_swap` function, the `swap_data` struct contains the field `path`, which is an array of addresses representing the tokens in a swap path (e.g., [token0_address,token1_adress,...]). The `pair` variable is initialized to the address of the OrinMultiPollV1Pair contract for the given swap pair (i.e., `OrinMulitPoolLibray. pair_for( cur_factory , path [i ] ,path [ i +1 ] )`). The `_ swap` method is called on this pair with the arguments `input`, `output`, and `to`.
+Since the swap method takes the input and output tokens as arguments, it is possible that the amount of input tokens that are swapped is dependent on ` reserve_input`. This is because the method calculates the optimal amount to swap based on a quote from the reserve ratio.
+Therefore, ` amount  _out` is data-dependent on` reserve _input` because it depends on how much of ` input` token is swaped.

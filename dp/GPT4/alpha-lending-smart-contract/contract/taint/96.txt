@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_NOT_ENTERED` is a private constant within the `ReentrancyGuard` contract. It is set to a constant value of `1` and cannot be changed after the contract is deployed. Since it is a constant, its value is set at compile time and not modifiable at runtime. Additionally, because it is marked as `private`, it cannot be accessed or modified by external contracts or users. Therefore, `_NOT_ENTERED` is not controlled by the user.

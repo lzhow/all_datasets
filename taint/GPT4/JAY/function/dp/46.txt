@@ -1,0 +1,3 @@
+The contract state `sellNftFeeEth` is data dependent on the variable `_sellNftFeeEth` in the function `updateFees`. 
+
+Reason: The value of `sellNftFeeEth` is assigned the value of `_sellNftFeeEth` in the line `sellNftFeeEth = _sellNftFeeEth;`. Therefore, there is a data dependency relationship between these two variables.

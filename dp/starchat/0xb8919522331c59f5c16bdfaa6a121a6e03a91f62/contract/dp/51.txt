@@ -1,0 +1,10 @@
+
+The variable "target" in function "functionDelegatecall" is a call-by-reference parameter, which means that the value of the target variable is changed by the called function. Therefore, it is not possible to determine whether the "data" variable in "FunctionCall" has a direct or indirect dependency on "Target" and therefore, the data dependence relationship between "Data"and "Targe" cannot be determined.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+In the code you provided, there are two functions: " function call" (Function Call) and " FunctionCallWithvalue". The "call()" function in Solidty is used to call other functions in your smart contract. For example, if you have an "approve" function that allows another contract to access your funds, you can call it using the ".call() function."
+When you call a function using ". call()" in solidity, your code will pause and wait for the other contract's function to finish executing. Once the call is complete, any return values will be stored in memory and can be accessed by your contract, and your original

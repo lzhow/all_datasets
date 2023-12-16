@@ -1,0 +1,5 @@
+  
+The variable _ spender in function `increaseAllowancesByParition` is labeled as 'Yes' because it represents the address of the spending account, which is a user-controlled variable.
+
+In the context of a smart contract, the `_approval` function allows a spendee to approves a certain amount of tokens to be spent by a specific spenndor. This function takes in three parameters: the owner of those tokens, who is also the sender of this transaction, and the amount to increase the allowances by.  The spendre is an address that represents a different account that is authorized to spend the tokens on behalf of their owner. In this case, since the _sender is controlling the transaction and is passing in their own address as the `spendre`, it can be considered as a controlled variable by user, hence the lable 'YES'.
+ 

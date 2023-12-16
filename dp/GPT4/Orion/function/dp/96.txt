@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `from` in the function `getAmountOutCurve` is data dependent on the variable `i` in the function `getAmountInCurve`. This is because the value of `i` is used as an index to access the `xp` array in both functions. In `getAmountOutCurve`, `i` is used to access `xp[uint(i)]`, while in `getAmountInCurve`, `i` is used to access `xp[uint256(i)]`. Any change in the value of `i` will affect the value of `from` indirectly through the `xp` array.

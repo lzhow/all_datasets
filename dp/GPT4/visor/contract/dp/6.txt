@@ -1,0 +1,9 @@
+yes
+
+The variable `returndata` in the function `functionCallWithValue` is data dependent on the variable `value` in the same function. This is because the `value` variable is used in the call to the `target` contract:
+
+```solidity
+(bool success, bytes memory returndata) = target.call{ value: value }(data);
+```
+
+Here, `value` is specifying the amount of wei to send with the call. The call to the `target` contract could behave differently based on the amount of wei sent, which could affect the execution and the data returned in `returndata`. Therefore, there is a data dependency relationship between `returndata` and `value` as the output in `returndata` can be influenced by the value of `value`.

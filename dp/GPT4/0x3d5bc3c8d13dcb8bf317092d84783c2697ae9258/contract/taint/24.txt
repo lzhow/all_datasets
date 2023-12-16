@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `isInterestRateModel` is declared as a `public constant` boolean with a value of `true`. Since it is a constant, its value is set at compile time and cannot be changed thereafter. Additionally, being a constant, it does not consume any gas to access. The fact that it is public means that it can be read by anyone, but it cannot be modified by any user or contract after deployment. Therefore, `isInterestRateModel` is not controlled by the user.

@@ -1,0 +1,13 @@
+
+yes, it is data-dependent on `roundID`
+
+The reason is that the `onReceive` function in `Jaya.sol` calls `updateFees()` which calls the Chainlink price feed contract `priceFeed` to get the latest price. `latestPrice` is then used to calculate `buyNFTFee` and `sellNFTfee`.
+`roundId` represents the current round of the price data feed. If the value of ` roundId ` changes, then the data in this contract is outdated and needs to be updated.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on round ID is because the onReceive function calls update fees which in turn calls a ChainLink pricefeed contract to retrieve the most up to date price information. This price is used in calculating the buy and sell fees.
+If the round id changes then this data is no longer accurate and therefore needs updating. 
+
+In the case of Jaya, the update fee function is called every time a new NFT is sold or bought. When the fee is updated, a check is performed to ensure that it does not exceed a certain threshold. In this case, if the new

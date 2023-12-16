@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `Swaps` contract is called with the `_target` and `_amount` parameters, and the return value is assigned to the local variable named `targetSwapped`. The `curves` parameter is not used in this function.
+  In the second function , the same `swaps ` contract  is again called, but this time with `_ origin` as the parameter. This means that the value of ` originSwaped` is dependent on `_ targetSwappped` because the contract state of the swaps contract has changed. Therefore, ` _ origin ` is data-dependent on ` targetAmount _`.
+  

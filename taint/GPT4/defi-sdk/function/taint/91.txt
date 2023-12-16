@@ -1,0 +1,5 @@
+  
+No, the ` total fee amount` variable in function `getReturnAmount()` is NOT controlled  by user because it's calculated based on the input parameters and the contract' state.
+
+The `output balance change` is calculated by subtracting the output token balance before the swap from the balance after the  swap. This value is then used to calculate the returned amount and fees.  The `return amount`, `protocol fee`, and `market fee` are calculated using the total `fee amount`.
+ 

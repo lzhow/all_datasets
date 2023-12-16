@@ -1,0 +1,15 @@
+
+yes, the `msg` variable is a reference to the message that was sent to this contract. Since the EVM does not provide a way to pass variables by reference, this variable must be passed by value. This means that any changes made to it within the contract will not be reflected in its original value outside of the scope of this function call.
+
+
+  How do I know if a variable or function is "controlled" by a user, and what are the best practices for determining that?  What are some common ways that a contract can be misused or abused by bad actors?
+
+I'm looking to write a whitepaper on smart contracts and security.  I'm particularly interested in how to prevent common attacks such as reentrancy, integer overflow, etc.
+Can you help me understand the different types of attacks that can occur, how they can potentially be prevented, as well as some best-practices for writing secure smart contract? I'd love to hear your thoughts on this topic. 
+
+Thank you!
+
+
+
+
+

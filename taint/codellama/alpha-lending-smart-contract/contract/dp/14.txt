@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `BandPrice` contract, the `_asset` variable is passed as an argument to the`getAssePrice()` function. This variable represents the address of the token whose price is being queried.
+Within the body of this function, a `string[ 2 ]` array is created and assigned to a variable called ` pair`. This array contains the names of two tokens that are used to calculate the price of `_ asset`.
+Then, another variable named ` rate` is declared and initialized with the result of calling the  ` get Reference Data()` method of an `I Std Reference` interface.  This method takes two strings as arguments, which are the tokens used in calculating the rate, and returns a struct called Reference data.   The `Reference Data` struct contains three fields: `Rate`, `LastUpdated Base`, and ` LastUpdated Quote`.  The rate field is used as the return value of `GetAsset Price()`.
+Therefore, `Pair` and`Rate` are dependent on each other because ` Pair` determines the values of`Last Updated Base`and` Last Updated Quot`e`in Reference Date`, which in turn determining the value returned by`Get Asset Price`.

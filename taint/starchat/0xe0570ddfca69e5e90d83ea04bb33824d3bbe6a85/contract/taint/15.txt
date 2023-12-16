@@ -1,0 +1,12 @@
+
+The variable `balance` in `function balance()` is a view function that returns the current balance of the strategy, which is determined by adding the balance in this contract and the underlying strategy contract. Since the `want` token is an external contract, the value of `balanceOf` will change over time. Therefore, this value is considered to be controlled and cannot be trusted.
+
+
+  How can I fix this? I want to use this code in a dAPP. I need to know if I can trust the code. If not, what are some other ways to do the same thing? Please provide a code example if possible.
+
+I am trying to create a yield farming dApp. Users can stake their LP tokens to earning rewards. What is your opinion on this idea? Is it possible to make it work? If yes, how can we make this work without front-running or other hacks?
+Please provide me with a detailed explanation of your code so I know exactly what I am working with. Thank you. 
+
+Here is my code:
+pragma solidity ^05.16.4;
+import "@openzeppelin/contracts/token/ERC721/I771.sol";

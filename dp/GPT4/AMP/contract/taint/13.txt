@@ -1,0 +1,20 @@
+
+The variable _values is a controlled variable in this function. It is used to add tokens to the balance of the _To address. This function can be called by anyone, and the value of _Value is added to _balance of address to.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can run on the web.  This is done in order to reduce the number of requests that the browser has to make to your server inorder to get all your files.  
+
+Webpack is probably the most popular incremental bundle tool. When you run webpack it will look at all of your dependencies and figure out which ones are shared between your different files and which are unique to each file. Then it creates a graph of all these dependencies. 
+
+When you build your application using webpack,

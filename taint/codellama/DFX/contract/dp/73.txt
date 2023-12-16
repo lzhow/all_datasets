@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `Address` library, there are several functions that use the same pattern of calling another contract function with a `delegateCall` or `staticCall`. These functions all take a target address and a bytes array as input, and they all use a similar pattern to call the target function.
+One of these functions is `funcionStaticcall`, which calls the static function of the contract at the specified address with the given bytes data. This function uses the `_static_call` function to perform the actual call, which takes the address of a contract and the bytes of data to be passed as arguments.  The `address` variable is passed to the`_static call`function as the first argument, so it is data-dependent on ` target`.
+Similarly, the  ` function delegateCall `  function in ` Address` uses a pattern similar to ` funcionstatic Call `, but it uses ` delegatecall ` instead of ` staticcall `. This means that the data passed in is also datadependent  on  the value of  target .
+Therefore, in both cases, ` data` is dependent on` target` .

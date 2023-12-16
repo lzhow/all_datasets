@@ -1,0 +1,3 @@
+yes
+
+The variable `raw` in the function `decodeBytes64` is directly dependent on the variable `data` passed to the function. This is because `raw` is assigned the `raw` member of the `Data` struct instance `data`. The line `bytes memory raw = data.raw;` establishes this data dependency, as the content of `raw` is derived from the `data` variable's `raw` field.

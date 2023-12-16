@@ -1,0 +1,18 @@
+
+The variable amount in function `_grantcomp` is a user input and is therefore controlled.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and serving of web content works under the hood. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can be served to users. This makes it easier for the browser to load all of the necessary files and makes your application load faster.
+
+When you build a web app, you typically write code in multiple files, such as JavaScript files for your logic, CSS files to style your UI, and HTML files with your templates. An Incremental Bundler takes all these files as input, analyzes them, figures out which dependencies between them exist, then combines them all into one or more output files. It does this in a way that optimizes for performance, so that the resulting bundle file is as small as possible while still

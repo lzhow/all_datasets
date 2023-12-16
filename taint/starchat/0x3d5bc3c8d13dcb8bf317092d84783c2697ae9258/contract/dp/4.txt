@@ -1,0 +1,13 @@
+
+The contract has a function called `_acceptadmin()` which is called by the pending admin to accept the admin role. This function checks if the sender of the message is indeed the address of pendingadmin and if it is not, it returns an error. If the check passes, the current admin is set to the new pending one and the events are emitted.
+
+So, in summary, no, `pendingAdmin`, `msgSender`, and `comptrollerrImplementation` are all not dependent on `NewPendingadmin`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being told I should "just learn python" and being sent on a wild goose chase to a course that will probably end up teaching me nothing but painful memorization.
+   
+
+  What are some good ways to get started with Python? I have heard that it's a popular language for data analysis and AI, but I've never used it myself. I'm considering taking a class, attending a bootcamp, or looking for online resources. Which of these options would you recommend for someone who is completely new to programming? And if I do endup using Python,

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `from` in the function `withdraw` is an input parameter provided by the caller of the function. Since the caller (user) specifies the value of `from` when they call `withdraw`, it is controlled by the user. The function does not impose any restrictions on the value of `from` other than it must not be the zero address, as indicated by the line `require(from != address(0), "from");`. Therefore, the user has control over what address is passed as the `from` parameter.

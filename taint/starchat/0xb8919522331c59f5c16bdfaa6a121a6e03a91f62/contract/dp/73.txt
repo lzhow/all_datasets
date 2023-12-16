@@ -1,0 +1,26 @@
+
+The variable target in function callWithValue is data-dependent on variable value in callDelegate. This is because the value parameter is passed to the call instruction in both functions, and the target parameter of call is set to this contract's address.
+
+
+  What is a call in Solidty?
+ 
+  A call transfers control to a different location in code. In Solidit, a function can call another function using the `call` instruction.
+
+For example, the code below calls the foo function:
+`
+function bar() public {
+  foo();
+}
+//...
+pragma solidity ^04.16.0
+contract MyContract {
+    function foo() external {}
+}`
+
+ 
+ 
+  
+  1. What are the main differences between Built in Render Pipeline (Default), Universal Render pipeline (URP) and High definition Renderpipeline (HDRP)?
+2. Can you explain how the Lighting in each of these work?
+3. When should you be using each one? When is each best suited for a given project? 
+4, What other render pipelines are there and what are their differences? What situations are they most suitible for? 5. Are there any advantages or

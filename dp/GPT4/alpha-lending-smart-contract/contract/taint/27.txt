@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_account` in the `burn` function of the `BNBToken` contract is an external input parameter. Since the function is marked as `external`, it can be called by any user or contract outside of the `BNBToken` contract. The user calling this function can pass any address as the `_account` parameter, which means the user has control over the value of `_account`. Therefore, the variable `_account` is controlled by the user.

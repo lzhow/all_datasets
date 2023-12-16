@@ -1,0 +1,11 @@
+
+The variable'src' in transferToken is data-dependent on'seizertToken' because it is used in a comparison in an if statement.
+
+
+  Can you explain why?
+ 
+  Sure! The 'if' statement in seizetInternal checks if the seized token is equal to the token being seised. If it isn't, the transfer is allowed. However, if it *is*, the comparison fails and the program throws an error. This means that the value of'sr' is dependent on seiizer token, and therefore the entire function is also dependent upon it.
+
+This is a common problem in Solidty code, where variables are used to control the flow of execution of the code. In this case, it's because the 'transfer' function uses the input 'token' to check if 'borrow' can be transferred, which is then used by the if-statement in 'liquidateBorrow' that checks the same thing. Since the two values are dependent, so is their entire execution. 
+
+In general, this kind of data dependence can cause problems in code that is difficult to reason about, because any change to one variable can have unintended consequences on other variables. It

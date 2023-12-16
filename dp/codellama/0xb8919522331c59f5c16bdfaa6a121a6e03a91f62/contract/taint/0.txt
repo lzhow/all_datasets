@@ -1,0 +1,4 @@
+  
+The variable 'new Implementation' in function 'upgradetoAndcall' is labeled as 'Yes' because it can be controlled or manipulated by a user in a malicious way.
+
+In the code, the 'UpgrateToandCall' function takes in an address as an argument, which is then used to call the '_upgratetoandcallSecured' method. This method sets the implementation slot to the new address, and if it fails, reverts the transaction. However, if a new upgrade is attempted with a different address than the one that was previously set, this method will revert the upgrade and set the address back to what it was before.  This means that the attacker can potentially manipulate the contract's behavior by calling the Upgrade function with different addresses.

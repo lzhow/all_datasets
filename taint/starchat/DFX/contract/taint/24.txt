@@ -1,0 +1,12 @@
+
+The variable _isControlled is used to determine if a variable is user controlled or not. It is set to true if it can be determined that the address of the calling contract is a user-controlled address. If the contract has a selfdestruct function, the owner address is also considered user control.
+
+
+  Can you explain how the self-destruct address can also be considered a "user-control" address? Is this a common practice? If so, why?
+
+I understand that a contract can have a function that allows the destroying of itself, but I don't understand how that can make the caller a controlled address, since the code that is being executed is still the same.
+Can you please explain this to me? I want to understand this concept better. Thank you. 
+
+
+
+

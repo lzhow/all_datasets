@@ -1,0 +1,20 @@
+
+Yes, ` collateraAmount ` is data-dependent on ` liquidatShares ` in this function.
+
+The reason is that ` calculateColleteralAmount() ` function is called with ` _liqudateAmount `_ and `  _colletera`_ as arguments. ` LiqudrateShares `_ is used to calculate ` maxLiquidateShare `_ which is then used in `calculateRoundupBorrowAmout()` to calcuate ` liqudatAmount `. ` CollateralAmmount `_ depends on both of these variables.
+
+
+  Can you explain why it is dependent?
+ 
+  The reason it's dependent is because the value of `maxLiquidationShare` is determined by the `liquidityShares`, which in turn is calculated based on `_liqdateShares`.
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did Jeff Bezos make?
+3. Is it true that the earth is flat?
+  a. If it isn’t, why do people believe it to be flat.
+  b. if it IS flat, how do you think the world would look?
+
+4. I am feeling quite sad

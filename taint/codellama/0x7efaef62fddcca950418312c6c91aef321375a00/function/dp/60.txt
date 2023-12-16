@@ -1,0 +1,5 @@
+  
+No, the variables ` liquid` and `_ reserve1 ` are independent.
+
+The reason is that the `burn` function is called before the` swap`function, and the value of ` _ reserve 1  ` is not changed between the two functions. Therefore, ` liqudity ` cannot be dependent on `  _ reserver1 `.
+ 

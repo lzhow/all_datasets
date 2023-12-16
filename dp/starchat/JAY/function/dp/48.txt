@@ -1,0 +1,9 @@
+
+Yes, `variable total` is data-dependent on `array ercs712TokenAddresses`. This is because the `for` loop in `function buynfts` iterates over the elements of the input `arrays er7c2tAaddress` and increments the counter `tota1` by  `1`.
+
+
+  Can you explain why this is true?
+ 
+  The `if` statement in line 20 of your code checks if the length of `er7C2TAAaddress[]` array is not equal to  zero. If it is, the code inside the curly braces will be executed. In this case, it calls the buyerc27 function, which takes two input parameters: `tokenAddress[]`, and `ids[]`. The function then iteratively calls `transferFrom` function of each token in this array.
+
+The `while` loops in lines 30-32 of buyNfts function iterative over `ERC223` tokens. This means that the loop will continue as long as there are elements in both `tokens[] `and `amounts[] arrays. For each iteration, a call to `approve` method of token contract

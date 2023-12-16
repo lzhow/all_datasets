@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `if` statement, the condition `totalSuply()` is checked. If the total supply is zero, then the shares are set to the amount. However, if the supply isn't zero then shares is set based on a calculation involving `_pool`, `_after`, and `_supply`. The calculation involves `_before` and `shares`, which are both dependent on `_amout`. Therefore, `_totalsupply`, a contract variable, is data-dependent on _amoumt.

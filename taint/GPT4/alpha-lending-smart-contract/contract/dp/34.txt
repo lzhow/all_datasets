@@ -1,0 +1,16 @@
+Yes
+
+The contract state `shares` is data dependent on the variable `supply` in the function `accumulateAlphaToUser`. The reason for this is that the value of `share` is calculated based on the current `supply` of alpha tokens in the contract. The calculation uses `supply` to determine the proportion of the total share that corresponds to the `_amount` being accumulated. This calculated `share` is then added to the `shares[_user]`, which means that the state of `shares` is directly influenced by the value of `supply` at the time the function is called. Here is the relevant part of the code:
+
+```solidity
+function accumulateAlphaToUser(address _user, uint256 _amount) external override nonReentrant {
+    uint256 supply = alphaToken.balanceOf(address(this));
+    uint256 share = supply == 0 ? _amount : _amount.mul(totalShare).div(supply);
+    shares[_user] = shares[_user].add(share);
+    totalShare = totalShare.add(share);
+    alphaToken.transferFrom(msg.sender, address(this), _amount);
+    emit AlphaTokenAccumulated(_user, share, _amount);
+}
+```
+
+In this code, `supply` is used in the calculation of `share`, and `shares[_user]` is updated based on `share`. Therefore, there is a data dependency relationship between `shares` and `supply`.

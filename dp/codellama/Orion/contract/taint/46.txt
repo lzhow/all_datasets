@@ -1,0 +1,4 @@
+  
+The variable 'reservesOutput' in function '_swap' is labeled as 'Unknown' because it depends on the input parameters of the swap function.
+
+In the first line of function `_swap`, the `input` and `output` variables are defined as the addresses of two tokens in a pool. In the next line, the `_getCoinIndices` function from the Curve Registry is called to get the indices of these tokens. These indices are then used to calculate the amount of tokens that will be swapped. However, these indices can be controlled directly by a user who calls the _getcoinsIndeces function, so the output of this function cannot be considered as controlled solely by user input. 

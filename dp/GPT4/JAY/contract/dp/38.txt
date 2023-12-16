@@ -1,0 +1,20 @@
+Yes
+
+The contract state `nftsBought` is data dependent on the variable `erc721TokenAddress` in the function `buyNFTs`. The reason for this is that within the `buyNFTs` function, the length of the `erc721TokenAddress` array is used to determine the `total` number of NFTs being bought, which is then used to increment the `nftsBought` state variable. Here is the relevant part of the code:
+
+```solidity
+function buyNFTs(
+    address[] calldata erc721TokenAddress,
+    uint256[] calldata erc721Ids,
+    address[] calldata erc1155TokenAddress,
+    uint256[] calldata erc1155Ids,
+    uint256[] calldata erc1155Amounts
+) public payable {
+    uint256 total = erc721TokenAddress.length;
+    // ... other code ...
+    nftsBought += total;
+    // ... other code ...
+}
+```
+
+As you can see, the `total` variable is directly set to the length of `erc721TokenAddress`, and then `nftsBought` is incremented by `total`. Therefore, there is a direct data dependency between `nftsBought` and `erc721TokenAddress`.

@@ -1,0 +1,10 @@
+
+Yes, ` sqrtRationAX` is data-dependent on ` roundUp`.
+
+The reason is that the `if` statement in ` getAmout0Delata` contains a call to `uint118.toInt1024`, which is a pure function that does not have any side effects, and thus the value of `squareRootRatioA` does no not depend on any other variables.
+However, the call in line 13 is not a simple call, but rather a method call on a value that is stored in a variable, which means that it is possible that this value is changed by another function call.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason why `SqrtRatio` depends on round up is because the calculation of the square root ratio involves dividing two numbers, both of which are unsigned integers. If the result of this division is rounded up, then the least significant bit of one of these numbers will be set, causing the other number to be one higher. This means the final result will have one more significant digit than it would otherwise. In this case, it means `SquareRootRaito` will contain one extra digit, making it larger

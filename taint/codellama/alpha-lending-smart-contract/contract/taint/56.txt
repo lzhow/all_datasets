@@ -1,0 +1,4 @@
+  
+No, the `Data` variable in `decodeDataUint` is a local variable and is therefore not user-controlled.
+
+The `from` function in library `OBI` creates a new `struct Data` object and initializes it with the given `bytes` data and an offset of  `0`. The `shift` modifiers in functions ` decodeDataInt`, `decodDataBool`, and `finished` modify the offset value of the data object. However, these modifications are done within the library and are not accessible to the outside world. Therefore, ` data` in function `deocdeDatauint` remains uncontrolable by user and the answer is 'No'.

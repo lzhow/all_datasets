@@ -1,0 +1,5 @@
+  
+No, the state variable `_ balances ` is not dependent on ` started at ` in function` update fees`.
+
+The reason is that the ` _balaces ` state is updated in other functions such as `buynft` and `sells` which are called by the user, and the` startedat ` variable is only used in ` updatefees ` to calculate the feepayment.
+Therefore, there is no data dependence between the two.

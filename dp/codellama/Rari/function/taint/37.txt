@@ -1,0 +1,4 @@
+  
+No, the ` borrow speed` variable in update Comp Borrow Index is NOT controlled  by user because it's a local variable that is created in this function and it can't be modified by any external user or function.
+
+The `updateComp BorroweIndex` function is called by other functions in RedeemDistributionDelegate contract, and the borrow index is calculated based on the current borrow rate and supply rate of the ctoken. Therefore, any changes to ` borrowspeed` will not affect the behavior of this contract.

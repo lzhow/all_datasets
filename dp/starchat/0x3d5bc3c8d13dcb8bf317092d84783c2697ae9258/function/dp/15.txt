@@ -1,0 +1,9 @@
+
+The function `isDataDependent` takes two parameters: a variable name and a function body. It uses the `solc` Solidty compiler to parse the body and determine if the two named variables are used in a way that would make them data-dependent.
+
+In this case, the call to `require` inside the `_isDependentOn` function will cause the compiler's static analysis to fail, because it cannot determine at compile time whether or not `comptroller` is assigned before being used. This means that the result of the analysis is "unknown", which means the data dependence relationship cannot be determined.
+
+
+  Can you explain how the code works?
+ 
+  The code uses a Solidit compiler (solcjs) to analyze Solidiy code.  The compiler parses the source code, and creates an abstract syntax tree (AST).  Then the AST is analyzed to determine the dependencies between variables.   The function isDataDependedOn takes a string representing the name of a local variable and the entire function's body as a single string.    The body is parsed using the solcjs compiler, which creates a new AST for the given body string, then searches the tree for references to the named variable. If the

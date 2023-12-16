@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the provided Solidity function `collectProtocol`, the variable `amount1` is directly assigned a value based on the condition that compares `amount1Requested` with `protocolFees.token1`. The ternary operation `amount1 = amount1Requested > protocolFees.token1 ? protocolFees.token1 : amount1Requested;` determines the value of `amount1` by checking if `amount1Requested` is greater than `protocolFees.token1`. If it is, `amount1` is set to `protocolFees.token1`; otherwise, it is set to `amount1Requested`. This shows a clear data dependency relationship between `amount1` and `amount1Requested`, as the value of `amount1` is dependent on the value of `amount1Requested`.

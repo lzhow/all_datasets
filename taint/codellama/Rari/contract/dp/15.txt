@@ -1,0 +1,4 @@
+  
+No, the variables `compInitialSuppyIndex` and `block` are also data-dependent on `CTokenn` because they have the same address.
+
+The reason is that the `updateCompInitialsuppyindex` function updates the value of `compsupplyindex[CTOKEN]` and the `_setcompinitialsuppyspeed` functions updates `lastcompblock[ctoken]` which are both data dependents on ctoken.

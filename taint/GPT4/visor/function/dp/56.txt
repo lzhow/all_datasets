@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The provided Solidity function `balanceOfAt` references `_accountBalanceSnapshots[account]` in the line where it calls `_valueAt(snapshotId, _accountBalanceSnapshots[account])`. However, the variable `_balances` is not explicitly mentioned or used in the given code snippet. Without additional context or the implementation details of `_valueAt` or the state variable `_accountBalanceSnapshots`, it is not possible to determine if there is a data dependency relationship between `_balances` and `snapshotId`. The relationship would depend on whether `_accountBalanceSnapshots` is derived from or related to `_balances` in some way, which is not shown in the provided code. Therefore, the label is 'unknown'.

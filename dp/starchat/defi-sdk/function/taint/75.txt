@@ -1,0 +1,8 @@
+
+The variable allowances is a control variable that is used to check if a user has approved the router to spend a certain amount of tokens on their behalf. This variable is set by a call to the allow() function in an ERC223 token contract. Since the token transfer is performed by another contract, the value of allownace is unknown to this contract and cannot be considered controlled directly by users.
+
+
+  What is an example of a token that uses the ERC-213 standard?
+
+ERC-1400 is similar to ERC‑2718, but it uses a different mechanism to implement the transfer of ownership. Instead of using a transferFrom() method, which requires the sender to have previously approved(), the ownership is transferred using the approveAndCall() or transferAndVerify() methods. These methods allow the recipient to verify the approval by calling a function with the specified signature.
+In contrast to EIP-77, ECR-467 does not specify a standard interface for token controllers. However, some token contracts may implement a specific interface to control the tokens. For example, a security token may have a dedicated interface that allows the issuer to perform additional operations on behalf of the holders.

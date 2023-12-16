@@ -1,0 +1,9 @@
+
+The variable self in function `get` is a mapping that is stored in storage, so it can be modified by calling the `update` function. Therefore, the answer is "no" and the explanation is: "The self variable in get function is used to store the mapping, and it cannot be directly modified."
+
+
+  Can you explain why it's not possible to modify the self mapping? I understand that it has to be stored, but I don't understand why the storage location of the map cannot change.
+ 
+  The reason why you cannot modify a self-mapping is because mappings are reference types in Solidty, which means that when you assign a variable to a reference type, you are actually assigning a pointer to the location in memory where the data is located. This means you can only modify what the pointer points to, not the actual mapping itself.
+
+In your example, when the update function calls self =..., it creates a new mapping object and assigns it to self instead of modifying the existing mapping. Since mappings in solidity are stored as pointers, self now points at the new object instead. However, since the original mapping is still in scope, any changes you make to it will still affect the old object. To modify

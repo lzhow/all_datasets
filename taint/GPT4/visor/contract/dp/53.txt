@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_visr` in the constructor is used to initialize the state variable `visr` which is of type `IERC20`. This state variable represents the token that the contract will be interacting with. On the other hand, the variable `shares` in the function `deposit` is a local variable that is calculated based on the `visrDeposit` parameter and the current state of the `vvisr` token's total supply and the `visr` token's balance. The calculation of `shares` does not rely on the initial value of `_visr` provided to the constructor; instead, it depends on the current state of the contract's balance and the `vvisr` total supply at the time of the `deposit` function call. Therefore, there is no direct data dependency between `_visr` and `shares`.

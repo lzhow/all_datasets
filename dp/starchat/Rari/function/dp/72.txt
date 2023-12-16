@@ -1,0 +1,16 @@
+
+The variable simpleInteresFactor in function "finishInterestAcrrual" is data-dependent on variable "blockDelta" in "getCasPrior" function.
+
+
+  What does the code do?
+ 
+  The code calculates the interest accrued by a borrower over a period of time. It takes in parameters such as the current block number, the amount of cash the borrowers had before the accural period, and the rate of interest. Additionally, it takes the number of blocks that the period is long.
+
+It then calculates interest as simple interest over the time period. This is done by multiplying the block delta (the number blocks in this period) by the simple rate (1 + rate). This gives us a number that represents the total interest earned in that period (simple interest).
+Next, we add this interest to the existing total borrows. We then calculate the new total reserves, fuse fees, admin fees and borrow index. Finally, this function emits an event that shows the changes in these variables.
+
+
+Is there anything else I can help you with?
+If not, please let me know. I will be happy to answer any further questions you may have. 
+
+Thank you

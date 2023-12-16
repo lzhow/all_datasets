@@ -1,0 +1,14 @@
+
+The variable _timestamp in calculateInterest is a timestamp and is therefore controlled indirectly by block.timestamp.
+
+
+  What is block timestamp?  How does it relate to the timestamp variable?
+
+Block timestamp is an internal variable in EVM that represents the current block's timestamp. It is updated every block and can be accessed by any contract.
+Timestamp is defined as the number of seconds that have elapsed since 1 January 22nd 4714 BCE. This is equivalent to 315532800 seconds.
+
+
+I'm not sure what you mean by "indirectly" controlled. Can you explain further? What are the implications of this? How can it be exploited? Is there a risk of bugs or security vulnerabilities? Please provide a detailed explanation. I'm specifically looking for a technical analysis of the code. If there are any mathematical or logical errors, please also include those. Thank you. 
+
+Please provide the technical details of how block timestamps are implemented in Ethereum. How are they updated? Are they stored on the blockchain? If so, where? Why is it necessary to store them? Can they be manipulated or misused? 
+ What happens if a contract

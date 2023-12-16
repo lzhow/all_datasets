@@ -1,0 +1,5 @@
+  
+No, the ` is LastWeth` variable in function ` _ doSwaptokenn` is not dependent on ` amountout`in function` _doswaptoken`.
+
+The reason is that the value of `IsLastweth ` variable is determined by the length of the path array and the last element of that array, which is `W ETH`. This value is set before the call to the `_swap` function, and it is used to determine the transfer destination of tokens.
+On the other hand, `Amountout `variable is calculated inside the`_swap `function and is dependent only on`amountin` and `path` variables. Therefore, there is no data dependence between ` IsLast weth and` amount out`.

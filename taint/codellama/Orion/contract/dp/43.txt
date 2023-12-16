@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_data` struct is passed as an argument. This struct contains the fields `cur_factory`, `path`, and `support_fee`. The `pair` variable is created by calling the static method `OrinMultiPollLibrary::pair_for` with the arguments `factory` and the first two elements of the path array.
+Then, if the current factory type is CURVE, a call is made to the method `_ swap_curve` of this contract. If the factory is not CUVE and is UNISwap-like, then a method call to `_swapp` is performed. In both cases, `to` will be the address of a contract that implements the IPOOLSWAPCALLBACK interface.  The `_ swapp_` method is called with arguments that include the amount of tokens to be swapped, and a reference to a `SwappData` structure that contains information about the swap.   The amount out is calculated by subtracting the balance of token A before the call from the new balance after the transfer. Similarly, for token B, we subtract the initial balance from new the final balance. Finally, an event is emitted with information on how much of each token was swaped.

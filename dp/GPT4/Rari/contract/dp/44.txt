@@ -1,0 +1,3 @@
+No. The variable `compAccrued_` in the function `updateCompSupplyIndex` is not data dependent on the variable `holders` in the function `claimRewards`. 
+
+The variable `compAccrued_` is calculated based on the values of `deltaBlocks` and `supplySpeed`, which are local variables within the function `updateCompSupplyIndex`. It does not rely on any external variables or states, including the variable `holders` in the function `claimRewards`. Therefore, there is no data dependency between these two variables.

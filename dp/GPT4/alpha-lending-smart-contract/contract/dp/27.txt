@@ -1,0 +1,9 @@
+yes
+
+The variable `excessUtilizationRateRatio` in the function `calculateInterestRate` is data dependent on the variable `utilizationRate` within the same function. This is because `excessUtilizationRateRatio` is calculated using the value of `utilizationRate` in the following line:
+
+```solidity
+uint256 excessUtilizationRateRatio = utilizationRate.sub(OPTIMAL_UTILIZATION_RATE).wadDiv(EXCESS_UTILIZATION_RATE);
+```
+
+Here, `utilizationRate` is subtracted from `OPTIMAL_UTILIZATION_RATE` and then divided by `EXCESS_UTILIZATION_RATE` to determine the value of `excessUtilizationRateRatio`. The calculation of `excessUtilizationRateRatio` cannot be performed without first knowing the value of `utilizationRate`, which establishes a clear data dependency relationship between the two variables.

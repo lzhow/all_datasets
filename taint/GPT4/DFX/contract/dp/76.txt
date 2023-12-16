@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_oBals` in the function `viewTargetSwapData` and the variable `_bal` in the function `getOriginSwapData` are defined in separate functions and have local scope. This means that `_oBals` is not accessible outside of `viewTargetSwapData`, and `_bal` is not accessible outside of `getOriginSwapData`. There is no direct data flow or dependency between these two variables because they are encapsulated within their respective functions and do not share state or influence each other's values. Each function creates its own instances of these variables when it is called, and the instances are independent of one another.

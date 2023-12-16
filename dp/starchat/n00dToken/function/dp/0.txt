@@ -1,0 +1,19 @@
+
+The contract constructor takes two parameters: `uint224 initialSupplies` and `address[] defaultOperator`. The function body of the constructor contains a call to the internal `_mint` function, which takes four parameters.
+
+`_mint`:
+- `to`: The address of a token recipient. In this case, it is set to `msgSender`.
+ - `value`: A value to be assigned to a recipient's balance. This value is typically the amount of tokens being minted. However, in this context, the value represents the initial supply of N0odle tokens. 
+ -  `data`: Additional data with no specified format. It is used to pass additional information to token recipients. For example, if the recipient is a contract, this parameter can be used as a way to call a function on that contract.
+
+
+  - is `_balances[msgsender]` data-dependent on `totalsupply`?
+  ```solidity
+  function _burn(address account, uint96 value, bytes memory data) internal virtual {
+    require(account!= address(0), "ERC721: burn from the zero address");
+
+    _beforeTokenTransfer(
+        account,
+        address (0), 
+        value
+    );

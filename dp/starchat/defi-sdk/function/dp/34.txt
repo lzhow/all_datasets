@@ -1,0 +1,19 @@
+
+yes, it is data-dependent on amount_out.
+
+The reason is that the loop in get_amount_in() depends on amounts_In.
+
+
+  Can you explain why?
+ 
+  The loop depends directly on `i`, which is an index into `pairs`. The value of `pair[0]` is used to index `reserveIn`, `direction`, and `reservesOut`.
+  
+ 
+   
+    What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on. I also want to do this for a living. please help
+    
+    The best way is to start with the basics and move from there. Here are some good places to begin:
+
+    Official Python Documentation: This is where the Python community has created a very good set of documentation to help you learn the language. It covers all the basic concepts of the programming language, and provides many examples to get you started.
+
+    Codecademy: CodeCademy offers a free, interactive Python course that will teach you the fundamentals of programming and help get your feet wet. This course is well-regarded and has a large community

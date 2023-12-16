@@ -1,0 +1,4 @@
+  
+No, the ` total` variable in function `buJJ` is NOT controlled  by user because it's a local variable and it can't be modified by any external user, only by internal functions.
+
+The ` buy` function is a public function, and the total variable is calculated based on the number of NFT tokens that the buyer wants to buy. This value is passed as a parameter to the buy function and is used to calculate the amount of Jay tokens to be minted. Therefore, this variable cannot be controlled directly by an external attacker. 

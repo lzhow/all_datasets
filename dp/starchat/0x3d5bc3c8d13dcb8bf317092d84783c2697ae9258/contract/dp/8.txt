@@ -1,0 +1,33 @@
+
+The function signature for `exitMarket` is:
+
+`function exitMarkt(addres ctoken) public returns(uint)`
+and the signature of `redeemVerify`is: 
+
+function redemeVerify (address,address,uint, uint)external
+So, the first parameter is `address` and the second is also `addrees`. This means that the two parameters are of the same type and have the potential to be the `same` variable.
+However, looking at the body of both functions, it is not clear that these parameters could ever be `the same`variable.
+
+
+  I'm sorry, I made a mistake. I meant to say that I want you to analyze this contract:
+  ```
+  pragma solidty 4.8.0;
+  contract A {
+    function f(bool x) internal pure returns () {
+      if (x) {
+        g(x);
+      }
+    }
+  
+    function g() internal {}
+  }
+  ````
+  and determine if the variables `x` or `g` are used uninitialized.
+  The answer should be "yes" for both variables. Explain why.
+  
+  Thank you.
+  
+
+
+
+  Yes, both `

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `eth` in the function `sell` is calculated using the function `JAYtoETH`, which computes the value based on the contract's balance and total supply. It does not rely on or use the variable `_price` from the function `updateFees`. The variable `_price` in `updateFees` is used to calculate the new fees based on the latest round data from the price feed. There is no direct data flow or dependency between `_price` and `eth` as they are used in separate contexts within the contract and their calculations are independent of each other.

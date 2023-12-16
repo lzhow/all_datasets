@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `weth` in the function `depositEth` is not directly controlled by the user. It is obtained through the `getWeth()` function call, which is likely to return the address of a well-known WETH (Wrapped Ether) contract that is set during the deployment of the smart contract or through some initialization function that is not user-controlled. The WETH address is typically a constant in a well-designed contract, representing the official wrapped ether token contract address, and is not something that users can arbitrarily change. Therefore, the `weth` variable itself is not controlled by the user.

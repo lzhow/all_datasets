@@ -1,0 +1,4 @@
+  
+No, the variables ` comp Accrueds_ ` and ` c Tokens ` are independent.
+
+The variable  ` CompAccured_  is defined in function  update Comp Supply Index  and is used to calculate the new index of the supply state of a c token. This function is called in  flyWheel Pre Supplier Action  which is triggered by a call to  set Comp Speed  by the admin. Therefore,  comp accrues_ is only dependent on  the comp supply speed of c tokens and not on any other variable.  On the other hand, variable ctokens is a parameter of function Claim Rwards and it is dependent only on a specific ctoken. It is also called by  claim Rward function which can be triggered only by an admin call. So, it does not depend on compaccruals.

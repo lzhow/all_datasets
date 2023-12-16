@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `protocolFeeDefault_` is a private state variable in the `ProtocolFee` contract, and its value is set by the `setProtocolFeeDefault` function, which is an external function that can only be called by the contract owner due to the `onlyOwner` modifier. Since the owner is typically a specific account with special privileges (often the deployer of the contract or an account designated by the deployer), and not any arbitrary user, the variable is not controlled by a general user. The `onlyOwner` modifier restricts the ability to modify this variable to the owner of the contract, thus it is not user-controlled.

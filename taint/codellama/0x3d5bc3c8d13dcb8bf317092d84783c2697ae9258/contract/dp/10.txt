@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `exitMarked` function, the contract calls the`seizAllow` method to check if the seizure is allowed. This method checks if there are any seizable assets in `cToken` and returns the number of seized tokens. If the return value is greater than 1, it means that there were seizes, and the exit is not allowed, otherwise, if it is equal to 2, then the user can exit. 

@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `curFactory` in the function `doSwapThroughOrionPool` is not controlled by the user. It is assigned the value of `swapData.path[0]` or `factory`, depending on the condition `withFactory`. The value of `withFactory` is determined by the length of `swapData.path` and the `supportedFactories` mapping, which are not controlled by the user. Therefore, the variable `curFactory` is not controlled by the user.

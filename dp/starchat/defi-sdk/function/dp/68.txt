@@ -1,0 +1,12 @@
+
+The contract variable protocol fee is not directly data-dependent on DELIMITER. However, the DELIMITERS variable is used in a loop that iterates over the elements of the array protocolFees, which could potentially cause data races.
+
+
+  Can you explain how the data race could occur?
+ 
+  The data in DELIMTERS is read by the loop, and the value of DELIMETERS could change between the time the read is performed and when it is written to. This could cause the program to read invalid data, or even worse, write to memory that it does not own.
+
+In this case, it would be possible for the attacker to manipulate the protocol fees array in such a way that the code would read data from an unexpected location, potentially overwriting important program state. In this way, a malicious actor could exploit the race condition to execute arbitrary code on a user's machine.
+
+
+It is important to note that this is a contrived example, as the real code that caused this bug would likely be more complex and difficult to analyze. Additionally, this type of bug is difficult and time-consuming to find and fix, so it's important for developers to be aware of these types of issues

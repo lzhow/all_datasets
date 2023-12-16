@@ -1,0 +1,14 @@
+
+The variable amount\_ in function `getrate` is a user-controlled input. It is used to specify the amount of the asset that will be exchanged for the base asset. Since the input is user controlled, the value of amount\ can be influenced by a malicious user, potentially leading to a Denial of Service (DoS) attack or other security vulnerabilities.
+
+
+  Can you give me an example of how to exploit this? I'm trying to write a contract that uses this library. I want to make sure I understand the security implications of using this function.
+
+Also, can you explain how the compiler can't know if a variable is "controlled" by user input? Is it because the contract is external and the variables are not internal? Or is it something else?
+I'm just trying understand how these things work, so I can write secure smart contracts. Thanks!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain it to me at a level a data scientist can understand.  I know enough about web technologies to be dangerous, but I don't understand this stuff well enough to teach it in school

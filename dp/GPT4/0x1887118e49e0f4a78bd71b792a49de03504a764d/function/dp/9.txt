@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_oracles` in the `add` function is used to set the values of the `oracles` mapping for each corresponding `underlying` address. This mapping is then used in the `getUnderlyingPrice` function to retrieve the price oracle for a given `underlying` address. Since the `getUnderlyingPrice` function relies on the `oracles` mapping, which is populated by `_oracles`, there is a data dependency relationship between `_oracles` and the `oracles` mapping used in `getUnderlyingPrice`. Therefore, any changes made to the `oracles` mapping by `_oracles` will affect the behavior of the `getUnderlyingPrice` function.

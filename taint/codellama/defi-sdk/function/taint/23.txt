@@ -1,0 +1,4 @@
+  
+No, the ` amount` variable in depositeEht is uncontrolled by user because it's a function parameter.
+
+The `deposteET` function is called by another function `callBytes` which is also a public function. Therefore, any user can call the deposetEHT function and pass any value as the amount parameter, which makes the value of the parameter uncontrollable by any users.

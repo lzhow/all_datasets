@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `errorMessage` in the function `sub` with the signature `sub(uint256 a, uint256 b, string memory errorMessage)` is not data dependent on any other variable within the same function. It is a parameter that is passed into the function and used directly in the `require` statement without any dependency on the other parameters `a` or `b`. The function checks if `b` is less than or equal to `a` and if not, it uses `errorMessage` to revert the transaction with the provided error message. There is no computation or conditional logic applied to `errorMessage` that would create a data dependency relationship with `a` or `b`.

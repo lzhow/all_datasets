@@ -1,0 +1,11 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates a value r which is equal to the product of the balance of want multiplied by the shares divided by total supply. Then it burns the sender's shares and transfers the amount of r to them.
+
+However, the code does not take into account the fact that the strategy contract may have its own withdraw function that could affect the value of b, which would affect r, and therefore affect how much is actually transferred to msg.senders.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+ 
+  Data dependency is a term used in computer science to describe how one variable or value in code depends on another. In the context of smart contracts, this means that one contract's state or variable is dependent on some other contract or state. This can lead to some unexpected and unintended behavior in smart contract development, so it's important to understand how data dependencies work and how to avoid them when writing smartcontracts.
+
+  In your example, you have two contract variables, balance and totalSupply, that are used to calculate the r value.

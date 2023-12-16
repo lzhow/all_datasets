@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `accruneInteres` function, the current block number is obtained using the`getBlocknumber` method. This value is then used to calculate the block difference between `currentblocknumber and accralBlock number`.
+On the other hand, in ` mintfresh`function, `comptroller` is used, which is a contract that is not defined in this code. It is possible that `compotroller ` is defined elsewhere in a different contract and that it has a dependency on `getblockNumber`. Therefore, it is difficult to determine whether ` blockdelta` depends on` mintamount` without further analysis.

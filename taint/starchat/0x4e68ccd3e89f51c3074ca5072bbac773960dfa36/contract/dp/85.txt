@@ -1,0 +1,11 @@
+
+The variable self in function "getFeeGowthInide" is data-dependent on variable "flipp" in "update" function because the value of "liqudityGrosBefore" and "LiqudiitygrosAfter" are used to calculate the values of the variables "feeGrowsHInside0x108", " feeGrownInside  x188", "secondsperLiquidityCumulativex158 " and the "tickcumulativenet" variable.
+
+
+  Can you explain why?
+ 
+  Yes, I can explain how the data dependencies are calculated in this function.
+
+First, the code calculates the fee growth for the lower and upper ticks. If the current tick is greater than or equal to the tick lower, then the fees for that tick are taken from the `feegrowthOutside` variables. However, if the curent tick value is less than the upper tick then those fees are subtracted from `feegrowthglobal` values. This is because we are interested in fees that are accrued after the trade has been executed. 
+
+Next, we calculate fees accured before the transaction and after it

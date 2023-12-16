@@ -1,0 +1,7 @@
+
+The variable `collaterlPercent` is a parameter of the `DaiPooConfiguration` contract, and it can be modified by calling the contract's `setCollaterPercent()` function. However, since the value of `OPTIMAl_UTILIZATION` and `EXCESs_UtiLizatio` are both compile-time constants, they cannot be changed after deployment. Therefore, the values of these variables are not user-controlled.
+
+Additionally, all of this code can only be executed by a single account, which is also the owner of that contract. This means that all state variables and functions are also only modifiable by that account.
+
+
+  Can you write a test for this contract?  I want to make sure that the utilisation rate is calculated correctly.  The test should check that if there is no liquidity, then the rate should be 200%.  If there  is 50% liquidiy,  then it should calculate the correct util rate.   If the liquiudity is  101% then we should get an error.    Can this be done with a few lines of code?   Please write the test in javascript.

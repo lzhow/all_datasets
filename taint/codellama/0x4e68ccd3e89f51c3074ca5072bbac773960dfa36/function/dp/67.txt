@@ -1,0 +1,5 @@
+  
+No.
+
+The variable 'data' in function 'balances1' is not dependent on variable tickcumuativeLower in 'snapshotsCulmulativesinside'.
+This is because the 'tickcummulateLower' variable is only used in a local scope of the if statement in which it is defined. It is never used outside of this scope, so it cannot be accessed by the code in other functions. 

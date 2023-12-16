@@ -1,0 +1,15 @@
+
+The variable "to" in this function is not dependent on "curfactory". The reason is that the "pair" variable is defined within the for loop, and the value of "i" is only incremented within that loop. Therefore, the assignment to "amount" and "input" within each iteration of the loop are independent of each other, so there is no data-dependence between "output" (which is dependent) and "_to", which is independent.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure! Data dependencies in computer programs are defined as relationships between variables that affect the behavior of a program. In the context of Solidty, data dependence is determined by the order in which instructions are executed.
+
+In the example code provided, there are two data flow dependencies between the variables "path" ("path.lenght -1" depends on path)  and  "supportinfee"  ("supportfee = true" or "false" depending on whether the support fee is being paid).
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is it

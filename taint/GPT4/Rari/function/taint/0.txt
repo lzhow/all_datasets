@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `fuseAdminHasRights` is not controlled by the user. It is controlled by the `hasAdminRights()` function, which checks if the caller has admin rights. The value of `fuseAdminHasRights` is determined by the input parameter `hasRights` passed to the `_toggleFuseAdminRights` function, which can only be set by someone with admin rights. Therefore, the user does not have direct control over the `fuseAdminHasRights` variable.

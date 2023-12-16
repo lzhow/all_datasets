@@ -1,0 +1,4 @@
+  
+No, the ` tick` variable in function `observeSingle` is NOT controlled  by user because it's a function parameter.
+
+The ` observe` function calls `getSourrounding Observations` which calls the` observe Single`function.  The ` get Surronding Observatios` calls` binary Search` to find the two observations that surround the target time. It then calls  `Observe Single ` to get the tick and seconds per liquidty cumulative for the given time and the observations.   The tick variable is a parameter of the observe single function. Therefore, It is passed in by a user and is therefore controlled.

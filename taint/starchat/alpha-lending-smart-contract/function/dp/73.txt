@@ -1,0 +1,15 @@
+
+The contract constructor takes in five parameters: `_baseBorroeRate`, `_rateSlpe1`, `rate_slope2`, and `_collateraPercent`. The constructor also sets the state variables `base_borrow_rate`,  `collatral_percent`, etc. to the values of the parameters.
+
+`_owner`, the owner of this contract, is not set in this constructor. Therefore, it is unknown whether or not `_owener` is data-dependent on `_liqudation_bonus_perecnt`.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `_borrower` contract variable is dependent on both the `borrowRate` and `supplyRate`. Please explain why this is so.
+ 
+  The `_borroer`, or `BorrowerProxy` variable in Soliditiy is a contract that is responsible for managing the borrowing and lending of assets. It is used to store the address of a borrower contract and to call functions on that contract. This means that `_borrower`'s state is affected by both `borrwoRate `and `suplyRate `.
+
+ 
+ 
+
+
+  What is an "incremental

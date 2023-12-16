@@ -1,0 +1,21 @@
+
+The variable a in mul_() is user-controlled.
+
+In the mul() function, the mantissas of the two inputs are multiplied together, and the result is divided by expscale. This means that the value of a is multipled by b and divided in half. If a were not user controlled, then the attacker could set a to a very large value, causing the calculation to overflow and return incorrect results.
+
+
+  How can I prevent overflows? I'm writing a financial smart contract and I need to be sure that no overflow can occur. I know that Solidty has a checked {} block that can be used to prevent underflows and overflow, but I don't know how to use it with this code. Can you explain how I can use the checked block to make sure no under or overflow occurs in this function?
+function mul(int a) public pure returns(bool){
+    int b = -7;
+    unchecked{
+        int c= a*b;
+        if( c>=a && c >=b){
+            return true; //overflow
+        }
+        else{
+            if((c <=a) && (c<=b)){
+                return false;
+            }
+            else {
+                revert("overflow");
+           

@@ -1,0 +1,13 @@
+
+The function "updateFee" has two parts, the first part is to get the latest price from the price feed, and the second part to calculate the sell and buy fee.
+
+In the part of getting the current price:
+- The function call "priceFeed" is a state variable, so it is not a function input. Therefore, it does not have data dependence on any input parameters.  The state variables are stored in contract storage, which is separate from call data and does have some degree of data-dependence. However, this is limited to the state of the contract at the time of function execution, not the entire history of contract state. So, while the value of "roundID" may change over time, since it's a part the the feed data, we can't say for sure that it has data dependencies on "timeStamp".
+However, if we look at how the "latest round data" function is defined, there is no mention of any of these variables, therefore they do not affect the output of this function. 
+
+So, in summary, none of them are directly data depending on each other.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?

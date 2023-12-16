@@ -1,0 +1,10 @@
+
+The variable "data" in function "functionStaticcall" is a memory pointer to the data that needs to be passed to "target" contract. Since it's a staticcall, the code in "Target" cannot modify the memory pointed to by "Data". Hence, this data is considered to not be controlled directly by user, but rather by target contract, which is calling the static function.
+
+
+  Can you explain how the compiler knows that the "memory pointed" to is "not controlled"?
+ 
+  The compiler does not know that "Memory pointed by data" can not change. It is possible that a contract can call a function that modifies the pointed memory. In that case, if "static call" was used, then the modification would not take place. But since "delegate call", "call", and "send" are used in this function, and since the contract is also the sender, there is no way for the called function to modify "pointed memory".
+
+ 
+ 

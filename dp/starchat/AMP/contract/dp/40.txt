@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in `Amp.sol` calls `swap.token.approve` and `transfer` on `_from`.
+`_from` is a parameter to the `approve`, and the address of the deployed `Swap.t.o.k` contract.
+
+  How can I fix this?
+
+
+
+
+

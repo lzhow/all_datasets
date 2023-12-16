@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the first function, the `msg.sender` is used to call the `_toTransfers` function of the interface `IAmpTokenSender`. The `address(msg)` is passed as an argument to the method.
+However, in function  `_calPartionStrategyOperatoHoo`, the address of `this` contract is being used as the sender. Therefore, it is not clear if the two functions are dependent on each other.

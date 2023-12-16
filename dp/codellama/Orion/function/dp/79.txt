@@ -1,0 +1,9 @@
+  
+The label is 'Yes'.
+
+In the `function` getAmoutInCuve, the parameter `pool` is assigned the value of `pairForCure( factory,from , to)`. The function pairforCurv is defined as follows:
+`function pairFroCurves(address factory) internal pure returns  (address)  {
+    return ICrvRegistry (factory) .getPair(msg.sender);
+}`
+This function calls the ICvRegistry function to get the pair address.
+Therefore, ` factory` and ` amounts` are both data-dependent on `msg .sender`.

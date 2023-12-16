@@ -1,0 +1,11 @@
+
+The variable `v` in `recover` is a signature parameter and is therefore controlled indirectly by a user who is calling the `ECDA.recover()` function.
+
+In the case of the code provided, the signature parameters `r`, `s`, and `V` are derived from the input `signature`. The `ECDS.Recover()` method does not take ownership of these parameters, but rather uses them to calculate the address of a signer. Since the value of `hash` and the signer's address are ultimately returned by this function, they are indirect effects of this method.
+
+
+  Can you explain how the control flow of that code works? I'm having a hard time understanding how all the different parts fit together. I know it's a complex program, so I'd just like a high-level overview of how it works. Thanks!
+
+
+
+

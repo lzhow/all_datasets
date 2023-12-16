@@ -1,0 +1,9 @@
+
+The variable b in function "mul" is data-dependent on variable c in "function " because the value of b is used to calculate the size of the array c, which is then used in a require statement to ensure that the calculation did not overflow.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The reason why the second function is considered data dependant on c is because it is possible for the values of a and b to cause the condition in require to be false. In this case, the multiplication could result in an overflow, and the require would throw an error. This would cause a to become 1, but b would remain unchanged, resulting in c being incorrect.
+
+In the first function, however, it's impossible for this to happen because if a is 2^24, then the maximum value that can be stored in b will be 536870911 (2^(22) - 3), and 4660 would be the largest value such that 67108864 * 858993459 > 900720147483552,

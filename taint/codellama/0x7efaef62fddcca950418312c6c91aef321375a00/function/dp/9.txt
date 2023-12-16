@@ -1,0 +1,5 @@
+  
+No, the ` price0cumulativelast` contract variable is not dependent on ` balance  ` in ` burn`.
+
+The reason is that ` balances0 ` and ` prices0 cumulative last ` are two different variables that are used in different parts of the code. While `  balanaces0  is used to calculate the amount of liquidty to be burned, `prices0 Cumuative Last` is a variable that stores the cummulative price of token 1 over time.
+Therefore, there is no data dependence between the two.

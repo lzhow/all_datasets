@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `execute` function, the value of `input.amount` is used to calculate the amount of tokens to be transferred to the market. This amount is then used in multiple places in `getReturnAmount`, including the calculation of the protocol fee amount.
+Similarly, in  the  ` emitExecute`function,  The value  of  input  is also used  to  calculate  other  amounts, such as the output amount and the total amount to transfer.  This means that the input amount in execute is data-dependent on  protocol  fee  amount  and  market  place  fees  calculated  by  get  returned  Amounts  function.

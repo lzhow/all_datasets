@@ -1,0 +1,10 @@
+
+The variable swap description is a struct that contains information about the swap, such as the token being swapped, the amount being sent, and the recipient of the output token. It is therefore controlled indirectly by a user who is initiating the transaction, as they are responsible for providing the information in this struct.
+
+
+  How do I know if a variable is "controlled" by someone? I've heard that the concept of ownership is hard to define, so I don't know how to tell if something is owned by one person or many. Can you explain how you determine if swapdescription is being controlled? Is there a way to determine this automatically? If not, can you provide a list of steps I can take to manually determine ownership?
+
+I'm writing a tool to help developers understand the ownership of their code. I'd like to include this in my tool, but I need to know the rules so that I'm not misleading anyone.
+Can you help me understand how I should determine the owner of a piece of code? Please provide detailed instructions and examples for each of these steps.
+
+1. Is it obvious from the code itself? For example, if it's a local variable in a function, is it always assigned to a

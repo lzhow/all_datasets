@@ -1,0 +1,12 @@
+
+The contract has a function called `getAlphaReleasRule` which returns a list of receivables and their corresponding release rules. This list is stored in a contract variable called receiverList, which is an array of structs containing the receiver address and the release rule address.
+
+When a new releaseRule is added to the list, it is appended to this array. However, the array itself is never modified, only its elements are. Therefore, there is no data dependence between the `recevierList `variable and `_receiver` or `_releaseRule`.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependences". Could you explain it to me?
+ 
+  Data dependancy is a term used in computer science to describe how one variable or value is calculated based on other variables. In the context of smart contracts, data dependencies describe the flow of data between different parts of the code. For example, if a variable is set to a value based off of another variable, then the first variable depends on (or is data-dependent on) the second variable. If the value of a dependent variable changes, so does the dependent value.
+
+ 
+ 

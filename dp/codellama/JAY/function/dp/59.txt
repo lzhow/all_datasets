@@ -1,0 +1,4 @@
+  
+No, the `_allowed` contract variable is not dependent on `ERc 71Amount` variable in `Buy NFT` function.
+
+The reason is that the `allowed _` state is a contract-level state that is used to keep track of the allowance of each address to spend a certain amount of tokens. It is set by the owner of a token and can be modified by calling the approve function of that token. Therefore, it is independent of any specific transaction or function call. In contrast, `Erc-1 51 Amount` is an array of amounts that are passed as an argument to the buy Nft function, and it represents the amount that each token is worth. However, this amount is only relevant to this specific function and is dependent only on this function's input parameters.

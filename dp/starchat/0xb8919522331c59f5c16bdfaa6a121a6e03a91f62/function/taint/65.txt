@@ -1,0 +1,7 @@
+
+The variable `success` in `getProxyImplementations` is a boolean value that is set to true if a call to the address of the proxy succeeds, and false otherwise. This value is determined by evaluating the success of a static call made to `proxy` with the `staticCall` method. Since the call is made using the EVM's `STATICCALL` instruction, the code at the target address is executed in a read-only manner, without any state changes. Therefore, there is no risk of reentrancy or state modification, as the state of `address(this)` is unchanged.
+
+Therefore, `succes` cannot be controlled directly by a user, since it can only be set by code running on the blockchain.
+
+
+  Can you explain how the staticcall works? I don't understand how it's possible to determine if it succeeds or fails. Can't you just assume it always succeeds? What if there's a bug in your code that causes it to revert? Then you wouldn't know the value of success. I think you need to explain this in greater detail. Also, I'm not sure what you mean by "the code in target adress is execute in read only manner". Does that mean that

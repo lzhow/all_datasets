@@ -1,0 +1,9 @@
+
+The variable error in rePayBorrowInternal is data-dependent on rePAYBorrowerror in liquidatBorrowFres.
+
+
+  What does it mean for a variable to be data dependant?
+ 
+  A variable is said to have data dependencies if it is used to compute the value of another variable. For example, in a C program, if a function computes the sum of two numbers, and the result is stored in another function, then the two input variables are said have dependence on each other. In the context of smart contracts, the dependences can be indirect. If a contract state variable depends on another contract variable, which in turn depends upon another state variables, etc., then all of these variables become dependent on one another. This can lead to unintended consequences if one of the variables is updated, as the other variables will also need to change to keep them in sync.
+
+In the case of Solidty, it can happen that a state or local variable in one function is passed as an argument to another, or that the return value from one is assigned to a local or state varaible in anothe function. These dependencies can cause the compiler to generate code that copies the values of all dependent variables into

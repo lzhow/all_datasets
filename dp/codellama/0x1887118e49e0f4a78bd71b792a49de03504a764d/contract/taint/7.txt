@@ -1,0 +1,5 @@
+  
+The variable `understanding` in function `price` is a public variable that is defined in contract `MasterPrice`. It is initialized in constructor and can be changed by calling function`add`. Therefore, the answer is 'maybe'.
+
+This variable is used to store the address of the underlying asset, which is passed as an argument to the `getPrice` function. However, this variable can also be modified by other functions, such as `add`, which can change the mapping of underlying assets to their corresponding price oracl. Therefore it's not clear whether the value of this varible is fully controlled or not by user, but it can potentially be controlled.
+ 

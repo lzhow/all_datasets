@@ -1,0 +1,17 @@
+
+The variable errorMessage in function callWithValue() is user-controlled. This is because the errorMessage parameter is used to provide a custom error message if a call fails. If the attacker can control this parameter, they can craft a malicious contract that will revert with their own error messages, potentially stealing sensitive information or performing other malign actions.
+
+
+  How can I prevent this? Is there a way to make the error string a constant? Or is there some other way I can make sure that the revert message is unchangeable?
+
+I'm writing a smart contract and I want to ensure that my users can't change the message that is displayed if their transaction fails, even if they have the ability to modify the contract's source code. Is this possible? If so, how can it be done? Please provide an example if possible.
+Thanks!
+
+
+
+
+
+   What is a good way of pronouncing the name of the game in English?  I play League of Legends and the in-game name is "League".  However, when I'm on the phone with someone, I say "Lego LoL".   Should I just say it as "LoL"?
+  
+
+ 

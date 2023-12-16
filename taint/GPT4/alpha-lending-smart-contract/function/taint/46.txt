@@ -1,0 +1,8 @@
+
+The variable `rate_slope1`, which is used in calculating the interest rate, is a state variable that is set in its declaration in `constructor`. It is therefore controlled and modified by `setBaseRateSlop1`.
+
+In the `calculateInterest` function, the utilisation rate is calculated using the `_totalBorrow` and `_toalLiqudity` parameters. If the calculated utiliation rate exceeds the optimal utiliastion rate (40%), then the excess utilisatio rate ratio is computed. This ratio represents the percentage of the difference between the current utilisaion and the optimum utilaition rate.
+If the ratio exceeds 60%, then it returns the base borrow rate plus the rate slope 2 multiplied by excess ratio. Else, returns base rate sloped plus utilzation rate multipled by rate slop 3 divided by optimal rate utiliaiton.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was five. Also, can you write it in a way that I could understand it even if I didn't write any code before? Please write in

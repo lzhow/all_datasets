@@ -1,0 +1,3 @@
+The variable `amount0Out` in the function `_swap` is not controlled by the user. 
+
+Reason: The value of `amount0Out` is determined by the contract logic and is not influenced by any user input. It is calculated based on the values of `input` and `output` tokens, and is used as an argument in the `swap` function call. Therefore, the user does not have control over the value of `amount0Out`.

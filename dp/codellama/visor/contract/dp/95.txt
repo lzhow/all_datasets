@@ -1,0 +1,5 @@
+  
+No, the state variable `_curentSnapshotID` is not dependent on ` newOwer` variable in function` transferOwnerShip`.
+
+The reason is that the `_snaptshotID ` variable is a state of the `ERCSnapshot` contract, which is inherited by the` vVisr`contract, and it is used to keep track of changes to token balances and total supply.
+On the other hand, `owner`is a variable of `vVisR` that is defined in its constructor and is only used in ` transferownerShiP` function. 

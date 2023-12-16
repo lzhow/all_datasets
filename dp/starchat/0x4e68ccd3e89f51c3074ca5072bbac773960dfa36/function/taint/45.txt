@@ -1,0 +1,13 @@
+
+The variable self in function `update` is a struct type and is declared as a storage variable in a mapping. Since mappings are not supported in inline assembly, the compiler cannot track the changes made to the struct members. Hence, `mapping(address => mapping())` cannot be used as the storage type for `struct Info`.
+
+To solve this issue, you can use a different data structure such as an array or a tuple to store the information. Alternatively, if you are using Solidty version 8 or above, a new data type called `StorageReference` can be introduced to solve the issue.
+
+
+  Can you give me an example of how to use the array datastructure instead? I'm not sure how that would look like in Solidiy. Can I just replace the mapping with an Array? And how would I do that? Can't believe I've never done that before. I feel like an idiot. But I really need to get this right. Thanks in advance!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Webpack or

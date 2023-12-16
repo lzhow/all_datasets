@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the `_reserve` variable in `setParams` is used to calculate the `fee_` variable, which is then used in an `require` statement in order to ensure that `_fee` does not decrease. Since the value of `_weight` can be changed by the user, the calculation of ` fee_` can change, and therefore the require statement can fail.
+
+
+  Can you explain why this is a problem?
+ 
+  Yes, of course! The reason why the data-dependency relationship between `_ omega` and `_ numaraire ` in function` setParam `is a potential problem is because the values of these variables can depend on each other. Specifically, if the numerator asset (the one that is being added to the curve in this case) is different from the reserve asset, then the weight of the asset in question will depend not only on its own balance, but also on that of its numeral asset. This means that if `_ weight` depends on `_ reserve`, then `_ fee` will also depend directly on it, making it difficult to guarantee that this relationship will hold in all cases. In other words, there is an implicit data dependence between these two values

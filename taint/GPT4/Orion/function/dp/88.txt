@@ -1,0 +1,3 @@
+No, the variable `pool` in the function `getAmountInCurve` is not data dependent on the variable `decimalValue` in the function `baseUnitToCurveDecimal`. 
+
+The reason is that the variable `pool` is assigned the value returned by the function `pairForCurve`, which does not use or reference the variable `decimalValue` in any way. Therefore, there is no data dependency between these two variables.

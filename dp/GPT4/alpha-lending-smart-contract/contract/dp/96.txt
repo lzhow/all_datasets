@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `excessUtilizationRate` is not used in the function `getLiquidationBonusPercent`. The function `getLiquidationBonusPercent` simply returns the state variable `liquidationBonusPercent` and does not interact with `excessUtilizationRate` in any way. Therefore, there is no data dependency relationship between `excessUtilizationRate` and any variable within the function `getLiquidationBonusPercent`.

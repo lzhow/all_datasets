@@ -1,0 +1,12 @@
+
+The variable `o_` in `getOriginandTarget` is data-dependent on `_obals`. This is because the `_bals[i]` array elements are accessed in a loop, and the compiler cannot statically prove that the array is not mutated between accesses.
+
+
+  Can you explain why this is true?
+ 
+  Yes, I can explain how this code works.
+
+In the `getTargetSwap` function, the code accesses the arrays `_obsals`, `_nbals`,`_oLiq`,` and `_nLiqs` to calculate the target swap data. These arrays are stored in memory and are updated in each iteration of the loop. However, it is possible for the optimizer to re-order the loops or remove some of them, which could cause the values in these arrays to become outdated. This could result in incorrect calculations or even security vulnerabilities. Therefore, to prevent this, Solidty requires that any array that is accessed inside a `for` loop must be declared as `memory`.
+
+ 
+ 

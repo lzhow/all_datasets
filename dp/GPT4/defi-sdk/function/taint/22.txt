@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `approveAAndcall` function, the value of `inputtoken` is passed as an argument, and the balance of that token is retrieved using the`getbalance`function. However, this value is then used to call the external function `safeapprovemax` without any further checks. This means that the amount of tokens that can be approved is potentially controlled  by an attacker.
+Therefore, we cannot determine whether the  ` amount` variable in this function is under the control of the attackers.

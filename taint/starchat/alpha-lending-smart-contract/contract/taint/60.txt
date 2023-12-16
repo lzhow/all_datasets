@@ -1,0 +1,17 @@
+
+The variable _Status is used to track the reentrance status of the contract. It is set to  _notEntered when the modifier is first called, and set back to _entered when it exits.
+
+In the case of a re-entracy attack, the attacker could call the nonreentrant function twice, causing the _ status variable to be set twice to entered, which would then be reset to notEntered by each call.
+
+
+  How can I prevent reentrency attacks in my smart contract? I am using the OpenZeppelin library and I have seen that they have a Reentrant library that I can use. How do I implement it? Please provide me with an example
+
+
+
+
+
+   What is a good way to learn how to code in python?  I currently have about 6 months of experience as a business analyst but have no formal training in coding. 
+  
+  Learning to program in Python can be a rewarding and challenging experience. Here are some steps you can take to get started:
+
+1. Choose a programming language: Python is an easy-to-learn language that is widely used in data science and machine learning. However, there are many

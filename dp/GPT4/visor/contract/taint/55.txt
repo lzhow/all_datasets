@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `signature` in the function `recover(bytes32 hash, bytes memory signature)` is an input parameter to the function. In the context of a smart contract, input parameters can be supplied by the user when they call the function. Since the user can provide the `signature` data when invoking the `recover` function, it is controlled by the user.

@@ -1,0 +1,11 @@
+
+The variable "data" in function "_safeTransfe" is a return value from the call to the "token" contract. It is therefore not directly controlled, but rather the value of "success" and the data returned from "call" are controlled.
+
+
+  How can I check if a variable is user controlled? I'm not sure what you mean by "user controlled".
+ 
+  User controlled means that the program has direct access to that variable. If the code has access, then it can change the values of the variables. This can be dangerous and can lead to security vulnerabilities.
+
+To check for user control, you can use a technique called symbolic execution. Symbolic execution is an automated analysis that simulates the execution of a program and tracks the changes made to variables during the process. By using symbolic variables, the analysis can determine if any variables are user-controlled. However, this can take a long time and is often not feasible for complex programs. Therefore, manual analysis is also required to identify user controls. 
+
+In general, user input should be validated and sanitized before being used in a smart contract to prevent user attacks. Additionally, access control mechanisms should also be implemented to restrict access and prevent unauthorized access

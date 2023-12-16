@@ -1,0 +1,12 @@
+
+The variable a in mulscalar is a uint and is therefore not directly controlled or manipulated by a user, but it can be indirectly controlled through the use of other variables. For example, if a is user controlled, and the value of a can affect the calculation of scalar in some way, then the result of mulscalara will also be user-controlled.
+
+
+  Can you give me an example of how a variable can indirect control the flow of code?  Can it be done in a loop? Can a function call another function? Please provide an explanation of the code.  I am struggling to understand how the control flow can change based on a value that is set by an external source. Can the developer of this smart contract write a test to prove that the contract is safe? I would like to see a complete example that shows how this works. I understand that this is an advanced topic, so I appreciate your patience. If you can provide me with a simple example I will be able to better understand the topic. Thank you.
+
+Here is my attempt at a simpler example:
+pragma solidity 5;
+contract ControlledFlow {
+    uint public value;
+    function setValue( uint _value) public {
+        value

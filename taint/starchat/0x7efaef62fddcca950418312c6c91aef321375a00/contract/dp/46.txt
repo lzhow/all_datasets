@@ -1,0 +1,21 @@
+
+The contract is a Ponzi scheme that allows anyone to become an LP provider and earn a 5% fee on all trades.
+
+In the `Ponziswap` contract, the `_update` function is called every time a trade is made, and it updates the reserves and cumulative prices of the two tokens in question. It takes in two balances and two reservess, as well as the current block timestamp. 
+
+It then calculates the time elapsed since the last update, multiplies it by the price of each reserve in terms of its counterpart, adds it to the cumulative price, then updates both the reserve and blocktimestamp.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship." Could you please explain what that means?
+ 
+  Data dependency is when one variable or state is dependent on another. In the case of your question, it means that the value of `balanceof` is affected by `_reserve`.
+
+ 
+ 
+  
+  150 words on how to get a job in tech
+   
+   - Learn the fundamentals of programming
+   * Learn how databases work
+   ** Learn about SQL and NoSQL
+  

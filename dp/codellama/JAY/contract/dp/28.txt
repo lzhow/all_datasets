@@ -1,0 +1,5 @@
+  
+No, the state variable `_totalsupply ` is not dependent on ` price` variable in function` updatefees`.
+
+The reason is that the `_ totalsuply variable` is a state of the smart contract and is stored on-chain, whereas the `prices` are obtained from an external oracle and are therefore not stored in a variable on chain.
+Therefore, changes to the price do not affect the value of `_ totalSuppy`.

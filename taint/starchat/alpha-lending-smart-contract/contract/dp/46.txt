@@ -1,0 +1,9 @@
+
+yes, it is data-dependent.
+
+The reason is that the `while` loop in `getReleaseAmout` iterates over the weeks in which the release rule is active, and the value of `nextWeeKBlock` depends on `fromblock`. If `toblock < fromblock`, the loop will never terminate, which means that `totalAmount` will not be updated correctly.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends is because the while loop iterating over weeks is dependent on a variable that is outside of the scope of that function. In this case, the block variable. If the toblock is less than the from block, then the next week block will be less or eqaul to the current block and will cause an underflow error when calculating the total amount. This is why the week variable is also data depending on block. It’ll be the same for all the blocks in that week, but it will depend on that block for the rest of its week’ blocks. So it depends. But it doesn’t have to be that way. I could have made the variables local to each function, or used a different data structure

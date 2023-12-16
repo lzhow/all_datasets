@@ -1,0 +1,13 @@
+
+The variable output in hashAccounSignature is a struct that contains the token address and the amount of tokens that will be sent to the recipient. Since the struct is defined in Solidty, the compiler will ensure that the memory is allocated on the stack and that it will not be modified or freed until the end of the scope. Therefore, we can conclude that this variable is fully controlled and owned by our contract, and therefore, is safe to use in our program.
+
+
+  Can you explain how you arrived at this conclusion?  What is an example of a variable that is "fully controlled" by a contract?   What does it mean to "own" a piece of data?    What are the rules for ownership in solidity?
+
+I'm trying to understand how ownership works in smart contracts, but I'm struggling to find a clear explanation of how it works.  I've read a lot of documentation and examples, including the solidity documentation,  but it's still not clear to me.   Can anyone explain it to my why it would be safe for a smart contract to own a particular variable? 
+
+Thanks!
+
+
+
+

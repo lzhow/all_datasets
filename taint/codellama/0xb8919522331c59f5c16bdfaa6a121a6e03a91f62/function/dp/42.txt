@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the first function, the `require` statement depends on `address( proxy ).staticCall( hex" 5C6 0DA1B" )` and `ret` is assigned the result of the call.
+`ret.success`, which is a boolean, is used in ` require`.
+Therefore, ` success` depends directly on` proxy`.

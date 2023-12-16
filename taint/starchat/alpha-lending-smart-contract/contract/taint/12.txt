@@ -1,0 +1,8 @@
+
+The variable _ to Block is a user-controlled variable in this contract. It is used to determine the range of blocks over which the release amount should be calculated. If the _ from Block and _ To Block variables were not user controlled, they could be used in a reentrancy attack, where a malicious user could call the getreleaseAmount function repeatedly, causing the contract to run out of gas and revert.
+
+
+  Can you explain how a contract like this can be exploited by a bad actor?  How can the bad actors use this vulnerability to steal funds?
+
+I understand that the code you provided is an example of a smart contract that calculates the amount of tokens that can potentially be released over a given time period. However, the vulnerability in question is in how the smart contracts handles user input. Specifically, in line 60 of the provided code, there is no validation of user inputs. This means that if a hacker were to find a way to manipulate the input variables, such as the start and end block numbers, to cause the calculation to return incorrect results, then they would be able to exploit this flaw to withdraw all of their funds.
+Can you please explain to me how this could happen?

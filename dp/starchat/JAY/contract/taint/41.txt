@@ -1,0 +1,9 @@
+
+The variable `id` in `onER1C1Received` is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  If a contract has a user-controlled variable, then the contract owner can manipulate the value of the variables in various ways. For example, the owner could set the initial value, or change the values at any time. This can have significant consequences on the behavior of a smart contract. Therefore, when analyzing a Solidiy contract, one should pay special attention to the control flow of user control variables. If the smart contracts has user controllable variables, an analysis should be performed to determine the potential consequence of these variables being manipulated by a malicious user or the owners of this smart contrat. In some cases, these consequeces could be severe and could lead to a loss of funds or other important information. It is important to note that even if analysing a specific contract may not lead directly to any loss, a general analysis of all contracts should always be done to ensure that no potential loss is incurred.
+
+In general, user controls variables should only be used in specific cases. When a more appropriate solution is available,

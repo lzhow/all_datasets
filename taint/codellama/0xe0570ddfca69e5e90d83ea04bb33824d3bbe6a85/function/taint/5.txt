@@ -1,0 +1,4 @@
+  
+No, the `_ bal` variable in function `earn` is NOT controlled  by user because it's a local variable that is calculated based on the `available` function, which is a public function that can be called by anyone.
+
+The `bal available` returns the amount of tokens that are available to be deposited into the strategy, and it can change based  on various factors such as the current balance of the contract, withdrawals, or deposits. Therefore, `_ balance` can't be controlled directly by a user, but it depends on other factors that the smart contract can control.

@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `tryMod` function, the parameter `b` is used to calculate the modulus of `x`, but it is not used in any other way. Therefore, `y` and `z` are independent of each other.
+On the other hand, in `function` ` div`, the parameters ` a`and ` b`are used together to divide ` x` by ` y`. Therefore ` z` depends on ` w`.
+Therefore, there is no data dependence between `w`in ` trymod`function and` z `in` div`

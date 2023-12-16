@@ -1,0 +1,9 @@
+
+The variable `_token` in `calculateRoundupBorrowshareamountExternal` is a controlled variable. It is used to determine which pool the calculation is being performed for. Since the `_toke` variable is provided by a user, the value of `_tokem` can be changed by that user to cause the calculations to be performed on a different pool, which could result in unintended consequences.
+
+
+  Can you explain why it's important to not allow users to change the token variable? Is it because it could cause unwanted consequeces? If so, can you give me an example of how changing the toke variable could unwantly consequence? Please provide a detailed explanation. Thank you.
+
+I'm writing a smart contract security tool and I need to know if it would be possible for a malicious user (or attacker) to exploit this flaw in order to steal funds from my contract. I want to make sure that my tool can catch such attacks. If it isn't possible to do so reliably, I may needto restrict the use of this particular function or feature of my smartcontract. 
+
+Please help me understand if this is possible and if there are any other ways that this variable

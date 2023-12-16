@@ -1,0 +1,21 @@
+
+yes, it is.
+
+The reason is that the `data` parameter of the onReceive function is not used, and so the compiler can optimize it out. This means that when the contract calls the buy function, the value of `msgSender` will be the address of a contract, not the original sender.
+
+
+  How do I fix this?
+ 
+  You can add a require statement to check that msgSender is equal to the from parameter. For example:
+function buy(from, id)
+    require (msgsender == from)
+{
+    // Code that requires msgsender to be equal from
+}
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I am currently learning python on my own but I would like to get some structured guidance. Could you recommend some tutorials or courses that would help me learn the basics? I mainly need help with the syntax, I don't need a full blown project, just the fundamentals.
+  3. If I want to use AI tools to do my bidding, which libraries would you suggest? Please provide a list of no more than 5. And if those libraries have dependencies, please list

@@ -1,0 +1,17 @@
+
+The contract variable `_allowed` is not directly used in this function, but it is used to calculate the new value of `_allowance`. Therefore, it may be possible for the value `_ allowed` to change between the time the current value is calculated and the `_approve` function is called, leading to an inconsistent state.
+
+
+  Can you give me a list of all the variables in that contract and their dependencies?
+ 
+  Yes, here is a complete list and dependency graph of the 13 variables and functions in our example contract:
+
+Contract Variables:
+
+1. `_partition`: No dependencies.
+2. `msg`: Depends on `tx.origin`.
+3.`_subtractValue`: Dependent on `_spendableBalanceOf`. Dependents on: `block.number`, `now`, `_balances`, and `_locks`. 
+4.  `_subtractedByValue` : Dependant on  `allowances`. Dependes on : `_owner`,  and `spenders`.
+
+ 
+   Can I use this information to optimize my contract? If so, how? Can it help me find bugs? Is it worth the effort? I am a beginner at Solidiy and blockchain in general. I

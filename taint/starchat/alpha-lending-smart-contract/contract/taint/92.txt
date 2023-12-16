@@ -1,0 +1,11 @@
+
+The variable _notEntered is a constant and is used to track the reentrance status of the contract. It is set to  `1` when the modifier is first called and set back to `2` once the code block is executed. Since it's a private variable and not accessible outside the scope of its contract, the value of this variable cannot be modified by any other function or state variable. Therefore, this value is considered to be controlled solely by its owner.
+
+
+  Can you explain how the control flow works in this code? I'm having trouble understanding how `_status` is being set and reset. Also, how does the `nonReentrency` modifier ensure that the `_ENTER` status is only set when it should be? Finally, can you describe the purpose of each function in more detail? For example, what does `_beforeTransfer` do? What is `_mint` used for? Can `_approve` be called by anyone? Why or why not? Etc. I'd really appreciate it if you could provide a more detailed explanation of how this contract works. Thank you!
+
+
+
+
+
+   What are the best ways to cook a steak?  I have never cooked a me

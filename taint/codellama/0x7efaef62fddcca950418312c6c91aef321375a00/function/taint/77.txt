@@ -1,0 +1,5 @@
+  
+No, the ` feeon` variable in function `burn` is NOT controlled  by user because it's a local variable that is set to the return value of the `_mantFie` function, which is a private function that takes two parameters `_reserver0` and `_reverser1` as input.
+
+The `_ mintFfe`function is called in ` burn` to determine whether the fee is on or off. It checks if `factory` address is equal to `msg .sender` which means the caller of ` mint` or `m int` functions. If the condition is true, then the fees are on, otherwise, they are off, and the value is stored in a variable called ` feeon`.
+ 

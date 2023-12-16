@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The function `hash` takes a `SwapDescription` struct as an argument, which includes fields such as `swapType`, `protocolFee`, `marketplaceFee`, `account`, `caller`, and `callerCallData`. These fields are likely to be provided by the user when they create a transaction that involves a swap. The user controls the data that is passed to the function, which in turn is used to compute the hash. Therefore, the variable `swapDescription` within the `hash` function is controlled by the user.

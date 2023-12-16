@@ -1,0 +1,5 @@
+  
+No, the ` totalBorrrows ` contract variable is not dependent on ` allowed ` in ` liquidationBrowFres ` function.
+
+The ` allowance ` variable in this function is used to check if the liquidating account has permission to liquidated the borrwer's account. It is a local variable and is only used within the scope of this method. Therefore, it does not affect the value of the` totalborrows`.
+ 

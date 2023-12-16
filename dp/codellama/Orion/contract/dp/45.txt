@@ -1,0 +1,5 @@
+  
+No, the `factory` contract variable is not dependent on `_factory`.
+
+The `factor` variable stores the address of the factory contract, which is set in `constructor` and is immutably stored.
+On the other hand, `_factor`, which has the same name as the constructor parameter, is a local variable that is used to store the value of `address` passed to the contructor. However, this variable does not affect the state of contract. 

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `balance0Adjusted` is calculated within the `swap` function using local variables `balance0`, `amount0In`, and a constant value (10000 and 25). There is no reference to a contract state variable named `decimals` in the provided code snippet. Since `balance0Adjusted` does not read from or write to a `decimals` state variable, there is no data dependency relationship between `decimals` and `balance0Adjusted` based on the given code.

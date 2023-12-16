@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `decodeU32` is computed based on the input data provided to the function. Since the input data (`data.raw`) can be provided by the user when they call the function, the value of `value` is indirectly controlled by the user. The user can manipulate the contents of `data.raw` to influence the result of `decodeU32`, which means the user has control over the value of the `value` variable.

@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `add` function, the variables `x` and `y` are passed as arguments, and the result is stored in a local variable called `result`. The `require` statement checks that the value of `resut` is within the range of  `MIN_144` to `MAX_248`.
+On the other hand, in `sqru` the local variables are `xx`, ` r`, and`r1`. ` xx`is assigned the same value as ` x`in the`add `function. `R`and` r`are assigned values in an unrolled loop.
+There is no direct data dependence between the two functions. However, it is possible that ` sqru `may use the results of the previous execution of` add `, which could lead to a dependency. Therefore, we label the answer as ' Unknown'.

@@ -1,0 +1,5 @@
+  
+No, the variables ` i` and ` factorytype` are independent.
+
+The reason is that the ` getY` function is a pure function, which means that it does not modify the state of the contract. Therefore, any changes made to the value of ` x` or `xp_` within the scope of this function will not affect the result of subsequent calls to `GetY`.
+On the other hand, ` GetAmount` is an internal function that modifies the internal state. It updates the values of variables such as `amounts` based on changes to other variables. However, these changes are local to this specific function and do not impact the behavior of other functions. 

@@ -1,0 +1,15 @@
+no
+
+The variable `marketplaceFeeAmount` in the function `execute` is calculated within the same function based on the `outputBalanceChange`, `protocolFee`, and `marketplaceFee` parameters, as seen in the line:
+
+```solidity
+(actualOutputAmount, protocolFeeAmount, marketplaceFeeAmount) = getReturnedAmounts(
+    swapDescription.swapType,
+    swapDescription.protocolFee,
+    swapDescription.marketplaceFee,
+    output,
+    outputBalanceChange
+);
+```
+
+The `outputBalanceChange` is derived from the balance changes before and after the swap operation, and it is not directly related to the `amount` variable in the `handleETHInput` function. The `handleETHInput` function only checks if the `msg.value` (the amount of Ether sent with the transaction) is sufficient for the operation and does not influence the calculation of `marketplaceFeeAmount`. The `amount` in `handleETHInput` is used to ensure that enough ETH is sent to cover the required input amount for the swap, but it does not have a direct data dependency with the calculation of `marketplaceFeeAmount`.

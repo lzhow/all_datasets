@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `targetAmount_` in the function `originSwap` is assigned the value returned by the function `Swaps.originSwap(curve, _swapData)`. Since `_swapData` is passed as an argument to `Swaps.originSwap`, any changes made to `_swapData` within the function will affect the value of `targetAmount_`. Therefore, there is a data dependency relationship between `targetAmount_` and `_swapData`.

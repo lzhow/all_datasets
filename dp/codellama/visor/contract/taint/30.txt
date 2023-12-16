@@ -1,0 +1,4 @@
+  
+No, the `m int` function is a public function and can be called by anyone, so the amount variable is also controlled  by any user who calls the mint function.
+
+The `owner` variable in `ER C2OPermitt` is set to `msg .sender` in its constructor, which means that the owner of the contract is whoever deployed it. This means the only way to mint new tokens is for the current owner to call the `_m i n t`function. Therefore, ` amount`is not directly controlledby theuser.

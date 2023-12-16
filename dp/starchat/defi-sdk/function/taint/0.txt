@@ -1,0 +1,9 @@
+
+The variable input in function `execute` is **not** controlled directly by users. However, the input token amount can be controlled indirectly through permits or account signatures.
+
+In the case of permit or signature validation, if a user provides a permit/signature, then the contract will check if it's valid and if its owner is correct. If the permit is valid, and the owner matches the expected owner, that permit will be used to calculate the absolute input amount. This permit can then be reused in subsequent swaps.
+
+
+  How can I check the validity of a signature? I have the message, signature, public key, what should I do next? Is there any libraries that can do this for me? Please provide a step-by-step guide. I am a beginner and I don't know where to start. Thank you.  I want to use this contract: https://etherscan.io/address/0x729D19f657BD066F243104495469840348647417#code
+ 
+  To check a message signature using Solidty, you can use the `

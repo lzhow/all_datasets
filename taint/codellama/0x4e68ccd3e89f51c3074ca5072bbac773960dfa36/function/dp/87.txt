@@ -1,0 +1,4 @@
+  
+No, the variables ` target` and ` tick` are independent.
+
+The reason is that the `binarySearch` function only uses the input parameters `time`, `index`, and` cardinal` to calculate the value of `before` or `after`. It does not use the values of any other variables, including `card`and `secondsPerLiq`. Therefore, there is no data dependence between the two functions.

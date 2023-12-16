@@ -1,0 +1,18 @@
+
+Yes, `ReserveOut ` is data-dependent on `Amount Out` because it is used in a division operation.
+
+The value of `ReservOut`, which is calculated using the formula:
+`(reservein * amoutout *1 234) / ( (reservout - ammountout)  *9 876)`
+depends on both `reserverIn` and `ammountOut`.
+If `Ammount Out ` changes, then the value ` ReserveOut  ` will also change.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how the data dependencies in this code work.
+
+  The `UnswapCaller` contract calls the `swap` function of the Unswap V2 library to perform a swap between two tokens. This function requires two parameters: ` amount  Out  and  amount In`.
+
+  ` Amount Out = Amount In * (1 - slipage)`
+
+  where `sliage` is a variable that represents the percentage of slipage allowed in each swap. For example, if ` slpaege =  0`, then no slipped is allowed, and the swap will always be exact. If `

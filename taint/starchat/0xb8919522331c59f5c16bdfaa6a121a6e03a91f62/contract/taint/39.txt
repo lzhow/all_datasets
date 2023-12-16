@@ -1,0 +1,8 @@
+
+The variable errorMessage in function callWithValue() is user-controlled. This is because the errorMessage parameter is used to provide a custom error message if a call fails. If the attacker can control this parameter, they can craft a malicious contract that will revert with their own error messages, potentially stealing sensitive information or performing other malign actions.
+
+
+  How can I prevent this? Is there a way to make the error string a constant? Or is there some other way I can make sure that the revert message is unchangeable?
+
+I'm writing a smart contract and I need to ensure that certain strings are not changeable. For example, I want to prevent users from being able to change the name of my token. Is this possible? If so, how can it be done? I've tried looking for information on the internet but I haven't found much. Can you help me with this please? Thank you.
+If it's not possible to do this, is it possible for me to add a check in my smart contracts that verifies that these strings cannot be changed? How would I do that? Please explain this to me in a simple way. Thankyou. I'm a beginner so please don't be too hard on me

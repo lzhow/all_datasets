@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `pool` is data-dependent on `_token`, but it is not dependent on _ collate.  The `collate` variable is only used to calculate the `collateAmount` and ` collatorShar` variables, which are then used in `safe TransferFrom` to transfer the liquidated amount from the user to the pool, and to burn the collated shares from user' s account.   The liquidation amount and shares are also used for the emit event. However, the value of ` poo`l is never used after that. Therefore, it does not affect the data dependence of the state.

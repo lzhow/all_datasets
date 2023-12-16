@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `revokeOpeartor` function, the `_authorizeOperator` mapping is updated with the value `false` for the key `_operater`. This mapping depends on `msg` which is a global variable that contains the address of the sender of a transaction.
+`msg`, in turn, is used to compute the prefix of `_partition` by calling the internal function `PartionUtils.getParitionPrefex`.
+Therefore, `_prefix`, which depends directly on`_partition`, is indirectly dependent on `_operation`.

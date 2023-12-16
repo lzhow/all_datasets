@@ -1,0 +1,4 @@
+  
+No, the `allMarksets` variable is a state variable of the contract and is therefore not directly controlled the the end user of this contract. It is initialized in a constructor function and can only be modified by other functions in this same contract, which are not exposed to external users. Therefore, this variable cannot be controlled directly by an end-user.
+
+The reason for this is that the constructor is only called once when the smart contract is deployed, and it initializes the value of `alMarkests` to an empty array. This value is then never modified again, even if other contract functions are called that could potentially modify the array's contents. As a result, `getAllMakets` can always return the same value, regardless of any changes made to `compMarkest` by external callers of these functions.

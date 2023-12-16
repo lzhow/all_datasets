@@ -1,0 +1,4 @@
+  
+No, the variables ` distributers` and ` contributors ` are independent.
+
+The variable  ` distibutors  is defined in  the  function  checkToken  and is used to check if the current contract is added to  a list of distributer contracts in a Comparator contract. This list is stored in storage and can be accessed by any other contract that has the address of the Compartor contract, but it is independent of  any specific contributer.  On the other hand,  variable contributore is a local variable in function ` _ setContibutor CompSpeed` that is only used in that function and has no impact on any external state. Therefore, there is no data dependence between the two.

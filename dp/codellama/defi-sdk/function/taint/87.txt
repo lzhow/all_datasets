@@ -1,0 +1,4 @@
+  
+The variable 'token' in function 'getbalace' is labeled as 'Unknown'.
+
+This is because the value of the 'Token' variable is determined by a function call to 'Base.GetBalace(Token, Address(This))'. The value passed to this function is 'Address( This)', which is a variable that is defined in this contract. Therefore, the control of this variable depends on the contract's state, which makes it difficult to determine whether the token variable in getbalacne is user-controlled or not.

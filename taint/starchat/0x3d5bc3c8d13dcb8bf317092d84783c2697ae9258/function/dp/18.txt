@@ -1,0 +1,13 @@
+
+The contract variable borrowIndex is not directly accessed in this function, so it is considered not to be data-dependent on error. However, the internal function accruedInterest() can modify the value of borrowInde, which could potentially make it data depend on an error variable that is no longer in scope.
+
+
+  Can you give me a list of all the variables in that contract and their dependencies?
+ 
+  Yes, here is a table of the various variables and dependencies in your Solidty contract:
+
+Variable Name | Data Dependency on Other Variables? | Explanation
+--- | --- |---
+error | Yes | This variable is used to store the return value from the _accrueInteres() function call. If the call is successful, error will be set to Error.NoError (0), which is defined as a constant in OpenZeppelin's SafeMath library.
+addAmmount | No | The addAmout variable represents the amount of reserves to add to the pool, and is passed into the private function \_addReserveFresh().
+acccuredInterest | Maybe | If this variable depends on other variables, it could be influenced by the error value that was set in line 10. This

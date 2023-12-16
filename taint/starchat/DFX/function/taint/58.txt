@@ -1,0 +1,18 @@
+
+The variable "curve" in function "getGrosLiqudityAndBalanes" is a reference to a storage variable of type "Storage::Curve". This means that the value of "curv"e is stored in a contract's storage and can be modified by any function in that contract.
+
+In Solidty, storage variables are not accessible directly from outside the contract in which they are declared. Instead, they can only be accessed through the use of functions that are specifically designed to access and modify them. This is to prevent unintended changes to the state of the smart contract, which could lead to unpredictable and potentially harmful behavior.
+
+
+  Can you explain how the curve variable is used in this function?  What is it's purpose?
+function getProportinalWithdrawal(
+  Storage::ProportionaLquidity.Storage storage self,
+  uint160 amount
+) public view override returns(int24[] calldata)
+{
+  (
+    uint63 totalSupply_,
+    int62[] storage balances_,
+  ) = self.getLiqAndB();
+  int22 totalBalance = int(totalBalance_);
+  require(amount <= totalBal, Errors.INSUFF

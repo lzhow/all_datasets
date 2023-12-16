@@ -1,0 +1,7 @@
+
+The variable proxy in changeproxyadmin is a controlled variable. It is passed into the changeAdmin function of the proxy contract, which is an external contract that can be called by anyone.
+
+
+  What is this code doing? I don't understand what it's doing. Can you explain it to me?
+
+pragma solidity 0800;.import "./transparentupgradeableproxy. sol";.import "ownable".contract proxyadminis ownable{function getproxyimplementation(transparentupgradable proxy).viewvirtualreturns(address){(boolsuccess,bytesmemoryreturnData)=address( proxy ).staticcallextcodehash;require( success );returnabi. decode( returnData,address );}functiongetproxyadming( transparentupgrablet proxy )publicview virtualreturns ( address ){( bool success, bytes mememory return data ) =address ( proxy  ). staticcallextcode hash; require ( success ) ; returnabi.decode ( return Data, adress ); }functionchangeproxy admin( transparentupgraable tproxy,adress newadmin ) publicvirtual onlyowner{ t proxy.changeadmin ( new admin ); }.functionupgrade( transaprentupgradedproxy proxy, adrress

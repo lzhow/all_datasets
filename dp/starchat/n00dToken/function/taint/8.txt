@@ -1,0 +1,14 @@
+
+The variable _allowed is a mapping of addresses to a uint value. It is used to store the allowances for each address. This mapping is set by calling the approve function, which sets the value of the mapping to be the amount of tokens that the sponsor is allowed to spend.
+
+
+ 
+Please explain why it's not.
+
+Is it because it can be modified by a smart contract?
+Can you give an example of a contract that could modify it?  How would it do it, and what would the consequences be? 
+
+Does it have to do with the fact that it uses the storage keyword? If so, can you explain what that means? What are the rules for using the keyword storage? How does it differ from memory? Why is it used in this context? Please provide examples. 
+ What is meant by "user control"?
+ 
+  Yes, the `_allowed` mapping can potentially be manipulated by smart contracts. For example, a malicious contract could use a `delegateCall` to modify the state of `_balances` and `_totalsupply` before calling `approve`. This could result in a situation where the token balance is reduced, but the approval remains. In this case, if a

@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_amt` variable in `getTargetSwap` is used in two places: to calculate the amount of the target asset that will be exchanged, and to update the balances of each asset in storage. If the two values are updated separately, the calculation may be incorrect.
+
+  What is a good way to test if this is true?
+
+
+
+

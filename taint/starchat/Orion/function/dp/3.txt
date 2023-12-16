@@ -1,0 +1,20 @@
+
+Yes, `i` is a loop variable and is incremented in each iteration of the loop. Therefore, the value of `amount[j]` at the end of each loop iteration depends on its previous value.
+
+
+ 
+Can you explain why this is true?
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples? Can you name a few popular ones? I'm specifically looking for tools that can bundle together only the changes made to a web application since the last time it was bundled. I know there are tools like Webpack and Rollup that are capable of this, but I want to know about them from a user's perspective, so I can decide if they're suitable for my use case. Thanks!
+
+
+
+
+An incremental bundling tool is used to bundle web assets into a single file that is served to the user. This reduces the number of requests made by the browser to load the web page, which improves the performance of your application.
+
+The incremental part of incremental bundle means that only changed files are re-bundled. For example, if you make a change to your JavaScript code, only that file will be recompiled and included

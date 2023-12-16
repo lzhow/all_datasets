@@ -1,0 +1,5 @@
+  
+No, the variables ` mint Amount` and ` assets` are independent.
+
+The reason is that the ` get Hypothetic Account Liquidty Internal` function is called inside the` mint Allowed`function, but the parameters passed to the latter are `c Token`, `miner`, and`m int Amout`. The ` c Token` parameter is used to call the former, and the other two parameters are used as local variables in `Mint Allowe`.
+Therefore, `Asse ts` is not dependent on ` m int amount`.

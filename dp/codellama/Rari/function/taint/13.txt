@@ -1,0 +1,4 @@
+  
+No, the ` suppliertokenn` variable in function `distribute suppliecomp` is uncontrolled by user because it's a local variable that is calculated based on the total supply of the ctoken and the comp supply speed. It is a constant value that does not change based  on user input.
+
+The `compaccrueds` and `lastcontributoblock` variables are also uncontroled because they are updated based only on changes in comp speeds and not on any user inputs.

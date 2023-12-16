@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `compRemaining` in the function `grantCompInternal` is not controlled by the user. It is assigned the value of `comp.balanceOf(address(this))`, which retrieves the balance of the contract address (`address(this)`) in the `rewardToken` contract. The value of `compRemaining` is determined by the balance of the contract and is not influenced by user input.

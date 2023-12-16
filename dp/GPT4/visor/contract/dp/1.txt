@@ -1,0 +1,3 @@
+yes
+
+In the function `findUpperBound` within the `Arrays` library, the variable `high` is data dependent on the variable `low`. This is because the value of `high` is potentially modified in the while loop based on the comparison between `array[mid]` and `element`. The variable `mid` is calculated using the `Math.average` function, which takes `low` and `high` as arguments. Therefore, any changes to `low` will affect the calculation of `mid`, which in turn can influence the value of `high` within the loop. Since `high` is being reassigned a value that is dependent on the calculation involving `low`, there is a data dependency relationship between `high` and `low`.

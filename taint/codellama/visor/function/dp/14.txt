@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the constructor function, the value of the `name` parameter is passed to the `_build_domain_separator` function as an argument. This function uses the parameter `type_hash` and the values of `bytes3(hash_name)` and `byte3_version` to create a new value for the state variable `_Cached_Domain_Separators`.
+Since the new state value is created using the input parameter, it is data-dependent on that parameter.

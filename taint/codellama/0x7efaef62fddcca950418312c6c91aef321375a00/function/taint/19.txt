@@ -1,0 +1,5 @@
+  
+No, the `_ total Supply ` variable in mint function is NOT controlled  by user because it's a local variable that is created in function scope and is only accessible within the mint() function. It is initialized with the total supply of the token and cannot be changed by any external user or function call.
+
+The `_m int()` function in PanaceaPair contract is responsible for minting new tokens and increasing the supply. However, this function does not allow any user input to control the value of `_totalsupply`. Instead, `_ totalsu ply is calculated based on the current supply and the amount of tokens being minted, and it cannot exceed the maximum supply limit. Therefore,  `_ to talsup p ly` is a constant value that cannot change during the execution of mint().
+ 

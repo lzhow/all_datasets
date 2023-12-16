@@ -1,0 +1,13 @@
+
+yes, the CLOSE_FACTORY is data-dependent on _TOKEN in calculateColleteralAmountExtern.
+
+
+  Explain why
+ 
+  The CLOSEFACTOR is a global variable that is used to calculate the collateralization ratio of the lending pool, which is then used by the borrowers to determine if they can repay the loan.
+
+  The calculation of this ratio involves taking the average of all the loans in USD, and dividing it by (the total value of collaterals in that asset + the total amount of reserves in this asset).
+
+  Since the value and the number of loands are both data that can change over time, it is possible that the ratio could change at any time. This means that if the close factor is not updated, then the calculation for the colleterlization ratio will be incorrect.
+
+In order to ensure that this calculation is correct, we need to make sure that both the values of each loan and of every collatoral asset are up-to-date. If we don't do this, there is always the risk that we could end up with a situation where the system is unable to reimburse the debt of a borrower, because the amount that

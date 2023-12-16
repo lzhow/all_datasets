@@ -1,0 +1,14 @@
+
+The contract has a function called `_seLiquidatinInceotve` which sets the `liquidationIncenitveMantisa` variable. This variable is used to calculate the rewards that are paid to the liquidators.
+
+In the code, the `_calculateRewards` function is called with the argument `totalDebt` and `rewardRate`. The `rewordRate` is calculated using the formula:
+`rewardPerToken = totalReward / totalSupply`
+and the total supply is obtained by summing up all the debt of all of the users. 
+
+However, in order to get the reward per token, we need to know the current `pricePerShare`. This is stored in a variable called `accumulativePricePershare`.
+This variable gets updated every time a new user deposits or withdraws their debit, or when the price of a share changes.
+
+
+  What is a decentralized finance (DeFi)?
+ 
+  A decentrilized financial (defi) is an application of blockchain technology that enables financial services to be delivered and accessed via a network of interconnected nodes. DeFi is often used as a buzzword to describe the rapid development of financial

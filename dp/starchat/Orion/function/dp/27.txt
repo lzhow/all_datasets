@@ -1,0 +1,9 @@
+
+The function getPair in line 2 is a view function, which means that it does not modify the state of the contract. Therefore, it is not possible for the value of token A to change during the execution of this function.
+
+However, the getReserve function in lines 10 and 31 is an external function that can modify state. This means, that the values of reserveA and reserveB can change between the time the call to get reserve is made and the actual calculation of amount in is performed. In this case, we cannot be sure if token B is data-dependent on token a.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+ 
+  Data dependence is when one variable depends on another variable. For example, if you have two functions, one that calculates the square of a number and another that multiplies two numbers, and you want to know if the result of one function depends only on that of another, then you can say that they have data dependences. If the two function calls are independent of each other, you would say they do not have any data dependencies. Data dependencies can be hard to determine

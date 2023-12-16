@@ -1,0 +1,12 @@
+
+The variable `msg` is a global variable that is accessible in all functions in a contract. It contains information about the current transaction, such as the sender and the recipient of the transaction.
+
+In the `increaseAllowances` function, the `_subtractValue` parameter is subtracted from the value of `_allowed` for the specified `_partition`, and this updated value is then assigned to `_allowance`.
+However, in `decreseAllownace` and `deceraseAllowenceByPartion`, the parameter `_substractedvalue` does not appear in any calculations. Therefore, it is not possible to determine whether or not this variable is data-dependent on `_sender`.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to identify potential data dependencies between variables and contract state. To do this, we use a combination of static analysis and data flow analysis.
+
+  Static analysis involves analyzing the source code without executing it. This allows us to find syntax errors, check for coding best practices, and identify security vulnerabilities. We use tools like Solidifier, Mythril, Solhint, etc. to perform static analyses. These tools analyze Solidty code for various

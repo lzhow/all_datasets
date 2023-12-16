@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `amountIn` in the function `getAmountOut` is an input parameter to the function. This function is called within the `callBytes` function, which is an external function and can be called by anyone interacting with the contract. The value of `amountIn` is determined by the user when they call `callBytes`, as it is derived from the `fixedSideAmount` parameter or the result of `getAmountsIn`, which is also based on user input. Therefore, `amountIn` is controlled by the user.

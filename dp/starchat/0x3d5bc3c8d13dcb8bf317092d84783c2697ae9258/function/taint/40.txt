@@ -1,0 +1,13 @@
+
+The variable borrowed is a parameter of the liquidation function, and it represents the address of a borrowing account. Since it's a user-controlled parameter, the answer is "yes".
+
+
+  How do I know if a variable is user controlled? I've heard that it can be hard to tell.
+ 
+  It can sometimes be difficult to determine whether a particular variable or parameter is under the control of an end user or not. However, there are some techniques and approaches you can use to help you make this determination. Here are three steps you could take:
+
+1. Identify the contract or function that declares the parameter or variable: This will help determine the scope of your search.
+
+2. Review the code for the declaration: Look for any assignments to the declared variable, including function calls and control flow statements. This may help identify any potential sources of user input. Look out for assignments that could modify the value of that variable. For example, if you're looking at a function to calculate a discount, you may want to look for variables that store the discount rate or the current time. These variables may be user inputs, depending on how the program is being used. 
+
+3. Check for external input: If

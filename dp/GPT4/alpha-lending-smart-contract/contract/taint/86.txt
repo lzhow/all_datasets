@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `decodeI32` is directly derived from the input `data`, which is of type `Data`. This `Data` struct contains a `bytes` field named `raw`, which is expected to be provided by the user when they call the function that utilizes the `Obi` library for decoding. Since the user provides the `raw` bytes that are being decoded, they have control over the contents of these bytes, and thus, they control the value that is assigned to the variable `value` within the `decodeI32` function.

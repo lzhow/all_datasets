@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `_ENTERED` is not explicitly present in the provided Solidity code. Typically, a state variable like `_ENTERED` would be used in a reentrancy guard pattern to keep track of whether a function has been entered and to prevent reentrancy attacks. However, since the code does not define or use a variable named `_ENTERED`, there is no data dependency relationship between `_ENTERED` and `marketplaceFeeAmount` or any other variable in the provided code. Additionally, the `ReentrancyGuard` contract from OpenZeppelin is used, which manages its own internal state to prevent reentrancy, and this state is not directly exposed or related to the `marketplaceFeeAmount` variable.

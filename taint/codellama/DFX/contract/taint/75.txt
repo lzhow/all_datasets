@@ -1,0 +1,4 @@
+  
+No, the `_iDeal variable` in function `calculateFe` is NOT controlled  by user because it's a private variable.
+
+The `_beta` and `_delta` variables are also private variables, and they are used to calculate the fee. However, they can be changed by calling the `setBeta` or `SetDelta` functions, which are public functions. Therefore, these variables can potentially be controlled or manipulated by a user who has access to the contract. 

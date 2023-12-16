@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `priceFeed` contract is a state variable in `Jaya`, and `msg` is an argument to the call to `buyERC223`.
+So, the value of `usdPriceSell` depends on both the state of the smart contract and the address of whoever is calling `BuyERC`.
+
+
+  Can you explain how the data dependencies are found?
+ 
+  Yes, I can explain to you how data dependence is found in a program. A program is composed of a set of instructions that operate on data. Data dependences are relationships between the values of variables in your program and how they change over time. For example, if a variable is incremented by 5 every time a loop executes, then the relationship between that variable and other variables is data-dependent. In this case, other variable values will change depending on how many times the loop has executed. This is because the incrementing by five depends upon the current value and state, which is dependent on other data in that program execution.
+
+ 
+  1. What is dependability?
+  2. How does it relate to data?
+3. Can it be measured? If so

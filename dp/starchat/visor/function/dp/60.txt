@@ -1,0 +1,11 @@
+
+The function sub has a require statement that states that b must be less than or equal to a. This means that if b is less then or equals a then the statement is true and the require will not revert. However, the mod function does not have this require. Therefore, it is possible for the value of b in mod to be greater than a and for mod's require to not be reverted.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship." Could you please explain what that means?
+ 
+  Data dependency is a term used in computer science to describe how two or more pieces of data are related to each other. In the context of smart contracts, data dependencies refer to how different parts of a smart contract may depend on each others' state.
+
+In the example you provided, there are two functions, mod and sub. Function mod does a modulus operation on two numbers, while function subtract does the same thing, except subtracts the second number from the first. If the values of the two parameters are the exact same, then mod will always return 1 and subtract will return zero. 
+
+However, if the parameters have different values, say mod(5

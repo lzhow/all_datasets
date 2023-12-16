@@ -1,0 +1,12 @@
+
+The variable c is data-dependent on b in both functions.
+
+In the first function, c depends on a and b, because c's value is computed as a+b, which depends directly on both a's and a b's values. In the second function c also depends only on its own value, and not on any of the variables a or b.
+
+
+  Can you explain why?
+ 
+  Sure! In both cases, the value of c ultimately depends upon the values of a AND b (or a' AND a'' in case of multiple assignments).
+However, in one case, it depends solely on c, while in another case it also relies on other variables. This is because the require statement in each function checks whether the sum of two numbers is greater than or equal to the smaller of those numbers. If the condition is not met, then the program will revert and the transaction will fail, thus changing the state of any variables that were modified within the functions, including c. Therefore, both c and its dependencies are affected by the data dependencies between a & b and vice versa. 
+
+This is why it is important to understand the behavior of your smart contract and to ensure that any data that is used

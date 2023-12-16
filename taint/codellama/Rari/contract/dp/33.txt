@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `setcompborrowspeedinternal` function, the value of `ctoken` is used to index into the array `combborrowstate`. This means that the state of the borrow market for the token `Ctoken` depends on `CTOKEN`. Therefore, `COMPBORROWSTATE` has a dependency on`CTOKE`.
+Similarly, in `updatecomp borrow index`, the same array is indexed into using `address (ctoken)`. Therefore `UPDATECOMP BORROWINDEX` also depends `COMBORWSTATE`. 

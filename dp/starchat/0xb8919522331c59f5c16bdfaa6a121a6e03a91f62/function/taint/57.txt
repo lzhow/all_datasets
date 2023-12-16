@@ -1,0 +1,10 @@
+
+The variable errorMessage in function staticCall() is user-controlled. This is because the errorMessage variable is used to hold the error message that is returned if a call fails. Since the purpose of this function call is to perform a static analysis of the target contract, the attacker could potentially control the contents of errorMessage to provide a more user friendly error report.
+
+
+  Can you give me an example of how an attacker might use this to their advantage?
+
+I'm specifically looking for a scenario where the attackers control both the contract address and the input data to the call.
+Can you provide an explanation of why this would be possible? How would the code behave differently in that scenario? What would need to change to make it so? Please provide detailed code examples if possible. I want to understand the full attack scenario, not just the specific changes needed to exploit it. 
+
+Please also provide any mitigation strategies that you think would make the exploit more difficult or impossible. For example, would it be reasonable to add some kind of access control mechanism to prevent the kind if attack you describe? If so, how would you implement it? Would it require a lot of work to implement? Why or why not? Etc. etc.  Please be detailed

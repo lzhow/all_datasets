@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `_self` in the function `update` is not controlled by the user. It is a local variable that is used to store a copy of the `self` struct. The `self` struct is passed as a reference to the function, and the variable `_self` is used to avoid modifying the original struct directly. Therefore, the user does not have control over the variable `_self`.

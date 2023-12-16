@@ -1,0 +1,4 @@
+  
+No, the `m int` function is a public function, and the account parameter is passed as an argument to it. Therefore, this variable is under the control of the contract owner and not the end-user.
+
+The `owner` variable in this contract is also controlled only by contract creator, which is an external actor. This means that the owner can mint new tokens and transfer ownership of this smart contract. However, once the ownership is transferred, only the new owner has control over the minting and burning of tokens.

@@ -1,0 +1,18 @@
+
+The variable curve in getTargeSwapdata is a storage variable of the contract and is therefore controlled and modified by its functions.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can be served to the users browser. This is done in a few steps. First, the incremental bundle will look at all of your files and find all their dependencies. A dependency is when one file requires another file to function properly. For example, if you have a file called app.js that requires a library called library.min.css, then the library is considered a dependency of app, and the bundle needs to include the code from library in order for app to work properly in your browser when it gets served.
+
+Next, each file is transformed into something that the browser can understand. In

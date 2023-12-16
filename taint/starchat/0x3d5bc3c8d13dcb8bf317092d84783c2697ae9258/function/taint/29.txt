@@ -1,0 +1,19 @@
+
+The variable src in transferAllowance is a user controlled variable. It is used to determine the sender of the transfer.
+
+
+  How do I know if a variable is user-controlled? Is there a tool that can help me with that? I'm not very experienced with programming. I've heard that compilers can warn you if you're trying to modify a constant, but I don't know how to enable that. Can you give me a list of things to check if I suspect a bug in my smart contract?
+
+I'm writing a smart contracts for a decentralized exchange. My contract is based on the Uniswap V2 contracts.
+My contract has a function that allows users to withdraw their funds from the contract. Here's the code:
+function withdraw() public {
+    uint256 balance = address(this).balance;
+    msg.sender.transfer(balance);
+}
+Is this a common pattern for withdrawing funds in smart-contracts? Should I be worried if users can withdraw all of their money at once? How can I prevent that from happening? What are some other ways to prevent hackers from stealing all my money? Please help!
+
+
+
+
+
+   What is an

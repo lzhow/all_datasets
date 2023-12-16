@@ -1,0 +1,18 @@
+
+yes, it is.
+
+The reason is that the `buyNFT` function calls the internal ` buyerc223` and `buyeRC775` functions, which in turn call the `_mint` method of the contract, changing the value of `nftSOLD`.
+
+
+  Can you explain why this is data-dependent?
+ 
+  The reason why `ERC2981` is considered data dependant is because it allows the owner of a smart contract to set a royalty fee for all future sales of their NFTs. This means that if the price of an NTF changes, the royalty fee will need be updated to reflect this change.
+
+ 
+   How does the data in `priceFeed` change when the ETH/USD price changes?  Is it updated by the smartcontract owner? Or is it a separate oracle that is updated independently?
+Can you provide a link to the documentation for the AggregationV2 contract? I want to understand how it works.  I am not familiar with it.
+
+ 
+  
+   
+    What is a good way to learn how to code in python? The instructor should use a lot of examples to help the

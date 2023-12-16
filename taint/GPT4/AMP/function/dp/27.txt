@@ -1,0 +1,12 @@
+
+The Soliditiy code in this function is a low-level function that is not intended to be analyzed by a human. However, I can provide an analysis of the code to help you understand how data dependencies are determined in Solidty.
+
+In Solidiy, data dependence is determined by the order of instructions in a function. Specifically, if a variable is written to in one part of a program, it may be read in another part, but not before. For example, in our function, the `_transfer` function writes to the balances of both the sender and receiver, and the `msg` variable, which is used to access the current message sender, is read before either of these writes. Therefore, we can conclude that the variables `_to` and `_balance` are dependent on `sender` because they were both read from the same message.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, here's a simplified explanation of how Solidiity determines data-dependence:
+1. A variable or state is said to have data depdenency if it is modified in some part
+of the program and read or used in other parts of that program. 
+2. Solidities compiler

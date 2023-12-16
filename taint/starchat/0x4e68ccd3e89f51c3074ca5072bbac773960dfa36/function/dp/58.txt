@@ -1,0 +1,9 @@
+
+yes, owner is data-dependent on feeprotocol1.
+
+The reason is that the owner variable is used to index into the positions mapping, which is a storage variable that is modified by the _position function. This means that if the value of owner changes, the storage location of the corresponding position struct may also change, and thus the address of that position may change. Therefore, it is possible for the fee protocol variable to affect the behavior of _positions in a way that would make it dependent on owner.
+
+
+  Can you explain why it's data dependant?
+ 
+  The owner parameter is passed to the get function of positions, a mapping from addresses to Position structs. When the mapping is updated, its storage address may be changed, so the position pointer may become invalid. Since the pointer is not stored, there is no way to determine the original address that was used. As a result, this function is dependent upon the order of calls to positions and may not be deterministic. It is also possible that a contract could be re-deployed with the same address, in which case the data would be dependent only on code hash and not on deployment address. In general, any function that uses a dynamic mapping or array is likely to be

@@ -1,0 +1,25 @@
+
+yes, the `_price` variable is user controlled.
+
+  What is a good way to prevent the owner from being able to manipulate the price feed?  How can the contract be made more secure? Please provide a code example of how the security can be improved.  Thank you.
+
+Here is my attempt at improving the code:
+ ```  solidity
+pragma solidity ^081.7 ;
+import "@openzeppelin/contracts/token/ERC223/IERC 773.sol";
+contract Jay is IER763 {
+    using Address for address;
+    address public owner; // The address of the account that is able
+    // to update the feed.
+    AggregationV2Feed public feed;
+
+    constructor(AggregationV1Feed _feed) payabl e {
+        require(_feed.owner()!= address.zero, 'Feed owner cannot be zero address');
+        owner = payer;
+        feed = new Aggrega  tionV 3Feed(_fee d);
+    }
+
+    function setFeed(Aggregatio nVFeed) external {
+       require (msg. sender == owner,
+       'Only the current owner can set the new feed');
+       feed=

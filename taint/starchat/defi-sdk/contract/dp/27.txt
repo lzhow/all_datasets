@@ -1,0 +1,9 @@
+
+The variable protocol fee amount is data-dependent on output balance change because it is used to calculate the returned amount.
+
+
+  How does the data dependence of the protocol fees affect the overall functionality of this contract?
+ 
+  The protocolFeesAmount variable is dependent on both the output and input balance changes. This means that the value of protocolfeesAmount is affected by the changes in input and output balances. If the input or output changes, the amount of fees charged will also change. For example, if the user has a large amount in their wallet, and they want to swap it for a smaller amount using the contract, then the fees will be higher. On the other hand, when the users have small amounts in both their input wallet and their output wallets, there will not be as much of a difference in fees.
+
+This can affect how the swap is executed and how much the final user will pay. It also affects the efficiency of swaps, as the more fees there are, it takes more time for the transaction to be completed. Therefore, this variable should be carefully considered when designing the smart contract. In the future, more complex algorithms can be used for calculating fees, which can help reduce the impact of data dependencies

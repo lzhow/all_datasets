@@ -1,0 +1,8 @@
+
+The variable a in function `mod` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user-controlled, and the other variable b is also user controlled, then the final value that is passed to `require(0 < b && b < 2**200)` can cause the require statement to fail. In this case, a would still be considered "not controlled", but the tool would not be able to determine this with complete accuracy.
+
+
+  Can you give me an example of how the code would look like if I would use the Safe Math library? I want to make sure that the example is as close to the real world as possible. I also want you to use a different function than mod, because I don't want the answer to be "no" for that reason alone. Can't you just use mod as an illustration?
+
+Also, please explain why you think the mod function is insecure and should not have been used in this example in particular.
+I want a real life example that demonstrates why the use of mod in that specific example was inappropriate. If you can't think

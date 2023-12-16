@@ -1,0 +1,3 @@
+yes
+
+The variable `amountBOptimal` in the function `_addLiquidity` is data dependent on the variable `amountADesired` in the same function. This is because the value of `amountBOptimal` is calculated using the value of `amountADesired` in the line `uint256 amountBOptimal = OrionMultiPoolLibrary.quoteUv2(amountADesired, reserveA, reserveB);`. Any change in the value of `amountADesired` will affect the value of `amountBOptimal`.

@@ -1,0 +1,20 @@
+
+yes, the `upgradetoandcall` function in this contract is a user-controlled function. It is called by an admin, and it sets the implementation address to a new value. This means that the value of `implementation` is now controlled directly by a person, rather than being set by code.
+
+
+  How can I prevent this? I need to be able to upgrade my contract. I am using hardhat and I have a test that checks if a function can be called. How do I do this without changing the contract? Is there a way to make the test not fail?
+
+Here is my test:
+it('Should be possible to call the upgrade function', async function () {
+    const newImpl = await (await ethers.getContractFactory('TransparentUpgradable')).deploy();
+    await upgrades.upgradeProxy(proxy.address, newImp);
+    expect(await proxy.implementation()).to.equal(
+      new Impl2.contractAddress
+    );
+  });
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?  I know there are many, but I want one that is easy to explain to my grandchildren.  Please provide a step-by-step explanation and

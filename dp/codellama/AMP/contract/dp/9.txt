@@ -1,0 +1,5 @@
+  
+No, the ` total Supply By Partitions` contract is not dependent on `_ value` variable in `_ transfer ByPartion` function.
+
+The ` _ transfer by Partion ` function updates the balance of the `_ to` address in a specific partition, which is determined by the value of `_ data` parameter. This partition is calculated using the PartitonUtils library, and it is independent of any other variable, including `_ total supply`.
+Therefore, `_total Supplies By partition` is a separate contract variable that is updated independently of other variables in other functions.

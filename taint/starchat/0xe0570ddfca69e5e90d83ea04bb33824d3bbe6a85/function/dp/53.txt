@@ -1,0 +1,11 @@
+
+The variable `b` is used in both functions, but it is not modified in `balance()`, so it cannot be data-dependent on `_shares` or `_after`.
+
+However, the value of `r` depends on both `want().balance()` and `IStraegy(stragey).balance()`. Since the values of these two functions can change between the two calls to `balanceOf()`, it can be seen that `R` can also be considered data dependant on `msg`.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code by examining the relationships between variables and functions. It looks for patterns that indicate that one variable is likely to be dependent on another. For example, if a variable appears on either side of an assignment statement, it's likely that the left-hand side variable will be affected by the right-side variable.
+\
+When it encounters a function call, such as `strategy.balance`, it looks up the definition of the `strateg. balance` function to determine what variables it accesses. Then it analyses the variables that are accessed by that function and looks to see if any of them are assigned to. If so,

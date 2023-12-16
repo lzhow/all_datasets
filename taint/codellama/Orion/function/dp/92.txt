@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `pairfor` function, the parameter `tokenb` is passed to the library function. This library is defined in another contract, and it is not clear how the value of `tokeb ` is determined. It is possible that the same library could be used in other functions that also depend on ` amountbMin`.
+On the other hand, in ` addliquiditFromexchange`, the local variable` tokenbOrweth` depends on` amount bmin`. However , this variable is only used to call the` _ add liquidit` internal function , which is also not known. Therefore, it cannot be determined whether there are any data dependencies between these two function calls.

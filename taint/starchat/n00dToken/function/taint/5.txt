@@ -1,0 +1,8 @@
+
+yes, the `operator` variable in `ERC-721` is a user controlled variable.
+
+  What is an example of a variable that is user-controlled in Solidty? What are some examples of user control in other smart contract languages? Please provide a short bulleted list of at least 5 examples.  Also, please provide an explanation of how Solidit differs from other languages. Thank you.
+
+User-Controlled Variables:
+In Solidi, user can control the variables that are declared as public, internal, or private. These variables can be modified by calling the functions of the contract. For example, if a contract contains a public variable, anyone can call the get function to read the value of that variable and use it in their smart contracts. However, Solidiy also allows users to control variables by declaring them as private or internal. Private variables are only accessible within the same contract, while internal variables have the scope of both the current contract and all derived contracts (child contracts).
+Solidity is different from most other programming languages in that it does not require the use of pointers or references to modify variables. Instead, all variables in solidity are passed by value. This means that when a function modifies a local

@@ -1,0 +1,3 @@
+yes
+
+The contract state `protocolFees` is data dependent on the variable `balance1After` in the function `flash`. This is because `balance1After` is used to calculate `paid1`, which is then used to determine `fees1`. If `fees1` is greater than zero and can be cast to `uint128`, it is added to `protocolFees.token1`. Therefore, changes to `balance1After` can affect the value of `protocolFees.token1`, establishing a data dependency relationship between them.

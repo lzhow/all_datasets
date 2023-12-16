@@ -1,0 +1,3 @@
+The variable `beta_` in the function `viewCurve` is not controlled by the user. 
+
+Reason: The value of `beta_` is derived from the `curve.beta` state variable, which is set in the `setParams` function. The `setParams` function is an internal function and can only be called by other functions within the contract. Therefore, the value of `beta_` is not controlled by the user.

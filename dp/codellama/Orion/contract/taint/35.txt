@@ -1,0 +1,4 @@
+  
+The variable 'liquity' in addLiqidtyFromEXchange function of the contract is labeled as 'No'. The reason is that the liquidty variable is assigned a value by calling the mint function on the IorionpoolV1Pair contract, which is a library contract. This function takes the address of a pair contract as an argument and returns the amount of liquid tokens that can be minted. Since the pair address is passed as a parameter to the library function, the value of liquity is determined by a third-party contract and is therefore not under the control of user input.
+
+In general, any variable that is set to a specific value based on a function call or a contract interaction is considered to be controlled externally and not by user inputs. Therefore, in this case, liquty is classified as not being controlled directly by users.

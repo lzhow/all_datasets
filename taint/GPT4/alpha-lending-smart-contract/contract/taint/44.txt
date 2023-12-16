@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_symbol` in the ERC20 contract is set during the contract's deployment and is not modified by any user-controlled function. It is assigned a value in the constructor of the ERC20 contract and does not have a setter function that allows for its modification. Therefore, it is not controlled by the user after the contract has been deployed.

@@ -1,0 +1,4 @@
+  
+No, the `variable value` is not dependent on `the variable i` because the value of `data` changes in each iteration of the loop.
+
+The `shift` modifiers in `OBI` library are used to update the offset of data in a `Data` struct. These modifies are applied to the data variable, which is a struct that contains the raw data and the current offset. Each time the modifer is applied, it updates the offest of  the struct, so the next iteration will start from the new offset, and therefore the previous iteration's value will not be used. 

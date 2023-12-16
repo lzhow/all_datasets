@@ -1,0 +1,17 @@
+
+The contract has a function called `_setAllowance` that sets the allowance for a given token holder. This function is called in two places:
+
+- In the `mintInternal` function, which is used to mint new tokens.
+This function sets `state.transferAllowed[msgSender][spender] = true`.
+`msgSnder` is `msg` (the current message sender).
+'spender' is 'address spender'.
+In the'redemption' function `redeeem`, the transfer allowances are reset to false. `for (i = allowList.next(i); i!= 1; i = alllowListNext) allowlist.set(allowList[i].token, msg.sendder, false);`
+Here, `spendder` and `token` are both `address`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning howto code.  The best way is to find a tutorial that is specific to your learning style.   You can find tutorials online, or you can ask a friend or family member to help you.
+   

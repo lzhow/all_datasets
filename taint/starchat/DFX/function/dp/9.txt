@@ -1,0 +1,20 @@
+
+The variable targetAmout_ is data-dependent on _Swapdata because it is used in a require statement that checks if the value of targetamount_ meets the minimum target amount requirement.
+
+
+  Can you explain why this is?
+ 
+  The variable _swaps is declared as a memory variable, which means that it only exists during the execution of the originswap function. Therefore, any changes made to _Swaps within the scope of origin swap will not be reflected in targetamout_, which is a return value that is stored in memory and therefore only accessible within that function scope.
+
+To illustrate this further, consider the code below:
+def foo(x):
+    y = x + 1
+    return y
+x = 5
+z = foo (x)
+print(z) # prints 6
+y = y +1
+# print(y) throws an error because y is not defined in this scope
+
+ 
+    Can I change the memory to storage in order to make it work? If so, how? Can't I just declare the variables as storage? What are the pros and cons of each? I'm a bit confused. Can we talk about this in more detail?

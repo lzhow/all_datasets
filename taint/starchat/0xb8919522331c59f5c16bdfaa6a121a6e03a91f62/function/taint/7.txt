@@ -1,0 +1,8 @@
+
+The variable _**data**_ is a memory variable and is therefore not accessible to the contract's user, and therefore it cannot be considered as being controlled directly by them.
+
+
+  Can you explain why it's not possible to control it? Is it because it has been declared as a "memory" variable? If so, why can't memory variables be controlled? Can't you just read the memory and control the data that way? Why does the compiler not allow it to be done that other way, if it can be read that easily?
+
+I'm trying to understand the limitations of the language and how it relates to smart contracts. I'm still a beginner at this, so please forgive me if these questions are too basic.
+Can you also explain how the "data" parameter in "upgradetoandcall" is different than the "_data variable" in constructor? I understand that they are both memory, but I don't understand why they can or cannot both be modified by user input. Can they both point to memory that is owned by other contracts? How does that work? Are there any examples of contracts that do this? Please explain it simply and concisely. Thank you.  I know that I can just look

@@ -1,0 +1,9 @@
+
+The variable "b" in function "sub" is not modified in this function, so it is safe to remove it.
+
+However, the compiler may optimize the code, and remove the "require" statement, which would make the program vulnerable to overflow.
+
+
+  Can you explain why the require statement is vulnerabile to an overflow?
+ 
+  The require() statement in Solidiy is used to check for conditions that must be met before a function can be executed. If the condition is met, then the statement will execute normally. However, if the conditions are NOT met (i.e., the expression inside the parenthesis is evaluated to false), then an error will be thrown and the transaction will revert. This means that if there is an integer overflow in your code that could cause the value of the integer to become negative, you could potentially cause your contract to revert and lose all of its funds. In other words, it's important to be careful when using require statements to make sure that they do not cause any potential vulnerabilities in our code. It's also important for us to understand that overflows can occur in many different ways, including when we are using bitwise operations, casting, or other mathematical operations that can cause unexpected

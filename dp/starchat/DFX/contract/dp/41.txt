@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_swap` function calls the `viewTarget` and `targetSwap` functions, and the latter calls `Assmimilers.targetRaw` which reads the value of `nBali[tIx]` (where `tI` is `_targetIx`).
+So, the answer is yes, `_oGliq` in `getOrigin` depends on `oGlIq_` and `_tGiq`, which are the outputs of the former.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `_originSwap()` function in Swap.Sol calls two other functions: `originOutput()` and  `outputTarget()`. The `OriginOutput` calls a function called `intakemRaw()` which is a view function that returns the raw amount of an asset. This raw value is then used in a calculation in another function, `calculateOriginTrade()`. This calculation involves the values of `_outputGLiquidity` (which is calculated in an earlier function) and a value called `_inputBalance` that is also calculated earlier. Finally, this value (called `amt_`) is used to call the output function of a different asset, which in

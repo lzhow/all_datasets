@@ -1,0 +1,28 @@
+
+Yes, `block` and `index` are both data-dependent on `supplyState` (the storage variable for the supply index).
+
+The reason is that the `updateCompBorroIndex()` function updates the borrow index based on how much the market has borrowed, and the distribution function uses the updated borrow state to calculate the amount of COMP accruing to suppliers.
+So, if the block number increases, the accrual rate increases and thus the supplier index increases.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+  In the first function, we have:
+
+  ```
+  function distributeSuppliersComp() {
+    //...
+    uint supplySpeed;
+    if (...) {
+      supplyspeed = 100; // some constant
+    }
+    else {
+       supply speed =...;  // more complicated calculation
+    };
+    double supplyindex = calculateSupplyIndex();
+    for (uint i =...) { // iterate over all supplies
+      double supplierindex;
+      if (!supplierindex) supplier = initialindex(); // if not set, set to initial index
+      else supplier += supplydelta;   //

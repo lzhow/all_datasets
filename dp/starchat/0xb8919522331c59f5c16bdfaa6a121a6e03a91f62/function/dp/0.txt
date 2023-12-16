@@ -1,0 +1,11 @@
+
+The variable success is not dependent on proxy.
+
+
+  What about the return data?
+  
+  The return value of the staticcall is dependent upon the proxy address. If the address is changed, the value will also change. This is because the call is made to the implementation address of a proxy contract, which is stored in a state variable of that contract. Therefore, any changes to that state will affect the result of this call.
+
+In this case, it is unlikely that the success variable will be used in any other way, so it may not be a problem. However, if it were used to determine the next action in code, this could lead to unintended consequences. For example, a function that checks the balance of an account before and after a transaction may be vulnerable to a reentrancy attack if the transaction reverts, as the state of success will not have changed. In this scenario, success would be set to false, but the code would still continue, potentially causing the account to be overdrawn. It is important to note that this is a very specific example and may or maynot apply to your specific use case. 
+
+It is always important when working with smart contracts to consider the potential

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the ` functionfunctionCallwithValue` function, the` target` variable is passed as an argument to the low level call function. This means that the value of ` target ` is used as the target address for the call.
+On the other hand, in `FunctionStaticcall` , the address of the contract is obtained using the internal `iscontrac` t function and stored in a local variable called `cont`.
+Since the local ` cont`variable is not used in any other way in this function except for passing it as a parameter to `lowlevelcall`, it is safe to assume that it has the same value as `Target` .
+Therefore, ` Target` and ` Cont` are dependent on each other.

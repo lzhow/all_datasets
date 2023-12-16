@@ -1,0 +1,3 @@
+Yes, the variable `borrowerAccrued` in the function `distributeBorrowerComp` is data dependent on the variable `borrowerAmount` in the same function. 
+
+Explanation: The value of `borrowerAccrued` is calculated based on the value of `borrowerAmount`. The calculation is performed using the following line of code: `uint borrowerDelta = mul_(borrowerAmount, deltaIndex); uint borrowerAccrued = add_(compAccrued[borrower], borrowerDelta);`. Therefore, the value of `borrowerAccrued` depends on the value of `borrowerAmount`.

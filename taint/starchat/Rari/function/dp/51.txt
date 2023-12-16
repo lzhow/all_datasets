@@ -1,0 +1,13 @@
+
+The function ` _acceptImplementaion` is a low-level function that can be called by the UnitRoller's admin to accept a new implementation of the Comptrller. This function is called during the process of upgrading the smart contract, and it is important to note that this function can only be executed by a trusted party, such as the Fuse team.
+
+In the `_setBorroePaused` function, the `msg` variable is used to determine the sender of this transaction, which is then stored in a mapping called `borrowGuardionPaused`. The `require` statement ensures that only the pauseguardian or an admin account can call this functon, as well as ensuring that the state variable cannot be set to false if the caller is an administrator. 
+
+However, in `_became`, the msg variable refers to the address of `fuseAdmmin`, which does not have the same privileges as an Admin account. Therefore, this statement will always evaluate to `false`, and the require statement in this fuction will never be triggered.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain in detail how this code snippet works.
+
+1. In the first

@@ -1,0 +1,10 @@
+
+The variable _ token in this function is a user-controlled parameter. It is used to specify which pool's ALToken contract should receive the Alpha rewards. Since the address of the token is user input, this variable must be considered user controlled.
+
+
+  Can you explain how the code works? I'm having trouble understanding how it's possible for a contract to control the value of a variable that is passed as a parameter to a function. I understand that the contract has the ability to modify the state of variables, but I don't understand how that can be relevant in determining whether a particular variable is "controlled" by a given contract. Can someone explain it to me like I have five? Thanks!
+ 
+  Sure, I'd be happy to explain!
+
+In the example code provided, the Mock Lender Pool Light contract inherits from the LendinPool contract, which has a `splitReward` function that takes an ERC-223 token and an amount as parameters.
+When the `giveAlpha`ToALToken function in MockPool is called, a call is made to the split reward function with the `_ token` and `_ amount` parameters as arguments. This causes the execution of code in LendersPool, where the

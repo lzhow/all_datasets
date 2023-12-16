@@ -1,0 +1,9 @@
+
+The variable old_admin in function `change_Admin()` is user-controlled. This is because the value of the `admin` variable is set by a user via a transaction, and subsequently read by other functions in this contract.
+
+
+  Can you explain how the control flow analysis works? I am specifically looking for a description of how taint tracking works. I understand that it's based on data-flow analysis, but I don't know how to read the results. Can I get a high-level overview of what taints are, how they're represented, what operations can be done on them, etc.? If you could provide a few examples of simple contracts and their outputs, that would be very helpful. Thanks!
+
+
+
+

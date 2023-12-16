@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_safeTranfer` function, the `token` variable is passed as an argument to the ABI-encoded function call. This means that the value of `address to` is used as a parameter in a function that is called on `IER2C(token)`. This function is not defined in this code snippet, but it is likely that it has a side effect on some state variable, such as `balances` or `allowances`, which is also used in `function _swap`. Therefore, `variable to in _ safeTranser` depends on variable to `in swap`.
+ 

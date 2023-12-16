@@ -1,0 +1,9 @@
+
+The variable "dst" in this function is a controlled variable, as it represents the intended recipient of the transfer. This variable is used to ensure that the recipient is who they claim to be, and that they have the authority to receive the funds.
+
+In this case, the "user" is referring to the person or smart contract that is calling this transfer function. By specifying the destination address as a parameter, they are giving the contract permission to transfer the tokens to that address. If this variable were not specified, then the token transfer would be performed without the knowledge or consent of its intended receiver, which could result in loss of funds or other issues.
+
+
+  How do I know if a variable or function parameter is "controlled"?
+ 
+  You can use the control-flow graph to determine if any variable/parameter is user-controlled. A user controlled parameter can be passed to a function or stored in a state variable. To determine the usage of a specific variable in your contract, you can look at the call graph and see if it's used in any function that's called by external contracts. For example, if you have a public function `withdraw(uint amount)` that calls `msg.sender.transfer(amount)`, then `

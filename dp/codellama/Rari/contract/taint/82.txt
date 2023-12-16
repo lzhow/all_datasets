@@ -1,0 +1,4 @@
+  
+No, the ` borrow Index` variable in function `distribute BorroweComp` is NOT controlled  by user because it's a local variable that is created in this function and it doesn't have any user input.
+
+The ` borrow Index ` variable is calculated by calling the borrow index function of the ctoken contract and passing in a parameter of `CTokenn` which is a c token contract address. This function returns the current borrow rate of that c Token contract. 

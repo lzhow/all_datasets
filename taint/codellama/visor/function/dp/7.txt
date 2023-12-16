@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `function mint` of the smart contract, the `_mints` function is called with two arguments: `account` and ` amount`. The `_ totalSuppy` contract variable is not directly used in this function, but it is indirectly used through the call to the internal `_ mint ` function.
+Since the value of `_ mints ` is determined by the amount of tokens minted, and the total supply is increased by that amount, it can be inferred that the data dependence relationship between `_ totalsupply ` and` amount` exists. Therefore, we label the relationship as ' yes'.

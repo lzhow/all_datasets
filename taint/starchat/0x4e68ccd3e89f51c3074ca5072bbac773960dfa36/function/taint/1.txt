@@ -1,0 +1,7 @@
+
+The variable self in function `getFeeGrowsInside` is a mapping from int to TickInfo struct. This means that the keys of the mapping are controlled indirectly by user input, as they are used as indices to access the Tick structs. Therefore, the entire mapping is considered to be controlled directly by users.
+
+
+  Can you explain how the control flow analysis works? I'm having trouble understanding how it determines that self is user controlled. I understand that it's a map, but how does it know that? Can it just look at the code? How does the analysis know when to stop looking at code, and when it should look deeper into the data structure? What are the limitations of this analysis? Are there any false positives? Is there a way to make it more accurate? Please explain it in a simple way that a 5th grader could understand. Thank you.
+
+I'm asking you this because I want to use this tool in my classroom, to help students understand how smart contracts work. But I don't want them to get confused or frustrated. So I need to know how to trust the tool, so that I can use it without causing any harm. If you can explain this to me in

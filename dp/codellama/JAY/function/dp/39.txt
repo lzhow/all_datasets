@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `_tokenSuppy` is not directly dependent on ` amount` because it is only used to calculate the total supply of the token. It is also not dependent because the `safeTrasfer` function is called with the amount of tokens to be transferred, which is ` amounts [id]`, and the `_ tokenSuppl` variable is updated in a separate function. Therefore, the data flow is from ` safeTranser` to `_ totalSupp` and not from` amount`.

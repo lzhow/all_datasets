@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `intakNumraire` function, the `_amt` parameter is passed as an argument to the delegate call to `IAsimlator`. The `delegate` call is made with the address of the contract as the first argument, and the data to be passed to it as a second argument.
+Since the value of `_amount` is being passed directly to a delegatecall, which is a low-level function call, this means that the caller of this function can control the amount of tokens that are being transferred. Therefore, `_amnt` in this case is considered to controlled  by user and labeled as ' Yes'.

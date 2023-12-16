@@ -1,0 +1,3 @@
+The variable `assimilator_` in the function `assimilator` is not controlled by the user. 
+
+Reason: The value of `assimilator_` is obtained from the `curve.assimilators[_derivative].addr` expression, which retrieves the address stored in the `addr` field of the `curve.assimilators[_derivative]` struct. The value of `curve.assimilators[_derivative].addr` is determined by the contract itself and is not influenced or controlled by the user. Therefore, the variable `assimilator_` is not controlled by the user.

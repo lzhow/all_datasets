@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `return` statement returns three values: `uint returned amount`, `protocolF fee amount` and ` market place feeamount`. The `total fee share` is calculated as the sum of the protocol fee and market fee shares. If the total fee is greater than the delimiter, it reverts.
+Then, if the swap type is fixed outputs, ` returnedamount`is set to the output absolute amount.  Otherwise it is set as ((`output balance change` * `delimiter`) / (`delimitershare` + ` totalfeeshare`) + 1. Then, total fees are calculated by subtracting the returned amounts from the balance changes. Finally, protocol and Marketplace feess are set. In the second function the same process is repeated. Therefore, marketfee amount is data-dependent on output balancechange.

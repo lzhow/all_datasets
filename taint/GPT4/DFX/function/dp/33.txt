@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_swapInfo` in the function `targetSwap` is data dependent on the variable `_bal` in the function `getTargetSwapData`. This is because the value of `_bal` is assigned to `oBals_[i]` in the for loop of `getTargetSwapData`, and later `oBals_` is used to calculate the value of `_swapInfo.amountToUser` in the `targetSwap` function. Therefore, any changes to `_bal` will affect the value of `_swapInfo.amountToUser`, indicating a data dependency between the two variables.

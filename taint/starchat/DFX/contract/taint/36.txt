@@ -1,0 +1,13 @@
+
+The variable total\_ is a state variable that is used to store the total liquidity of the pool. Since it's used as an output parameter, and not modified by any function, the control flow of this variable cannot be determined by static analysis. Therefore, we cannot determine whether it can be controlled or not.
+
+
+  Can you give me a list of all the variables in that code that are not under the contract control? And can you explain why? I want to know all of them. I will use that list to create a test for my tool.
+
+Thank you
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How might you implement one?  Is it worth the effort? What alternatives might work better? Please back up your claims with numbers where possible. Excuse my naivete if you are unfamiliar with these technologies. Thank you.   I am specifically looking to use this for the purpose of creating a web based IDE for Solidty smart contracts. It will be used by developers to write, compile, test and deploy their smart contract. My ultimate goal

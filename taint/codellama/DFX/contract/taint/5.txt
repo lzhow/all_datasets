@@ -1,0 +1,4 @@
+  
+No, the ` name` variable in function `constructor` is NOT controlled  by user, because it's a parameter passed to function and it can't be changed by users.
+
+The ` constructor` function is called when the contract is deployed, and the parameters passed are the name, symbol, assets, asset weights, factory, owner and curve factory. These parameters are set by whoever deploys the smart contract, which is typically a developer or a trusted third party. Therefore, these parameters cannot be controlled directly by a user who interacts with the deployed contract.

@@ -1,0 +1,13 @@
+
+The function is comparing two values, `time` and `bAdjust`, which are both derived from `uint3` variables. Since `2^31` is larger than the maximum value of `int3`, the values of the variables `adjustedA` or `adjustdB` may exceed the range of values that can be stored in a signed 3-byte integer. This could result in unexpected behavior or security vulnerabilities.
+
+To prevent this, the code should be modified to ensure that the result of any arithmetic operation on `unsigned int` values is also treated as an `unsinged int`. This can typically be done by casting the value to an unsigned integer type before performing the operation. In this case, casting `Aadjusted` to `uin33_t` would prevent the addition of  `  (2 ** 64)` to the adjusted value, which would cause the overflow.
+
+
+  Can you modify the example to avoid the problem you described?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on. I also want to use this as a base for a future career

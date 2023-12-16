@@ -1,0 +1,4 @@
+  
+No, the ` borrowindex` variable in function `setcompborrowspeedinternal` is NOT controlled  by user because it's a local variable and it can't be modified by any external user or function.
+
+The ` borrrowindex ` variable is assigned a value from the external function call `CTOKEN.BORROWINDEX()` which is a public function that returns the current borrow index of the ctoken. This value is then used to calculate the new comp borrow speed. 

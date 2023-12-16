@@ -1,0 +1,8 @@
+
+The variable __pending_admin is a private variable in CEthDelegate. It is used to store the address of the pending admin.
+
+In Solidty, private variables are not accessible from outside the contract. Therefore, the value of __pendin_gadmin cannot be controlled directly by users. However, if a user has the ability to call the _accept_pending function, then they can change the admin address.
+
+
+  How can I check if I have the power to change admin? I am trying to implement a multisig wallet. I want to be able to add and remove signers. How do I do that? Can you give me an example of how to do it?
+Can you also give an explanation of what the code does? It's not clear to me what each function does. For example, I don't understand what _isFuseAdmin is doing. Can I just call it and trust that it will do what it's supposed to? What is _fuse_Admin doing? Why does it have a capital letter? Is it a reserved keyword? If so, why does the compiler complain if you call a function with that name? And so on. This is just a basic example: there are many more

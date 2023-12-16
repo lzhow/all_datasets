@@ -1,0 +1,19 @@
+
+The variable hash in toEcdsaSignedHash() is user controlled.
+
+A user can provide a hash value that will be signed by an EcdSA signature. This hash is then used to verify the signature, and the address that signed the message is extracted. However, the hash itself is also user-controlled, as it can be modified by a user to change the resulting signature and address.
+
+
+  Can you explain how the code works? I'm having trouble understanding the assembly language. I've never seen it before. Can I just ignore it? What does it do?
+Can you also explain what the other code does? Is it similar to assembly? If so, can you tell me what it does and why it's used? Can it be used in place of assembly, or does assembly have a specific purpose? Please explain it to me like I know how computers work. Thank you. 
+
+Here's the rest of the contract:
+pragma solidity ^0706.0;
+import "./ECDsa.sol";
+contract Escrow {
+    address payable public seller;
+    mapping(address => uint) public payments; // payments[buyer] = amount
+    uint public deadline;
+
+    constructor(
+       

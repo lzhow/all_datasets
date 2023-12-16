@@ -1,0 +1,14 @@
+
+Yes, `compoundLiqudityBalance is data-dependent on ` totalColleteralBalance`. This is because the value of ` compoundLiquidityBalanace` is computed using the `pool.compunded` value, which is dependent on both `liqudiity` and `borrowBalance`, and the final value for `collateraBalance ` is also dependent of the same two values.
+
+
+  Can you explain why this is true?
+ 
+  Sure, I'd be happy to explain how this works.
+
+In the first function, the loop iterates over all the tokens in `tokenList`. For each token, it computes the compound liquidiy balance and borrow balance for the user. It also computes a boolean value `userUsePoloAsColateral` which indicates whether the pool is used as collaterl for this user or not. 
+
+The second function computes ` poolPrizePerUnint` using `priceOracle` contract. This value is then used to compute the liqidity balance in base currency. Finally, we add the computed values to the corresponding variables.
+
+
+So, in short, both functions are correct, but the second one is more efficient because it

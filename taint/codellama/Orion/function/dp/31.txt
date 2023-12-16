@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `pairForCure` function, the local variable pool is assigned the value returned by the ICurlRegistry.findPoolForCoins function. This function takes three arguments: factory,token A, and token B.
+However, in ` getAmoutOut Universal`, the factory argument is not used. Instead, it uses the from and to arguments to call the getreserves function and the amountin argument to calculate the amoutout.  The getamountoutuv2 function is called with the reservein and reserveout arguments. These arguments are calculated using the reserves returned from the  get reservers function in getamout out universal. Therefore, pool in pairforcurve is dependent on from in  thegetamountofuniversal function because the values of the pool variable are determined by from.

@@ -1,0 +1,4 @@
+  
+No, the `contract state nfbsBough` is not dependent on `variable amount` from the  `function buyErc 751`. The reason is that the amount of NFT's bought is calculated in a different way in this function.
+
+In this case, we are using the SaferMath library to calculate the total amount that needs to be bought. We are also using a for loop to iterate over the array of token addresses and amounts, and we add the amounts to a running total variable. This means that we do not directly use the value of the "amount" variable in our calculation. Therefore, there is no data dependence between the two.

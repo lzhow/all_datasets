@@ -1,0 +1,21 @@
+
+The variable _ operator in revokeOperator is a contract address that is passed in by a user and is used to determine if they have permission to renounce their operator status for a particular partition. Since this is an address variable, the answer is no, since it can be modified by any function call.
+
+
+  How can I make sure that the `_partition` variable is indeed a constant? I'm concerned that it could be changed by another function. I also want to make the code more secure by making sure the partition is only removed if it's not the default partition, and that there are no edge cases where the balance could become negative. Can you modify the contract to reflect these changes?
+
+Here's the updated code:
+`pragma solidity ^06112;
+import "./IERC1404.sol";
+contract ERC4649 is Context, IAccessControlEnumerable, AccessControlEnumerable {
+    bytes16 public version;
+    mapping (address=>bool[]) public operators; //operator => partition => approved
+    event OperatorAdded(
+        address indexed operator,
+        bytes2 partition
+    );
+    function initialize(string callData _version)
+        external
+        initializer
+    {
+        version = bytes(_version);

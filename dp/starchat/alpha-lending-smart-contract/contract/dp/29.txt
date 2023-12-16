@@ -1,0 +1,12 @@
+
+The contract has a function called `Stake` that is used to deposit ALPHA tokens into the pool. This function calls the `_mint` function to mint new shares for the sender.
+
+`_mint`:
+- Updates the total supply of shares
+`total = alpacaTokenBalance.total()`
+This line retrieves the current total ALPACA supply. If the balance is 5,021,307 ALPA and the supply is currently 3,298,769 ALPAS, then the value of `Total` is `3.289799e+7`.
+Then, the line:
+ `uint totalshares = TotalSupply()` retrieves `AlphaStakeshares` total.  If `AlpakaTotalSupply` was 4,909,877, `alphaStakeTotalShares `would be  `4.910881e + 7`
+Finally, `_share` would be calculated as: `_amount * totalShare / total` which would result in `_shares` being 6,593962e6
+In summary, no, it is **not** data-dependent.
+

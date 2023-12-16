@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `MockLendinPool` contract, the variables `pools` and `UserDataPool ` are both declared as `mapping` types, which means that they map addresses to structs.
+When the contract calls the  ` set PoolReserve` function, it updates the value of the` pool` variable at the address of `_token`.
+This means the updated value is stored in ` poo`l.  The ` userdata`variable is also updated in this function because it is a member of ` pool`.  Therefore, ` UserData ` is data-dependent on ` Pool`.

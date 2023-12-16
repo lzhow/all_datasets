@@ -1,0 +1,13 @@
+
+The variable borrowindexNew is not dependent on seisetokens.
+
+
+  What about borrow index?
+ 
+  The variable "BorrowIndex" is dependent upon the variables "totalBorows" and "cash" in accruing interest. BorrowIndex is calculated as follows:
+
+Borrow Index = (Total Borrows / Cash)
+This variable is used to calculate the interest accured by the borrowers.
+In the case of liquidation, the "seisetsokets" variable in "liquidationBorrow" function is also dependent in calculating the amount of collateral that needs to be seized. This is because the liquidators needs the collaterals to re-pay the debt and also needs some amount to pay the gas fees.  The amount is determined by "comptrolller.liqudateCalculateseizetokens" which is a function in Comptrollers.sol contract. 
+
+So, in summary, both "borrowsIndex", "SeiSetokents" are dependent variables in both accuring interest and liquidating the borrwers in CDT. However, these variables are used in different ways. "BorowIndex " is an interest rate variable that is

@@ -1,0 +1,4 @@
+  
+The variable 'path' in function '_swap' is 'Yes' controlled.
+
+In the code, the 'swap()' function in 'ICurvesPool' interface is called with the parameter 'amountAMout' which is calculated using the '_addliquidty()'. The '_adliquity()_ function returns the amount of tokens that are added to the liquidty pool. This amount is then passed to 'getreserves()', which returns a tuple of the reserves of both tokens in liquidt pool, and the total liquidy pool amount.  The 'quote() function' then calculates the optimal amount to be added based on the reserve amounts. Finally, 'add liquidtiy() is calle with this optimal amout. Therefore, this variable is user controlled and can be manipulated by an attacker.

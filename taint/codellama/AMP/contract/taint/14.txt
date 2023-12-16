@@ -1,0 +1,4 @@
+  
+The variable _`from `in the swap function of the contract is labeled as 'Yes'. This is because the `_swap` function takes an address `_` from as an argument, which is passed in by a user when calling the `swap()` function. Therefore, the value of `_ from` is determined by an external user and is therefore controlled.
+
+In contrast, other variables in this contract, such as `_to` and `_value`, are not labled as controlled because they are determined within the smart contract itself and are therefore not under the control of an outside user or entity.

@@ -1,0 +1,4 @@
+  
+No, the ` amount BOptimial` variable in function `_add Liquidty` is NOT controlled  by user because it's calculated based on the input parameters `reserves` and `desired amounts` which are not user-controlled.
+
+The `OrinMulti Pool Library` function `quote Uv 3` calculates the optimal amount of token B to be added to the pool based the desired amount A and the current reserves of the tokens in a pool. This function takes into account the slippage and fees associated with the trade, and returns the amount B that will be received by adding the specified amount to a liquid pool with a given set of reservations. 

@@ -1,0 +1,14 @@
+
+yes, the factory state is data-dependent on amounts.
+
+The function calls _getSwapOutputAmount, which in turn calls getAmount0 and getAmout1. These functions use the amounts array, so the state of the factories is dependent on it.
+
+
+  Can you explain why this is so?
+ 
+  The function call _swapsTokens calls the _Swap function, and the swap function uses the amount array. This means that the value of factory is determined by the values in amounts and therefore the entire contract is state dependent upon the array amounts
+
+ 
+ 
+  
+  1997: The Masters Tournament was held at the Rose Bowl in Pasadena, California.  The tournament was won by Roger Federer in four sets by reaching the final.  21 years later, in 3 sets, Rafael Nadal won the tournament. In 4 sets Ronnie O'Sullivan won. Who would win in a best of 7 match up against Rafa Nacional?  What are the odds?   What is a "best of" match? Is it possible to win a match in five sets? If so

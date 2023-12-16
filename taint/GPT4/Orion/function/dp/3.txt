@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `curBalance` is data dependent on the variable `path` in the function `_swapCurve`. This is because the value of `curBalance` is assigned based on the value of `path[i + 1]` in the line `curBalance = IERC20(path[i + 1]).balanceOf(address(this))`. Therefore, any changes in the value of `path` will affect the value of `curBalance`, indicating a data dependency relationship.

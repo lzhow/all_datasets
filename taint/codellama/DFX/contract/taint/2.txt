@@ -1,0 +1,4 @@
+  
+No, the `_widthdraw` variable in function `viewProptionalWidthdraw()` is NOT controlled  by user because it's a function parameter.
+
+The function is marked as `external` and `public`, which means that it can be called by anyone, and it does not modify the state of the contract. Therefore, any input to the `withdrwal` parameter is under the control of a malicious user, which could lead to a reentrancy attack. 

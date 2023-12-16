@@ -1,0 +1,4 @@
+  
+No, the `_ total Supply ` variable in function `burn` is NOT controlled  by user because it's a local variable that is calculated based on the current state of the contract.
+
+The `_m int` function calculates the total supply of liquidty tokens based  on  the balance of token  and the reserve of each token in  contract, and it does not take any input from the caller. Therefore, `_totalsupply is` not a variable controlled directly by a user, but rather a calculated value based off of other variables in contract that are controlled or not by users.

@@ -1,0 +1,22 @@
+
+The contract function is:
+
+function onER1231Received(address, address, uint,uint, bytes) external returns(bytes)
+It is not clear what the first two parameters are.
+If they refer to:
+
+1. An address of a token contract
+2. A token ID
+3. Token amount
+4. Data
+Then the answer is no.
+
+
+ 1) An ERC-165 interface ID, which is a 4-byte selector that identifies interfaces implemented by an object.
+ 2) The address that is attempting to send the tokens. This address is derived from the signature of the onReceive function. It is used to prevent circular calls to the token. 
+ 3) A unique identifier for the specific token being transferred. For fungible tokens, this is typically the index of that token in an array. Non-fungible or semi- fungsible token contracts may use other identifiers. 
+4 ) The amount of tokens being sent. 5) Optional data that can be used by the receiving contract to further process the transfer.
+
+
+So the parameters in this case are: 
+1, 2, and 3, as they correspond to token address and token id.

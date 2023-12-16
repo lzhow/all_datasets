@@ -1,0 +1,3 @@
+Yes
+
+The variable `_to` in the function `_callPostTransferHooks` is data dependent on the variable `_to` in the function `_mint`. This is because in the `_mint` function, `_callPostTransferHooks` is called and the `_to` variable from `_mint` is passed directly to `_callPostTransferHooks` as an argument. This establishes a direct data flow from `_mint`'s `_to` to `_callPostTransferHooks`'s `_to`, making them data dependent.

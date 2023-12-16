@@ -1,0 +1,5 @@
+  
+No, the variables `_o` and `_t` are independent in function  `getOrigin And Target`.
+
+The reason is that the `Storage` contract is imported in both functions, and the `_origin`and `_target` variables are passed as arguments to the functions. Therefore, `_swapdata._ origin` is not dependent on `_ length` because it is a separate variable.
+ 

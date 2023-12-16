@@ -1,0 +1,8 @@
+
+The variable _**data**_ in function **constructor** is **not** controlled directly by user, but it can be modified indirectly through the **msg.data**.
+
+In the constructor function, the code first assigns the value of the _IMPLEMENTATON_SLOT to a temporary variable **slot**. Then, using the keccack265 function to hash the string "eipc1166. proxy. implementation", the hash value is calculated and assigned to the temporary **key** variable. Finally, **uint 2 5 6 (key) -1** calculates the memory address of _IMPLEMENATATION SLOT.
+When the contract is deployed, a new contract instance is created and the bytecode of this contract (including the data field) is stored in a special area of each Ethereum node. When the new instance of a contract needs to be created, this data is retrieved from the node and executed, which means that the contents of msg. data can affect the behavior of new contracts. Therefore, if user input is included in msg data, then it may be possible to control the state of newly deployed contracts, so it should be avoided.
+
+
+  Can you explain how the use of `

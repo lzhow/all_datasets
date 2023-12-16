@@ -1,0 +1,5 @@
+  
+The variable 'proof' in function 'multiProofverifyCaldata' is 'controlled by user'.
+
+This is because the 'callddata ' keyword is used to declare the parameter ' proof' as a callee-owned memory array. This means that the caller of the contract is responsible for allocating and deallocating the memory for the array, and the callees of this function can only read from the data in this array and cannot modify it.
+ 

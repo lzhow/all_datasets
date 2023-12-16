@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `nBals_` in the function `getTargetSwapData` and the variable `nGLiq_` in the function `viewOriginSwapData` are local to their respective functions. In Solidity, local variables are scoped to the function in which they are declared and do not have visibility or access outside of that function unless passed by reference or returned as part of the function's output. Since `nBals_` and `nGLiq_` are defined and used within their own functions and there is no direct interaction or data flow between these two functions in the provided code, they do not have a data dependency relationship. Each function call operates on its own set of data, and the state of one does not affect the other.

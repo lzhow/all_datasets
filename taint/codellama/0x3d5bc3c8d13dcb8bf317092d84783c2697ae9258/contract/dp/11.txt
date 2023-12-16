@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `enterMarkts` function, the contract calls the` liquidationBorroweAllow` method, which takes the address of the liquidating user as an argument. This address is then used to determine the amount of collaterals that can be seized in case of liquidations. In the context of ` enter Markets`, the value of this address does not affect the outcome of any computations, and it is not used as a direct input to any computation. Therefore, it cannot be considered a "data dependence" in a strict sense. 

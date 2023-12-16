@@ -1,0 +1,13 @@
+
+The variable _accounts is a user controlled variable. It is used to determine the account that the minted tokens will be sent to.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn about it so I can optimize my web application for speed. Thanks!
+  
+    An incremental bundling tool is designed to optimize the performance of web pages and web apps by combining multiple files into a single file that can be served to the browser. This can reduce the number of requests made to server, which can improve the page load time.
+
+    The key feature of an incremental bundle tool like Webpack is that it can automatically detect which files need to be recompiled when a change is made in a dependent file. For example, if you make a small change to a JavaScript file, Webpack can determine which other files depend on that file and only recompile those files. By doing this, the incremental build process can significantly reduce build times and improve developer productivity.
+
+Webpack also has a number other features, such as support for code splitting, asset optimization,

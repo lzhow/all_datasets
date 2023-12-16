@@ -1,0 +1,15 @@
+
+Yes, `c` is a controlled variable.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+An incremental bundlers job is to bundle together all the different files that make up a web application, such as JavaScript, CSS, HTML, images, and other assets, into a single file that can be served to users. This makes it easier for users to download and use the application because they only have to load a small amount of data instead of many small files.
+
+The incremental part of the name refers to how bundlere works. It only updates the portions of code that have changed since the last time the bundle was generated. For example, if you make a change to a JavaScript file, bundlr will only include that specific file in a new bundle, insteadof re-bundling the entire application. 
+
+Webpack is widely used as an incremental bundle tool because it can automatically detect which files need to be rebuilt when you modify them

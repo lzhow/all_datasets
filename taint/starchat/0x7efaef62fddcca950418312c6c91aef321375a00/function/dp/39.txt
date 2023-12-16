@@ -1,0 +1,20 @@
+
+Yes, ` balance 1 Adjusted ` is data-dependent on `_ reserve1 ` in ` swap ` function.
+
+Reason:
+In the ` _ update ` method, the value of `_ balance ` and `_ reserves ` are updated. In the updated code, `_balance ` becomes `Balance0 `and `_reserves` becomes `_Reserve0`.
+The value assigned to ` Balance1adjusted ` depends on ` Reserve1 `.
+If the data in memory is not updated, then the old value will be used, which is `_ Reserves`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning Python. Here are some suggestions:
+
+   1) Start with the basics: If you're new to programming, you may want to begin with Python basics, such as variables, loops, and functions.
+
+   2) Follow tutorials: There many online tutorials and courses available that can help you learn Python from scratch. Some popular beginner-friendly tutorials include Codecademy, Udemy, Coursera, edX, Skillshare, Treehouse, etc. 
+
+   3) Practice: As you progress, try to practice regularly to

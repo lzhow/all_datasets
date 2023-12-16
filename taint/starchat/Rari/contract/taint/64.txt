@@ -1,0 +1,16 @@
+
+The variable "c" in line 30 is a local variable that is used to store the result of the multiplication. Since the purpose of this function is to perform multiplication, and since Solidty does not allow for the declaration of local variables without an initial value, the value of "a" must be non-zero, otherwise the require statement would always evaluate to true and the code would proceed to the return statement, which would return the wrong result. Therefore, this variable is in fact controlled directly by a user, as it must always be set to a nonzero value before the call to this multiplication function.
+
+
+  Can you write a contract that exploits this flaw? Please provide an example
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I'd like a TL;DR at the end. Thanks!
+
+
+
+
+An incremental bundling tool is designed to optimize the performance of web application development by bundl ingtogether all the assets (JavaScript, CSS, images, etc.) required by an application into a single file. This makes it easier for

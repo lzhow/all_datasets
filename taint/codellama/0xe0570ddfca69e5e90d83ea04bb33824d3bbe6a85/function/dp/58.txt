@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the constructor function, the `_approvedDelay` variable is assigned a value of `_delay`, which is a parameter passed to the contract. This means that the value assigned to `_apporveddelay` is dependent on a variable that is not defined in this function.
+On the other hand, in function deposite, variable shares is defined as a local variable. It is also dependent only on local variables and not on any external variables. Therefore, it is data-dependent on `_pool` and `_amount`.

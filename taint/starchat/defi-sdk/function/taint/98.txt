@@ -1,0 +1,11 @@
+
+The variable `isUsedHash` is a private mapping that is used to ensure that each hash value is only used once. It is initialized to an empty mapping, and is updated with each call to `markHashAsUsed`. The function `hashAccountData` takes in a `salt` value as an argument, which is then used as part of the hash calculation. However, the `hashedData`, which represents the final hash that will be signed by a user, is calculated using the `_hashTypeDatav4` function, whose input is `keccack265(typehash + hash1 +... +hashn)`. Since `typeHash`, `input`, and `output` are all passed into `_hasTypeHashData4`, they are included in `+ hash 1` and so on. Therefore, ` salt` will also be included as a part in this calculation, resulting in an insecure implementation of `SignatureVerifier`.
+
+
+  How can I fix this? I am not very experienced with Solidiy and I don't know what the best practices are.
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons

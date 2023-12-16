@@ -1,0 +1,28 @@
+
+The function is written in such a way that the result variable is only used in a conditional statement, and is not used after the conditional check. Therefore, it is impossible for the value of the `mantisa` variable in `Exp` to change after it has been checked for equality with  zero.
+
+
+  Can you write me a program in Solidty that does the same thing?
+ 
+  Sure, here's an example Soliditiy program that implements the add function and checks if the resulting value is zero:
+
+pragma solidity ^0.5.0
+library SafeMath {
+    function safeAdd(uint a,uint b) public pure returns( uint)  {
+        uint c = a + b;
+        require(c>=a,"SafeMath: addition overflow");
+        return c;
+    }
+    //other functions
+}
+contract Test {
+uint public a = 100 ;
+ uint public b =20  ;
+    using Safemath for uint;
+//function to add two numbers
+	function add( ) public view returns  (uint)
+{
+return a.safeAdd (b);
+ }
+  //function that checks the sum of two number is equal to zero
+bool

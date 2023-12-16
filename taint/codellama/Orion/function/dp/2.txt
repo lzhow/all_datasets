@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `pairForCure` function, the local variable pool is assigned the value returned by the ICurlRegistry.findPoolForCoins function. This function takes three arguments: factory,token A, and token B.
+However, in ` getAmoutInUnivesal`function, there is no direct reference to the pool variable. Instead, it calls the getreserves function which takes the factory and from and to as arguments.  The getamountInuv2 function is called in this function and it takes amount out,reserve in,and reserve out as parameters. It is not clear if the reserve in and reserveout are related to pool. Therefore, we cannot determine if pool and the from variable in getamoutinuniversal are dependent on each other.

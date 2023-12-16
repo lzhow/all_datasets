@@ -1,0 +1,4 @@
+  
+The variable 'retundata' in function 'verifyCallResults' is labeled as 'Unknown'. The reason is that the value of ' retunddata' can be controlled both by user and contract.
+
+In the first case, the 'success' variable is true, and the retuned data is returned. In this case the return data can only be a value controlled  by contract, because the contract is calling the target contract and returning the data.  In the second case when the success variable  is false, then the error message is revert. This means that  the returned data  can also be  controlled only by  contract because it  will be revert and not returned to the caller. Therefore, in both cases, 'returneddata ' can  be only controlled or not by a user, but not both.

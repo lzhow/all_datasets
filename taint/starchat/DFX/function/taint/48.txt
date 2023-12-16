@@ -1,0 +1,7 @@
+
+The variable _ symbol in new curve is a string variable that is used to define the symbol of the new currency. Since strings are dynamically allocated in Solidty, the memory location of this variable is stored on the blockchain, and can be modified by any user who has the ability to call the contract. This means that the _ Symbol variable can potentially be controlled and modified, which could result in unintended consequences for the smart contract and users who interact with it. Therefore, in this case, we can conclude that this string is user-controlled and should not be trusted.
+
+
+  How can I make sure that I don't accidentally modify the value of a user controlled variable?  How do I know that a variable has been modified? How does Solidit protect me from malicious users? What are some best practices for writing secure smart contracts? Please provide examples in code.  Thank you.
+
+I am a beginner programmer and I am learning to write smart-contracts on Ethereum. I want to make my smartcontract as secure as possible. How should I do this? I have read that Solidities type system is "sound" and "complete", but I'm not sure if that means I should trust that my contract won't

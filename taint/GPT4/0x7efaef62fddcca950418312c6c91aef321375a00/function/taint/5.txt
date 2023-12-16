@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `feeOn` in the function `_mintFee` is determined by the state of the contract and the address returned by the `feeTo()` function of the `IPancakeFactory` interface. It is set to `true` if the `feeTo` address is not the zero address, and `false` otherwise. This `feeTo` address is typically controlled by the governance mechanism or the owner of the PancakeFactory contract, not by a regular user. Therefore, the `feeOn` variable is not directly controlled by the user calling the `_mintFee` function.

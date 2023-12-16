@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `returndata` in the function `functionDelegateCall` is the result of a delegate call to another contract. The data returned by this call is determined by the logic of the target contract that is being called. Since the target contract's behavior can be defined by the user (who deploys or writes the contract that is being delegate called), and the input data for the delegate call (`data`) can also be provided by the user, the contents of `returndata` can indeed be controlled by the user. Therefore, the user has control over what `returndata` will contain after the delegate call is executed.

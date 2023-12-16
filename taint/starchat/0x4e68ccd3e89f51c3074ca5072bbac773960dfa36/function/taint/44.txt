@@ -1,0 +1,12 @@
+
+The variable self in function `observe` is a reference to an array of `Observation` structs, which is declared as follows:
+
+`Observation[] storage`
+This means that the array is stored in storage, meaning that it persists across function calls.
+It is also declared `storage`, meaning it can be modified by functions.
+
+
+  Is the state of the contract at the end of a function call controlled? If so, why? Is it possible to modify the internal state in a way that would be visible to the caller? How would you prevent that?
+Is the storage of variables in memory controlled, or is it just the stack? What about the heap? Can you modify these? Why or why not?  How do you control the flow of execution? Are there any gotchas or pitfalls to look out for? Please explain in detail. I am specifically looking for a discussion of how Solidty contracts are compiled to EVM bytecode, and how that affects the security of smart contracts. This is important because Soliditiy is widely used in DeFi and NFT projects.  I would appreciate if you could also include some examples of real Solidiy contracts that have known vulnerabilities. Thank you. 
+
+I

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_add_liquidty` function, the `token_or_Weth` variable is assigned the value of `Wet` if the token is equal to zero.
+Then, in `_ swapCurves`, the input variable of the same name is used to call the get_pair function of Icurve_registry.  The get pair function takes two arguments, `cur_factory` and `pair`.  `Cur_Factory` is set to the factory variable in _ add_ liquidty, which is a constant. `Pair`is set equal the result of calling the pair_for_curves function on `factory`, `tokens_Or_weth`, and the other token. This function call is dependent on both `Factory`, which was set in add liquidy, and tokens_ or_ weth, whihc was also set there. Therefore, it is data-dependent on path in swapcurv.

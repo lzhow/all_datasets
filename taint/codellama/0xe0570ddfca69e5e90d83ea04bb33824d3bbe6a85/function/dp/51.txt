@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `r` variable is calculated based on `balances()` and `total_supply()`, and the `_burn()` function is called. Then, `want().withdrawn()` is checked, and if it is less than ` r`, the strategy is withdrawer. Finally, want is transferred to the sender.
+  In the second function , the same process is repeated. However, there is a difference in that the balance of the want token is first checked and compared to ` _r`. If it's less, then the withdrawal amount is adjusted to be the difference between the two. This adjustment is done by calling the safeTranser function.  The ` b` and `_r ` variables are both used in this function to calculate the amount of want tokens to transfer to a user. Therefore, it can be concluded that `  b ` is data-dependent on `_ r`.

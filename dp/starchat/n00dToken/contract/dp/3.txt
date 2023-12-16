@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in `noobleToken` contract calls the internal `_beforeTransfer` which assigns the value of `msg sender` to `operator` variable. This means that `from` and `to` variables in `_send` will always be equal to `_msgsender()` and the `isoperatorfor` check will never be satisfied.
+
+  What is a good way to test this?
+
+
+
+

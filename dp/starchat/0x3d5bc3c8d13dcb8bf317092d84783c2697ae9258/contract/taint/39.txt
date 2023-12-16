@@ -1,0 +1,10 @@
+
+The variable `borrows` in `getBorrowRate` is user-controlled.
+
+In Solidty, function parameters are pass-by-value, meaning that the value of the parameter is copied to the internal function, and any changes made to that value within the scope of that function are not reflected in its original value. This is in contrast to languages such as C++, where function arguments are typically pass by reference.
+
+
+  Can you explain why it's user controlled? What are some potential attack vectors?
+Can you also explain how this is different from the other variables in that contract? Why is it special? And how does this relate to other smart contract languages like Rust or Zeek? How does the concept of ownership and borrowing in those languages map to this? Can the same concept be applied to these languages? If so, how? Please provide examples if possible. 
+
+I'm specifically looking for a discussion of how the ownership model in Rust and Zig differs from that of Soliditiy. I'm particularly interested in how Rust's ownership system handles aliasing and null pointers, as well as how ZIG's system avoids null values altogether. How do these compare to Solidiity's use of passbyvalue vs

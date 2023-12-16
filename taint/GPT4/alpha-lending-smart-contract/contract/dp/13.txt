@@ -1,0 +1,3 @@
+yes
+
+The variable `pool` in the function `setPool` is data dependent on the variable `_totalBorrows` in the same function. This is because within the `setPool` function, the `pool.totalBorrows` state is directly assigned the value of `_totalBorrows`, creating a data dependency between the two. The assignment `pool.totalBorrows = _totalBorrows;` establishes that the state of `pool.totalBorrows` depends on the input `_totalBorrows`.

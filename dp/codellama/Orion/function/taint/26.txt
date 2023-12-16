@@ -1,0 +1,4 @@
+  
+The variable 'pair' in add liquidty from exchange is labeled as 'No'. The reason is that the pair is created in a different function called createPair. This function creates a new pair and returns the address of the new pool. Therefore, the value of pair in this function cannot be controlled directly by a user and is considered uncontrolled.
+
+In general, when a variable is assigned a value in one function and used in another function, if there is no way for the second function to change the first function's variable, then the original variable can be considered as uncontrollable by user in terms of security.

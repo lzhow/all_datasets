@@ -1,0 +1,5 @@
+  
+No, the ` amount Out` variable in function ` _ doSwaptokenn` is not dependent on ` cur Balance _scope _0 ` variable.
+
+The reason is that the value of ` amounts [0]` is assigned to ` amoun tIn` before the call to `_swap` function, and the `_ swap`function does not modify the values of the elements of` amounts` array. Therefore, `amounTIn ` is independent of any changes made to the` curbalancescope_  `variable in `_ do Swap Tokens` .
+ 

@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `i` loop in `for (i =...)` increments `next` before the call to `IUniSwapV.swap`, which means that `pairs` and `directions` will be out of sync after the first iteration.
+
+  What is a good way to test this?
+
+
+
+

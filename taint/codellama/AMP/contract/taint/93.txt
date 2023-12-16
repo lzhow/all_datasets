@@ -1,0 +1,4 @@
+  
+No, the `_ authorized OperatorBy Partitions` variable is a mapping that maps the address of the token holder to a nested mapping of partition prefixes to addresses of authorised operators. It is therefore not directly controlled directly by a user, but rather by other contracts or users who have been authorise to operate on the tokens.
+
+The reason for this is that the mapping is used to store the authorisation of operators to transfer tokens on behalf of a token owner, and this authorisations are typically granted by another contract or user who has the authority to do so. Therefore, while the value of this mapping may be influenced by user input, such as the approval of an operator by an owner of tokens, this input is indirect and not the direct result of user action.

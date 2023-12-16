@@ -1,0 +1,4 @@
+  
+No, the ` curve` variable in function `setParams` is NOT controlled  by user because it's a local variable.
+
+The ` setParam` function is a public function, and it takes a `Storage` contract as an argument. However, this argument is passed by reference, which means that the contract is stored in memory and can be modified by any user who calls the  function. Therefore, any changes made to the curve variable within the setParameters function will be reflected in any other contract that has a reference to it. 

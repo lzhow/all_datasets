@@ -1,0 +1,3 @@
+yes
+
+In the `functionCallWithValue` function, the variable `success` is set based on the outcome of the `target.call{ value: value }(data)` operation. The `value` variable is used to specify how much ether (in wei) should be sent along with the call. If there is not enough balance in the contract, or the call to the non-contract address fails, it will affect the value of `success`. Therefore, `success` is data dependent on `value` because the amount of ether sent with the call can influence the execution and the result of the call operation, which in turn determines the value of `success`.

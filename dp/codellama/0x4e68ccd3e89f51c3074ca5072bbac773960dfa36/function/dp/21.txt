@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `transform` function, the argument `Obseravtion memory` ` last` is passed by value, which means it is a copy of the original ` Observavion` object. However, this copy is not a direct reference to the object in memory, but rather a separate copy that is created when the method is called.
+Therefore, when ` transform` modifies the copy, it does not affect the actual ` Obseration` objects in ` self`.
+On the other hand, ` write` method modifes the array `Self` directly, so the changes made to `Last` will be reflected in` self` as well. 

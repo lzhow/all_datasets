@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `unlocked` in the `PancakePair` contract is a private state variable that is used as a reentrancy guard. It is not directly accessible by the user or any external entity. The variable is used within the contract's functions to prevent reentrant calls by ensuring that certain functions can only be called once at a time. The control of this variable is strictly within the contract's logic and cannot be manipulated by users through transactions or calls to public or external functions.

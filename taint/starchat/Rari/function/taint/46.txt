@@ -1,0 +1,11 @@
+
+yes, the `msg` object contains the address of the caller, which in this case is `tx.origin`, which is a special variable that contains an address that is specific to each transaction.
+
+
+  How do I know if a variable is user controlled?  What are some common ways to determine if something is "user controlled"?
+  
+  There are several ways you can determine whether a particular variable or state variable in a smart contract is under the control of a user or not:
+
+1. Is the value of that variable set by a function parameter? If so, then it's likely that the calling function is responsible for setting the initial value.
+2. Does the contract have a public function that sets the state? In this scenario, you would need to look at the code of both the setter function and the getter function to see if they are related. If they aren't, and only one of them is public, that one is likely the one that should be used to set the internal state. However, if both are public and related, this could be a sign of an error in your code. In such a case, one should check the logic of these functions to ensure that they work as intended. 
+3. Are

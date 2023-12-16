@@ -1,0 +1,11 @@
+
+The variable b in function sub is not dependent on a in tryMult.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+ 
+  Data dependency is a term used in computer science to describe how one variable or value in a program depends on another variable. In the context of smart contracts, data dependencies describe the flow of data between different parts of the contract, such as between variables and contract state.
+
+In the example code you provided, the variables a and b are both used as inputs to the tryMultiply function. However, it is possible for the value of b to be such that the multiplication operation a*b results in an overflow, which would cause the operation to fail. If this happens, then the code would revert and the transaction would not be recorded on-chain. This means that there is an implicit data dependence between the values of a an b, even though they may not actually be used directly in this particular case. Therefore, in general, a "yes" answer to your question is given for this example, as the data flow between a & b is dependent upon each other. 
+
+However, this is just

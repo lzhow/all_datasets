@@ -1,0 +1,4 @@
+  
+No, the `Curves` variable in `proportionWithDraw` is NOT controlled  by user because it's a library variable.
+
+The `Propotional Liquidty` library is imported in this contract, and it contains the definition of the curve variable, which is a struct that contains information about the liquidity pool. This variable is used to store the information of a liquidty pool, such as the assets, weights, total supply, etc. It is defined as a public variable and is accessible to all functions in that library. Therefore, this variable cannot be controlled directly by a user, as it can only be modified by functions within the library itself.

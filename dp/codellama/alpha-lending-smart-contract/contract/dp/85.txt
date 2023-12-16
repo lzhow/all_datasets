@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `pool.reserves` is not directly dependent on `_token` or `_borrows`. The `calculateRatio` function is called to calculate the `totalReserve` and `availableReserv` values, but these values are stored in `pools` which is a mapping of addresses to `Pool` structs. Therefore, the value of `revervePercentage` does not depend on any specific value in `_tokens`

@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `isContract` function, the local variable size is assigned a value using the assembly language instruction `extcodesiz`e(address). This instruction retrieves the size of the contract at the specified address. However, this instruction does not depend on any other variable in this function.
+On the other hand, in ` functioncall`, the parameter `data` is passed to the internal function`functioncallwithvalue`. This function uses the value of ` data` to perform a function call. Therefore, ` size` and ` target` are both data-dependent on `  data`.
+Therefore, we cannot determine whether `Size` depends on`target`. The label ' Unknown' is used to indicate that the relationship between the two is not clear.

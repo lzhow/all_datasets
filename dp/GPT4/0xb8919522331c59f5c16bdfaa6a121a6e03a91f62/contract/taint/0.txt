@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `newImplementation` in the function `upgradeToAndCall` is an argument passed to the function when it is called. Since this function is external and can be called by any user with the appropriate permissions (in this case, the admin as checked by the `ifAdmin` modifier), the value of `newImplementation` is indeed controlled by the user who invokes the function. The user can pass any address they choose as the `newImplementation` argument.

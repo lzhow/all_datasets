@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the value of `_types` is assigned to the mapping `supportedFactory` using the `updateFactories` function, which is called by the owner of the contract. This function can be called at any time, and therefore the assignment to `factories` and `factoryTypes` may occur after the constructor has finished executing. Therefore, the data-dependence relationship between `_curType` (which is a local variable in `_updateFactory`) and the state variable curbalance (also a function local to `_swapTokens`) is not guaranteed to hold.
+
+
+  Can you explain why this is true?
+ 
+  The reason why the `_typ` variable is data dependant on `currentBalance`, is because the order in which the code executes is non-deterministic. Specifically, when the program reaches the line `uint curType = supportedFactory[factory][i]` in `doSwapsThroughPool`, the values of `i` or `factoy` could have changed since the last time the loop was executed. If `factor` has changed, then the index `0` of supported factory could be referring to a different factory than it was previously. In this case, `typ

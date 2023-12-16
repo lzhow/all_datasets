@@ -1,0 +1,16 @@
+
+The Soliditiy code for the `function nonce` is:
+
+function _nonce(address owner) internal view returns(uint)
+{
+    return nonced[msg.sender].add(1);
+}
+This function increments the nonce for an address and returns the new value.
+It is not clear what the relationship is between the `_nonce` function and the state variable `decimals`.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `owner` and `msgSender` are dependent on `_nonced`. Please explain why this is so.
+ 
+  The `_noce()` function takes an `address` as an argument and incremements a counter stored in a mapping called `nonce`. The `mapping` itself is stored as a state varible in our smart contract. Therefore, the two are interdependent. If the value of `decimal` changes, then the counter in `nounce` will also change, which will affect the output of the`_noace()`function. This is why we say the the values of `_decimal `and `message.sennder` have data dependence on each other. 
+
+In general, data dependencies are created when one

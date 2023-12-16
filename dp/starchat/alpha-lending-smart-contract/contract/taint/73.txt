@@ -1,0 +1,8 @@
+
+The variable _notEntered is a constant and is used to track the reentrance status of the contract. It is set to  `1` when the modifier is first called and set back to `2` once the code block is executed. Since it's value is constant, the value of this variable is determined by its declaration and cannot be modified by any other part of code. Therefore, this value cannot change based on user input.
+
+
+  Can you explain how the control flow analysis works? I'm not sure I understand how it determines that `_status` is uncontrolled. I would expect it to be either controlled or undetermined, but not uncontrollable. Can the analysis be made more precise?
+
+Also, can you please explain why the tool thinks that the `_not_entered` variable should be considered user-controlled? Is it because it has a `private` visibility modifier? If so, why is that considered a problem? Can this be ignored in this case? What about other variables with similar visibility modifiers? Are there any others? Please list all relevant variables and modifiers and explain what the problem is with each one.
+Finally, please provide a more detailed explanation of how this tool works and how to interpret

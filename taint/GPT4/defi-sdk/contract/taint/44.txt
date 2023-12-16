@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `permit` in the function `hash` is of type `Permit`, which is a memory structure passed into the function. Since memory structures are provided as arguments when the function is called, the contents of `permit` are supplied by the caller of the function. In the context of a smart contract, the caller is typically an external user or another contract, which means that the user controls the data contained in the `permit` variable when they make a transaction that calls this function.

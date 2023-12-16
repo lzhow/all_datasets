@@ -1,0 +1,11 @@
+
+yes, it is data-dependent on num-tokens.
+
+The reason is that the loop in `_grant-comp` increments `i` and `j` simultaneously, which can cause `comp-speeds` to be shorter than `c-token`s and cause the `for` loop to exit early.
+
+
+  Can you explain why
+ 
+  Sure, I'd be happy to explain.
+
+  The `claimRewards` function in RewardDistributerDelegate.js has a nested loop that iterates over the c-Tokens and the holdings. For each cTokne, the code checks if the borrow speed is set for that ctoken, and if so, updates the comp borrow index for the given ctokne. Then, for each holder in `holders`, the distribute borrow function is called, passing in that holder and ctoke. This function updates and stores the new comp accruing for this holder. After this loop, we check if we should update the supply index as well, using the same logic. Finally, after the loops are done, each user's accrual is updated by calling the grant-internal function, with the user and their accured amount. If the amount is greater

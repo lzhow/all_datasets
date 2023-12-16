@@ -1,0 +1,3 @@
+yes
+
+The contract state `vvisr` is data dependent on the variable `_vvisr` in the function `constructor`. This is because within the constructor, `vvisr` is directly assigned the value of `_vvisr` when the contract is being deployed. The line `vvisr = vVISR(_vvisr);` establishes a data dependency relationship where the state `vvisr` is initialized with the value passed to `_vvisr`.

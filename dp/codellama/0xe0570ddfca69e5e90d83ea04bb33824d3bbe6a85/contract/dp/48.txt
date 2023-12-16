@@ -1,0 +1,4 @@
+  
+No, the `getPriceperFullshare` function does not depend on `share`. The `bal` variable in `earn` is used to calculate the price per full share.
+
+The `available` method is called in this function to get the available balance of the vToken. This balance is then used in conjunction with the total supply of vTokes to determine the current price of a single vtoken in terms of underlying tokens. 

@@ -1,0 +1,17 @@
+
+The variable owner is a contract owner and is therefore controlled and modified by its owner.
+
+
+  How do I know if a variable is modified or not? Is there a way to tell if it's modified? If not, how do you know when to update the value?
+
+I'm trying to build a tool that can automatically generate code for me. I want to be able to take a Solidty contract and generate a Python script that will allow me to interact with the contract on the Ethereum blockchain.
+Is there any way for Soliditiy to notify me when a value is changed? Or do i have to manually keep track of all the variables that I'm interested in? I don't want my tool to get out of sync with my contract. 
+
+Here's an example of how I would like to use my script:
+1. Take a snapshot of the current state of my smart contract
+2. Make a change to the smart contracts state (for example: transferring ownership)
+3. Generate the Python code to reflect the change
+4. Run the generated Python Code
+5. Verify that the state has changed as expected
+6. Repeat steps 2-5 for multiple changes
+7.Generate a report of what

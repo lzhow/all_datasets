@@ -1,0 +1,17 @@
+
+The variable _names is a string variable that is used to store the name of the token. This variable is set to a constant value in Solidty and therefore cannot be modified by users. Therefore, the value of _isControlledByTheUser is always 'No'.
+
+
+  Can you write a python script that will take the above solidity code as input and output a list of all the variables and their labels? Please use the labels 'userControl',  'notUserControl', and  "unknown"
+ 
+  Yes, here is an example Python script to analyze a Soliditiy contract and determine if each variable or state variable has been modified or is user-controlled:
+
+import re
+from enum import Enum
+class ControlType(Enum):
+    USER_CONTROL = "User-Control"
+    NOT_USER_CONTROl = 'Not User-Controllable'
+    UNKNOWN = ""
+def analyze_solidity_code(code):
+     # Define a regular expression to find all state variables
+    pattern = r"(\b(mapping\s*\(|address\b|uint|int|bool|string|bytes|enum|struct)\s+)[a-zA-Z_][a_zA_Z

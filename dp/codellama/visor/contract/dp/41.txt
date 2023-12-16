@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `isContrac` function, the value of `address.balancesize` is assigned to the local variable size. This variable is then used in a comparison to determine whether the contract is a contract or not.
+On the other hand, in ` functioncallwithvalue`, the address of the target contract and the amount of value to be transferred are passed as parameters. If the call is successful, then the return value is returned. However, if the transfer fails, it reverts the transaction. In this case, ` size` variable in iscontrac function can be used to check if there is enough balance to make the payment. Therefore, size is data-dependent on target in function callwith value.

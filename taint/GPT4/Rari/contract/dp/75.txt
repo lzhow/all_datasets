@@ -1,0 +1,3 @@
+Yes
+
+The variable `borrower` in the function `flywheelPreBorrowerAction` is data dependent on the variable `cToken` in the same function. This is because `borrower` is used as an argument in the call to `distributeBorrowerComp`, which in turn uses `cToken` to access the `compBorrowState` mapping and other properties and methods of the `CToken` contract. The `compBorrowState` mapping and the `CToken` contract's methods are indexed by the address of the `cToken`, and the computation of rewards for the borrower depends on the state of that specific `cToken`. Therefore, the data used to compute the borrower's rewards is dependent on which `cToken` is passed to the function.

@@ -1,0 +1,4 @@
+  
+No, the ` amount In` variable in function `_do Swap Tokens` is NOT controlled  by user because it's a local variable that is defined in this function and it can't be modified by any external user or smart contract.
+
+The ` _ do Swaptokenn` function takes an `Internal Swapp Data` struct as an argument, which contains the amount of tokens to be swapped. This amount is stored in `swap Data. amount in` and is used to calculate the amounts of the tokens that will be transferred to the pool. However, this amount can be changed by an attacker if they can manipulate the data in memory. Therefore, we should not trust this value and should use the value of ` amounts [0]` instead, as it has been calculated using the correct amount and the current balance of each token.

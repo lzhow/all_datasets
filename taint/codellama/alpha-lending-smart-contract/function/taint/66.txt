@@ -1,0 +1,5 @@
+  
+The variable 'data' in function 'decodeInt24' is labeled as 'Unknown'.
+
+This is because the 'Data' struct is defined as a library-level struct, which means that it can only be accessed within the library. Therefore, the value of the `offset` field in `Data` is unknown to the outside world, and it cannot be controlled directly by a user of this library, even if they have access to a `decodeData2` function.
+However, if a malicious user were to call the decodeData function with a specially crafted `raw` value, they could potentially cause the contract to read or write to memory outside of its intended bounds, leading to unintended consequences.

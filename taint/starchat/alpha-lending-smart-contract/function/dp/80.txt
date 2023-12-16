@@ -1,0 +1,16 @@
+
+The contract is data-dependent on `_user` and `_useCollatera` because it uses them to access the `userPool` mapping.
+
+
+ 
+Yes, the data in `UserPool[]` is dependent on both `_User` (the user's address) and the `_Token` contract address. This is because the code uses the user address and token contract to index into the mapping `usersPools`.
+
+
+
+
+
+   What is a good way to learn how to code in python?
+  
+Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
+
+"Python was created in 1989 by Guido van Rossum. He worked for the National Research Institute for Mathematics and Computer Science in Netherlands. Van Rossaum was a Dutch programmer who worked with Guidovreugd at the CWI (Centrum Wiskunde & Informatica) from 22 July 00 until 3 October 95. In 4 October, vanRossums' son, Guidobert, became the leader of

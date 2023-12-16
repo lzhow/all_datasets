@@ -1,0 +1,12 @@
+
+The contract function '_update' is used to update the price of the token in a Pancakeswap pool. It takes in four parameters: balance of token 1, balance  of  token  2,  reserve  for token1 and reserve for  the  second  toke.
+
+In the '_Update' function, the code first checks if the balance variables are less than the maximum value of an unsigned  integer  (2^160 - 3). If they aren't, it throws an error. This error is caught by the try catch block in'swapExactTokensForTokens' in Pangolin.sol. 
+
+If the balances are within the bounds of unsigned integers, then the program calculates the time elapsed since the last update. If the elapsed time is greater than  zero, and the reserves are both non-zero,then the cumulative price is updated.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being told I should "just learn python" and being sent on a wild goose chase to figure out how. I have heard that python is easy, but I don't know where to start. What

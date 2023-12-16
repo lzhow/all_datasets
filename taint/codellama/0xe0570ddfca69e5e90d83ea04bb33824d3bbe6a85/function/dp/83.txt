@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the given code, the `wanted` function is called, which returns the address of the token that the strategy is currently invested in. This address is then compared to the `_ token` address passed as an argument to ` in CaseTokesGet Stuck`. If they match, then the balance of tokens in `this` contract is transferred to msg. sender. If the addresses do not match then nothing happens.
+Therefore, ` strategy` is not dependent on `_tokens` because the value of ` _toke`n is used to determine whether or not to transfer tokens.

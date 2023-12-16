@@ -1,0 +1,9 @@
+
+The variable "seizedTokens" in function "redeemInternal" is data-dependent on "liquidator" and "borrower" because it is used to calculate the value of the "amount" variable in "transferInternal". The "accrueInteres" function is called before "withdraw" to update the interest rate.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure! The data dependence analysis in Mythril is based on a static analysis of your Soliditiy code. It looks for assignments to local variables, function parameters, and contract storage variables. For each assignment, it checks if the assigned value depends on any of these variables and if so, marks the assignment as a potential data source.
+
+In the example you gave, the variables "msgSender" (in the redemeInternal function) and the parameters "liqulator" ("liquidatior" parameter in seiz function), and seizedToken" are all marked as potential sources of data. When the analysis reaches the line "uint amount = seizerTokens * exchangeRate;" it looks at the values of "exchangeRate" which is assigned in a previous line, "rate = getExchangeRate()". This assignment

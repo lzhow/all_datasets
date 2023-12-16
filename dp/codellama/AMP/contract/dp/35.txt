@@ -1,0 +1,4 @@
+  
+No, the ` total Supply By Partitions` contract is not dependent on `_ value` variable in ` transfer ByPartion` function.
+
+The ` _ value ` variable is used to calculate the new balance of the `_ to` address in `_ addToken To Partiton` method, but it is never used in calculating the total supply of tokens. Therefore, there is no data dependence between the two.

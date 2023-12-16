@@ -1,0 +1,4 @@
+  
+The variable `_totalLiqidty` in function `getUtiliztionRate` is NOT controlled  by user because it's a function parameter.
+
+In Solidiy, function parameters are not stored in contract storage, so they are considered to be controlled only by function calls. Therefore, the value of `_totaLiquidy` can be changed by calling the `setTotalLiuqdity` function, but it cannot be modified by any other means. 

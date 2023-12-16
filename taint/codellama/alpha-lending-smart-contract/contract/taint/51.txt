@@ -1,0 +1,4 @@
+  
+No, the `Receipient` variable in function `claim` is NOT controlled  by user because it's a local variable that is created in each function call and is destroyed when the call is finished. It is also not a state variable of the contract, so it cannot be modified by any user action.
+
+The `userAccummulatedAlhpa` state varaible is a mapping that stores the amount of accumulated alpha tokens for each user address. This variable is set by calling the accumlateAlphaTokens function and can be controlled only by a user who has the permission to call this function.

@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `getReserve` function in `OrinMultipoolLibrary` is called, which reads the state of the contract. If `reserveB` decreases, then `quote` will return smaller values, and the transaction will revert.
+
+  What is a "data dependency" in this context?
+
+
+
+
+

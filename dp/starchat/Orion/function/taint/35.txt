@@ -1,0 +1,20 @@
+
+yes, the amount optimal is a variable that is used to calculate the optimal amount of token A and token B to add to the liqudity pool. It is calculated using the formula:
+
+amountOpt = sqrt( ( amountTokenA * reserveTokenB)^2 + ( reserveAmountB * amounttokenb)^  )
+In this formula, `reserveToken` represents the current balance of the token in reserve, and `reserverAmount` is represents teh current total balance in reseve.
+The amountOpt is then compared to `minAmountA` and the `maxAmount`. If the calculated amount is less than the minimum, then the transaction will revert. If it's greater than or equal to both the min and max, than it will be used in subsequent calculations.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!
+
+
+
+  An incremental bundlers like Webpack is

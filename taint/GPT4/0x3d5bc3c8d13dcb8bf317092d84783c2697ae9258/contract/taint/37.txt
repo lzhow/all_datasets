@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `address[] calldata cTokens` in the function `enterMarkets` is marked as `calldata`, which means it is passed to the function from an external caller. Since this function is marked as `external`, it can only be called from outside the contract, which implies that the `cTokens` array is provided by the user who is calling the function. Therefore, the state of this variable is controlled by the user.

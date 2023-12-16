@@ -1,0 +1,4 @@
+  
+The variable 'supportFactor' in function '_swapCure' is labeled as 'Unknown'. The reason is that the value of 'Supporting Fee' can be set by either the contract creator or the external user who calls the 'add LiquidtyFrom Exchange' function. Therefore, the control of the supporting fee is uncertain.
+
+In the constructor of this contract, there is a parameter called 'factory' that is passed in. This parameter is used to create a new pool pair in a factory. However, this parameter can also be changed by calling the updateFactory function, which allows the owner of contract to update the factory address.  Therefore the ownership of factory is also uncertain, and the supportFacor variable is considered as unknown.

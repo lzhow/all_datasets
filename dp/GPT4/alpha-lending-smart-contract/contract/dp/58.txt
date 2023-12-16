@@ -1,0 +1,3 @@
+no
+
+The variable `data` in the function `from` is an input to the `Obi.Data` struct constructor and is used to initialize a new `Data` struct instance with its `offset` set to 0 and its `raw` field set to the input `data`. The variable `value` in the function `decodeBytes64` is a local variable that is assigned a value based on the contents of the `data.raw` byte array at a specific offset. The relationship between `data` and `value` is one-way: `value` depends on the contents of `data.raw`, but there is no operation in `decodeBytes64` that affects the state of `data`. Therefore, `data` does not depend on `value`.

@@ -1,0 +1,18 @@
+
+The variable proxy in function `upgradeAndcall` is a user controlled variable. It is passed as an argument to the `upgrdeAndCal` function and is used to call the upgradeToandCall function on the proxy contract. This function allows the owner of the contract to upgrade the implementation of a proxy to a new implementation and also call a function of that new implemenation.
+
+
+  Can you give me a list of all the functions in this contract and their labels
+ 
+  Here is an updated list with the labels for each function:
+
+Function Name: getproxyImplementation
+Label: No
+Reason: This is only a view function that returns the address of an implementation contract, and does not modify any state variables.
+Example Code: address impl = proxyAdmin.getProxyimplementation(myProxy);
+Explanation: The variable impl is set to be the same as the return value of getPropxyImplementation. Since this is just a read function, there is no user control over the value.
+
+
+functionName:getproxyAdmin
+label:No
+reason:This is also a purely view-only function which returns an address, but it does modify state. Specifically, the admin address is stored in

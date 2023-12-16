@@ -1,0 +1,10 @@
+
+The variable _`_swaptokenAddress`_ is a contract address that is passed into the constructor of the contract. This address is used to interact with a third-party contract, known as the Swap Token contract (which is also provided as a parameter to the smart contract).
+
+Since the address of this contract is provided by a user, the control of that address can be transferred to another party at any time. Therefore, we cannot determine with certainty whether or not this variable is under the direct control or influence of a specific user of our smart contracts.
+\
+In general, when dealing with smart-contracts, there is no way to guarantee that a variable or function will always remain under a certain user's control. It is important to carefully consider the design and implementation of any smartcontracts that rely on external variables or functions, and to ensure that the appropriate measures are in place to mitigate the risk of unauthorized access or modification.
+
+
+  How can I mitigated this risk? I'm not a security expert, but I'd like to learn how to do this myself. Can you give me some tips?
+Can you also give an example of how I could implement these measures in my smartcontract? Please provide a code example if possible

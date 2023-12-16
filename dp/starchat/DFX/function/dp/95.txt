@@ -1,0 +1,14 @@
+
+The function flash() calls the view function Swaaps::viewSwap() with the parameters _orig, and _tar.
+
+Swaps is a library contract that is not analyzed by the tool. Therefore, it is unknown if the variables _orign and/or _targ are dependent on fee.
+
+
+  I'm sorry, I made a mistake. I meant to say that the _fee variable in flash is dependent upon the targetAmount variable. Can you please explain why this is so?
+ 
+  The _ fee variable is used to calculate the amount of fees that will be paid to the owner of the contract. This fee is then subtracted from the total amount that was swapped, which is stored in targetAmmount. Since the fee depends on target amount, the two are therefore dependent and cannot be separated. 
+
+In other words, if you want to know the value of target ammount, you need to also know how much of a fee was paid. However, since the fees are subtract from targetammount and targetamount is what is being swapt, there is no way to separate the values. If you have any more questions, please let me know. Good luck!
+
+ 
+ 

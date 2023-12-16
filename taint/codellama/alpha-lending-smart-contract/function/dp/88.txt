@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the given code, the `pool` variable is a storage variable that is declared in a function. It is not a local variable, and it is used to store the state of the smart contract.
+When the `_token` parameter is passed to the set pool function, it creates a new pool object in memory. This pool is then stored in storage.  The `totalborrows`, `totaldistributions`, and `lastupdatetimestamp` variables are also stored as part of this pool in `storage`.
+Since the pool variable stores the totalborrow and totaldistribution variables, which are used in calculating the distributor variable. Therefore, distributors are dependent on total borrows.

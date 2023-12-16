@@ -1,0 +1,4 @@
+  
+No, the ` price1cumulativelast` contract variable is not dependent on `_ token 1` variable in ` swap` function.
+
+The reason is that the `_reserves` are used to calculate the amount of tokens to be transferred, and the balance of the tokens is calculated using the I ERC 2 50 interface. However, ` _price0Cummulative` and `  _ price ​​1 cumulative ` are never used in this function, so they cannot be data-dependent on any variable.

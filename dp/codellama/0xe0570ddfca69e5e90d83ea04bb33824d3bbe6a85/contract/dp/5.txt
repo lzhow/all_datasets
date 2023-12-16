@@ -1,0 +1,5 @@
+  
+No, the `Strategy` contract is data-independent of the `_implemention` variable in ` proposeStrategy`.
+
+The `Strateg`y contract has its own state, which is independent of any other contract or variable. It is only dependent on its internal state and the external calls it makes to other smart contracts.
+On the other hand, `_ implementation` is a local variable that is defined within the scope of `ProposeStrategy`, and it is used to store the address of a new strategy implementation. However, this variable is local to ` Propose Strategy`, so it does not affect the state of other variables in other functions. Therefore, ` Strateg ` is still data independent.

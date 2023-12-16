@@ -1,0 +1,22 @@
+
+The variable c is data-dependent on a because it is used in an assertion that requires that c/a be equal to b. This means that if a changes, c may also change, and therefore the behavior of the program may change.
+
+
+  Can you give me a shortened version of this code?
+ 
+  ```
+  function f(uint a, uint b) internal {
+    uint c=a*b;
+    assert(a+b==c);
+  }
+  // c depends on both a and b
+  a=1; b=2; f();
+  b++; f()
+  assert (c==5); // fails
+  c++; // fixes the assertion
+  f();// passes
+  g(b,c);// call g with b and c
+  h(2*a,b+c,a-c) // call h with expressions involving a b c and operators * + -
+  i(f(g(h(x,y,z),a),b)) //call i with a function call
+  j(k(l(m(n(o(p)))))); // complex expression
+  q=r(s(t(u(v(w(q))))),x+y

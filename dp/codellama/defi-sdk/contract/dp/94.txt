@@ -1,0 +1,5 @@
+  
+No, the variables ` returnAmount ` and ` protocolAmountF ` are independent.
+
+The ` get Returned Ammounts ` function calculates the ` returned Ammout ` based on several factors, including the amount of the input token and the fees. However, it does not directly depend on ` protocalFfeAmount `.
+On the other hand, ` emitExecute ` emits an event that includes the returned amount and other information. It does depend directly on` protocolFeesAmount`, but only indirectly through the` getReturneAmountss` function. 

@@ -1,0 +1,3 @@
+Yes, the variable `amounts` in the function `_doSwapTokens` is data dependent on the variable `curBalance` in the same function. 
+
+Explanation: The value of `curBalance` is assigned to `amounts[0]` in the following line of code: `amounts[0] = IERC20(swapData.path[0]).balanceOf(initialTransferSource) - curBalance;`. Therefore, the value of `amounts[0]` depends on the value of `curBalance`.

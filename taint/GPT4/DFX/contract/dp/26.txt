@@ -1,0 +1,9 @@
+Yes, the variable `curves_` in the function `proportionalDeposit` is data dependent on the variable `grossLiquidity_` in the function `getGrossLiquidityAndBalancesForDeposit`. 
+
+Explanation: The value of `curves_` is assigned the value of `_newShells.mulu(1e18)` in the `proportionalDeposit` function. The value of `_newShells` is calculated based on the value of `__deposit`, which is derived from the input parameter `_deposit`. The value of `_deposit` is not directly dependent on `grossLiquidity_`.
+
+However, the value of `_newShells` is also calculated based on the value of `_totalShells`, which is obtained from the `curve.totalSupply` variable. The value of `curve.totalSupply` is updated in the `burn` and `mint` functions, which are called within the `proportionalDeposit` function. The `burn` and `mint` functions modify the `curve.totalSupply` variable based on the value of `amount`, which is derived from the input parameter `_deposit`.
+
+The value of `grossLiquidity_` is calculated in the `getGrossLiquidityAndBalancesForDeposit` function by iterating over the `curve.assets` array and calling the `Assimilators.viewNumeraireBalanceLPRatio` function for each asset. The `Assimilators.viewNumeraireBalanceLPRatio` function retrieves the balance of an asset, which can be modified by external factors.
+
+Therefore, since the value of `curves_` in the `proportionalDeposit` function depends on the value of `grossLiquidity_` in the `getGrossLiquidityAndBalancesForDeposit` function through the `curve.totalSupply` variable, there is a data dependency between these two variables.

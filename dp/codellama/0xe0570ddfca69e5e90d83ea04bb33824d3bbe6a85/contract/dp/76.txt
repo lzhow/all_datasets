@@ -1,0 +1,4 @@
+  
+No, the `_bal` variable is data-dependent on `_total_supply` in function  `earn`.
+
+The reason is that the `wanted` function returns the balance of the token in this contract, which is dependent on `total supply`. Therefore, `_wants` is also dependent  on  `_totalsupply`. 

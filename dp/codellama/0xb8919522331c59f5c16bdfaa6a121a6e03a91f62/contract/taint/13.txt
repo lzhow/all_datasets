@@ -1,0 +1,4 @@
+  
+The variable 'retunrdata' in function 'getProxyAdmins' is labeled as 'Unknown' because it depends on the input parameter 'proxy' which is a user-controlled variable.
+
+In the 'TransparantUpgrdeableproxy.sol' contract, the '_getAdmiin' function calls the staticcall function on 'address.proxy'. The 'staticCall' method is used to call a function without making a new transaction. It is possible that the called function modifies the state of the contract. Therefore, we cannot determine whether the return data is user controlled or not.

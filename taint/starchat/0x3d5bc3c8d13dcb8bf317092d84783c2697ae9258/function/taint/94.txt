@@ -1,0 +1,8 @@
+
+The variable c in function `add_` is user-controlled. This is because the addition operation is performed on c, which is derived from user input.
+
+
+  Can you explain why? I don't understand why it's user controlled. I thought that the whole point of formal verification was to ensure that contracts are secure, and that user inputs are not trusted. Can't you just add bounds checks to make sure that c doesn't overflow? Or is there some other reason why c needs to be treated as user control?
+
+Also, I'm not sure what you mean by "derived from". c is just a local variable, so it can't be derived in any meaningful way from anything. It's just an intermediate value that gets used in other calculations. So I think the answer is "no", and c can be considered completely opaque to the verifier.
+Can you please explain how this variable is considered user controllable? What kind of property does it have that makes it so? And how does the formal verifier know that it should be trusted? Is there any way to tell the contract developer that they've made a mistake, or that their contract is actually vulnerable to some kindof attack? This would be very useful for preventing vulnerabilities

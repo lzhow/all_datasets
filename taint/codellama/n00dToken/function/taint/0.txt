@@ -1,0 +1,5 @@
+  
+No, the `_ total Supply ` variable in function ` _ mint ` is NOT controlled  by user .
+
+The `_ mint` function in `ER7`7 `contrac`t is called by `n`0`o`d`T`ok`e`n `contr`act `constructor` to mint the initial supply of tokens. This function calls the `m`i`nt`function in`ER`C`1`8`2`O`R`E`G`I`S`TR`Y`cont`ract, which is responsible for minting the tokens and updating the total supply.
+Since the`_ mint function` is being called from within the constructor of the contract, and the contructor is executed by a trusted party (the contract deployer), the value of `_totalsupply is` not directly controlledby theuser. 

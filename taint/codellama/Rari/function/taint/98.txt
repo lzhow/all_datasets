@@ -1,0 +1,4 @@
+  
+No, the `__ admin` variable in this function is NOT controlled  by user because it's a private variable and it can only be accessed by internal functions.
+
+The `__ administrator` is a variable that stores the address of the administrator of this contract. It is set in `initialize()` and can be changed by calling `setAdmin()`. The administrator is responsible for managing the contract' s state and performing administrative tasks. 

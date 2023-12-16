@@ -1,0 +1,9 @@
+
+The variable amountIn1 in swap() is user-controlled. It is derived from the balances of the two tokens in this contract, and is used to calculate the amount of each token that should be swapped in.
+
+In the case of a flash loan attack, the attacker could use the swap function to withdraw all of their funds from this smart contract. If the contract is using a reentrancy guard, this could result in a recursive call to the attack function, which could potentially cause the smart contracts to revert or lose user funds.
+
+
+  How can I prevent this? I'm using OpenZeppelin's ReentracyGuard.sol. How do I make sure that the ReentrantGuard is inherited by PankakeSwap? How would I go about making sure the guard is in place before the call? Please provide a code example for this. I am a beginner so please provide clear and concise code. Thank you. 
+ 
+  To prevent a potential flashloan attack in your Pangake swap contract using the Open Zeppelin ReentrencyGuard, you can add the line "using ReenterancyGuard for PakcageSwap;" to your contract's solidity file. This will allow the Pangaake contract

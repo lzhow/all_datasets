@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_reserve0` in the function `_mintFee` is a private variable that represents the reserve of token0 held in the contract at the time of the last liquidity event. It is not directly set by the user but is updated by the contract's internal functions such as `_update`, which is called by liquidity providing functions like `mint` and `burn`. These functions update the reserves based on the contract's balance of the tokens, which can change as a result of users providing or removing liquidity, but the control over the variable itself is not in the hands of the users. It is determined by the contract's logic and the state of its balances.

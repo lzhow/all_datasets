@@ -1,0 +1,3 @@
+yes
+
+The contract state `compBorrowState` is data dependent on the variable `borrowIndex` in the function `setCompBorrowSpeedInternal`. This is because the `borrowIndex` variable is used to update the `compBorrowState` state in the `updateCompBorrowIndex` function, which is called within the `setCompBorrowSpeedInternal` function. Therefore, any changes to the `borrowIndex` variable will affect the `compBorrowState` state.

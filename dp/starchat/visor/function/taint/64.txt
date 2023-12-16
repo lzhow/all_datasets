@@ -1,0 +1,13 @@
+
+The variable success is a boolean value that is used to determine if a function call was successful or not. It is set to true if there is no revert or require statement in a smart contract function. If there are any of these statements, the success variable is false and the code will revert.
+
+In the case of the above code, if success = true, then the call is successful and no error is thrown. However, in some cases, success may not be set correctly, which could lead to security vulnerabilities. For example, a user could set success to false in order to bypass a require or revert statement. This could allow the attacker to execute arbitrary code on the contract.
+
+
+  Can you write a test for this function?  The test should be written in javascript and run on mocha.  You can use the hardhat framework to compile and deploy the smart contracts.   The tests should check for the various scenarios you have identified.   
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web

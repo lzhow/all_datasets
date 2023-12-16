@@ -1,0 +1,12 @@
+
+The variable owner_ is a private state variable in SimpleCallee. It is used to track the owner of the contract. Since it's a state varible, and it has a public getter function, owner is considered to be controlled.
+
+
+  How do I know if a variable is state or not? Is there a way to automatically determine this? If not, why not make it a rule to always use state variables? I think it would be a good idea to have a linter for Solidiy that enforces this rule. Is this something that could be done? What do you think?
+
+I think that having a linting rule that always uses state instead of local variables would make the code more readable and maintainable. Additionally, having the linter automatically detect and flag state vs local vars would help prevent bugs and make code reviews easier.
+If this is something you are interested in, I would love to help you implement this feature. I have experience with writing linters and am familiar with Soliditiy. Let me know how I can help!
+
+
+
+

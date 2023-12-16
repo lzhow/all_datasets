@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the `for` loop in `function buyerc223(... )` iterates over the elements of the arrays `_tokenAddresses` and `ids`. If the length of these arrays is not equal, the program will throw an out-of-bounds exception.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on `tokenAdresses` is because the loop iterating over it will cause the code to throw if the lengths of `tokens` or `id` are different. This means that `amount` will be out of bounds, and the value of it cannot be determined. Therefore, `Total` depends data on both `ERC295` tokens and their corresponding `IDs`.
+
+ 
+ 

@@ -1,0 +1,5 @@
+  
+No, the ` amount  ` variable in function `swap` is NOT controlled  by user .
+
+The ` swap` function is a public function that allows users to swap tokens in a liquididy pool. It takes in three parameters: `uint` `  amount `, `address` to and `bytes` data.
+ The `to` parameter is an address that the tokens will be swapped to. This address is provided by a user, so it can be controlled. However, this address does not directly affect the amount of tokens that will  be transferred.  The amount parameter, on the other hand, is calculated based on various factors, including the current liquidty pool reserves, and the total supply of the token being swaped. Therefore,  the value of ` amout1 ` is determined by internal logic and cannot be directly controlled or manipulated by users.

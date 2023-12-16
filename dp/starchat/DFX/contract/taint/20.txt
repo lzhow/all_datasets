@@ -1,0 +1,8 @@
+
+The variable _ withdrawal is a user-controlled input to the proporti- onalWithdraw function. It represents the amount of the curve's token supply that the caller wants to withdraw from the pool. Since the contract is designed to maintain a constant ratio of token value to liquidity, the value of this input directly affects the resulting withdrawn amounts for each underlying asset.
+
+In the case of a pro- rata withdraw, this value is used to calculate the proportion of each asset that should be withdraw- ned, which is then passed to each assimilation contract to perform the actual withdraws from their respective accounts. This means that any changes to this variable could have significant effects on the final outcome of withdrawing from this pool, and therefore would need to be carefully monitored and controlled.
+
+
+  Can you explain how the withdraw function works? I understand that it takes the `_multiplier` variable as input, but how does it determine what proportion to take from each of its underlying assets? And how is it that each withdraw is performed using the asssimilation contracts? Can I see the code for those contracts as well?
+Can you also explain why the input is user controlled? Is there any way to make it so that this

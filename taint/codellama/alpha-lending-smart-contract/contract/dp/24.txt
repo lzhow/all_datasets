@@ -1,0 +1,4 @@
+  
+No, the variables `offset` and `raw` are used in both functions, but the `Data` struct is not passed by reference, so the two functions have independent copies of the struct. Therefore, `decodIi1` is data-independent from ` decodeiI 2`.
+
+The reason is that the functions `encodeI` use the local variables of `OBI` library, which are independent of each other.

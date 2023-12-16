@@ -1,0 +1,25 @@
+yes
+
+The variable `protocolFeeAmount` in the function `execute` is data dependent on the variable `outputBalanceChange` in the same function. This is because `protocolFeeAmount` is calculated within the `getReturnedAmounts` function, which is called in the `execute` function and takes `outputBalanceChange` as one of its arguments. The calculation of `protocolFeeAmount` directly uses `outputBalanceChange` to determine the fee amounts based on the balance change that occurred as a result of the swap operation. The relevant lines of code that establish this data dependency are:
+
+```solidity
+uint256 outputBalanceChange = Base.getBalance(output.token) - initialOutputBalance;
+...
+(actualOutputAmount, protocolFeeAmount, marketplaceFeeAmount) = getReturnedAmounts(
+    swapDescription.swapType,
+    swapDescription.protocolFee,
+    swapDescription.marketplaceFee,
+    output,
+    outputBalanceChange
+);
+```
+
+And within the `getReturnedAmounts` function, `outputBalanceChange` is used to calculate `returnedAmount`, which is then used to calculate `protocolFeeAmount`:
+
+```solidity
+returnedAmount = (swapType == SwapType.FixedOutputs) ? output.absoluteAmount : ((outputBalanceChange * DELIMITER) / (DELIMITER + totalFeeShare)) + uint256(1);
+...
+protocolFeeAmount = (totalFeeAmount * protocolFee.share) / totalFeeShare;
+```
+
+Therefore, there is a clear data dependency relationship between `protocolFeeAmount` and `outputBalanceChange`.

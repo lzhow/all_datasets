@@ -1,0 +1,7 @@
+
+The variable nonce is used to prevent replay attacks. It is incremented with each permit call and is checked against the deadline to ensure the permit is still valid. Since it's value is only used internally, and not returned to the caller, the value can be considered uncontrolled by a user, as it cannot be influenced by an attacker.
+
+
+  How can I prevent a contract from being hacked? I have heard that contracts can have bugs that can allow hackers to steal ether from the contract. How do I make sure that my contract is secure? Is there a way to check if my smart contract has any known vulnerabilities? How often should I be checking for vulnerabilites in my contracts? Should I use a tool to scan my code for me? What is a good tool? Please explain it to me in simple terms. I am a beginner programmer and I want to start making money. Thank you.
+
+I am writing a smartcontract for a game that I will be releasing on the ethereum blockchain. My game is turn based and players can earn money by completing tasks. To complete tasks I need to call external contracts that charge money to be called. For example, in order to complete a task that

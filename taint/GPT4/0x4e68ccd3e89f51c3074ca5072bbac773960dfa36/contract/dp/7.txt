@@ -1,0 +1,13 @@
+yes
+
+The variable `indexUpdated` in the function `write` is data dependent on the variable `cardinalityNext` because its value is determined by the conditional logic that involves `cardinalityNext`. Specifically, the line `indexUpdated = (index + 1) % cardinalityUpdated;` shows that `indexUpdated` is calculated using `cardinalityUpdated`, which in turn may have been assigned the value of `cardinalityNext` in the preceding lines:
+
+```solidity
+if (cardinalityNext > cardinality && index == (cardinality - 1)) {
+    cardinalityUpdated = cardinalityNext;
+} else {
+    cardinalityUpdated = cardinality;
+}
+```
+
+Here, `cardinalityUpdated` is set to `cardinalityNext` if the condition `cardinalityNext > cardinality && index == (cardinality - 1)` is true. Since `indexUpdated` is computed using `cardinalityUpdated`, there is a direct data dependency between `indexUpdated` and `cardinalityNext`.

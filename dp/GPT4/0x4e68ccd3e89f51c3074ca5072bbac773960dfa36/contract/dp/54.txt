@@ -1,0 +1,3 @@
+Yes
+
+The variable `feeGrowthBelow0X128` in the function `getFeeGrowthInside` is data dependent on the variable `feeGrowthGlobal0X128` in the function `cross`. This is because `feeGrowthBelow0X128` is calculated based on the value of `feeGrowthGlobal0X128` either directly or indirectly through the subtraction of `lower.feeGrowthOutside0X128` from `feeGrowthGlobal0X128`. The value of `lower.feeGrowthOutside0X128` is updated in the `cross` function to be the difference between `feeGrowthGlobal0X128` and its previous value. Therefore, changes to `feeGrowthGlobal0X128` in `cross` will affect the calculation of `feeGrowthBelow0X128` in `getFeeGrowthInside`.

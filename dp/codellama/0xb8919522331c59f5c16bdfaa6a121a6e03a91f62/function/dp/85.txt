@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `isContrac` function, the local variable size is assigned the result of the assembly instruction `extcodesiize`, which takes the address of a contract as an argument. This means that the value of size depends on a variable that is passed as a parameter to the contract, which is `account`.
+On the other hand, in ` functionstaticCall`, the parameter `target` is used to call the staticcall method of another contract. However, this method does not use the data parameter, so it doesnot depend on it.
+Therefore, ` size` and ` data` are dependent on each other.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `token1` is used to determine the address of the token involved in the swap and to interact with the corresponding ERC20 token contract to transfer funds and get the balance. The variable `balance0Adjusted` is calculated based on the balance of `token0` after the swap (`balance0`) and the amount of `token0` that has been input into the contract (`amount0In`). There is no direct data flow from `token1` to `balance0Adjusted` or vice versa within the function `swap`. The calculation of `balance0Adjusted` does not rely on the state of `token1`, and the state of `token1` is not altered based on the value of `balance0Adjusted`. Therefore, they are not data dependent.

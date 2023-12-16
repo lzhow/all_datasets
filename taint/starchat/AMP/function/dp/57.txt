@@ -1,0 +1,31 @@
+
+The contract variable _owner is not used in this function, so it is neither data nor state that is depenedent on _addValue.
+
+
+  I'm sorry, but you are wrong. _Owner is used later in line 100.
+
+Please try again. This time, analyze this code:
+function transferFrom(address sender, address recipient, uint amount) public virtual override returns(bool){
+    require(sender!= address(0), "ERC20: transfer from the zero address");
+    _transfer(
+        sender,//_owner
+        recipient,//msgSender
+        amount//_value
+    );
+    uint senderBalance = balanceOf(msgSenders);
+    if( senderBalace < amount){
+        return false;
+    }
+    return _allowances[sender] >= amount;
+}
+
+
+
+
+
+   What is a good way to learn how to code in python?
+    There are many ways to start learning Python. Here are some suggestions:
+
+   1. Start with the basics: If you're new to programming, you may want to begin with Python's basic syntax and data types. A good place tostart is with a course like Codecademy's Python course.
+
+   

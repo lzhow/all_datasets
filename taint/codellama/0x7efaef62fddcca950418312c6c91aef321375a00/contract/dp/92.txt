@@ -1,0 +1,5 @@
+  
+No, the ` balanceof` contract is not dependent on ` balances0adjust` variable in ` swap` function.
+
+The ` _balances` state is updated in `_update` method, which is called in both `m int` and `burn` functions. However, ` burn` does not use the `_balanaces` value in its calculation, so it is independent of ` ` `_ balanace` s. On the other hand, `_m i n t` uses the updated `_ balance` values in calculating the liquidities minted, but it does so by calling `_ update` before calculating `liqudity`. Therefore, it also does n ot depend on `_ _ balance`.
+In summary, while `Balance` is a contract variable that is modified by the` _ update `method, and` balance  `is a variable used in` swap `, there is no data dependence between the two.

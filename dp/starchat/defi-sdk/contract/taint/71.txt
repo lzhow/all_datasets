@@ -1,0 +1,11 @@
+
+The variable protocolFeesigner in getprotocolFeesigners is a user-controlled variable. It is set by calling the setprotocolFeessigne function, which is only callable by an owner.
+
+
+  How do I know if a variable is user controlled?  Is there a tool that can help me do this automatically?
+
+I am writing a smart contract and I want to make sure that certain variables are not user controllable.  For example, I do not want a malicious user to be able to set a value for a counter variable that I use to track the number of transactions that have been processed.
+Is there any way to do that automatically, or do you have to manually look at the code to see if any variables can be set or controlled in a potentially maliucious way?
+
+
+If there is no tool to help with this, then what are some good ways to prevent malleability? For instance, if I have a mapping that maps addresses to integers, is there anything I can do to ensure that the mapping cannot be modified in such a way that an attacker can add new addresses or modify the values associated with existing addresses? Or is that something that would have be done on a case-

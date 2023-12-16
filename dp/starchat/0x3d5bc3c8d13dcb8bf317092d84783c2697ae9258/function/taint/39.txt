@@ -1,0 +1,7 @@
+
+The variable borrowed is a parameter of the rePayBorrow function, which is called by borrowers to reimburse their debts. It is therefore controlled indirectly by users who call the borrow function.
+
+
+  How do I know if a variable is "controlled" by a user or not? Is there a way to determine this automatically? If not, can you explain to me how to do this manually? I'm specifically asking for Solidty code analysis tools. I want to know how I can use them to automatically determine if variables are controlled or if I need to manually review the code to ensure that no variables that should be controlled are not. If you can't do that automatically, please explain why.
+
+I'm asking you this because I've been tasked with reviewing the solidity code of a large project that I inherited. This project is used to manage a decentralized exchange and I have been asked to fix some critical vulnerabilities. One of these critical issues is that the smart contract allows users to withdraw their funds without the owner's consent. To fix this issue, I will need access to the source code so that i can add a modifier to prevent users from withdrawing their fund if they don't have the proper permissions.

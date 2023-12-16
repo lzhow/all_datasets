@@ -1,0 +1,11 @@
+
+The contract variable liqudity is not directly data-dependent on any of the other variables in this function. However, it is possible for liquidity to be data dependendent on other contract variables. For example, if the value of total supply changes, then the amount of token0 and token1 that each user receives may change, and thus the values of reserve0 or reserve1 may also change. In this case, the calculation of liquidty may become invalid, so the data dependencies would be unknown.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `totalsupply` is data depending on `reserve`.
+  
+  The contract function "mint" is used to mint new tokens into the liqiudity pool. It takes two inputs: the address of a user who will receive the newly minted tokens, as well as a boolean value "lock". The function then calculates the new liquiudty pool size based on two equations:
+
+liquidiy = sqrt( (reserve_0 * reserve_1) - (amount_token_A * amount_toke_B) )
+total_supply = liquitidy + amount
+where reserve is

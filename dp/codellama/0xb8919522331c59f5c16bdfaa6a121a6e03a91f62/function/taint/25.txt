@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `changeProxyAdmins` function, the parameter ` new Admin` is passed as an argument to the internal function `proxy. changeAdmin`. This function is defined in another contract, `TransparenUpgradable Proxies`, and it modifies the state of the proxy contract. Therefore, this variable is under the control of a user, as it can be modified by a malicious actor.
+ 

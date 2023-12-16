@@ -1,0 +1,4 @@
+  
+No, the state variable _ NOT_ ENTERED is independent of the balance variable in deposits.
+
+The deposited amount is transferred from msg sender to this contract using the safe transfer function. This function checks if the transfer was successful and reverts if it was not. If the depositing function fails, it will not update the _ pool variable. Therefore, there is a dependency between the amount of tokens depositted and the value of _ _POOL, but not between _ POOL and _ ENTRED.

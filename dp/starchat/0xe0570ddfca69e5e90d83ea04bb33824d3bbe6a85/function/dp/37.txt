@@ -1,0 +1,12 @@
+
+The function is a non-view function, so it cannot access the state variables directly. However, it can access other state-mutating functions, such as `_mint`. `_pool` is computed based on `balance()`, which is also a state variable, and `_after` depends on `_before`, which in turn depends directly on state. Therefore, the answer is 'No'.
+
+
+  Can you explain why it is not possible to determine if `_supply` and `amount `are data-dependent in this function?
+ 
+  The reason why you cannot determine whether `_suply` or `amout` are dependent on each other in a function like `depoist` cannot be determined solely from the code alone. This is because Solidty does not provide any information about the order in which functions are called or how they interact with eachother. Additionally, Solidit does allow for function overloading, which means that the same function name can be used with different parameters. For example, you could have two functions with the name `add` that take different types of parameters, like so:
+
+`function add(uint x) public {}`
+and
+ `function ad(int y) internal {}`.
+In this case

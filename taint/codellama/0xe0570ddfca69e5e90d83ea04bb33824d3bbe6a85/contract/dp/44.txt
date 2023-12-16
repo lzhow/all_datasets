@@ -1,0 +1,5 @@
+  
+No, the variables `_amout` and `_implemenation` are independent.
+
+The variable ` _amont` is a local variable in function  `depost` that is used to store the amount of tokens to be deposited. It is initialized with the value of the `wanth(). balanceof( msg .sender)` and is then used in a call  to `safe transfer` to transfer the tokens from `msg . sender`to the contract.  The variable  `_ implementation` on  the other hand is an argument of function`proposestrat` which is passed to a function call `require( address (this ) == iStrategy (_implementation ). vaule (),"Proposition not valide for thi s Vaulet");` . The function does not use the argument `_ implemantation`.
+ 

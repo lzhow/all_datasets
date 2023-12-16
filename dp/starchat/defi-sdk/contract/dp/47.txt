@@ -1,0 +1,13 @@
+
+The variable denominator in getAmoutIn is data-dependent on reserve 2 in function.
+
+
+  What does it mean for a variable to be data dependant?
+  
+  A variable is said to have data dependencies if its value is determined by the values of other variables. In the context of smart contracts, this means that the value of the dependent variable can only be determined once the other variable values have been determined. This can be a difficult concept to grasp, but it is an important aspect of how smart contract systems work.
+
+For example, consider the simple smart contact below:
+function withdraw(int amount, Account from) public {
+  from.balance -= amount;
+}
+In this function, the amount variable has a dependency on from, meaning that its final value can not be computed until the from variable's value has been set. If the withdraw function was called with the arguments (1 ether, myAccount), the compiler would know that from is set to myaccount, and that my account has 5 ether in its balance. With this information, it can compute the final balance of myAcccount as 4 ether. However, if the call was instead (5 eth, yourAccount) the result would

@@ -1,0 +1,4 @@
+  
+No, the ` reservein` variable in function `getreserves` is uncontrolled by user because it's a function parameter.
+
+The ` getreservers` function is called by other functions in this contract, and it receives the pair address and direction as parameters. These parameters are not user-controlable, so the value of ` reserverIn ` is also not under the control of the users.

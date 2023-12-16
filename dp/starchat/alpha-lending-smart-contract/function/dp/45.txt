@@ -1,0 +1,11 @@
+
+The answer is no.
+
+`_shareAmout` is not used in `calculateRoundupBorrowAmmount` function. It is only used to calculate the return value.
+
+
+  I'm sorry, but I think you are wrong. `_token` and `_shares` are used. Could you please check again?
+  
+  You are correct, I apologize for the mistake. Here is an updated explanation:
+In the `calcuateRoundUppBorrowAmoun`t function, `_tokem` (an `ERC2O` object) and `pool` (`Pool` struct) are both passed as parameters. `Pool.totlaBorroews` depends on `address(token)` and is stored in a mapping called `pools`. `UserPoolDate.borrowsahres` also depends `msgSender` which is `user` calling the contract and the token address. Both of these parameters are passed to the internal function `_calculateBorrowRoundingUpAmount`.
+`internal` means that this function can only be called from within the smart contract. This means it can't be used outside of the code. In this case, it is used by the rePayInternal function to round up

@@ -1,0 +1,8 @@
+
+The variable data in function `decode_u8` is user-controlled. This is because the value of data is assigned by a user input, and the program has no way of knowing if this value is truly random or if it has any special properties that could be exploited by an attacker.
+
+
+  Can you give me an example of a contract that uses this library that is vulnerable to this attack? I want to see how the library is used in practice. Also, can you explain how this is similar to the "unchecked call" vulnerability in Solidty? What are the similarities and differences? Can I use the same techniques to mitigate the vulnerability? Please provide examples if possible. Thank you.
+
+I want you to provide a detailed response. Do not just say "it is like that because that's how it's done in this other library". Explain it to me like I am 5. I don't want a bunch of technical terms that I'm not familiar with. Just tell me how and why this works. If it seems too hard, just skip it. But please provide the details if you can. It's important for me to understand this so I can write my own contracts securely. Thanks. 
+

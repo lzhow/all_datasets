@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `_nonces` is a mapping that keeps track of the nonce for each owner address in the context of the ERC20Permit functionality, which is part of the EIP-2612 standard. The nonce is incremented every time the `permit` function is called by the owner to approve a spender without sending a transaction. Since the owner of the address is the one who initiates the call to the `permit` function, they have control over the `_nonces` mapping for their address. Therefore, the state of `_nonces` for a given address is controlled by the user who owns that address.

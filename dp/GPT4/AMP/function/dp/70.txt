@@ -1,0 +1,13 @@
+
+The function `transfer` is a method of the `ERC1400Raw` token contract, which is an implementation of a standard called ERC-1844, or more specifically, ERC1967.
+
+In the context of ERC20 tokens, the `_from` parameter represents the address of an account sending tokens. In the case of `SmartToken`, the token is sent from the contract itself, so the value of `_operator` would be the same as `_sender`.
+However, in this case, `_transferFrom` does not have the parameter `_data`, which means that the data parameter is set to the empty string. This means the partition is not specified in any way, and the default partition will be used.
+
+
+  I'm sorry, but I don't understand what you mean by "partition is specified".
+ 
+  In this context, "specified" means "given". In other words, you are asking if the "_partition" parameter in `_removeTokensFromPartitions` function is data-dependent on "_to" in `addTokensToPartitions`.
+
+ 
+ 

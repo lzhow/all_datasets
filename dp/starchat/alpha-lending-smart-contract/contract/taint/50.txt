@@ -1,0 +1,13 @@
+
+The variable _ allowances is a mapping that is used to track the allowable amounts for a given user and sponsor. It is initialized in a constructor and is updated in two functions: `approve` and `transferfrom`. The `approval` function allows a user to set an allowence for another user, and the `TransferFrom` allows the sponsored user (the sender) to transfer a certain amount of tokens from a specified address.
+
+It is important to note that the `_approve()` function does not actually modify the value of the mapping, but rather sets the key-value pair in memory. This means that any changes made to this mapping will be reset when the contract is redeployed. Therefore, the state of this variable is unknown to users and cannot be trusted.
+
+
+  How can I make sure that this contract does what I want it to do? I am not very experienced with Solidiy and would like to know how to test it. I also want to be able to use it in my dAPP. Can you give me a step-by-step guide on how I can do this? Please include code examples for both the testing and dApp sections. Thank you. 
+
+
+
+
+
+  

@@ -1,0 +1,3 @@
+Yes, the variable `_multiplier` in the function `viewProportionalWithdraw` is data dependent on the variable `_withdrawal` in the same function. 
+
+Explanation: The value of `_multiplier` is calculated by dividing `_withdrawal` by `1e18` and then dividing it by `curve.totalSupply.divu(1e18)`. Since `_multiplier` is directly calculated using the value of `_withdrawal`, there is a data dependency between these two variables.

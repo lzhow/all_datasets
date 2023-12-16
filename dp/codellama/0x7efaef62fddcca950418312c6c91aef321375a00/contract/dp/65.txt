@@ -1,0 +1,4 @@
+  
+No, the `deimcals` contract variable is not dependent on `liqiduty` variable in ` burn` function.
+
+The `balnceOf` and `totalSuplly` variables are dependent variables of `reserves` state variables in `_update` internal function, which is called in both `mnt`and `brn` functions. However, ` decmials ` is a constant variable that is defined in contract constructor and is never changed. Therefore, it is independent of the other variables.

@@ -1,0 +1,4 @@
+  
+No, the ` upper` variable in function `update` is NOT controlled  by user, because it's a function parameter.
+
+The ` update` function is called by other functions in this contract, and the value of `up` parameter is passed in by those functions. Therefore, ` up` cannot be controlled directly by a user calling the contract. 

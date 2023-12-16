@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_balances` is a mapping that keeps track of the token balance of each address. It is modified by functions that are designed to be called by users, such as `send`, `transfer`, `burn`, `operatorSend`, `operatorBurn`, and `transferFrom`. These functions allow users to send tokens to other addresses, transfer tokens, burn their tokens, or allow operators to do so on their behalf, which in turn updates the `_balances` mapping. Since users can call these functions and thus change the state of `_balances`, it is controlled by the user.

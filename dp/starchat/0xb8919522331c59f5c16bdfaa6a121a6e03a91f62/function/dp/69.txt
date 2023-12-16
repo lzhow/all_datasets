@@ -1,0 +1,13 @@
+
+The function upgradeTo() in TransparencyUpgradebleProxy.sol is a function that sets the implementation address of the proxy contract to a new address. This function is called by the owner of a proxy to upgrade the contract it is managing.
+
+In the getImplementation() function, the address() keyword is used to retrieve the current implementation of an upgradeable proxy, which is stored in a state variable called _implementation. Then, we use the.call() method to call the staticcall function of that implementation contract, passing in an encoded function selector for the _getImplementation function. We then use require() to ensure that the call was successful, and use abi to decode the returned data. Finally, this function returns the retrieved implementation.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship." Could you please explain what that means?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn how to optimize my web application for speed. What would be the best approach for me to start

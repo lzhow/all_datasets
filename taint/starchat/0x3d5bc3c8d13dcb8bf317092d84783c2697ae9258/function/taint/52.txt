@@ -1,0 +1,9 @@
+
+The variable a in function `fraction` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and parameters in a contract, which may be controlled indirectly by users.
+
+To determine if a variable or parameter is directly controlled or influences other values, you can use a combination of static analysis and manual review. For example, if you are analyzing a smart contract that handles cryptocurrencies, a user may provide a value for the `rate` parameter of the fraction function. In this case, ` rate` would be indirect control over the other parameters of ` fraction`.
+In general, to determine the control flow of variables or parameters, one should consider the entire contract and its interactions with other parts of code.
+
+
+  How can I determine indirect user control?  What are some common ways to do this?
+Can you give me an example of how to use static code analysis to identify indirect input control in Solidty? I would like to know how I can do that.  Can you also give an explanation of what static and dynamic code analyses are? Can I use both? How do they work? Please provide examples. I am a beginner and would appreciate a detailed

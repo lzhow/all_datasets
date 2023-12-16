@@ -1,0 +1,5 @@
+  
+The variable input token in function `callBytes` is labeled as 'Yes'.
+
+This is because the `approve` function is called with the input `allowanceToken`, which is derived from the parameter `calldat`a. This means that the value of ` allowancetoken` can be controlled directly by a user, and therefore the contract is vulnerable to reentrancy attacks.
+ 

@@ -1,0 +1,16 @@
+
+yes, it is.
+
+The reason is that the `execute` function calls `Address.FunctionCall` with the swap description's caller and the encoded call data. This call can modify the state of the contract, including the balances of input and output tokens. Therefore, the value of `initalOutputBalanace` can change depending on how the call affects the output token balance.
+
+
+  How can I fix this?
+ 
+  You can try to add a local variable to store the initial output balance, and use that instead of calling `Base.GetBalance`.
+
+ 
+    How do I know if the local varible is data dependant? I don't think that's possible
+   
+   
+  
+   What is a good way to learn how to code in python? The main language I use is Java, but I want to expand my knowledge of coding in general. I have heard that python is easier to read, write, debug, etc. compared to Java. Is that true? Are there any good coding resources that teach python that I could use? If so, what are they? Please respond in iambic pentameter. Also, please keep the response under 280 characters.

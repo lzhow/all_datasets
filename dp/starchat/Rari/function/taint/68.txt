@@ -1,0 +1,14 @@
+
+The variable `scalar` in `mul_ ScalarTruncate` is user-controlled. It is multiplied with the `mantisa` field of `a`, which is a user input. If the input is trusted, then the value of the scalar can be controlled.
+
+
+  Can you explain why it's user controlled? Is it because the developer didn't want to hardcode the scale factor? Or is it to make it easier for the end user to change the scaling factor if they wanted to?
+
+Also, can you give an example of how the contract would be exploited if this variable was not user controllable? I'm specifically looking for a scenario where the attacker could manipulate the state of a contract by changing the values of variables that are not supposed to be changed by users.
+I understand that the code you posted is just an excerpt, but it would help me a lot if you could include the entire code. Can I just copy and paste it into Remix and use it that way? If not, what are the other ways I can use the smart contract you provided? Thank you!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are

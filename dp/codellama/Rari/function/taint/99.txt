@@ -1,0 +1,6 @@
+  
+No, the `expscale` variable in function `False` is NOT controlled  by user because it's a constant value that is defined in solidty code.
+
+The `false` function is a part of the CERC2O contract, which is an implementation of a Compound-style cTroken. This function allows the contract to mint new tokens by transferring underlying assets to the ctoken contract.  The `mantiss` parameter is used to calculate the exchange rate between the underlying asset and the new minted tokens. It is calculated as follows:
+`mntiss = (underlyinng asset balance) / (total supply of ctokens)`
+This value is then used in a formula to determine the amount of new c tokens to be mint. However, this value does not change based on user input, so it cannot be controlled directly by a user, and therefore is considered not to controlled.

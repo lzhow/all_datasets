@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `upgrateTo` function, the parameter ` new Implementation ` is passed as an argument to the `_authorizedUpgrades` internal function. This function is defined in a parent contract, `ER1161Upgradable`, which is imported in this contract.
+This function checks if `msg.sender` is an authorized address to upgrade the contract and if so, calls the internal `_upgradetoAndcallSecured`function.  The `_ upgradetoandcallsecured ` function takes the address of the new implementation as a parameter and calls it. Therefore, in order to call the upgrade function and pass the argument `NewImplementaion`, the caller must be an authenticated address. Hence, The variable newimplementation is under the control of user in upgrade to and call function

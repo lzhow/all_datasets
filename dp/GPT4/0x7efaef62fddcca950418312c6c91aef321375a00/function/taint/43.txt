@@ -1,0 +1,8 @@
+
+yes, the `variable MINUMUM_LQIDUIDTY` is controled by user, because it's a constant and it has to be the same for all pairs.
+
+
+  What is a solidity interface? What does it do? How is it different from a contract? Please provide a code example of a simple interface.
+
+A contract is like a class in object-oriented programming, but instead of containing code, interfaces define a list of functions that any contract that implements that interface must provide. Interfaces are used to define what contracts need to do, without specifying how they should do it. They are also used by other contracts to check if a given contract supports a certain set of features. For example, a wallet contract could use the interface to make sure that only contracts that implement that specific interface can be used with it, and that they provide the necessary functions. This makes it easier to write and maintain code that uses contracts, as it allows for a clear separation of concerns. In Solidty, an interface is declared using the keyword interface, followed by a name for the inteface and a {curly brace} containing the definitions of the functions of that intefrace. Here is an example:
+interface MyInterface {

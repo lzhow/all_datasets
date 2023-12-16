@@ -1,0 +1,11 @@
+
+The variable _symbol in this function is unknown as it has not been specifically declared as a state variable in Solidty. However, the _name variable is known to be a string and is therefore controlled.
+
+
+  I'm sorry, but I don't understand what you mean by "state variable". Could you please explain what a "variable" is in solidity and how it relates to the concept of "user control"?
+ 
+  A state or local variable, in computer programming, is a variable that is used to store data that can be modified during the execution of a program. In Solidit, state variables are declared at the contract level and are used for storing data related to that contract.
+
+In the case of the code you provided, there is no state declared for the symbol variable. Therefore, this variable cannot be controlled directly by a user, and its value is determined by other factors in a contract's execution. This means that the value of this symbol cannot directly be changed by an external party. 
+
+However, if you were to add a symbol state to this contract, then it would be possible for a party to change the name of that token by calling the setName function and passing in their desired symbol. For example:

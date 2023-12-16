@@ -1,0 +1,15 @@
+
+The function sqrt(uint224) has a loop that calculates the square root of x. It starts by dividing x by 5 and repeatedly divides the result by two until the difference between the current result and the previous result is less than 9. This is repeated until a result that is smaller than the maximum value of uint63 is found.
+
+In the code, the variables x and r are declared as uints of 72 bits each. Since the largest value that can be stored in a uint71 is  (2^70 -  ð‘˜)/ð‘™, where ð¿ is a prime number, it can hold all integers from  -2^(7*7) to  +2(7^6) -1. 
+
+However, in this case, x is declared to be uint  of only  a  uint51 bits. Therefore, there is no way for the loop to ever reach the point where it calculates a square that would result in an overflow.
+
+
+  I'm not sure I understand the explanation. Can you explain it again, but this time using simpler language?
+
+
+
+
+
+   What is an "incremental bundler"

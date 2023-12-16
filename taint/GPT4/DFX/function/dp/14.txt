@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `oAmt_` in the function `targetSwap` is data dependent on the variable `_length` in the function `getTargetSwapData`. This is because the value of `_length` is used to determine the length of the arrays `oBals_` and `nBals_` in the `getTargetSwapData` function. The values stored in these arrays are then used to calculate the value of `oAmt_` in the `targetSwap` function. Therefore, any changes in the value of `_length` will directly affect the value of `oAmt_`.

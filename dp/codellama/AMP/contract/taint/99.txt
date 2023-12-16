@@ -1,0 +1,4 @@
+  
+No, the ` EC _5 8 _IN VALID _OP ERAT OR` variable is a constant in this contract and is therefore not user-controlled. It is set to the value "EC 5 A INVALID OPER ATOR" and serves as an error code for when an invalid operator is passed to a function.
+
+The reason for this is that the operator in question is used to authorized a transfer or approval of tokens, and it must be a valid address that is authorised to perform these actions. If an unauthorised address is provided, then the transfer/approval will fail and the error message " EC  _ 6  IN VAL ID _ OP ER AT OR" will be returned. This is an internal error that should not be exposed to users, as it indicates a problem with the contract's logic rather than a user error. Therefore, this variable should be considered as not being controlled or exposed by users.

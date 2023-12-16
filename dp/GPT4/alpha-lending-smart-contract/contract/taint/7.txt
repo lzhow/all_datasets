@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `_lendingPool` in the constructor of the `AlphaStakePool` contract is set by the value passed to the constructor when the contract is being deployed. The deployer of the contract (which is a user) has control over what value is passed to the constructor, and therefore, the user controls the initial value of `_lendingPool`. After deployment, the control over this variable may change depending on the contract's functions and access controls, but at the point of contract creation, it is indeed controlled by the user.

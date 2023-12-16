@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `expScale` is not present in the provided Solidity code, and therefore, it cannot have a data dependency relationship with the variable `allowResign` in the function `_setImplementationSafe`. The variable `allowResign` is used within the `_setImplementationInternal` function to determine whether the `_resignImplementation` function should be called. Since `expScale` is not mentioned or used anywhere in the code, there is no data dependency between `expScale` and `allowResign`.

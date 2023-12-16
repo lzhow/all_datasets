@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `data` in the function `balance0` is a local variable that is used to store the return value of a static call to the `token0` contract's `balanceOf` function. It is independent of the `swap` function's logic and scope.
+
+On the other hand, the variable `balance1Before` in the function `swap` is also a local variable that is used to store the balance of `token1` before potentially transferring tokens as part of the swap operation. It is specific to the `swap` function and is used to ensure that the balance after the swap is as expected.
+
+Since `data` in `balance0` and `balance1Before` in `swap` are local to their respective functions and do not share any state or influence each other's values, they are not data dependent.

@@ -1,0 +1,12 @@
+
+Yes, `Balance1 `is data-dependent on `Amount0 `in the `Burn` function. This is because the value of ` balance 1 is used to calculate the amount of token 2 that needs to be burned, which in turn affects the calculation of the new value for `kLast`.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The `balanceOf` mapping is updated in `_burn`, which is called by ` burn`. The value stored in ` amount  =  liqudity. mul( balance)  / totalsupply` is then used in two places:
+
+- To calculate `  amount  0`, the balance of `_token  `0 is retrieved using `IERC  _  token  .  balanceof( address( this))`.
+This value is later used as the numerator in a division operation, so it is affected by the update to `totalsupply`. This means that ` Amount0  is data  dependent on  Balance1`. 
+
+In the same way, the second use of  the  value  of   ` Balance0   is  used  to  calculate  Amount1.  This  means  that  both 

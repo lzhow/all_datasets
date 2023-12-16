@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `before` function, the `_pool` variable is assigned the value of the current balance of this contract.
+Then, in `earn`, the balance is updated.  The `_amount` is then calculated as the difference between the updated balance and the original balance. This is done by subtracting the amount of `_before`.
+Finally, `_mints` are created and assigned to the sender. These `_Mints_` represent the shares of ownership in this pool. They are calculated by dividing the total amount deposited by the number of shares in existence. If there are no shares, then the depositor receives all the newly minted shares.

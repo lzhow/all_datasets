@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `sell` function, the value of `eth` is calculated using the result of the call to the internal function `_burn`. The `_ burn` method is called with the argument `msg .sender` and ` value`. This means that the state of `_balances` (which is a mapping of addresses to balances) is modified by the `_burnt` call.
+Since the calculation of` eth` depends on ` _balancess`, the data of variable` success`in the` sell`function is dependent on` value` variable in` J A Yto ETH`method.

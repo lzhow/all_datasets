@@ -1,0 +1,5 @@
+  
+No, the `contract state` ` decimls` is not dependent on `variable` amount  `0`.
+
+The reason is that the value of ` amount `  is calculated using the balance of the token and the reserves of token0 and token1 in `getReserve()` function.
+`decimal` state is a constant value that is set in constructor and is used to calculate the precision of decimal places. It is independent of any variable or state in this function and does not affect the calculation of amount.

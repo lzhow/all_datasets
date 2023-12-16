@@ -1,0 +1,11 @@
+
+The contract has a function called `JAYToETH` which converts Jay tokens to Ether.
+
+In the `Sell` function, the value of `eth` is calculated by multiplying the amount of Jays being sold by the current price of 0.01 ether. This value is then reduced by 9% to account for transaction fees. 
+
+However, it is not clear what the purpose of the line `emit Price (block. timestamp, jaytoeth (1*1e1 8))`  is. It is unclear what `1` refers to, and it does not appear to be a variable or constant. Additionally, `block` does no appear in scope.
+
+
+  I'm sorry, I made a mistake. I meant to say that the USD_price_sell is dependent on success. Can you explain why?
+ 
+  The USD price is used to calculate the ether value that is being transferred to the seller. If the transaction fails, then the price will not be updated, which means that subsequent transactions will be priced incorrectly. Therefore, success is a critical dependency for the correct functioning of this contract. Success is also used in other parts of code to

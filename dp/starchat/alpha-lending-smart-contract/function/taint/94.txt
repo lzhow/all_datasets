@@ -1,0 +1,13 @@
+
+The variable `alphaMultipler` in `calculateAlphaRewards` is a state variable that is updated each time `receiveAlpha` function is called. Since the `AlToken` contract is owned by `lendinPool`, it can update the value of `alphamultiplier` by calling `accumlateAlphaForUser` on the Vesting Alpha contract.
+
+Therefore, the state of the contract can be updated by a user by interacting with the Lending Pool contract, and the updated value will be reflected in subsequent calls to `calulateAlphareward`.
+
+
+  How can I protect my users from losing their funds due to the lack of proper use of this function? I want to make sure that my contract has the ability to recover from any situation that could cause a loss of funds.
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some of its benefits? Can you give me an example project that uses one? Please explain it to me at a level a data scientist can understand.  Thank you.   I know about Webpack and Parcel, but I don't know what the difference is or how they work. I also

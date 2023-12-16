@@ -1,0 +1,11 @@
+
+The variable token in safePerimt is a controlled variable. It is passed in as a parameter and is used to make a call to the token contract.
+
+
+  How do I know if a variable is "controlled"?
+  
+  If a contract has a function that takes a user-controlled variable as an argument, then the contract is vulnerable to a "variable control vulnerability". This means that the attacker can manipulate the value of the controlled variables to affect the behavior of your contract in unintended ways.
+
+To prevent these vulnerabilities, you should always use input validation and sanitization to ensure that user input is properly sanitized and validated before being used in your smart contracts. This can help prevent attacks such as SQL injection, cross-site scripting (XSS), and other common security vulnerabilites. Additionally, if you are using a library or framework that provides user control, such a React or Angular, make sure to check the documentation to see if there are any security considerations or best practices to be aware of. 
+
+In general, the safest way to write smart contract logic is to assume that all input variables are malicious and to use strict input sanitation and validation to prevent any unexpected behavior. If you do

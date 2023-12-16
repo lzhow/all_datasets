@@ -1,0 +1,5 @@
+  
+No, the variables `bal` and `total_supply` are both data-dependent on `w`, but `getPriceperFullshare` is only dependent on `_pool`.
+
+The reason is that the `earn` function transfers all the available tokens to `strategies` before the call of `depost`, so the balance of the contract is updated.
+However, `available` only returns the amount of tokens that are available to be deposited, which is equal to  `W.balancOf (this)` before calling `Earn`. Therefore, it is independent of `_ pool`.

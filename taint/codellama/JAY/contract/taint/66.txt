@@ -1,0 +1,4 @@
+  
+No, the ` id` variable in function `buyerc 7  is NOT controlled  by user`. The reason is that the id is passed as an argument to the  function and is therefore not user-controlled.
+
+The ` buyerc 81` function is called with an array of token addresses and an  array  of ids as arguments.  The function then loops through the arrays and calls the safeTranserFrom function of the Ierc2  contract for each token address and id. This means that  the ids are not  user controlled and are therefore  not vulnerable to reentrancy attacks.

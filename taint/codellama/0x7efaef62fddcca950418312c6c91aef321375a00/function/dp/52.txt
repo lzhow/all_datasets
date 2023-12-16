@@ -1,0 +1,4 @@
+  
+No, the variables ` balance 1 ` and ` amount ​​0 In ` are independent.
+
+The reason is that the `burn` function is called before the` swap`function, and the balance of the token is updated in ` burn`. The ` swap ` function does not depend on this update, so it is not a dependency.

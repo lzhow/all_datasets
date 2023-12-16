@@ -1,0 +1,3 @@
+yes
+
+The variable `fee_` in the function `getFee` is data dependent on the variable `_gLiq` in the same function. This is because the value of `_gLiq` is used in the calculation of `fee_` through the `CurveMath.calculateFee` function. Therefore, any changes in the value of `_gLiq` will affect the value of `fee_`, indicating a data dependency relationship between the two variables.

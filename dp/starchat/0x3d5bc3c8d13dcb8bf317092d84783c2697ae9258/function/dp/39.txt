@@ -1,0 +1,11 @@
+
+The variable merr is not a state variable in either of the functions. It is a local variable that is used in both functions, but it is never assigned a value. Therefore, it cannot be determined whether it has a direct or indirect data dependence on either variable.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `cTokenbalance` and `exchangeRatemantisssa` are dependent on `account`.
+ 
+  The variables ctokenbalance and exchangeratemantissas are both dependent upon the account variable, as they both rely on information stored in storage that depends on account. This means that they have indirect dependencies on each other.
+
+In the getaccountsnapshot function, the ctokentbalance variable is assigned the value of accounttokens[ account ]. This value is stored on-chain, and is therefore dependent directly on that account's address. Similarly, in this function the exchange rate is retrieved from the chain using the exchangeratestoredinternal function. Again, this value depends directly upon information that exists on chain, specifically the current value stored for the price of one cErc20 token in terms of underlying assets. 
+
+However, these values are ultimately stored

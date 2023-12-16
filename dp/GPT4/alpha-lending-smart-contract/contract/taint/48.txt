@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `utilizationRate` in the function `calculateInterestRate` is indirectly controlled by the user because it is calculated based on the parameters `_totalBorrows` and `_totalLiquidity`, which are inputs to the function. These inputs can be supplied by the user when they call the function, and thus the user has control over the value of `utilizationRate`. The function `getUtilizationRate` is called within `calculateInterestRate` and uses the user-provided `_totalBorrows` and `_totalLiquidity` to compute the `utilizationRate`. Since the user can influence the inputs, they can influence the resulting `utilizationRate`.

@@ -1,0 +1,3 @@
+yes
+
+The variable `value` in the function `decodeI8` is data dependent on the variable `data` because `value` is assigned a value based on the current `offset` within the `data.raw` byte array. The expression `data.raw[data.offset]` directly accesses the byte at the position indicated by `data.offset`, and this value is then cast to an `int8` type and assigned to `value`. Therefore, there is a direct data dependency between `value` and `data`.

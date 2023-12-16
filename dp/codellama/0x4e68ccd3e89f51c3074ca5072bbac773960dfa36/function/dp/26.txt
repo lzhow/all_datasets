@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation :
+In the `Swapping` function, the value of `L` is calculated using the formula `l = l - l_net`, where ` l` and ` L` are the liquidities of the pool before and after the swap, respectively.
+`l_ net`is calculated as ` liquidNet= t_next - t` , where t is `t_start` before the loop and t next is`t` after each iteration.  ` t ` is updated in each loop iteration based on `sqrt_price_x9_6` .
+Therefore, ` delta` affects ` Liq_Net `, which affect `  l ` and ultimately affect the return value.

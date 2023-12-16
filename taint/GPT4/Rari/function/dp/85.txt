@@ -1,0 +1,3 @@
+The variable `fraction` in the function `divScalarByExpTruncate` is not data dependent on the variable `a` in the function `divExp`. 
+
+Reason: The variable `fraction` is assigned the value returned by the function `divScalarByExp`, which does not use or reference the variable `a` from the function `divExp`. Therefore, there is no data dependency between these two variables.

@@ -1,0 +1,9 @@
+
+The function claimAlphaRewards has a loop that iterates over all the tokens in tokenlist. For each token, it calls getUserpoolData to get the user's data for that token. getUser pool data has two return values: compundedliquditybalance and compundBorrowbalance. These values are used to calculate the total liquidiy balance and total borrow balance.
+
+
+  How does the code determine if a variable is data-dependent on another?
+ 
+  The code determines if variables are dependent on each other through a process called data flow analysis. Data flow analyses are performed by analyzing the flow of data through the program, determining which variables hold data that is used by other parts of the software, and determining if those variables have any effect on other variables.
+
+In the example code provided, the data dependence of variables is determined by examining the control flow and data dependencies within the functions. Specifically, data is considered dependent if it is read by a function before it has been written, or if the value of a dependent variable may affect the behavior of another function. In the case of this code, compoundLiqudiyBalance is dependent upon the _acount variable in claimcurrentalphar

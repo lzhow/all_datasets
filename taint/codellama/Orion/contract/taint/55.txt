@@ -1,0 +1,4 @@
+  
+No, the ` amounts` variable in _ swapCurves is NOT controlled  by user because it's a local variable that is created in that function. It is used to store the amounts of tokens that are being swapped in a particular transaction.
+
+The ` amountIndex ` variable is initialized to  `0` and is only used in one place in `_swapCurrve` function, which is to access the amount of the token that needs to be swaped in `ICurvesPool.exchange` method. This method takes the index of token as an argument, and the value of `amoutIndex is passed as the argument. Therefore, ` amoutnIndex  is a controlled variable. 

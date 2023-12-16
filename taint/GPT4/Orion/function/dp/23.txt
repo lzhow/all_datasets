@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `tokenA` in the function `pairForCurve` is data dependent on the variable `from` in the function `getAmountInCurve`. This is because the variable `from` is passed as an argument to the `pairForCurve` function, and it is used as an input parameter for the `find_pool_for_coins` function call. The result of this function call is assigned to the variable `pool`, which is then returned by the `pairForCurve` function. Since the value of `from` affects the result of the `find_pool_for_coins` function, there is a data dependency between `tokenA` and `from`.

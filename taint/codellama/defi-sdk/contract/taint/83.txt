@@ -1,0 +1,4 @@
+  
+No, the ` selector` variable in function `get PermissionSelector` is NOT controlled  by user because it's a function parameter.
+
+The `Permittype` parameter is passed to the getPermissionSelector function, and the selector variable is assigned the value of the appropriate function selector based on the permit type. This means that the  selector value is determined by a parameter passed by an external user, but it does not directly depend on any user input or state. Therefore, this variable cannot be controlled directly by any external actor.

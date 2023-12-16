@@ -1,0 +1,5 @@
+  
+The variable _ account in function `burn` is labeled as 'No'.
+
+Reason: The variable is passed as an argument to the `claimCurrentAlphRward` function, which is called within the same function. This means that the value of `_ account` cannot be controlled directly by a user, as it will be overwritten by `msg .sender` in ` claim CurrentAlpha Rewards`.
+ 

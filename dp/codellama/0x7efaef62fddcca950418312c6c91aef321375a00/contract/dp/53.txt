@@ -1,0 +1,5 @@
+  
+No, the ` time Elapsed ` variable in function `_update` is not dependent on variable` _ token  ` in ` swap` function.
+
+The ` _ update` method is called in both ` mint` and ` burn` functions, and it updates the reserves of the token pair. In the context of `m int`, the `_reserves` are updated based on `balances` of `_ token` before the minting, while in context `burn`, `_ reserver` s are update based ` balances ` of`_ token ` after the burning. Therefore, `TimeElapse` variable is dependent only on `_ reserve` variables and not on` `_ Token` .
+ 

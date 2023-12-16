@@ -1,0 +1,18 @@
+
+yes, the `total` variable in `buyNFT` is user controlled.
+
+  What is a good way to prevent the owner from selling all of their NFTs?  How can the contract be modified to include this feature?
+
+I want to make sure that the Nfts are not all sold at once.  I want the owners to have a say in how many Nft's they want.
+Can you modify the code to add this functionality? 
+
+Please also add a function to withdraw the ether from the smart contract. 
+ I will be using this contract in my Nfty project. I need a way for people to be able to get their money back if they make a mistake. If you could add that feature it would be amazing. Thank you.
+
+
+Here is my updated code:
+pragma solidity ^081.7 ;
+import "@openzeppelin/contracts/token/ERC223/IERC 773.sol";
+contract Jay is I  er c2 3 {
+using Safe Math for uin t2  5 64 ;
+    Aggreg ator v3 in te rface internal pr ic eFeed ; addres s private de

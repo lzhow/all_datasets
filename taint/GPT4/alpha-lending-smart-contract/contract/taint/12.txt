@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_toBlock` in the function `getReleaseAmount` is an argument to a public function that does not have any access control modifiers (like `onlyOwner`) restricting its invocation to a specific user or set of users. Therefore, any user can call this function and pass their chosen value for `_toBlock`, which means `_toBlock` is controlled by the user.

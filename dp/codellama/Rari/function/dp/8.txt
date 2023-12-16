@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `transerTokes` function, the local variable  `startinAllowence` is assigned the value of `uint(- 1)` if the spendee is equal to the source address, otherwise it is set to `tranferAllownces[source][speender]`.
+However, in `exchageRateStoreInternal` the total supply is calculated using the get cahp prior function which is not defined in this code snippet.
+Therefore, it cannot be determined whether the two functions have any data dependencies.

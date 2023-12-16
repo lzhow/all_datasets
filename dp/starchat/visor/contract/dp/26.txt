@@ -1,0 +1,7 @@
+
+The variable low is not dependent on mid.
+
+In the first iteration of the loop, low and high are both set to  array length. In the second iteration, the value of low increases by  one, while the high value remains the same. This means that the mid value will always be the average of both low values. If the element value is greater than the array value at the current mid position, then the low value for the next iteration will be set as the new mid point. However, if the  element is less than or equal to the the corresponding array element,  then high will remain the unchanged. 
+
+After the while loop terminates, it is possible that low will have reached the end of array without finding a match. For example, consider an array with the values [1,2,3,4,5] and an element of 6. Since  the last element in array is 5, and  it's value  is larger than  our target element  (6), the condition in while-loop will never be satisfied. Therefore, in this case, we will return the length of our array (5).
+If the target value matches the one at position (n-1), then we return n

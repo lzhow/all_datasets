@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The provided code snippet does not include the definition or modification of a contract state named `liquidity`. The function `burn` takes `tickLower` as an argument and uses it in the `_modifyPosition` call, which suggests that `tickLower` could potentially influence the state of the contract. However, without the implementation details of `_modifyPosition` or the definition of the `liquidity` state, it is impossible to determine whether there is a data dependency relationship between `liquidity` and `tickLower`. Therefore, the relationship is labeled as 'unknown'.

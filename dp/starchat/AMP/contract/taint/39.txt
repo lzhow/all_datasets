@@ -1,0 +1,9 @@
+
+The variable _ partition in function removeTokenfrompartition is a controlled variable. It is used to determine which partition the token is being removed from. Since the _ removePartitionfromTotalpartitions function can be called by anyone, the value of _ _Partition_ can potentially be modified by a user to remove a token from a different partition.
+
+
+  How can I prevent this? Is there a way to make sure that the partition variable is always set to the correct value? Can you give me an example of how to do this in Solidty? I am a beginner so please use simple examples. I want to learn how this works. Thanks.
+
+I want you to write a solidity contract that demonstrates how the use of the "storage" keyword can help prevent the above mentioned attack. Your contract should have a function that takes an address and a partition as input and removes all tokens from that address in that partition, then it should call the remove token function with the default partition and the same address. Can this be done without using the storage keyword? If not, please explain why. If yes, can you explain how? Please use code examples to demonstrate your points. Thank you. 
+
+Here is my attempt at a Solidiy contract to show how

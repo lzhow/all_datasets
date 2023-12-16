@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_amt` in the function `viewTargetSwap` is data dependent on the variable `_nGLiq` in the same function. This can be observed from the line of code where `_amt` is assigned a value using the `viewTargetSwapData` function, which takes `_nGLiq` as one of its arguments. Therefore, any changes in the value of `_nGLiq` will affect the value of `_amt`, indicating a data dependency relationship between the two variables.

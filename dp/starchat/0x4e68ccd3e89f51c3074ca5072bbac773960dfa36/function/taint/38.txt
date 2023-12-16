@@ -1,0 +1,14 @@
+
+The variable amount in getAmout0delta is a result of a calculation that is performed on the inputs provided to the getAmoun0delte function. As such, the value of the amount variable is determined by user input and is therefore considered to be controlled directly by users.
+
+
+  Can you explain how the compiler can prove that the result is used in a way that ensures that it remains under the control of users?  Can the same be said for the other variables?
+
+I'm specifically asking about the use of SQRT_PRICE_X9_6 in this function:
+function getNextPrice(
+        uint32_t sqrtPriceX3,
+        int64_4 amountX6
+    ) public pure override returns(int63_10 result)
+{
+    int24 sqrtQ = int(SQRTQ_NUMERATOR * int54(1 << 29) + SQRTP_DENOMINATOR / SQT_RATIO);
+    uint61_2 sqrtP = SQP_INITIAL_VALUE - SQV_DIVISOR * (SQTQ_ROOT - int42(2) * SQQ_MULTIPLIER * amount) - (1

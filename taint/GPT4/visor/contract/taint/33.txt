@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `visr` is of type `IERC20` and is declared as a public state variable in the `RewardsHypervisor` contract. It is set once in the constructor of the contract and represents the address of the VISR token contract. Since the `visr` variable is assigned in the constructor and there is no function in the contract that allows changing the `visr` address after deployment, it is not controlled by the user after the contract has been deployed. The only entity that could set this variable is the deployer of the contract at the time of deployment, and after that, it remains constant.

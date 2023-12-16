@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `function` getAmoutsIn(), the line `uint prev=i-1;` is used to get the previous index of the array. This line is dependent on `i`, which is a variable in `for` loop.
+Also, the condition `if (i > 0)` is also dependent to `length`, and `pairs` is an array of addresses. Therefore, `prev` and the length of `array` are also data-dependent on each other. 

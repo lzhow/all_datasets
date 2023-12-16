@@ -1,0 +1,5 @@
+  
+No, the `AMTP_TKNS_RCPNT` contract is not dependent on ` toPrtitionPrefx` variable in `_ callPostTranfer Hooks` function.
+
+The ` _ call PostTransffer hooks ` function calls the `_ tokensToRecipiet` method of the` IAMPTknsRecipeint` interface, which is implemented by the recipients of tokens. This method takes the partition prefix as an argument, but it does not use it to determine the behavior of its implementation. Therefore, it is safe to say that the state of ` AMT_ TKN_ RCPNTS` is independent of` to PartitonP refx`.
+ 

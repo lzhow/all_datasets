@@ -1,0 +1,5 @@
+  
+No, the ` exchange rate` variable in `function exchange RateStorredInternal` is not dependent on ` redemption amount` from ` function reedem Underlying Internal`.
+
+The reason is that the exchange `rate` function is called before the redenomination function. Therefore, when the rate function runs, it does not know the value of the amount to be recalled.
+ 

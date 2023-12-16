@@ -1,0 +1,3 @@
+Yes
+
+The contract state `_totalSupply` is data dependent on the variable `_from` in the function `swap`. The reason for this is that within the `swap` function, the `_mint` function is called with `_from` as one of its arguments. The `_mint` function, in turn, modifies the `_totalSupply` by increasing it by the `amount` that is being swapped. The `amount` is determined based on the allowance of `_from` for the contract to spend tokens on its behalf, which is then transferred to the `swapTokenGraveyard`. Therefore, the final value of `_totalSupply` after the `swap` function is executed depends on the `amount` that is related to `_from`, establishing a data dependency relationship between `_totalSupply` and `_from`.

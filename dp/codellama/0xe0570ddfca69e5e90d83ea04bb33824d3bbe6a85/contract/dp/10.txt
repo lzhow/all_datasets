@@ -1,0 +1,5 @@
+  
+No, the ` shares` variable in ` deposits` is data-dependent on ` _ after` because `bal` and `total_supply` are used to calculate `share`s.
+
+The ` balance` function returns the current balance of the vaule, which is used in calculating the number of shares to mint. This means that the value of ` share` depends on both ` bal` (the current value balance) and the total supply of tokens. Therefore, ` shar`es is dependent on `_ after`.
+ 

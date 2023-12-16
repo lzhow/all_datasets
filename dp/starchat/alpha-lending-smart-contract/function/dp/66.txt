@@ -1,0 +1,20 @@
+
+The contract function'mintALToken' takes in three parameters: an ERC-2O token contract, an address, and a uint.
+
+It then accesses the 'pools' mapping, which is a contract-level state variable, to retrieve the Pool struct associated with the given ERC 2o token address. This Pool contains an ALToken contract instance, as well as other relevant information about the pool, such as the price oracle address and the total supply of ALTokens. 
+
+Next, the mint function of the AL token is called, with parameters the recipient address (which is assumed to be a user wallet) and amount.
+
+
+ 1. Is the `pools` mapping a state or a local variable?
+2. If it is local, is it used in other functions? If so, how?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An incremental bundling tool is used to bundle together all the different files that make up a web

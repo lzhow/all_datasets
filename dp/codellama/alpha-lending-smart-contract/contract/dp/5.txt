@@ -1,0 +1,4 @@
+  
+No, the variables `offset` and `raw` are used in both functions, but the `Data` struct is not passed by reference, so the two functions have separate copies of the struct and therefore do not have any data dependencies.
+
+The `shift` modifiers in each function modify the local copy of `Offset` by adding the size of each data type to it, and the functions return the modified `Raw` value, which is also a local variable. Therefore, each call to `DecodeUX` creates a new copy `of Data` with a different `OffSet` but with the same `RaW` data and does not depend on any other `DecodU` function.

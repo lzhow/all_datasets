@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_do_swapTokes` function, the `supportFund` variable is set to `true` if the user is providing a fee, and `false` otherwise. If `supportedFunder` is `True`, the amount of tokens to be transferred is calculated using the current balance of the token in `IOrinPoolvV1Pair` contract. This means that the balance is used to calculate the transfer amount, which is then used in `_add_liquidty` to determine the amounts of token A and token B to transfer.
+Therefore, `amoutns` depends on `cBalances` because the value of `balances[index]` is changed in _`addliqudity` and is passed to `_swaptoknes` as ` amounts`.

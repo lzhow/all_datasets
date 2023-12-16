@@ -1,0 +1,11 @@
+
+The variable to in safeTransfe is a controlled variable. It is passed into the safeTranfer function as a parameter and is used to determine the recipient of the funds. Since the parameter is user controlled, the value of to is also user controllable.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  You can check if it's user-controlled by looking at the code that calls the smart contract. If the contract is called by a user, then the variables are user controlable. However, if you're looking for a general answer, you can't really know for sure. A variable can be user or smart-contract controlled. For example, a counter variable that is incremented by each transaction is smart controlled but a mapping that maps addresses to balances is more likely usercontrolled.
+
+In general, smart contracts are designed to be trustless and open to everyone to call. This means that the state of a smart contrac can change at any time by anyone. So, in general you should not rely on the values of variables in a contract to have any meaning. Instead, use them as part of your program logic. 
+
+If you want to make sure that a certain variable has a specific value

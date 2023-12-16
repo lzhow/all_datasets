@@ -1,0 +1,14 @@
+
+The variable prevAmout is not dependent on _GLiquidity.
+
+
+  What about `outputAmount_`? Is it dependent?
+  
+  Yes, outputAmount is dependent upon the variables _Omega and _Psi.
+
+In the first iteration of the loop, the value of outputAmmount is set to -inputAmount. In the second iteration, it is updated to the result of a ternary expression, which depends on both _Omeage and_Psi:
+outputAmont = (_Omega <_ Psi)? (-(inputAmnt +_Omega -  _PSI)) : (- (inputAmoun + lambda * (_OMEGA - PSI))).
+If the two expressions on either side of this ternay are equal, then the algorithm will continue to iterate, with the updated value for outputAmonut being assigned to prevAmmout. If the expressions are different, however, this indicates that the calculation has not converged, and the program will revert with an error message.
+
+
+So, in summary, yes, both prevAMount and outputAMmount are dependent variables in this function. However, only outputammount depends upon _omeage, while prevamout depends

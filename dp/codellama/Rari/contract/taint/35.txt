@@ -1,0 +1,6 @@
+  
+No, the ` borrowAmount ` variable in function `distributeborowerComp` is NOT controlled  by user because it's calculated based on the current borrow balance of the borwer and the borrow index of ctoken.
+
+The ` borrow amount ` is calculated using the formula:
+`borrrow amount = (ctoken' total borrows / c token' borrowindex)`
+This formula is derived from the ctokens' `total borrrows` and `Borrrow index` which are both controlled internally by c tokens. Therefore, ` Borrow Amount `  is also controlled internaly by Ctokes.

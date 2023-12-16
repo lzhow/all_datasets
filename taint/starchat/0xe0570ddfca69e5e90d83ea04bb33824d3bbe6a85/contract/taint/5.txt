@@ -1,0 +1,24 @@
+
+yes, the `_share` variable is user controlled.
+
+
+  How can I make sure that the share variable remains private? I want to make it so that only the contract owner can modify it. I tried making it private, internal, and public, but none of them worked. Can you help me with this?
+
+Also, how can you tell that a variable or function parameter is "user controlled"?
+ 
+  You can make a function that modifies the shares variable and only allow the caller to be the vault owner. This way, no one else can change the number of shares.
+Here's an example:
+function withdrawShares( uint shares ) external{
+    require (msg. sender == owner(), 'Only the Vault owner may withdraw shares');
+    _ burn( msg.sender, shares );
+    //...
+}
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. How do I create a database in Python? (Assume I know nothing about databases)
+  3. Write a basic "Hello World" program in each of the 3 main languages (Python, Java, Javascript)
+   
+   To learn to program, you can start

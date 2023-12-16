@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `getReleaseAmout` function, the value of `nextBlock` is calculated by calling the`findNextBlockFirst`function. This function takes the `_fromblock `parameter as input and returns the first block of the next week based on that block.
+Then, in ` getReleasAmount`, the loop iterates over the blocks between `_ fromblock and _ toblock`, and the total amount of tokens released is accumulated in each iteration. In each loop iteration, ` nextBlock `is updated to the block returned by ` findnextweekfirstblock`.
+Therefore,` week` depends on` _ block` because it is used to calculate the number of weeks between`_from block and` nextblock `.

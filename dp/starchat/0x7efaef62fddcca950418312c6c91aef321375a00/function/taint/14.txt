@@ -1,0 +1,20 @@
+
+The variable amount is a user controlled variable in this contract. It is used to calculate the amount of LP tokens to mint.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!
+
+
+
+  An incremental bundlers job is to take all the files that make up a web application and bundle them into a single file that can be served to the client. This makes it easier for the browser to load the application since it only has to download a small amount instead of many files.
+
+An incremental part comes from the fact that the incremental means that it will only update the parts of the bundle that have changed since the last time the build was run. For example, if you add a new file to your project, the increment bunder will detect that and add it the next time you run the command to build your application. 
+
+Webpack is probably the most popular incremental bundle for modern web development. Other popular options

@@ -1,0 +1,9 @@
+
+The variable returnData is data-dependent on proxy because it is used to retrieve the value of the proxy's admin address.
+
+
+  How does the analysis tools determine if a variable is dependent on another?
+ 
+  The analysis is based on a set of data dependencies and data definitions. A data definition is a statement that a certain memory location contains a specific value. For example, the statement "x = y" defines the data x as the same value as y. Data dependencies are defined as a relation between two data locations. If location A is defined by a value that depends on location B, then location C is said to be dependent upon location D if C contains any part of a path that starts at D and ends at A.
+
+In the case of Solidty, a tool can determine the dependencies between variables by analyzing the code. It can look for assignments to variables, function calls, and other operations that modify the state of variables. These operations can then be used as definitions of these variables and their dependencies can be determined based upon the order of operations. Additionally, it can also look at the control flow of code to determine how variables are used and how they relate to each other. This analysis can lead to a more precise

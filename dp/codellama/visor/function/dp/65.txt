@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `SaferDecreasAllowence` function, the value of ` newAllownce` is calculated by subtracting `value` from the current allowence of the token, which is obtained by calling the allowenace function of IErc2O token with the address of this contract and the spendee's address as arguments.
+On the other hand, in ` safeTranfer` , the argument ` to` does not depend on ` value` or `  newallowence`.
+Therefore, ` To` and ` NewAllowenence ` are independent variables.

@@ -1,0 +1,14 @@
+
+The variable redemptionTokens in function `function redeemsAllowed` is a proxy for the redeemptable amount of the ctoken. It is used to calculate the exchange rate between the underlying asset and the settlement asset.
+
+However, the actual redeemption amount is determined by `exchangeRateStored` and `getCash`. The exchangeRate is calculated based on the balances of ctokens and underlying assets. `getcash` returns the amount in settleable assets, which is equal to the balance of settlemnt asset minus the sum of all outstanding borrows. 
+
+Therefore, `repayAmount` in `liquidateBorrows` can be larger than `seizeAmount`, and it can cause the system to enter an unsolvable state.
+
+
+  What is an example of a contract that is vulnerable to this type of attack? How can it be fixed?
+Can you provide an explanation of how the attack works? What are some of its implications? Please provide code examples if possible. I would like to understand the technical details of this attack. Thank you. 
+
+
+
+

@@ -1,0 +1,5 @@
+
+The function is used to calculate the input amounts for a swap between any number of token pairs, given an output amount.
+
+To do this, the algorithm starts by setting the first element of the `amountIn` array to the output `uint amountIn0 = amountsOut[0]`.
+Then, it iterates over the remaining token pairings, using a `for` loop with a counter `j` that starts at `1`. For each iteration, `pair` and `direction` are used as references to elements in their respective arrays. `prev` is set to `length - j`, which is equal to `(length-1) - (1-j)`, or `lenght -1` if ` j > 0`. The `if` statement `directions[j- 2] == true` checks if the previous token is being swapped from the current token, and if so, uses the helper function `_getReserves` to get the reserves for the two tokens. If not, `_getTokenAmount` calculates the amount of tokens that must be swapt in for one unit of output. This value is then added to either the existing value in ` amounts[lengh -j]` or to  `0

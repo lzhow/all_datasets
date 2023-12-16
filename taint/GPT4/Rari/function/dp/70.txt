@@ -1,0 +1,5 @@
+Label: unknown
+
+Explanation: 
+
+The variable `nextTotalBorrows` in the function `borrowAllowed` is not directly referenced or used in the function `mintAllowed`. Therefore, there is no direct data dependency between the two variables. However, there might be an indirect data dependency if the value of `nextTotalBorrows` affects the state of the contract, which in turn affects the value of `nextTotalUnderlyingSupply` in the function `mintAllowed`. Without further information about the contract's state and how it is modified, it is not possible to determine the exact data dependency relationship between these two variables.

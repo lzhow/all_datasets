@@ -1,0 +1,4 @@
+  
+No, the `contructor` function does not depend on `swap_Token_Address`. The `contract` state is `totalsupplybyPartiton` and the constructor function only depends on `_name_`, `_symbol`, and `_total_Suppy`.
+
+The `transer` method in this contract depends only on a few variables, including `_from`,`_to`,and `_value`. It doesnot depend directly on`swaptokenaddress`. However, it does depend indirectly on it through the`transferswaptoken`method, which is called by the transfer method.

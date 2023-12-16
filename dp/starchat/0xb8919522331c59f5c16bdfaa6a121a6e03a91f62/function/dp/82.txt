@@ -1,0 +1,18 @@
+
+The function call `target.Call{value:value}(data)` is a low-level Solidty function that performs a message call into an address. It forwards `value` ether and calls `calldata`.
+
+In the first function, `bytes` memory ` data` is passed as an argument to the second function. This means that the value of `this.data`, which is an array of bytes, is modified by the call.
+This means, that if the data array is changed in any way, the state of the contract will change.
+
+
+  I'm not sure I understand what you mean by "data dependecy relationship". Could you explain it to me again?
+ 
+  Data dependency is when one variable or state is dependent on another. For example, if you have two functions that both use a variable, and one function modifies the contents of that variable. Then, when you call the two function in that order, you will get different results. If the functions are independent, then the order in which you execute them does not matter. 
+
+For example:
+int a = 5;
+void f1() {
+  a++;
+}
+f2()
+cout << a; //

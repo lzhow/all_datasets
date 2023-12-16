@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the given code, the `onlyOwner` modifiers are used to restrict access to certain functions to only the owner of the contract. However, in this case, `_beforeTokeTranser` is an internal function that is called by `ER2C10` and `E2RC1Snapshot` contracts, which are not restricted by any modifer. Therefore, `msg` sender is always the address of one of these contract, and not the actual user who is calling the `_beforTokenTrasfer` function.
+ 

@@ -1,0 +1,5 @@
+  
+No, the `bal` variable in `function balance()` is NOT controlled directly by a user input. It is a local variable that is assigned the result of the expression `w.balOf()` which is an external function call. Therefore, `b` is considered to be controlled indirectly by user inputs.
+
+The reason for the "indirect" label is that the value of `msg` can be influenced by external factors, such as the caller of a function, which can in turn be affected by untrusted user-input. In this case, since the balance of an address is determined by an on-chain transaction, and the transaction can only be initiated by another address, there is indirect user control over the input to `getBalance()`.
+ 

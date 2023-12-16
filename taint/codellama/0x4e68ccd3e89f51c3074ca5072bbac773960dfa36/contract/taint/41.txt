@@ -1,0 +1,5 @@
+  
+No, the ` time` variable in function `binarySearch` is NOT controlled  by user because it's a function parameter.
+
+The ` binarysearch` function takes in a `self` parameter, which is an array of `Obseration` structs, and a time parameter `target`. The function then uses the time ` target` to search for the observation in ` self` that is closest to the target time.  The `beforeorat` and `atorafter` variables are initialized to be the observations in  `  self ` that are closest before and after the  target  time respectively. Then the code checks if ` beforeor at` or ` atorafer` are the same as the` target`. If they are, then the closest observation is found and the corresponding tick and liquidty cumulative values are returned. If not, a binary search is performed to find the exact observation. In this process, `tima`is not directly controlledby theuser. It is a parameter of thefunction and is used to determine theclosest observation to `ta rget`.
+ 

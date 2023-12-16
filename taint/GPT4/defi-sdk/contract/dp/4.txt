@@ -1,0 +1,3 @@
+Yes
+
+The variable `marketplaceFeeAmount` in the function `getReturnedAmounts` is data dependent on the variable `outputBalanceChange` in the same function. This is because `marketplaceFeeAmount` is calculated using `outputBalanceChange` as part of its formula. Specifically, `marketplaceFeeAmount` is derived by subtracting `protocolFeeAmount` from `totalFeeAmount`, and `totalFeeAmount` is calculated by subtracting `returnedAmount` from `outputBalanceChange`. Since `marketplaceFeeAmount` is directly affected by the value of `outputBalanceChange`, there is a data dependency relationship between these two variables.

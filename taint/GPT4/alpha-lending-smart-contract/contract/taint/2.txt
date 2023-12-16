@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_user` in the function `accumulateAlphaToUser` is a parameter that is passed to the function when it is called. Since this function is marked as `external`, it is meant to be called from outside the contract, which means that the caller (which is typically a user or another contract acting on behalf of a user) specifies the value of `_user`. Therefore, `_user` is controlled by the user who calls the function.

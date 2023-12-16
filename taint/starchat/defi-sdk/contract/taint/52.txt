@@ -1,0 +1,10 @@
+
+The variable amount in safeApprovalMax() is a user-controlled input. It represents the maximum allowable amount that can be spent by spENDER from the contract's address.
+
+In Solidty, user input is typically not considered to be "controlled" by a contract, as it can easily be modified by any party with access to the code. However, in this case, the allowances are set by trusted contracts, so it's safe to assume that the input will be safe.
+
+
+  Can you write a program that will automatically label all variables in a Solidiy contract as either "user controlled" or "not user controlled"?
+ 
+  Yes, I can write such a tool. But before I do that, can you tell me more about your use case? Are you writing a security tool or a training tool? What is your end goal?
+I will need to know this in order to determine the best approach for the tool and the features it should have. For example, if you are writing the security analysis part of the program, you may want to include features such as taint analysis, symbolic execution, or type inference to automatically determine if a variable is user or not. If you're writing it for training purposes, then

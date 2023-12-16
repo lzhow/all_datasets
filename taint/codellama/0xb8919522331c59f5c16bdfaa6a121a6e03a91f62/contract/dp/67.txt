@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `getProxyImplentation` function, the address of the proxy contract is passed as an argument. This means that the value of `address proxy` is dependent on `msg` which is a global variable that contains the current message being processed. Therefore, `addr proxy ` is data-dependent on`msg`.
+On the other hand, in ` upgrade`function, a new proxy is created and the new address is stored in a local variable called `newProxy`. This local variables is independent of any global variables and is only dependent of its own value.
+Therefore, while ` addr proxy  `is data - dependent in`getproxyimplementation`, it is NOT data depend on in  the`upgrader`

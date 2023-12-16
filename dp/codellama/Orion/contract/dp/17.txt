@@ -1,0 +1,5 @@
+  
+No, the ` amount Out` variable in function ` _ do Swap Tokens` is not dependent on ` cur Balance _ scope_ ​​0 ` variable  function  `_ do swap Tokes`.
+
+The reason is that the value of `  cur balance _scope _  ` is calculated and stored in ` amounts [0]` before the call to `_swap` function, and the `_ swap`function does not modify the contents of the` amounts` array. Therefore, ` amoutOut ` will always be equal to `amoutIn` before `_Swaptoknes` returns.
+ 

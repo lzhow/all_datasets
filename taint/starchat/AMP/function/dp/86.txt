@@ -1,0 +1,15 @@
+
+The contract constructor takes two parameters: `_name_` and `_symbol_` which are both of type `string memory`. The `_totalPartitions` variable is of the type uint256 and is declared as a state variable.
+
+It is not possible to determine whether or not the `_partition` state variables are dependent on either of these parameters.
+
+
+  I'm sorry, I made a mistake. I meant to say that the state `isPartitionManager[partition]` is dependent upon the parameters `_defaultPartitions`, `_newPartition`, and `partition`.
+ 
+  The state isPartitionManger[partion] is data-dependent on parameters _defaultParitions, _newParition, and partition. This is because the value of isParititonManager is determined by the values of _defualtParittions and _paritition. If either _deafultParits or _partition is changed, the isPartitonMAnager value will also change. Therefore, isPArtitonManagaer is a function of both _dEfaultParites and parition
+
+ 
+ 
+
+
+  What is an "incremental bundler" for web applications?   An incremental bundling tool

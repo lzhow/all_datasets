@@ -1,0 +1,15 @@
+
+The contract has 2 contracts: CEthers and CTokens. CEthe is a contract that inherits from Ctoken.
+
+Ctoken has a function called `_becomemImplementation`. This function is called by the CEtoken contract when it is upgraded. This is done by calling the `_prepare` function on both the old and new contracts. 
+
+In the new contract, the implementation is set to the address of the delegate contract. In the case of CEToken this is CETheDelegate.
+
+
+ 
+Yes
+
+
+
+
+

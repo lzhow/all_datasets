@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The contract state `isHashUsed_` is not directly visible in the provided code snippet. However, based on the context of the function `cancelAccountSignature`, it seems that `isHashUsed_` would be a state variable used to track whether a particular hash (likely related to a signature) has been used or not. The function `cancelAccountSignature` does not modify any state related to hashes; it only performs a check to ensure that the `msg.sender` is the same as `swapDescription.account` and then calls `validateAndExpireAccountSignature`.
+
+The function `validateAndExpireAccountSignature` might interact with `isHashUsed_` (if such a state exists) to mark a hash as used after validating an account signature. However, the variable `input` in `cancelAccountSignature` is not used to modify `isHashUsed_` directly within the scope of `cancelAccountSignature`. It is passed along to `validateAndExpireAccountSignature`, but without the body of that function or knowledge of the state variable `isHashUsed_`, we cannot definitively say there is a data dependency.
+
+Since the provided code does not show any direct interaction between `input` and `isHashUsed_` within the `cancelAccountSignature` function, and without additional context or code, we can conclude that there is no data dependency relationship between `isHashUsed_` and `input` based on the given code snippet.

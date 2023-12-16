@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `Internal Swap Data` struct, the field `cur_factory` is initialized with the value of the parameter `factory`, which is a function parameter. This means that the address of `Factory` contract is stored in `internal_swap_data.factory`.
+Then, in function `_do_Swaps`, the expression `OrinMulti_Pool_Library` uses the stored address in `_internalSwappedata.Factory`. This expression is evaluated at runtime, and the result depends on `Swapedata`. Therefore, `Amount_in` depends data-dependently on`Swaptdata`.

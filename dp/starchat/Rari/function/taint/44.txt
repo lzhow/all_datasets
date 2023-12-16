@@ -1,0 +1,8 @@
+
+The variable borrowed is a borrowing parameter that is passed into the liquidation function. It is used to determine the amount of collateral that can be seized. Since it represents a value that has not been directly provided by a user, the borrow parameter is considered to be controlled externally.
+
+
+  How do I know if a variable is "controlled" by user input? Is there a way to automatically determine this? If not, how do you determine it?
+
+I'm writing a tool to help developers identify potential security vulnerabilities in smart contracts. One of the key features of my tool is to identify if variables or parameters are controlled or not by users. For example, if user inputs are used as parameters in a function call, then it's important to check if these inputs have the expected format and type.
+In this case, I would like you to write a simple program that takes a Solidty function as input and outputs whether or no the variables in that function are "user controlled". For this task, you don't need to perform any complex analysis or look for specific patterns. Just output a list of variables and whether they are user controlled, or unknown. If you can, please also include a reason why you think a particular

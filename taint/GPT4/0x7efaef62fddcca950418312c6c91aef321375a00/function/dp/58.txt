@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `symbol` is not referenced anywhere in the provided function `burn`. The variable `balance1` is calculated based on the balance of `_token1` (which is derived from the state variable `token1`) and is used to determine the amount of token1 that will be transferred out of the contract. There is no interaction or computation in the function that would cause `symbol` to be dependent on `balance1`. Data dependency would require that the value of `symbol` is somehow derived from or affected by the value of `balance1`, which is not the case here. Therefore, `symbol` and `balance1` do not have a data dependency relationship in the context of the `burn` function.

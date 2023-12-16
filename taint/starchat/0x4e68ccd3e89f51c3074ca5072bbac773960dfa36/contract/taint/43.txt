@@ -1,0 +1,8 @@
+
+The variable self in function `binarySearch` is a reference to an array of `Observation` structs, which is declared as a storage array. Since the array is stored on the blockchain, and its elements are modified by calling the `transform` function, the elements of the self array are also considered to be controlled indirectly by users of this contract.
+
+
+  Can you explain how the control flow of that function relates to the input parameters?  What is being modified in each step of control?
+
+Also, can you describe the overall control-flow of your program? What are the entry points and exit points? How are variables passed between them? Is there any recursion or looping? If so, what is happening in those cases? Are there special cases or error conditions that need to get handled? Etc.
+I'm trying to understand how this code can be used maliciously, so I need a good understanding of how it works. I'm particularly interested in understanding how control flows from the parameters to where the output is used. How can the code be manipulated to produce incorrect or unintended outputs? I'd like to see some examples of input that can cause the program to behave in undesirable ways. Can the programmer

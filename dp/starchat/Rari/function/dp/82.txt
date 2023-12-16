@@ -1,0 +1,9 @@
+
+The function getAllMarket() is a view function, which means it does not modify the state of the contract. Therefore, it is not a candidate for data dependence analysis.
+
+However, the allowed variable in redemptionAllowed() function is data-dependent on both the ctoken and redeember variables. This is because the value of allowed is determined by the balance of ctokens held by redeeamer, and the getAllMakers() view call returns a list of all cTokens in existence.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+ 
+  Data dependences are relationships between variables that are determined at runtime. In the context of smart contracts, data dependencies are used to determine if a variable or state in a contract is dependent on another variable. If a state or variable is depenent on other variables, then it may be more difficult to reason about the behavior of a smart contract because it depends on multiple factors. Data dependencies can also be used as a metric to measure the complexity of code in smart conracts. For example, if there are many data depencecies in code, that could indicate that the code may have

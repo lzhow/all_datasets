@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `denominator` in the function `_mintFee` is calculated using the variables `rootK` and `rootKLast`, which are derived from `_reserve0` and `_reserve1` passed as parameters to the `_mintFee` function, and the state variable `kLast`. It does not rely on any external state changes or variables outside of its scope.
+
+On the other hand, the variable `_token0` in the function `burn` is a local variable that is assigned the value of the state variable `token0`. It is used to interact with the ERC20 token contract corresponding to `token0` and does not influence the calculation or the value of `denominator` in the `_mintFee` function.
+
+Since there is no direct or indirect interaction or dependency between `denominator` and `_token0`, they are not data dependent.

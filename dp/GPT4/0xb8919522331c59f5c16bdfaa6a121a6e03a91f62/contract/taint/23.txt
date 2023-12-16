@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `data` in the function `upgradeToAndCall` is an argument provided to the function when it is called. Since this function can be called externally and the `data` argument is passed with the call, it is controlled by the user who initiates the transaction. The user can pass any arbitrary bytes data as the `data` argument, which means the content of this variable is user-controlled.

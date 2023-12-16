@@ -1,0 +1,10 @@
+
+The variable _partsOf is a mapping from addresses to a list of partitions. Since it's a private variable, and the only function that accesses it, is partitions, which is public, the mapping is considered to be controlled externally.
+
+
+  How do I know if a variable is private or public? Is there a way to tell? I'm not very good at reading code. I just want to know what I can do to help
+ 
+  In Solidty, a function or variable can be declared as private by using the `private` keyword. A function can also be marked as internal, meaning that it can only be accessed from within the same contract. If a contract has no visibility specified, then it defaults to `public`.
+
+ 
+ 

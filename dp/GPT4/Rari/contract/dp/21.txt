@@ -1,0 +1,9 @@
+yes
+
+The contract state `compAccrued` is data dependent on the variable `borrowSpeed` in the function `updateCompBorrowIndex`. This is because the value of `compAccrued` is updated based on the value of `borrowSpeed` in the following line of code:
+
+```
+uint borrowerAccrued = add_(compAccrued[borrower], borrowerDelta);
+```
+
+The value of `compAccrued[borrower]` is used in the calculation of `borrowerAccrued`, and since `compAccrued` is a contract state, any changes to `borrowSpeed` will affect the value of `compAccrued`. Therefore, there is a data dependency between `compAccrued` and `borrowSpeed`.

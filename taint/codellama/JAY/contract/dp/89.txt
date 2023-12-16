@@ -1,0 +1,5 @@
+  
+No, the `contract state nextUpdateFess` is not dependent on `variable success` from the  `function buy Jay`.
+
+The ` nextFeUpdate ` variable is updated in `updateFeess()` function, which is called in  the constructor of the smart contract. This function updates the fees based on a price feed, and it does not depend on any external variable or state.
+On the other hand, ` success ` is a local variable in function  buy Jays, it is used to check if the transfer of Ether to the developer's wallet was successful. However, this variable does  not affect the value of `NextFeupdate` variable. 

@@ -1,0 +1,4 @@
+  
+No, the `appovalDelay ` contract variable is data-independent of the local variable ` _ amount ` in function` balance `.
+
+The ` approvaleDelay  ` variable stores the delay period for the proposal of a new strategy, which is a constant value set in constructor. It is independent of any local variables in functions, including ` balance `, and therefore does not affect the data dependence of `  _  amount  `.

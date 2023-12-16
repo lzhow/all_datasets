@@ -1,0 +1,5 @@
+  
+No, the `updateCompIndex` function does not depend on `CTokenn` variable in ` claimrewards`function.
+
+The ` updatecompIndex ` function updates the comp index for a given ctoken, which is passed as an argument to this function. This function uses the ctokens's borrow index to calculate the new comp supply index. However, this calculation doesnot depend directly on any variable from the` claim rewards `function, such as ` ctokenn`.
+On the other hand, `compborrwerindex ` variable is used in` update compborrerindex`, which updates comp borrwe index, and this variable depends on` cborrorindex`. This variable comes from`cborrownindex()` function,which is called in  `updatcomp borrer index` and depends directly  on c token. 

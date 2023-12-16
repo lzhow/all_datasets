@@ -1,0 +1,4 @@
+  
+No, the ` retuendata ` variable in function `_calloptionalReturn` is uncontrolled by user because it's a local variable that is created by calling the address of the token and the data.
+
+The ` _ callOptional Return` function calls the ER2C token' s `functioncall` method with the given data and returns the result. If the call is successful, then the return data is decoded and returned. However, if there is an error, an exception is thrown. Therefore, `returnData` variable is only controlled within the scope of this function and is never controlled directly by a user input.

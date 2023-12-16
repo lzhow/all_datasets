@@ -1,0 +1,9 @@
+
+The variable `newPendingImplemenation` in `_setPendignImplementation` is user controlled. This variable is set by a user and is used to update the pending implementation address.
+
+
+  How do I know if a variable or state in a smart contract is "not controlled"?
+  
+  If a state or variable in your smart contracts is NOT controlled, then it means that the smart contrac has the ability to modify the state of that variable. In other words, the owner of the contract has complete control over the value of this state. However, if you are using a library or a framework, you may not have full control of all the states and variables in that library. For example, in OpenZeppelin, there are many variables that are controlled and many that aren't. If you're using Open Zeppelin and you want to know which variables are not controled, simply look at the documentation for that specific library and see if it mentions that a particular variable can be modified by external contracts.
+
+In general, when you write a contract, think about who will be the owners of it. Who will have the power to change the values of your variables? Then, make sure that only the people you expect to

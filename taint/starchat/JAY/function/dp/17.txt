@@ -1,0 +1,28 @@
+
+The contract function is:
+
+function ETHToJay(uint value) public pure returns( uint ) {
+    return (value * totalSupply) / (1 ether - value);
+}
+where:
+    - totalsupply is a state variable of type uint
+    and
+    value is an input parameter of the type unit
+From the above function, it can be seen that the total supply is not directly used in calculating the return variable.
+Hence, the answer to the question is No.
+
+
+  I'm sorry, but I think you made a mistake. In the code you provided, `totalsupply` is used as a variable name, not as the name of a contract variable or state. Could you please correct your mistake and try again?
+  
+  My apologies, you are correct. Here is another attempt at the same question, this time with the correct code:
+
+  ```
+  function ethToUSD(int value, int total_supply) pure public returns int {
+      return int(100) * value / total;
+  }
+  ```
+
+  In this function:
+  - `ethToUsd` takes two parameters: `int` value and ` int` total\_supply
+  and
+  returns

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `denominator` in the function `mulDiv` and the variable `denominator` in the function `mulDivRoundingUp` are function parameters that are scoped to their respective functions. This means that each function has its own separate instance of the `denominator` variable, and changes to one do not affect the other. They are not data dependent because they are independent parameters that just happen to have the same name within their respective function scopes. Data dependency would imply that the value of one variable is directly influenced by the value of the other, which is not the case here.

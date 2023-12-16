@@ -1,0 +1,5 @@
+  
+No, the variables `_ reserve ​​0 `and ` amount  ` are independent in function `_update` and function` swap`.
+
+In function  `_ update`, the value of `_ reserves  _` is calculated based on `balances  `. The value is not affected by the ` amounts  Out` of the`swap` function.
+Similarly, in `function swap`, `reserves` are updated based only on`balanc _`. The ` _ reserv _ ` variable is updated in` _ update` before the call to`_ swap` . Therefore, `_ _ reserve _ _  and amount _ Out `are independent.

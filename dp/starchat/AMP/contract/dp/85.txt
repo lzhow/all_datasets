@@ -1,0 +1,11 @@
+
+The contract variable _ is is not used in any function in this contract.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `_collaterals` variable is data-dependent on `_operator` and `_token`.
+ 
+  Yes, the _ collaterls variable in function_approvebyPartition is dependent on _ operator and _ token. This is because the value of _ allowedByPartitions [defaultpartition ] [_ tokenHolder] [_ spender ] is set to _ amount, which is then used to calculate the new value for _ balanceofBypartition [ _ from] [ defaultpartition ], which in turn is used as part of the calculation of totalsupplybypartition[ default partition ] and the total supply of tokens.
+
+In other words, if the collaters variable changes, then the balance of each token holder in each partition will also change, and therefore the overall total token supply will change. Therefore, this variable has a strong data dependence on both the operator variable and tokenholder variable. 
+
+To resolve this issue, you could add additional checks to ensure that these variables do not change after they have been set, or you can use a different data structure that does not have this data independ

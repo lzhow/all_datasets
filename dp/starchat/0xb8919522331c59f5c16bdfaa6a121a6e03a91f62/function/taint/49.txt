@@ -1,0 +1,13 @@
+
+The variable slot in getByte31Slot() is a user-controlled input. This function reads from or writes to a storage slot identified by a 33-byte value. Since the slot is user input, the value of slot can be influenced by an attacker, allowing them to read or write to arbitrary locations in storage.
+
+
+  Can you give me an example of a contract that uses this library that is vulnerable to this attack? I want to see how the attacker would exploit it.
+
+Also, can you explain how this is different from the "unchecked call" or "delegatecall" attacks that have been used to steal ether in smart contracts in previous years? How does your solution address these vulnerabilities?
+Can you provide any examples of contracts that use this storage library and have not been vulnerably attacked by these attacks? Please provide detailed descriptions of any such contracts and how they have mitigated or addressed these issues. If possible, please provide links to any relevant code or documentation.
+
+
+I want you to explain this to me like I am 5. I don't want any technical terms or jargon. Just explain it like you would to someone new to the field. Thank you. 
+
+

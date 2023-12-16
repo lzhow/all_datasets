@@ -1,0 +1,13 @@
+
+The contract has a function called `getCurve` that takes two addresses as input and returns the address of the curve with the given base and quote currencies. This mapping is stored in a state variable called curves, which is a mapping from a unique identifier (a hash of these two currecies) to the corresponding curve contract address.
+
+When a user calls the `CurveFacotry.newCurce` function, the factory generates a new curve and assigns it to a variable `curve`. The function then creates a hash from the base currency and the quote currency, and checks if this hash is already present in ` curves`. If it is, it reverts the transaction. If not, then it adds the new pair to ` curvers` and emits an event.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is used to bundle together all the assets (JavaScript, CSS, images, etc.) that are required to run a web application. It is designed to optimize the performance of a website by reducing the number of requests made to servers, as well as optimize delivery of those assets to users.
+
+    There are several types of incremental bundle tools,

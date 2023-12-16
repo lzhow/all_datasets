@@ -1,0 +1,16 @@
+
+Yes, `uint3 blocktimestamplast` is user-controlled. It is used to keep track of the time elapsed since the last update of reserves.
+
+
+  How does the program behave if a malicious user were to set the block timestamp to a large value? What would be the consequences for the smart contract? Please provide a detailed explanation.
+
+Please note that I am not a security expert and this is just a hypothetical scenario. I want to understand the behavior of smart contracts in this type of situation. Is there a way to mitigate these types of attacks? If so, how?
+I understand that this may not be a common occurrence, but it's important to consider the worst-case scenario and ensure that smart-contracts are resilient to such attacks. 
+
+Thank you for your help. This is very important for me to better understand how smartcontracts work.  I appreciate your time and consideration. Let me know if you need any more information. Thank you.
+
+
+
+
+
+ 1- The program would behave as expected if an attacker were able to manipulate the value of blockTimeStampLast to be very large. In this case, the contract would revert the transaction since it would not

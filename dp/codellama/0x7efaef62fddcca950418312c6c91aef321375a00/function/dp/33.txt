@@ -1,0 +1,5 @@
+  
+No, the variables ` amount 1 ` and `_ token  ` are independent in both functions.
+
+The reason is that the `burn` function only uses the `_reserves` and `total supply` variables, which are defined in `getReserve` but not in` swap`. The `balances` of the tokens are also defined only in `_burn`, but they do not depend on `_tokens`.
+Therefore, there is no data dependence between ` _toke`n and` amount` between the two functions, and the answer is "no".

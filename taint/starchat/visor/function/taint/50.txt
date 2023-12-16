@@ -1,0 +1,19 @@
+
+The variable isControlled is a private function in RewardHypervisors. It is used to check if an address is contract or not. Since it's a internal function, and it doesn't have any external interaction, the answer is no.
+
+
+  How can I check the code of a smart contract? I have a piece of code that I want to analyze, but I'm not sure how to do it. Can you explain it to me step by step? Please include some examples. I am a beginner, so please be as clear and concise as possible. Thank you.
+
+I have this code:
+pragma solidity ^05.07;
+contract owned {
+    address owner;//the address of the owner of this contract
+    constructor() public {
+        owner=msg. sender;
+    }
+    modifier ownerOnly {require(
+        msg.sender==owner,
+        "Only the contract owner can call this function."
+    ); _;}
+}
+What does this do? What is an "owned" contract, what does the "owner" variable do, how does it get set, etc.? Can I modify it? If so, please modify the example code to show me how. If not, can you please

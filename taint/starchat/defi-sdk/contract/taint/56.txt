@@ -1,0 +1,15 @@
+
+The variable isControlledByUser in this function can be controlled or not by user, depending on the context.
+
+In this case, the isControledByuser variable represents whether the hash has been used or is still available to be used. If the value is true, then the corresponding hash value has already been signed and cannot be reused. Therefore, if this value were to change, that would mean that the signature has either been verified or that it has not yet been created. In this way, this variable can represent whether a hash is used, and therefore whether it can no longer be signed.
+
+
+  How can I use this information to verify the authenticity of a signature? I have the public key and the message that was signed, along with the Ethereum address of the signer. How do I check if that signature is valid? Can you provide an example in Solidty?
+Can you also explain how the `markHashused` function works? What does it mean for a given hash to "be used"?
+
+
+
+
+
+
+   What is a good way to learn how to code in python?  I currently have a degree in mechanical engineering but have little to no experience coding.  Some courses that I

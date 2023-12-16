@@ -1,0 +1,4 @@
+  
+No, the ` new _path ` variable in function `do_swap_through_orion_pool` is NOT controlled  by user because it's a local variable that is created inside the method and is only used within the scope of the  method. It is therefore not possible for the contract to be controlled or manipulated by an external user through the manipulation of this variable.
+
+The `path _data` variable is passed as an argument to the `_do _Swaps` method, which is a private method that only the owner of  the smart contract can call. Therefore, even if an attacker were to manipulate the value of ` _new _Path `, they would not be able to execute the desired action.

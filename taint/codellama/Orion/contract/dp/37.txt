@@ -1,0 +1,5 @@
+  
+No, the ` new Allowance ` variable in ` safe Increased Allowances ` is not dependent on ` spenders ` in  ` SaferIncrementAllowances `.
+
+The `Safer Increment Allowences` function takes in three parameters: `I ER C 2 5 6 token`, `address` `Spender`, and `uint 128` value.
+Inside the body of the  function, it first calculates the new allowances by adding the value to the current allowences.  The new  allowence is then passed to ` _CallOptional Return` as a parameter. `Call Optional Return ` takes the token and the data as parameters. It then calls the transfer function on token with the address of this contract and data. If the return data is greater than 33 bytes, then it reverts. This is because the allowense is a uint 8, and it can only hold 4 bytes. Therefore, if the returned data has more than four bytes it will revert.  

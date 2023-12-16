@@ -1,0 +1,13 @@
+
+The variable fromblock is data-dependent on toblock in getreleaseamount. This is because the loop in this function iterates over each week, and the from and to blocks of each iteration depend on each other.
+
+
+  Can you explain why this is so?
+ 
+  Sure, here's a step-by-step explanation of why the `while` loop iterating over weeks in `AlphaContract.sol` is dependent on `block` and `lastBlock`:
+
+1. `startblock`: The startblock variable is set to 200903010 (March 3, 4:06:41 AM UTC on January 9,221) in line 50 of the contract.
+
+2. `_fromblock > _tblock || to_block <=start_Block|| last_blok <=_from_blo`: This condition is checked in lines 60-61 of `alphacontract. sol`. If this condition evaluates to true, the while loop will not run.
+
+- `_toblock <last_bloc`: If the `_t_ block` variable in `_getreleaseAmount` function is less than the last block, then the

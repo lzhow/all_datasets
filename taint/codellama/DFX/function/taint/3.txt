@@ -1,0 +1,4 @@
+  
+No, the ` beta _` variable in function `viewCurves` is NOT controlled  by user because it's a private variable that is only accessible within the contract.
+
+The ` viewCure` function is a public function that returns the values of the private variables `alpha_`, `delta_ `, `epsilon_ and `lambda_`. The ` alpha _`,` delta _ ` and` lambda _ variables are set by calling the` setParam`function, which is also a  public  function. Therefore, these variables can be controlled only by users who have the permission to call the public functions. 

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `sendValue` function, the value of the recipients's balance is checked to ensure that it is greater than or equal to the amount being sent. This check is performed using the `_verifyBalance` internal function.
+On the other hand, in ` function CallWith Value`, the balance of `target` is also checked before making the call. If the target' balance does not have enough funds to cover the cost of making a call, then the transaction will fail.  This is done using a similar check to that in `_ verifyBalances`.
+Therefore, ` recipent` and ` value` are both data-dependent on each other.

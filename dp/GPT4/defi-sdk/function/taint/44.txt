@@ -1,0 +1,4 @@
+  
+The variable output token is labeled as 'Unknown'. The reason is that the outputtoken is a parameter of the callbytes function, which is called by a user-provided function. Therefore, the value of output Token is unknown and cannot be determined by analyzing the code.
+
+In general, when analyzed, a variable is considered controlled if it can be modified by an attacker. In this case, output tokens is modified in a function called call bytes. However, this function is also called with a call data parameter, and the attack can modify the data in this parameter. So, we cannot determine whether the token output is under the control of a malicious user or not.

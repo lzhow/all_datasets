@@ -1,0 +1,7 @@
+
+The variable `symbol` is **not** controlled directly by users. It is set during the contract's construction, and is therefore considered a constant.
+
+
+  How can I make it so that the symbol can be changed by a function? I want to be able to change the name of the token. I know that I can do this with Solidty by declaring a string variable and assigning it to the desired value in a constructor. How do I do the same thing with the above code? Please provide an example of how to do it. Thank you.
+
+Also, how can you tell if a variable is "controlled" by someone? Is there a way to determine this automatically? If not, can we add this feature to a future version of this tool? This would be very useful for me. If it's not possible to automatically determine if something is user-controlled, then we should at least have a list of all the places where user input is accepted, so the programmer can check them manually. This is important because if user control is allowed, the program can't be certain that it won't change things in unintended ways. For example, if someone can set the value of a counter to any value, that could cause problems if

@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `amount` in the function `burn` is indirectly controlled by the user because it is passed as a parameter to the `burn` function from the `proportionalWithdraw` function, which is an external function callable by users. The `proportionalWithdraw` function takes `_withdrawal` as an input from the user and passes it directly to the `burn` function without any modification. Since users can call `proportionalWithdraw` with any `_withdrawal` value they choose, they have control over the `amount` that is passed to the `burn` function.

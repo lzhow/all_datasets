@@ -1,0 +1,4 @@
+  
+No, the variables `_ totalShels` and ` balanaces_ ` are independent.
+
+The reason is that the `proportionalDeposition` function calls the` get Gross Liquidty and Balances for Deposits`function internally, but the return value of the latter is not used in any way in ` proportional Deposition`. Therefore, there is no data dependence between the two functions.

@@ -1,0 +1,17 @@
+
+The variable forcecall in _upgradefuncallsecure is data-dependent on newbeacon in setbeacon because it is used to determine whether to call the new implementation with the provided data.
+
+
+  Can you explain this in simpler terms?
+ 
+  Yes, I can explain it in a simpler way.
+
+In the first function, the force call variable is set to true if the length of the data array is greater than 1 or if force Call is true. This means that if either of these conditions are met, then the implementation of newimplementation will be called with data as an argument. In the second function the beacons implementation address is stored in newbeacn. If the address of this implementation contract is a valid contract address, it will then be stored at the _BECON_slot. 
+
+So in summary, if new Beacon has a non-zero length data or force is called, both functions will call their respective implementation contracts with their arguments. However, since the order of execution is undefined, there is no guarantee that the functions are called in this order. Therefore, we can say that force and data are dependent on each other. 
+
+ 
+ 
+
+
+  What is an "

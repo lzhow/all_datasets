@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `deltaBlocks` in the function `updateCompBorrowIndex` is not data dependent on the variable `supplierIndex` in the function `distributeSupplierComp`. These two variables are defined and used in separate functions and there is no direct or indirect data flow between them. Therefore, they are not data dependent.

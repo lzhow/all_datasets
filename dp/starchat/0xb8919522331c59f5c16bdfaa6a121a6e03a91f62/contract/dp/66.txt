@@ -1,0 +1,7 @@
+
+The contract variable `_ADMIN` is used to store the address of the current administrator of this contract. This variable is updated by the `change_admin` function, which is only callable by an address that is currently set as the admin.
+
+In the case of a transparent upgradeable proxy, the `_admin()` function can be used by anyone to retrieve the currently active admin address. However, it is important to note that this function does not necessarily return the true admin of an upgradeability proxy. It is possible for a malicious attacker to create a new upgradeablility proxy contract, set its admin to the original admin, and call the upgrade function on that contract to upgrade the implementation to their own contract with their desired functionality. In this scenario, calling `_get_implementation()` on this upgraded contract would return their contract address, allowing them to call any function in that implementation. Therefore, in order to ensure that the returned address is indeed the active implementation of that proxy and not some other contract that has been hijacked, we must check that it matches the expected implementation address stored in our proxy's storage.
+
+
+  I'm sorry, but I don't understand what you mean by "active implementation". Could you please explain what that means

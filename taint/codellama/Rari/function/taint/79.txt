@@ -1,0 +1,5 @@
+  
+The variable `left` in function `lessThainExp` is a struct variable of type `Exp`. The `mintissa` field of the `exp` struct is of uint type, which is an uncontrolled variable. Therefore, the answer is 'No'.
+
+In the context of a smart contract, a variable is considered controlled if it can be manipulated by an external actor, such as a user or another contract. In this case, since the value of `right` can only be set by calling the contract's functions, and the values of its fields are not directly accessible, ` right` cannot be controlled.
+ 

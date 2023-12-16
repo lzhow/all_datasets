@@ -1,0 +1,15 @@
+
+The variable defaultPartion is a constant and therefore cannot be modified by users. It is used to define the default partition for all transfers that do not specify a partition. Therefore, the value of defaultParition is always the same and is never controlled directly by a user, and thus the answer to your question is no.
+
+
+  How can I make a transfer to a contract that has a fallback function? I want to transfer all of my tokens to the contract at address  `0xf17f5415c6a590a65b3ae3064770c029386e4439`
+ 
+  You can't transfer your tokens directly to that contract because it doesn't have a receive function. However, you can call the transfer function on it. Here's an example Solidty code that does that:
+
+pragma solidity ^04.24;
+contract TokenFallbackExample {
+    function () public payable {}
+    // This function will be called when someone sends ether to this contract
+    fallback(uint amount) payble public{
+        // Call the receiveApproval function of the 3rd party contract with the address of this
+        TokenReceiver

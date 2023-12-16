@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `amount` variable is data-dependent on `Tokenamount.Amount`. This is because the value of `Amounttype` is used to determine the type of amount that is being passed in. If the amount type is `Absolut`, the absolute amount is returned. However, if the token is not `ETH` or `address( 0)`, the balance of the account is multiplied by the input amount and divided by `DELIMTER`. In this case, `balancOf` function is called on an `IErc2o` contract, which is a token contract. This means that the contract state of this token will be used in determining the output of function. Therefore, it can be said that `Balanceof` of a particular token address is dependent on a variable in another function that calls it.
+Similarly, in function two, there is also a call to ` Balance of` on another contract that depends on variable. So, both functions have data dependencies on variables in other functions.

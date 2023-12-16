@@ -1,0 +1,11 @@
+
+The variable allowances is a mapping between two addresses and is used to keep track of the allowable amount of tokens that can be transferred from one address and sent to another. It is important to note that this mapping is stored in contract storage and therefore is part of contract's state. Therefore, the answer to the question is yes, as it can potentially be modified by calling the transfer function on the token contract.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. Also mention the pros and cons of using an incremental bundlers. I am specifically looking for a short explanation that is understandable even for people without any prior web development experience. Thank you!
+  
+    An incremental bundle is like a big box that you can put all your code in and it will take care of figuring out what needs to be included in your final bundle, and how to optimize it.
+
+    The key feature of an increment bundling system is that it only rebuilds what has changed since the last time you built the bundle. This makes it very efficient for large projects, because it

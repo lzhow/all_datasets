@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `validateProtocolSignFature()` function, the parameter `input` is passed to the internal function call `hashProtocolFeesignaturedata()`. The `output` parameter is also passed. However, `swapDescription` and `dealine` are passed as `calldatas`.
+  The variable`protocolFeSignatur`e is not passed in this function.
+   The function`getProtocolfeeSignatuer()` is called in `isvalidSignaturesNow()`.
+    The`hashedprotocolfeesigndata` variable is created in`validateprotocolsignatur`.  It is used in  `signaturesnow`. The  variable  is a local variable in that function and is therefore not accessible outside of that scope.  Therefore, it is data-dependent on ` token` because it depends on it.

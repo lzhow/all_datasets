@@ -1,0 +1,12 @@
+
+Yes, `yes`.
+
+The reason is that the `snapshotCummulativesInide` function is called by the collect function, and the value of `tick` is used to determine which branch of the if-else statement is taken. If the tick is less than the lower tick, then the values of seconds outside are subtracted from the cumulative values. However, if the ticks are equal, the seconds per liqudity outside is subtracte from each other.
+
+
+  Can you explain why the code has this data dependence?
+ 
+  The code snippet you provided contains two functions: `snaphostCulmulativeInside` and `Collect`. The `Snaphost` functions calculates the difference in cumulative tick and seconds-per-liquidity values between two ticks. This difference is then used in `Collet` to transfer tokens from a position to the recipient.
+Since the two values are dependent on eachother, it is possible for the transfer to fail if one of these values changes. For example, changing the amount of tokens requested in collect could cause the calculation to use the wrong values, causing the tokens to be transferred incorrectly. Therefore, this code contains a potential data-dependence. 
+
+To prevent

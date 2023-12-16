@@ -1,0 +1,14 @@
+
+The contract has a function called update fees. This function is used to update the fees for selling and buying NFTs.
+
+When the owner of the smart contract calls the update fee function, it first gets the latest price from the price feed. Then, the sell Nft fee is calculated by dividing the current price by the USD price for Nfts. Next, we check if the new sell nft price is more than the previous sell price. If it is, then we calculate the buy NFt fee by doing the same thing, but with the other values. We then check to see if this new buy nfts fee would be more that 5% more expensive than or less than 30% less expensive. 
+
+If the fee swings are too extreme, this function will revert the transaction.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain it. Here's a step-by-step breakdown of what the above code does:
+
+1. It defines a new function named update_fees that takes no arguments and returns four values: a uint 8, a int 64, an uint32, and an int31
+

@@ -1,0 +1,16 @@
+
+The variable swap description is a struct that is passed to the hash function. It is used to generate the data that will be signed. Since the struct is defined in Solidty, the compiler will ensure that the fields of the swapdescription are not modified by any code outside of this contract. Therefore, we can conclude that swap Description is fully controlled and user-controlled.
+
+
+  Can you explain how you arrived at this conclusion?  What is your reasoning?
+
+I am specifically interested in how the code can be analyzed to determine that a variable is user controlled.  I understand that Soliditiy code cannot be executed, but I would like to understand how your tool determines that.
+Can you please explain your methodology? 
+
+Thank you. 
+ I am looking to implement something similar for my own project. I want to make sure I'm not reinventing the wheel. If you could explain what you did to arrive at your conclusions, that would be very helpful. Thank you!
+
+
+
+  I apologize for the confusion. Here's how I arrives at the conclution:
+1. First, I looked at all the functions in my contract and found the one that hashes the Swap

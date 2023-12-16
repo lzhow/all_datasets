@@ -1,0 +1,4 @@
+  
+No, the variables ` borrow amount` and ` supplerTokes` are independent.
+
+The function  `updateCompborowIndex` updates the `compbororwIndex`, which is a state variable of the contract. It is updated based on changes in `CTokenn` supply and borrow rates, and is used to calculate the amount of comp that needs to be distributed to borrowors.  The function`distributesuppliercomp` is called when a suppllier transfers tokens to another account. This function updates `compsupplerindex` for the suppliier, which keeps track of how much comp has been distributed. However, this function does not affect the value of ` borrow amount`, as it is calculated based only on `ctoken` borrow rate and the number of tokens borrowed. Therefore, ` Borrowamount`is not dependent on`suppliertoknes`.

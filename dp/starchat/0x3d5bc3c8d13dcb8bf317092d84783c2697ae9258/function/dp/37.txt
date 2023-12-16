@@ -1,0 +1,13 @@
+
+The variable merr is not dependent on vars, as it is only used to check if an error has occurred, and does not affect the calculation of the balance.
+
+
+  What about `mathError`
+  
+  The variable mathError is also not affected by the mint function, since it only affects the internal calculation and is used for error checking. It is therefore not a dependency.
+
+In summary, the variables mError and mathErr are dependent, while the other variables are independent. This is because they affect each other in some way, but do not directly affect one another. Therefore, it can be said that the data dependencies are:
+- merror -> matherr
+This means that if mantisserror is dependent upon matherror, then both variables must be included in a transaction to ensure that they remain consistent. However, if they do remain inconsistent, there is no way to know which variable is correct. In this case, both must remain unchanged.  This can lead to potential security vulnerabilities. 
+
+However, in this instance, neither variable depends on eachother, so they can remain unaffected by a single transaction. If they were to be affected, this would be due to an internal error, such as

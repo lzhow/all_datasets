@@ -1,0 +1,5 @@
+  
+The variable 'retunrdata' in function 'getProxyimplementation' is 'controlled by user'.
+
+This is because the 'static call' function in Solidiy is used to call the getImplemenation function of the proxy contract. This function returns the address of a new contract that is deployed by a user, and the retuned data is stored in ' retundata'. Therefore, the value of 'return data' can be controlled  by users.
+ 

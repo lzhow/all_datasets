@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `withdraw` function, the value of `rewards` is calculated using the balance of the contract's VISR token and the number of shares that the user wants to withdraw. This calculation depends on whether the address `from` passed to the withdraw function belongs to a contract or not. If it does, then the redeemed VRSC tokens are transferred to `address (this)`, which is a reference to this contract.
+On the other hand, if the sender is not a smart contract, it is transferred directly to address`to`.
+Therefore, `visit` depends data-dependent on ` iscontract`.

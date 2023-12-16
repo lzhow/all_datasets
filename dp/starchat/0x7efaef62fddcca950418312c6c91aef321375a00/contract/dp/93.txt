@@ -1,0 +1,14 @@
+
+The contract variable `nonce` is not directly data-dependent on `_toke0`, but it is indirectly data dependend on `msgSender` and `blocktimestamp`.
+
+In the `permit` function, the signature is generated using the domain separator and the current `NONCE` value. This signature can be used to call the transfer function on behalf of the owner.
+However, since the permit function is only called by the token owner and not by any other address, it can only be called once and cannot be reused. Therefore, `BLOCKTIMESTAMP` cannot change between the call to `PERFORM_TRANSFER` (which sets the new `BALANCE` for the recipient) and `_VERIFY_AND_CALL_FUNCTION` which calls the actual transfer.
+
+
+  How can I use the information you provided to determine if the nonce variable is data or not?
+ 
+  You can use a symbolic execution tool to explore the control flow graph of your smart contract and determine whether or
+  not the non-ces variable depends on msgSender or blocktimestamp. If it does, then it will be a path from the
+  start of execution to the end of swap that requires symbolic values for msgsender and block timestamp.
+
+  If the

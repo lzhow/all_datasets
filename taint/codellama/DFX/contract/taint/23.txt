@@ -1,0 +1,5 @@
+  
+No, the `_ n GLi q` variable in view origin swap is uncontrolled by user because it's a local variable that is created in a function and is only used within that function. It is a temporary variable used to store the numerator of the fraction that represents the total liquidity of all the reserves in an assimilated curve pool.
+
+The variable is initialized to 1, and it gets updated in each iteration of a for loop that iterates over all reservers in `curves. assets`. The loop calculates the liquidities of each reserve and adds them to the `n GL iq`.
+However, since the value of ` n G L i q ` is calculated based on the values of other variables, such as `o Bals` and `N BALS`, which are also local variables in this function, there is no way for the caller to control the exact value that ` _ nGLIq ` takes. Therefore, `  _NGL iQ` is considered uncontrollable by users.

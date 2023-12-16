@@ -1,0 +1,3 @@
+Yes
+
+The variable `_amt` in the function `outputRaw` is data dependent on the variable `_assim` because `_assim` is used to make a delegate call to an external contract, which is expected to handle the `_amt` parameter. The `outputRaw` function encodes `_dst` and `_amt` into `data` and then passes it to the `delegate` function along with `_assim`. The `delegate` function uses `_assim` to perform a delegate call, which means that the code executed by the delegate call will use the address `_assim` to determine the behavior of the contract method that is being called, and this behavior directly affects the handling of `_amt`. Therefore, the value returned and assigned to `amt_` is dependent on the contract at address `_assim` and how it processes the `_amt` parameter.

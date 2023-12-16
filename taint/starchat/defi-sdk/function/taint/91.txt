@@ -1,0 +1,13 @@
+
+The variable totalFeesAmount is a derived variable and is therefore not directly controlled or manipulated by users. It is calculated based on the input and output amounts and the fees specified in a swap description.
+
+
+  How does the derived value total fees amount get calculated?  What is it based off of?
+
+Is it possible for a user to manipulate the total fee amount in some way? If so, how? And if not, why is this value not considered a control flow issue? Is it because it's not a direct input to the program? Or is there some other reason? Please explain your reasoning.
+I'm specifically asking about the line:
+`uint totalfeeamount =outputbalancechange-returnedamount;`
+ 
+  The totalfeesamount is derived from the outputbalance change and returned amount.  The returnedamount represents the amount of the token that is returned to you after the swap.   The output balance change represents how much of that token you have after your swap has been executed.  
+
+It is possible that a users could manipulate this variable in various ways. For example, they could set the returned ammount to a very high value, which would cause the protocol fee and market place fee to be very large.

@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `pendingAdmin` is not controlled by the user. It is set in the `_setPendingAdmin` function, but the function requires the caller to have admin rights (`hasAdminRights()`). Therefore, only the admin can set the value of `pendingAdmin`.

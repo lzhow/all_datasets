@@ -1,0 +1,4 @@
+  
+No, the `skim` function does not depend on `tokenTimestamp` because it only uses the current block timestamp to calculate the amount of tokens to transfer. It does NOT depend directly on any variable or state of the smart contract.
+
+The `sync` method does depend indirectly on blocktimestamp because the `_update` call inside the sync method depends on it. However, this is not a direct dependency on a variable.

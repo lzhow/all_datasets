@@ -1,0 +1,4 @@
+  
+No, the `_ owner` variable in this function `upgrade Strategy()` is NOT controlled  by user, because it's a private variable and it can only be accessed by owner of the contract.
+
+The `_upgrades` function can be called only by an owner. Therefore, only the current owner can propose a new strategy and the proposed strategy will be stored in `_strategies` mapping. 

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `numerator` in the function `_mintFee` is calculated within the contract using the formula `numerator = totalSupply.mul(rootK.sub(rootKLast)).mul(8);`. The values `totalSupply`, `rootK`, and `rootKLast` are all determined by the contract's state and the liquidity provided to the pool, not directly by any one user. While users can influence the total supply by providing or removing liquidity, no single user has direct control over the `numerator` variable; it is a result of the contract's internal calculations based on the current state of the liquidity pool.

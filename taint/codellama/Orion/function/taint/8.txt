@@ -1,0 +1,4 @@
+  
+No, the ` amount _received_ base_ units` variable in function `do_swap_through_orion_pool` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters of the method.
+
+The ` do_ swap_ through_ orion _pool ` function takes in a ` swap _data` parameter, which contains the amount of tokens to be swapped, and the path of token pairs to follow. It then calculates the base units of these amounts using the library function` Lib_unit_converter. decimal_to_Base_ unit`. The resulting base unit amounts are then used to calculate the amounts of each token to receive and send. These amounts can be controlled only by a malicious user if they can manipulate the values of `swap _ data` or the token balances. However, this is unlikely because the contract is designed to prevent such manipulation. Therefore, `  amount  _ received _ base _ units ` is considered to not be under the control of a user in this context.

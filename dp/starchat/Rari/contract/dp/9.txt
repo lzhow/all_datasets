@@ -1,0 +1,5 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `supplySpeed` affects the calculation of the new index value, which in turn affects whether the `deltaIndex` value is positive or negative. If the speed is 50% and the index is currently 400%, the delta will be 80%. If `getBlocknumber` returns 60 and `compSupplierState` is updated, the next time `distributeSupplier` runs, `supplierDelta` will become 72% (48% * 90%) and thus the total supply index will increase by Â½%.
+If the block number is instead  ð‘›+1  and  ` supplyspeed` remains  at  the same  value  of  5%, then the  new  index  will  be  45%  (105 - â…”ð‘šð‘’ð‘Ÿð‘ð‘¡ð‘–ð‘”â„), which means that ` deltaindex ` will now be -15%. This means the supply speed will decrease by -2%, and if the distribution function is run again, this time with a blocknumber of ð¿+2, then `

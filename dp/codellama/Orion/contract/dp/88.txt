@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `doSwapeTrohoughOirionPoll` function, the value of `curBalances` is used to calculate the amount of tokens to be transferred to the pool. This value is calculated using the `_do_swap` method, which in turn calls the`_ swapCurv`e method. In the latter, `amount`s is an array of uint  values that are used in a loop to transfer tokens from the user to a pool, and the loop index ` i`is used as an index to access the corresponding value in ` amounts`.
+Therefore, if the  ` supporting_fee` variable is set to true, then the index of the array ` amount` will be  greater than  zero, so the first element of  thearray will not be used, but the second element will.
+On the other hand, when ` support_ing_ fee`variable is false, it means that the transfer is not done with a fee, therefore the entire array will  be transfered, including the zero-th element. Therefore, in this case, both the values of` i `and` supporting fee `are used. 

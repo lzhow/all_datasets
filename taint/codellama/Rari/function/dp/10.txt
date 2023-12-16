@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `scalar` variable is passed as an argument to the internal function call ` mul UInt`. The result of this function is stored in a new variable called ` scale dM antissa`. This variable depends on ` a. mantissa`, which is a member of the struct `Exp` that is also passed to this internal call. Therefore, ` scal edM an tissa ` is data-dependent on` a`.
+Similarly, in function two, a similar data dependence relationship exists between ` scalar` and ` exp. Mantissa `.
+Therefore, we can conclude that the answer is yes.

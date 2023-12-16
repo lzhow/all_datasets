@@ -1,0 +1,3 @@
+Yes
+
+The variable `success` in the function `functionStaticCall` is data dependent on the variable `target` because the `success` variable is assigned the result of the `staticcall` to the `target` address with the provided `data`. The `staticcall` is a low-level operation that executes a read-only call to another contract specified by the `target` address, and the outcome (success or failure) of this call directly affects the value of `success`. Therefore, there is a data dependency relationship between `success` and `target` within the `functionStaticCall` function.

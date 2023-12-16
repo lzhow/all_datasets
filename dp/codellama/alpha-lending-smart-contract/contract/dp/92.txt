@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `receiveAlpha` function, the `_alphaBalances` mapping is updated with the new `_bal` value. This mapping stores the amount of Alphas that have been received by each account.
+On the other hand, in ` claimAlphaCurrentRwardByOwne`r, a new Alphabalance is calculated by multiplying the current `_alphamultipliers` by the balance of the account and dividing it by  `10^14`. This new balance is then compared to `_alphasBal` and the difference is transferred to ` _alpahasBal`.
+Therefore, `_ amount` is data-dependent on `_ account` because it is used to calculate the updated balance in `_ alphasBAl` .
+ 

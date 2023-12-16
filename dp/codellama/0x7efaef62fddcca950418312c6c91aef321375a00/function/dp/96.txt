@@ -1,0 +1,6 @@
+  
+No, the ` DOMAIN SEPARATE` is not dependent on `_ total Supply`.
+
+The ` burn` function is a public function that takes an address as an argument and returns two uint values. It is responsible for burning liquidty from the pool and transferring the corresponding amount of tokens to the specified address.
+Inside the burn function, there are several variables and contracts states that are used to calculate the amount to be burned and transferred. These include:
+* `_reserves0` and `_ reserves1`: These are the current reserver values for the two tokens in question. They are obtained from a call to `getReserve`s.  These values are then used in calculations to determine the amounts to burn and the total supply of the token. However, these values do not depend on` _ total suppy`.  The total amount burn is calculated by multiplying the liquidities of both tokens by the ratio of their balances to their total supplies. This calculation does not involve `_ totalsupply`, so it is independent of it. Therefore, ` _ DOMAI N SEPERATORS` are also independent.

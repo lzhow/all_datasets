@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `totalReserves` in the function `_reduceReservesFresh` is data dependent on the variable `getCashPrior()` in the function `getCashPrior`. This is because the value of `reduceAmount` is compared with the value of `getCashPrior()` in the line `if (getCashPrior() < reduceAmount)`. The condition of this comparison determines whether the value of `totalReserves` will be updated or not. Therefore, there is a data dependency relationship between these two variables.

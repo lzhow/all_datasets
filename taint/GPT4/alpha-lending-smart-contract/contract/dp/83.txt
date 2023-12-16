@@ -1,0 +1,3 @@
+yes
+
+The variable `lendersGain` in the function `splitRewardExternal` is data dependent on the variable `_token` because `lendersGain` is one of the return values of the function `splitReward`, which is called within `splitRewardExternal` and takes `_token` as an argument. The `splitReward` function's behavior and its return values are likely to be influenced by the `_token` parameter, which means that any changes to `_token` would affect the outcome of `splitReward` and, consequently, the value of `lendersGain`. Therefore, there is a data dependency relationship between `lendersGain` and `_token`.

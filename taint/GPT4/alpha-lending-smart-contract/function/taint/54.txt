@@ -1,0 +1,14 @@
+
+The variable `alphaMultipler` is a state variable that is updated in `receiveAlpha` function. It is used to calculate the reward amount for the users. Since it's a internal state, the value of `alphamultiplier` can be determined by dividing the total supply of the token.
+
+So, yes, `alphanumeric` variable is controled by user
+
+
+  How can I determine the current value for alphaMultiplerr?  I don't see any function that updates it.
+ 
+  The value can't be directly determined, as it depends on the supply and the amount of rewards that have been distributed. However, you can calculate it by using the formula:
+`alpha_multiplier = (current_reward_amount * 10^18) / total_supply`
+Where `current reward_amout` represents the sum of all rewards received by all users, and `total_suply` the number of tokens in existence. This formula can also be used for determining the rewards earned by a specific user, by substituting their balance for `balanceOf()`.
+
+ 
+ 

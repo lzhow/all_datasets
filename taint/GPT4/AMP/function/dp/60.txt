@@ -1,0 +1,10 @@
+
+The variable `msg` is not in scope in `decreaseAllowaneByParition`. Therefore, it cannot be data-dependent on `_spnder` or `_subtractValue`.
+
+However, the `_allowed` variable in `_decreaseAlloance` and `_value` are in-scope in both functions.
+`_allowed[msgSender][spawner]` is data dependant on `spawnderData`.
+
+
+  I'm sorry, I made a mistake in my question. I meant to say that the variables `sender` (in `_approvePartition`) and `operator` (`_transferPartition` function) are dependent on each other.
+ 
+  In the `approve` method, `from` depends on both `to`and `value`. `To`depends on`value`, and` value`is dependenton `data`. In `_tranferPartition`, `allowed`, `_from`,`_to`,and `_data`are all dependent upon eachother. `From` also depends upon `partition`, but this is because `PartitionUtils` has a function that dependson both`from `and` partition`. The function is `_getDestionationPartition`. This function depends both on`_data ` and`_from`.

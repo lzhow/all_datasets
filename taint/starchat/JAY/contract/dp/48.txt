@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the value of `_price`, which is used to calculate `_p`, is determined by the `latestPrice` function in `AggregatorV2Interface`, and this value can change over time.
+
+
+  Can you explain why this is?
+ 
+  The reason why the `_sellerNtfFee` variable is data-dependent on `Price`, rather than being a constant, is because the price of Jay is not a fixed value, but rather is a value that is dynamically determined based on an external data feed. This means that `_SellerNofFee`, the fee that a seller pays to the contract when they sell their NFTs, must be recalculated every time the external price feed changes, in order to ensure that it remains fair and accurate. If `_SellNffFeeEht` were a hard-coded constant value instead of being calculated based off of the current price value from the data source, then it would not be data dependant and could be treated as a regular variable. 
+
+In summary, the calculation of `S_ellNfftEHT` is dependent on a changing value (the price) that comes from an outside data provider, and

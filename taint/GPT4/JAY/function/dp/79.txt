@@ -1,0 +1,3 @@
+The contract state `dev` is not data dependent on the variable `_sellNftFeeEth` in the function `updateFees`. 
+
+Reason: The variable `_sellNftFeeEth` is only used to update the contract state `sellNftFeeEth` in the line `sellNftFeeEth = _sellNftFeeEth;`. There is no other usage or reference to `_sellNftFeeEth` in the code that would indicate a data dependency with the contract state `dev`. Therefore, the data dependency relationship between the contract state `dev` and the variable `_sellNftFeeEth` is 'no'.

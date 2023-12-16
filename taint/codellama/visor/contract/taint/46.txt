@@ -1,0 +1,4 @@
+  
+No, the `_nones` variable in function `permit` is labeled as 'No' because it does not allow the end user to control the value of the non-ce. It is a counter that is incremented by one each time the `permite` function is called, and it serves as a way to prevent replay attacks.
+
+The reason for this is that the counter is stored in a mapping, which is an unordered collection of key-value pairs. Each key is associated with a unique nonc-e value that can only be increment by calling the permit function. Therefore, even if an attacker were to obtain the current nonced value from a previous permit call, they would not be able to predict the next nonceed value. This makes it difficult for an adversary to re-play a permit transaction.

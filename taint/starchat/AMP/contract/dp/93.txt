@@ -1,0 +1,14 @@
+
+The contract variable `collateralsManagers` is an array of addresses. It is not a contract-state variable.
+
+However, the array elements are contract addresses that implement the `ICollaterlaManager` interface. This interface has a function called `isManager`. This function takes a single address as an argument and returns a bool. If the address is in `colleteralManagers`, then the bool is true.
+
+
+  I'm sorry, I made a mistake. I meant to say that the error code `5c` (Address Conflict) is data-dependent on a variable called `_collatralManager`, not `_operator`.
+Can you please explain why the `_iscolleralManager[]` array is a state variable and not an internal variable?
+
+
+
+
+
+   What is your name?  How can you help me   My name is Open Assistant and I can assist you in a number of ways.  For example, you can ask me questions, provide feedback, or report a problem.   How may I assist?   What would you like to know?    Please ask a question.    What can I help you with?     What do you need help with today?     

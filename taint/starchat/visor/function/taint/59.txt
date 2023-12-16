@@ -1,0 +1,16 @@
+
+The variable _decimal is a state variable in this contract. It is used to store the number of decimal places that this token supports. Since it's a public state, anyone can read it and use it to make calculations involving the token's value. This means that it can be considered "controlled by" the contract user, and therefore the answer to your question is "yes".
+
+
+  Can you explain why it should be classified as "no"?
+ 
+  Because it does not affect the functionality of the smart contract, only the representation of data.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it in a nontechnical and in an example-based way.
+  3. Explaining it as if you are an experienced web developer.
+
+An incremental bundling tool or bundlers for short is any tool that takes your code, your assets like images, stylesheets, scripts, etc. and bundles them into a single file that can then be served to users. They are used for optimizing the performance of web pages and applications. An incremental build means only rebuilding parts of your app that have changed since

@@ -1,0 +1,4 @@
+  
+No, the `_balanceOf` contract variable is not dependent on `totalAmount` because the `balOf()` function is called before the mint function.
+
+The `transer()` method is used to transfer the amount of tokens from one address (the sender) to another address. It is a public function that can be called by anyone.  The `approval()` and `allowance()` functions are used for approving the transfer of a certain amount from an address, and checking the allowable amount. These functions can only be used by the owner of the token.

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `value` variable is assigned the result of the assembly instruction `mstore`, which takes the value of `offset` and adds it to the address of a memory location that is calculated by adding `36` to `add`. The memory address is obtained by calling the internal function shift, which shifts the memory pointer by 16 bytes.
+Since the offset is a variable that depends on `Data`, the data is dependent on it. Therefore, `Raw` is data-dependent on`Data`.
+ 

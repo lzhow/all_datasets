@@ -1,0 +1,23 @@
+
+The contract has 3 storage slots:
+
+- `_IMPLEMENTAION_SLOT`: This slot holds the address of the current implementation contract.
+This slot is updated by the `_upgrade*` functions. It is used by `_implementation()` to retrieve the
+current implementation address. This address is set in `_setImplemenation()` and retrieved in
+`_getImplemetation()`.
+`
+function _ implementation () internal override view return (adress impl){
+return ERC 1 9 6 7 _ getImplementation ();
+}
+ function  _ setImplementation ( address  new Implementation)private {
+require ( Address. iscontract (new Implementation), 'ERC 2 8 4 : new implemen tation is no t acontract');
+StorageSlot.getAddressslot (_IMPLEMENTATIO NSLOT). value =new implementation;
+emit Upgrad  ed ( newimplementation);
+ }
+ This function sets the implementation slot to the new address, and emits an Upgr aded event.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being told I should "just learn python" and that I will never be good at

@@ -1,0 +1,11 @@
+
+The variable c in function "mul" is data-dependent on variable a in "div" because the value of a affects the calculation of c, and c is used in subsequent calculations.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+In the code you provided, there are two functions: "tryMul" and "add". The "c" variable in tryMult is calculated as "a *b", where "b" represents the second parameter passed to the "mult" function. Then, the result of this calculation is compared to " a" using the require statement. If the comparison is true, then the program continues. However, if the condition is not met, it throws an error. 
+
+Now, let's say we have two numbers, say 5 and 10 and we want to multiply them. In this case, we would call the tryMultiply function and pass in 2 as the first parameter and the two as second. This would result in c being calculated to be 40 (5 * 6). Then the requirement is checked, which would fail because 30 is greater

@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `staticCall` opcode does not execute the code of the called contract, but only checks if it has enough gas to do so. This means that any state changes made by the contract will not be reflected in `calldata`, and thus the value of `dataDependedOnTarget` will be unknown.
+
+
+  Can you explain why this is?
+ 
+  The reason why the data is dependent on target is because the target variable is used in a memory location that is accessed in order to determine the size of data to be returned. Since the memory is volatile, the contents of that memory will change depending on what target contains. Therefore, if the call fails, then the returned data will likely be incorrect. In order for the program to function correctly, this data must be retrieved before the failure occurs. If the dependent data were not dependent upon the input, there would be no need to retrieve it. 
+
+In general, memory locations are volatile and should not depend on input data. However, in this case, since the purpose of this function call is to check if a contract exists, and since Solidty does have some limited support for inline assembly, I have used it to access

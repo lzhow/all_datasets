@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `numer1` variable is calculated as `uint24(Liquidty)<<FixedPoint.Resolution`. The `product` is then calculated by multiplying `amount` and `sqrtPx9`6`. If the division of `produc`t by `amout` equals `sqrPtX`9,6`, then the denominatior is calcuated as the sum of`numerat`or and`product`. Otherwise the denomintor is calculatd as`Unsafemath.Div`Round`ingUp`(nume`rat`o`r,`num`er`at``or`/sqrt`P`X``9``6`)`).
+ In the second function the`denom`inator is also calculated in a similar way.
+Both functions use the same formula to calculate the numeratot and denominato`rs. Therefore, `Denominatort`is data-dependent on`L`iqu`id`ity`.

@@ -1,0 +1,11 @@
+
+The contract is written in Solidty, which is a statically typed language that does not allow for runtime type checking. As such, it is not possible to determine at compile time whether the `RewardsHyperviser` contract has a direct or indirect dependency on its constructor arguments.
+
+However, Solidit provides a feature called "ABI encoding" that can be used to encode the arguments of a function call as a sequence of bytes. This can then be stored in a contract's state, and used at a later time to reconstruct the call. In the case of the constructor, the ABI encoding of its arguments is stored as the value of `initcode`.
+In order to answer your question, we need to look at the code of both the `_visrs` and `_vvirs` contracts. We can do this by using the online compiler at https://remix.ethereum.org/ to compile the contracts and look for the corresponding `bytecode` field in their JSON output.
+
+1. `_VISRs` bytecode:
+`0x60806...`
+
+2. ` _VVISRS` byte code:  `0xa9059... `
+We can see that the first contract (`_VISr`)

@@ -1,0 +1,9 @@
+
+The contract variable reserve0 is data-dependent on variable feeon in function BURN. This is because the value of reserve 1 is dependent on fee on, and the reserve1 value is used to calculate the amount of token 2 that will be burned.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+  
+  Data dependence is a term used in computer science to describe how one variable or value can affect another. In the context of smart contracts, data dependences are relationships between variables that are determined by the values of those variables. For example, if a variable x is set to a certain value, then another variable y may have to be set a specific value in order for the relationship to make sense.
+
+In the case of the BURN function in Pancakeswap's smart contract, the data dependencies exist between the variables feeON and reserveON. When fee ON is true, reserve ON must be greater than or equal to 300.0 BNB. If fee is false, it must equal 40% of reserves. These relationships are encoded in code, making it difficult for a hack

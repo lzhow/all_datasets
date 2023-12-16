@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `_type` in the constructor is used to initialize the `supportedFactories` mapping for the factory address `_factory`. This variable is only set once during contract deployment and is not modified afterward. It is used to set the type of the factory in the `supportedFactories` mapping.
+
+On the other hand, the variable `curBalance` in the function `_doSwapTokens` is a local variable that is used to store the balance of a token at a specific address before a token transfer occurs. It is used to calculate the actual amount transferred, considering any fees that might have been applied during the transfer.
+
+There is no direct code path where `_type` influences the value of `curBalance`, nor is there a shared state that could create a data dependency between these two variables. `_type` is related to the setup of the contract's factory types, while `curBalance` is related to the balance calculation during a token swap operation. They operate in different contexts and are not data-dependent on each other.

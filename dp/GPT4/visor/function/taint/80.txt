@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `trySub` function, the value of `a` is passed as an argument, and the return value is a tuple containing a boolean indicating whether the substraction was successful and a uint representing the result of the operation.
+Since the argument ` a`is passed by value, ` b` cannot be controlled directly by a user, but it can be influenced by an attacker by passing a value that causes an overflow or underflow. Therefore, we label `  b ` as ' Yes'.

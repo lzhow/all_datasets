@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `if` statement, the condition `totalSuply()` is checked. If the total supply is zero, then the shares are set to the amount. However, if the supply isn't zero then shares is set based on a calculation involving `_amount`, `_pool`, and `balance()`. The `_mInt` function is called with the sender's address and the calculated shares.
+Since the `_Mint` call depends on `_supply`, the state of the smart contract, it is data-dependent on it.

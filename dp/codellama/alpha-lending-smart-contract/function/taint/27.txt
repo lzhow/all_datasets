@@ -1,0 +1,4 @@
+  
+
+Yes, the ` distributer` variable in function `giveAlphatoAltoken` is user-controlled.
+The `approval` function is called on the distributors alpha token, which is a user controlled variable. This means that the value of the alphaToken can be changed by a malicious user, and the contract will be vulnerable to a reentrancy attack.

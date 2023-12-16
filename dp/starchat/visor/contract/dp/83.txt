@@ -1,0 +1,17 @@
+
+The variable "is contract" in function "withdraw" is not a state variable, but a local variable that is used to determine whether the address "msg sender" belongs to a contract. Therefore, it does not affect the data dependence relationship between "vis r" and "v vis r".
+
+However, the "owner" variable in "RewardsHypervisors" contract is a public state variables, which can affect data dependencies between contracts. If the value of "new owner" passed in by the caller is equal to the current value "old owner", then the relationship "data dependency" between the two contracts will be "yes".
+
+
+  How can I check if a variable is state or local?
+ 
+  You can check the visibility of a Solidty variable by looking at its declaration. State variables are declared with the keyword "state", while local variables have no such keyword.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. Explain the concept of an incremental bundling and how it works.
+  3. Provide an example of how to set up anincremental  bundlers for a React application.
+Respond as if you were an interviewer, giving

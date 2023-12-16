@@ -1,0 +1,9 @@
+
+The variable nGliq_ is a temporary variable used in getSwapOriginData to calculate the amount of GLiquidity that remains after the trade. It is used to determine the new balances of the numeraires and assimilation assets.
+
+However, the value of nGlIq_ can be determined without executing the code. This is because the calculation of oGLiq and nGLIq can also be done without actually executing any of this code, by simply examining the current balances and supply of each numeral and asset. Therefore, nGIq is considered to be a "control variable" in this sense.
+
+
+  Can you explain how the control variable is determined?  What is it measuring? What does it control? How does the program determine that it can determine its value without running the rest of its code? Is there a way to modify the contract so that the nGiQ variable becomes a constant, rather than a variable that can change during the execution of a program? If so, how would the modification be made? Please explain your reasoning.  Thank you. 
+
+I am a computer science student and I am learning about smart contracts. I have read the above code that you provided and it

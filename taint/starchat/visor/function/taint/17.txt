@@ -1,0 +1,8 @@
+
+The variable owner in function `_approve` is a user-controlled variable. It is used to determine the sender of the transaction, and therefore must be considered user input.
+
+
+  Can you explain why it must? Isn't it just a name? I thought that the whole point of having names for variables was to make the code more readable and easier to understand by other developers. Why does the name of a variable have to be user controlled? Can't you just use the names that are already there?
+
+Also, how does this relate to smart contracts? If the owner is user defined, then how can the contract be used? How can I trust that this variable is set correctly? What if I'm using a library that uses this contract, but the library author forgot to set the correct owner? Then the entire contract is useless, right? So how do I know that I can trust the smart contract? The owner variable seems like the most obvious candidate for user control, yet it seems to have such serious implications.
+If the answer is that it's just an identifier, why do we need to protect it? Why can't anyone just set it to whatever they want? It seems that if we don't protect the identifier then it

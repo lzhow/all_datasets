@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the `_authorizedOperators` mapping is updated based on `_from` and `_to` addresses, which are derived from `_partition`, `_value`, and other parameters.
+
+
+  Can you explain how the data dependencies are found?
+ 
+  Yes, I can explain to you how data dependence is found in this contract. Data dependences are relationships between variables that are based upon the values of other variables. In this case, the contract has a mapping of authorized operators that is based off of the partition, value, and the other parameter. This means that if the value of a variable changes, then the mapping between the old and new values will be different. Therefore, this mapping will have to be updated. 
+
+In this instance, if `_allowed` is changed, `_isAuthorizedOperator` will also have changed. `_spenders` are also based of `_tokenHolders` which is derived off `_owner` so if either of these values change, so will `_allowances`.
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is this true? if

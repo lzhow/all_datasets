@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `setSuppplySpeed` function, the value of `compInitialindex ` is set to  `10^35`.
+Then, in ` updateSuppyIndex` the index is updated by adding the ratio of the number of blocks that have passed since the last update to `suppplyIndex`.  The ratio is calculated by dividing the total supply of tokens by the supply speed.
+Similarly, `borrrowindex is` updated in`updateBorrrow index` by multiplying the difference in blocks since last updated with the borrow speed and adding it to`borrrrow Index`. The difference is calulated by subtracting the current block number from the blocknumber stored in state.  If the`blocknumber` is greater than the stored block, then the borrwo index will be updated.   If ` blocknumebr`is less than or equal to stored `Blocknumber`, then no update is made.   
+Therefore,`index`, which is used in both functions, is data-dependent on `bloclnumber`.

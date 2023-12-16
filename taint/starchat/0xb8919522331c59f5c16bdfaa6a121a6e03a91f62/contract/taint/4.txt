@@ -1,0 +1,8 @@
+
+The variable data in function `upgradeAndcall` is a call data parameter and is therefore controlled indirectly by user input. It is passed to the implementation contract as part of the upgrade process, and therefore can be modified by any party who has access to call the contract.
+
+
+  How can I prevent this? Can you give me an example of how to do this in Solidty? I want to make sure that the data variable is only modified when the caller has the proper permissions. I also want the compiler to throw an error if someone tries to modify the value of data directly. Can this be done in solidity? If not, what other ways can you think of to prevent users from modifying data that should be read-only?
+
+I want this to be enforced at compile time, not at runtime. Is there a way to achieve this with Soliditiy? Please provide an implementation example if possible.
+Can you also provide a list of other solidity coding best practices that I can use to write secure and maintainable smart contracts? These best practice should help me write code that is easy to understand, maintain, debug, test, etc. and will help prevent common vulnerabilities like reentrancy, integer overflow, unchecked calls, uninitialized

@@ -1,0 +1,5 @@
+  
+No, the `compContributionState` contract is data-independent of the local variable`delta Index`in the`distributed BorroweComp` function.
+
+The `CompContributeState ` contract stores the index of a contributer's comp rewards, which is updated in a separate function called `updateContriutor Rwards`. The ` delta Index ` variable is a local temporary variable used to calculate the difference between the current index and the contributors' previous index. It is only used in this function and is never stored or used again. Therefore, it is safe to say that the state of ` comp Contribution State ` is independent of` delta index`.
+ 

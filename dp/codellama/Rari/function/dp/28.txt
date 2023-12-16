@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `liquidateborowAllowd` function, the local variable`maxclose` is calculated using the`borrrowbalance` variable, which is obtained from the external function`getaccountliqudityinternal`. The`accountLquidtyInternal`function is called with the same`cTockenBorowed` and`ctokenCollteral` parameters as the current function. Therefore, `borrwBalanc`is data-dependent on `accout`in the context of the liquidation function because it is derived from a function call that depends on`accou`t.
+ 

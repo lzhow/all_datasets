@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `protocolFee` within the function `getReturnedAmounts` is of type `Fee`, which is a struct containing details about the fee to be applied to a transaction. This variable is passed as an argument to the function and is not directly controlled by the user. It is determined by the contract logic and the parameters set by the contract owner or through the protocol's governance mechanisms. The user does not have direct control over this variable; they can only influence it indirectly by initiating transactions that interact with the contract in ways that may affect the fee calculation based on the contract's predefined rules.

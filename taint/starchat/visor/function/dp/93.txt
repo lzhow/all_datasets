@@ -1,0 +1,13 @@
+
+The function mod has a loop invariant that b >0. This means that the loop will always terminate. Therefore, the value of b cannot be zero, and the require statement can be removed.
+
+Now, we can simplify the code to:
+ ```  function  mul(uint a, uint b) internal  pure  returns( uint)  {  return ( a  *  b );  } ``` 
+
+This function does not have any loops or requires, so it is not possible for there to be a dependency between a and b.
+
+
+  Can you explain how the analysis works?
+ 
+  Sure! The analysis is based on a set of data-flow and control-dependence analyses. These analyzes help to determine if a variable or state has an impact on another variable. For example, if one variable is updated in a function, it may affect the other variable if it's used in that function. If the two are dependent, then they have an influence on each other. 
+ The data flow analysis tracks the flow of information through the program, while the control dependence analysis looks at the order in which statements are executed. By combining these two analyes, you can determine the data dependencies between variables.

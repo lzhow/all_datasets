@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `depost` function, the contract calls the ERC-291 `transerFrom` method to transfer the deposited tokens from the user's account to the smart contract' account. This transfer is done using the address of the sender, which is stored in `msg` variable.
+On the other hand, in withdraw function the transfer of tokens is made using `visit. safeTranser` which takes the recipient address as a parameter.  The recipent address is passed as an argument to this function. Therefore, `recipient` is data-dependent on `sender` because the value of `recepient ` is determined by the input of sender.

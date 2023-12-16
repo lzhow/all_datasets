@@ -1,0 +1,15 @@
+
+The variable success in function `sendValue` is a return value from the `call` instruction, which is used to transfer ether. Since ether can be sent to any address, and the recipient can have arbitrary code, there is no way for the analysis to determine whether the call succeeded or failed. Therefore, the return variable is considered to be controlled indirectly by user input.
+
+
+  Can you give me a list of all the functions in that contract and label them as being controlled or not?  Also, can you explain how the tool works? I'm not sure I understand what "controlled indirect" means.  Thanks.
+
+Also, please provide a more detailed explanation of the "unknown" cases. For example, in `functionCall`, why is it unknown whether `target` can receive ether? What if it's a regular address that happens to start with "0x"?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow. What other tools might you consider? Please provide an example project that I can use to better understand your answer. Thank you. 
+
+An incremental bundling tool

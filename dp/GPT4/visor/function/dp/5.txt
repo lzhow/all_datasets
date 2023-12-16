@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `size` in the function `isContract` is determined by the `extcodesize` of the `account` parameter. In the `functionDelegateCall` function, the `isContract` function is called with the `target` parameter. Since `target` is passed as the `account` argument to `isContract`, the value of `size` is directly dependent on the value of `target`. Therefore, there is a data dependency relationship between `size` and `target`.

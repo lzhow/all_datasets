@@ -1,0 +1,17 @@
+
+Yes, the `Shares` variable in `deposit` is user-controlled.
+
+The user specifies the amount of VISR to deposit, and the number of shares to mint. This means that the value of `visrsDeposit` and `vVisrTotalSupply` can affect the resulting value for `share`.
+In the case where `totalShares == 1`, the equation reduces to `x = y`, so the result is always `1`. In this case, `isUserControlled` would be `false`.
+
+
+  How can I prevent this? Is there a way to make sure that `user` cannot manipulate the values of the variables? I want to prevent the possibility of a user manipulating the code to steal the funds.
+
+
+
+
+
+   What is a good way of pronouncing the name of this AI?  Please use IPA.  My first suggestion is [ˈɡʌdʒəm ˌɪpərːʃən].
+
+ 
+  [ɟʊd˧ʰʧɑ̯m i˨pɐrʂʈəŋ]

@@ -1,0 +1,5 @@
+  
+No, the variables `_ blockTimestamplast` and `_ reserve ​​1 ` are independent.
+
+The variable` _ block TimestampLast ` is a local variable in function` get Reserves ` and is not modified in any way. It is only read from and its value is determined by the current block timestamp. Therefore, it is independent of the value of`_ reserve`1`.
+On the other hand,` `_ reserves` are modified by function ` _ update `, which is called by` mint `and` burn `functions. However, these functions do not directly modify the` `reserves`. Instead, `m int`and `burn` call`m _ mintF ee`which modifies the ` reserves`. Therefore`reservereserve` is dependent on` reservemint` but not on `blockTimelast`.

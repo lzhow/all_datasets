@@ -1,0 +1,3 @@
+yes
+
+The contract state `_totalSupply` is data dependent on the variable `initialSupply` in the function `constructor`. This is because in the `constructor` of the `n00dToken` contract, the `_mint` function is called with `initialSupply` as an argument for the `amount` parameter. The `_mint` function internally increases the `_totalSupply` by the amount specified, which in this case is the `initialSupply`. Therefore, the initial value of `_totalSupply` is directly determined by the value of `initialSupply`.

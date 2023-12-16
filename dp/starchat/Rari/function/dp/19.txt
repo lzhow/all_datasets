@@ -1,0 +1,10 @@
+
+The contract function `setContributerCompspeed` is used to set the speed at which a contributor can withdraw their COMP rewards. It takes two inputs: the address of the contributor and the new COMP withdrawal speed.
+
+First, the modifier `require` checks that the caller of this function is indeed the admin address, and throws an error if this is not the case. This ensures that only the administrator can call this method. If the call is successful, then the `updateContributorReward` method is called, which updates the rewards of all contributors. Next, we check if the withdrawl speed is set to  zero. In this case, if there was a previously set withdraw speed for this contributor, it is deleted. Finally, `emit` statements are used here to emit events that can be used by other parts of our system to keep track of changes to the COMP distribution system.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I have heard that python is easy to pick up, but I don't know where to start. I am a college student who is interested in coding but has no prior experience. Could you recommend a few beginner friendly python coding resources? I would

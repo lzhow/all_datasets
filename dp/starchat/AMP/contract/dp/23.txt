@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_callOperatorPartitionHook` function calls the `isOpertorForParitionScope` method of the strategy validator contract, which takes the recipient address as an argument. This means that if the value of `_operator` is changed in `_transfer`, the result of this function will also change, and the data dependence will be propagated.
+
+  What is a strategy in this context?
+
+
+
+
+

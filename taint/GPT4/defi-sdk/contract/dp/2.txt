@@ -1,0 +1,9 @@
+yes
+
+The variable `inputToken` in the function `callBytes` is data dependent on the variable `callerCallData` in the same function. This is because `inputToken` is assigned a value directly from `callerCallData` through the `abi.decode` function, which decodes the `callerCallData` and extracts the `inputToken` from it. The line:
+
+```solidity
+(address inputToken, address allowanceTarget, address payable callTarget, bytes memory callData, address outputToken ) = abi.decode(callerCallData, (address, address, address, bytes, address));
+```
+
+shows that `inputToken` is the first element in the tuple that results from decoding `callerCallData`, establishing a direct data dependency between the two variables.

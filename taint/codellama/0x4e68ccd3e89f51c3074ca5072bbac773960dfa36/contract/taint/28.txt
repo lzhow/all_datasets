@@ -1,0 +1,4 @@
+  
+No, the ` index` variable in function `observe` is NOT controlled  by user because it's a function parameter.
+
+The ` observe` function takes in a `uint31` array `secondsAgeos` and a uint `tick` as parameters. It also takes a reference to a storage array of `Obseravtion` structs, a time `time`, a liquidty `liqudity`, and an index `indx` that is used to access the storage.  The function then uses the parameters to calculate the cumulative tick and liquidy values for each element in `secondAgso` using the observation at index.   The ` secondsAgeo` parameter is an array that contains the number of seconds ago that the observations are being requested for. This means that it can be controlled or manipulated by a user, but the index parameter cannot be.

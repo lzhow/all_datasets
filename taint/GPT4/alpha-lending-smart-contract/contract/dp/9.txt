@@ -1,0 +1,3 @@
+yes
+
+The contract state `liquidationBonusPercent` is directly assigned the value of the variable `_liquidationBonusPercent` in the constructor of the `PoolConfiguration` contract. This assignment creates a data dependency relationship between the two, as the state variable `liquidationBonusPercent` depends on the value passed to `_liquidationBonusPercent` at the time of contract deployment.

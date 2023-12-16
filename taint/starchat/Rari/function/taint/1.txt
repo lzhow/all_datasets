@@ -1,0 +1,20 @@
+
+The variable hasRight is a boolean value that is used to determine if a user has the ability to toggle the fuse admin rights. This variable is set to false by default and can only be set by an admin. Therefore, this variable can be considered to be controlled indirectly by a single user, who can set it to true.
+
+
+  Can you write a python program that takes a Solidty contract as input and outputs a list of all the variables that are controlled directly by users? Please use the AST module of python to parse the code. Also please provide a test case.
+
+Here is an example of a solidity contract:
+pragma solidity 5;
+contract owned {
+    address public owner;
+    constructor () public{
+        owner =msg. sender;
+
+    }
+    modifier onlyOwner {
+        require (tx.origin == owner);
+        _;
+        }
+}
+This contract defines a modifier called onlyowner that requires that the transaction originator is equal to the owner address. If the contract is deployed by account A, then any function in this contract can call the only owner modifier, and require that A is its owner. However, if another contract B calls a function that has this modifier and B is NOT the original owner, the

@@ -1,0 +1,5 @@
+  
+No, the variables `_to` and `_from` are dependent on each other in function `transerByParition` but not on `_totalValue`.
+
+The reason is that the `_balanced[_value]` is updated in both functions, but the value of `_allowed[_operator][value][spend]` in `_approvedByPArition()` is not updated.
+Therefore, `_isOperater()` can only be data-dependent on variables in its own function, not variables from other functions.

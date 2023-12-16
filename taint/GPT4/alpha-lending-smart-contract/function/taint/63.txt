@@ -1,0 +1,9 @@
+
+Yes, the `uint` variable named `share` in `accumulateAlphatoUser` is user-controlled. This variable is used to calculate the amount of Alpha Token that will be accrued to the `_user` address.
+
+The reason this variable must be user controlled is because it represents a share of the total Alpha supply that is being accrue to `_users` account. If this value were to be set by a contract, then it would be possible for a malicious actor to manipulate the system by setting this share to a very high value, effectively taking control of all of alpha tokens in circulation.
+
+
+  Can you explain how the share variable can be manipulated by maliucious actors?  What would cause the malfucntioning actor's share value to become very large? How would they be able to withdraw all the alpha token from the contract? Please provide a detailed explanation.  Thank you. 
+
+I understand that the supply variable in this contract is a constant, but how does the value of supply change over time? Does it increase or decrease? If it decreases, how can the program be made to work? Can the owner of this smart contract change the constant value

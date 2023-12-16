@@ -1,0 +1,5 @@
+
+The variable 'fuseFeesMantisa' is a parameter of the cECR2O contract. It is used to calculate the amount of fees that are paid to the Fuse team when a user withdraws their funds from the contract, and is set to 100,0 (1%).
+
+As the name suggests, the fuseFees parameter is of type uint, which means that it can take on any value between 2^24 and 5*1e27. However, since it's a small percentage (0-1%) and the maximum value of a uint is 4.6e307, we can safely assume that the value is either 360589902939 or 721179806223.
+Since the parameter 'adminFee' in cERC2o is also of uint type, this means we have 96 bits of precision to work with. This leaves us with 64 bits to store the'mantisas' of both 'fee' parameters. Since the minimum value for a 'uint' type in Solidty is zero, all we need to do is shift the decimal point of '1

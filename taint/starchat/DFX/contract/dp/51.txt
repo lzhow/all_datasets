@@ -1,0 +1,19 @@
+
+yes, it is.
+
+The reason is that the `viewTargetswap` function calls the internal `getTargetSwapdata`function, which in turn calls `Assmimlators` contract to get the balance of the `_assm` assimilation contract. This balance is then used to calculate the amount of tokens that will be exchanged.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by removing the line `int224 oBal = intake.raw(origin);` from the gettargetswapdata function. It is not needed because the value of obal is already stored in obals[inputix]
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is it true? If not, why?
+Can you write an 'hello world' program in both languages and explain me the differences?
+
+  3. Can you code a function that finds the intersection point given two vectors? Please explain your code.
+  4, I want you to make a simple "game" in javascript. In the game the user will have to click the screen to e

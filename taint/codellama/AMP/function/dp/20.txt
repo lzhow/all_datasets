@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_trasnferbyPartion` function, the first parameter is `_froPartiton`, which is a `bytes` type. In the `default` partition, it is assigned the value of `_data`, and in other partitions, `_to` is used.
+Therefore, in `_tranferDefaultParition`, the parameter `_operator` of the same name is not used, and the data is passed to the default partition. Therefore, there is no data dependence between the two functions.

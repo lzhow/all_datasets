@@ -1,0 +1,4 @@
+  
+The variable 'admin' in function 'constructor' is labeled as 'Yes' because it can be controlled directly by a user who deploys the contract. This is because the constructor function takes an argument 'address' called ' admin' which is used to set the value of the ' _ admin ' variable. Therefore, the address of a new administrator can directly be passed to the contructor function by an attacker.
+
+In addition, this variable is also labled as "Yes" because of its use in other functions such as the "change admin" function. In this function, an administrator is allowed to change the current admin address to a different address. If an unauthorized user calls this method, they can potentially change an admin to an address that they control. 

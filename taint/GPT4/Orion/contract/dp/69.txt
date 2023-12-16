@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `amountOut` in the function `_swap` is used to store the output amount of a token swap operation within that function. It is calculated based on the amounts array, which is derived from the `getAmountsOut` or `getAmountsIn` functions from the `OrionMultiPoolLibrary`, and the swap operation performed on the `IOrionPoolV2Pair` contract.
+
+On the other hand, the variable `curBalance` in the function `_swapCurve` is a local variable used to store the balance of a token before and after an exchange operation on a Curve pool. It is used to calculate the actual amount received if the `supportingFee` flag is true.
+
+Since `amountOut` in `_swap` and `curBalance` in `_swapCurve` are used in different contexts and their values are determined independently of each other within their respective functions, there is no data dependency relationship between them. They are calculated and used within the scope of their own functions, and changes to one do not affect the other.

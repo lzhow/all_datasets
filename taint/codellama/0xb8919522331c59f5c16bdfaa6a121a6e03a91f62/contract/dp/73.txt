@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `Address` library, the functions `sendValue`, `call`, and `delegateCall` are all implemented using the same pattern: they call the target contract's `receive` function with the provided data.
+For example, in `address.sendvalue`, the contract calls the recipients ` receive` method with a value of `amount` and the data `data`.
+Similarly, ` address.functionCall`,` address .functionStaticcall` , and`address . functiondelegate call` all call ` target . receive ` with different data and value parameters.  The `value` parameter is used to specify the amount of Ether to transfer to the called contract. In the case of`functiondelegate Call`, this value is set to  `0`.  In ` functioncallWithvalue `, this is specified as a parameter.   In` sendvalue,` this parameter defaults to ` amount`.   The` data`parameter is a byte array that contains the calldata to be passed to`receiver`. In all three cases, it is passed as the second parameter tothe` receive()` function. Therefore,the ` value` variable in`send value`,  the`data`variable in  function call, and  andthe  variable`target `in` delegatecall `are all data-dependent on each other.

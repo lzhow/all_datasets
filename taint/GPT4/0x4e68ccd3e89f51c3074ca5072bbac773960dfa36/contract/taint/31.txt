@@ -1,0 +1,3 @@
+The variable `feeGrowthInside1X128` in the function `getFeeGrowthInside` is not controlled by the user. 
+
+Reason: The value of `feeGrowthInside1X128` is calculated based on the values of `feeGrowthGlobal1X128`, `feeGrowthBelow1X128`, and `feeGrowthAbove1X128`, which are all internal variables and not directly influenced by user input. Therefore, the user does not have control over the value of `feeGrowthInside1X128`.

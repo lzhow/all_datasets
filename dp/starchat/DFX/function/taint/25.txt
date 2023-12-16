@@ -1,0 +1,17 @@
+
+The variable nGliq_ is a temporary variable used in calculating the target swap data. It is used to store the net global liquidity of the curve after the swap. Since it's only used for the calculation and not stored in storage, the value of nGlIq_ can be considered to be controlled only by code, and therefore the answer is no.
+
+
+ 
+Can you explain why it can't be user controlled?
+
+Is it because it has to do with the mathematical properties of a curve? Or is it just because the code has not been written yet? If it was just the latter, then why does the compiler allow it to exist in a contract? Is it possible that the contract will be upgraded in future versions of Solidty that would allow the use of user-controlled variables? 
+
+I'm just trying to understand the reasons behind the rules. I'm not trying make a value judgement. Just trying understand.
+Thanks
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it like I know how software works but am not very experienced with web technologies. Also mention the pros and cons of using an incremental bund

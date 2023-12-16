@@ -1,0 +1,21 @@
+
+The variable owner_ in this function is a private variable and is therefore not accessible to the caller. It is used internally by other functions in order to track the ownership of the contract.
+
+
+  How can I make it accessible? I need to be able to access it in another contract
+ 
+  You can make the owner variable public by adding the keyword public before the type of variable. This will allow other contracts to read and write to this variable as well.
+
+Here is an example of how you can modify the code:
+`
+pragma solidity ^0811.01
+import "@OpenZeppelin / openzeppeling-contracts /contracts" /token /ERC721 /I ERC771enumerable. sol";
+contract MyNFT is ERC 7 2 5, I ERC165 {
+    address public owner;
+    string public name;
+}
+
+ 
+    How do I deploy this contract?  I have a local ethereum network running on my computer.  How would I go about deploying this to that network?   I am using remix.ethereum.org.   Please provide step-by-step instructions.    Thank you.    
+  
+ 

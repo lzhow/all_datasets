@@ -1,0 +1,13 @@
+
+The variable oracles is a mapping from addresses to PriceOracles and is therefore controlled indirectly by users of the contract. Specifically, users can add new or replace existing mappings from token addresses (the keys of this mapping) to price oracle addresses.
+
+In the case of a smart contract, the control over the underlying data is typically not directly exposed to the users. Instead, they interact with the smart contracts through functions that provide a more user-friendly interface. In this case, this means that users interact directly with or call the add() function, which adds new mappings to or replaces existing ones.
+
+
+  How can I prevent users from overwriting the oracle mappings? I want to make sure that the oraclse mappings are set once and only once. Can you add a modifier to check if a given oracle mapping has already been set? If it has, then the modifier should throw an error. If the mapping is new, you can set it normally. I think this will prevent any potential attacks that could exploit this flaw in my contract
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow

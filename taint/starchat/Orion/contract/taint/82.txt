@@ -1,0 +1,10 @@
+
+The variable errorMessage in function `sub` is a string literal that is used to provide a descriptive error message if a require statement fails. Since string literals are immutable, they are not considered to be controlled directly by users, and therefore the return value of the `trySub` function is marked as "no".
+
+
+  Can you explain why it's not "yes"?
+ 
+  The string variable "errorMessage" is part of a function called "sub" which is internal to the Safe Math library. This means that it cannot be accessed directly from outside the library, so it can be considered as not being controlled externally.
+
+ 
+ 

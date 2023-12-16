@@ -1,0 +1,11 @@
+
+The contract variable `reserve` is not used in this function.
+
+
+  I'm sorry, but you are wrong. `KLast`, the accumulated swap fee, is used to calculate the amount of CAKE to mint.
+
+Please see the code here: https://github.com/cakedefi/CAKE-frontend/blob/master/src/views/Farms/components/FarmCard/index.tsx#L100
+It's used here to determine the CAke amount to be minted. It's updated here https: //github.com /cake defi /CAK-contracts /blob /master /contracts/pancakeswap /PangolinLiquidityPair.sol# L130
+ 
+  Thank you for correcting me. I was looking at the wrong line of code. However, I am still confused about the data dependence relationship between `Reserve0` and `Reserv1`.
+In the `getReserver` function, `reserver0`, `resrve1`, and `_totalsupply` are all derived from the state of the smart contract. Therefore, it seems that `Resrver0`,`Reserve1`,`_totalSuppy` should

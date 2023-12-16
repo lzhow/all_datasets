@@ -1,0 +1,6 @@
+
+The contract function '_setWhitelistsEnforce' has a boolean parameter 'enforce' that is used to control the enforcement of the whitelisting mechanism. This function is called by the owner of this contract, and it is intended to be used in conjunction with the 'whitelist' mapping to restrict the ability of certain addresses to call certain functions on this smart contract.
+
+In the case where 'enforcing' the whitelist is set to 'true', the '_isWhitelisted' modifier is added to the functions that are restricted to whitelisted addresses. In this case, the modifier checks if the address calling the current function exists in a mapping called 'whitelisted'. If it does not exist, then the transaction is reverted. If the mapping exists, but the calling address does NOT have the corresponding boolean value set in 'allowed', then it will revert the same way. 
+
+However, in this function, there is a check that compares the value of 'enableWhitelist' with 'bool enforce'. This check is meant to ensure that the state of enforceWhitlist is not being changed from 'false' to true, or from true to false. Since this check does a direct comparison, it cannot be influenced by a malicious

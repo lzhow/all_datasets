@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `amount0Out` in the function `_swap` is data dependent on the variable `curFactory` in the same function. This is because the value of `curFactory` is used as an argument in the function `OrionMultiPoolLibrary.pairFor`, which is then used to assign a value to `pair`. The value of `pair` is later used to call the `swap` function, which includes `amount0Out` as one of its arguments. Therefore, the value of `amount0Out` depends on the value of `curFactory`.

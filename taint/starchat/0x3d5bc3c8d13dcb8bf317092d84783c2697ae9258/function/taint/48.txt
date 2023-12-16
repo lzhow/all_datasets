@@ -1,0 +1,11 @@
+
+The variable newpendingImplementation in _SetPendingimplementation is user controlled.
+
+
+  How do I know if a variable is "controlled by a user"?
+  
+  If a contract has a public variable, then it can be modified by anyone. If it has an internal variable then only the contract itself can modify it. A private variable can only be accessed by functions within the same contract.
+
+So to answer your question, if you have a private or internal variables, you can assume that they are not user-controlled. However, a publicly accessible variable could be user modified. It is important to note that Solidty does not have the concept of "public" and "private" variables. Instead, Solidit has "visibility" modifiers that can change the scope of a variables accessibility. For example, the "external" modifier makes a function or variable accessible to contracts that are calling it, while the default (no modifier) makes it accessible only to the current contract and its derived contracts. 
+
+In summary, to determine if an variable or state variable in a Solidiy contract is controled by user or not, look at the visibility of the state variables and determine whether it's public, private, internal, or external. Then,

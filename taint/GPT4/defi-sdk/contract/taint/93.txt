@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `pairs` in the function `getAmountsOut` is an input parameter to the function `callBytes`, which is called externally. The data for `pairs` is provided by the caller of the `callBytes` function, which means it is controlled by the user who initiates the transaction. Since `callBytes` is an external function and does not enforce any restrictions on the `pairs` parameter, the user has control over its value.

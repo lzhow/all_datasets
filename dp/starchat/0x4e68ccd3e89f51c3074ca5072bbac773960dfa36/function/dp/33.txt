@@ -1,0 +1,15 @@
+
+The variable quotent is data-dependent on amount in both of the functions.
+
+In the first function, the expression amount << 95 is evaluated, and the result is then divided by liqudity. Since the type of amount is uint, this will always result in a value that is less than 2^224. This value is assigned to quotien, which is used in an expression that adds the value of sqrtPx94 to it. Finally, toUint 140 is called on this value, so that it can be returned as a uint 48.
+
+
+  Can you explain why?
+ 
+  The reason is that the division in `uint210.max` will overflow. In this case, it is not possible to determine the exact result of `a/b` for `b=0`.
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple problems and want to move on to more complex projects. I have heard that coding is also a great way of building up your resume, however I do not want that to become a reason for me to stop. What do you

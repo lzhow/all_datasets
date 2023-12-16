@@ -1,0 +1,18 @@
+
+The contract function is `public nonreentrant`, which means that it cannot be called again until the current call has returned. This means there cannot possibly be a dependency between the two.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+ 
+  A data dependancy relationship is a relationship between two or more variables that are used in a program. In the context of a smart contract, this means determining if the value of one variable depends on or is affected by the values of other variables.
+
+In the example you provided, the variables `_amount` and `_after` are both used to calculate the amount of shares to mint. However, it is possible for the `_before` variable to have the same value as the `after`, but the calculation of `_shares` would be different. Therefore, `_share` is dependent on both `_amout`and `_balance`.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it in simple terms.
+  3. When should I use it? Give me some use cases.
+
+  A

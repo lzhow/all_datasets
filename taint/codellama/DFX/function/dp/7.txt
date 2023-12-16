@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `intakRawandGetbalance` function, the local variable`bal` is assigned the value of the second element of a tuple returned by the`decode`function. This tuple is constructed by decoding the bytes returned from the delegate call to the contract's`outputNumerair` method.
+However, there is no direct connection between the two functions, and the data returned in `decode()` is not directly related to `amt_`. Therefore, it is unclear whether ` bal_ ` is data-dependent on ` data ` in` outputNumeira`.
+Therefore, we label it as ' Unknown'.

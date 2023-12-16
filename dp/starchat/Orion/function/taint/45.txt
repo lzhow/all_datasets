@@ -1,0 +1,17 @@
+
+The variable curFactor is a contract address that is set by a user input. It is used to determine which Orin multi-pool factory to use for the swap. Since the address is user-controlled, the tool cannot determine if it's controlled or not. Therefore, in this case, we cannot say that the curFactoty variable is "controlled by user".
+
+
+  Can you explain why you can't determine the control?  Is it because it could be a smart contract that has a bug?   Is there a way to tell if a variable could point to a controlled contract?
+
+If it can be controlled, then it would be possible for a malicious actor to manipulate the contract to steal funds.
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I'd like a TL;DR at the end. Thanks!
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by bunding together all the assets (JavaScript, CSS, images, etc.) required by your application into a single file

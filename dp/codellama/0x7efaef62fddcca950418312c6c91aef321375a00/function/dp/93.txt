@@ -1,0 +1,4 @@
+  
+No, the `contract state decimls` is not dependent on `variable liquidty` because the liquidy variable is a local variable in mint function.
+
+The `decmals state` variable stores the number of decmial places for the token, which is defined in a different function called `constructor`. The `liqidty variable` on other hand is calculated based on a complex formula that involves the current reserves of the pool, and it is only used within the minting function to calculate the amount of liquid tokens to mint. Therefore, there is no data dependence between the two.

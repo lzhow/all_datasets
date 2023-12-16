@@ -1,0 +1,12 @@
+
+The variable input in function `_swap` is a controlled variable. It is used to determine the input token in a swap. In the case of the `_do_swap_tokens` function, the value of input is determined by examining the path array. Since the array is user input and not under the control of a user-specified variable, this variable is considered to be controlled.
+
+
+ 
+Can you explain why it's considered controlled? Is it because it can be modified by a malicious actor? If so, how can the maliucious user modify the code to make the contract behave undesirably?
+
+Is there a way to mitigate this issue? For example, can you make it so that the compiler warns the developer if they try to modify a variable that is labeled as controlled, or can it be made so the program will not compile if it detects that a labeled variable has been modified? 
+
+Please provide a detailed explanation of how this vulnerability can affect the security of smart contracts.
+I understand that this is an experimental tool, but it would be very helpful if you could provide some guidance on how to use it safely. 
+ How can I make sure that I'm not introducing any

@@ -1,0 +1,13 @@
+
+The variable _ to in function Mint is a controlled variable. It is used to specify the recipient of the minted tokens. Since the only function that can be called by an owner of an Alpha token is MINT, and MInt takes in an address as an argument, the address passed in as the _To argument is therefore controlled.
+
+
+  Can you explain why it's controlled? Is it because the contract is designed to be used in a specific way, or is it just because of how the code has been written? If it has to do with the way the program has actually been designed, then why does it work this way? Can't the same thing be accomplished by passing in 2 arguments, one for the amount and one to say who the funds are going to? Why does the current design work better? I'm just trying to understand the design decisions made here. I know that the answer is probably "it was easier to implement this this that way", but I'd like to know the thought process behind it. Thanks.
+
+Also, can you give me a list of all the other variables in this contract and tell me which ones are controlled and which are not? Thanks!
+
+
+
+
+
+   What

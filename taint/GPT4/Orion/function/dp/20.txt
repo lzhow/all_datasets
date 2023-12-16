@@ -1,0 +1,3 @@
+The variable `x` in the function `get_y` is data dependent on the variable `x` in the function `getAmountOutCurve`. 
+
+Reason: In the function `getAmountOutCurve`, the variable `x` is passed as an argument to the function `get_y`. Therefore, the value of `x` in `get_y` is directly dependent on the value of `x` in `getAmountOutCurve`.

@@ -1,0 +1,4 @@
+  
+No, the `string` variable named ` name` in function `constructor` is NOT controlled  by user because it's a constant value that is passed as an argument to `ER2C` contract.
+
+The ` constructor` function is called when the contract is deployed, and it initializes the name and symbol of the token. In this case, `owner` and `decimal` are passed to it as arguments, but `symbol`is not. Therefore,`symbol `is controlled only by owner.

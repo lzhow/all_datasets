@@ -1,0 +1,13 @@
+
+The variable "data" in function "from" is user-controlled.
+
+This is because the "Data" struct contains a "raw" field of type "bytes", which is a dynamic array of bytes. This means that the length of the array can be modified by calling the from function, which could potentially lead to a buffer overflow or other memory-related issues.
+
+
+  Can you give me an example of how to exploit this? I'm trying to write a smart contract and I need to use this library
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How about using a static site generator like Gatsby or Next.js? Why might you choose to go with one over the other?  Are there other incremental bundlers out there? What are their pro and contra? Please back up your claims with numbers where possible. Provide examples of real-world projects using each method. If you could find any, link them as well. Thank you. Your response should be around 200 words. I'd appreciate if you can also include some common use cases for each.

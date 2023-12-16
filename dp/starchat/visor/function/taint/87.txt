@@ -1,0 +1,15 @@
+
+The variable `owner` in `nonce(addres owner)` is a user controlled variable. It is used to index into a mapping of non-ces, which is user-controlled.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  If a contract has a function that takes a parameter that is modified by a call to that function, then the parameter is considered to be "controlled" by that call. For example, if you have a `mapping(uint => address) owners;`, and you call `owners[tokenId] = msg.sender`, then `tokenId` is now controlled. If you then call another function `transferFrom(tokenId, to, amount)`, then both `to` and `amount` are controlled, since they are parameters to `transfeFrom`.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2 What problems does it solve?
+
+An incremental bundling tool or bundlers are tools that optimize the performance of web pages by combining multiple files into fewer, more efficient files to download. They work by parsing the files that make up an application, finding the dependencies between them, and combining them into files optimized

@@ -1,0 +1,4 @@
+  
+No, the ` allowances` variable in function `handleTokenInpu` is NOT controlled  by user because it's a local variable and it can't be modified by any external user or function.
+
+The ` handleTkenInput` function is called by `execute` and `cancelAccountSiganture` functions, and the only input it receives is `input. token`, `amount`, and`permi`t. Therefore, `Allowances ` variable is calculated based on the input parameters and is determined by other variables and functions. 

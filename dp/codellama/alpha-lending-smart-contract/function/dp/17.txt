@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `encodeUint8` function, the value of the local variable 'data' is passed as an argument to the 'decodeData' function. This means that the data in 'encodeData.data[encodeOffset]' depends on 'decodedData'. Therefore, 'encodedData[encodedOffset].data', which is a reference to 'encoderData', is data-dependent on decoded data.
+ 

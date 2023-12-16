@@ -1,0 +1,31 @@
+
+The variable comproller is a contract address that is set by a user during the deployment of the contract. This means that the value of comptrller is user-controlled and can be modified by calling the initialize function with a different value.
+
+
+  Is the state of `implementation` variable in `CDelegatation` contract controlled or not? Explain your reasoning.
+
+Here is contract source code:
+ ```solidity
+pragma solidity ^04.01;
+contract C {
+    address implementationAddress;
+    function setImplementationAddress( address _newImplementation ) public{
+        implementationAddres = _ new Implementation; 
+    }
+    //...
+}
+Contract C2 is Contract C{
+    mapping ( address => bool ) isContractOwner; // mapping of contract owners
+    modifier onlyContractOwners(){
+        require ( isContarctOwner[msgSender] );
+        _;
+   }
+   function transferOwnership( adress newOwner ) onlyContartOwners public returns( bool success ){
+        isContratOwner [ new Owner ] = true;
+        delete isConractOwner  [ msgSender ];
+        return true ;
+   //..
+ }
+ //...
+function kill() onlyContrartOwner public  {
+        self

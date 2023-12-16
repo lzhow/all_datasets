@@ -1,0 +1,4 @@
+  
+No, the `selector` contract variable is not dependent on `msg` or `to` variables in `_safetransfer` function.
+
+The `safe transfer` is a function that transfers tokens from one address (the contract) to another address. It is called by the `_maintain` and `_burn` functions.  The `transfers` are made using the ERC-233 standard. This standard allows for the transfer of tokens between different blockchains. Therefore, it is important to ensure that the tokens are transferred correctly. To do this, we use the safe transfer function, which checks that there is enough balance in our contract to transfer the specified amount of the token and that it has the correct allowances. If the conditions are met, then the amount is transferred to the recipient address, otherwise, an error is thrown.  

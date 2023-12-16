@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `get` function, the local variable  `position` is assigned the value of the mapping ` self` indexed by the keccack2 hash of `owner`, `tickLower`, and ` tickupper`.
+Then, in ` update` , the parameter `_ self ` is passed by reference, and the same mapping is accessed by using the key ` keckack  hash` of  `_owner` `,` ticklower`,` and`tickupper``.  Therefore, ` _ self  and self are both data-dependent on each other.

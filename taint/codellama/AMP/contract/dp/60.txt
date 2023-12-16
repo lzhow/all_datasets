@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_removeFromTokenPartion` function, the value of the `from` variable is used to calculate the new balance of tokens in that partition. This means that the balance in a partition is dependent on both the partition and the address of a token holder. Therefore, `_balancedByParition [_from]` is data-dependent on `_to`.
+ 

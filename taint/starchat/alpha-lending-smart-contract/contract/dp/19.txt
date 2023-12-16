@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `i` variable in `for (i =...)` loop is used to access the elements of the array `recevierRule`, which is declared outside the loop. This means that each time the code enters the body of `loop`, the value of i is incremented by 1, and the corresponding element in both `rule` and `reciever` is accessed.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on is because the index variable is being used in a loop to iterate over the length of an array. Since the for loop iterates over a fixed number of times, the compiler can deduce that it will always access a valid index in that array, which means the data is dependent on that index. In other words, if the size of that data changes, then the program may break. It’ll also be more efficient since the optimizer can make better assumptions about the number and type of accesses to the memory. 
+
+In general, data dependencies are an important concept in computer programming, as they allow the computer to optimize the execution of code by knowing which parts of

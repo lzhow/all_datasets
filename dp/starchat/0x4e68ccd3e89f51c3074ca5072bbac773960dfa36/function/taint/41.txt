@@ -1,0 +1,7 @@
+
+yes, the `sqrt_price_x_9` variable is user controlled.
+
+  What is a user-controlled variable?  How does the program behave if it were not user control?   What are some ways to mitigate this?
+
+User-specified variables are those that are set by users, rather than being determined by code. For example, if a program asks the users to input a value, then the input is considered to be a variable that is set user specified. In contrast, a loop counter is an example of a system-generated variable, as it does not require any user input.
+In general, user inputs can be dangerous, and it's important to make sure that the inputs are sanitized before being used in any calculations. This can prevent vulnerabilities such as buffer overflows, or incorrect calculations due to unexpected inputs. It's also important for the developers to clearly document what the expected inputs for a given program are, so that users can input the correct values. Finally, developers should also consider adding checks to ensure that inputs do not exceed the bounds of the variables, to prevent any unexpected behavior due too large or small inputs, which can cause security vulnerabilites. These are just a few examples of things to consider

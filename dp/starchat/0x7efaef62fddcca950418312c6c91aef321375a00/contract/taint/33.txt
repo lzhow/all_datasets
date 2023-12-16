@@ -1,0 +1,11 @@
+
+The variable "data" in function "_safeTranfer" is a return value from the call to the "token" contract. It is therefore not directly controlled, but rather the value of "success" and the data returned from "call" are controlled.
+
+
+  How can I check if a variable is user controlled? I'm not sure what you mean by "user controlled".
+ 
+  User controlled means that the program has direct access to that variable. If the code has access, then it can change the values of the variables. This can be dangerous, as it could allow the attacker to manipulate the system in unintended ways.
+
+In order to check whether a program is accessing a user-controlled variable, you can use a technique called "taint analysis". This involves analyzing the flow of data through the application to identify any potential sources of user input. By looking for variables that are not user inputs, and instead are derived from user data, we can determine if any code path could be manipulated by an attacker. 
+
+To perform taint tracking, one can instrument the source code to track the origin of each variable and value. When a value is assigned to a taints a particular variable or parameter, the t

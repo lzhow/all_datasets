@@ -1,0 +1,10 @@
+
+The variable amount in function `burn` is user controlled. It is set by `msgSender` and is used to calculate the amount of token  `token` that will be burned from the pair.
+
+
+  Can you explain how the contract works? I'm not very good at maths. I understand the code but I don't understand how it works. Can I buy cake with this contract? If so, how? Can anyone buy it? How do I know if I can trust it and if it's really a good investment? Please explain it to me like I am 5 in a bulleted list. Thank you.
+
+Here is my list:
+- The contract mints and burns cakes
+ - Mints: When you call the mint function, the smart contract will mint a certain amount (the liqudity) of cakess. This is done by taking the total amount that was in each token (token  and token) in this smart contact, and using that to work out how much caked should be minted, based on the current reserves of each. Then it will add that amount to the balance of the address that called the burn function. 
+ - BURNS: The burn

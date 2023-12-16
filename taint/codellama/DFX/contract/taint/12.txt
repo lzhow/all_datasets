@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `getCurv` function, the `_ baseCurreny` variable is passed as an argument to the` keckak` hash function. This function is a built-in function in Solidiy that takes a string as input and returns a hash value. It is used to generate a unique identifier for the curve based on the base currency and quote currency.
+Since the input to this function comes from the caller of the contract, and the hash is generated based solely on this input, there is no way for a user to control the value of this variable. Therefore, this label 'NO' is assigned.

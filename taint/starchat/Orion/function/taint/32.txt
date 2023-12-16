@@ -1,0 +1,12 @@
+
+The variable reserveIn is a control variable in a swap function. It is used to calculate the optimal amount of tokens to be swapped. However, the value of reserve input is determined by a combination of the balances of all the tokens in an account. This means that the reserve variable is dependent on the state of an entire account, which is typically stored on a blockchain. As such, this variable cannot be directly controlled or manipulated by an individual user or smart contract.
+
+
+  How can I prevent the owner of this contract from being able to manipulate the `reserves` variable?  How would I do this?
+
+I want to prevent users from manipulating the reserves variable, because it would allow them to make arbitrage trades on my contract, and potentially steal funds from my users.  I want users to only be able make trader calls on this smart contact via the trade function, so that I can keep track of their balances and prevent them from losing funds.
+How can this be done? Please provide an example of how to do it. I am a beginner programmer, please provide me with a detailed explanation. Thank you. 
+
+Here is my updated code:
+ ```  solidity
+pragma solidity

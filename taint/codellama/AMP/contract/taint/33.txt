@@ -1,0 +1,4 @@
+  
+No, the `_ swap Token Address_ ` variable in function `constructor` is NOT controlled  by user because it's a required parameter that is passed to the constructor function. It is a fixed value that cannot be changed by any user input.
+
+The constructor of the contract is called when the smart contract instance is created, and it initializes the state of  the  contract. In this case, `_swaptokenAddress`is a parameter of type address that represents the address of an ER223 token contract that will be used for swapping. This address is required for the correct functioning of this contract, so it cannot  be controlled or changed  during the execution of contract' s functions.

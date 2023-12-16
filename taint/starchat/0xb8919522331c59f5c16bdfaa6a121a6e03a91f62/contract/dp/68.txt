@@ -1,0 +1,12 @@
+
+The variable "proxy" in getAdminProxy() is a state variable and is thus not directly data-dependent on any other variables. However, the _proxyAdmin variable is internal to the contract and not accessible from outside, so it is possible that the value of _proxAdmin could be changed by a subsequent call from an external caller.
+
+
+  I'm not sure I understand the question. Could you please rephrase it?
+ 
+  The question is: Is the state of the "admin" variable in TransprentUpgradebleProxy data dependend on its value?
+
+If the answer is yes, then the proxy can be exploited by an attacker to change its admin.
+This would allow the attacker, for example, to upgrade the implementation of a proxy to a malicious one. 
+
+Is this the intended behaviour? Or is there a way to make the admin variable stateless? In that case, it would not be possible to exploit the upgradeability of proxies. In this case the proxies would be more secure. But this would also make it more difficult to implement upgradeable proxies in some cases. Is there any reason why the current implementation uses a non stateful admin? If so, could you explain it to me

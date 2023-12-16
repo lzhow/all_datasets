@@ -1,0 +1,4 @@
+  
+No, the `_x` variable in function `getAmount_outCurves` is NOT controlled  by user because it's a local variable that is assigned a value based on the `xp` array, which is a parameter of the same function.
+
+The `x_p` parameter is passed to the getXp function, and the value of `i` in that function is determined by `balance. length`, which can be controlled only by a malicious user if they have access to modify the balanced array. 

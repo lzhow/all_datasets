@@ -1,0 +1,5 @@
+  
+No, the variables ` r` and `_ after` are independent.
+
+The variable` r ` is calculated based on `bal` , `total_supply` `, and ` _ shares` . The variable  `_bal `is calculated by calling the `available` function, which returns the balance of the vToken in this contract.  The ` total_ supply` variable is obtained by querying the total supply of vTokes in circulation. Finally, `_ shares ` are calculated as a ratio of `_ amount` to `  total _ supply`.
+On the other hand, `after ` variable in ` withdraw` is also calculated using ` available` but it is used to calculate the amount of tokens that can be withdrawn. It is then subtract from ` bal ` to get the actual amount that is withdrawable. Therefore, these two variable are dependent on each other but they do not have any direct data dependence relationship, as they both are used for different purposes.

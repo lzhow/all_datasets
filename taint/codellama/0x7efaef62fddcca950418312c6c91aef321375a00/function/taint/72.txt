@@ -1,0 +1,10 @@
+  
+No, the ` allowances` variable in this function is a mapping that maps the address of the owner to a nested mapping of addresses to uint values. It is therefore not directly controlled directly by a user, but rather by other contracts or users who have called the approval function.
+
+The `approval` function in `PanaceER2C` contract is responsible for setting the allowable amount of tokens that a spending contract can spend on behalf of a given owner. This function takes in four parameters:
+* `owner`: the account that is approving the spends
+ * `spenders`: The account(s) that are being approved to spend the tokens
+  *`value`:  The amount that the spenders are allowed to spent
+   *  `delegated`: Whether the delegated approver is allowed
+   
+ The ` approves` method in Panace ERC  is used to set the amount a spend contract may spend for a particular owner's account.  It takes four arguments: the sender of this transaction, which is typically the contract that wants to transfer tokens on the behalves of another account, and the recipient of these tokens, as well as the number of token to be transferred.   The function then checks if there is enough allowence for the transfer, if so, then it transfers the token from the sending account to the receiving account and returns true. If there isn't enough approvement, or if any other error occurs, this method returns false.

@@ -1,0 +1,17 @@
+
+The variable _ token in calculate RoundDown BorrowShare Amount is data-dependent on payBackAmount in rePayInternal because it is used to access the pools mapping, which is a state variable that is updated in both functions.
+
+
+  Can you explain why it's data dependant?
+ 
+  The variable '_token' in 'calculateRounddownBorrowshareAmount' function is being used in order to retrieve the pool data from the 'pools' mapping. This mapping is maintained by the smart contract and is therefore considered a shared state. Hence, the '_ token' variable is dependent on 'payBackamount' because the value of '_Token' is determined by 'pool' data.
+
+In the case of'repaiInternal' the same '_ Token' value is again used, but in this case to update the user data in userpooldata mapping which again is considered as a common state shared by all users. So, in short, '_ _Token'is also dependent in repaiinternal function because of the shared states.
+
+
+Please let me know if you need any more information. I would be happy to provide you with more details. Thank you. 
+
+ 
+ 
+  
+  1. What is an "

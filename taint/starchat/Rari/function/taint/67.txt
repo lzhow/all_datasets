@@ -1,0 +1,9 @@
+
+The variable borrowed is a mapping of addresses to booleans that determines if an address is allowed to borrow assets from the protocol. This mapping is stored in a contract called the Comproller contract, which is owned by a governance token called COMP.
+
+In the case of the COMP token, the borrowing mechanism is designed such that if a user has overstaked their COMP balance, they are unable to withdraw their funds until the overdraft is repaid. In other words, if someone has borrow 100 COMP, and they then borrow another 20,012 COMP (which would bring their total borrow balance to 302,114 COMP), they will not be able to repay the first 99 COMP until they have recovered their 50% of their loan. 
+
+This borrow mechanism allows the users of COMP to earn interest on their debt while also being able keep their assets safe in case their borrow balances become too high. However, this also means that the mapping that tracks which addresses are allowed or not allowed borrow is user-controlled.
+
+
+  How does the smart contract prevent people from borrowin too much?  How is it possible to determine how much someone can borrow

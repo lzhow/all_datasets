@@ -1,0 +1,16 @@
+
+The variable visrdDeposit is not directly used in withdraw, but it is used to calculate the amount of rewards that will be paid out. Since the value of visrsDeposit can change between the time that the transaction is initiated and the withdraw function executes, it may be possible for the calculation to be incorrect.
+
+
+  How can I fix this?
+ 
+  You can try to add a require statement to check if visrdsDeposit has not changed since the snapshot was taken. This will ensure that visrdbalance is still accurate when the rewards are withdrawn.
+
+Here's the updated code:
+function deposit ( uint 2 5 64 vis rDeposit, address  pay able from,address to)  external  returns(uint 3 4 96 share s)
+{
+require( vis rdDeposit  >0, "deposit must  be  non-zero" );
+ require (to !=address (0 ) &&  to ! =address  (this),  "To" ) ;
+Require (from ！=address （0）&&  from !=address（this）,  'From' )
+shares =vis rd Deposit;
+if ( v

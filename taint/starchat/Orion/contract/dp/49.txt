@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the value of `reserveB`, which is used to calculate `quoteBOpt`, is determined by the `if` statement that follows it. If `IOrinPoolv2factory.createpair(a，b)` has not been called, then `pair` will be equal to `address (0)`, and the subsequent call to `_getReserve` would revert.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The value `a` is data dependant on `b` because the calculation of the optimal value for `B ` depends on its value. In the code, the line `uint amountOpt = quoteB(bDesired - amount, reserves.b, totalSupply);` depends directly on b. This means that if the data value changes for b, so will the output of this line. Therefore, `A` must also be recalculated. 
+
+In the case where `create_pair()` has already been run, this is not the only data that affects the result of `_quote_b()`. The values of reservces.a and resercesb are also dependent on a and b respectively. However, these values

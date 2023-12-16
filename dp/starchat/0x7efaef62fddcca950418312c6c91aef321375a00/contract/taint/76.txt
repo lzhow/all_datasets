@@ -1,0 +1,14 @@
+
+The variable token in function `_safeTransfert` is a contract address that is passed as an argument to the `_transfer` function. This function is called by other functions in this contract, such as `mint` and `burn`. The `_mint`, `_burn`, and `_swap` functions are called externally by users, and they can potentially modify the state of the contract by transferring tokens from the caller's address. Therefore, the value of `to` in `_transferrt` can be considered user-controlled.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was five. Thank you!
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+
+In combinatorial mathematics, a J-P-Perm P LL algorithm is any algorithm that solves the Juggling Problem for up to J people, where each person has a different number of objects to juggle, all of which are permutations of a given set of items, in a way that minimizes the total number swaps.
+Jugglers are allowed to swap their

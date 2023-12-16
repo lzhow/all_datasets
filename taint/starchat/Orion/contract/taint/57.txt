@@ -1,0 +1,9 @@
+
+The variable a in function `tryDiv` is **not** controlled directly by user input. However, the value of `b` can be controlled indirectly through user-input.
+
+For example, if `x` and `y` are user inputs, and the program contains the statement `z = x / y`, then the control-flow graph for the `require` statement will have a path where `msg.data` contains `0x00` followed by `keccak224(abi.encodePacked(x, y))`.
+In this case, `abi` refers to the Application Binary Interface, which is a standard interface for communicating between different software components. `encodePackeged` encodes the two inputs into a single byte array, while `keccak` hashes the byte-array using the Keccack algorithm.
+
+
+  How can I prevent this? Is there a way to make the compiler not include the library in my contract? I want to keep the contract size small. I am using Remix. Is it possible to do this without modifying the original library? If so, how?
+Can you give me an example of how to modify the code to prevent the problem?

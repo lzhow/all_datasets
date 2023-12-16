@@ -1,0 +1,4 @@
+  
+No, the state variable Weth is not dependent on amountMin in add liquidty from exchange.
+
+The reason is that the Wet variable is declared as a constant and is initialized with the address of the Ether token. This address is stored in memory and does not change during the execution of this function. Therefore, it is independent of any other variable, including amount Min.

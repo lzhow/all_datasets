@@ -1,0 +1,10 @@
+
+The variable to in safeTranfer is a controlled variable. It is being set by a user input and is therefore controlled.
+
+
+  How do I know if a variable is user controlled?  What are some common ways to determine if something is "user controlled"?
+ 
+  There are several ways you can determine whether a particular variable or value is under your control:
+
+1. Is the value hard-coded into the program? If so, then it's not user-controlled.
+2. Does the input come from a trusted source? For example, if you're accepting user data from an HTML form, you should validate that the data is what you expect. If the source is untrusted, such as a URL parameter, the attacker could easily manipulate the parameter to provide unexpected data. In this case, user control is limited. However, in some cases, unvalidated user inputs may be necessary for technical reasons, even if they are ultimately from trusted sources. For instance, an ID may need to be used as part of a database query, but the ID itself should not be user generated. This is because the database may not have the necessary validation to ensure that an attacker-generated ID does not result in SQL injection. So, while user

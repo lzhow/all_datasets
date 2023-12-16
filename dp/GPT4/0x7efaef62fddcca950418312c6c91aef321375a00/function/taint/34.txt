@@ -1,0 +1,11 @@
+
+The variable token is a contract address. It is possible for the contract to be malicious and change the address at any time. Therefore, the value of the token variable is unknown and cannot be classified as 'controlled by user'.
+
+
+  I mean the state of token contract.
+ 
+  The state variables of a smart contract are typically stored in a blockchain. In this case, token contracts are not smart contracts and do not have their own state. Instead, they are interfaces to existing smart-contracts that implement the functionality of fungible tokens.
+
+In this context, "state" refers to the values of variables that are stored on the blockchain, such as the balances of users, or the current supply of tokens in existence. However, in this instance, we are referring to whether the variables are controlled directly by users or indirectly via the smart contact's address, and whether or not they can be changed by external parties. 
+
+For example, if a user has an allowence to spend a certain amount of ether from a specific address (controlled indirectlty via their address), then the allownace variable would be considered "controlled" by that user, as they have the ability to change it. On the other hand

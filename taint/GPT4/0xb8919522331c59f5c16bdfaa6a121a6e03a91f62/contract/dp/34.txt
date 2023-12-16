@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `size` in the function `isContract` is used to store the size of the code at the address `account`, which is determined by the `extcodesize` opcode in the EVM. This variable is local to the `isContract` function and its value is independent of any other function or variable outside of `isContract`.
+
+On the other hand, the variable `target` in the function `functionCallWithValue` is a parameter that specifies the address of the contract on which a call with value is being made. The value of `target` is used to check whether the address is a contract and to perform the call, but it has no direct relationship with the `size` variable in `isContract`.
+
+Since `size` and `target` are used in different contexts and for different purposes without any direct data flow or dependency between them, they are not data dependent.

@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The variable `token` in the function `safeTransfer` is not directly controlled by the user. It is passed as an argument to the function. The control over the value of `token` depends on the caller of the `safeTransfer` function. If the caller is a user, then the user indirectly controls the value of `token`. However, without further context or information about how the `safeTransfer` function is called, it is not possible to determine if the variable `token` is controlled by the user or not. Hence, the label is unknown.

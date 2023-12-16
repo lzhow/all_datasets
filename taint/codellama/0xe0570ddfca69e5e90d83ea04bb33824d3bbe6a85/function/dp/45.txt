@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `_sharess` is passed as an argument to the `balances()` function, which returns the balance of the current account. This balance is then multiplied by `_share` and divided by the total supply to get the amount of tokens that can be withdrawn. However, this calculation does not depend on any other contract variables, so it is not a dependency of `_state`.
+ 

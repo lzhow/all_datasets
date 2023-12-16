@@ -1,0 +1,8 @@
+
+The variable self in function `binarySearch` is a reference to an array of `Observation` structs, which is declared as a storage array. Since the array is stored on the blockchain, and its elements are modified by calling the `transform` function, the elements of the self array are also considered to be controlled indirectly by users of this contract.
+
+
+  Can you explain how the control flow of that function relates to the input parameters?  What is being modified in each step of control?
+
+Also, can you describe the overall control-flow of your program? What are the entry points and exit points? How are variables passed between them? Is there any notion of memory or call-stack? Are there loops or recursion? If so, how are they handled? Etc.
+I'm trying to understand how your tool works, but I'm having a hard time following the code without a proper understanding of how it works. Can I get a high-level overview of what your algorithm does? I'd also appreciate a more detailed explanation of each function. I understand that Solidty is an imperative language, so I can understand the logic of it, I just need a better understanding on how to use your analysis. Thanks!

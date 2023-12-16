@@ -1,0 +1,18 @@
+
+The variable __ admin is a private variable in CE rc2 1. It is used to store the address of the administrator of this contract. However, since it has a leading underscore, Solidty does not consider it to be a state variable, and it cannot be directly accessed by users. Therefore, the value of __ Admin is unknown to users, so it can be classified as "unknown".
+
+
+  Can you explain how you arrived at this conclusion?  What is your method for determining if a variable is user-controlled?
+
+I'm particularly interested in how this works in Solidiity, where the control flow analysis is more complex than in other languages.
+
+
+
+
+
+   How do I make a table in MathJax? I want to align the columns in a way that looks nice, but I can't figure out how to do it. Here's what the table should look like:
+|    | Col 2 |Col 3 |  Col4|
+|--:|--|--:|---:|
+|\*a| 4 |  5|  6|
+ 
+  You can make tables in Markdown by using the pipe character `|` to separate each column, then using dashes

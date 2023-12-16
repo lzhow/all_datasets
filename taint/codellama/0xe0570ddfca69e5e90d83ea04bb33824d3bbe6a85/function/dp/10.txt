@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `_pool` is data-dependent on `balance()` in line 4, and the `earn()` function in lines 5 and 6 is also data depend on `_amount` and `_after`. However, the `_mints` function is not dependent on any of these variables. Therefore, `_pools` cannot be data related to `share`s.

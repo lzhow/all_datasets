@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `_address` in the function `updateDevWallet` is an input parameter that represents the new address to be set for the developer's wallet. It is independent of any other state or function within the contract.
+
+The variable `from` in the function `onERC1155Received` is also an input parameter that represents the address from which the ERC1155 tokens are being transferred. This function is a hook that is called by the ERC1155 token contract when a transfer occurs.
+
+There is no direct relationship or dependency between `_address` and `from` within the given code. The `updateDevWallet` function is used to update the developer's address, and it does not interact with or depend on the ERC1155 token transfer process. Similarly, the `onERC1155Received` function handles token reception and does not interact with or depend on the developer's address. Therefore, these two variables are not data dependent.

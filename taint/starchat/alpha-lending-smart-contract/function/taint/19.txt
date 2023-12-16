@@ -1,0 +1,11 @@
+
+The variable _accounts in function `mint` is user controlled. It is used to determine the account that the minted tokens will be sent to.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  You can check if it's user-controlled by looking at the code. If the value is set by a user input, then it can be considered user control. However, if you're not sure, you can also check with the developer or the team that wrote the smart contract.
+
+In general, user inputs should be validated and sanitized before being used in smart contracts. This helps to prevent malicious users from manipulating the contract's behavior. Additionally, the use of user controls should always be carefully considered and documented. For example, in Solidty, modifiers can help to enforce certain conditions on functions. These modifiers should also be used when possible to clearly communicate the intent of the control to other developers. 
+
+Overall, knowing the origin of a control can make it easier to understand and use. But it also requires a level of trust and understanding. So it may be worth considering the pros and cons of each approach before making a decision. Is there anything else I can do to help?

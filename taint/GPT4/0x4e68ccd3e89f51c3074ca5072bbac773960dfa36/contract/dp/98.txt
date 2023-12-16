@@ -1,0 +1,3 @@
+no
+
+The variable `feeGrowthBelow1X128` in the function `getFeeGrowthInside` is not data dependent on the variable `feeGrowthGlobal0X128` in the same function. The reason is that `feeGrowthBelow1X128` is calculated using `feeGrowthGlobal1X128` and `lower.feeGrowthOutside1X128`, and there is no direct or indirect use of `feeGrowthGlobal0X128` in its calculation. The variable `feeGrowthGlobal0X128` is used separately for the calculation of `feeGrowthBelow0X128` and other variables related to the token 0 fee growth, but it does not influence the calculation of `feeGrowthBelow1X128`, which is related to the token 1 fee growth.

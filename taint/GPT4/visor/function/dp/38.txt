@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the provided Solidity function `isContract`, the variable `size` is assigned a value that is directly dependent on the input variable `account`. The `extcodesize` opcode in the inline assembly block is used to get the size of the code at the address specified by `account`. Therefore, any change in the value of `account` will affect the value of `size`, establishing a data dependency relationship between the two variables.

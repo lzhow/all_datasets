@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_allowed` mapping is indexed by both `_owner` and `_spenders`, and the `decraseAllowances` function decrements the value of `_allowances[_owner] [_spenderr]` by `_subtractValue`.
+However, the data dependence is not explicit in this code, and it can be difficult to determine.
+
+  What is a good way to check for data dependencies?
+
+
+
+

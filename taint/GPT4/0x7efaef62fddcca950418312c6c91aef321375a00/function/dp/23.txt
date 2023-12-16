@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `to` in the function `_safeTransfer` is directly passed the value of the variable `to` from the function `swap`. In the `swap` function, `_safeTransfer` is called with `to` as one of its arguments, which means that the value of `to` in `_safeTransfer` is dependent on the value of `to` passed to the `swap` function. Therefore, there is a data dependency relationship between the `to` variable in `_safeTransfer` and the `to` variable in `swap`.

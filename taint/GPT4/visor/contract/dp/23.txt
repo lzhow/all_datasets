@@ -1,0 +1,9 @@
+yes
+
+The variable `shares` in the function `deposit` is data dependent on the variable `visrBalance`. This is because the value of `shares` is recalculated based on the value of `visrBalance` when the condition `vvisr.totalSupply() != 0` is met. The recalculation uses `visrBalance` to determine the proportion of the total supply of `vvisr` that the deposited `visr` represents, as seen in the following line:
+
+```solidity
+shares = shares.mul(vvisr.totalSupply()).div(visrBalance);
+```
+
+This line indicates that `shares` is directly affected by the value of `visrBalance`, establishing a data dependency relationship between the two variables within the `deposit` function.

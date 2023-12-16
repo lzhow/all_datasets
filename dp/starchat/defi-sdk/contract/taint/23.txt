@@ -1,0 +1,15 @@
+
+The variable absolute token amount is a struct that contains an address token and a uint 200 absolute amount. This struct is used in two functions in this contract, the hash function and the two hash functions that follow.
+
+In the first function, which is hash account signature data, this struct contains information about the input of the swap, such as the token address and amount of tokens to be swapped, and information on the output of this swap. In the second function which hashes the protocol fee signature, there is no input or output to the transaction, so this variable is unused.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn about it so I can use it for my own projects. Thanks!
+  
+    An incremental bundling tool is designed to optimize the performance of web application development by bunding together the various components of a web project into a single file that can be served to users.
+
+    The key benefits of an incremental bundle tool are:
+
+    Faster development time: By reducing the number of requests made to servers

@@ -1,0 +1,3 @@
+The variable `product` in the function `mul_ScalarTruncate` is not controlled by the user. 
+
+Reason: The variable `product` is a local variable that is assigned the result of the `mul_` function, which is an internal function. The `mul_` function does not take any user input and performs internal calculations based on the input parameters. Therefore, the value of `product` is determined solely by the internal logic of the contract and is not influenced by user input.

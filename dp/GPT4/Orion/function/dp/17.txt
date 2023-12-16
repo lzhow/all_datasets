@@ -1,0 +1,5 @@
+Label: unknown
+
+Explanation: The variable `size` in the function `isContract` is determined by the result of the `extcodesize` assembly function, which takes the `account` address as input. On the other hand, the variable `target` in the function `functionCallWithValue` is an address parameter that is used to check if it is a contract using the `isContract` function. 
+
+There is no direct data dependency between the two variables. The `size` variable is not influenced by the `target` variable in any way. Therefore, the data dependency relationship between `size` and `target` is unknown.

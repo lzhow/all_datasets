@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `binarySearch` function in `Oracle.sol` uses the array `Observation` as a binary search tree, and the search depends on `blocktimestamp` of the two observations being compared.
+
+
+  How does the binary tree work?
+ 
+  A binary Tree is a tree data structure in which each node has at most two children, which are referred to as the left child and right child. Each node contains a value, often called the key, that uniquely identifies it in that tree. A node with no children is called a leaf node. Binary trees are often used to implement associative arrays, or mappings, where the keys are used as indexes into the tree to find the corresponding values. In this way, binary trees can be used similarly to hash tables, but with better performance in many cases. For example, in a balanced binary Search tree the average time for a search, insert, delete, etc. is O(log n), where n is number of nodes in tree
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How can I create one? (Please provide a step-by-

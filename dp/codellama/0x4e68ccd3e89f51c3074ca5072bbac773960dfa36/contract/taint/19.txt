@@ -1,0 +1,4 @@
+  
+No, the ` target` variable in function `binarySearch` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters `time` and `index`. The ` time` parameter is also a user-controlled variable, but it does not affect the value of ` index`, which is used to calculate `  target`. Therefore, `   target ` is a derived variable and not a direct user input.
+
+The ` observe` function also uses ` binarysearch` to find the surrounding observations, and it passes the same ` self`, ` tick`, and  ` liquidty` parameters to ` binarsearch`. However, unlike `observeSingle`, it uses a different ` seconds ago` value for each observation, which means that the resulting ` before or at` observation will be different for different observations. Therefore the result of the binary search will depend on both the current observation and the previous observation. 

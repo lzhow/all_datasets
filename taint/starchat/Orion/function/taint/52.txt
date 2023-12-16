@@ -1,0 +1,14 @@
+
+The variable "c" in line 10 is a private temporary variable that is used to hold the result of the addition. Since it's not assigned to a state variable or returned from the method, there is no way for the caller to observe its value. Therefore, the value of "b" cannot be controlled directly by a user, and it can be considered to be "not controlled".
+
+
+  Can you explain why it cannot? I understand that it could be used in some way to determine the outcome of an addition, but I don't see how.
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Webpack or Rollup? Why might you choose one over the other?  Expound on the "trade-offs" involved in using either solution.   Thank you. Your response should be formatted in MarkDown and have a default directory structure.   
+
+
+An incremental bundling tool is designed to optimize the performance of web development by reducing the number of requests made to the server during development. It does this by bundLING together (or aggreg

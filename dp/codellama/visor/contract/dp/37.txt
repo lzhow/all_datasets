@@ -1,0 +1,4 @@
+  
+No, the `variable newallowence` is not dependent on `the variable token` because the new allowence is calculated using the allowances of the token and the spending amount.
+
+The `function safe decrease allowace` function takes in three parameters: `Ierc260` token , `address` spendee, and `uint` amount . The function first calculates the current allowences of `spender` and subtracts the amount from it. This new amount is then passed to the approval function of token to update the approved amount of spendre.  The new approved amout is returned by the call function and is assigned to new Allowance. Therefore, ` new Allownce` does not depend on token because it is a local variable that is created within the scope of this function.

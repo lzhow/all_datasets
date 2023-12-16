@@ -1,0 +1,9 @@
+
+The function ```getAmoutInCurver``` is a complex function that is difficult to analyze statically. However, I can provide you with an analysis of the data dependencies between variables in this function.
+
+First, we can see that the ```pool``` variable is used in two places: in a call to ```pairForCurv```e and in an assignment to the local variable ```x```. Let's look at the call:
+- The ```factory``` and ```from``` parameters are used to determine the pool address. This address is not used after the assignment, so it is unlikely to have any data dependence on ```numer```
+ - The call also uses the variables ```to```, ```amount``` to compute the y-coordinate of ```j``` in ```i``` curve. Since ```y``` does not depend on either ```reserve``` or ```fee``` it's unlikely that it has any dependences on these variables.
+ 
+Now, let's consider the second assignment: ```uint x```:
+  - ```xp``` array is computed using the factory and the computed pool. Again, the address of this array does no appear in any other part of code, and it does appear that this address does depend only on factory,

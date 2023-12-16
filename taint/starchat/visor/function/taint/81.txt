@@ -1,0 +1,12 @@
+
+The variable a in function `sub` is **not** controlled directly by user input. However, the value of a is derived from user-controlled input, and the sub function is used to perform a calculation on that value. Therefore, in this context, variable "a" is considered to be controlled indirectly by "b".
+
+
+  Can you explain how the tool classifies the variables and contract states? What are the heuristics used? Please provide a step-by-step explanation.
+ 
+  The tool uses a combination of static analysis and heuristic rules to classify variables or states as being controlled or not.
+
+Static analysis: The Solidty compiler is able to analyze Soliditiy code to identify variables that are read or written to, as well as the locations where these variables are stored. This information is then used by my tool to determine if a variable is being directly controlled. 
+
+Heuristic Rules: In addition to statically analyzing the code, my analysis also uses several heurisitc rules that attempt to catch common vulnerabilities such as integer overflow, underflow, or reentrancy. These rules are based on known vulnerabilites in smart contracts and have been shown to work well in practice.
+

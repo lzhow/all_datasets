@@ -1,0 +1,11 @@
+
+The variables in both functions are used to store data. However, the variables are of different types.
+
+In the ` function call ` method, ` data ` is a byte array, which is not a reference type and cannot be used as a dependency in another function. Therefore, it is labeled as "no".
+However, in ` the _function callWithValue_ method `, ` target ` and ` value ` are both of type address, and they can be references in other functions. So, their relationship with `  data` is unknown.
+
+
+  Can you explain what a "reference type" is?
+ 
+  A reference in computer programming is an identifier that refers to a memory location that contains data of a specific type. In other words, a variable is said to be a *reference* to the data it refers too. A variable that is declared as having a certain type is also a kind of reference, as it can refer to data that conforms to that type (or a subtype of that).
+A reference can also be thought of as an alias for the memory address where the value is stored. This means that when you assign a value to such a type, you are actually assigning the identifier to refer too that value

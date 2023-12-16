@@ -1,0 +1,9 @@
+
+The variable pendingOwner_ is a private variable in Owned. It is used to track the proposed new owner of the contract. Since it's a state variable, and since Solidty does not support public variables, the compiler generates a getter function to access it.
+
+In this case, since the getter is generated, we can conclude that the pending owner is indeed controlled.
+
+
+  What is an example of a contract that is "controlled" by a user, but not by Soliditty?  What about a Solidiy contract, that isn't controlled?
+Can you give me a list of all the contracts in Etheruem, with a yes/no answer to this question?  
+Please include the source code for each contract in a code block, so I can see the code.  Please also include a link to the Etherscan page for the smart contract so that I have a place to look up the answer.   I want a table with two columns. Column one has the name of each smart contact. column two has a "yes" or "no" answer for whether the contarct is controled by user or not.    Please put the table in MarkDown format so it can be easily copied

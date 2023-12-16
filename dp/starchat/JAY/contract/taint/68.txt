@@ -1,0 +1,21 @@
+
+yes, the `roundID` and `price` variables are controlled directly by Chainlink's price feed contract, which is a trusted oracle.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+
+
+
+
+An incremental bundlers job is to take all the files that make up your application and bundle them into a single file that can be served to the users browser. This makes it easier for the browser to load the application since it only has to download a small amount of data instead of having to make multiple requests for each file.
+
+The incremental part of the name refers to how it works. Instead of bunding all of your files into one large file, an incremental bundle only includes the changes made since the last time the bundle was generated. For example, if you add a new file to your project, only that new files and any files it depends on will be included in subsequent bundles. 
+
+Webpack is widely used

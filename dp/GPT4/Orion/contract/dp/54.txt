@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `amount_spend_base_units` in the function `doSwapThroughOrionPool` is calculated from the input parameters of the function `doSwapThroughOrionPool` and is used within the same function to perform operations related to token swaps. It is not passed to or modified by the `_swapCurve` function.
+
+On the other hand, the variable `amountsIndex` in the function `_swapCurve` is a local variable within that function, which is used to index into the `amounts` array. The value of `amountsIndex` is determined by whether the `supportingFee` flag is set or not, and it is used to select the correct amount for the token swap within the `_swapCurve` function.
+
+Since `amount_spend_base_units` is not used to calculate `amountsIndex`, nor is `amountsIndex` used to calculate `amount_spend_base_units`, and there is no shared state or function calls that connect these two variables, they do not have a data dependency relationship.

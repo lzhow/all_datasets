@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `target` in the function `getSurroundingObservations` is used to find the correct observations within a specified time frame. It is not passed to the `transform` function nor is it used in any calculations within `transform`. The `transform` function takes an `Observation` struct, a `blockTimestamp`, a `tick`, and `liquidity` as parameters and calculates a new `Observation` based on these inputs. There is no direct or indirect use of the `target` variable from `getSurroundingObservations` within the `transform` function, hence there is no data dependency between these two variables.

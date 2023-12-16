@@ -1,0 +1,4 @@
+  
+No, the state variable _ balances is data-dependent on variable  _ implementation in function  propose Strategy because the implementation variable is used to create a new Strategic instance in line 3 of the code.
+
+The propose strategy function creates a StrateCandiate struct with the address of a proposed strategy implementation and the current block timestamp. This struct is then assigned to a state varaible called stratcandidates.  The proposeStrategy function does not use the _implementaion variable to update the balanace state. Therefore, there is a dependency between the balance state and _implmentation variable.

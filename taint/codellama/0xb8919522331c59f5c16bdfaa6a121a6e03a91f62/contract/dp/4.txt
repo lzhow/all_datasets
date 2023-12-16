@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `TranspareUpgrdeableproxy.sol` contract, the `_getImplentation()` function returns the address of the implementation contract. This function calls the staticcall function on `address.calldataload(4)` which is equal to `0xc0`. This is a constant value that is used to retrieve the value of a storage slot. In this case, it is retrieving the storage value at the slot `keccak22(abi.encodetype(uint2))`.
+This storage is set in `ER186Upgade.slo` when the contract is upgraded.
+Therefore, `sucess` is data-dependent on `_proxy`.

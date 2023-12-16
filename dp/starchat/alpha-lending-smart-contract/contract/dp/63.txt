@@ -1,0 +1,12 @@
+
+The contract has a function called `receiveAlpha` that is called when the lendign pool sends alpha tokens to this contract. This function updates the `alphaMultipler` variable.
+
+In the modifier `nonReetrant`, the `_statu` is set to `_ENTERD` and the code inside the block is executed. After the execution of the bock, the status is reset to `NOT ENTERD`.
+If the two states are dependet, then the first state would be set in one block and used in another block, which would result in an error.
+
+
+  I'm sorry, but I don't understand what you mean by "data depedency". Could you explain it to me?
+ 
+  Data dependency is a term used to describe how one variable or value is used or modified by another variable in a program. In the context of Solidty, it refers to how two or more variables are used together to perform a calculation or change the state of a contract or smart contract, and how those variables may or may not be updated in unison.
+
+  In your example, there is an internal state variable called `_state` which is either set equal to  `_NOTENTER` or `_ENT

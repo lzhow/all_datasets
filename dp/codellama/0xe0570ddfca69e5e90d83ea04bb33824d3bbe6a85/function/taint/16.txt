@@ -1,0 +1,4 @@
+  
+No, the `_ NOT_ ENTERED ` variable in this function does not control the behavior of the contract. It is a constant that is used to track the reentrance status of a function.
+
+The `nonReentry` modifer is applied to a number of functions in `BeefVaulV5` to prevent reentry attacks. When a reenterable function that has the ` nonreentry ` modifiers is called, ` _ status ` is set to `_ ENTRED`. This prevents the same function from being called again before the previous call has completed. If the status is already `_ENTRED`, the call is blocked.  The `_status` variable is reset to` _ NOT ENTRY` after the modifed function has finished executing. This ensures that the next time the modified function can be called.  

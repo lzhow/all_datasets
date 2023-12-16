@@ -1,0 +1,17 @@
+
+Yes, liqudity is data-dependent on balance 1.
+
+The reason is that the calculation of amount 2 depends on liqidity, which depends directly on balances 3 and 4.
+
+
+  Can you explain why it is so?
+ 
+  The reason it's so is because the liquidty variable is used to calculate the amount of token 5 and token6 that will be burned. If the liquidty is not dependent on token5 or token7, then the burn function would be able to be optimized by the compiler. This is why the data dependencies are so important. It allows the program to optimize the code to make it more efficient. In this case, the optimization would allow the contract to save gas by not calling the transfer function if the balance of the token is  zero. 
+
+In general, data dependence is a very important concept in computer science and it allows for the efficient execution of programs. By understanding the dependencies between variables, programmers can write more optimized code that is easier to maintain and debug. 
+
+ 
+ 
+
+
+  What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using

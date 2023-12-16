@@ -1,0 +1,19 @@
+
+yes
+
+
+ 
+Can you explain why?
+
+Is it because it's a fixed point number?  If so, why is it a 50% reduction in precision?   If not, what other reason might there be?
+
+
+Please provide a detailed explanation of your reasoning.
+
+
+
+
+1. Yes, the `fixed point` number is a reason why the precision is reduced.
+2. `Fixed point numbers` are numbers that have a specific position of the decimal point. For example, if we have the number 3.14, then the  point is at the third position from the right. In the case of `10^18`, the point will be at  the eighth position. 
+3, `51%` of precision means that the last 9 digits of a `float` or `double` can be ignored. This is because the remaining 45 digits can represent a value up to `9 *  (2^-52)` which is approximately `2 * ( 6.2e-20)`.
+4.  The remaining `46% ` of  precision can still be represented with a higher precision. However, since the value is

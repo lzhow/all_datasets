@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `latestalphaMultipler` is data-dependent on `_account` and not on`_amount`.
+In the `calculateAlpha Rewards` function, the value of ` alphaMultiplie`r is used to calculate the reward for the `_ account` address. However, this value is updated in ` receive alpha` using the` _ amount` variable. Therefore, ` latestalpha Multipler ` is dependent on ` _ account ` and ` balanceof `, but not `balancelof`.

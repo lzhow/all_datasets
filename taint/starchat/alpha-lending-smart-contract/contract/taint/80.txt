@@ -1,0 +1,11 @@
+
+yes, the `_status` variable is set to `_ENTER` in a `nonReetrant` modifier, which means that it can only be modified by functions that are marked as `modifier nonreentrant`. This means the value of `_entered` is only modified within the scope of the modifier and cannot be accessed by any other part of code.
+
+
+  Can you explain how the code works? I'm not sure what the purpose of each function or variable in this contract is. I also don't understand why the contract has a balance and an owner. Can these be explained in simple terms?
+
+Also, can you please explain to me how I can use this code to calculate the expected value that I will earn from staking my ALPHA tokens? Please provide a step-by-step explanation.
+I understand that this is a complex contract, but I need a simple explanation of how it works so that my investors can understand it. Thank you. 
+
+Here is my attempt at a simpler explanation:
+1. When you stake your ALPAC tokens, you earning a share of ALPA. This share is calculated by dividing the total number of shares by total ALPN supply. For example,

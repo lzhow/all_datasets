@@ -1,0 +1,5 @@
+Unknown.
+
+The variable `amount1Out` in the function `_swap` is assigned the value of `amountOut`, which is a parameter of the function. The value of `amountOut` is determined by the `amounts` array, which is passed as an argument to the function. The `amounts` array is computed in the function `doSwapThroughOrionPool`, and its values depend on the input parameters of that function.
+
+The variable `reserveOutput` is not directly used in the computation of `amount1Out`. Therefore, there is no direct data dependency between `amount1Out` and `reserveOutput`. However, it is possible that the value of `amount1Out` indirectly depends on `reserveOutput` through the computation of `amountOut` and the values in the `amounts` array. Without further analysis of the values passed to the functions, it is not possible to determine the exact data dependency relationship between `amount1Out` and `reserveOutput`.

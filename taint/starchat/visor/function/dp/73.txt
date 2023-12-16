@@ -1,0 +1,5 @@
+
+The contract function '_valueAT' has a parameter named'snapshots' of type 'Snapshots' which is a struct containing two arrays: 'ids' (of type uint[]) and values (also of uint[]). The function also has an input parameter'snapshotID' that is of the type of 'uint22'.
+
+In the body of '_ValueAT', the code first checks that the input 'SnapshotID >0' i.e. that it is not the initial value. Then it checks if 'SnapShotID <=_currentSnapShoId' - i,e, that this is an existing snapshot. If both of these conditions are met, the program then looks up the index of SnapshotID in'snapShots.IDs'. If this index is equal to the length of snapShops.Ids, then the value is returned as (False,0). If the snapshot ID is found in snapshops.ID, but the ID does not equal the current snapshot, it returns the corresponding value from snapShop.Values.
+If the conditions for the first two checks are NOT met (i. e. if the Snapshot ID was not found), the fuction returns a tuple (True, Value) where value corresponds to a value

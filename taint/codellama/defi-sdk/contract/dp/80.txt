@@ -1,0 +1,4 @@
+  
+No, the state variable `_entered` is not dependent on ` marketFactorAmount`.
+
+The reason is that the `_enterd` state is used to prevent reentrance attacks in a reentrncy guard contract. It is set to true when a function is entered and set back to false when the execution is complete. This state does not depend on any external variable, including `markFectorAmount`, and is only used for internal control flow.

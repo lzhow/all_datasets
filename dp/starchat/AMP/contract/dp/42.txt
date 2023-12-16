@@ -1,0 +1,9 @@
+
+The contract has a function called `_removePartitionsFromToalPartitions`. This function removes a partition from the `_totalPartition` array. This array is used to keep track of all the partitions in existence.
+
+However, the code does not check if the partition being removed is actually in use anywhere. Therefore, it is possible for the array to contain partitions that are no longer in used.
+
+
+  Can you explain how the data in `_partitions` is being used?
+ 
+  The `_indexofTotalPartitionss` variable is an array that maps each partition to its index in a list of partitions. It is initialized to an empty array, and is updated every time a new partition is added to the list. For example, if a user calls the `add` function, a unique identifier is generated for that partition, its identifier and its current index are added as a key-value pair to this array using the` _indexToPartitionsMap` mapping. When a `remove` or `update` operation is called, this mapping is then used in order to find the index of the specified partition in question, which is required to remove or update the correct entry in this list, as well as to update any other references to that index.

@@ -1,0 +1,42 @@
+
+The function sub\_ is not a part of the code provided. Could you please provide the entire code for the analysis?
+
+  I'm sorry, here is a corrected version of my code:
+
+`
+pragma solidity ^0.5.16;
+library SafeMath {
+    function add(uint a) internal pure returns( uint ) {
+        uint c = a + 1;
+        require ( c >= a );
+        return c;
+    }
+    //...
+}
+contract SomeContract {
+
+    using SafeAdd for uint;
+
+    function someFunction( ) public {
+
+        uint x = 5;
+
+        // This is data-dependent on x
+        (bool success, bytes memory data) = address(0x123).call(abi.encodeWithSignature("someFunction2(address)", address (this).add(x)));
+
+        require  (success);
+
+    }
+
+    //...
+}`
+
+
+
+
+
+ 
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+ 
+  An incremental bundling tool is used to bundle together all the

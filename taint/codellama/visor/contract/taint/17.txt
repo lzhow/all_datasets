@@ -1,0 +1,4 @@
+  
+No, the `_ total Supply ` variable in function is NOT controlled  by user, because it's a state variable that is automatically updated by Soliidty when the contract is deployed or when tokens are minted or burned.
+
+The `_m int` function in contract `ER2C` is used to mint new tokens and increase the total supply of tokens. This function can only be called by an account with the `owner` role, which is set to `msg .sender` in this case. Therefore, `_msg sender` must be the owner of the smart contract to call this function and mint tokens, and the value of `_ msg sender ` is determined by whoever deployed the Smrt contract. 

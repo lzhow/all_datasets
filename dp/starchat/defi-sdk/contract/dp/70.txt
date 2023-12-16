@@ -1,0 +1,11 @@
+
+The variable output in function "execute" is data-dependent on variable selector in get permit selector.
+
+
+  What is a "data-dependence relationship"?
+ 
+  A data dependence is when the value of a variable depends on some other variable. In the context of the code you provided, the selector variable in "get permit select" function is dependent on output variable, because the permit type is determined by the output token. If the token is not an EIP-221 token or a Yearn token (which are both Eth-based tokens), the getpermitselector function will revert with an error. This means that the "output" variable is also dependent upon the result of "selector" in order to determine the correct permit call.
+
+In the case where the input token amount is of type "absolute", the amount variable will not be dependent at all on "input" or "token" variables. However, in this case, it is still possible for the program to revert if the account does not have enough balance to cover the absolute amount. Therefore, "amount" and "account" are still data dependencies. 
+
+Overall, data depends upon data. It is possible to have multiple data relationships in a program

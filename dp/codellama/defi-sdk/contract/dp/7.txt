@@ -1,0 +1,4 @@
+  
+No.
+
+The variable amount in depositeEht is not dependent on amountin in getamountout. This is because the amount variable in  deposietEHT is passed as a parameter to the deposie function of the wETh contract, which is a separate contract from the UniSwap contract. Therefore, the value of amount is determined by the caller of deposiETh, and it is independent of any other variables in UnipSwp. On the other hand, get amount out is an internal function in unip swap, so it can only be called by other functions in that contract or by external contracts that interact with uni swap. As a result, it cannot be directly affected by any external factors, such as the input to deposEtH.

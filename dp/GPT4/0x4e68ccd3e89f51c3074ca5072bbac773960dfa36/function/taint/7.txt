@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `z` in the function `toUint160` is directly assigned the value of the input parameter `y`, which is provided by the user when they call the function. Since the user can pass any `uint256` value as the argument for `y`, they have control over the value that `z` will be assigned, within the constraints of the type conversion and the `require` statement ensuring that the conversion is valid. Therefore, `z` is controlled by the user.

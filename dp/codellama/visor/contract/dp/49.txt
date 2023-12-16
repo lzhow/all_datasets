@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `function recover` of the contract, the signature is first parsed into its components, including the recovery ID `r`, the r component of `s`, and the v component.
+Then, `ecrecovery` is called to recover the address of signers.  The `address` type is used to store the recovered address. This means that the value of  ` sign` depends on ` v`.

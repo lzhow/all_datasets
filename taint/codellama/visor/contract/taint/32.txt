@@ -1,0 +1,4 @@
+  
+The variable 'share' in withdraw function of the contract is labeled as 'Yes'. The reason is that the value of 'share' is calculated based on the balance of VISR tokens in this contract and the total supply of vVisr tokens. This means that if a user has vISOR tokens, they can withdraw a certain amount of shares based solely on their ownership of those tokens and not on any other factor.
+
+In addition, the withdrawal function requires that a valid address for the 'to' parameter is provided, which is a factor that is under the control of a malicious user, and therefore the shares variable is also under their control. 

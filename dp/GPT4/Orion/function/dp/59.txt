@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_x` in the function `get_y` is data dependent on the variable `y` in the same function. This can be observed in the for loop where the value of `_x` is assigned based on the condition `_i == uint128(i)`. The value of `i` is an input parameter to the function `get_y`, and it can affect the value of `_x`. On the other hand, the value of `y` is updated in the same for loop, and it can also affect the value of `_x` through the condition `_i != uint128(j)`. Therefore, there is a data dependency relationship between `_x` and `y`.

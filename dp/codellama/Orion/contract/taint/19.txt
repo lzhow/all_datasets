@@ -1,0 +1,4 @@
+  
+The variable 'to' in add liquidty from exchange is a user-controlled variable.
+
+In the addliquidtyfromexchange function, the ' to' variable is passed as a parameter. This means that the value of the to variable can be controlled directly by a malicious user who calls the contract. Therefore, this variable should be treated as user input and should not be used directly in any computation or storage operation.

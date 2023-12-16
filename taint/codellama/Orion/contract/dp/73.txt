@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `pair` variable is assigned the value of `OrinMultiPollLibrary` `getpair()` function. This function takes in two arguments, `curfactory` and `input`, and returns the address of the OrinPool pair contract.
+`cur factory` is a variable that is passed into the _ swap function as an argument. It is not explicitly defined in this function but is defined as a parameter in another function that calls this one.  The `Input` argument is also passed in as part of this call. However, it is never explicitly used in `_ swap`.
+Therefore, in order to determine if `Token0 ` is data-dependent on `Amountout`, we need to look at the call to `Getpair()`.
+This function returns a value that depends on both `Curfactory ` and` Input`. Therefore, if the values of these variables change, then the return value from ` Getpair() ` will also change. Therefore ` Token0  `is data - dependent on` Amountout`.

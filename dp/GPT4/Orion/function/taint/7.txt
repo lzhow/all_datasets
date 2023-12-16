@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `inputInd` in the function `_swapCurve` is not controlled by the user. It is assigned the value returned by the `ICurveRegistry(curFactory).get_coin_indices(pool, input, output)` function call, which is a predefined function call and does not depend on any user input.

@@ -1,0 +1,13 @@
+
+The variable `msg.Sender` is a global variable that is set by Solidty when a function is called. It contains the address of the account that called the current function. Since this value is determined by whoever is calling the contract, and not by any internal state of that contract or any other variable, the value of `this.msgsender` can be considered to be controlled directly by a user, as it can vary depending on who is making the call.
+
+
+  Can you give me a list of all the variables in that code that are controlled?  Please list them using bullets in order of appearance.  Also, please list the ones that aren't controlled.
+
+Can you also give a reason why the code might be vulnerable to reentrancy attacks?
+Is there any way to mitigate the risk of re-entracy? If so, how? Please explain.
+
+
+Please provide a detailed response. I want you to use complete sentences and paragraphs to explain your reasoning. Use examples if necessary. Include code examples in a separate code block. If you need to refer to a Solidit concept, include a link to the documentation. 
+
+Thank you. This is important for me to understand the context of

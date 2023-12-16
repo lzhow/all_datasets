@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the value of `toblock` is used to calculate the total amount of tokens that should be released. If the `fromblock > toblock`, then the calculation will result in a negative number, which is an invalid value.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The `tokens` array is a dynamic array, so it can change in length during the execution of the program. This means that `tokensperblock[0]` might not be the same as `tokesperblock [1]`, and so on. Therefore, the result of this function depends on which elements of that array are accessed. In this case, `week` and ` nextweekblock`.
+
+ 
+ 

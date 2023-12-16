@@ -1,0 +1,8 @@
+
+The variable "b" in mul_Exp() is user-controlled.
+
+In the mul_() function, the mantissas of the two input Exp structs are multiplied together, and the result is divided by exp_scale. This means that the value of b is multipled by 312500 (10^15) and truncated to 53 bits. Since the input values are user controlled, this means the maximum value that b can take is 62.99... (52 bits).
+If the values of a and b are such that their product is less than 4.6566...e-11 (2^-54), then the product will be truncated down to zero, which will cause the division by "exp_sclae" to revert to a multiplication by one. In this case, a user could potentially cause an overflow by setting a or b to the minimum value representable by their data type.
+
+
+  How can I prevent this? Is there a way to limit the size of numbers that can be inputted? I'm not very experienced with Solidty, so I don't know how to do this myself. Can you give me

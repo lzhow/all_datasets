@@ -1,0 +1,4 @@
+  
+The label is 'Yes'.
+
+In the `liqudateInternal` function, the local variable 'pool' is assigned the value of the 'pools' mapping at the address of '_token'. The 'claimedCurrentAlphRward' function also uses the same 'address' to access the corresponding 'Pool' struct in 'Pools' map. Therefore, ' pool' in liquiddateinternal is data-dependent on '_ token' of claimcurrentalphareward.

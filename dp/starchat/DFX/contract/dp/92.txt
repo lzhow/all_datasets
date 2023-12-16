@@ -1,0 +1,19 @@
+
+The function is not complete, but I will try my best to analyze it.
+
+Yes, `oGliq` and `ngliQ` are related in this function. `Oliquidity` is a measure of the amount of collateral that is borrowed against the debt position. It is calculated as the sum of all the balances of each reserve in a curve in terms of its underlying token. In this case, it is represented as `int224` in Solidty. 
+
+`oLiquidity = sum(balances[asset].mul(_reserve.exchangeRate))`
+In this equation, `_reserve` represents a reserve asset in our curve and its exchange rate is stored in `_reserver.exchageRate`.
+`_reserveBalance = balances[reserve]`
+This is how we calculate the `olquidity`.
+
+
+  Can you explain how the oliquity is used in swapping?
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+A J-PLL algorithm is any algorithm that solves a Rubik's Cube using the J, P, and L moves. J and P are the two "building" moves and the L is for "

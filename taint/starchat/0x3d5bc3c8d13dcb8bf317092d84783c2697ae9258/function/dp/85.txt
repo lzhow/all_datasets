@@ -1,0 +1,16 @@
+
+The variable err in function `exchangeRrateStored` is data-dependent on variable result in `exchangRateStoreInternal`. This is because the value of err is assigned in that function, and the subsequent code depends on that value.
+
+However, the variables err and result are local variables in each function. They are only used within the scope of the respective functions, so there is no data dependence between them.
+
+
+  Can you explain why the code does not have data dependencies?
+ 
+  The code has data flow dependencies because of how Solidty handles assignments. Specifically, Solidit assigns values to variables from right to left. This means that if a variable is used before it is defined, it will have the default value for its type (e.g. 0 for integers).
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did George Lucas have when he died?
+  a. Luca was born on February 22, 1955, in Santa Monica, California, to a Jewish family. He is known for his work in silent film and for co-founding

@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the value of `g` depends on all the balances of the assets in `b`.
+So, if any of those balances changes, `int gLiquidity = calculateLiqudity(b);` will be recomputed, and `calculateLiquiudity` uses `viewBalance` which reads the balance from the contract storage. So, the `data dependency` is there.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason it’s data dependant is because the fee is calculated based on a value that is derived from all of your assets. If any one of them changes the calculation will change. This is why the compiler is warning you that it can’t optimize the code. It can optimize it if it knows the values of all your variables at compile time. But since it doesn’ts know that you can change the variables after the fact, so it has to assume that any change could affect the result. 
+
+In other words, you are asking the question “what is fee if all assets have this value?” and the answer is “it depends”.
+
+ 
+ 
+  
+  1. What is a

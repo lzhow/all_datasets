@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `dstTokensNew` in the function `transferTokens` is calculated based on the current balance of the destination account (`accountTokens[dst]`) and the amount of tokens to be transferred (`tokens`). It is updated independently of the `exchangeRate`.
+
+On the other hand, the variable `exchangeRate` in the function `balanceOfUnderlying` is used to calculate the underlying balance of an account based on the current exchange rate and does not depend on or influence the `dstTokensNew` variable within the `transferTokens` function.
+
+Since there is no direct or indirect interaction between `dstTokensNew` and `exchangeRate` that would cause a change in one to affect the other, they are not data dependent.

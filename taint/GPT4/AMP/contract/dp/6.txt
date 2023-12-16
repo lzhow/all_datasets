@@ -1,0 +1,9 @@
+Label: no
+
+Reason: The contract state `_indexOfTotalPartitions` is a mapping that keeps track of the index of each partition in the `_totalPartitions` array. It is used to manage the list of partitions that have a non-zero balance of tokens.
+
+The variable `_data` in the function `transferByPartition` is a parameter of type `bytes` that can contain arbitrary data. This data is intended to be used by the token holder or the operator to provide additional information with the transfer, and it may influence the behavior of the transfer through hooks or conditions within the function.
+
+However, `_indexOfTotalPartitions` is not directly modified based on the contents of `_data`. The `_indexOfTotalPartitions` mapping is updated when partitions are added or removed from the `_totalPartitions` array, which is not directly influenced by the `_data` parameter. The `_data` parameter may influence which partition is being transferred to through the `_callPreTransferHooks` and `_callPostTransferHooks` functions, but it does not have a direct data dependency relationship with the `_indexOfTotalPartitions` state.
+
+Therefore, `_indexOfTotalPartitions` and `_data` do not have a data dependency relationship in the context of the `transferByPartition` function.

@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `sendValue` function, the value of the recipients address is passed as an argument to the low level call function. This means that the address of recipent is not dependent on data.
+On the other hand, in ` function delegateCall`, the data is used to call the target contract. Therefore, ` data` is dependent  on ` recipents` address. 

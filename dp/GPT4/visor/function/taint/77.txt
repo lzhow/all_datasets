@@ -1,0 +1,5 @@
+  
+The variable 'token' in function 'safeTranserFrom' is labeled as 'No'.
+
+This is because the 'Saferc2O' library is imported in this contract, and the token variable is passed as an argument to the safe transfer function. This means that the value of the `to` variable can be controlled only by a user who has access to this function, but not by any other user or external contract.
+ 

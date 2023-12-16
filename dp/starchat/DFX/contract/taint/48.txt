@@ -1,0 +1,11 @@
+
+The variable _asssetWeights is a state variable in Curve. It is an array of two uints that represent the weights of the base and quote assets in a curve, respectively.
+
+Since the Curve contract is owned by its factory, and the factory is itself owned and controlled, the _asseWeights variable is considered to be controlled and can be modified by calling the setAssetWeights function on the curve contract.
+
+
+  How do I know if a variable or state in Solidty is controllable by a user or not? I have read that Solidit is very permissive when it comes to user control, but I would like to know what the best practices are. Can you give me some examples of when to use `view`, `pure`, and `payable` modifiers? Please provide some resources that I can read to learn more. Thank you. 
+
+
+
+

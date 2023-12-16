@@ -1,0 +1,4 @@
+  
+No, the `_share` variable in function `withdrawn` is NOT controlled  by user, because it's a local variable that is calculated based on the balance of the contract and the total supply of shares.
+
+The `_amount` parameter is passed as an argument to `witdraw` function, and it represents the amount of tokens that the caller wants to withdraw. However, this amount is used to calculate the number of `_ shares` that will be burned, which is a variable local to this function. Therefore, `_ share` cannot be controlled directly by a user calling this method.

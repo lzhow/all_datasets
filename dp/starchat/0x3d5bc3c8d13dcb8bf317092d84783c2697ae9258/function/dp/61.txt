@@ -1,0 +1,9 @@
+
+The contract variable `acccualBlcokNumber` is not used in this function.
+
+However, the `getBlockNumber()` function is a view function that returns the current block number. This value is stored in a contract storage variable, `blockNumber`, which is updated every time a new block is mined. Therefore, it is possible for the value of `accualBloclNumber `to be outdated by the time it's used, leading to incorrect results.
+
+
+  What is an example of a situation where the data in `actualBolckNumber' is outdated?
+ 
+  The value in actualBlockNumer is only updated when a block has been mimined, so if the block that the transaction is in has not been minded yet, then the actualBLockNumber will be out of date. For example, if you are calling the liquidation function right after you have called mint, you will have the updated blockNumber, but the accual blocknumber will still be the one from before the mint. In this case, calling accuateBlokNumber in your liquidiation function will result in an outdated value. To avoid this, make sure to wait until the next block before calling any function in

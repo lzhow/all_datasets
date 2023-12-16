@@ -1,0 +1,27 @@
+
+The variable _ addr in function IsContract() is a user-controlled input. It is used to determine if a given address is actually a contract or not. Since the code for this function was not provided, I cannot determine the specific implementation details, but it appears that the _ address parameter is user input and can be modified by anyone.
+
+
+  I'm sorry, i made a mistake, the correct code should be:
+
+pragma solidity ^076.061;
+import "./safeMath";
+contract RewardHyperVisors {
+    using safeMathfor uint;
+    address owner public; 
+    Ierc2  public erc2; //ERC-223
+    vVisr public Vvisrs;
+    
+    modifier onwerOnly {
+        require (msg. sender == Owner, 'only Owner');
+        _
+    }
+    
+    constructor (address er2,address vvsr) public { 
+        erC2 = erI2 (er2);
+        vVisr = VVisrs (vvSr); 
+        owner=msg,sender
+    };
+    
+    function Deposit ( uint ercs,addressto, addresfrom)public onlyowner returns(uint shares){
+        Require (ercS>0,'depos

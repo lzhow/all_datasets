@@ -1,0 +1,4 @@
+  
+No, the ` amount Out` variable in function `_do Swap Tokens` is NOT controlled  by user because it's calculated based on the amount of tokens that are swapped and the current reserves of the pool.
+
+The ` _ do Swaps Tokes` function takes in an `Internal Swapped Data` struct as an argument, which contains information about the swap, including the path of token addresses, and whether the fee is supported. It then calculates the amounts of input and output tokens using the Orchid Multi Pool Library' s `get Amounts In` and ` get Amounst Out ` functions, respectively. These functions take into account the reservers of each token in order to calculate the correct amounts. Therefore, `Amount Out is calculated by this function and is therefore not under the control of user input.

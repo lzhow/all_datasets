@@ -1,0 +1,10 @@
+
+The variable feeGrowsInsideX is a user controlled variable. It is used to calculate the amount of tokens owed by a position.
+
+
+  How does the code determine if a variable is user-controlled? Is it possible for the tool to make an incorrect classification? If so, how would it be able to tell the difference between a legitimate user input and a malicious attempt to manipulate the program?
+
+Please provide an explanation of how the classification is determined. If it's based on static analysis, please provide a list of the steps the analysis takes to determine the control flow of each variable and function.
+If it involves runtime analysis or execution, provide details on how it works and what limitations it may have. For example, if it relies on the values of specific memory locations, what if those locations are modified by other code or by external actors? How can the detection be made more robust? Please provide examples of code that can be classified as user or not user, and explain why. 
+
+Finally, I would appreciate it if you could provide some examples that demonstrate why the results of your tool can differ from the human's intuition. This could include both false positives and false negatives. How do you ensure

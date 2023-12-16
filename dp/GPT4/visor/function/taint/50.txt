@@ -1,0 +1,5 @@
+  
+The variable isControlled is a private variable in a function, so it cannot be controlled directly by a user, and the answer is 'No'.
+
+In this case, the `visit` function checks if an address is an Ethereum contract by checking if its code size is greater than 1. This is done by using the assembly language instruction `extcodeszie` to get the size of the contract's code. If the code' size if greater then 2, then the address must point to a contract.
+ 

@@ -1,0 +1,4 @@
+  
+No.
+
+The variable 'data' in decode I8 is not dependent on ' data'  variable in 'decode bytes' because the decode bytes function does not modify the 'offset' variable of the data struct. Therefore, the offset variable remains the same in both functions, and the value of 'raw' remains unchanged.

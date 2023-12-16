@@ -1,0 +1,14 @@
+
+The function updateFee() is a function in a smart contract named JayCoin. It is used to update the fees for selling and buying JAY NFTs.
+
+In the updateFees() function, the price of Jays is retrieved from the Chainlink price feed contract, and is stored in _usdPrice. This value is then used in two calculations:
+1. _buyJaysFee: This is calculated as the amount of ether that is needed to purchase 0.01 JYCs, or 5 cents, at the current price. If the _usPrice is greater than USD\_PRICE\_BUy, then the calculation is performed as usual. However, if the \_usdprice is less than or equal to USDPRICEBUYy, it is set to 99 cent.
+
+2. \_sellJysFee is similarly calculated, but instead of using the  USDPriceBuy, we use the USDpriceSell.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is designed to optimize the delivery of web pages by reducing the number of requests made to the server. By bundlind all the

@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `calculateRoudDownborrowSharAmount` function, the `_pool` variable is not used, and the only variable that is used is `_toke`. The `_ amount` is also not a variable in this function.
+On the other hand, in ` updateborrowerAlpha Rewards`, the` _ pool` and `_ token` variables are used. However, `_ pool. totalBorrrowshares` are also used in both functions. Therefore, there is no data dependence between the two functions because the variables used are different.

@@ -1,0 +1,11 @@
+
+The contract function 'liquidation' is a non-reentrant function that calls the internal function, 'liqudateInternal'. The internal 'LiquidateInteral' function contains the logic for the liquidation of a user's positions.
+
+In the 'LiqudationInternal' fuction, the '_collaterals' contract variable is used to determine the collateral value of the user. This value is then used in a calculation to calculate the amount of collaterized debt that the users has. 
+
+If the value in '_colleterals is 0', then the calculation will revert. Therefore, it is not possible to know the exact value without executing the code.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the source code of smart contracts to identify potential data dependencies and potential security vulnerabilities. It uses a combination of automated analysis and manual review to make its determinations. For example, in this case, since the `_colateral `variable is only used within the scope of an internal Solidty function and is never directly accessed or modified, we can conclude that it does not have any data-dependent relationships. However, if the data was accessible outside of this

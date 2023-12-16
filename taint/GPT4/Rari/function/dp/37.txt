@@ -1,0 +1,3 @@
+The variable `result` in the function `subExp` is not data dependent on the variable `scalar` in the function `mulScalar`. 
+
+Reason: The variable `result` is derived from the subtraction operation between `a.mantissa` and `b.mantissa` in the `subUInt` function. There is no direct or indirect reference to the variable `scalar` in this calculation. Therefore, there is no data dependency between `result` and `scalar`.

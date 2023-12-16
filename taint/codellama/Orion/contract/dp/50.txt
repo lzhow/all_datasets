@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+In the `_swap` function, the `amountB` variable is calculated using the formula:
+`amountBopt = quoteUV(AmountAdesired , reservea , reservec)`
+This formula uses the value of ` reserve a` and ` reserves` to calculate the optimal amount of token B to be swapped.
+Similarly, in `_ add liquidty` , the amount B is also calculated by using `quoteuv2` formula with the same variables `Reservea`and ` Reserves`.
+Therefore, `AmountBopt` is data-dependent on ` Reservea`.

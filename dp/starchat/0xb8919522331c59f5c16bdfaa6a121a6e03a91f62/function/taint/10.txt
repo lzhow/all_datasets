@@ -1,0 +1,11 @@
+
+The variable implementation in function `upgrade` is **not** controlled directly by users. However, the address of the implementation contract is specified by a user, and the Proxy contract forwards all calls to the specified implementation address. This means that if a malicious user can control the `proxy` address, they can also control which implementation is used by changing the value of `implentation`.
+
+In general, variables that are not directly controlled or set by user input should be considered potentially vulnerable to attacks.
+
+
+  How can I prevent this?  Is there a way to make the proxy admin contract more secure?
+Can you give me an example of how to write a secure smart contract? I'm new to Solidty and smart contracts.  I'd like to learn best practices for writing secure contracts, as well as how best to debug and test them.
+Please provide me with a detailed response. I need this information to start my journey into the world of smart conracts. Thank you. 
+
+I'm using Remix IDE. How do I deploy the contract to a testnet? How to I call the functions of my contract from another contract in order to test it? Please provide detailed instructions. If possible, please provide

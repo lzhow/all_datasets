@@ -1,0 +1,9 @@
+yes
+
+The variable `amount1` in the function `burn` is data dependent on the variable `_totalSupply` because `amount1` is calculated using `_totalSupply` in the following line of code:
+
+```solidity
+amount1 = liquidity.mul(balance1) / _totalSupply;
+```
+
+Here, `amount1` is directly computed by dividing the product of `liquidity` and `balance1` by `_totalSupply`. Therefore, any changes to the value of `_totalSupply` will affect the computed value of `amount1`, establishing a data dependency relationship between the two variables.

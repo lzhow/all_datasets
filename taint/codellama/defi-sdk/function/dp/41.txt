@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `depostitET` function, the amount of Ether to deposits is passed as a parameter. This amount is not used in any way in this function.
+On the other hand, in ` getamountOut` the parameter ` amountin` is used to calculate the output amount. However, this parameter is only used as an input to the calculation of the reserve ratio, and it is never used directly in a calculation. Therefore, there is no data dependence between the two functions.

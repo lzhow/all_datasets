@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `supplyIndex` in the function `distributeSupplierComp` is not controlled by the user. It is a local variable that is assigned the value of `supplyState.index`, which is a state variable of the contract `RewardsDistributorDelegate`. The value of `supplyState.index` is controlled by the contract itself and not by the user.

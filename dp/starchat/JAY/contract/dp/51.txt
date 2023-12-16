@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `updateDev` function updates the value of the private `dev` variable, which is used in subsequent calls to the `_burn` and `_mint` functions. These functions are called in response to NFT transfers, and the values of these variables are used to determine the amount of Jay that is minted or burned. Therefore, the data dependencies exist between these two functions and their respective variables.
+
+
+  Can you explain why this is data-dependent?
+ 
+  The reason why the _variable _ address is dependent on from is because the update function is called by the owner of this contract, who is also the sender of an NTF transfer. This means that from will always be the address of that owner, so the dev variable will be updated to that address. If the from variable was not dependent, then the code would be vulnerable to attacks where the attacker could call the transfer function with a different address and potentially steal all of your Jays. 
+
+In general, data dependence is a fundamental property of computer programs that describes how the output of one function depends on some or all the inputs to another function. In this case, we have two separate functions

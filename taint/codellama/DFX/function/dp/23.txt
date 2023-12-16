@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `for` loop iterates over the assets in `curves.asset` and assigns the balance of each asset to `nbals` or `obals`, depending on whether the asset is input or output.
+At the end of the loop, `ngliq` is calculated by adding up the balances in nbals.  The `amt` variable is also updated.   The function then returns `amnt`, `ogli`, and `gli`.
+  In the second function the same loop is used, but the value of `i` changes. If `I` does not equal `inputix`, the new value is assigned to the corresponding element of nbal or obal. However, if ` i` equals ` inputix` the values of amnt and bal are updated, and the updated value for `bal`is assigned. `Ogil`and `Ngiliq `are updated by the addition of bal. Finally, ngaliq is updated to be the difference between the original value and amti. Nbali is then updated with the subtraction of amount. This function returns the amout, ogli, ngliqi, Nbal, obali.

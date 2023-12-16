@@ -1,0 +1,4 @@
+  
+The variable 'salty' in function 'hashAccountSigature' is a user-controlled variable.
+
+This is because the 'salty' variable is passed as an argument to the '_hashTypeData' function, which is an external function that is called by 'SignerVerification'. The '_hasTypeDate'function is defined in 'Eip721' contract, and it takes a 'bytes' type as input. Therefore, the value of 'Salty ' can be controlled directly by a malicious user who calls the'hashAccounSignatur'e function. 

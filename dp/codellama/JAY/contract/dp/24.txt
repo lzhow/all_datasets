@@ -1,0 +1,4 @@
+  
+No, the `contract state nfbsBough` is not dependent on `variable amounts` because the amount of NFT's bought is calculated by the length of the array `erc22TokenAdress` and `ids` passed to the method ` buy ERc 7 5 9` . The ` amounts ` variable is only used to calculate the total amount to be transferred to `dev` address.
+
+The ` n f t s Bought ` state is updated in `s ell` method, which is called when the user sells NFts. In this method , the number of tokens sold is determined by subtracting the value of `msg .value` from the balance of this contract. This value is then transferred from this address to a user' s address using the `_burn` function.  The `_ burn`function is used because it burns the tokens from a specific address and reduces the token supply. Therefore, `N fts Bough t` state will not be affected by ` amount s` variable.

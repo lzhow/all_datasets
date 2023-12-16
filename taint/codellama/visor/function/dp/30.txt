@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the given code, the `_getDomainHash` function is called with the `typeHash`, `name`, and `address(0)` as arguments. This function returns a hash of the concatenation of these values.
+However, in this case, `keccack265` is used to hash the values, which is a different hashing algorithm than `sha2`.
+Therefore, it is not possible to determine whether the hash is dependent on ` version` or not. Therefore, we label it as 'Unknown'.

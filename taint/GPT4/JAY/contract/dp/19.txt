@@ -1,0 +1,29 @@
+Yes
+
+The variable `total` in the function `buyJay` is data dependent on the variable `amounts` in the function `buyJayWithERC1155`. This is because `total` is used to accumulate the total number of NFTs being bought, and it is incremented by the return value of the `buyJayWithERC1155` function, which calculates the sum of the `amounts` array representing the quantity of each ERC1155 token being bought. The relevant code snippet from the `buyJay` function is:
+
+```solidity
+if (erc1155TokenAddress.length != 0)
+    total = total.add(
+        buyJayWithERC1155(erc1155TokenAddress, erc1155Ids, erc1155Amounts)
+    );
+```
+
+And the `buyJayWithERC1155` function returns the sum of the `amounts` array:
+
+```solidity
+function buyJayWithERC1155(
+    address[] calldata _tokenAddress,
+    uint256[] calldata ids,
+    uint256[] calldata amounts
+) internal returns (uint256) {
+    uint256 amount = 0;
+    for (uint256 id = 0; id < ids.length; id++) {
+        amount = amount.add(amounts[id]);
+        // ...
+    }
+    return amount;
+}
+```
+
+Therefore, the final value of `total` in `buyJay` is dependent on the values within the `amounts` array passed to `buyJayWithERC1155`.

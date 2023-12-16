@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `decimals` is a constant public state variable in the `PancakeERC20` contract, which is set to a constant value of 18 and does not change. The variable `liquidity` in the `burn` function of the `PancakePair` contract is a local variable that represents the amount of liquidity tokens being burned in the transaction. The calculation of `liquidity` is based on the current reserves and the total supply of liquidity tokens, and it does not depend on the `decimals` state. Since `decimals` is a constant and does not influence the calculation or value of `liquidity`, there is no data dependency relationship between `decimals` and `liquidity`.

@@ -1,0 +1,3 @@
+Yes
+
+The variable `beforeOrAt` in the function `observeSingle` is data dependent on the variable `secondsAgos` in the function `observe`. This is because `secondsAgos` is used to calculate the `target` time in `observeSingle`, which is then used to retrieve the correct `Observation` from the `self` array that corresponds to the time before or at the `target`. The `beforeOrAt` variable is assigned the result of this retrieval and thus depends on the value of `secondsAgos` passed to `observeSingle` from `observe`.

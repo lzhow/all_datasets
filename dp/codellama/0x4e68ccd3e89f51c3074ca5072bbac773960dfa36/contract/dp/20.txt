@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `FullMath` library, the contract state `product` is defined as a local variable in both the functions ` muldiv` and `mldivRoundUp`. The variable is used to store the result of the multiplication operation.
+Since the two functions share the same contract variable, there is a dependency between the variables. 

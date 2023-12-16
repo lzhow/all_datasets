@@ -1,0 +1,4 @@
+  
+The variable 'value' in function 'balanceOf' is labeled as 'Yes' because it can be controlled directly by a user through the 'snaptshotId' parameter.
+
+In the code, the value of 'currentBalances' can change over time due to the execution of the '_updateBalanaceSnapshot' function. This function updates the balance of an account based on the current snapshot ID. If the snapshotID is greater than the last snapshot taken, then the new balance will be stored in 'values' array. Therefore, ' value' variable can take on any value that is stored within the array ' values' which is a public variable. 

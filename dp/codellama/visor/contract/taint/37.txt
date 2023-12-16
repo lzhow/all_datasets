@@ -1,0 +1,4 @@
+  
+No, the ` newowner` variable in function `transerOwership` is NOT controlled  by user because it's a function parameter.
+
+The `onlyOwner ` modifer is used to restrict access to this function, so only the current owner of the contract can call it. However, this does not mean that the owner is necessarily controlled directly by a user, as the ownership can be transferred to another address through the use of a smart contract. Therefore, we cannot say that `owner ` is definitely controlled or not by  user in this case.

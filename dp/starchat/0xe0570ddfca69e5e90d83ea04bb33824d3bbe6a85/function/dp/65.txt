@@ -1,0 +1,11 @@
+
+The contract function ```incaseTokensgetStuk``` is a function that is called when the owner of the vault wants to withdraw the underlying token from the strategy. It requires that the token address passed in is not the address of WANT, and that there is an underlying balance of that token in this contract.
+
+If the ```strategy``` contract is data-dependent on ```amount```, then the value of ```want()``` could change between the time that ```balanceOf``` was called and the transfer was made, which would result in an incorrect withdrawal. This could result, for example, in a loss of funds for the user. Therefore, it is unknown whether the two are dependent on each other.
+
+
+  Can you explain why it's unknown?
+ 
+  The reason it’s unknown is because the code doesn’t have enough information to determine whether or not they’re dependent upon eachother. In the case of Solidty, the compiler doesn't have access to the state of other variables in other functions, so it can’ts determine if the variables are used in any way that would affect the behavior of this function. 
+
+In this case, since the only thing that matters is whether ```_token``` equals ```

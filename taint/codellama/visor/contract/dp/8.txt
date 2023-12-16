@@ -1,0 +1,4 @@
+  
+No, the `variable newallowence` is not dependent on `the variable token` because the new allowence is calculated using the current allowences of the token and the value of new increase allowances.
+
+The `function safeincreasallowances` takes in three parameters: `Ierc260` token , `address` spende and `uint` value. It first calculates the total allowense of `spender` by calling the allowenses function of token with the address of spendre. Then it adds the amount of value to the calculated allowens and calls the approves function with spennders address and new calculated amount. 

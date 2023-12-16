@@ -1,0 +1,15 @@
+
+The function outputIntake is a helper function for the intaking of raw assets. It takes in an amount of the raw asset to be intaken and the address of an oracle contract that can provide the current balance of that asset.
+
+In the first line, the data variable is encoded with the selector of intateRaw function of iAsmblr contract. This function takes two parameters, an address and a uint. In the second line the delegate function is called with two arguments, first the oracle address, and second the encoded data. 
+
+Since the balance variable in this function depends on data, it is labeled as data-dependent.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is used to optimize the performance of web pages by combining multiple files into a single file. These files are then served to the user's browser in a compressed format, reducing the amount data that needs to transferred over the network.
+
+    There are several incremental bundle tools available for different web development frameworks, including Webpack, Rollup, Browserify, Parcel, esbuild, etc. Each tool has its own strengths and weaknesses, so it's important to choose the one

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `tryMUL` function, the expression `c =a*b;` is evaluated, where ` a` and ` b` are the input parameters. This expression is a multiplication operation, which is commutative, meaning that the order of the operands does not affect the result. Therefore, ` c` is data-dependent on `  a ` and` b`.
+On the other hand, in ` mod`, the same expression` c=a%b ` is used, but this time ` `is not commutatively dependent on` a`. This is because the modulo operation is not associative. In other words,` ( a% b )% c `may not be equal to`a % ( b % c )`. Therefore `
+c`is data - dependent only on  `   b `and not on   `    a `.
+Therefore, we can conclude that `yes` the variables `B`in the` trymul`function are dependent data on variables` A` of function` mod`.

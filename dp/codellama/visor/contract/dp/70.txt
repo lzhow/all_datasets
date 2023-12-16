@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `SaferMath` library, the functions `tryAdd`, `sub`, and `mul` are defined. These functions are used to perform arithmetic operations on unsigned integers.
+  The ` tryadd` function takes two unsigned integer arguments `a` and` b` as input and returns a boolean value indicating whether the operation succeeded and the result of the addition. If the sum of ` a`and ` b `is greater than `  a`, the return value is `false` with a result value of  `0`. Otherwise the value `true` is returned with the calculated result.  In the case of addition, if the calculation is successful, it is guaranteed that the resulting value will not overflow. Therefore, in this case, `c` depends on `ab`.
+Similarly, for the sub function, since the difference of two numbers is less than or equal to the first number, and if it fails, then the returned value would be  zero. So, here also,`c `depends on` a`.  For the mul function , if ` c ` is equal  to ` ab`, then it means that ` mul ` has succeeded. In this way, we can see that` c`depend on both ` ` and  `.
+Therefore, based on these functions, variable`  c  depends  on  both  variables  and .

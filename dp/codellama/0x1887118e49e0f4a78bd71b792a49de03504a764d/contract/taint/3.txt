@@ -1,0 +1,4 @@
+  
+The variable 'underlies' in function 'add' is labeled as 'Yes' because it can be controlled or modified by a user in a malicious way.
+
+In the 'MasterPrice Oracle' contract, the add function takes two arrays as input: 'Underlyins' array and '_oracless'array. These arrays are used to update the mapping of 'orcles' which is a public variable in ' Master Price Oracle'. The ' orcles ' mapping is used in other functions to get the price of a particular token.  The user can modify the value of the underlies array in order to change the underlying price oracle for a given token, which can lead to a security vulnerability. Therefore, ' underlines' variable is considered as controlled and modified  by user and labled as Yes.

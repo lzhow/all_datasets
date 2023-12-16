@@ -1,0 +1,12 @@
+
+The variable vestinAlpha is a contract address that is set by an owner of the contract. It is used to accumlate Alpha rewards for users who stake their ALPHA tokens. Since it's an address, the code cannot determine if it has been set to a specific contract or not. Therefore, we cannot say for sure if this variable is controled by a user or no.
+
+
+  How can I check if a variable has a value or is null? I'm trying to write a function to check the health of an account in a lendign pool
+ 
+  You can check for a null value by comparing it to `address.zero`. For example:
+
+`if (lender == Address.Zero) {}`
+This will check to see if `lenderr` is equal to zero, which is an invalid Ethereum address. If it matches, then the condition is true and the block of code inside the if statement will execute.
+If you want to make sure that the value is nonzero, you can use the `!=` operator instead: `if( lender!= Address. Zero)  {}`.
+In Solidty, `Address. Zero` represents the null address and is defined in

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `setPoolstatus` function, the local variable pool is assigned the value of the pool struct stored in memory at the address of `_ token`. The `pools` mapping is a mapping of addresses to pool structures, so the `_tokens` address is used as the key to retrieve the corresponding pool structure from the mapping.
+On the other hand, in ` repaidInternal` , the` pool` variable is also assigned a value from a pool mapping, but this time it is not the same mapping as in` setpoolstatus`. Instead, it uses the current address as a key, which is different from` _toke`n. Therefore, ` pool `in` repaiInternal `is not dependent on`_token ` in set`poolStatus`.
+Therefore, we can conclude that the answer is yes.

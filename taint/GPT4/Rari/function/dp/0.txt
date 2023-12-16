@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `interestAccumulated` is calculated using the value of `totalBorrows` in the line `uint interestAccumulated = mul_ScalarTruncate(simpleInterestFactor, totalBorrows);`. Later, the value of `interestAccumulated` is used to calculate `totalBorrowsNew` in the line `uint totalBorrowsNew = add_(interestAccumulated, totalBorrows);`. Therefore, there is a data dependency between `interestAccumulated` and `totalBorrowsNew`.

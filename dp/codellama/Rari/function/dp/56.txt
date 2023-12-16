@@ -1,0 +1,4 @@
+  
+No, the state variable `_entered`, which is a boolean, is not dependent on any variable in function  ` transferAllwed`. The function only uses the variables `cTocken`, `src`, and `dst`.
+
+The reason is that the `_enterd` state is only used in a require statement to check if the transfer is allowed. It is never used to calculate the value of `allowed` or `flywheePretranserAction`. Therefore, it is independent of the `tranferToken` variable.

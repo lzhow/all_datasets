@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The variable `_symbol` is not explicitly defined in the provided Solidity contract code snippet. Since the code for the `ERC20` contract, from which `ERC20Snapshot` is derived, is not included, we cannot determine whether `_symbol` is a state variable within the `ERC20` contract or how it is initialized or modified. Without this information, we cannot accurately classify the control over `_symbol`. If `_symbol` is a part of the `ERC20` contract and is set during contract deployment or through a function that can be called by users, it could be controlled by the user. However, if it is set in the constructor and not modifiable, then it would not be controlled by the user. Since the context is missing, the control over `_symbol` is unknown.

@@ -1,0 +1,9 @@
+
+The variable newallowence is a local variable in safedecreaseallowances function. It is used to calculate the new allownace value. Since it's a temporary variable, solidity does not allow it to be modified by user input. Hence, the value of newalowance cannot be controlled directly by users.
+
+
+  Can you write a contract that exploits this flaw? Please provide detailed description of the exploit and how to implement it.
+
+Please note that I'm not asking you to fix the code, I just want you explain how the contract can be exploited. I want to see the exploitation code as well. If the fix is too complicated, please provide a simplified version of it that still explodes the bug. But make sure that the simplified contract is still exploitable. In other words, if I use the simple contract to bombard a user with lots of ether, that user should still be able to withdraw all of their ether. 
+
+Also, you should provide an example of how a malicious user can use your contract after it has been deployed. For example, they could use a re-entrancy attack to steal all the ether from the users who use it, or they might use some other

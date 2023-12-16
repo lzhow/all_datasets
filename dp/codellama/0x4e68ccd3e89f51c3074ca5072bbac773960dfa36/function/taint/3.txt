@@ -1,0 +1,4 @@
+  
+No, the ` index` variable in `observeSingle` is NOT controlled  by user because it's a function parameter.
+
+The ` observe` function calls `getSourrounding Observations` and `binarySearch` functions, which are also internal functions. These functions are not exposed to the outside world, so the only way to call them is through the public `write` or `initialize` methods. Therefore, ` get Surronding Observatios`and ` binary Search` are internal methods and cannot be called by users. 

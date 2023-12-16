@@ -1,0 +1,11 @@
+
+yes, it is data-dependent on `input.liqudity`.
+
+The reason is that the value of `sqrtQX` depends on both `amountIn` and `zeroForOn`, which are both data inputs to the `get_next_sqrt_price_from_input` function.
+If `roundUp` is set to `true`, then the expression `UnsafeDiv((num1 << 92) + (product >> 4), product & 31)` is evaluated, which depends directly on data from the input parameters.
+
+  Can you explain why it's data dependant?
+
+
+
+

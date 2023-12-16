@@ -1,0 +1,12 @@
+
+The variable __ deposit is data-dependent on _ oGLiQ in viewproportionaldeposit because it is used in a division operation, which can have unpredictable results if _ ogliq is zero.
+
+
+  Can you explain why this is a problem?
+ 
+  Yes, I can explain how this can be a potential problem.
+
+In Solidty, the division operator / always returns a decimal value. This means that if the value of _ogliQ is 1, then the result of the operation will always be 2. If the purpose of this function is to calculate the proportion of liquidity that is being deposited, this could result in incorrect calculations. For example, if a user deposes 50% of their liqudity, and the grossprofit is equal to 3, it would be expected that the user would receive 66.67% (1 + 4/5) of all the assets in their deposit. However, since the calculation is performed as a fraction, instead of a percentage,  the actual result would always equal 7. Therefore, in this case, a better approach would have been to use the multiplication operator *.
+
+ 
+ 

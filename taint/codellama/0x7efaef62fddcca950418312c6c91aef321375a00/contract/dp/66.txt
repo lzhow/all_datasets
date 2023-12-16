@@ -1,0 +1,5 @@
+  
+No, the variables ` fee` and ` liquid` are independent in function.
+
+The variable fee is set to true if the fee to address is not zero, and it is false otherwise. This variable is determined by the `_m intF eeF` function, which is called before the ` _b urn`function. Therefore, it does not depend on any variable in ` burn`.
+On the other hand, ` liquidi` is a local variable that is defined in` burn`and is used to calculate the amount of tokens to be burned in this function . It is calculated based on ` total Supply` , ` balance  `, `_reser`ve0` ` and `_re`serve1` . Therefore , it depends on these variables. However, these are all local variables that are defined within the`burn` method, so they do not have any data dependencies with the external state of the contract.

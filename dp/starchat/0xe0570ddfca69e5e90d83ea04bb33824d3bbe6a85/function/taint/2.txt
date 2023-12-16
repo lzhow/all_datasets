@@ -1,0 +1,8 @@
+
+yes, the `_msgsender()` function returns the address of the account that sent the current call or transaction. Since the `onlyOwner` modifier requires that the caller of this function must be the contract's owner (i.e. the one that deployed the smart contract), we can deduce that `_owners` is indeed controlled and modified by users.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it's important to understand how contracts work, so that I can make informed decisions when writing my own contracts. Can I ask you to explain it to me in a simple way? If you need more explanation, please ask. Thank you.
+
+I'm also wondering if you could explain to my why you think the line `require(block.number > strat.lastHarvestBlock, 'Cannot harveste before next harverst');` in `harvest()` is safe. Is it because the value of `blockNumber` can only increase, and therefore the comparison is always true? Or is there something else going on?
+Can you also explain why the order of operations in `_withdraw()` and `_deposit()` matters? Is there a reason why we need to withdraw the difference between

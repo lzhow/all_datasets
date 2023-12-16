@@ -1,0 +1,3 @@
+yes
+
+The variable `data` in the function `decodeU16` is data dependent on the variable `data` in the function `decodeBool` because they both reference the same `Data` struct instance that is passed as an argument to these functions. In Solidity, when a struct is passed to a function, it is passed by reference, not by value. This means that both `decodeU16` and `decodeBool` are operating on the same data in memory, and changes made to the `Data` struct's `offset` field in one function would be visible in the other function if they were called in sequence. Therefore, there is a data dependency relationship between the `data` variables in these two functions.

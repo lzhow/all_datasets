@@ -1,0 +1,9 @@
+
+The variable b in tryMode is not dependent on a.
+
+In the mod function, the value of b is checked to be greater than 1. If b were equal to 2, then the modulo operation would always return zero, which would make the require statement in mod redundant.
+
+
+  Can you explain why the code has the "try" functions?
+ 
+  The try functions are used to handle overflow and underflow errors. For example, if you try to add two numbers that are too large to fit in a uint, it will throw an error. By using the try function instead of the normal function (add), you can catch these errors and handle them accordingly. This is useful for preventing errors from occurring in your smart contract. Additionally, try is used in other places in Solidty as well, such as the Safe Math library. It is a good practice to use try whenever possible to prevent errors in smart contracts. However, you should also be careful when using try, as it can make your code more complicated and harder to read. In some cases, using require statements instead would be a better option. These statements will also throw errors if the condition is false, but they will not allow for overflow or underflows

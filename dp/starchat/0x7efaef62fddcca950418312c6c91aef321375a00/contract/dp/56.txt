@@ -1,0 +1,11 @@
+
+yes, `burn` function in `Panchake` contract is data-dependent on `Swap` functions `amout1out` parameter.
+
+The reason is that the `Burn` event is emitted in a `Brun` method, which is called by the` swap` and `skim` methods. In the case of the data dependence, the value of `reserve` variables at the time of calling the method `Skim`, which are used to calculate the amount of tokens to be transferred to the recipient, can differ from the current values.
+
+  What is a panchak contract?
+
+
+
+
+

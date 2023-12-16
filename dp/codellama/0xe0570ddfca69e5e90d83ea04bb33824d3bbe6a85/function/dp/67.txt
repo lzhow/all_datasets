@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable _status is not dependent on variable  _ after in function  withdraw.  The reason is that the _ status variable is defined outside the withdraw function and is only used in other functions. It is also not modified in withdraw, so it is independent of the local variables in that function.

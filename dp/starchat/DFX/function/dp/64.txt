@@ -1,0 +1,18 @@
+
+The contract function is `onlyOwner`, which means that it can only be called by the owner of the smart contract. Therefore, the variables `curve`, `alpha`, `_beta`, and `fee` are all constant and do not affect the behavior of `Orchestrator`.
+
+However, `epsilon`, on line 6, is a state variable that is updated in `updateState`, a function that can be invoked by anyone. This means there is potential for a race condition where the value of epsilon is changed after the check on `msg.sender == owner`, but before the update to `state`.
+
+
+ 1. Is the `owner` variable data-dependent on any other variables in this function? If so, what are they?
+ 2. If the answer to (1) is no, then is it data dependendent on other functions?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+
+
+  An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that

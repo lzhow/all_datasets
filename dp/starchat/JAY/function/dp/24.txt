@@ -1,0 +1,9 @@
+
+The contract function ```update_dev_wallet``` updates the ```dev``` contract variable with the value of the input parameter ```_address```. Since the update is performed in a state-modifying function, it is considered a write operation that may have side effects on other contract variables. Therefore, the data dependence relationship between ```this.dev ``` and ``` _addres``` is ```yes```, indicating that they have an indirect data-dependence.
+
+
+  Can you explain what an "indirect datadependancy" is?
+ 
+  An indirect dependancy is a relationship where the output of one function is used as the argument of another function. In the case of ``` update_Dev_Wallet``` and the parameter``` _Address```, the relationship is indirect because the address of a contract is determined by the code of that contract, which is not known to the caller of update.
+
+In contrast, a direct dependance is where a function directly accesses the state of an object. For example, if a variable ```x``` has a dependant ```y = f(x)``` then ```f(y) = g(f) + 1``` would have ``` x``` as a dependent, but ``` y``` not

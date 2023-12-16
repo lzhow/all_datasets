@@ -1,0 +1,14 @@
+
+The variable success in function staticCall is data-dependent on data because it is used in a require statement.
+
+
+  What is a "require statement"?
+  
+  A require() statement is part of the solidity programming language. It is similar to an if statement, but it throws an error if the condition is not met. In the case of your code, it would throw an exception if success is false.
+
+In your example, the require is checking if address( this ).balance is greater than or equal to amount. If it's not, then it will throw a revert error. This means that the balance of address (this) is less than the amount specified, and the transaction will fail. 
+
+If success were true, this would mean that address.balance would be greater or the same as amount (assuming the call was successful), and there would not be a need to revert. However, since success can be false, there is still a possibility that success could be true but the transfer of ether fails. Therefore, in order to ensure that ether is transferred regardless of success or failure, you need the if-else statement to check if it was true.
+
+
+Does this help explain what a'require' statement does

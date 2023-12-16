@@ -1,0 +1,20 @@
+
+The variable 'data' in '_safeTranfer' is not dependent on 'liqudity' as it is a local variable within the '_mint' function.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundlers job is to take in many files and output a single file that contains all the code required to run the web application. This is done by analyzing the dependencies between the files, and only including the necessary code in each bundle. An example of an incremental bundle is Webpack.
+
+   Incremental bundling is useful for several reasons:
+
+   1.) Faster development time: By only rebuilding what has changed, incremental bundles can significantly speed up development.
+
+   2.) Smaller bundle sizes: Incrementally bundled code typically has much less code than a traditional bunding approach, which can result in faster page loads and less data usage.
+
+However, there are some downsides to incremental building:
+
+  1!) Potential bugs: Because incremental builds only include the changes made since the last build, it's possible for bugs to slip through the cracks. These bugs can be difficult to find and fix.
+  2!) Inconsistent behavior: When working on

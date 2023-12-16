@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `_do_swap` function, the `swap_data` struct is passed as an argument. This struct contains the fields `path`, `cur_factory`, and `support_fee`. The `pair` variable is created by calling the static method `OrinMultiPollLibrary::pair_for` with the arguments `factory` and the first two elements of the path array.
+Then, a loop is executed over the elements in `paths` array, starting from the second element (index 3). In each iteration, two local variables `token0`and `output` are assigned the values of `IOrnPoolvV1Pair::getToken0()` and`Iorionpoolv1pair::GetToken1()` respectively. Then, if the value of`supportF` is true, then the`amount`s array is updated by the result of calling `getamountoutuv2` on `pool` using the current `reserves` of token  and token .
+Otherwise, `amounto`is updated to the corresponding element of amounts array and  `to_`address is assigned to `address (this)`.
+Finally,`pair. swap` method is called with ` amount  aout`,` amount bout` , ` to_`,and a new byte array of length  zero. 

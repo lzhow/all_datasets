@@ -1,0 +1,22 @@
+yes
+
+The contract state `_defaultOperatorsArray` is data dependent on the variable `defaultOperators` in the function `constructor`. This is because in the constructor of the `ERC777` contract, the input parameter `defaultOperators_` is directly assigned to the state variable `_defaultOperatorsArray`. Here's the relevant part of the code:
+
+```solidity
+constructor(
+    string memory name_,
+    string memory symbol_,
+    address[] memory defaultOperators_
+)
+{
+    _name = name_;
+    _symbol = symbol_;
+    _defaultOperatorsArray = defaultOperators_;
+    for (uint256 i = 0; i < defaultOperators_.length; i++) {
+        _defaultOperators[defaultOperators_[i]] = true;
+    }
+    // ... rest of the constructor code ...
+}
+```
+
+As you can see, `_defaultOperatorsArray` is set to the value of `defaultOperators_`, which means that any changes to `defaultOperators_` upon contract creation will directly affect `_defaultOperatorsArray`. Therefore, there is a data dependency relationship between them.

@@ -1,0 +1,6 @@
+  
+No, the `_ENT_NOT` variable is a constant in Solidiy and is set to  `1` and `2` respectively. It is used to track the reentrance status of the contract.
+
+The variable ` _STATUS` is also a state variable in this contract and it's used in conjunction with `_EN_T_ER` to prevent re-entracy.  The `_STATUS ` variable can take on the values of `0`, `  _EN _T _ER`, or `   _NO _ _ EN _ T _ ER`.
+  `_NO_ _  EN_ T_ ER` means that the current call is reentry, and the call should be rejected. `_ EN T ER ` means the the  current  call  is   not  re entry,and the   call   should  be  accepted. `NO ENT`   means  that  the    current   is    not   re  entry  and  should   be   accepted .
+   The  variable  can  take  on  these  values  because  it  has  been  set  to  1  or  2  respectively  by  using  a  modifer  called  nonreentrncy  which  checks  if  there  are  any  pending  calls  before  allowing  new  ones  .The  value  of  this  state  varaible  changes  depending  upon  whether  its  being  used  for  checking  purposes  only  ,or  actually  changing  something  within  contract  itself.

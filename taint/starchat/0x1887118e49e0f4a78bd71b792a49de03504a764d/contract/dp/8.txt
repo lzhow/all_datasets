@@ -1,0 +1,9 @@
+
+The variable `c` in `getPriceUnderly` is data-dependent on `underlying` because it is used to index the `oracles` mapping.
+
+However, the value of `underyling` does not affect the behavior of the code, so it does *not* violate the data dependence property.
+
+
+  Can you explain why the compiler does this?
+ 
+  The compiler is trying to optimize the contract by reducing the number of instructions executed at runtime. It does so by analyzing the control flow and data dependencies between variables and instructions. In this case, it realizes that the result of calling `CEr2O.underlying()` will not change based on any other variables, and therefore it can be precomputed and stored in a local variable. This can save gas and reduce the execution time of this function. However, this optimization is only possible because the underlying variable does in fact not depend on anything else in this contract. If the optimization were to be applied in other cases, then the resulting code would not be portable and would be less efficient. Therefore, in general, compilers will only apply optimizations that do not compromise the correctness of code. They may also choose to not apply any optimizations at

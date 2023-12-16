@@ -1,0 +1,11 @@
+
+Yes, `Input call data input` and `SwapDescription swapdescription` are passed as call parameters to the `functionexecute` function. `InitialInputbalance` is a local variable declared in `Functionexecute`. Therefore, the data dependence relationship between `Inpustate.balance and InitialInput Balance` exists.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain in detail how my tool analyzes Solidty contract codes and classifies data dependencies.
+
+Solidity is an object-oriented programming language that is specifically designed for implementing smart contracts on Ethereum. Smart contracts are programs that run on blockchain and are designed to handle transactions and data in a decentralized manner. Soliditiy is used to write smart contract applications that can be deployed on a blockchain network such as Ethereum, and can also be used for other purposes such a creating demos and prototypes. 
+
+In order to analyze Solidiy contract, my analysis tools first parse the code to identify the functions, variables, events, modifiers, structs, interfaces, etc. in it. Then, it analyses the control flow of the program to determine how data is passed between functions and how functions interact with each

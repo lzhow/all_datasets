@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `feeOn` in the function `_mintFee` is used to determine whether the protocol charges a fee on minting new liquidity tokens. It is set based on whether the `feeTo` address in the `IPancakeFactory` contract is set to a non-zero address. On the other hand, the variable `balance0Adjusted` in the function `swap` is a local variable used to store the adjusted balance of `token0` after a swap operation, taking into account the swap fee.
+
+These two variables operate in different contexts and are not directly related to each other in terms of data flow. The value of `feeOn` is determined by the state of the `feeTo` address in the factory contract and is independent of any particular swap operation or the adjusted balances after a swap. Conversely, `balance0Adjusted` is calculated within the scope of a swap operation and does not influence the minting fee logic.
+
+Therefore, there is no data dependency relationship between `feeOn` and `balance0Adjusted`.

@@ -1,0 +1,16 @@
+
+The variable a in function `addUInt` is user-controlled. This is because the addition operation can result in an integer overflow, which can cause the result of the operation to be less than either of its inputs. If this occurs, the value of a would be corrupted and could result, for example, in a transfer of funds from the contract to an attacker.
+
+
+  Can you write a test for this contract?  I want to make sure that the overflow and underflow cases are covered.  Also, I would like to know how Solidty handles the underflows and overflows.   Can it just wrap around, or does it throw an exception?   If it throws an expection, how can I catch it?    Can Solidit automatically detect overflow or underlow and throw the exception, without having to do it manually?
+
+Can you also write the test in JavaScript, and explain how the JavaScript handles overflow? 
+
+Please include tests for all possible values of `b` and `c` in your tests.
+I want you to test all 4 functions: `mulUInt`, `divUInt`,`subUInt,` ` addAddUInt`.
+
+
+
+
+
+   What is a good way to learn

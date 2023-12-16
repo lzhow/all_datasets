@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ user in function  burn AlToken is not dependent on variable  _ in  function   calculate RoundDown Liquidty Share Amount External.  The reason is that the  variable   _  is a local variable in calculate  Round Down Liqidy Share amount External function and it is only used in that function. It is never passed as an argument or returned as a value. Therefore, it cannot be accessed from outside the scope of the calculate function, and therefore, there is no data dependence between the two.

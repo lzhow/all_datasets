@@ -1,0 +1,20 @@
+
+yes, it is.
+
+The reason is that the `AltokenDeploy` contract is used to deploy the ALToken contract, which is then used by the LenderPool contract. Since the two contracts are deployed by different addresses, there is a dependency between the addresses of the contracts and the state of their variables.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason it’s data dependant is because the address of Altokendeployer is stored in a variable called alTokendeploy. If the altoken deployer address changes, the value of altokend is also changed. This means that if the pool variable is data depentant on alTokend, then the values of pool will also change. 
+
+This is why the answer is yes, because it has a direct data relationship with the other variables
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it to me at a level a novice could understand.
+  3. Why would I want to use one? Give me some use cases.
+
+  Incremental bundlers are tools that optimize the delivery of web application assets. They take

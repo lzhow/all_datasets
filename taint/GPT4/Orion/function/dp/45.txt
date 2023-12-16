@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `pool` in the function `_swapCurve` is data dependent on the variable `curFactory` in the same function. This is because the value of `pool` is assigned using the `curFactory` variable in the line `address pool = OrionMultiPoolLibrary.pairForCurve(curFactory, input, output);`. The value of `pool` depends on the value of `curFactory`, indicating a data dependency relationship between the two variables.

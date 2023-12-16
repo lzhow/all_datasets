@@ -1,0 +1,3 @@
+Yes
+
+The contract state `alphaMultiplier` is data dependent on the variable `_amount` in the function `receiveAlpha`. This is because within the `receiveAlpha` function, `alphaMultiplier` is updated based on the value of `_amount`. Specifically, the line `alphaMultiplier = alphaMultiplier.add(_amount.mul(1e12).div(totalSupply()));` shows that `alphaMultiplier` is being recalculated by adding to its current value a new value that is derived from `_amount`. The multiplication by `1e12` and division by `totalSupply()` are operations that involve `_amount`, thus creating a direct data dependency between `alphaMultiplier` and `_amount`.

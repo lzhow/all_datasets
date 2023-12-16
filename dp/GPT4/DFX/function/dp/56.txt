@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `oBals_` in the function `getTargetSwapData` is data dependent on the variable `_inputIx` in the function `viewTargetSwapData`. This is because in both functions, the value of `oBals_[i]` is assigned based on the condition `if (i != _inputIx)`. If `_inputIx` changes in `viewTargetSwapData`, it will affect the assignment of `oBals_[i]` in `getTargetSwapData`. Therefore, there is a data dependency relationship between these two variables.

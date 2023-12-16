@@ -1,0 +1,3 @@
+yes
+
+The variable `returndata` in the function `functionCallWithValue` is data dependent on the variable `target` because `returndata` is assigned the result of a low-level call to the address specified by `target`. The line `(bool success, bytes memory returndata) = target.call{ value: value }(data);` shows that `returndata` directly depends on the outcome of the call to the address `target` with the provided `data` and `value`. If the address in `target` changes, the resulting `returndata` could be different, hence there is a data dependency relationship between these two variables.

@@ -1,0 +1,4 @@
+  
+No, the ` offset` variable in function `decodeBytes` is NOT controlled  by user because it's a local variable and it can only be modified by other functions in this contract.
+
+The `shift` modifer is used to modify the value of `data` and ` data` can be only modified in other function in contract, so the offset variable is also not modified. 

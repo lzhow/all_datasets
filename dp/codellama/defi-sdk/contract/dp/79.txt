@@ -1,0 +1,4 @@
+  
+No, the `contracState` `pendinOwner` is not dependent on `variable` amounts in function`callbytes`.
+
+The reason is that the state variable is declared outside the scope of the` callbytes` function, and it is only accessed within the context of that function. Therefore, it cannot be directly affected by the changes made to the local variable`amount` within that scope.

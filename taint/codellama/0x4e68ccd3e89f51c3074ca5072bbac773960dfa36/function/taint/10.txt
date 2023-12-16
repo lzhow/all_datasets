@@ -1,0 +1,4 @@
+  
+No, the ` self` variable in function `binarySearch` is NOT controlled  by user because it's a local variable and it doesn't have any user input.
+
+The ` binarysearch` function is a private function and is only called by other functions in this contract. It takes in a `Obseration` array as an argument, which is also a user-defined data structure. However, this array is passed as a reference, meaning that the caller of the binary search function can modify the contents of this variable. Therefore, while the array itself is user controlled, its elements are not.

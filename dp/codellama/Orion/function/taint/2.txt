@@ -1,0 +1,4 @@
+  
+The variable 'to' in function '_swap' is labeled as 'Yes' because it takes in a user-provided address as an argument. This means that the address of the recipient of tokens is determined by a malicious user and can be controlled.
+
+In the context of a smart contract, this can lead to a vulnerability known as a "re-entrancy attack," where a contract can call itself recursively and cause a denial-of-service (DoS) attack. To mitigate this risk, the contract should validate the input and ensure that it comes from a trusted source.

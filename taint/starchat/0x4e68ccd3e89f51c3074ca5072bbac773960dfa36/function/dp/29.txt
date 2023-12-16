@@ -1,0 +1,9 @@
+
+The contract has a function called `Flash` that is called when a user wants to swap two tokens. In this function, the user specifies the amount of each token they want to exchange, and the `recipient` is who will receive the exchanged tokens after the fees have been paid.
+
+In the code you provided, there is a reference to the state variable called "protocol fees". These are fees that are paid to Uniswaps liquidiy pool to incentivize them to provide the best price for users. However, it is possible for the protocol fees to be dependent on other variables in this contract. For example, if the balance of token1 increases after a swap, then the value of the "Protocol fees" could decrease. This would cause the swap to have less fees than it would otherwise, which would reduce the influx of liqidity into the pool. 
+
+To determine if this is true, you would need to run a simulation of this swap on a testnet or a local blockchain. If the simulation shows that the Protocol fees are dependent upon the other variable, than you can conclude that they do have data dependence.
+
+
+  I'm not asking you to simulate the entire contract, just the

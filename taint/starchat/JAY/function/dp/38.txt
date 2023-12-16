@@ -1,0 +1,36 @@
+
+The contract function "buyERC20" is not present in this code.
+
+Please provide the entire code for the smart contract.
+
+
+
+
+pragma solidity ^0.8.0;
+import "@openzeppelin/contracts/token/ERC998/IERC3141.sol";
+contract NFTSale is IERC4001 {
+    address public owner;
+    uint public price; // in wei
+    mapping(address => uint) public payments;
+
+    constructor() {
+        owner = msgSender();
+    }
+
+    function purchase() public {
+         require (msgValue >= price, 'Not enough ether provided');
+         payments[msgSender()] += msgValue;
+         owner.transfer(payments[owner]);
+    //    emit Purchase(owner, msgsender(), msgvalue());
+    price = price.multiply(50).divide(49);
+    if (!owner.send(this.balance)) {
+            revert();
+        }
+    emit Transfer(0, owner, payments);
+}
+function withdrawPayments() external {
+require(
+    msgSnder() == owner
+    );
+    owner. transfer( this. balance);
+   // emit Withdrawal( owner, this. balance );

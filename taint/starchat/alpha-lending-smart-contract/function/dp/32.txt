@@ -1,0 +1,18 @@
+
+The contract function 'burn' has two parameters: '_account' (type address) and '_amount'
+(type uint). The function calls the internal function '_burn', which takes two
+parameters: 'account', of type address, and amount', also of the type uint.
+
+In Solidty, internal functions cannot be accessed from outside the current contract. Therefore, the
+function '_claimCurrentAlpharReward' cannot access the 'latestAlhpaMultiplier' state variable. This means that
+the 'claimAlphaCurrentReward()' function cannot modify the value of 'alphaMultiplier'.
+Therefore, 'laestAlphaMultipier' is not a parameter of '_bunch' function, therefore it is
+not a dependency of it.
+
+
+  I'm sorry, I made a mistake. I meant to say that the '_latest' variable is data-dependent on '_ammount'.
+ 
+  The '_laetst' parameter is indeed data dependant on 'amout'. This is because the line of code:
+`    uint latestAlpha = latestAlpahMultiplier * _amont;
+ `
+reads from the state of a contract, which is a function of time. In this case, it reads

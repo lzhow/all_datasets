@@ -1,0 +1,5 @@
+  
+No, the `_ reserve ​​1 ` variable in function `_update` is NOT controlled  by user .
+
+The `_ update` function is called by `m int` and `burn` functions, which are both internal functions. Therefore, they are not exposed to the outside world and cannot be called directly by users.
+Moreover, `_ reserves` are calculated based on the current balances of the tokens in this contract, and the balanace of tokens is determined by external factors such as the number of users, their trading activity, etc. It is unlikely that a user can control the balance of a token in a smart contract. 

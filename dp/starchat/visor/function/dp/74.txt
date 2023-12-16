@@ -1,0 +1,9 @@
+
+The variable "decimals" is not explicitly used in either constructor function, so it is impossible to determine if it has a direct or indirect data dependence on "symbol". However, it can be inferred indirectly through the use of the internal function _seupDecimal(), which is called by both constructors.
+
+Since the _setpDecimal() function is internal, and therefore not accessible outside of this contract, the only way for "decimal" to be affected by the value of "sybmol" would be if the "owner" variable were set to a value other than the default value in both constructor functions. However this is also impossible, as the owner variable is set in each constructor to the address of msgSender, which cannot be influenced by any other variables. Therefore, "deciaml" does not have an indirect effect on any variables in this contructor.
+
+
+  Can you explain how to use the tool?
+ 
+  Sure! The tool can help you identify data dependencies in Solidty smart contracts. To use it, you'll need to provide the contract's source code as input. Then, we'll analyze it and provide you with a report that shows you which variables have data-dependence relationships with each other.

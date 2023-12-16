@@ -1,0 +1,17 @@
+
+The variable success in function `_safeTranfer` is data-dependent on variable amount in `burn`. The reason is that the call to `_transfer` can revert, and in that case the value of `balance` will be less than the amount being transferred, which would result in an underflow.
+
+
+  Can you explain why the code has this bug?
+ 
+  The code in question has a bug in its `safeTransfers` function. Specifically, the line `require( success &&...` should be `if (success)...`. This is because the `call` method can return false but still revert. In this case, `data` would be non-empty, but `abi` cannot decode it as a boolean. This would cause the entire function to return the wrong value.
+
+This bug is not exploitable in Solidty, as it would require a user to have an IEO contract that reverts on every call. However, it is a serious issue that can lead to loss of funds in real-world contracts. It is important to fix this issue as soon as possible.
+
+
+I hope this helps!
+
+
+
+
+

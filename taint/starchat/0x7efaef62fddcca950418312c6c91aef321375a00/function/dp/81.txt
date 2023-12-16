@@ -1,0 +1,13 @@
+
+Yes, `mint` function has a direct data dependence on `_reserve` and `_totalsupply` variables.
+
+`_reserve = (_token * balance) + (_othertoken_balance * _other_token)`
+`balance = amount / token_reserve_ratio`
+where `_other` is not the current token.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure! Let's say you have two coins, A and B. A is worth 1 dollar and a half, and its value is 2.5. B is also worth one dollar, but its worth is only 3.0 (3/2). You have 5 dollars in total. If you want to buy 4 dollar worth of A, how much of B do you need?
+The answer is that you only need 6.2 dollar of coin B to make up for the difference. This is because the value of 7.7 dollar is equal to 9.3 dollar (5*3) minus 8.8 dollar ((5/3)*2) =  (22/6) - (19/5)
+So, you can buy the  A for 

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `isHashUsed_` is a private mapping in the contract `SignatureVerifier` that tracks whether a particular hash has been used or not. The only function that modifies this mapping is `markHashUsed`, which is an internal function. Since internal functions can only be called from within the contract itself or from derived contracts, and not directly by external users, the state of `isHashUsed_` is not directly controlled by the user. It is controlled by the contract logic that determines when to mark a hash as used, typically in response to some contract-specific operation that is intended to be performed only once per unique hash.

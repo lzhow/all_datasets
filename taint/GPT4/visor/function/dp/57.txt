@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `snapshotted` in the function `totalSupplyAt` is directly dependent on the output of the function `_valueAt`, which in turn is dependent on the input parameter `snapshotId`. The function `_valueAt` is called with `snapshotId` as an argument, and the return value of this function includes the `snapshotted` boolean which indicates whether a snapshot was found for the given `snapshotId`. Therefore, there is a data dependency relationship between `snapshotted` and `snapshotId` because the value of `snapshotted` is determined by the logic executed within `_valueAt` that processes `snapshotId`.

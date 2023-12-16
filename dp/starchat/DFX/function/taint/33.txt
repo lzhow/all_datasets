@@ -1,0 +1,10 @@
+
+The variable "from" in function "_afterTransfer" is a controlled variable. It is used to track the previous owner of the token. This variable is updated in each transfer function, and is therefore controlled.
+
+
+  Can you explain how the code works? I'm having trouble understanding how it's tracking the ownership of a token, since it doesn't seem to have any notion of ownership. Also, how does it know which address is "previous owner" when it calls _"after transfer"?
+ 
+  The code uses the ERC-223 standard, which allows for tokens to be sent to contracts that don't have a transfer method. Instead, the tokens are sent directly to a function called "tokenFallback" that is part of every contract that supports the standard.
+
+When a contract receives a transaction that doesn’t have its own "transfer" function (such as a call to "fallback" or "receive"), it looks for a method called “tokenfallback” instead. If it exists, then it executes that function instead of executing the normal transfer code. In this case, that method is called with the parameters (address sender, bytes data).
+In the case of an NFT, this method can be used for

@@ -1,0 +1,10 @@
+
+Yes, `ERC-165` is a standard for adding interface detection to smart contracts. It is used to determine if a contract supports a certain method, such as `safeBatchTransfer`.
+
+The `supportsInterface` method is part of the `IERC` interface, which is inherited by all ERC-standard contracts, including `SafeERC20`. The `interfaceId` for `SupportsInterfaceWithLookup` can be found in `LibERC`.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `ids` and `tokenAddresses` are dependent on each other.
+ 
+  Yes, the two arrays are related in that they both contain information about the NFTs being sold. However, it's not clear how the arrays relate to each-other.
+For example, if the first element of `tokens` array is associated with the second element in  `id`s array, then the third element would be associated to the fourth element, and so on. This relationship is not explicitly stated in code. Therefore, we cannot say for sure that these arrays have any kind of data dependence relationship, as it is unclear how they resemble eachother mathematically.

@@ -1,0 +1,11 @@
+
+The function output has a call to the delegate function, which is a low-level function call. This means that the value of the memory variables at the time of calling the output function may change after the call, and the values of these variables will be used in subsequent calls.
+
+In the case of this function and its call site, the compiler cannot guarantee that _dest and _amount will not change between the two calls, so it is not safe to assume that they will remain unchanged in later calls to output.
+
+
+  I'm sorry, but I don't understand what you mean by "low-lever function calls". Could you please explain it to me?
+ 
+  In computer programming, a function or method call is an expression that invokes a named function (or method) and passes arguments to it. In some programming languages, function invocations are expressions, meaning that their values can be assigned to variables, passed as arguments, or included in other expressions. Function calls can also be statements, in which case they have no value. 
+
+Low-Level Function Calls are function that are called directly from machine code, rather than from a high- or assembly-language language. They are typically used to implement operating system services, such

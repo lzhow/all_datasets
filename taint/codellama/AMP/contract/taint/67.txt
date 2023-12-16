@@ -1,0 +1,5 @@
+  
+No, the `_indexPartionsOf ` variable is a mapping that maps an address to an array of bytes, and it does not contain any user-controlled data. Therefore, this variable does is labeled as 'No'.
+
+The reason for this is that the mapping is defined as a private variable in contract `A`, and the only way to modify it would be through the `addToIndexPartionOf()` function, which is also defined in `contract A`. This function takes an `address` and a `bytes` as input, but it only modifies the internal state of the contract and does nothing that would allow a user to control the data stored in this mapping.
+Therefore, we can conclude that this data is safe from user manipulation and is considered 'Not controlled' by a User.

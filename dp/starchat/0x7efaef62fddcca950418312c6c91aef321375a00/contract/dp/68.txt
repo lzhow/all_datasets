@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in `PanchakeLP.sol` calls the `transfer` method of the token contract, which can trigger a call to the fallback function of that contract. This can modify the state of other variables in that function, including `reserve`.
+
+  What is a panchakelp?
+
+
+
+
+

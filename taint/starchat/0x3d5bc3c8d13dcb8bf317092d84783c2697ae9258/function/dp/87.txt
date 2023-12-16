@@ -1,0 +1,14 @@
+
+The contract function '_setpendingadmin' is used to change the pending admin of the Aave protocol. This function is only callable by the current admin, which is initially set to the address that deployed the protocol (i.e. the 'AaveGovernanceV2' contract).
+
+In the '_SetpendingAdmin' function, the code checks that the caller of '_sependingadming' (which is'msg,sender') is indeed the admin. If this is not the case, it returns an error.
+If the check is passed, then the new pendingadmin address is set, and an event is emitted. However, there is no check to see if the old pending address was indeed an admin address. Therefore, if there was a bug in '_pendingAdming', it would be possible to set the previous pendingaddress as the actual adminaddress.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+
+
+
+
+
+   What is a good way to learn how to code in python? I have heard that it is important to practice a lot, however I do not know where to start. I am a

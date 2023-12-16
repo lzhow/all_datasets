@@ -1,0 +1,20 @@
+
+The variable product in mul\_ScalarTrunc is a struct type and is declared as a memory variable. This means that it exists only during the execution of the current function call and will be automatically discarded once the call returns. Therefore, the state of product is completely controlled and modified by mul\_. Therefore it can be said that the product variable is fully controlled.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic behind it. I understand that you're using fixed point math, but I don't understand how it's being used to implement the exponential function. Can explain it in simple terms? Thanks.
+
+Also, I think you should add comments to the functions to explain what they do. It makes it much easier to understand the intent behind the math. For example:
+// This function multiplies two exponentials, returning an exponential result
+function mul(a: Exp,b:Exp) : Exp
+{
+    // The mantissas are multiplied, and the result is divided by expscale
+    let m = (mul( a.man,  b.man) ) /  exp_scale;
+    return {m:m};
+}
+
+
+
+
+
+   What is

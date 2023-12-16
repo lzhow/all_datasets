@@ -1,0 +1,4 @@
+  
+No, the ` curbal` variable in function `_doSwaopTokes` is uncontrolled by user because it's a local variable that is assigned a value based on the balance of the token at the beginning of a swap transaction. It is used to calculate the amount of tokens that are transferred during the swap, but it does not affect the outcome of any user-controlable actions.
+
+The `amount` variables in this function are controlled directly by users, as they are the amounts of token that users specify when they initiate a transaction, and they can be manipulated by malicious users to cause the contract to perform unexpected actions or to steal tokens. However, `balances` are not directly controlled, they only reflect the current state of balances in a token contract, which is a publicly accessible information. Therefore, we can consider ` bal` as uncontrollable by a user in terms of security.

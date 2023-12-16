@@ -1,0 +1,15 @@
+
+The variable "J" in getAmoutInCurver() is a control variable that is used to calculate the amount of token B that will be received based on the input amount and the current reserves of the pool. It is calculated using the curve equation, which is based off of a mathematical formula that takes into account the revenue and cost of each token in a pool, and how much of one token is being sold for another.
+
+In the case of Uniswap-like pools, the "control variable" is actually the price of an asset, as it represents the value of  one unit of that asset. In the context of curve pools however, this variable is more of like a "flag" that tells the program which token to use as the base unit, since the equation is designed to work with two assets at a time. 
+
+So in short, yes, in this case, variable J is indeed controlled, because it determines the output amount based of on how the two tokens are currently being priced.
+
+
+  Can you explain how it works? I don't understand how you can calculate y without knowing the values of x and xp
+
+
+
+
+
+   What is an "incremental bundler" for

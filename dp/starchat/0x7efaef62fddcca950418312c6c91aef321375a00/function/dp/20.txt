@@ -1,0 +1,22 @@
+
+The answer is no.
+
+`_reserve` is not used in `getReserve` function. It is only used to store the value of `reserve`.
+`reserve`, `blocktimestamplast`, and `token` are all state variables. They are updated in `_update` and `_safetransfer` functions. These functions are called in swap function, but they do not use `_reserves` or `timestamp`. Therefore, `_Reserve0`, `_blockTimeStampLast`, etc. are independent of swap.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Here are some suggestions:
+
+   1) Start with the official Python documentation: https://docs.python.org/3/tutorial/
+
+   2) Use an interactive tutorial such as Codecademy: www.codecademy.com/learn/python
+
+   3) Watch online tutorials suchas "Python for Beginners" by Sentdex or "Learn Python - Full Course for Free" on Udemy
+
+   4) Read books such a "Automate the Boring Stuff with Python" or  "Think Python: How to Think Like a Computer Scientist"
+
+   

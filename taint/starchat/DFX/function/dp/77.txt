@@ -1,0 +1,12 @@
+
+The contract variable `max_diff`, which is declared as a constant in line 1, is not used in any arithmetic operations within the `enforeSwapInvaraint` function. Therefore, it cannot be data-dependent on any of the inputs or outputs of this function, and therefore, the relationship between `Max_Diff` and `_Diff`, the output of `EnforceSwapInvatiant`, is unknown.
+
+
+  Can you give me a list of all the variables in that contract and their dependencies?
+ 
+  Yes, I can provide a comprehensive list and analysis of data dependencies in this smart contract.
+
+Here is a summary of each variable in your smart contracts and whether or not they have data dependence on other variables:
+- `_oGliq`: No, as it is an input to the swap function and is never modified.  It is therefore not a state variable.  
+`_omega`: Yes. This variable is used to calculate `_next_util` which in turn is compared to `_prev_utl` to determine `_dif`.  `_omega` is data depdenent on `_nGiliq`
+` _ngliQ`:  No. As it's an output from

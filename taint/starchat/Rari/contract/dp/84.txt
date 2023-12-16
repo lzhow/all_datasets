@@ -1,0 +1,9 @@
+
+The variable c in function "sub" is data-dependent on variable errorMessage in "mul" because the value of c depends on both the values of a and b. Specifically, the statement "c = (b * a)" assigns the product of b and a to c. However, if the input values for a or b are large, then the intermediate value c may overflow or underlow, leading to incorrect results.
+
+
+  Can you explain how the overflow and underlfow can lead to wrong results?
+ 
+  Yes, overflow can cause incorrect calculations and can result in unexpected results, while underflows can also lead the program to behave unpredictably. For example, consider the case where a = b = c= 2**248 and d = -1. If we perform the calculation "a + d" in a 32-bit integer, we will get an overflow error. This is because 1 is subtracted from  a large number, which results in an underfow. In this case, d is treated as a very large positive number and the result is incorrect.
+
+In general, it is important to be aware of the potential overflows and undelows that can occur in

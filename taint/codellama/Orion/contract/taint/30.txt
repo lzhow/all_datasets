@@ -1,0 +1,4 @@
+  
+The variable 'to' in function '_swap' is labeled as 'Yes' because it takes in a user-provided address as an argument. This means that the address of the recipient of tokens is determined by a variable that is under the control of a malicious user and can be manipulated to send tokens to an arbitrary address.
+
+In the context of smart contracts, this can lead to a vulnerability known as a "re-entrancy attack," where a contract can call another contract and manipulate its state in such a way that it can execute arbitrary code. In this case, the 'swap()' function in '_do_swap_tokens()', which is called by '_add_liquidty()'. This function can manipulate the state of other contract, potentially leading to the loss of funds or other security vulnerabilities.

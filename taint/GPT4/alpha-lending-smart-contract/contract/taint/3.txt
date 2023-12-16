@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_name` in the function `createNewAlToken` is a parameter that is passed into the function when it is called. Since this function is public and does not have any restrictions on who can call it, any user can call this function and pass in any value for the `_name` parameter. Therefore, `_name` is controlled by the user.

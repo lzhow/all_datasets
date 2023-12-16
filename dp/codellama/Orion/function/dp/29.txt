@@ -1,0 +1,4 @@
+  
+No, the `amountB ` variable in ` addLiqidtyFrom Exchange` is not dependent on ` token B` variable.
+
+The reason is that the value of ` amount B ` is calculated using the method ` Lib UnitConverter . decimalTo BaseUnit `, which converts the decimal value to a base unit value. This conversion is done before the call to `_add Liquidit yFrom Exchang e`, which is a private method that does not modify the values of the input parameters. Therefore, ` liquidit Y` will always be calculated based on a fixed value for ` amoun tB`, regardless of whether ` toke nB is changed.

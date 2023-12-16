@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `blockTimestamp` in the function `write` is an input parameter to the function and is used to update the `Observation` struct in the `self` array. It is independent of the `atOrAfter` variable in the function `binarySearch`. The `binarySearch` function is used to find two observations around a target time within the `self` array, and `atOrAfter` is a result of this search. There is no flow of data from `atOrAfter` back to `blockTimestamp` in the `write` function, hence there is no data dependency between these two variables.

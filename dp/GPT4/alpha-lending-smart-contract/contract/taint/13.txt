@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_name` in the ERC20 contract constructor is set by the value passed to the constructor when the contract instance is created. Since the constructor can be called by any user deploying the contract, the value of `_name` is indeed controlled by the user who deploys the contract.

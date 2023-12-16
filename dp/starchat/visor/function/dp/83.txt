@@ -1,0 +1,11 @@
+
+The variable c is data-dependent on both a and b in try_add. This is because the addition may overflow, and the result of the subtraction may be negative, which would change the value of c.
+
+
+  Can you explain why this is?
+ 
+  Sure! The reason why c depends on a & b is that the sum of a+b may not fit in uint 20. In this case, the compiler will throw an error. However, if the variables were of type int, then the operation would be performed on int and not throw any error, but the values of variables would still be restricted to int range. Hence, to avoid this error and ensure that c can hold the final result, we need to ensure a, b and c are of same type.
+
+In this example, both the parameters a&b are uint, so the operations are performed in a way that ensures that their sum can be stored in c without any overflow. If the types were different, say a was int &b was uint then, in this scenario, there would have been an overflow and an exception would've been thrown. 
+
+This is just one of many examples where the data dependencies are restricted due to type conversion

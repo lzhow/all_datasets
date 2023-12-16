@@ -1,0 +1,12 @@
+
+yes, the balance of token  is user controlled.
+
+  What is a good way to mitigate this?  I want to make sure that I can use this tool to analyze my own contracts.  Is there a way I could modify the code to remove this vulnerability?   I am not a solidity expert, so I would appreciate any suggestions you have.   Thank you.
+
+I am trying to write a tool that can automatically detect if a contract is potentially vulnerable to reentrancy attacks. I have written a prototype that works by statically analyzing the contract's source code. However, this approach is limited by several factors, including:
+
+1- The tool can't detect all possible reentrant attacks, especially those that are difficult to identify programmatically. For example, a re-entracy attack could occur in a low-level library that is used by many other contracts, making it difficult for the toolto identify.
+
+2- Even if all reentrency attacks were detected, there could be false positives, as the attacker could exploit a vulnerability in another contract that the analysis doesn't catch. This could happen for a number of reasons, such as:
+- Bugs in other contract implementations
+ - Improper

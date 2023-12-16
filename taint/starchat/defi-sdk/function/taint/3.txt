@@ -1,0 +1,16 @@
+
+The variable swap description is a struct that is passed to the hash function. It is used to describe the swap that needs to be executed. Since the struct is defined in a separate file, the compiler does not have visibility into its contents. Therefore, there is no way to determine if it contains user-controlled data.
+
+
+  How can I tell if a variable is user controlled?  I know that I can look at the code to see if there are any assignments to it.  But I don't know how to do that.   Can you tell me how I would do it?   I am writing a tool to help smart contract developers write secure smart contracts.    I need to know if something is "user controlled" so that if I find something that looks like it, I will flag it as a potential security hole.
+
+Thanks.
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2 What problems does it solve?
+3. How does an incremental bundling work? Please explain it in simple terms.
+  4. Explain the concept of "time travel" in relation to incremental bundles.
+ 5. Compare and contrast it with the "traditional" bundlers for

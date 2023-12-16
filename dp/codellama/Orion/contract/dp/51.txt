@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_addliquidty` function, the `pair` variable is assigned the value of `IOrinPoolvV1Factory.GetPair` which is a function that takes two arguments, `address` and `uint`. The `Getpair()` function returns the address of the pool for the given token pair if it exists, otherwise it returns `0`.
+Then, in `_do_swap` the pair is passed as an argument to the`_ swapCurv`e function.
+So, yes,`token A` is data-dependent on ` output` because it is used to determine the liquidty pool address.

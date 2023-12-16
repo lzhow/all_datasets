@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `_asset` in the function `getAssetPrice` is a parameter that is passed to the function by the caller. In Solidity, external functions can be called by anyone, including users of the smart contract. Therefore, the value of `_asset` is controlled by the user who calls the function, as they specify the argument when making the call.

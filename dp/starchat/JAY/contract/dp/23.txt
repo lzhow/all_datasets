@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the value parameter in sell() is used to calculate the amount of Jay to mint, which is then used in calculating the buyer's J ay balance.
+
+
+  Can you explain why this is data-dependent?
+ 
+  The value variable in function "sell" is a user input that is not known to the smart contract at compile time. Therefore, the compiler cannot statically determine whether the "buyJafFee" variable is dependent on it. This means that it must be treated as a state variable, and its value must always be stored in storage, rather than being computed at runtime. In other words, this means the data is stored on-chain, not in memory. 
+
+In general, data dependencies are difficult to determine automatically, so it's important to be aware of this when writing smart contracts. It's also worth noting that Solidty does not allow for arbitrary expressions in variable declarations, only constant expressions. So, for example, declaring a variable as "uint x = a + b" will not work, but "const uint x  = (a +b)" will.  This is because the expression "a+b" must evaluate to a constant

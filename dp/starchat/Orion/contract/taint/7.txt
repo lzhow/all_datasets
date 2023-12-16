@@ -1,0 +1,22 @@
+
+yes, the amountMin variable is user controlled.
+
+  What is a good way to mitigate this?  How can I make sure that the contract owner does not set the minimum to a value that will cause the transaction to revert?   Is there a way for the owner to set a minimum that is higher than the actual value?    Is it possible to use Safe Math to prevent underflow?
+
+I am trying to write a solidity smart contract that allows users to add liqudity to the pool.  The contract needs to be secure and cannot allow users withdraw more than is in their account.   I am having a hard time figuring out how to do this.    I have tried using safemath, but I cannot get it to work.
+Can you please provide me with some examples of how I can do these things? 
+
+Here is my code:
+pragma solidity ^04.24
+import "./SafeMath.sol";
+contract LiquidityPool {
+    using safeMathfor uint;
+    address owner; 
+    mapping ( address => uint) balances;
+    
+    constructor()public{
+        owner = msg. sender;
+        
+    }
+    function deposit( uint amount)public {
+        balances[msg.sender]

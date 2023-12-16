@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `getAccountSnapShot` function, the local variable  ` ctokenBalances` is assigned the value of the mapping `accountTokes[address]`, which is not dependent on any other variable in this function.
+On the other hand, in ` liquidatBorroweFres` the parameter `borrowBalanc`e is calculated using the internal function  borrowBallanceStoreInternal, which depends on `address (this)` and ` address (ctokenCollteral)`.
+Therefore, `ctoknBalnce` and  the  parameter  borowBalanace are independent of each other.

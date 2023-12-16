@@ -1,0 +1,12 @@
+
+The contract variable `_shares` is not used in this function, so it is irrelevant for determining whether the `_share` variable is data-dependent on `status`.
+
+However, the `if` statement in `line 13` could potentially cause a problem. If the balance of the strategy contract is less than the amount that is being withdrawn, then the withdraw function in line 20 will be called, which could change the value of `b`. This could cause the calculation of `_withdraw` to be incorrect, as it depends on an outdated value for `balance()`.
+Therefore, it could be argued that the data dependencies for the variables `total_supply` and `want` are unknown, and the result would be labeld as 'Unknown'.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code by examining the relationships between variables and contract functions. It looks for patterns that indicate whether a variable or state is dependent on another variable. For example, if a function updates the state of a contract, that state may become dependent upon the previous state.
+\
+When the analysis is complete, you will receive a report that outlines the results of

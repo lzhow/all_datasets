@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `oGLiq_` is data dependent on the variable `curve` in the function `getOriginSwapData`. This is because the value of `oGLiq_` is updated inside the for loop based on the values of `oBals_[i]`, which in turn depend on the values of `curve.assets` accessed through `_reserves[i].addr`. Therefore, any changes in the `curve` variable will affect the computation of `oGLiq_`.

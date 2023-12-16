@@ -1,0 +1,7 @@
+Label: yes
+
+Reason: The variable `owner_` is not explicitly shown in the provided code snippet, but it is implied by the use of the `onlyOwner` modifier in the `returnLostTokens` function. This modifier is commonly associated with the `Ownable` contract, which is a standard contract used in Solidity to restrict access to certain functions to the owner of the contract. The `Ownable` contract typically contains an `owner_` state variable that represents the address of the current owner, and a set of functions to transfer ownership.
+
+Since the `TokensHandler` contract is inheriting from `Ownable`, it is likely that the `owner_` variable is present in the `Ownable` contract. The `onlyOwner` modifier would then use the `owner_` variable to check if the message sender (`msg.sender`) is the current owner before allowing execution of the `returnLostTokens` function.
+
+The `owner_` variable is usually set when the contract is deployed (often to the address that deploys the contract) and can be changed by the current owner through a function provided by the `Ownable` contract. Therefore, the `owner_` variable is controlled by the user who is the current owner of the contract.

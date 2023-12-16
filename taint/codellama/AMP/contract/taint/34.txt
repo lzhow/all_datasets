@@ -1,0 +1,4 @@
+  
+No, the `_implementaion` variable in function `setPartitonStrategy` is NOT controlled  by user, because it's a function parameter and it can be set by anyone.
+
+The function takes in a `_prefix` and an `_implentation` as parameters, and the implementation is used to set the interface implementation for the given partition prefix. This means that the value of `_impementation` can come from anywhere, including from the caller of the contract, which means the control of this variable is out of scope. Therefore, this is an example of a variable that is 'not controlled' by a user in this context.

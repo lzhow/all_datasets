@@ -1,0 +1,21 @@
+
+The contract has a function called `getAlphaReleasRule`. This function is used to get the list of receivables and their corresponding release rules.
+
+In the `for` loop, the code assigns the value of `recevierRule`, which is a struct, to the memory location of a new variable called receiver. This means that the struct is copied to memory and the original struct in storage is unaffected. However, since the loop iterates over the length of the array, it is possible that a different struct with the same values is assigned to `Receiver` at each iteration. Therefore, when the amount is calculated, `rule` is still pointing to a deleted struct.
+
+
+  I'm sorry, but I don't understand what you mean by "deleted struct." Could you please explain further?
+ 
+  In the context of programming, a "struct" is like a custom data type that you can define yourself. In Solidty, you define a `struct` using the keyword `strcut`.
+For example, here's a simple struct that represents a person:
+`
+struct Person {
+  string name;
+  uint age;
+}
+`.
+
+ 
+ 
+  
+  1. What

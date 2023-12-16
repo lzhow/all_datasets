@@ -1,0 +1,9 @@
+
+The function calculateBorrowInterestRate() is called by the borrow() function, which is itself called when the user borrows an amount of the underlying asset. This means that the pool variable is data-dependent on both the _underlying asset and the amount being borrowed.
+
+
+  Is the `now` variable in this code data dependant on any of its parameters?
+  
+  Yes, the now variable depends on its parameter, in that it represents the current time in seconds since the Unix epoch. Since the timestamp is used to calculate the interest rate, it is important that this value remains consistent throughout the contract's execution. If the value of now changes, so will the calculated interest rates, potentially leading to unintended consequences. Therefore, now is considered a state variable that is dependent on all of it's parameters.
+
+In this case, since now represents a timestamp, and all parameters passed to the setNow() method are constant, this means the state of all other variables in your contract will also remain constant. However, if any other parameters were not constant (e.g. a user-provided input), then the behavior of your smart contract would be unpredictable and could result in undesirable outcomes. In general

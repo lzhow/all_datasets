@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `function recover` of the contract, the signature is first extracted from the input `bytes memory` signature. Then, it is passed to the internal function called `toEcdsaSignature` to convert it into the Ethereuem Signature format.
+After that, `v`, `s`, and `R` are extracted and used to calculate the address of `Signer`.
+So, in this case, variable signers is data-dependent on variable r.

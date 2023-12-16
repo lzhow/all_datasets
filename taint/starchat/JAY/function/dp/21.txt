@@ -1,0 +1,9 @@
+
+yes, it is data-dependent.
+
+The reason is that the loop in buyER145 increments the `id` variable, which is used to access the corresponding `_tokenAdress` and `ids` arrays. However, the value of `i` is not used in any way to update the values of the arrays, so the compiler cannot determine if `tokenAmount` depends on `tokens` or vice-versa.
+
+
+  Can you explain this in simpler terms?
+ 
+  Yes, I can explain it in simple terms. In the buyNfts function, there is a loop that iterates over the er712TokenAddresses and er1751ids arrays and incremetns the total variable by  the length of each array. Then, if the lengths of both arrays are non-zero, buyErc77 and buyerc20 are called. Finally, a require statement checks if msg value is greater than or equal to the product of total and the ether value buyNftefeeEth. If the require statment is true, then the dev address is sent half of msgvalue and a burn function is called with the sender address and total multiplied by buynftefej

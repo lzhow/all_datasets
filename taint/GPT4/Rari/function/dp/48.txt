@@ -1,0 +1,5 @@
+The contract state `compAccrued` is data dependent on the variable `borrowSpeed` in the function `updateCompBorrowIndex`. 
+
+Label: yes
+
+Explanation: The value of `compAccrued` is calculated by multiplying `deltaBlocks` with `borrowSpeed`. Since the value of `compAccrued` depends on the value of `borrowSpeed`, there is a data dependency relationship between them.

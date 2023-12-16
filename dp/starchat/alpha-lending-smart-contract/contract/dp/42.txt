@@ -1,0 +1,14 @@
+
+The contract has a function called `claim` that claims a portion of the accumulated Alpha tokens for a user. This function has the modifier `nonReentrency` which means that it cannot be called recursively.
+
+In the `accumulateAlphatoUser` function, the `_amount`_ variable is set to `userAcculatedAlpha` for the user calling the method. In the createReceitp function the same variable `_amout` is used to set the amount of tokens in a new receipt, but this time the value is stored in `newReceipt.ammount`.
+Since the two values are different, it is possible that the data in receipt is dependent on `amont`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning how code.  The best way is to find a group of people that share your interests and join a discord server for that topic.   You can also find tutorials online that can help you learn the basics.
+   
+    What are some good discord servers for learning python coding? I am interested in game development and would like to join one of these servers. I have heard that there

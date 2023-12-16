@@ -1,0 +1,4 @@
+  
+No, the variables `_o` and `_t` are independent in function  `originSwaps`. The reason is that the `o_`, `t`, and `curves` variables are all local variables in `function getoriginAndtarget` that are only used within the scope of that function. They are never passed as arguments or returned as values from the contract, so they cannot be accessed or modified by any other function in this contract.
+
+On the other hand, ` _amount` is a local variable in  the  function`getOrigin SwappData` which is used in other functions. Therefore, it is data-dependent.

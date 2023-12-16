@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `collateralShares` is directly calculated from the variable `collateralAmount` within the same function `liquidateInternal`. The line of code `uint256 collateralShares = calculateRoundUpLiquidityShareAmount(_collateral, collateralAmount);` shows that `collateralShares` is assigned a value that is returned by the function `calculateRoundUpLiquidityShareAmount`, which takes `collateralAmount` as one of its arguments. This indicates that there is a data dependency relationship between `collateralShares` and `collateralAmount`, as the value of `collateralShares` is derived from the value of `collateralAmount`.

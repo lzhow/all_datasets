@@ -1,0 +1,16 @@
+
+The variable `prefix` in `isPartionStrategy` is user controlled. It is used to determine which strategy validator to call.
+
+
+  How do I fix the code? I want to add a new strategy. I need to be able to transfer tokens between partitions. How can I do that? Please explain your solution.
+
+I want you to write a function that takes 3 parameters:
+- `_partition`: the partition to check
+ - `_from`: The address to send tokens from
+ `_to`:  The recipient address
+`_value`: How much to move
+It should check if `_operator` has enough allowances for the `_value` to go from `_fom` -> `_t0` and if so, call the `transfer` function on the swap token contract with the correct parameters.  Please also add tests for this function. 
+
+Please also explain how you would add this new function to the contract. What function should I call? How should the parameters look?
+How do you know that the transfer was successful? What events do we need?  How would I test this? 
+ What happens if I try to overdraw the allownace? Do I get an error? If so please explain what the

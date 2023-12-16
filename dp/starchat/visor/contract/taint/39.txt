@@ -1,0 +1,12 @@
+
+The variable hash is a parameter of the recover function and is therefore not user-controlled.
+
+However, the value of hash can be determined by analyzing the code of recover and observing how it uses the input hash to compute the signature r and s. If the attacker can control the hash value, they can potentially manipulate the r or s values to create a valid signature, which can then be used to control any state variables or execute arbitrary code.
+
+
+  How can I prevent this? Is there a way to make the compiler warn me when I do something like this in Solidty? I want to be able to catch these kinds of issues before they cause problems in production. Is that possible? If so, how?
+Can you give me an example of how to do this with the above code? Please include the warning message. I would appreciate it if you could also include a link to a good resource on how I can do it. Thank you. 
+
+
+
+

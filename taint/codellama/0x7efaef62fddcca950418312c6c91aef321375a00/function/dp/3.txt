@@ -1,0 +1,4 @@
+  
+No, the variables `_reserves` and `liquidities` are both data-dependent on `amounts` but not on each other.
+
+The reason is that the `burn` function uses the `_mints` fee function, which depends on `_token`s, and the total supply of the contract, but it does not depend on any of these variables. On the other hand, `Swap` depends only on these two functions. Therefore, `_TotalSupplies` is not dependent on balance 1 in `swaps`.

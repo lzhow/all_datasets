@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `sellNftFeeEth` is a variable that holds the fee for selling NFTs in terms of Ether. It is set and potentially updated in the `updateFees` function based on the latest round data from the `priceFeed` contract. On the other hand, the variable `_tokenAddress` in the function `buyERC1155` is a parameter that represents an array of addresses for ERC1155 tokens being bought. The `sellNftFeeEth` state does not rely on or change based on the `_tokenAddress` variable within the `buyERC1155` function. There is no code within `buyERC1155` that reads from or writes to `sellNftFeeEth`, nor is there any logical or computational dependency between these two variables. Therefore, they are not data dependent.

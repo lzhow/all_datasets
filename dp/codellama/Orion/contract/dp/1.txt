@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `pair. swap` method is called with the arguments `uint amount ​​0 out` and ` uint amount out`. The `swap `method is defined in `IOrinPoolv 3Pair` interface, which is implemented by `OrinoPool v3 Pair` contract.
+`amount  `0`out` is calculated in `_ swap `function before calling ` pair . swap`.
+Therefore, ` amount `out `is data-dependent on `  amount`0 ` out.

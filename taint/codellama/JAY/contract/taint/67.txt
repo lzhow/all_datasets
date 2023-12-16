@@ -1,0 +1,5 @@
+  
+No, the ` price` variable in function `getLatetPrice` is NOT controlled  by user because it's a public function and it returns the latest price from the price feed contract.
+
+The ` getPriceFeed` function is called in `constructor` and the result is stored in a private variable called `pricFeed`. The `latestPriceData` method is then called on the private ` pricfeed` to get the current price. This price is returned by ` latestPrice`.
+ 

@@ -1,0 +1,4 @@
+  
+No, the `CTokenn` variable in `setcompSuplyspeedInternal` is NOT controlled  by user because it's a parameter of the  function.
+
+The function ` setcompSuplyspeedInternal ` is called by other functions in this contract, and the parameter ` ctoken` represents the address of a ` Ctoken ` contract. This means that the value of `ctoken` comes from the calling function, not from user input. Therefore, `Ctokenn` cannot be controlled directly by a user and is considered untrusted.

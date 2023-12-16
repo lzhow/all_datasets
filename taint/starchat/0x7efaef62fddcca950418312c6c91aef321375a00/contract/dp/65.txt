@@ -1,0 +1,12 @@
+
+The contract variable 'decimals' is not directly data-dependent on 'liqudity' in 'burn'. However, the value of 'decimal' can be derived from the context in which the'mint' function is called. For example, if the decimal value is 8, then the liquity value can range from 90 to 508.
+
+
+ 
+Yes, it is.
+
+In the `mint` function, `k` is calculated as `sqrt((reserve_0 * reserve_1)/1e15)`.
+Then, in ` burn`, `amount_i = sqrt((k * total_supply) >> 63)`
+Since `total_suply` depends on `reserve_{0/1}`, ``
+ 
+  Yes, that is correct. In the mint function the sqrt is performed on a 4096 bit number, which is then shifted right 7 times. This is equivalent to dividing the number by  (2^41)^(7/2) or approximately  ~13.421 *  x^7.  This means that the maximum value that can result from this calculation is approximately  1/x

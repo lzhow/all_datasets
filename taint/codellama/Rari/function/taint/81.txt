@@ -1,0 +1,5 @@
+  
+No.
+
+The variable `scalar` in `mul_scalerTruncatAdduint` is a function parameter, which means that it can be controlled directly by a user of the contract. However, the `trunacte` function that is called on the result of `mulscalar`, which is also a contract function, is marked as `pure` and `internal`, meaning that its output is deterministic and cannot be influenced by external factors. Therefore, while the input to `multiplyscalartruncatadduint`, ` scalar`, is under the control of a potential user, its effect on `exp. mantiss`a is determined by ` multiplyscalars`and cannot directly be manipulated by an external user .
+ 

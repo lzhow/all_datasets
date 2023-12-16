@@ -1,0 +1,4 @@
+  
+No, the variables ` fee On` and ` balance ​​1 ` are independent.
+
+The variable` fee on` is defined in function` mint` as a local variable and is not dependent on any other variable in that function. It is only dependent upon the `reserves` of the contract, which are defined as global variables.  The variable balance`1 is also defined locally in` burn` function and it is dependent only on `token  ` and` balance of `, both of which have been defined globally. Therefore, there is no data dependence between the two.

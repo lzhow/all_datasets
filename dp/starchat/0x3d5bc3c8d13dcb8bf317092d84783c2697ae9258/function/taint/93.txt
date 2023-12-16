@@ -1,0 +1,13 @@
+
+The variable `num` in `getExp` is user controlled, as it comes from an external source.
+
+In Solidty, user input is typically not considered to be "safe", and is instead considered a potential attack vector. In this case, the `denom` variable is derived from a user-controlled input, and could be used to manipulate the return values of the contract.
+
+
+  How can I mitigate this? I'm writing a dAPP and I need to make sure that the users input doesn't affect the rest of my code. Is there a way to check if a number is safe to use before using it? If so, how can i do that? Please explain it in simple terms. I know that there are libraries that can do this for me, but I don't want to rely on external code that could change my contract in unexpected ways. If there is no way around this, I'll have to restrict the input to only allow safe numbers. But I want the code to still be as safe as possible. Can you give me some tips on how to do so? Thanks!
+
+
+
+
+
+   What is a good way of pronouncing the name of a dog?  I have

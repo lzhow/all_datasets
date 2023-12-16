@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `_total_supply` is data-dependent on `_wants` in function `_mints`.
+* The `_before_depost` function calls the `balnce` method, which returns the current balance of the vaule in `_strategies`. The `depoist` funtion then calls `earn`, which transfers the `_amount` to `_stragegy`.  The balance is then updated in `withdrwal` by calling `available` and subtracting the amount withdrawn.  Therefore, the balance in _wanted is dependent on _balsances.

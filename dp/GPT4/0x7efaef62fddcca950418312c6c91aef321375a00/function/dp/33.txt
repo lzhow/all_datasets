@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `amount1` in the function `burn` is calculated based on the balance of `_token1` (retrieved by calling `IERC20(_token1).balanceOf(address(this))`) and the total supply of liquidity tokens (`_totalSupply`). Since `_token1` in the function `swap` represents the same token contract address as `token1` used in the function `burn`, any changes to the balance of `_token1` resulting from the `swap` function (such as transferring tokens out via `_safeTransfer`) will affect the balance retrieved in the `burn` function. Therefore, `amount1` is data dependent on `_token1` because the balance of `_token1` directly influences the calculation of `amount1` in the `burn` function.

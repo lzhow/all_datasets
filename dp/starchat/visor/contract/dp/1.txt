@@ -1,0 +1,27 @@
+
+The variable high in findUppperBound is data-dependent on low if the array is not sorted in ascending order.
+
+
+  Can you give me an example where the answer is no?
+ 
+  Yes, for example:
+
+pragma solidity ^076.060012;
+contract C {
+    function f(mapping(address => uint) storage m, address a) public {
+        m[a] = m.balance;
+    }
+}
+In this example, the mapping m is a storage pointer to a mapping from address to uint.
+When we assign m to m_balance, we are essentially copying the entire mapping into a temporary variable, and assigning that to the storage location. This means that the two mappings are now data dependencies, as any changes to one mapping will affect the other. In this case, it is clear that m and m2 are dependent on each other, but it's not always so clear. For example in this code:
+
+
+function f() public pure {
+  uint x = g(a);
+  h(x);
+ }
+
+ function g() internal returns(bool) {}
+
+ h() external {}
+This code has no data dependence between the variables

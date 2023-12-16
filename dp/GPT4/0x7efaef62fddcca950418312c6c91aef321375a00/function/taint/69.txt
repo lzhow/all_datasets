@@ -1,0 +1,14 @@
+
+yes, the `_safeTranfer` function in line 40 of the contract is a user controlled function. It is used to transfer tokens from the smart contract to an external address.
+
+  What is an example of a contract that is vulnerable to reentrancy attacks? Please provide an explanation and an exploit.
+
+Reentrance refers to the ability of smart contracts to call other smart-contracts or to access the state of other contracts. This can lead to unintended consequences and potential loss of funds. Reentrancies can occur when a smart contact makes a call to another contract, which then calls back into the original contract before the first call has finished executing. If the called contract has not accounted for the possibility of being called recursively, then the second call can overwrite the return data of first contract call, leading to unexpected results. An example is provided below:
+pragma solidity ^04.21
+contract VulnerableContract {
+    mapping ( address => bool ) public isContract;
+    function callme() payable public{
+        if (!isContract[msgSender]) {
+            iscontract[msSender] == true
+            VictimContract(msgrcv).call.value(5 ether)();
+            //

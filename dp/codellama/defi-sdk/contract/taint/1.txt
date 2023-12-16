@@ -1,0 +1,4 @@
+  
+No, the ` amount  ` variable in `callBytes` is uncontrolled by user because it's a function parameter.
+
+The ` callbytes` function is called by an external contract, and the input parameters are passed to the contract. Therefore, any variables that are used as input to this function are not under the control of the calling contract and are considered uncontrollable.

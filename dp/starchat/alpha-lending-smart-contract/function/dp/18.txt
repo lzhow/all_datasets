@@ -1,0 +1,12 @@
+
+The function calculateBorrowReward in line 10 is data-dependent on pool in lines 22-23.
+
+
+  Explain why
+ 
+  The function is dependent on `pools` because it uses it to calculate the reward. `Pools` is a global variable that is modified in other functions. This function uses the value of `totalBirrows` and `TotalBorrowshares` to determine the amount of the token that should be rewarded. If these values are changed, the calculation will be incorrect.
+
+This function could be refactored to not use global variables. However, it is difficult to do so without changing the functionality of other parts of code. It is also possible that the values of these variables could change at any time, which would make the code more difficult and error-prone to maintain. Therefore, this function remains as-is.
+
+
+In summary, while it may be possible to refactor this code to remove the use of global state, doing so would require careful consideration of all other code that relies on these global values. Since the benefits of doing this are relatively low and the effort required to implement the change would likely be substantial, we have decided not to make this change. Instead, developers

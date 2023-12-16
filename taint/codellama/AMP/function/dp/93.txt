@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `isOperaterForColaterlManager` function, the `_isAuthorizedByParition` variable is used to check if the operator is authorized for the collaterial manager. This variable depends on both the partition and the spender.
+On the other hand, in `allownaceByPArition`, the allowed variable only depends  on partition.  Therefore, `_partiton` is data-dependent on `_allowed` because it is a parameter in a function that depends directly on it.

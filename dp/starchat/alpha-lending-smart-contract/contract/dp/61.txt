@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the `_user` and `_recipient` variables are used in both `_altoken.transferFrom` calls, and the `msg.sender` variable is used to determine which of the two calls is made.
+
+
+  Can you explain why this is true?
+ 
+  Yes, I can explain how this code works. Here's a step-by-step explanation of how the code calculates the borrow share amount for a user:
+
+1.  The `setUserPool` function sets the user's borrow shares for the given token.
+
+2.   The `_borrowShare` parameter is set to the value of `_amount.mul(1e18).div(pool.getTotalBorroeAmount())`. This calculates `_share` as the ratio of total borrows to `_amoun`.
+
+3.    The function then checks if the token is an ALGO token, in which case it sets `_liquidity` to `0`. Otherwise it calculates `liqudity` using the calculateLiquity function. This function calculates liquidity as `totalCollaterals.sub(totalReservves)`.
+
+4.     The next step is to calculate the round-

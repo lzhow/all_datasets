@@ -1,0 +1,14 @@
+
+The variable owner_ is a private variable in Solidty contract. It is used to store the address of the owner of this contract and is set to the msg sender when the contract is deployed.
+
+As such, the value of owner is always controlled and can be considered as "yes"
+
+
+  How do I know that the code I am reviewing is correct?  How can I be sure that I'm not introducing a security vulnerability?
+Can you explain how the use of a variable like owner can help prevent security vulnerabilities?
+ 
+I'm reviewing the solidity code for a contract that is intended to be used as a payment processor for an online market place.  The contract has a function that allows users to purchase items using ether.   The function takes as input the item id, and the quantity desired.    The code then checks that msgSender is an authorized user, that there is enough ether in this transaction to cover the purchase,  and that this user has not exceeded their purchase limit for this item.  
+
+If all of these checks pass, then the ether is transferred from the sender to a recipient address, along with the requested item, quantity, etc. 
+
+However, I cannot find any code that checks to see if

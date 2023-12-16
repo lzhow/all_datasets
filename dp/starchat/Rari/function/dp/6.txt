@@ -1,0 +1,9 @@
+
+The variable exchange rate in get account snapshot is dependent on current block number in accruing interest. This is because the exchange rates are determined based on a weighted average of the interest rates of all the cTokens issued by a particular underlying asset. Since the block numbers are different for each interest accural period, the value of exchange RateMantisa will be different based upon the current interest rate being accured.
+
+
+  Can you explain why this is so?
+ 
+  The function accureInterest() is called every time the system needs to calculate the new interest amount for the user. In this function, it calculates the weighted interest average based off the total amount of cash and borrows in existence. However, since the accuring of interest is a time-sensitive process, this calculation is done based of a snapshot of these values taken at the time of accuration. Therefore, any changes made to the cash or borroe balances after the snapshot will not be reflected in this interest calculation.
+
+In the getAccoutSnapshot() function however, we are trying to get a more up-to-date snapshot for a specific user's account. We are doing this by getting the specific balances of ctokens and borrow balances for that user at

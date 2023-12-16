@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `sqrtPriceX96` in the function `getSqrtRatioAtTick` is calculated based on the input parameter `tick`, which is provided when the function is called. Since the caller of the function controls the input parameter, they indirectly control the value of `sqrtPriceX96`. Therefore, the state of `sqrtPriceX96` is considered to be controlled by the user.

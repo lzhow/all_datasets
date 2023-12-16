@@ -1,0 +1,12 @@
+
+The variable recipient in function `_transfer` is a user-controlled input. It is used to specify the recipient of the transfer. Since the `_msgsender()` function is called, the value of recipient is ultimately determined by whoever is calling the `transfer()` method on the token contract.
+
+
+  Can you explain how the control flow of this program can be exploited by a malicious user to steal all of Alice's tokens? Please provide an example of how this attack could be implemented in Solidty.  Please also provide a mitigation strategy to prevent this type of attack.
+
+Here is an overview of what the program is doing:
+1. Importing the Safe Math library to ensure that arithmetic operations are not overflowing or underflowing. 
+2. Defining a mapping between addresses and uints to keep track of balances.  
+3. Creating a constructor that sets the name, symbol, and decimal places for the tokens.   
+4. Implementing transfer functionality that allows users to send tokens from one address in to another. This function checks that the sender has enough tokens to transfer, then updates the balances of both the sending and receiving addresses.  
+Note that this is just a high-level overview, there are many

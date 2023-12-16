@@ -1,0 +1,12 @@
+
+The variable value in function `functionCallWithvalue()` is user-controlled. This is because the value of the `msg.value`, or the amount of Ether sent with the transaction, is stored in `callvalue`.
+
+
+  How do I know if a variable is "user-controllable"?
+ 
+  To determine if an input variable or state variable can be controlled or not, you need to consider the context in which the smart contract is being developed and the intended use of that smart contact.
+
+For example, if you are developing a smart contracts for a decentralized exchange (DEX), you may want to ensure that the input variables for the exchange are not user controllable. In this case, the contract owner would be responsible for setting the initial values of these variables. However, in other cases, such as a game or financial smart-contracts, user control of some variables may be desirable. For example in a financial contract, a user may wish to control the interest rate of a loan.
+
+ 
+ 

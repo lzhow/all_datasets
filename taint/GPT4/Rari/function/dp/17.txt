@@ -1,0 +1,9 @@
+Label: yes
+
+Reason: The variable `index` in the function `updateCompSupplyIndex` is data dependent on the variable `borrowerAmount` in the function `distributeBorrowerComp`. This is because the value of `index` is calculated using the value of `borrowerAmount` in the following line of code:
+
+```
+Double memory index = add_(Double({mantissa: supplyState.index}), ratio);
+```
+
+The `ratio` variable is calculated using `borrowerAmount` in the `distributeBorrowerComp` function. Therefore, any changes in the value of `borrowerAmount` will affect the value of `index`.

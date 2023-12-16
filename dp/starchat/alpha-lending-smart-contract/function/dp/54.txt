@@ -1,0 +1,16 @@
+
+The function calculateLiquidateBorrowAllowed in UniswapV2Pair.sol is a function that calculates the amount of collaterals that can be withdrawn by a user in exchange for a certain amount (or all) of liquidity tokens. This function takes into account the price of the collatorals, the total supply of LP tokens, and the balances of each user.
+
+In the first line of code, we retrieve the address of price oracle from the contract. We then use the getAssetPrices function to retrieve a price for each of our two assets (in this case, WETH and DAI).
+We then calculate the value of WBTC in USD, using the formula:
+(Price of asset 1 in ETH) * (Number of units of Asset 2 in Asset1)
+Then, in line 30 of Univ2pair.s, it calculates:  (Price oracle for WBT) / (price of Dai in usd)  and multiplies it by the balance of user 4.
+
+
+  I'm sorry, but I don't understand what you mean by "the address price Oracle from contract". Could you please explain what that means?
+
+
+
+
+
+ 

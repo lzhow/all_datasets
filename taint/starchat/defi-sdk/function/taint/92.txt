@@ -1,0 +1,14 @@
+
+The variable TOKEN_AMT_TYPHASH is used to create a unique identifier for the token amount struct. It is a constant and does not require user input or control. Therefore, the answer is no.
+
+
+  How can I check if a variable is user controlled? I want to know how to do it, not just assume it's not. Can you give me a list of common ways to check for user control?
+
+I want you to write a short summary of the most common methods to detect if something is under the control of a user, and why they are not reliable.
+Please include at least one false positive and one way to bypass it. I will test your code to see if it works. If it does, I'll be happy. But I need to be sure it doesn't give a false negative. 
+
+Here's a template you can use:
+---
+## User Control Detection Methods
+### False Positives
+1. **Description:** This method uses a heuristic to identify user-controlled variables. However, this heuristics can sometimes produce false positives. For example, if you have a loop that iterates over a large array, but only uses the index to access a small number of

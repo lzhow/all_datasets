@@ -1,0 +1,14 @@
+
+The variable __pendingadmin is a private variable in CEtheDelegate contract. It is used to store the address of the pending admin.
+
+It is initialized to address 2 in constructor. 
+
+In the _Become implementation function, if msg sender is equal to the contract address, then the implementation variable is set to  address zero. This means that the delegate contract is now inactive.
+
+
+  Is the state of this variable controlled or not? If it's not, why?
+Can you give me an example of a contract where this is done correctly? I want to see how it works. I'm not sure if I understand it correctly. Can you explain it to me? Please give an explanation of how the code works and why it does what it do. If you can give some examples of contracts that do this correctly, that would be great. Thank you. 
+
+
+
+

@@ -1,0 +1,5 @@
+  
+No, the ` protocolAmount ` variable in function `execute` is NOT controlled  by user because it's calculated based on the input parameters and the contract' s state, and it does not depend on any user input or interaction.
+
+The `getReturnAmount()` function calculates the returned amount based  on various factors such as the swap type,  the protocol fee,   the market place fee and other parameters. This function is called within the execute function and its output is used to calculate the  `actualAmount`, `protcolFessAmount and `marketPlaceFesAmount`.
+  The ` actualAmount  is calculated by subtracting the amount of the output token that is returned to the caller from the total amount that was transferred to  this contract.  This amount is then used as input to ` get Returned Ammounts` function to get the actual amount returned,protocol fee amount and marketPlace fee Amout. These amounts are then returned as output of ` execute`function. Therefore, `  protocolFees` amount  and  market Place fee  amount are not directly controlled or influenced by any external user interaction and are calculated solely based the internal state of contract and input parameter.

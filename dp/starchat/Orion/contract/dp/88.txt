@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the loop variable i is used to iterate over the path array, and the value of i depends on whether or not the supporting fee is being used. If the fee isn't being paid, then the i'th element of the amounts array corresponds to the amount that should be swapped from the ith token in path to its corresponding output token. However, if the fees are being charged, the same i-th element in amounts corresponds not to an amount to be exchanged, but rather to a balance of tokens that have already been exchanges, which is why the next line of code that uses the values in that array will be off-by-one.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason it depends is because the data is dependent on a loop. In the code, there is a for loop that iterates over a range of values. This loop is over all the tokens in a swap path and determines the output amount for each token based on its input amount. 
+
+In the case where the swap is not supporting a fee, each iteration of this loop updates the `amount` variable with the new output value. Since the input

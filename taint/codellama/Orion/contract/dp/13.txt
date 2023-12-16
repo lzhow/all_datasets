@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_data` struct contains the field `cur_factory_type`, which is used to determine the type of the current factory. If the factory type is `CURVe`, the amount out is calculated using the formula `OrinMultiPooLibraryl.GetAmountOuUV(Amount_in_, reserve_input_, reserver_output_)`. This formula uses the reserve input and reserve output to calculate the output amount. Therefore, `Amountout` is data-dependent on `Reserveinput`.
+ 

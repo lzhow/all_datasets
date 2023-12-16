@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `borrowSpeed` in the function `updateCompBorrowIndex` is not controlled by the user. It is a local variable that is assigned the value of `compBorrowSpeeds[cToken]`, where `compBorrowSpeeds` is a mapping that stores the borrow speeds for different cTokens. The value of `compBorrowSpeeds[cToken]` is set by the admin through the function `_setCompBorrowSpeed`. Therefore, the user does not have control over the value of `borrowSpeed`.

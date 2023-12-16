@@ -1,0 +1,4 @@
+  
+The variable _ value in function `approval` is a user-controlled variable.
+
+In the `Approval()` function, the `_spend` variable is set to the value of the amount of tokens that the sender is authorizing the spender to spend on their behalf. This value is passed as an argument to this function by a call to `transact()` from the contract's owner. Therefore, this value can be controlled directly by any user who has the ability to call the approval function. 

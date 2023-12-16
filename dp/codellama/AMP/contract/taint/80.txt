@@ -1,0 +1,5 @@
+  
+The variable `_partition` in `balaceOfbyPartion` is a function parameter, which means that it can be controlled directly by a user who calls the ` balanceofByParition` function. Therefore, the answer is yes.
+
+In Solidiy, function parameters are considered to be under the control of the caller of a contract. This means the contract cannot directly access or modify the values of function arguments, but it must use them as inputs to its own functions. In this case, `_balanaceofbyParitition`, the `_partiton` parameter is used as an input to the internal `_addTonToParion`, `_removeTOnFromParitiion, and _getBalanceofParation` functions, so the value of `_parition ` is under control by user and can affect the state of contract .
+ 

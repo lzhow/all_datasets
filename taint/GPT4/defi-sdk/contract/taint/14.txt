@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `input` in the function `hashProtocolFeeSignatureData` is of type `Input`, which is a struct that is passed as a parameter to the function. Since this function is marked as `public`, it can be called by anyone, including external users. When a user calls this function, they provide the `input` data, which means the user has control over the contents of this variable. Therefore, the variable `input` is controlled by the user.

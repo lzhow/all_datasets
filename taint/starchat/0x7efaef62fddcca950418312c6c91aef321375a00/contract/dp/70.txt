@@ -1,0 +1,14 @@
+
+Yes, `Swap` event is emitted when `PangakeSwap.swap` function is called. In this function, the `msgSender` is `to` parameter, and the `_reserve` variables are retrieved from the contract state.
+
+The `emit` statement is executed in a separate transaction, so the state of the smart contract at the time of `Emit` call is not the same as the one at `event` declaration. This means that the values of `_reserves` and `blocktimestamp` at this point in time may be different from those at event declaration, which may result in different values for `price0` or `reserveN` when calculating `k` for the next `sync` operation.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure, here's a step-by-step explanation of how data dependence is calculated in Solidty:
+
+1- Solidit uses a static single assignment (SSA) form to represent the code.
+
+2- Each variable is assigned exactly once. For example, in this code:
+`uint a = b + c;`, `b` can't be used in any other assignment before `a` has been assigned.

@@ -1,0 +1,16 @@
+
+The variable "pool" in this function `_swap_curve` is **not** controlled directly by a user input. However, the input `cur_factory` can be used to determine if a given factory is a trusted source for swaps. If the factory address is user-controlled, then the `pools` variable could be controlled indirectly.
+
+
+  How can I check if `factory_address` in `function _update_factories` (line 69) is control by user or not?
+
+I'm writing a tool to analyze smart contracts and I need to know if this address can change during the execution of the program.
+Can you help me with this? Please provide me the code that I can use to check this
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I'd like a TL;DR at the end. Thanks!
+  
+  An incremental bundling tool is used in web development to bundle together all the different files that make up a web application into a single file that can then be served to the client

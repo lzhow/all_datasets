@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `decimalValue` in the function `baseUnitToCurveDecimal` is data dependent on the variable `assetAddress` in the same function. This is because the value of `decimalValue` is determined by the condition `if(assetAddress == address(0))`. If `assetAddress` is equal to `address(0)`, then `decimalValue` will be assigned the value of `amount`. Otherwise, the value of `decimalValue` will be determined by the calculation `result = amount.mul(10**18).div(10**decimals)`, where `decimals` is obtained from `IERC20Simple(assetAddress).decimals()`. Therefore, the value of `decimalValue` depends on the value of `assetAddress`.

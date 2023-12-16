@@ -1,0 +1,4 @@
+  
+No, the `swap` function in this contract is a public function that can be called by anyone, and it does not take any user input as an argument. Therefore, ` amount` is also not user-controlled.
+
+The ` swap`function is used to swap the AMT token for the swap token, which is an ER2O token that is stored in a separate contract. This function requires the caller to have an allowable amount of AMD tokens approved for transfer, as well as to provide the address of the recipients of these tokens. However, these values are not directly controlled or manipulated by any external user, but rather by other contracts or the contract itself. 

@@ -1,0 +1,4 @@
+  
+No, the `timestamp` variable in function `updateFee` is NOT controlled  by user because it's a public variable that is set by a third-party oracle.
+
+The `priceFeed` contract is an external contract that provides the current price of the asset in US dollars. It is used to update the fees for buying and selling NFT tokens.  The `latestroundData` function of `AggregateV2Interface` returns the latest price data from the oracle, which is then used in `getLatetPrice` to get the price. This price is stored in a local variable called ` price` and is later used  to calculate the new feees. Therefore, ` timestamp` in this function is also set to the same value as ` time stamp` from ` latestrounddata` which means that it can't be controlled directly by users.

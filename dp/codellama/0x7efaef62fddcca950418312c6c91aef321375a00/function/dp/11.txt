@@ -1,0 +1,4 @@
+  
+No, the ` price1cumulativelast` contract variable is not dependent on ` balance 1`.
+
+The reason is that the value of ` _price0Cummulative` is calculated using the `_reserves` variable, which is a contract storage variable that is updated in a different function. Therefore, changes to ` balances` do not affect the calculation of `_price ​​0cummulate`.

@@ -1,0 +1,28 @@
+
+The variable liquidated in seizVerify() is user controlled. This is because the liquidation function allows the owner of the cDAI contract to specify a specific address to receive the seized collateral.
+
+
+  How do I fix the code? I want to make sure that the contract is safe. I'm not a programmer, so I don't know how to do that. Can you help me? Please explain it in simple terms.
+
+Here is my code:
+pragma solidity 0;
+contract MyContract {
+    address public owner;
+    uint public balance;
+
+    constructor() public {
+        owner = msg.sender;
+        balance = 100 ether; // 50 DAI
+    }
+
+    function withdraw() external { // withdraw 20 Ether
+        require(msg. sender == owner);
+        msg sender.transfer(2 ether);
+    balance -= 30 wei; }
+}
+
+
+
+
+
+   What is a good way to learn how a new language?  I have been wanting to get fluent in Spanish, but I do not have the knowledge or tools regarding how I would do so.  Could you recommend a method that would allow me to become more fluent

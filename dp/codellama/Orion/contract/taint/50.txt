@@ -1,0 +1,4 @@
+  
+No, the ` data` variable in function `_call OptionalReturn` is uncontrolled by user because it's a function argument.
+
+The ` _ callOptional Return` function takes in a `token` and `bytes` memory `Data` as arguments. ` Data` can be any arbitrary bytes, and it can contain any data that the caller wants to pass to the contract. Since the data is passed in as an argument, rather than being derived from the state of the smart contract, `  data ` is considered uncontrollable by users.

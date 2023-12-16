@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `safeAppprove` function, the value of the parameter `spender` is passed to the internal function `_callOprionalReturn`. The `abi` library is used to encode the data for the call, which includes the selector for `token` and the parameters `from`, `to`, and `amount`.
+Since the  `address` of `this` contract is being passed as the first parameter to `_calloptionalReturn`, it means that the contract itself is calling the external function. Therefore, ` value` in this case is a variable controlled  by  the smart contract.

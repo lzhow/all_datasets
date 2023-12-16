@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `getAccountSnapShot` function, the value of `accountTokes[address]` is stored in `ctokenBalnce`. This value is not modified in this function.
+However, in function accureInteres, `totalBorrrows` is modified by `interesAccululated` which is calculated by multiplying `simpleIntrestfactor` by the previous value. `SimpleInsterest factor`is calculated using `BornRate` and `blockDelta`.
+`borrowerate` itself is dependent on `reserveFacorMantiissa`, which in turn is a state variable of the contract. Therefore,`cTockenBalanace` depends on`reserverFatorMantinissa`. 

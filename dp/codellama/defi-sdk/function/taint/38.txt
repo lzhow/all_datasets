@@ -1,0 +1,4 @@
+  
+The variable 'hashTocheck' in function 'isHasUSe' is a user-controlled variable. It is labeled as 'Yes' because it can be manipulated by a malicious user to check if a particular hash is used or not.
+
+In the context of the contract, the 'IsHashused' function checks if an input hash has already been used to sign a message. This function takes a hash as an argument and returns a boolean indicating whether the hash was previously used. If the input is already used, then the transaction will be reverted. Therefore, if this function returns true, this means that the caller has successfully used the same hash to create a signature before, which is an undesirable behavior. 

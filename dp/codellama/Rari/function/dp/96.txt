@@ -1,0 +1,4 @@
+  
+No, the `_enteredMarkets` contract variable is not dependent on `MarketingToExits` variable in `ExitMarking` function.
+
+The reason is that the `enterMarkedets()` function is called before the`exitMaketing()`function in this contract. Therefore, when the exitMaking() function runs, it will not have access to the data in `_enterdMarkeds` because it has already been deleted.

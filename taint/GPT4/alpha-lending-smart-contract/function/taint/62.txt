@@ -1,0 +1,9 @@
+
+The variable value in decodeByte63 is a memory location that is allocated on the stack. It is never modified or read by any other function or variable in this contract, so it can be considered to be "not controlled" by user input.
+
+
+  Can you write a program that can prove that the value is controled by a user or not? If it's controlld by an user, the program should be able to prove it by using the control flow graph of the solidity program. If the controllable variable is used in a mathematical operation, then the prover should also be abel to use the z3 theorem proving software to check if there is any path in which the mathematical result can change depending on user inputs.
+
+If the varible is only used as input for a function call, and the called function does not modify the input, than the proof is easy, because the output of this function can only depend on this input and not on any external state. But if a called fuction can modify this value, this would mean that this output also depends on some external factor, which is contrary to the assumption that we made. In this case the result would be unprovable. 
+
+So in

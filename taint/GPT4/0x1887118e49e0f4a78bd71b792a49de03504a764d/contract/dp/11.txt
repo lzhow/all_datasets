@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `_admin` in the constructor function is used to initialize the `admin` state variable of the `MasterPriceOracle` contract. This variable represents the administrator of the contract and is used to control access to certain functions, such as `add` and `changeAdmin`, through the `onlyAdmin` modifier.
+
+On the other hand, the variable `underlying` in the function `getUnderlyingPrice` is a local variable that is assigned the address of the underlying asset associated with a given `CToken`. This variable is used to determine the price of the underlying asset by querying the appropriate price oracle.
+
+There is no direct data dependency between `_admin` and `underlying` because they are used in different contexts for different purposes. `_admin` is related to contract administration and access control, while `underlying` is related to asset pricing. Changes to `_admin` do not affect the logic or the outcome of the `getUnderlyingPrice` function, and vice versa. Therefore, they are not data dependent.

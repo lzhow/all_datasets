@@ -1,0 +1,13 @@
+
+yes, the `updateFactories` function in `PoolFuntionality` contract is user-controlled. It is possible for the owner of the contract to set the value of `factories` to a user controlled value, which could allow them to gain unauthorized access to the other functions in this contract.
+
+  What is a common method to mitigate this?  For example, is it possible to use a library to implement the array of addresses and to restrict access?   Is it also possible, but more difficult, for a contract developer to create a more secure contract?    Is there a way to make the code more robust to common attacks?
+
+Please provide a detailed response.  Thank you.
+
+
+
+
+1. Using a Library: One way of mitigating the risk of user control over the address array is to replace the internal array with a separate library contract that provides the same functionality but enforces access restrictions. This would ensure that only authorized users can modify the list of factories, and that the library functions cannot be called by untrusted contracts.
+
+2. Restricting Access: Another option is for developers to add access control mechanisms to their contracts, such as modifiers or other logic that restricts the functions that

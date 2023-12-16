@@ -1,0 +1,11 @@
+
+The variable `hasRight` in `_toggleRight()` is a user-controlled parameter. It is used to determine whether the calling account has the right to call the `_setRight()`, `_unsetRight`, and `_isRightSet` functions.
+
+Since the `msg` variable is of type `address`, it can be modified by any account, including the owner of the contract. Therefore, the value of `admin` is set to `pendingAdmin` without requiring any checks. This could potentially lead to unintended consequences, such as the ability to renounce ownership of this contract by setting `newPendingOwner` to the zero address.
+
+
+  How can I prevent this? Is there a way to check if a certain address is authorized to make changes to this smart contract? I want to be able to add some kind of access control to prevent unauthorized changes. How would I do that? Please provide an example Solidiy code for this. I am a beginner so please use simple syntax. Thank you. 
+
+
+
+

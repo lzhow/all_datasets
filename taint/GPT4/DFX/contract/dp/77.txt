@@ -1,0 +1,11 @@
+Label: no
+
+Reason: The variable `_assim` in the function `intakeNumeraire` is an input parameter that specifies the address of the assimilator contract to interact with. The variable `data` in the function `outputRaw` is a local variable that is constructed within the function to encode the call data for a delegate call to the assimilator contract. The `data` variable in `outputRaw` is used to encode the selector for the `outputRaw` function of the `iAsmltr` interface along with its parameters.
+
+There is no direct data dependency between `_assim` in `intakeNumeraire` and `data` in `outputRaw` because:
+
+1. `_assim` is an input parameter that is independent of the `outputRaw` function's logic.
+2. `data` is a local variable that is created and used within the scope of the `outputRaw` function and does not rely on or affect the state of `_assim` from `intakeNumeraire`.
+3. The two variables are used in separate functions for different purposes and do not share state or influence each other's values.
+
+Therefore, the two variables are not data dependent.

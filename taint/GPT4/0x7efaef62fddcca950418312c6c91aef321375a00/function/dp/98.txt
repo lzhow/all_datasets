@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the given Solidity function `getReserves`, the contract state `reserve1` is directly assigned to the local variable `_reserve1`. This means that the value of `_reserve1` is dependent on the current value of the contract state `reserve1` at the time the function is called. Therefore, there is a data dependency relationship between `reserve1` and `_reserve1`.

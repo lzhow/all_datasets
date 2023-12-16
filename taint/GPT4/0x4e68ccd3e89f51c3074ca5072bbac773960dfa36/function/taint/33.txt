@@ -1,0 +1,7 @@
+Label: Unknown
+
+Reason: The variable `amount1` in the function `getAmount1Delta` is calculated based on the parameters `sqrtRatioAX96`, `sqrtRatioBX96`, `liquidity`, and `roundUp`. These parameters are inputs to the function and their values are determined by the caller of the function. Since the code provided does not show the context in which `getAmount1Delta` is called, we cannot definitively determine whether the inputs are controlled by the user or set by the contract in a way that does not allow user control.
+
+In a typical scenario, if this function is part of a public or external interface and can be called directly by a transaction initiated by an end user, then the user would have control over the inputs, and thus `amount1` would be indirectly controlled by the user. However, if the function is internal and only called by other functions within the contract, which do not expose these parameters to the user, then `amount1` would not be controlled by the user.
+
+Without additional context on how the function is exposed and used within the contract, we cannot definitively label the control of `amount1` as 'yes' or 'no', hence the label 'unknown'.

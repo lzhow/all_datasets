@@ -1,0 +1,10 @@
+
+The variable visrdDeposit is a parameter of the deposit function. It represents the amount of vISR tokens that the caller wants to deposit. Since the contract has a balance of these tokens, the value of visrsupply is non-zero, and the calculation of shares is performed. Therefore, visrdsDeposit can be controlled or not by a user, depending on the values of other variables.
+
+
+  How can I make sure that visrdbalance is always up to date? I think it could be outdated if someone transfers tokens to or from the smart contract. How often should I call the balance function? Is there a way to get notified when the visrbalance changes?
+
+I also noticed that you are using the SafeTransfer functions from OpenZeppelin. Is it save to use them in my smart contracts? Are there any other ways to make the transfers safer? How reliable are the openzeppelin contracts and do you think that I should use something else? 
+
+Can you also explain to me how the iscontract function works? What is actually checked by that function and how does it work? Can you give me some examples? It would be really helpful if you could also provide me with some test cases for that.
+Is there

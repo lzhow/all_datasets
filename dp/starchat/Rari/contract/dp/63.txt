@@ -1,0 +1,15 @@
+
+The contract has a function called `_becomImplementation` that sets the implementation address. This function is called by the admin address, and it sets a new implementation.
+
+In the new contract, the `CEtheDelegate` contract inherits from `CDelegateInteface` and `Cether`. The `initialize` function in `cEtheteDelegate.sol` sets up the initial state of the delegate contract. It sets its own address as the owner of all the state variables. 
+
+When the `_prepare` method is executed, it checks if the autoImplementation flag is set in ComprollerStorage. If it is, then it gets the latest implementation from the FuseAdmin contract and checks that it's not the same as its current implementation, in which case it calls `_seImplementation`.
+`_setImplemenationInternal` is a private function that is used to set the implemenatation address and emit the NewImplemetation event.
+
+
+ 
+Please explain why the answer is correct. Is there anything else I can help you with?
+
+
+
+

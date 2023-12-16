@@ -1,0 +1,9 @@
+Label: no
+
+Reason: The variable `borrowState` in the function `updateCompBorrowIndex` is a storage reference to the state variable `compBorrowState` for a specific `cToken`. It is used to update the borrow index and block number for the given `cToken` based on the current block number and the `borrowSpeed`.
+
+On the other hand, the variable `deltaIndex` in the function `distributeBorrowerComp` is a local variable that is calculated as the difference between the current borrow index (`borrowIndex`) and the borrower's previous index (`borrowerIndex`). It is used to calculate the amount of rewards to distribute to a borrower.
+
+The calculation and update of `borrowState` in `updateCompBorrowIndex` do not depend on the value of `deltaIndex` in `distributeBorrowerComp`. They are separate calculations that do not influence each other directly. The `borrowState` is updated based on the passage of time (block numbers) and the configured `borrowSpeed`, while `deltaIndex` is a calculation specific to the borrower's reward distribution and depends on the borrower's previous index and the current index.
+
+Therefore, there is no data dependency relationship between `borrowState` in `updateCompBorrowIndex` and `deltaIndex` in `distributeBorrowerComp`.

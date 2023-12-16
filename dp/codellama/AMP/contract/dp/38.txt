@@ -1,0 +1,4 @@
+  
+No, the data in `_totalIndexPartions` is not dependent on `_value` or `_to` because it is a mapping that stores the index of each partition in an array of all partitions. It is only dependent of the partition name, which is passed as an argument in `transerByParition` function.
+
+The reason is that the `_addTotalIndex` and `_removeTotalindex` functions are called in other parts of code, and they do not depend on any of these variables. Therefore, `_indexTotalParitions ` is independent of `_balnceOf` variable.

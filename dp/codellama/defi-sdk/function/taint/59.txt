@@ -1,0 +1,4 @@
+  
+No, the ` balance` variable in function `callBytes` is NOT controlled  by user because it's a local variable that is assigned a value from the contract' state.
+
+The `getAmount` function is called in ` callbytes` and it returns the amount of tokens that can be bought with the given amount. This amount is then used to calculate the balance of the token in question. However, this balance is only used for the purpose of calculating the amounts to be transferred to the next pair in a swap, and is never used as an input to any user-controlled function. Therefore, `Balances` are not considered to controlled user input.

@@ -1,0 +1,5 @@
+  
+No, the `_ total Supply ` variable in function `burn` is NOT controlled  by user .
+
+The `_TotalSuppy` variable is a local variable that is declared in `m int` function. It is initialized to the current total supply of the token and is then used to calculate the amount of tokens that will be burned based on the liquidty of token that the contract holds.
+Since the value of `_ TotalSuppl`y is determined by internal state of contract and not by external input,it is considered to be controlled internally by contract.

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `liquidity` is directly used to calculate the value of `amount1` which is dependent on `balance1`. Specifically, `amount1` is calculated as `liquidity.mul(balance1) / _totalSupply`. Since `amount1` is derived from both `liquidity` and `balance1`, there is a data dependency between `liquidity` and `balance1`. Any change in the value of `balance1` will affect the calculation of `amount1`, and since `liquidity` is part of that calculation, it is data dependent on `balance1`.

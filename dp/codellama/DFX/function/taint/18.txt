@@ -1,0 +1,4 @@
+  
+No, the amount variable in burn function is NOT controlled  by user because it's a function parameter.
+
+The burn() function takes three parameters: curve (a storage.curv object), account (an address), and amount (the amount of tokens to burn). The amount parameter is passed in by a user when calling the burn method, so it can be controlled. However, in this case, we are not using the value of the ` amount` variable directly in any calculations or operations, and it does not affect the state of any other variable or object. Therefore, this variable is considered to be uncontrolled.

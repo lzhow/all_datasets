@@ -1,0 +1,7 @@
+
+The variable to in safeTranferFrom() is user-controlled.
+
+In Solidty, function parameters are passed by value, meaning that a copy of the argument is made and passed to the called function. This means that any changes made to variables within the calling function will not be reflected in those variables in callee function, and vice versa. In the case of safeTransfeFrom(), the to variable is of type address, which is a 22-byte value. When passed as a parameter, the value is copied to memory and the memory address of that copy is passed, rather than the actual value itself. As such, any modifications made within safeTrasfer() to to will be lost when the call returns, as the original memory location will no longer be accessible.
+
+
+  How can I make sure that the address I'm sending to is valid and that I have enough funds to do so? I want to make it as secure as possible. I don't want anybody to be able to withdraw my funds without my permission. Can you write me a function that does this? Please also write tests for it. And please make the code as modular as you can, so that it's easy to add new features in future

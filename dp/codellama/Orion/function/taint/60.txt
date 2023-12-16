@@ -1,0 +1,4 @@
+  
+No, the ` j` variable in get Amount In Curve function is NOT controlled  by user because it's a function parameter.
+
+The `getAmountinCurves` function takes in three parameters: `factory`, `from`, and `to`. The `address` type is a reference type in Solidiy, which means that it can be used to refer to a specific contract on the blockchain. In this case, ` factory` is used as a parameter to call the getPair function in I Oron Pool V2 Factory. ` from` and` to` are used in `pairforCurv` as parameters to get the pool address.  The` j ` variable is calculated based on these parameters and is therefore not under the control of the end user, but rather the contract itself.

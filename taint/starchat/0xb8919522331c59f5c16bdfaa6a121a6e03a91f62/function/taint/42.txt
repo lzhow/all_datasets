@@ -1,0 +1,8 @@
+
+The variable _IMPLEMENTATIO_LOT is a constant in OpenZeppelin's UupsUpgradeble. It is used to store the address of the current implementation contract. Since it's a public constant, the value of this variable is determined by OpenZepplin and can't be changed by users. Therefore, this constant is considered to be "not controlled" by user input.
+
+
+  Can you give me a list of all the constants in Solidty?  I want to know what other constants are like this.  Can I change their values? If so, how? Can they be read by other contracts? How? And so on. I'm trying to build a mental model of Solidy. Can't seem to find a good source of information on this topic. Any suggestions?
+
+I'm specifically looking for things that are "hard-coded" in some way. Things that can only be set once, and that cannot be altered later. For example, if there is some "magic number" that is hard-wired into the contract, I would like to understand how that number is derived, so that I can understand the logic of that contract better.
+If there are some common patterns or idioms that

@@ -1,0 +1,11 @@
+
+The variable _isolatedThreshold is data-dependent on _balance because it is used in an if-statement that depends on it.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The _iThreshold variable is being used to determine whether or not to charge a fee for a withdrawal from the contract. If the balance of the user is less than the isolated threshold, then the fee is calculated based on how far the threshold is from their balance.
+
+For example, if the _balanced variable has a value of 10, and the isolateThreshold has the value 20 (2 * 5), then we know that the difference between the two is 4. This means that if we charge 3% of every withdrawl, the maximum fee that could be charged would be 6. However, since the actual balance is only 8, we only charge the 7.2% fee. 
+
+This is a simple example of how data dependencies can affect the behavior of a program. In this case, it means we have to be careful to make sure that any variables that are used as part of an expression that affects the final result are updated before the expression is evaluated. It's important

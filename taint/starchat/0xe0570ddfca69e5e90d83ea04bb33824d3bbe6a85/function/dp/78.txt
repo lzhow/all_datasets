@@ -1,0 +1,8 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates the amount of want that should be withdrawn based on how much of the total supply is being withdraw.
+
+It does this by dividing the balance of all the shares (total supply) by the number of shares being withdrew (the _ shares parameter) and multiplying that by all of balance. This gives us the equivalent amount in want. 
+
+Then it uses the _ burn function to reduce the sender's balance by _ share. Then it calculates how many tokens the strategy contract (which is an external contract) has in its balance, and stores that in b (variable b).
+If b is less than r, it means that the withdraw function in strategy has withdraw more than it should have, so it calls withdraw on strategy with the difference between b and r ( _ withdraw). Then, after withdrawing, the want contract is checked again, this time in variable _ after.  The difference of _ _ and b, which is _ diff, is then checked. If _  _ is smaller than _, then r is set to b plus _.
+Finally, want is transferred to the msg. sender, with an amount equal to r

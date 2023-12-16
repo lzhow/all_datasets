@@ -1,0 +1,11 @@
+
+The variable self in function `clear` is a mapping from int to TickInfo struct. This mapping is declared as a storage variable in Tick library contract. Since mappings are reference types, the state of the mapping can be modified by calling functions on the Tick contract, and therefore the self variable is considered to be controlled indirectly by user input.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it has something to do with the way the ticks are stored and updated. Can explain it in a way that makes sense to me. Also, can you simplify the explanation as much as possible? It's not clear to my why you are using so many mathematical terms. For example, what is "safe math"?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Gatsby or Next.js? Why might you choose one over the other?  Please provide some examples of both   An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file

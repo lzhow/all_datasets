@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `bal_` in the function `viewNumeraireAmountAndBalance` is data dependent on the variable `_amt` in the same function because the value of `_amt` is passed as an argument to the `viewNumeraireAmountAndBalance` function of the `IAssimilator` contract, and the returned value is assigned to `bal_`. Therefore, any change in the value of `_amt` will affect the value of `bal_`.

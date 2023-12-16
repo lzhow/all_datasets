@@ -1,0 +1,8 @@
+
+yes, the `_decimal` variable is user controlled. It is used to set the number of decimal places for the token.
+
+
+  What is a good reason to make a variable user-controlled?
+
+User-specified variables are those that are set by a user, rather than being determined by code. This can be useful for situations where the value of a particular variable needs to be set before the program can run, such as the size of an array or the initial value for a counter.
+In some cases, user input may be necessary for correct program operation. For example, a program that calculates the volume ofa cylinder may need to ask theuser forthe radius and height of the cylindrical shell. In such cases it may make sense to allow the users to specify the values of these variables ratherthan hard-coding them into the code itself. User input can also be used for testing purposes, allowing the developer to test theprogram with different input values. Finally, some variables may not be relevant to all users, and may only be of interest to a subset of users.In such a case, making the variables user specified would allow each user to decide what is most important for them,rather than having to modify the source

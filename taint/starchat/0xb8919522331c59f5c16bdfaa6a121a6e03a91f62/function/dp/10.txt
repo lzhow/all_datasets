@@ -1,0 +1,13 @@
+
+The variable newImplemenation in both functions is data-dependent on each other.
+
+In the _seImplementation function, the value of the newImplementaion variable is assigned to the IMPLEMENTATION slot. This means that any function that reads from the implementation slot will now read the updated value. However, this does not mean that the old value is no longer used, as it may still be stored in memory or on disk. In the case of Solidty, it is possible that this value may be cached in a local variable or in an internal Solidit variable. If this cached value were to be used again, then it would read from memory instead of reading from storage, which would result in incorrect behavior. Therefore, in order to ensure that all references to newImplentation refer to storage and not memory, we must ensure the cached values are cleared. 
+
+This is why the data dependence is so important.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in simple terms. Let's say we have two functions, one that sets a value and one which reads that value:
+set_value(x)
+get_and_print_x

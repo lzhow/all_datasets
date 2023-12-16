@@ -1,0 +1,4 @@
+  
+No, the ` index` variable in function `getSurgoundingObsrvations` is NOT controlled  by user because it's a local variable and it can only be modified by other functions in this contract.
+
+The ` getSurounding Observations ` function is called by ` observe ` and ` write ` functions, and the index variable is passed as an argument to these functions. Therefore, any changes made to the value of the  ` Index`variable in these function will not affect the state of this variable. 

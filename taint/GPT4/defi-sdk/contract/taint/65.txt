@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `returnedAmount` in the function `getReturnedAmounts` is calculated internally within the smart contract based on the parameters `swapType`, `protocolFee`, `marketplaceFee`, `output`, and `outputBalanceChange`. These parameters are either constants, derived from the contract's state, or calculated from inputs that are validated against the contract's rules. The user does not have direct control over the value of `returnedAmount` as it is the result of a calculation that applies the contract's logic to the inputs and the current state. The user may influence some of the inputs indirectly through their actions, but the final value of `returnedAmount` is determined by the contract's code, not by direct user assignment.

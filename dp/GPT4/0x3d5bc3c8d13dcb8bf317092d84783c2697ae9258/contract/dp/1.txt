@@ -1,0 +1,3 @@
+yes
+
+In the function `_setPendingImplementation`, the variable `oldPendingImplementation` is directly assigned the current value of `pendingComptrollerImplementation` before it is updated to `newPendingImplementation`. This means that the value of `oldPendingImplementation` depends on the previous state of `pendingComptrollerImplementation`, which is then updated to the value of `newPendingImplementation`. Therefore, there is a data dependency between `oldPendingImplementation` and `newPendingImplementation` because the assignment of `oldPendingImplementation` is directly influenced by the value that `newPendingImplementation` is going to overwrite.

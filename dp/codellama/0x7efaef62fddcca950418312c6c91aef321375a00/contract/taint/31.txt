@@ -1,0 +1,4 @@
+  
+No, the ` feeon` variable in function `_mintsFess` is NOT controlled  by user because it's a local variable that is assigned a value based on the result of the `_ mintFees` function.
+
+The `_ mintsFees`function is called in `m int` and `burn` functions, and it returns a boolean value indicating whether the fee is on or off. This value is then assigned to the local ` feesOn ` variable, which is used to determine whether to update the liquidty pool or not. 

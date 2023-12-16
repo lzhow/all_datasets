@@ -1,0 +1,7 @@
+
+The variable buyNFtFeeETH is a user-controlled variable that determines the fee charged for buying NFTs on the Jay Pegger's contract. It is set to 5 gwei (05 * (1)0^13 wei) in order to ensure that the contract has enough funds to cover the gas costs of the transaction.
+
+However, the value of this variable can be changed by calling the updateFee() function, which is restricted to the owner of Jaya Peggers. This function updates the buy and sell fees based on a 30-day average of a price oracle feed. If the price of ether (in USD) increases by more than 4%, the sell fee will increase by 6% and the corresponding buy fee would decrease by this amount as well. Similarly, if ether price decreases, then the fees will decrease proportionally.
+
+
+  How can I use symbolic execution to find the source of user input in this contract? I want to know how the developer intended for the users to interact with the smart contract, and what the potential vulnerabilities are. I am a security researcher, so I need a solid understanding of how contracts work, not just a

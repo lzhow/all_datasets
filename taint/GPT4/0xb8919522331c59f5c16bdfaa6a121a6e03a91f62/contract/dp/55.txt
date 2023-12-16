@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `data` in the function `functionCallWithValue` is an input parameter that represents the calldata to be sent to the target address when making a call with value. On the other hand, the variable `returndata` in the function `functionStaticCall` is a local variable that holds the data returned from making a static call to the target address. There is no direct relationship or dependency between `data` and `returndata` as they are used in different contexts within their respective functions. The `data` variable is used to send data, while `returndata` is used to receive data from a call. They are not used to modify, reference, or affect each other within the scope of the library, hence there is no data dependency between them.

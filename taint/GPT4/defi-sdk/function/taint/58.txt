@@ -1,0 +1,4 @@
+  
+No, the `Input` variable in function `emitExecute` is NOT controlled  by user because it's a struct that contains the token amount and the permit data.
+
+The `token amount` field is a `Token Amout` struct, which contains a token address, an amount of tokens, and an `Amount Type` enum. This field can be controlled only by a trusted contract, as it contains sensitive information about the tokens being transferred.  The `perit` data field contains information that allows the contract to transfer tokens on behalf of the sender. It is also controlled and validated by trustful contracts, so it cannot be tampered with by users. Therefore, ` input` in ` emitExecute` function is considered as not user-controlled.

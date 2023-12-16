@@ -1,0 +1,4 @@
+  
+No, the `_balaces` variable is NOT controlled  by user in this contract.
+
+The `_allownaces ` variable stores the amount of tokens that a user is allowed to spend on behalf of another user, and it's not directly controlled or modified by a single user or a group of users. Instead, users can modify the allowances by calling the `approval` function, which is a part of the ER721 standard. This function allows a spending contract to approves a certain amount to be spent by another contract on its behalves.  The allowences are stored in a mapping, where the key is an address of a token holder and the value is another mapping that stores allowence for each spennding contract address. Therefore, `_alowances ` is indirectly controlled and modified  through the approval function.

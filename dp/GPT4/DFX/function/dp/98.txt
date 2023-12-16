@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `_reserveApproveTo` in the function `includeAsset` is not data dependent on the variable `_numeraireAssimilator` in the same function. The variable `_reserveApproveTo` is used as an argument in the function `IERC20.safeApprove`, which is called conditionally based on the comparison `_numeraire != _reserve`. On the other hand, the variable `_numeraireAssimilator` is used to update the `addr` field of the `Storage.Assimilator` struct. There is no direct data dependency between these two variables.

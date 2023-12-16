@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `account` in the function `isContract` is an input parameter that is independent of any other function's variables. It is used locally within the `isContract` function to determine if the address provided is a contract. On the other hand, the variable `target` in the function `functionDelegateCall` is also an input parameter that is specific to that function. There is no direct relationship or data flow between `account` and `target` within the given code snippet. Each function operates independently with its own input parameters, and there is no code indicating that the value of `account` is derived from or affects the value of `target`. Therefore, they are not data dependent.

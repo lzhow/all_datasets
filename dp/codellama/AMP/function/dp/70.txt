@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_transerByParition` function, the `toParitition ` variable is calculated by calling the`_getDesinationParittion` method, which takes the data `_data` and the current partition `_fromParitiion`. This means that the value of ` toParion ` is dependent on both `_ data`and `_ fromPartion `.
+On the other hand, in `_ addTokenTOPartition`, the partition is passed as an argument, so it is not dependent directly on `_ partition`. However, it does depend on it indirectly through the call to `_getdestinationPartiton`in `_ transferBypartition`.
+Therefore, `_ to` is data-dependent on` _ partition` because it depends on a variable that is itself data - dependenton `_ parition`.

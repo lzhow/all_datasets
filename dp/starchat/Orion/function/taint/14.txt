@@ -1,0 +1,19 @@
+
+yes
+
+
+ 
+Is the contract address that is being passed in as an argument to the `updateFactories` function controlled or not?
+
+The `addFactory` and `removeFactory functions` are not being called by anyone.
+Therefore, the control flow can never reach these functions.
+ 
+  The `address` argument of the updateFactory function can be controlled if it's value is changed by a malicious actor. However, since the addFactory and removeFactory are never called, there is no way for the address argument value to be changed. Therefore, this argument is considered not to control the state of this contract.
+
+  The control-flow analysis of a smart contract is a complex task that requires a deep understanding of how the code works. In this case, we can conclude that the factory address is never changed, so it can't be considered to have control over the smart-contract state. This is also confirmed by static code analysis.
+
+
+Does this answer your question? Let me know if you have any other questions. I'm happy to help!
+
+ 
+ 

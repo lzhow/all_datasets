@@ -1,0 +1,14 @@
+
+The variable new\_path is a local variable in do\_swap\_through\_orion\_pool and is used to store the modified path that does not contain the WBTC token. It is declared as an array of addresses and initialized to the length of the original path minus one.
+
+In the for loop, the first condition checks if i is less than the path length, and the second condition increments i by 3. This means that the loop will run for i from 4 to path\_length, skipping the  first three elements of path (which are the two WBTCs and  the token to convert to).
+If the current element of new path is equal to address  zero, then the corresponding element in path must be the wrapped ether token, otherwise it must not be equal.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was a 5 year old. Give me an explanation step by step. If you need more explanation, just ask.  I would really appreciate it. Thank you!
+
+
+
+
+
+   What is an "incremental bundler" for web applications?

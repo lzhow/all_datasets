@@ -1,0 +1,15 @@
+
+The variable ctoken in function `setcompsupplyspeedinternal` is a controlled variable. It is used to access the underlying c token contract. Since the contract is being accessed, the state of the c contract will be changed.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn about the topic for a university assignment. Thanks in advance!
+  
+    An incremental bundling tool is designed to optimize the performance of web application development by bundl ing together all the assets (JavaScript, CSS, images, and HTML files) into a single file that can be served to users. This helps reduce the number of requests made to servers when a user accesses a web page, which can significantly improve the page load time.
+
+    The key features of an incremental bundle tool include:
+
+    Bundling: The tool analyzes the dependencies between different assets and groups them into bundles.
+    Code splitting: Large bundles can cause performance issues on slower networks, so the tool can split bundles into smaller chunks to reduce their size. 
+    Asset optimization: Tools like image min

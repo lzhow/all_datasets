@@ -1,0 +1,15 @@
+
+The contract has 4 state variables: `reserve`, `blocktimestamplast`, and `klast`. The function `getReservse` is a view function that returns the current values of these variables.
+
+`Reserve0` and `_reserve` are  `uint` variables that are used to store the balances of the two tokens in a pair. These variables are updated in `_update` function. 
+
+`_safetransfer` takes three parameters: the address of a token contract, the recipient address, and the amount to be transferred. It calls the `transfer()` function of that token with the provided parameters.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is used in web development to bundle together the various components of an application into a single file that can be served to the user's browser. This allows for faster page loads and reduces the number of requests made to servers when a user accesses a web page.
+
+   There are several incremental bundle tools available, including Webpack, Rollup, Browserify, Parcel, esbuild, etc. Each tool has its own strengths and weaknesses, so it's important to choose the one that best fits your specific

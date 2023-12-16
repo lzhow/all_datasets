@@ -1,0 +1,12 @@
+
+The function getUserAccout is a view function, which means it does not modify the state of the contract. Therefore, it is not possible for the value of _use to change during the execution of this function.
+
+However, the _sharesAmount variable is modified in this functions. It is possible that the user has borrowed some of their collaterals, and therefore the amount of shares they have borrowing is different from the total amount they own.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain it. Let's start with the calculate function:
+1. We take in two parameters, an ERC-223 token and a uint value. 
+2. In the internal scope, we declare a storage variable called pool, that is of type Pool. This variable will hold the data for a specific pool for that token. (We assume that there is only one pool per token.)
+3. Next, in a new scope we calculate the pool's total liqudity shares. To do this, first we get the address of that pool by using the "address" function on our token parameter. Then, using that address, look up the corresponding pool data in our

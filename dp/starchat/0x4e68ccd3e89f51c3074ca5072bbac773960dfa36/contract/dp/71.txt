@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the `clear` function deletes the entry for `tick` from the mapping `Tick.self`. This means that any variables stored in `info` will no longer be accessible after this point. However, the value of `liqudityNet` is stored within `inf` and is used to update the liquidiy of the adjacent ticks. Since `Clear` deletes `Info` before updating the neighboring ticks, this means the updated values of liqidityNet will be incorrect.
+
+
+  Can you explain why this is true?
+ 
+  The reason why the self variable in clear is data-dependent on feeGloabl0x108 in cross is because the clear function is deleting the entire entry in self for the given tick. This causes the info variable to become inaccessible and any changes made to it will not be reflected in any other variables. Therefore, any calculations that rely on info will become incorrect, as the values stored there are no longuer valid. In the cross function, however, feeGlobalX018 is being used in calculations to determine the new values for liquiudityGros and liqiudtyNet. These

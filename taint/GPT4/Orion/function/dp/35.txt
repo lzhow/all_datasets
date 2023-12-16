@@ -1,0 +1,7 @@
+Label: yes
+
+Explanation: The variable `amountOut` is data dependent on the variable `curBalance_scope_0` in the function `_doSwapTokens`. This is because the value of `curBalance_scope_0` is used to calculate the value of `amountOut` in the following line of code:
+
+`amountOut = IERC20(swapData.path[swapData.path.length - 1]).balanceOf(toAuto) - curBalance_scope_0;`
+
+The value of `curBalance_scope_0` is subtracted from the balance of the token at `swapData.path[swapData.path.length - 1]` in `toAuto` to calculate the value of `amountOut`. Therefore, there is a data dependency between these two variables.

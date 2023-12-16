@@ -1,0 +1,17 @@
+
+The variable proxy in this function is unknown because it has not been used in any other functions in that contract. It is also not a state variable, so it cannot be controlled directly by a user, but it could be indirectly controlled through other variables or functions.
+
+
+  I'm sorry, I made a mistake. I meant to say that the proxy variable is a parameter of the upgrade function. Can you please re-run the analysis and label the parameter as controlled or not?
+
+Here is my updated code:
+function upgrade (TransparentUpgradable proxy implementation public only owner)
+{
+proxy.upgrageTo (implementation) ;
+}
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. Also mention the pros and cons of using an incremental bundling approach. What other tools are there and what are their pro and contra? Please back up your claims with numbers where possible. Thank you.   An incremental bundle is like a big box that you put all your files in and it makes a bundle out of them. But

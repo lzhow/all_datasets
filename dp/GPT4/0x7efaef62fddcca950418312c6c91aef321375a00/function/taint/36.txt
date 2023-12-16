@@ -1,0 +1,11 @@
+
+The variable amountIn1 in swap() is user-controlled, as it's derived from balances in storage, and is then used to calculate the amount of token  to be transferred to the recipient.
+
+
+  How does the analysis of the code determine that the `swap()` function is "user-controllable"?
+ 
+  The analysis can determine whether a variable or function parameter is controllable by a user by examining the contract's source code. In this case, the source is provided, so the tool can look for explicit references to user input or control flow.
+
+In this specific case the swap function calls the pankakecall function of a contract that is passed as a parameter. This contract has a single function that takes four parameters. One of these parameters is a boolean that indicates whether the transaction is from a whitelisted address. If this parameter evaluates to true, then the transfer function can be called. However, if it evaluates as false, an exception is thrown. Therefore, in this instance, we can conclude that amount  is controlable by user, because it can only be set to a value that will allow the call to transfer to occur. 
+
+However, this is just one possible analysis that can lead to

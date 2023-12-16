@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `tokenA` in the function `pairFor` is an input parameter that is used to determine the address of the pair in the liquidity pool. It is independent of the state of the contract and does not rely on any other variables except for its input parameters (`curFactory` and `tokenB`).
+
+On the other hand, the variable `to` in the function `_swap` is also an input parameter that determines the recipient of the output tokens after the swap operation. It is used within the scope of the `_swap` function to direct the transfer of tokens to the correct address.
+
+There is no direct relationship or dependency between `tokenA` in `pairFor` and `to` in `_swap`. They are used in different contexts and for different purposes within the contract, and changes to one do not affect the other. Therefore, they are not data dependent.

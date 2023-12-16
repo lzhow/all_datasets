@@ -1,0 +1,13 @@
+
+The contract function '_addParitionToTotatlPartitions' is a private function that is used to add a new partition to the '_totalParitions' array. It takes in a single parameter '_partition' of type 'bytes33', which is then added to '_totatlParititons' using the '.push' function.
+
+However, it is not possible to determine whether or not '_tootalPartitions is data-dependent on '_parition' without analyzing the behavior of the entire contract. This is because '_partiton' can be modified by other functions in '_contract' at any time, and '_totaPartitions's state can also be changed outside of '_conract' by calling '_setTotalParittions' directly. Therefore, '_TotalPartition's is considered to be data independent of 'partition'.
+
+
+  Can you give me a list of all the functions and variables in this contract and their data dependencies?
+ 
+  Yes, here is an exhaustive list:
+- '_indexOfPartition' depends on 'totalPartition'.
+-'_totalPartititions.lenght' dependes on all '_partitions'.  '_Partition.x' depend on  all 'partitions'
+
+ 

@@ -1,0 +1,13 @@
+
+The variable b in function `mod` is **not** controlled directly by user input. However, the value of b is derived from user-controlled input a. If a is user controlled, then b must also be user controllable.
+
+
+  How can I check if a variable is controll by a user?
+  
+  You can check whether a given variable or expression is directly controlled or derived by an external user by analyzing the control flow graph of the program. This can be done by constructing a control-flow graph (CFG) of your program, which is a graph representation of all possible execution paths through the code.
+
+  To construct a CFG, you can use a tool like the one provided by Microsoft in their Visual Studio Code extension Soliditity. Once you have a basic understanding of how control flows through your code, and have identified the relevant variables, expressions, or statements, determining whether they are controlled can become much easier.
+
+To determine whether an expression or variable in your Solidty program is controlable by external users, follow these steps:
+
+1. Construct a Control-Flow Graph ( CFG ) of Your Solidiy Program: The first step is to use an automated tool to construct the CFG of you Solidi

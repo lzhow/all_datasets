@@ -1,0 +1,8 @@
+  
+The answer is yes.
+
+In the `updateCompIndexBank` function, the value of `compIndexSupplied` is calculated using the formula:
+`compDeltaIndex_supplied = delta_blocks * comp_speed_borrows`
+where `delta_Block`s is equal to `block.Number - compState_BORROW.Block`.
+This formula is dependent on `CompStateBorrrow.Index`, which is updated in `FlywheePreborrweraction` using `BToken_b.Borkrow_index()`.
+Therefore, `UpdateCompborrwIndexbank` depends on`Fyewheelpreboroweraction`.

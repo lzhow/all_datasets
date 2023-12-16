@@ -1,0 +1,8 @@
+
+The variable token B in this function `_addliquidity` is user controlled. It is passed into the `_AddLiqudity` function as an argument, and is used to calculate the optimal amount of token A and token b to add to the liquidiy pool. However, the value of this variable is ultimately determined by calculations made by this smart contract, so it can be considered to be controlled internally by it.
+
+
+  Can you explain how the contract calculates the amount A, B and liqidity? I understand that the calculation is based on the price of the two tokens at the time of calculation, but how does the smartcontract know the current price? Is it possible for the contrac to manipulate the prices of tokens to make the calculations more favorable for it? If so, how is this prevented? Please explain in detail.
+
+Also, please explain why the token variable B is considered user-controlled. Is this because the owner of a liquiudity pool can set the B token to any value they want? Or is it because it's value is determined based off the other two token variables?
+If it was the latter, then wouldn't the A token also be user controllable? Why is only

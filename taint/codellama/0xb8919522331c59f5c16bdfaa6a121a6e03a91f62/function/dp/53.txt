@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `sendValue` function, the value of the local variable 'success' is determined by the return value from the call expression `(bool succes,) recipent. call{value:amount}("")`. The value is not directly dependent on any other variable in this function.
+On the other hand, in ` function delegateCall`, the success variable is set to the result of a delegatecall expression. This expression is dependent upon the target address and the data passed to it. However, it is unclear whether the delegate function modifies the state of any variables in its own scope, so it cannot be determined whether success is data-dependent on `recipient` in sendvalue. Therefore, we label it as 'Unkown'.

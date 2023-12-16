@@ -1,0 +1,3 @@
+Yes, the variable `_nBals` in the function `calculateTrade` is data dependent on the variable `_weights` in the same function. 
+
+Explanation: In the function `calculateTrade`, the variable `_weights` is passed as an argument to the function `calculateFee`, which is called inside a loop. The loop iterates over the length of `_nBals` and calculates the value of `_psi` using the `calculateFee` function. Since `_weights` is used as an input parameter to calculate `_psi`, there is a data dependency between `_nBals` and `_weights`.

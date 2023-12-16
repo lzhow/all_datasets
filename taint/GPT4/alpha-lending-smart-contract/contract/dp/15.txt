@@ -1,0 +1,3 @@
+yes
+
+The variable `pool` in the function `setPool` is data dependent on the variable `_totalBorrowShares` in the same function. This is because within the `setPool` function, the `pool.totalBorrowShares` state is directly assigned the value of the `_totalBorrowShares` parameter. This creates a data dependency relationship where the state of `pool` is influenced by the value of `_totalBorrowShares`.

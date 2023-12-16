@@ -1,0 +1,7 @@
+no
+
+The variable `actualOutputAmount` in the function `execute` is used to represent the actual amount of tokens that are transferred to the user after a swap operation is completed. It is calculated based on the balance changes of the input and output tokens, fees, and the type of swap.
+
+The variable `selector` in the function `getPermitSelector` is used to determine the correct function selector for different types of permit functions based on the `permitType`. It is used to construct the correct function call for token approvals.
+
+There is no direct data dependency between `actualOutputAmount` and `selector` because they are used in different contexts and for different purposes within the contract. `actualOutputAmount` is related to the execution of swaps and the transfer of tokens, while `selector` is related to the construction of permit function calls for token approvals. They do not share state or influence each other's values.

@@ -1,0 +1,8 @@
+
+The variable _Reserve0 in swap() is a private variable that is used to calculate the amount of token  that needs to be swapped in order to get the desired output amount. It is updated every time the swap function is called, and is determined by taking the balance of the token in this contract and subtracting the current reserve of that token (which is stored in reserve{0/1}).
+
+Since the reserve variables are updated in real time everytime the contract is interacted with, the value of _Reserv0 can be considered to have some degree of control over the state of this smart contract. However, since the smart contracts are designed to work with specific tokens, this degree is limited to the specific token that the pair is based on.
+
+
+  How can I use this information to make my smartcontract more secure? I am a beginner and would like to learn best practices. Can you give me some examples of how I could use the information you provided me with?
+Can you also explain how the code you gave me can help me make the my contract more safe? How does the use of variables like _reserv0 help make it more secured? Can I just copy and paste the entire code into my own contract

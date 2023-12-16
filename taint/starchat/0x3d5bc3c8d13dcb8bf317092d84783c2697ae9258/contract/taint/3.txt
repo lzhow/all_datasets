@@ -1,0 +1,9 @@
+
+yes, the `msg` object is a special object in Solidiy that contains information about the current call, such as the sender and the value sent with the call. In this case, `pendingAdmin`, which is of type `address`, is being assigned the result of `newPendingadmin`, a parameter of the `_setPendignAdmin()` function. Since `sender` is also of this type, and since the assignment is done in a function that is called by an external caller, we can conclude that ` pendingadmin` and ` msg` are both controlled directly or indirectly by users.
+
+
+  Can you explain how the code works? I'm having trouble understanding the control flow and how each function is related to one another. I also don't understand why the compiler is giving me an error about `Error: Source file requires different compiler version (current compiler supports  ^05012021.08.23) - note that nightly builds are considered to be strictly less than the released version`.
+
+
+
+

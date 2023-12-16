@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `aAdjusted` in the function `lte` is not data dependent on the variable `beforeOrAt` in the function `observeSingle`. The variable `aAdjusted` is calculated within the `lte` function using its own parameters `time` and `a`, and it does not reference or use any value from the `beforeOrAt` variable. The `beforeOrAt` variable is used within the `observeSingle` function to hold an `Observation` struct instance, and its scope is limited to the `observeSingle` function. There is no direct relationship or dependency between `aAdjusted` and `beforeOrAt` as they are used in separate functions and do not share data or state.

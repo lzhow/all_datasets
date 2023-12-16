@@ -1,0 +1,4 @@
+  
+No, the variables ` r` and ` b` are independent in this function.
+
+The variable r is calculated based on `bal` which is a local variable in `depost()` function, and it is also calculated using `total_supply` of the contract.  The variable b is local to ` withdraw()` and is used to calculate the amount of tokens to be transferred to user. However, these two variable are calculated independently and are never used together in any calculation. Therefore, there is NO data dependence between these variables.

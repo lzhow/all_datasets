@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_curve` method is called, which in turn calls the internal `_add_liquidty` and `_getreserves` methods.
+`_addliqudity` takes in `tokena` as an argument, and `tokens` is passed to `_reservereserves`.
+If `tokena` or `weth` are passed as arguments to `add liquidty`, then `get reserves`, `pairforcurves` will be called.  `PairforCurves`, in its turn, calls `Getreservestoken` which takes `curfactory` , `input` `output` arguments. `Input`,`output`, and`cur factory`are all passed from the`swapcurvemethod`.  The `Curfactory`, input and output arguments are all dependent on `amoutns` because `ammounts `is passed into `swaps` from `do swap`. Therefore, `Reserveinput`, which is dependent upon `Amount`is also dependenton `Amoutn`.

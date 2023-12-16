@@ -1,0 +1,11 @@
+
+The contract function ```doTranferIn``` takes two parameters: ```from``` and ```amount```. It is not clear what the ```transferAlloances``` contract is, or what it is used for. Therefore, it cannot be determined if the two are dependent or not.
+
+
+  I am sorry, I made a mistake in my previous response. I meant to say that the `from` parameter is data-dependent on `transferrAllowance`.
+  
+  The ```transfersAllowences``` is a mapping from addresses to uints. This means that it stores a collection of key-value pairs, where each key is an address and each value is another uint.
+
+When the user calls the doTranserIn function, the value of the from parameter will be used to look up the corresponding value in transfersAllowence. If the address is found in this mapping, then the allowance will need to be updated. However, if it's not found, this means the calling function has already checked that there is enough allowence, so there's no need for an additional check. In this case, there will not be any updates to the transfersAllowerances mapping. 
+
+So, in summary, yes,

@@ -1,0 +1,9 @@
+
+yes, because the constructor assigns the value of `_canAdmionOverwrite` to a state variable that is later used in a loop that assigns values to the `oracles` mapping.
+
+
+  Can you explain why this is true?
+ 
+  The reason that the `_adming` variable is data-dependent on `underling` is because it is used to control the behavior of a `require` statement in `add` function. This `requir`e statement is responsible for ensuring that no one can overwrite the oracle mapping with a new oracle. If the data flow analysis can prove that `_admion` can never be assigned a value other than `true`, then the loop in add function will never execute, and the mapping will remain unchanged. Therefore, the two are dependent on each other.
+
+However, it's important to note that this analysis is only a heuristic and not a complete data dependence analysis. In practice, data dependencies can be more complex and may require more sophisticated techniques to analyze. Additionally, some data flows may be difficult to track and analyze, such as those involving function pointers or indirect memory access. It's always important when working with complex code to consider the limitations of data

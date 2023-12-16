@@ -1,0 +1,10 @@
+
+The variable utilisationRate in calculateInteresRate can be controlled or not be controled by user depends on the value of OPTIML_UTILITY_RAT and EXCES_ UTILITY RAT.
+
+OPTIMO_UUTIILITY is 80% and it can not change.  EXCE_ UUTITY is  20%.
+If the utilisatioRate  is greater than  OPITIMO_UUITY, the excess rate is calculated by utiliatio rate minus OPTIMI_ utility rate and divided by EXCA_T_utility rate. If the result is positive, then the interest rate will be increased by base borrow rate plus rate slope  plus the rate of slope times excess utilitization rate ratio. 
+
+Otherwise, if utilitzation rate less than or equal to OP_TIMI_TY, interest will increase by  base rate + utilizatio_rate times slope.
+
+
+  Can you explain how the code works? I'm not very good at math so I'd appreciate a step-by-step explanation of how it calculates the new interest rates. Also, what does the "w" in "WAD" mean? Is it just a typo or

@@ -1,0 +1,13 @@
+
+The variable reserve is a uint type, and it can be controlled or not by user depends on the situation.
+
+In the smart contract, the reserve variable is used to store the amount of token in contract. When user call the mint function, they can use the token to exchange for liqudity. In this case, user can control the value of reserve. However, if user does not call mint, or user calls burn function to withdraw liqulidity, then the contract will not control reserve any more.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+  
+    An incremental bundlers like Webpack is typically used in modern web application development to bundle together all the different files that make up a web app, such as JavaScript, CSS, HTML, images, etc. into a single file that can then be served to the browser. This makes it easier for the web browser to load the app and makes the initial load time faster.
+
+    The

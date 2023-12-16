@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the value of `USD` is determined by the price feed, and the `buy` and `seller` fees are determined based on this value, so the data is dependent on `the price`.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code defines a smart contract named Jay that inherits from two other contracts: `ERC2` (for the token functionality) and Owned (to allow the owner to update the developer wallet address). The contract also uses the Safe Math library to prevent overflow and underflow errors. 
+
+In the constructor, the smart contracts sets the initial price of Jays to 5 USD. This is set by calling the AggregationV2 interface, which is an external data source that provides the latest price in USD for JPY.
+
+
+
+

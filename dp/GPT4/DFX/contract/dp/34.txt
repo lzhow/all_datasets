@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The contract state `curves` is not data dependent on the variable `_name` in the function `newCurve`. The `curves` mapping is updated in the `newCurve` function, but it is not influenced by the value of the `_name` variable. The value of `_name` is used to initialize the `Curve` contract, but it does not affect the `curves` mapping. Therefore, there is no data dependency between the two.

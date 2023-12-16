@@ -1,0 +1,7 @@
+  
+No, the `soldNTF` contract is not dependent on `amoutns` variable in ` buyjaywithERc 51` function.
+
+The ` ntfSsld` state is updated in two places in this contract:
+1. In the` buy jay`function, it is incremented by the total number of NFT tokens sold. This is done by calling the `_m int` method, which burns the JPY tokens and transfers the Ether to the developer's wallet.  The amount of Ethereum transferred is calculated using the current price of JPT and the amount sold, as well as the fees.  2.In the  ` sell`  function, `ntfsSld ` is decremented  by  the number  of  NTF tokens  sold  using  `_burn`   method.   
+In neither case is ` amounts` used to update the value of `Ntfssld`. Therefore, there is no data dependence between ` amount` and ` NtfSSld `.
+ 

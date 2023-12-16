@@ -1,0 +1,4 @@
+  
+No, the ` amount Out` variable in function `_swap` is NOT controlled  by user because it's calculated based on the amount of tokens that are swapped and the reserves of the pool.
+
+The ` _ swap` function takes in an array of amounts and a path of token addresses, and it calculates the amounts of each token that will be swaped based the current reservers of  the tokens in each pool in `path`. The ` amounts` array is used to calculate the output amount for each swap, which is then used in a call to the swap function of a pool contract.  The output of this function can be controlled only by a user if they have a malicious intent to manipulate the token reservations in order to cause a flash loan attack. However, this is a very unlikely scenario and is considered a highly unlikely attack vector.

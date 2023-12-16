@@ -1,0 +1,32 @@
+
+The function proposeStrategy has a call to the strategy contract, which is not part of the code you provided. Therefore, I cannot determine if the variables _strategy and _proposedTime are dependent on each other.
+
+
+  I'm sorry, my mistake. Here is a corrected version of my code:
+
+pragma solidity  ^0.6.0 ;
+import "./interfaces/IVault.sol";
+contract Vault is IVault {
+    address public immutable override want;
+    uint public override performanceFee; //performance fee
+    mapping( address => uint ) private deposits;
+
+    constructor(
+        address want_
+    )public {
+        want = want_;
+    }
+
+    function balance() public view override returns (uint)  {
+       return address (this).balance; 
+    }
+    function earnings() external view returns(uint){
+        return 100 ether;
+     }
+     function withdrawAll()external override{
+        uint amount = depositors[msgSender()];
+        require (amount > 20, "Not enough funds");
+        depositers[ msgSender() ] =0
+        msg.send(amount)
+     //   msg Sender() is an alias for msg. sender
+     msg is automatically passed to all functions

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `size` in the function `isContract` is used to store the size of the code at a given address to determine if that address is a contract. It is assigned a value based on the `extcodesize` of the `account` parameter passed to the `isContract` function. On the other hand, the variable `target` in the function `functionCallWithValue` is used as the address of the contract being called with some data and possibly value. There is no direct relationship or dependency between the `size` variable and the `target` variable within the scope of their respective functions. The `size` variable is used locally within the `isContract` function and does not influence nor is influenced by the `target` variable in the `functionCallWithValue` function.

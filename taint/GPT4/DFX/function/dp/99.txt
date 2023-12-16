@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `b` in the function `tryDiv` is data dependent on the variable `b` in the function `sub`. This is because the value of `b` in the function `tryDiv` is used in the condition `if (b == 0)` to determine the return value. The value of `b` in the function `sub` is passed as an argument to the function `tryDiv`, which means it can affect the outcome of the condition and therefore the return value.

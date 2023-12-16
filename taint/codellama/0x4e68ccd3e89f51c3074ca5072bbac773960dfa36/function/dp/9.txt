@@ -1,0 +1,5 @@
+  
+No, the variables ` flipedLower ` and ` slotStart ` are independent.
+
+The variable  `fipedlower` is defined in function `_updatePostion` and is used to determine whether the liquidities of the tick lower and tick upper are fipied. It is not dependent on any variable in `function _swap`.
+On the other hand, `SlotStart`, which is a variable defined within the `Swaps` function, is dependent only on `blocktimestamp` which has no relationship with the `_updatPosition` variable. Therefore, it is independent of `FlipLower`.

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `require` statement checks if the current block timestamp is less than or equal to the dead line. If it is not, then the transaction will be reverted.
+`structhash` is calculated using the keckak 224 hash function. It is a hash of the owner address,spender address ,value, nonce and deadlines.  The nonces are incremented after each transaction. Therefore, if a transaction is made with a deadine that is greater than the previous deadlin, it will result in a different `struchash` value. Hence, `struchash ` is data dependend on ` deadLine`.
+Similarly, in second function the same ` structhash ` value is used. So, yes,` struct hash`is data-dependent on`dealine`.

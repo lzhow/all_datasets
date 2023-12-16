@@ -1,0 +1,11 @@
+
+The variable id in buyerc712 is data-dependent on _scope0 in updatefees because the for loop in buyeRC77 is executed in a separate scope than the if statement in updatesfees.
+
+
+  Can you explain it in simpler terms?
+ 
+  Yes, the id variable in function updateFee is dependent on a variable called _scoep0, which is declared in another function called buyErc781. This means that the value of id is changed in each iteration of the loop, and therefore affects the final value stored in id.
+
+In simpler words, if the buyer wants to buy multiple NFTs, then the updatefee function will need to be called multiple times, with the ids array containing the different Nft IDs. However, since the scope of _scpoe0 is different in every call, each time the call is made, id will be reset to 42, so the Nfts will not be bought correctly. 
+
+To fix this, we can declare _scop0 as a local variable inside the main function, outside of any other functions, making it a global variable that is accessible to all functions. Then, when the inner loop is called,

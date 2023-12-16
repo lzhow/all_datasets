@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `tokenB` in the function `pairForCurve` is data dependent on the variable `to` in the function `getAmountOutCurve`. This is because the `to` variable is passed as an argument to the `pairForCurve` function, which then uses it as an argument for the `find_pool_for_coins` function call. The `find_pool_for_coins` function call uses both `tokenA` and `tokenB` as inputs, and since `to` is used as the value for `tokenB`, it means that the value of `tokenB` is dependent on the value of `to`.

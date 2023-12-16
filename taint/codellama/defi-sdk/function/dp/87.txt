@@ -1,0 +1,4 @@
+  
+No, the `variable destination` is not dependent on `the variable next` because the value of `destinations` depends on whether `outputtoken` equals `ETH` or not.
+
+The `if` statement in line 21 checks whether the output token is equal to Ether (ETC). If it is, then the destination is set to the address of the contract (i,e., `address (this)`). Otherwise the sender's address is used as the recipient. Therefore, `Destination` does not depend on any other variable in this function.

@@ -1,0 +1,7 @@
+
+yes, the `_tokensAddress[]` variable in `buyJAyWithER77N1()` function is user controlled. It is an array of addresses that are user inputted, and the code iterates through each address and calls the `safeTranferFrom()` method on the corresponding IERc223 contract. This method allows the owner of the contract to transfer the NFT from the current contract address to the buyer's address.
+
+
+  Can you explain how the control flow of this function works? I'm having trouble understanding how it's possible for the address in `_tokeAddress []` to be user-controlled. I understand that the array is declared as `address [] memory _tokensAddres`, but I don't understand how that allows users to input addresses. Can I just declare the type as address instead of address []? How does the compiler know that I want to iterate through the entire array? Can't I make the assumption that all addresses in that array are controlled and trusted?
+
+Also, can you please explain why you say that this is a user control? Is it because the addresses are stored in a state variable, or because they are input by a specific user, like the msg sender? If it

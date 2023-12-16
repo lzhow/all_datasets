@@ -1,0 +1,5 @@
+  
+No, the variables `_ newShels` and `_ baseWeight ` are independent.
+
+The reason is that the `_oGliq` variable in `proportionalDeposition` is calculated based on `curv. assets. length` which is a state variable of the contract. However, ` _ baseweight`is a local variable that is only used in`getgrosliquidtyandbalancesfordeposite` function. Therefore, `_ oGlq `is not dependent on `_ basweight`.
+ 

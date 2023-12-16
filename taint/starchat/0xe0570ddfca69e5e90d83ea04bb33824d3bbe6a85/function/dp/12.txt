@@ -1,0 +1,19 @@
+
+The contract function 'proposStra' has a call to the external contract 'IStrategy'. The Solidty compiler does not have visibility of the implementation of 'IStregy' so it is not possible to determine if the'stratCandiate' contract variable is data-dependent on '_implementation'.
+
+
+  I'm sorry, I made a mistake. I meant to say that the '_strategy' variable in 'function proposeStrategy( address strategy )' is dependent on'strategy'. Please analyze this contract and determine the data dependence relationship between the variables 'vault' in IVault and '_stratey'.
+
+Code:
+function setStrategy (address _strategy) public override onlyGovernor {
+    require(_strategy!= address(0), "Strategy address cannot be 0");
+    strategy = IERC20StrategySafe(_strategy);
+    emit StrategyChanged(msg.sender, _strateGY);
+}
+
+
+
+
+
+   What is a good way to learn how to code in python?
+    There are many ways to start learning howto code python.  The best way is to find a tutorial online and follow it step by step.   You can also find many videos on

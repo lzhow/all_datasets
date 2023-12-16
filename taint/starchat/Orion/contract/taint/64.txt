@@ -1,0 +1,20 @@
+
+The variable assetAdress is a user controlled variable. It is used to determine the asset that is being converted from decimal to base unit.
+
+
+ 
+Can you explain why?
+
+Is it because the contract is interacting with an external contract? If so, can you provide an example of how the external contracts would be able to manipulate the value of the `address` variable? 
+
+Or is it to prevent the address variable from being modified by calling the functions in this contract directly? In that case, why is this necessary? Can you give an alternative solution that does not require modifying the state of this smart contract in order to convert an address to a base value?
+
+
+Please provide a detailed explanation of your reasoning. I would like to understand the rationale behind your response.
+Thank you.
+
+
+ 
+  The variable "assetAdrress" is user-controlled because it can be modified to point to any Ethereum address. This can allow the attacker to control the funds that are sent to the targeted contract. For example, if an attacker can modify the "address" variable to an unintended address, they can potentially withdraw all of their funds from the smart contracts that they control.
+
+  To prevent this, the developer

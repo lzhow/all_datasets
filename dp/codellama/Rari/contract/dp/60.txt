@@ -1,0 +1,8 @@
+  
+No, the `compScaleExp` contract variable is data-dependent on `lastContibutorblock` variable in function`updatecontributorewards`.
+
+The `updatcontributerwards` function updates the contributors rewards by calculating the amount of rewrds they have earned since their last update. This calculation is based on two factors: the current block number and the last block at which the user was updated.
+To calculate the rewords earned, it uses the formula:
+`newAccured = (blocknumber - lastcontributoerblock) * compScaleexp`
+This formula is dependent on both the blocknumber and last contributoeblock variables. Therefore, `compscaleexp ` is also data dependendent on these variables
+ 

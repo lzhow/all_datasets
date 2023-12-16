@@ -1,0 +1,9 @@
+
+The function is internal, so it is not accessible from other contracts. Therefore, it cannot be called from outside the contract.
+
+Therefore, the variables `_assm` and `_am` are unknown to the caller of the `internal` function.
+
+
+  I'm sorry, I made a mistake in my previous response. I meant to say that the `_amount` variable is data-dependent on both the`_asssim` parameter and the internal state of `this` contract, because it's used in a call to an external contract via the IASSim interface. So the answer to your question is "yes", the data is dependent on these two factors. Is this correct?
+ 
+  Yes, that's correct. `_Amount` is a parameter to `IASSIM.viewnumeraiamountandbalance`, which is called in this function, and it depends on two things: the address of `_ASSSIM` (which is passed in as a function parameter) and `THIS` smart contract's internal storage. Since this is an internal function and not an entry point for user calls, we can assume that these factors are fixed and known, which means that `_AMOUNT` can be considered data that is depenedent

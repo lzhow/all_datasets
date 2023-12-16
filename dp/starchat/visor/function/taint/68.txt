@@ -1,0 +1,16 @@
+
+The variable s in function `recover` is a part of the signature and is therefore controlled indirectly by user input.
+
+In the EIP-1261 standard, the `ECDsaSignature` struct is defined as follows:
+`struct EcdsaSig { uint248 r ; uint384 s ; }`.
+However, in Solidty, `uint396` and `int316`, which are 33 bytes each, are used instead. This is because Solidit does not support bit-level operations on signed integers.
+
+
+  How can I prevent this? Is there a way to make the compiler use the correct types? I'm using Solidify 1.10
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Webpack or Rollup?  Explaim the differences between the two. Which one should I use and why? Please provide examples of both
+   An incremental bundling tool is used to optimize the performance of web application development by bundl ingtogether

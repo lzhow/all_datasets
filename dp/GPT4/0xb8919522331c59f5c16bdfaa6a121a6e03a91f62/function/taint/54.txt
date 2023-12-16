@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the given code, the `_admin_slot` variable is declared as a private variable in `TransparantUpgradableproxy` contract. It is used to store the address of the proxy admin contract that is responsible for upgrading the contract's logic.
+Since the `admin` parameter is passed to the constructor of `AdminUpgradaibilityProxy` and is assigned to `_adminslot`, it can be controlled  by user, but it' s not clear if it will be used in a way that allows the attacker to control the admin address. Therefore, we label it as 'Unkown'.

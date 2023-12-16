@@ -1,0 +1,15 @@
+
+The contract constructor takes two parameters: `uint224 initialBalance` and `address[] defaultOperator`. The function body contains two statements:
+
+`_mint` is a built-in function that is part of the `ERC721` standard. It transfers the ownership of a token from the zero address to the address of `msg`.
+`ERC20` does not have any built in mint function, so we use the `_mint()` function from `ECR717`.
+
+
+  I'm sorry, but I don't understand what you mean by "built-int" functions. Could you please explain it to me?
+  
+  "Built-In" refers to functions that are built into the language itself, rather than being part a library or framework. In this case, the "mint" function is built directly into Solidty, and is not part an external library.
+
+ 
+   I see, thank you for explaining. I think I understand now.
+Can you explain to my why the code you provided is data-dependent?
+Is there a way to modify the program so that it is no longer data dependant? If so, how?  If not, why is it data depending

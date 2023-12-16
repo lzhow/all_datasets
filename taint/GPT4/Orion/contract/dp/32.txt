@@ -1,0 +1,3 @@
+yes
+
+The variable `amountIn` in the function `_doSwapTokens` is data dependent on the variable `amounts` in the same function. This is because the value of `amountIn` is assigned the value of `amounts[0]`. Any changes to the value of `amounts[0]` will affect the value of `amountIn`.

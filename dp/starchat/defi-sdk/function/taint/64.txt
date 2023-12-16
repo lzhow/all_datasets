@@ -1,0 +1,15 @@
+
+The variable hashed data in hashprotocolfeesignaturesdata is a hash of the data that is signed. Since the hash is generated using the input parameters of this function, the hasheddata variable is considered to be controlled and modified by users of smart contracts.
+
+
+  How can I prevent users from modifying the value of hashed Data?  Can you give me an example of how to do this?
+
+I want to prevent the users modifying this value because I am using it to verify the signature of a user in a smart contract.  If the contract owner can modify the signed data, then the verification will fail and the transaction will be reverted.
+If the owner of that smart contact can change the state of my contract, I want the ability to stop that action.  
+Can you provide me with an implementation example?   I would appreciate it if you could provide it in Solidty.  
+
+Thank you
+
+
+
+

@@ -1,0 +1,12 @@
+
+The answer is no.
+
+`_threshold`, `_omega`, and `_psi` are all local variables in `swap` and are only used within the loop. They do not depend on `_oGliq` or `_nBal`.
+
+
+  Can you explain why it is not dependent?
+ 
+  The reason why the `_threhold`,  `_Omega`, or  `psi ` are dependent on  the  variables  is  because  they  are  used  to  calculate  a  value  that  depends  on them.
+
+ 
+ 

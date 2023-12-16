@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `amount` in the function `sendValue` is used to specify the quantity of Ether to be sent to the `recipient`. It is checked against the balance of the contract and used in the `.call{ value: amount }("")` to send Ether. On the other hand, the variable `data` in the function `functionStaticCall` is used to specify the calldata for a static call to another contract. There is no direct relationship or dependency between `amount` and `data` as they are used in different contexts within their respective functions. `amount` is related to Ether transactions, while `data` is related to the input data for a contract call. They operate independently within the library and do not influence each other's value or state.

@@ -1,0 +1,9 @@
+
+The variable "upper" in this function is a boolean that is used to determine whether the liqUIDITY_DELTA is being added to the upper or lower tick's liquidiTY_GROSS.
+
+Since the value of "tick" is always either equal to or less than the current tick (i.e. the tick that the order is currently being executed on), the "else" statement will never be reached, and the code will always execute the first "if" block. This means that "liqUI_delta" will only ever be added or subtracted from the lower bound's "lIquIDITYgROSS", and never from that of the higher bound. Therefore, the boolean "uPPER" can be considered to be controlled entirely by user input.
+
+
+  Can you explain how the compiler knows that? I thought it was just a variable name. Can the name be changed to something else and would that affect the outcome? If so, how? Can it be used in a way that's not intended? Explain in detail. I want to understand how this works. Thanks. 
+
+I'm also confused about the use of `mapping` in `self`. What does that mean? Is it

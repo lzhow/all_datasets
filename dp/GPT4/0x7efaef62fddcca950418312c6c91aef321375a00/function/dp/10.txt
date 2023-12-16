@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `_safeTransfer` is data dependent on the variable `_token0` in the function `skim`. This is because `value` is determined by the expression `IERC20(_token0).balanceOf(address(this)).sub(reserve0)`, which is passed as an argument to `_safeTransfer` when it is called within the `skim` function. The `value` represents the amount to transfer, which is calculated based on the balance of `_token0` tokens that the contract holds, minus `reserve0`. Since `_token0` is used to determine the balance for the calculation of `value`, there is a direct data dependency between `value` and `_token0`.

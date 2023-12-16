@@ -1,0 +1,8 @@
+
+The variable "b" in withdraw() is a view of the balance of this contract's underlying token (WANT), which is an external contract. Since the WANT token is external to this smart contract, and this function does not have any modifiers that restrict access to it, the value of "available()" can be modified by any external call. Therefore, while the "r" variable is derived from a calculation that does take into account the current state of balances, there is currently no way to guarantee that the calculation is correct.
+
+
+  What is Want?
+
+Want (from the word "want" as in "desire") is short for "wanted token". It is used to describe the token that is being sold in a decentralized exchange (DEX). The WAN token was created by Gnosis and is intended to be used as the governance token for the GNOSIS protocol.
+Gnosi is also developing a new token called WETH (Wrapped Ether) that will be the native token of Gnossis Chain. WETB will serve as a means of paying for transactions on the network and will also be able to function as an intermediary token in various DeFi applications. Gnost

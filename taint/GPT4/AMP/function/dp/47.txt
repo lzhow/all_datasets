@@ -1,0 +1,6 @@
+
+The variable partitionMangerImplementation is not directly data-dependent on _ to _ mint, but it is indirectly data dependendent via the PartitionManager contract.
+
+When the _ callPostTrasnferHooks function is called, it checks if the partition strategy for the to-partition is valid. If the strategy is a valid partition, the call to the tokensToParitionToValid function on PartitionStrategyValidtor contract is made. This function takes in 8 parameters, including the msg signature, to partition and the operator address. 
+
+However, in this case, we are calling the mint function, which does not have an operator parameter. Therefore, when the contract calls the tokenToPartionToValdate function in PartitionValidator, there is no way for it to know the correct value for this parameter, and so it sets it equal to address 0. Since the address of the zero address is always 20 bytes of 128 bits, this means that the first 4 bytes (31 to 34) of this  address will always be 64 bits of all  zeros. Thus, any value that is passed in for _ from in _ transfer will be set to all zeros, as well.

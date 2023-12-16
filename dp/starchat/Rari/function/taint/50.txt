@@ -1,0 +1,8 @@
+
+The variable scalar in mul\_Scalartruncate is a user-controlled input. It is used to scale the input value a before it's multiplied by it. If the scalar variable is user controlled, then it can be used by attackers to manipulate the behavior of the contract by changing the value of scalar.
+
+
+  Can you explain how this contract is vulnerable to reentrancy attacks? What would be a way to fix it?
+
+I'm not a security expert, so please bear with me if I'm wrong.
+Reentracy refers to the ability of a contract to call itself while it still holds some state. This can happen when the called contract throws an exception or when it calls external contracts. In the case of an external call, the state of that contract can change between the moment it was called and the time it returns. For example, if a function that is called via a delegatecall modifies the storage of its caller, this modification can cause the caller to revert, which can revert the whole call stack. Reentrance attacks are possible when a malicious user manages to exploit this behavior. They can use this vulnerability to repeatedly call the attacking function until the callstack is exhausted, thus preventing the original

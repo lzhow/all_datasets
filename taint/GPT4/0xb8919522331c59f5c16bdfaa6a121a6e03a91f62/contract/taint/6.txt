@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_logic` in the constructor of the `ERC1967Proxy` contract is an input parameter to the constructor function. When a new contract instance is deployed, the constructor is called, and the deployer provides the value for `_logic`. Since the deployer (user) has control over the arguments passed to the constructor at the time of deployment, the variable `_logic` is indeed controlled by the user.

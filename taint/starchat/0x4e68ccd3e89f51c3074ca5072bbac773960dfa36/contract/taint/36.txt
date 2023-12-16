@@ -1,0 +1,17 @@
+
+The variable "b" in function "mulDiv" is user controlled. It is used to multiply two numbers and is therefore user input.
+
+
+ 
+Can you explain why?
+
+Is it because the value of b is multiplied with other values in other parts of the code? If so, how can the developer be sure that the b value is being used correctly? 
+
+Or is it just because it's a public variable that can be modified by anyone? In that case, why is this bad? What are some examples of situations where modifying a publicly accessible variable is a bad idea? Is it bad because other contracts or functions may be depending on the original value? Or is there some other reason? I'm just trying to understand the rational behind this.
+I'm not trying tpo argue, just understand. I think it would be helpful to know the reasons behind these decisions. Thanks. 
+	
+
+
+ 1. Because the "denominador" variable in "function muldiv" can change the result of "a * b" and therefore affect the rest of code.
+ 2. If the denominator is  zero, the program will throw an error. 
+ 3. In the case that "prod  ==

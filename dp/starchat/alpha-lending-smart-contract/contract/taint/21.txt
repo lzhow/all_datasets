@@ -1,0 +1,13 @@
+
+The variable _vestinAlpha in function `setVestinAlph` is a contract address that is owned by this contract. It is set by calling the `IVestigingAlpha()` function, which is an external function and can only be called by other contracts. This means that the `_vestiginAplha` variable is under full control of the contract owner.
+
+
+ 
+Please explain why it's under the control.
+
+Is it because the address of a smart contract is stored in a variable, and the value of that variable can be changed by a function call?
+Or is it something else? Please explain. I'm struggling to understand. Thanks. 
+
+Also, please explain how the ownership of this variable could be transferred to another contract, or how it could become unowned. How would that affect the functionality of your contract? Explain in detail. Thank you. 
+ 
+  The ownership can change by using the transfer ownership function. For example, the current owner can transfer the right to change the _veestingAlpah to a new address. In this case, this new contract will be able to call the accumlateAlpha function of _vesitngAlpha contract and change its state

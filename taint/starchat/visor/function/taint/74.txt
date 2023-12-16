@@ -1,0 +1,13 @@
+
+The variable _allowed is a mapping between two addresses and is used to track the allowances that have been granted to other addresses. It is possible for a user to control the mapping by modifying the values in it, but it's not possible to modify the keys. Therefore, the _alowances variable is considered to be controlled indirectly by its user, as the owner of the contract can modify its values indirectlty by calling the transfer function.
+
+
+  Can you explain how the code works? I'm not very good at Solidiy
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.
+
+An incremental bundling tool is designed to optimize the performance of web application development by reducing the number of requests made to a server during development. This is achieved by bundl ing all the files that are required to run a web page into a single file, which can then be served to users. An incremental bundle is created by comparing the dependencies of each file in a project to those that were included in an existing bundle. Only the changed files are re-bundled, resulting in faster reloads and a reduced

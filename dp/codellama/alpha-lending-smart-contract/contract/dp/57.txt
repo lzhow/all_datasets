@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `setUserpool` function, the `_user` and `_borrows` variables are passed as arguments. In the same function body, there is a call to the external function called `calcuate RoundUp Borrow Amount External`. This function takes two arguments: `_amount` (which is not used in this function) and the local variable `pool`. The `pools` variable is defined in a different scope, and it is used to store the pool data.
+Therefore, in order to calculate the borrow amount, this external call needs to access the data stored in `Pool storage` which is dependent on `_tokens`. Therefore, `_Token` is data-dependent on `shareamount`.

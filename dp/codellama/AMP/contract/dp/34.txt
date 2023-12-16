@@ -1,0 +1,5 @@
+  
+No, the ` total Supply By Partitions` contract is not dependent on ` amount` variable in ` swap` function.
+
+The ` _ total supply` is a contract variable that is used to keep track of the total amount of tokens in existence. It is updated in various functions, such as `m int`, `trans fer`, and `appro ve`.
+On the other hand, ` amoun t`is a local variable used in function` swap`. It represents the amount to be transferred from the swap token to the A mp token.  The ` transfer`function is called in`swap` to transfer the tokens from `from` address to `to`address. However, this function does not affect the value of `totalsupply`. Therefore, there is no data dependence between ` totalsup plybypartition` and` amount`.

@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable ` stratCandiate` is not dependent on `_ pool` because it is defined in a different function. In the ` deposite` function, the `_ amount` variable is used to calculate the number of shares to be minted, but the value of ` strateCadidate ` is never used. Therefore, there is no data dependence between the two.

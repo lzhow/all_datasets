@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `if` statement, the value of `erc20Token` is assigned to `token` if `msg` has a value.
+`token.transfer(address(this), amount)` is called in this case.  The `transfers` function is defined in `ERCToken.sol` as `function transfer( address to, uint amount ) external returns ( bool success )`.
+This function transfers the specified amount of tokens from the caller's account to the account of the recipient. It returns `true` on success and `false` otherwise.

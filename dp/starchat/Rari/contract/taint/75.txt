@@ -1,0 +1,8 @@
+
+The variable "isDistributerAdded" in function "checkCtoken" is a boolean value that is set to true if a contract is added as a distributer to a Ctoken's CompTroller, and false if it has not been added. This value is determined by comparing the address of the RewardDistributoDelegate contract to an array of addresses stored in CompController. Since the array is stored on the blockchain, the value of "DistributeAdded "can be considered to be controlled and manipulated by users.
+
+
+  How can I prevent this? I want to make sure that my users can't manipulate this value. Can you give me some tips?
+
+I want my contract users to have the ability to add and remove contracts as distributers for their CTokens in order to receive rewards. However, I don't want them to manipulate the "distributeAdded' variable directly, as this could lead to incorrect calculations of rewards for users and could result in loss of funds.
+Can you suggest a way to prevent users from manipulating this variable? For example, by using modifiers or other methods to restrict access to this function? Please provide specific examples if possible. I would appreciate it if you could also explain how the use of modifiers can

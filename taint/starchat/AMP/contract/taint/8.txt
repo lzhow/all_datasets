@@ -1,0 +1,15 @@
+
+The variable _values is a control variable in _tranferByParition. It is used to determine how much of the token is being transferred.
+
+
+ 
+Yes
+ 
+  Yes
+ 
+
+ 
+ 
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!   An incremental bundlers job is to take all the files that make up your web application and bundle them into a single file that can be served to the users browser. This makes it easier for the browser to load all of your code into memory and make it faster for your users to interact with your application.
+
+Webpack is probably the most popular incremental bundle tool used in modern web developement. Webpack works by recursively walking through your project directory and parsing out all your dependencies. Then it uses a graph data structure to figure out the order in which your files should be included in your bundle. Once it has this graph it can use various optimization techniques to make the resulting bundle as small as possible while

@@ -1,0 +1,12 @@
+
+The function ```getD``` is a helper function for the ``` getAmoutInCurv``` function. It calculates the D value used in curve calculations.
+
+In the first loop, the sum of all x-coordinates (```S```) is calculated. If this value is  zero, then the value of D is also zero. In this case, there is no need to calculate further and the return statement can be executed. 
+
+If the S value in not zero (i.e. the array ```xp``` contains at least one non-zero value), then D and DPrev are initialized with the same value (S). The loop continues with  ```_I``` ranging from  to .
+For each iteration of the loop:
+1. D\_P is set to the current value D. This value will be used to check if the new value for D (calculated in this iteration) has improved the previous value.
+
+2. For each element in ``` xp```, D\_\_P  is updated using the formula: D\*\*D/(xp\[j\]\*N\_COINs)
+
+3.  DPrevious is assigned the old value  of  the  variable D, and  then

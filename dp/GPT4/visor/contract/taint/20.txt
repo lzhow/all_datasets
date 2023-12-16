@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `amount` in the `burn` function is an argument provided when the function is called. Since the function can be called by the contract owner (as indicated by the `onlyOwner` modifier), and the owner's address is controlled by a user, the `amount` variable is indeed controlled by the user who has the ability to call this function. The user, in this case, is the owner of the contract, who can specify any value for `amount` when invoking the `burn` function.

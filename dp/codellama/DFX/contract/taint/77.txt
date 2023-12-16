@@ -1,0 +1,5 @@
+  
+The variable 'target' in function 'functionCall' is labeled as 'Unknown'.
+
+This is because the 'Address' library is a utility library that provides functions for interacting with Ethereum addresses. It does not have any user-controlled variables.
+In the context of the code, the `functioncall` function takes an address as an argument, but this address is passed as a parameter to the internal `verifyCallresult` method, which is responsible for verifying the result of a call. This method does have a user input parameter, `errormessage`, but it does nothing with it. Therefore, we cannot determine whether the address passed to `funcionCall` is user controlled or not.

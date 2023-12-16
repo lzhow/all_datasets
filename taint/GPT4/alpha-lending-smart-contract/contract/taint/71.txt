@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `offset` within the function `decodeBytes32` is part of the `Data` struct which is being manipulated through the `shift` modifier applied to the function. The `shift` modifier increments the `offset` by a fixed size (in this case, 32 bytes) every time a decoding function is called. However, the initial value of `offset` and the content of `raw` are determined by the input to the `from` function which creates the `Data` struct from user-provided bytes. Since the user provides the initial data that the `Obi` library operates on, and this data includes the initial `offset` value, the user indirectly controls the `offset` variable as it is used within the `decodeBytes32` function.

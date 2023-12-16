@@ -1,0 +1,5 @@
+  
+No, the ` amount` variable in function `createReceiption` is NOT controlled  by user because it's a local variable and it can' be modified by any user input.
+
+The `accumulateAlphatoUser` function transfers the amount of Alphatoken from user to contract, and the contract stores the accumulated amount in `userAccummulatedAlhpa` mapping.  The ` createRecipt`function then reads the value from ` userAcummulatealpha` and assigns it to `receip. amount`.
+ 

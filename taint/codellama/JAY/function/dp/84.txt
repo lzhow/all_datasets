@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `sold` function, the value of ` eth` is calculated using the expression `JAToET( value)`. The value `value` comes from the input parameter of the same name.
+On the other hand, in ` updateFess`, the `_ sell Nft Fee Eht` variable is set to a value calculated from ` _ price`. The `_ price` value comes directly from a call to the Chainlink price feed, which is a separate contract. Therefore, ` sell nft fee EHT` depends on ` price`, which in turn depends indirectly on `_price`, since it comes through the pricefeed. 

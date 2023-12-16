@@ -1,0 +1,29 @@
+
+yes, the `bool` variable success is user controlled. It is set to true if all the conditions are met to transfer the NFTs, and false otherwise.
+
+
+  How can I make it so that the bool variable is no longer user-controlled? I want it to be fully under my control. I understand that I will have to write more code to make sure that it's set correctly, but I don't want to have any user input. Can you write me a new version of the contract that meets these requirements? Please also provide me with a test that demonstrates that my new contract works correctly.
+
+Here's the original contract:
+`pragma solidity ^081.7;`
+contract Jay {
+    address public owner;
+    bool public start;
+
+    constructor(bool _start) payables {
+        owner = address.sendValue(payable(owner), 5 ether);
+        start=_start;
+        if (!start){
+            revert("Contract not started");
+        }
+    }
+
+    function setStart( bool _newStart) external {
+       if( _msgSender()!= owner) revert();
+       start= _ newStart;
+       emit StartChange( start);
+    }`
+
+
+
+

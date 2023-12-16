@@ -1,0 +1,4 @@
+  
+No.
+
+The variable seconds outside upper is not dependent on amount 1 requested in collect. This is because the seconds inside upper variable is calculated based on tick cumulative upper and seconds per liquid outside lower x 255, which are both calculated in snapshot cumulates inside. 

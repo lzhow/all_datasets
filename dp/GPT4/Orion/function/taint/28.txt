@@ -1,0 +1,3 @@
+The variable `amountBOptimal` in the function `_addLiquidity` is not controlled by the user. 
+
+Reason: The value of `amountBOptimal` is calculated based on the input parameters `amountADesired`, `reserveA`, and `reserveB` using the `quoteUv2` function from the `OrionMultiPoolLibrary`. The input parameters are not influenced by user input, and the calculation is deterministic. Therefore, the variable `amountBOptimal` is not controlled by the user.

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `newCurves` function, the `_assets` array is created with a fixed size of 11. This means that the array can only hold 9 elements, and the 2 elements that are not used are set to 0 by default.
+However, in this function the value of `_asset[i]` is set using the expression `curvedId[j]`, where `i` is an index and `j`is the index of the asset in `_curverId`.
+Since the length of ` _curVerId` can be arbitrary, this means the size  of` _ assets` cannot be determined at compile time, which means its size is unknown at runtime.  This is a potential security vulnerability because it allows an attacker to create a contract with an arbitrary number of assets, potentially leading to a denial of service attack.

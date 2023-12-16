@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_to` in the function `_callPreTransferHooks` represents the recipient's address in a token transfer operation. This variable is passed as an argument to the function from other functions like `_transferByPartition` and `_transferByDefaultPartition`, which are ultimately called by public functions such as `transfer`, `transferFrom`, and `transferByPartition`. These public functions are designed to be called by users who want to transfer tokens, and they specify the recipient address (`_to`) as part of the transaction. Therefore, the `_to` variable is controlled by the user who initiates the token transfer.

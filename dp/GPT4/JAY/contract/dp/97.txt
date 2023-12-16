@@ -1,0 +1,3 @@
+The variable `erc721Ids` in the function `buyNFTs` is not data dependent on the variable `value` in the function `ETHtoJAY`. 
+
+Reason: The variable `erc721Ids` is used as an input parameter for the `buyNFTs` function, and its value is determined by the caller of the function. On the other hand, the variable `value` in the function `ETHtoJAY` is calculated based on the `totalSupply()` and `address(this).balance` values, which are not directly related to the `erc721Ids` variable. Therefore, there is no direct data dependency between these two variables.

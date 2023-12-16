@@ -1,0 +1,18 @@
+
+The variable value in function `_safeTranfer` is data-dependent on variable balance in `Burn` function.
+
+Explanation:
+In the `_burn` method, the liqudity is burned and the amount of token 1 and token2 is calculated based on this liqulity and total supply. Then the token is transfered to the recipient. In the `safe_transfer` the value is sent to recipient and also a boolean value indicating the success of the transfer is returned. This boolean is used to check if the transaction was successful or not. If the boolean returned is `False` then the program will throw an error.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Some of them are:
+
+   1. Codecademy: This is an interactive website that offers a variety of courses and tutorials to get you started with Python programming.
+
+   2. Coursera: Courses by top universities are available on Courera that will help deepen your understanding of Python and prepare you for a career in software development.
+
+  3. Udemy: Udemly offers many courses on Python that

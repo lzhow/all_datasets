@@ -1,0 +1,5 @@
+  
+No, the `CompSupplierState compSuppyState ` is not dependent on `Double ratio` variable in `function updateComBorrrowIndex`.
+
+The reason is that the state variable is `borrowerState`, which is a local variable within the scope of the method. It is only used to store the updated state of `cTokens` and is never used as an input to the calculation of any other variable.
+Therefore, it is safe to say that `comSupplState is independent of ratio`.

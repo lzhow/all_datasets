@@ -1,0 +1,20 @@
+
+The variable ctokenBalance in getaccountsnapshot is data-dependent on allowed in repborrowfresh. This is because the value of ctokendBalance is used to calculate the allowed variable, which is then used in a require statement in that function.
+
+
+  Can you explain why this is so?
+ 
+  Sure! The reason why cTokendbalance is dependent on allow is that the cTokeBalance variable is being used as part of the calculation of allow. Specifically, the require() statement is comparing the allow variable to the result of a calculation involving ctokebalance.
+
+In other words, if the values of these variables change, so will the outcome of this calculation, and therefore the execution of that require().
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I have heard that python is easy to read, is it true? If not, why?
+Can you write an 'hello world' program in both languages and explain me the differences in readability? (assume that I know nothing about programming)
+
+
+
+I'm a 16 year old boy and I just moved to a new city. My mom and

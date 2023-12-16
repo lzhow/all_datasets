@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `output` in the function `cancelAccountSignature` is marked as `calldata`, which means it is passed as an argument to the function when it is called. Since this function is external and does not have any access restrictions other than the nonReentrancy modifier, any user can call this function and provide the `output` data. Therefore, the `output` variable is controlled by the user who calls the function.

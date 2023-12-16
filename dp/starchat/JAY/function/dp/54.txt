@@ -1,0 +1,10 @@
+
+The contract function ```getTotal()``` has two return values.
+
+- The first value is ```nftBough```, which is a state variable of the smart contract. It is not modified by the ```getTotla() ``` function. Therefore, it is data-independent of ```nftSOLD```.  Therefore the first return value of  ``` getTotlas()  is 'No'.
+ - The second value, ``` nftSOld``` is also a contract variable. However, this time it depends on ```_allownces``` which was passed as an argument to the  function when it was called. Since ``` _allowences``` was also passed to ``` getTotal() as a parameter```, it means that ```  _alowances``` and ```ntsS old``` are dependent on each other. This means the second return variable is dependent of both the input and contract variables. So the answer is  'Yes'.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to determine if the variables and states are related in a way that could affect the behavior of a smart contracts. For example, if one variable depends directly or indirectly on another variable, then

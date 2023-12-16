@@ -1,0 +1,20 @@
+
+The variable "decimals" is not explicitly used in either constructor function, so it is impossible to determine if it has a direct or indirect data dependence on "name". However, it can be inferred indirectly through the use of the internal function _seupDecimal(), which is called by both constructors.
+
+Since the value of "decimal" does not depend directly on any of its arguments, the answer is "no".
+
+
+  Can you give me a list of all the variables in this contract and their dependencies?
+ 
+  Yes, here is a table of each variable in `Example.sol` and whether or not it depends on `owner`, `symbol`, or neither:
+| Variable | Depends on owner? | Dependent on symbol?  |
+|---|---|---|
+|`name`| No | No|
+`symbol`|No|No
+`_name_`|Yes| No
+ `_symbol_ `|Yes |Yes
+ ` _decimals_  ` | Yes |No
+
+ 
+   Can the data dependencies be resolved at compile time? If so, how?
+If not, why? What are some ways to resolve them at runtime? How would you do it? Please describe the pros and cons of your

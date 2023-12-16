@@ -1,0 +1,14 @@
+
+Yes, `isContrac`t is data-dependent on `account`. The reason is that the `extcodeSize` instruction in EVM checks the size of the code at the given account address, which is a state variable.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is used to bundle together all the assets (JavaScript, CSS, images, etc.) that are required to run a web application. This includes taking into account the dependencies between these assets and ensuring that they're all included in a single output file.
+
+    There are several different types of incremental bundle tools, each with their own strengths and weaknesses. Some popular options include:
+
+    - Webpack: One ofthe most popular and widely used incremental bundles tools. It can take multiple typesof assets as input (e.g. JavaScript, TypeScript, Sass, HTML, and images) and bundle them together into asingle output. Webpack also has a large community of developers and plugins that can be usedto customize and extend its functionality.
+    - Rollup: Similar to Webpack, Rollups also takes multiple assets types asinput and bundles them into an output, but it focuses on

@@ -1,0 +1,14 @@
+
+The function 'newCurves' creates a new curve contract and assigns ownership to the caller. It also emits a 'NewCurve' event, which is used to keep track of all the curves created by the factory.
+
+In the first part of the code, we are creating an array of addresses called '_assets' with a length of 11. This array is initialized with the addresses of '_baseCurrnecy', '_quoteCurrency', and '_assimilationAddress' for the base currency, quote currency and assimiliation contract respectively. We are also creating another array '_assetWeight' of length 2, and initializing it with '_weight' values of '1' (for the '_basWeight') and  '2'  ( for '_quouteWeight').
+We are then creating a curve object using the 'Curve.sol' contract, passing in all these parameters. Finally, the ownership of this curve is transferred to'msgSender' address.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Here are some suggestions:
+
+   1 - Codecademy: This is an interactive website that offers

@@ -1,0 +1,4 @@
+  
+The variable 'mask' in function 'flip tick' is labeled as 'No'. The reason is that the value of 'bitpos' variable is calculated using the modulo operator, which is a built-in function in Solidiy. Therefore, the result of the calculation is deterministic and not dependent on any user input.
+
+In addition, 'wordpos', which also appears in 'position' function, is also labled as "No" because it's calculated by dividing 'tick' by 32, and the division operator is built in to Soliidy and is therefore deterministically. 

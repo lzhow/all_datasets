@@ -1,0 +1,14 @@
+
+The function is data-dependent on `curve` because it reads from and writes to the `Storage` contract.
+
+
+ 
+Yes, it is.
+
+In the first line of the body of `viewProportionateDeposit`, the value of `_deposit` is divided by 1,0e+19 to obtain an integer value. This value is assigned to a local variable called `__deposit`.
+Then, the length of curve's `assets` array is retrieved and assigned the the local `_length` variable. A new array of length `_lenght` called `deposits_` is created. 
+
+Next, two calls to `getGrosLiqudityAndBalanceForDepost` are made. These functions read from the storage contract and return two values: the gros liquidity of all the assets in `curv`e and an array containing the balances of each asset in that curve in their native units.
+
+
+If the `_grosliquidity` value returned by `geGrousLiqidityAndBalanacesForDepsoit` function equals  zero, then the code enters the for loop. In this loop, each element in `_assets_` array and its corresponding weight in curve

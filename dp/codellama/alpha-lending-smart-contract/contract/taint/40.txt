@@ -1,0 +1,5 @@
+  
+The variable 'amount' in function 'getAlphaReleasRulles' is labeled as 'Unknown'. The reason is that the value of 'amout' depends on the return value from the 'receiveAlpha' function, which is an external function. Therefore, the control of the amount is unknown.
+
+In the code, there is a function called 'setAlphaReceiptRule' which takes in two parameters, 'IAlphReceiver' receiver and IAlpahRelease' rule. This function pushes a new ReceiveRule struct into the receiver rule list.  The ReceivedRule is defined as a struct with two members, receiver (which is of type IAplhaReceiver) and rule (of type  IalphaRelease). The rule is set to the parameter 'rule' passed into ' setAlhpaReceipRule'.
+  In the getAlhpahRealeaseRuels function , the amounts array is initialized to a length equal to receiverRullist.lenght. Then, for each element in receiverrulelist, a call is made to get the release amount from rule using the fromBlock and toBlock parameters. Finally, return the receipers and amounts.  

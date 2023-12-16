@@ -1,0 +1,3 @@
+The variable `state` in the function `_setBorrowPaused` is not data dependent on the variable `changeStatus` in the function `_become`. 
+
+Reason: The variable `state` is only used within the `_setBorrowPaused` function and does not interact with or depend on the variable `changeStatus` in the `_become` function. Therefore, there is no data dependency between these two variables.

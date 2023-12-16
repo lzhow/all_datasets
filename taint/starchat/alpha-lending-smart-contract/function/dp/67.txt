@@ -1,0 +1,14 @@
+
+The variable pool in function " borrow " is data-dependent on variable _ user in " liquidationInternal ".
+
+Reason:
+In the "liquidationInteral" function, the user's borrowed token amount is calculated by multiplying the borrow share with the total token supply.
+However, in this function the pool variable is used to calculate the token total supply, which is a state variable of the smart contract. This means that the value of pool can change over time, and therefore the calculation of borrow amount becomes invalid.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by using the snapshot feature of Solidty to freeze the state of a contract at a specific point in time. By doing this, you can ensure that any changes made to the contract state during the execution of your function are captured and stored, allowing you to accurately calculate data dependencies. Additionally, it is important to note that data dependence analysis is an important step in ensuring the security and correctness of smart contracts, so it's essential that you understand how to use this analysis effectively. If you have any further questions or need further assistance, feel free to ask. Good luck!
+
+ 
+  1. How does the use of

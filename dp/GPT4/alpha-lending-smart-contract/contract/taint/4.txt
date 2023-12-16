@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_to` in the function `mint` of the `AlphaToken` contract is an argument to the function. This means that whoever calls the function specifies the value of `_to`. Since the `mint` function is public and has the `onlyOwner` modifier, only the owner of the contract can call it. However, when the owner calls this function, they can pass any address as the `_to` argument, effectively controlling the destination address for the minted tokens. Therefore, the variable `_to` is controlled by the user, specifically by the owner of the contract.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `blockTimestamp` in the function `_update` is calculated within that function's scope using the current block's timestamp. It is not influenced by any external variables or state changes outside of its own function's execution context. On the other hand, the variable `feeOn` in the function `_mintFee` is determined based on the state of the `feeTo` address, which is unrelated to the `blockTimestamp`. There is no direct or indirect data flow or dependency from `feeOn` to `blockTimestamp`, as they are calculated independently within their respective functions and do not share state or influence each other's values.

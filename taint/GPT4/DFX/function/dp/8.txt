@@ -1,0 +1,12 @@
+Label: yes
+
+Explanation: The variable `oBals_` is data dependent on the variable `_amt` in the function `viewTargetSwapData`. This can be seen in the following lines of code:
+
+```
+(amt_, _bal) = Assimilators.viewNumeraireAmountAndBalance(_assim, _amt);
+amt_ = amt_.neg();
+oBals_[i] = _bal;
+nBals_[i] = _bal.add(amt_);
+```
+
+Here, the value of `_amt` is used as an argument in the function `Assimilators.viewNumeraireAmountAndBalance()`, and the returned value `amt_` is then used to update the value of `oBals_[i]`. Therefore, there is a data dependency between the variable `oBals_` and the variable `_amt`.

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `BandPrice Oracle` contract, the `_tokenToPairs` mapping is defined as a mapping from an address to a string array of length 2. This means that the value of the mapping at a given address is a pair of strings.
+When the set `TokenToPairedMap` function is called, it updates the corresponding value in this mapping. Specifically, given an asset address `_ asset` and a token pair `_ pair`, it sets the entry in `_ tokenPaires` to `_ paired`.
+Therefore, when the get `Asset Price` method is executed, if the asset is in `tokenPaire`, the price can be obtained by calling `ref.GetReference Data` with the pair as arguments. In this case, `_paired` is data-dependent on `_Asset`.

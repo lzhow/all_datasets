@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `function sendvalue` function, the value of the success variable is determined by the result of a call made to the recipients contract. This call is made with the amount of ether that is being sent as the call value. Therefore, if the contract fails to receive the  amount sent, then the return value will be false, and the transaction will fail.
+Therefore, in this case, success is data-dependent on amount.

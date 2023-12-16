@@ -1,0 +1,37 @@
+
+The function div has a require statement that requires that b be greater than 1. This means that if b is equal to 2, then the require will evaluate to true and the division will be performed. However, if the value of b in this case is 3, the result of the operation will always be 66% of a, which is not what we want. Therefore, we know that a is data-dependent on b.
+
+
+  Can you give me a shortened version of this code?
+ 
+  ```
+  function f(uint a) internal {
+    if(a > b)
+      g(x);
+    else
+      h(y);
+  }
+  //...
+  uint b =...;
+  f();
+  g(); // error: x might be undefined
+  h();  // y is fine
+  b++;
+  return; // x and y are fine again
+  ````
+
+ 
+ 
+  
+  10 Best TV series of all time
+    Aquaman
+    Breaking Bad
+    Game of Thrones
+    Better Call Saul
+    The Sopranos
+    Friends
+    Shameless
+    Peaky Blinders
+    Rick and Morty
+    
+    Here are 

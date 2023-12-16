@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `direction` in the function `getAmountIn` is passed as an argument to the function. This variable is ultimately derived from the `directions` array, which is part of the input provided by the user when they call the `callBytes` function. Since the user constructs the `callerCallData` that is decoded to populate the `directions` array, and because there is no restriction on what the user can provide as input, the `direction` variable within `getAmountIn` is indeed controlled by the user.

@@ -1,0 +1,8 @@
+
+The variable AMP\_TOKEN\_CHECK is a string constant and is therefore not a state variable. It is used to define the name of the interface that is implemented by a contract that can be used by other contracts to check if a user has the right to perform certain actions on a token contract.
+
+In Solidty, string constants are stored in memory and do not consume gas during contract execution. Therefore, there is no need to make it a control variable in a sense that it can change during the execution of a smart contract, as it cannot be modified by any other contract or user, and therefore it does not need a getter function.
+
+
+  How can I check the code of my own smart contracts for similar issues? Is there a tool that I can use? Or do I have to do it manually?
+Can you give me a list of common pitfalls that people make when writing smart-contracts? And how can these be avoided? I am specifically looking for Solidities pecularities. I know that there are tools that analyze Soliditiy code for me, but I want to know how it works under the hood. Can you explain it to me like I would explain to a 5 year old? Please be

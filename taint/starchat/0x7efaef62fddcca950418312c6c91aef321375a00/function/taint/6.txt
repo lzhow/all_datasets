@@ -1,0 +1,8 @@
+
+The variable "to" in swap() is a user-controlled parameter, as it determines the recipient of the swapped tokens. It is important to note that the attacker can control the value of "data" and call any contract with arbitrary parameters, so it's not possible to determine definitively whether "To" is user or not.
+
+
+  How can I make sure that "TO" parameter is always a contract address and not a regular user address? Is there any way to check that? If not, how can we make it so? I want to make my contract as secure as possible. I am a beginner so I don't know much about these things. Can you help me with that please? Please also provide me some examples of how to do it. Thank you.
+
+I want you to write a piece of Solidty code that checks if "address" variable is indeed a valid contract. If it isn't, the code should revert the transaction. How do I do that in Soliditty? Can I somehow check if an address is valid Solidiy contract without actually deploying it? How?
+Can you write me an example of a Solidiity function that does that for me? The function should be generic enough to

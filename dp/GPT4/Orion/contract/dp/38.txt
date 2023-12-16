@@ -1,0 +1,5 @@
+The variables `amounts` and `curBalance` in the function `_swapCurve` have a data dependency relationship. 
+
+Label: yes
+
+Explanation: The value of `curBalance` is assigned the current balance of `path[i + 1]` before the execution of the `_swapCurve` function. The value of `amounts[0]` is updated with the difference between the current balance of `path[i + 1]` and `curBalance` after the execution of the `_swapCurve` function. Therefore, the value of `amounts[0]` depends on the value of `curBalance`.

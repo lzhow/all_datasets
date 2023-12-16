@@ -1,0 +1,4 @@
+  
+The variable `_value` in function `approval` is a user-controlled variable. It is passed as an argument to the `Approval()` function, which is called by `AampToken` contract. Therefore, the value of `_valu` can be controlled directly by a malicious user, and it can lead to a potential security vulnerability.
+
+Therefore, we can label this variable as 'Yes' (control by user).

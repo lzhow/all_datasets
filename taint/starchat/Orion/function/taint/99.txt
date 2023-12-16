@@ -1,0 +1,9 @@
+
+The variable "J" in getAmoutOutCurver() is a control variable that is used to calculate the amount of token B that will be received by a user when they swap an amount A of Token A for token b. It is calculated using the curve equation, which is based on the balances of the two tokens in a pool.
+
+In the case of a curve pool, the token balances are represented by an array of integers, where each integer represents the number of units of that token that are currently in existence in that pool (e.g. 80 for  token A and 30 token  B). The curve library then uses the information in this array to perform the calculation. 
+
+However, in Solidty, arrays are not mutable, so the array cannot be changed during the execution of this function. Therefore, while the "getAmountoutCurve()" function is running, there is no way for the contract owner to change the value of " J". Therefore it can be said that the control flow of code never reaches the line of where " j " is assigned a value, and therefore it cannot possibly be controlled directly by any user input.
+
+
+  Can you write a contract that exploits this flaw? Please

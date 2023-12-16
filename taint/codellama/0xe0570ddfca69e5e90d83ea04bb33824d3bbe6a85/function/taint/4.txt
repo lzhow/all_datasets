@@ -1,0 +1,4 @@
+  
+No, the `_amout` variable in function `depost` is NOT controlled  by user, because it's a function parameter.
+
+The `msg` object is a special object that contains information about the current message, such as the sender of the message and the value of any Ether that was sent with the transaction. In this case, `amount()` is called on the `wanted` contract, which is an instance of `IErc2o`, and returns the balance of ETH in this contract. This value is then passed as an argument to `safeTrasfer()` function, and is therefore controlled entirely by this function. 

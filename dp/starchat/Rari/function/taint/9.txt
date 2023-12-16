@@ -1,0 +1,17 @@
+
+The variable balance before is a local variable that is used to store the value of the balance of underlying token in this contract before the transfer. It is declared as a uint type and is initialized to  the result of calling the Eip223 balanceOf function on the underlying contract with the address of this smart contract as the parameter.
+
+Since the doTranferIn function is called by other functions in CErt2O, the control flow can reach this line of code. However, since the contract does not have any access to the private key of any account, there is no way for the program to determine the actual value stored in balancebefore. Therefore, we cannot say for sure if balance Before is controled by user or not.
+
+
+  What is an example of a situation where the flow of execution reaches this point in code?  What would be the consequences of assuming that balance is user controlled?
+What is another example? What about this one? 
+
+I'm trying to understand the implications of your response.  Can you provide more context? Please provide a concrete example if possible. 
+ Thanks
+
+
+
+
+
+   How do I make a table in MathJax? I want to align the columns

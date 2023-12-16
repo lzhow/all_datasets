@@ -1,0 +1,6 @@
+  
+No, the ` value` variable in `_safe Transfer` is not dependent on ` balance ​​0 ` in ` burn`.
+
+The ` _ safeTransfe r` function is called in both ` mint` and ` Burn` functions, but the value of ` amount  ` is determined by the balance of the token at the time of calling the `_ safe Transfer ` function, which is different from the current balance in` burn` .
+Therefore, `amount` does not depend on` balance` , and the two are independent.
+ 

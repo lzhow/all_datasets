@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `decodeBytes32` is assigned a value based on the contents of the `data.raw` byte array at a specific `offset`. The `data` parameter is of type `Data`, which is a struct containing an `offset` and a `raw` byte array. This `data` struct is passed into the function `decodeBytes32` from outside, and it is not modified within the function before being used to determine the value of `value`. Since the contents of `data.raw` and the `offset` can be provided by the user when they call the function, the user has control over what `value` will be set to. Therefore, the variable `value` in the function `decodeBytes32` is controlled by the user.

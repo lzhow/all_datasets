@@ -1,0 +1,5 @@
+  
+The variable 'to' in function 'doTranserOut' is 'Unknown'.
+
+This is because the 'address' type is a reference type in Solidiy, and it can be assigned to a variable that is either controlled or uncontrolled by a user, depending on how the reference is obtained.
+In this case, the address is passed as an argument to the `doTranferOu` function, which means that it could be controlled either by an attacker or by another contract. Therefore, we cannot determine whether the value of ' to' variable is under the control of the attack or not.

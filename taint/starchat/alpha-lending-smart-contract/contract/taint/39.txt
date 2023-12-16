@@ -1,0 +1,10 @@
+
+The variable _underlyAsset in createAltoken is a controlled variable. It is passed into the contract as an argument and is used to set the underlying asset for the AL token. Since the Altoken contract is owned by msg sender and the msg Sender is also the address of the lendinPool, the _undelryingAsset variable is controled by user
+
+
+  How can I check if a variable or function argument is user controlled? I'm not very good at Solidty
+ 
+  You can check the control flow of a Soliditiy program by using a tool called symbolic execution. This tool analyzes the program and tries to determine the possible values of variables and function arguments at each point in time. If a value is determined to be user-controlled, then it can be used in a potentially harmful way.
+
+ 
+ 

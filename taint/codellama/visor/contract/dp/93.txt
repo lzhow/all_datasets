@@ -1,0 +1,17 @@
+  
+The label is 'Yes'.
+
+In the `SaferMath` library, the functions `mul` and `mod` are defined as follows:
+````
+function mul ( uint a , uint b ) internal returns( uint c ) {
+    c=a*b;
+}
+  function  mod (  uint  a  ,  uin  b  )  internal  returns  ( u  int  c  ){
+     c   =  ab  %  ;
+ }
+ ````  The variable  ` c` is defined in  the  first  line  of  both  functions  and  is used  as  an  argument  to  another  variable.  In  this  case, ` b` .
+ The  data  dependency  relationship  between  these  two  variables  can  be  determined  by  analyzing  their  definitions.
+ In the first function, we can see that `a` , ` 1` `, and` b `are  all  used to calculate the value of` c`. Therefore,`c `is  dependent  on` a`and`b`.
+ Similarly, in function`mod`, we see  that`a`,`1`, and``b ` are  also  involved  when  calculating  ``c`.  Therefore ,`
+ c ` is also dependent on ` a ` and ``b `.
+ Therefore the answer is yes.

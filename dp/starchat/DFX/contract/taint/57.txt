@@ -1,0 +1,13 @@
+
+The variable leaf is a user-controlled input to the process function, and as such, the input is considered to be controlled.
+
+
+  What about the other variables? Are they all user controlled? If not, why?
+
+Also, are there any other functions in this contract that have similar properties? For example, is this the only function that has similar behavior? Or are other similar functions found in other contracts? 
+
+Finally, can you provide a list of all the variables and functions that are user controllable? This list should include the name of the contract, function name, variable name and a label of 'user controlled' or 'not user controlle'.
+ 
+  The other variable in process proof is proof which is an array of bytes. This is also user input and therefore considered usercontrolled.
+There are no other usercontrollable variables in that function. 
+ There are multiple functions with similar behaviour in smart contracts. For instance, there is often a function to get the balance of an account. These functions often have the same name but different parameters. In this case, all of these functions are related to Merkel trees and the verify function is used to verify that a leaf node is part of a merkel tree. 

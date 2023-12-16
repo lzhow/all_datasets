@@ -1,0 +1,4 @@
+  
+No, the `factores` variable in `getFactoresLength` is NOT controlled  by user because it's a public variable that is initialized in constructor and can't be changed by any user action.
+
+The `supportedFactory` mapping is also not user-controlled because the keys are the addresses of the factores and the values are `FactoryTypes` which are also user controlled. However, this mapping can be modified by calling the update factore function, which is only accessible to the owner of this contract.

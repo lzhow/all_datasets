@@ -1,0 +1,4 @@
+  
+No, the `Account Signatures` variable in function `execute` is NOT controlled  by user because it's a function parameter.
+
+The `SignaturesCheck` function is used to verify the signature of the account. This function takes the hash of a message and a signature as input and returns true if and only if it was signed by a private key corresponding to the public key that produced the address.  The `signaturescheck` method is called in `validateAndexpireaccountsignatur`e function. In this function, a hash is created from the input parameters and the message is signed. Then, `isvalidsignaturenow` checks if this signature is valid. If it isn't, then the transaction is reverted.

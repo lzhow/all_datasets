@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The `_balances` mapping in the ERC20 contract keeps track of the token balances of each address. It is a private variable, but it is indirectly controlled by users through the public functions that modify it, such as `transfer`, `mint`, `burn`, `transferFrom`, and other functions that can change an account's balance. When a user calls the `transfer` function, for example, they can transfer tokens from their balance to another address, which results in a change to the `_balances` mapping for both the sender's and the recipient's addresses. Thus, while the variable itself is not directly accessible, its state is indeed controlled by the actions of the users.

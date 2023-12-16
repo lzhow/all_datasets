@@ -1,0 +1,13 @@
+
+The function call `target.cal{value:value}(data)` is a low-level Solidty function that performs a message call into an address `targe`t with attached ether value `valule`. The function returns a tuple of two values: a boolean indicating if the call succeeded, and the data returned from the callee.
+
+In the first function, the value of `this.balance` is not known at the time of the analysis, so it is considered to be a "potentially" data-dependent variable. In the second function the same holds for `isContrac(target)`, which is also a Solidit function.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundlers job is to take in many files and output a single file that contains all the code required to run the application. This is done by bundling together all of your javascript files, css files etc into a format that the browser can understand.
+
+    There are two main types of incremental bundleers, bundlrs that watch files for changes and rebundle when they change, or bundllers that only re-bundle everything when a new file is added. Both

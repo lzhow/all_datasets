@@ -1,0 +1,5 @@
+  
+No, the variables ` oldpendingadmin` and ` ctoken` are independent.
+
+The variable  `ctoken` is a parameter of the `_ setcompborrowspeed` function, which is called from the `setcompSpeeeds` internal function. This function is only called by the admin. Therefore, it is impossible for the value of `pendentadmin ` to be affected by `comp borrows peed`.
+ 

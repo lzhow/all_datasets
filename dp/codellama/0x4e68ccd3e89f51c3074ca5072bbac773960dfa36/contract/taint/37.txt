@@ -1,0 +1,4 @@
+  
+No.
+
+The variable `tick` in function `transform` is a function parameter, which means that it can be controlled directly by a user of the contract. However, the value of `delta` and `liquity` are also used to calculate the new value for `secondsCulmulativeXLiuqidty`, which is also a state variable. Therefore, `secondCummulative` can also be influenced by user input. 

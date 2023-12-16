@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `deposit` function, the value of `share` is calculated based on `total_supply` and `balances`. The value is not directly dependent on `_amount` or `_pool`, but it is indirectly dependent because the calculation of `_after` depends on both `_pools`and `_withdrawn`.
+Similarly, in `Withdraw`, the amount of shares to be burned is dependent upon the balance of the contract and the total supply of tokens.
+Therefore, `Shares `in the deposits function is data-dependent on`_sharess`in withdrawals.

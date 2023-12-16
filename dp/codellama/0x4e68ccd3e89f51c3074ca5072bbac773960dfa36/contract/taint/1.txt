@@ -1,0 +1,4 @@
+  
+No, the ` self` variable in function `clear` is NOT controlled  by user because it's a local variable and it can't be modified by any external user, only by internal code.
+
+The ` clear` function is a public function, but it doesn' t accept any input parameters, so it cannot be called by an external contract or user and therefore the value of `  self ` cannot change.

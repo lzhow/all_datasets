@@ -1,0 +1,4 @@
+  
+No, the ` compSpeeed` variable in function `_setcompborrowspeed` is NOT controlled  by user because it's a function parameter.
+
+The function is called by an admin address, and the admin is responsible for setting the comp speeds for each ctoken. Therefore, `compspeeds` are not user-controlled.

@@ -1,0 +1,4 @@
+  
+No, the ` old pending Admin` variable in function `_setpendingadmin` is NOT controlled  by user because it's a local variable that is created and destroyed within the scope of the `_ setpengingadmin()` function. It is only accessible within that function and cannot be accessed or modified by any other function or user outside of that scope.
+
+The `newPengindAdmin ` variable is also not user-controlled because its value is derived from the input parameter `msg .sender` which is a public variable. However, this value can be manipulated by a malicious user who calls the _ setPendinAdmin function with a different address. Therefore, we cannot consider this variable as user controlled.

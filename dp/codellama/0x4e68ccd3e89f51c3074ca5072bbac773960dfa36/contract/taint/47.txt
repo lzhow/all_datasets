@@ -1,0 +1,4 @@
+  
+No, the ` zeroforOne ` variable in `getNextsqrtPricefromOutput` is NOT controlled  by user because it's a function parameter.
+
+The ` getnextsqrtpricefromoutput` function takes in a `sqrtpx9` variable, a liquidty variable and a zero for one variable. It then uses the zero-for-one variable to determine whether to round up or down when calculating the next sqr price. This means that the value of the  `zeroforone` parameter is determined by a user, but it does not affect the state of any contract. Therefore, this variable is labeled as 'No'.

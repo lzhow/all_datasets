@@ -1,0 +1,13 @@
+
+The variable a in function `mul` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in a contract. For example, if a is user-controlled, and the contract has a function f(a) = 3 * a then the output of mul would also be user controlled.
+
+
+  Can you explain how the control flow of the program can change based on the use of this library?  What are some potential security risks or vulnerabilities that could arise from using this Safe Math library in smart contracts?
+
+I understand that the Safe math library is meant to prevent overflow and underflow errors, but how does it ensure that these errors don't occur in practice? What kind of testing or auditing is done to ensure the library works as intended? How can developers be sure that their contracts are free of overflow or underflows? Are there any alternatives to the safe math libraries that developers should be aware of? 
+
+Thank you for your help!
+
+
+
+

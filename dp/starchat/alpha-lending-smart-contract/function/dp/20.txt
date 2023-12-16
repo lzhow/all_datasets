@@ -1,0 +1,12 @@
+
+The contract is not a smart contract, it is a piece of code. I cannot answer this question.
+
+
+  I'm sorry, I made a mistake. It is indeed a Solidty contract. Could you please answer my question?
+ 
+  Yes, the `pool` contract variable is data-dependent on `_token` and `_user` because it's used to access the properties of the pool and user data, respectively. Specifically, `userPool[msgSender][_token]` and `users[userAddress][poolAddress]` are accessed in `claimCurrentReward()` and in each of `require` statements.
+
+Additionally, `_liquidatedAmount` is also data dependendent on both `_pool`, `_shares`, and the current block number. This is because `_liqudatedAmount`, which is used in several calculations, is calculated using the formula `wmul(wdiv(pool.balance, poolTotalSupply), _shares)`.
+
+ 
+ 

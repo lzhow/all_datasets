@@ -1,0 +1,4 @@
+  
+No, the ` borrowstate` variable in updatecompborrowspeed is NOT controlled  by user because it's a local variable that is created in this function and it can't be modified by any external user or function.
+
+The `updatecomp borrows peed` function is called by other functions in RedeemDistributionDelegate contract, and the borrowstate variable is used to store the current state of the ctoken' s borrow index. This variable can be updated by calling the update compborrownindex function, but it cannot be controlled directly by an external function or user input. Therefore, this variable cannot  be considered as a user-controlled variable.

@@ -1,0 +1,11 @@
+
+The variable "shares" in function deposit is not directly used in available(). However, it is possible for the value of shares to affect the behavior of available(), and vice versa. Therefore, the variables "want()" and "balance()" in both functions may be data-dependent.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure! The tool analyzes the code by examining the relationships between variables and functions. It uses a combination of static analysis and data flow analysis to determine whether variables are dependent on each other.
+
+Static analysis involves analyzing the source code to identify variables, functions, and control structures. This analysis is used to construct a control flow graph (CFG) that represents the execution of the program. Data flow analyses then track the flow of data through the graph to infer dependencies between the different variables. 
+
+For example, in your code, "totalsupply" is a function that is called in "deposit" but it's not used directly in any other function. However the dataflow analysis can determine that "available" depends on "share" because the "balanceOf" function in want() is dependent upon "this" which is assigned to "address" and the address of "

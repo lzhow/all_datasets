@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `viewTargeSwaps` function, the `_origin` and `_amount` parameters are passed to the internal `Swapp. viewTargSwp` method. This method returns the amount of tokens that can be swapped from `_source` to `_destination` with a maximum amount `_maxAmount`.
+  The `amount_` variable in ` view TargetSwamp` is data-dependent on ` fee_0 ` in` flash` because the` view Targ Swap`function uses the value of` fee _0`. The`flash`method uses`fe _  _`to calculate the fee for the swap.
+   The valueof` _amount `in`view Target Swamp `is determined by the return value from the call to` Swapp .view T arg Swp`. This means that the data flow from` fe _ _ `to` amount _ `_is indirect. Therefore, we label this as ' Yes'.

@@ -1,0 +1,4 @@
+  
+No, the ` amount B` variable in function `_add Liquidty` is NOT controlled  by user because it's calculated based on the amount of `token A` and the reserves of the pool.
+
+The ` _ add Liqidtiy` function calculates the optimal amount `of token B ` to be added to the liquidty pool based  on  the desired amount  of token A and  reserver of  token  A  and token b.  The optimal  amount is calculated using the  `quote Uv  function` from the OrinMulti Pool Library. This function takes into account the current reservations of both tokens in order to determine the best amount to add to achieve the target amount. Therefore, `the amount b` in this function  is determined by  other variables and is therefore not under the control of user input.

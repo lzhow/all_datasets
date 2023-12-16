@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `timeElapsed` in the function `_update` is calculated as the difference between the current block timestamp (`blockTimestamp`) and the last recorded block timestamp (`blockTimestampLast`). The current block timestamp is obtained from the block's metadata (`block.timestamp`) and is not directly controllable by any user. It is determined by the network at the time the block is mined. Therefore, `timeElapsed` is not controlled by the user.

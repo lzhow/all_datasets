@@ -1,0 +1,12 @@
+
+The function "safeTransfer" is a low-level function that is used to transfer tokens from one address (the current contract) to another. It is called by other functions in this contract, such as "transferFrom".
+
+In the "internal" function, the address "to" and the allowances of the current token contract and "spender" are updated.
+However, it is possible for another contract to call the internal function and modify the values of "new allowence" before the call to "token" occurs. This could result in a situation where the transfer is made to an address that does not have enough allownace, which would be a bug.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `token` and `spenders` are dependent on each other. Can you explain why?
+ 
+  The function'safeIncreaseAllowances' increases the token allowace of a given spednder by a certain value. If the speder has a high enough alowance, this function can be called multiple times to increase the alloance by the same value, potentially leading to a denial of service. 
+
+This is why the data dependence is labeled

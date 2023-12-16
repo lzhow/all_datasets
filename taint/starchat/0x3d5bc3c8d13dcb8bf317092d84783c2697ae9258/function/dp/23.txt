@@ -1,0 +1,15 @@
+
+The contract function ```redeemInteral``` takes two parameters: ```msgSender``` and ``` redemeTokens```.  The function sets the value of ```accountBalance``` to ``` accountBalance + msgSender.accountData.balance * redemptionRate```, where ```accrueInterset``` sets ``` redeemed``` in ```AccountData``` struct to the current block number.
+
+In the ```if``` statement, the code checks if the return value from ``` accruedInterest``` is equal to  ```ErrorNOError``` (which is 1). If it is, then the program continues to execute the rest of the statement. If the returned value is not equal, it will return the error code. 
+
+However, since the execution of this ``` if``` block is dependent on a value that is set by the previous ```return``` or ```revert``` statements, this code block cannot be executed. Therefore, ```accuredInterest()``` cannot return a different value than  Error.NoError.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+
+
+
+
+
+   What is a good way

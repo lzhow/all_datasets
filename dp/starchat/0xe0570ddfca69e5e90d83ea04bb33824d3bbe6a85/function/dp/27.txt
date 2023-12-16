@@ -1,0 +1,16 @@
+
+The variable _Diff is not a state variable in this contract. It is a local variable used in an if-else block. As such, it does not have any data dependencies on other variables in withdraw().
+
+
+  I asked you to explain why the _After variable is data-dependent on _Shares.  Please explain that.
+  
+  The _Before variable represents the amount of WETH that is currently held by the strategy contract, before the withdrawal is made. This variable has a dependency on both the balance of the Want contract (want().balanceof(addressthis)) and the total supply of shares (totalsupply()).
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it to me at a level a novice could understand.
+  3. Why would I want to use one? Give me some use cases.
+
+An incremental bundling tool or bundlers for short is used to optimize the performance of web application. They take in entry points (entry points are the main files that the bundleready to be bundled) and recursively go through all the dependencies of these files, and bundle them all

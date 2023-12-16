@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `_owner` is not present in the provided Solidity code. Therefore, it cannot have a data dependency relationship with the variable `_borrowShares` in the function `setUserPool`. The function `setUserPool` only interacts with the `userData` struct for a given `_user` and `_token`, setting the `disableUseAsCollateral` and `borrowShares` fields. Since `_owner` is not mentioned or used in any operation within this function or elsewhere in the provided code snippet, there is no data dependency between `_owner` and `_borrowShares`.

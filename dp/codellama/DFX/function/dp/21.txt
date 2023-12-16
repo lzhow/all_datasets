@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `for` loop iterates over the length of `assets` array in `Storage.curves` and assigns the value of the balance of each asset to `oBls_`. The `if` statement checks if the current asset is not the input asset, and if it is, it assign the same value to both `nbals`and `obals`.
+However, in this case, `inputix` is equal to the index of an asset in assets array, so the condition of if statement is always false, which means that `NBals[inputIX]` is never assigned a value.
+Therefore, we can say that the data of variable nbals is dependent on variable curve in function ViewTargetswapData.

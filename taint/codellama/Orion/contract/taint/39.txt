@@ -1,0 +1,4 @@
+  
+The variable 'pair' in function '_swap' is labeled as 'Unknown' because it depends on the value of the input parameters 'token A'and 'Token B'. The value for 'Pair' can be determined by calling the 'get pair' function of 'IOrinPoolvV1Factory' contract. However, the contract does not check if 'to' has the permission to call the get pair function. Therefore, we cannot determine if pair is user controlled.
+
+In general, when dealing with contracts that interact with other contract, especially when the interaction involves a call to a function that can potentially change the state of another contract (e.g. a getter function), it's important to carefully evaluate the security implications of such interactions and ensure that the interactions are properly secured.

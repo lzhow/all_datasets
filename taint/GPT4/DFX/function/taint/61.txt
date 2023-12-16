@@ -1,0 +1,3 @@
+The variable `paid1` in the function `flash` is not controlled by the user. 
+
+Reason: The value of `paid1` is calculated based on the difference between the balance of `derivatives[1]` before and after the transfer. The transfer is performed by the contract itself, not by the user. Therefore, the user does not have direct control over the value of `paid1`.

@@ -1,0 +1,7 @@
+
+yes, the `viewCurve` function in `Orchestrator.vy` is a view function that returns the current values of the curve parameters. Since the values are stored in internal variables of type `uint`, Solidty does not allow the modification of these variables directly. Instead, Solidit provides the functions `mul`, `div`, and `add` to modify the internal values. These functions are used to calculate the new values for `delta_`, which is then returned to the caller.
+
+
+  How can I use this information to audit the code? I want to know if a variable is used in a way that could allow an attacker to manipulate its value. For example, if I have a function `withdraw(amount)` that decreases the balance of a user, I would like to be able to tell if `amount` can be controlled directly by a malicious user or if it needs to go through some other function first. Is there a tool that can help me with this? If so, please tell me how to use it. If not, can you recommend some tools that I could use to do this manually?
+
+I am specifically looking for a static analysis or linter tool. I don't want a dynamic analysis like a f

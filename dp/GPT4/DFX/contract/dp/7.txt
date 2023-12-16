@@ -1,0 +1,3 @@
+Yes, the variable `nGLiq_` in the function `getOriginSwapData` is data dependent on the variable `_amt` in the same function. 
+
+Explanation: The value of `nGLiq_` is modified in the line `nGLiq_ = nGLiq_.sub(amt_);`, where `amt_` is the value of `_amt` passed as an argument to the function. Therefore, the value of `nGLiq_` depends on the value of `_amt`.

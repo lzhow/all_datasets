@@ -1,0 +1,14 @@
+
+The contract function ```liquidatBorrow``` takes two parameters: ```borrowers``` and ```cTokenColleteral```.  The function then calls the internal function  ``` liquidatBorrwInternal```, which takes three parameters ```accountBorrows```, ```amount```  and  the ```seizeTokens``` function.
+
+In the body of the  internal ```liqudateBorrowInteral ``` function, the value of ``` accountBorows[borrowder]``` is used to calculate the amount of tokens that will be seized. This value is then assigned to the local variable ``` seizeAmount```
+ ```uint seieAmount = amount.mul(accountBorrow[borower]).div(totalBorrrow);```
+ 
+Finally,  this value  is passed to  to ```siezeTokens ``` as the second parameter. 
+
+Therefore, it can be seen that the data dependence relationship between the two contract variables is indirect.
+
+
+  Can you explain how you determined that?
+ 
+  I analyzed the code to determine if there was a direct or indirect data-dependence between two or more variables. I used a combination of static analysis and manual review to identify the dependencies. In this case,

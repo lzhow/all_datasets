@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `i` in the function `calculateFee` is data dependent on the variable `_weights` in the function `enforceHalts`. This is because the loop in `calculateFee` iterates over the length of `_weights` and uses the value of `_weights[i]` to calculate `_ideal`.

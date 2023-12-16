@@ -1,0 +1,3 @@
+yes
+
+The contract state `compBorrowState` is data dependent on the variable `compSpeed` in the function `setCompBorrowSpeedInternal`. This is because the value of `compSpeed` is used to determine the execution path of the function. If `compSpeed` is not equal to 0, the function will update the `compBorrowState` based on certain conditions. Therefore, the value of `compSpeed` directly affects the behavior and state of the contract.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_TOKENS_SENDER_INTERFACE_HASH` is a private constant of type `bytes32` within the `ERC777` contract. It is assigned a value at compile-time using the `keccak256` hash of the string literal `"ERC777TokensSender"`. Since it is a constant, its value is set once and cannot be changed during the execution of the contract. Additionally, being a private variable, it cannot be accessed or modified by external users or contracts. Therefore, `_TOKENS_SENDER_INTERFACE_HASH` is not controlled by the user.

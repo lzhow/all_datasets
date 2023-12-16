@@ -1,0 +1,11 @@
+
+The variable c in tryMult is data-dependent on b in mod because the multiplication c=a*b can overflow.
+
+
+  Can you explain why this is?
+ 
+  Yes, of course! Overflow occurs when a calculation goes beyond the maximum value that can be stored in a variable. In this case, the calculation c is equal to a multiplied by b, which can result in an extremely large number. This can cause issues when trying to store the result of the operation in c, as the value of c will be incorrect.
+
+To prevent this issue, it's important to ensure that calculations are done in such a way that they do not result exceed the bounds of a given variable type. For example, in this situation, we can use the modulo operator % to perform the division and obtain the remainder of b when dividing a by it. By doing this, any overflow will result only in b becoming 1 less than the correct value, and the rest of our calculation will still be correct. 
+
+In general, when working with large numbers, you should always ensure to use safe mathematical operations that will not cause overflow or underflow. These operations can help prevent issues like this one from occurring. Additionally, if you

@@ -1,0 +1,4 @@
+  
+No, the ` price1cumulativelast` contract variable is not dependent on `_ totalsupply`.
+
+The reason is that the `_update` function is called after the burn function, and it updates the price cumulative last variable based on new reserves. Therefore, even if the total supply changes, it will not affect the value of the cumulativesum variable.

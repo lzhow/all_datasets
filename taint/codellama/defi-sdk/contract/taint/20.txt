@@ -1,0 +1,4 @@
+  
+No, the ` protocolSignatures` variable in function `execute` is NOT controlled  by user because it's a function parameter.
+
+The ` execute` function is called by a user, but the value of the parameter `account` and `swapDescription` are not directly controlled or manipulated by that user; they are passed as arguments to the contract. Therefore, ` account`and ` swapDescriptions`are not considered to be controlled directly by users. 

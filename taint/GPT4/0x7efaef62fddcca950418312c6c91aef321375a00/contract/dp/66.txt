@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `feeOn` in the function `burn` is not data dependent on the variable `liquidity` in the same function. `feeOn` is determined by the state of the `feeTo` address in the `IPancakeFactory(factory).feeTo()` call, which checks if the feeTo address is set to a non-zero address. This determination is independent of the `liquidity` variable, which is calculated based on the contract's reserves and the total supply of the liquidity tokens. The calculation of `liquidity` does not influence the state of the `feeTo` address, and therefore, there is no data dependency between `feeOn` and `liquidity`.

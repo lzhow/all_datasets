@@ -1,0 +1,3 @@
+yes
+
+The contract state `factories` is data dependent on the variable `_factory` in the function `constructor`. This is because the value of `_factory` is used to initialize the `factory` state variable, which is then assigned to the `factories` state variable. Therefore, any changes to the value of `_factory` will affect the value of `factories`.

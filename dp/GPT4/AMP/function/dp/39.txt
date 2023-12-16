@@ -1,0 +1,10 @@
+
+The contract function `addtokenTopartition` is a private function that is called by other functions in this contract. It adds `_Value` to the balance of `_to` and adds the `_partition `to the list of partitions `_To` belongs to if it is not already in that list.
+
+It also adds`_Value ` to `balanceOfbyPartition`_To`_Partition `and increments the total supply of the partition `_Partition`.
+However, it does not update the `TotalSupplybypartition`_partition`. This means that the value of ` totalsupplybypartiton`_ partition` may be incorrect.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship." Could you please explain what that means?
+ 
+  Data dependency is when one variable or state is dependent on another. In the context of your question, if the state totalSuppyByPartiton is data-dependent on variable _Value, then any change to _VAlue could affect the correctness of totalSuppplyByParition. If _Partition is also data dependant on _To, and _Balance is dependend on total Supply, the system would be more complicated to understand and debug.

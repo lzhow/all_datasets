@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `size` in the function `isContract` is used to store the code size of the address `account` which is checked to determine if the address is a contract or not. This is done by using inline assembly and the `extcodesize` opcode which gets the size of the code at a specific address.
+
+On the other hand, the variable `target` in the function `functionCall` represents the address of the contract being called. The `functionCall` function is used to execute a low-level call to another contract.
+
+There is no direct relationship between `size` and `target` as they are used in different contexts within their respective functions. `size` is used to get the code size of an address to check if it's a contract, while `target` is the address to which a call is being made. There is no data flow or dependency between these two variables in the given code. Each function operates independently, and the variables within them do not influence each other.

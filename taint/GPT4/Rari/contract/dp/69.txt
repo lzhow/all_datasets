@@ -1,0 +1,5 @@
+Label: no
+
+Reason: The variable `deltaIndex` in the function `distributeSupplierComp` is calculated within the function itself and is based on the difference between `supplyIndex` and `supplierIndex`, which are derived from the state variables `compSupplyState` and `compSupplierIndex` respectively. It does not depend on the input parameter `holders` from the function `claimRewards`.
+
+The `holders` variable in `claimRewards` is used to iterate over the addresses of holders to distribute rewards to, and it does not influence the calculation of `deltaIndex` within `distributeSupplierComp`. The `distributeSupplierComp` function is called within the loop that iterates over `holders`, but the calculation of `deltaIndex` is independent of the `holders` array itself. It is only dependent on the state of the contract and the specific `supplier` address passed to `distributeSupplierComp` when it is called.

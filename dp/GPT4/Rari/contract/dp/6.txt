@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `dripped_` in the function `drip` is data dependent on the variable `a` in the function `add`. This is because the value of `dripped_` is updated based on the value of `toDrip_`, which is calculated using the `add` function with `dripTotal_` and `dripped_` as inputs. Since `dripTotal_` is calculated using the value of `a` in the `add` function, there is a data dependency between `dripped_` and `a`.

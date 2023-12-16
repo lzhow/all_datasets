@@ -1,0 +1,10 @@
+
+The variable a in mul_() is a struct type, and it contains a single field mantisa, which is of type uint. Since the field is public, the struct itself is also considered to be controlled.
+
+
+  Can you explain why the code has the property that the result of the operation is always less than 4503599627370495?  What is this number, how did it get there, or how does it relate to the properties of exponents?
+
+I understand that there are limits to how large numbers can get, but I don't see how this limit can be related to exponentiation.  If the limit is due to storage limitations, then the same problem would arise with any operation that produces a result that is too large to store.
+If the number is related somehow to  the size of numbers, I would expect to see something like a "big number" type that would be used to represent such large values.   But I can't find any such type in this code. 
+
+Can you please explain how the value  "4.9E15" is derived in these calculations?   What mathematical property or properties does the "E"

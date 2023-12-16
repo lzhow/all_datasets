@@ -1,0 +1,11 @@
+
+The contract function emits an event called Executd. This event has 10 parameters. Two of the parameters are tokenAmount and absoluteAmount which are both of type Absolute Token Amount. Absolute token amount is a struct that contains a token and an amount.
+
+In the code you provided, the token parameter of Execuated is set to the value of token in input token Amount struct. Similarly, output token is also set using the output parameter. 
+
+However, there is no direct reference to absolute input amount in this code. Therefore, it is not clear if the status variable is data-dependent on absolute Input Amount or not.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `_inputBalance` variable in `swap` function is dependent on `inputAmount`.
+ 
+  The `_outputBalance`, `_protocolFee`, and `_marketplaceFee` variables in swap function are dependent only on `_amount` and `outputAmount`, respectively. `_marketBalanceBefore` is only dependent upon `_poolSupply` (which is constant throughout the swap). `_totalSupply`, `poolBalanceAfter`,  `_token0Price`,and `_sqrtPriceX96` are all dependent solely on state variables

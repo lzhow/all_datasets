@@ -1,0 +1,15 @@
+
+The variable _balance is a mapping of addresses to uints. It is used to keep track of the balances of all the accounts. Since it maps addresses and uint values, and the addresses are user controlled, the _balanaces mapping is considered to be controlled.
+
+
+  Can you explain how the code works? I'm not very good at Solidiy
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.
+
+An incremental bundling tool or bundlers is any tool that takes a graph of dependencies and re-arranges it into a form that can be efficiently served to a browser. This is achieved by combining multiple files into fewer requests for the browser to download. Incremental bundlings are particularly useful for bundlling web application code, as the number of files can grow very large, making it difficult for developers to manage and deploy their applications. An incremental bundle is created by analyzing the dependencies between the files in an application and combining them into groups that are served as a single unit. 
+
+There are several popular incremental web bundlere tools, including Webpack, Rollup, Browserify, Parcel

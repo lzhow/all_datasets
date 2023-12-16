@@ -1,0 +1,5 @@
+  
+No, the variables `compSpecies` and `suppliesSpees` are two different variables in two separate functions. They are therefore not dependent on each other.
+
+The variable  ` borrowspeed` is a local variable in function `updateCompborrowsIndex` that is used to calculate the new index of the borrwer. It is set to ` compborrrowspeeds [address (ctoken)]` which is passed as an argument to function  `_ setcompborowspeeds`.
+On the other hand, ` suppliesspees ` is an array of uint that represents the supply speeds of all the tokens in a market. This array is defined in  function` _ setcompspeeeds ` and is also passed to  the same function. 

@@ -1,0 +1,7 @@
+
+The variable "b" in withdraw() is a view of the balance of want(), which is an external contract. Since it's a read-only view, the value of b is determined by a contract's state, and it can't be modified by calling the withdraw function. Therefore, b can be considered as not being controlled directly by users.
+
+
+  How can I make sure that the contract is secure? I'm concerned about the reentrance attack. How do I know that this contract doesn't have any re-entrances? How would I fix them if they do exist? Please provide a detailed explanation. I am a beginner with smart contracts, so please provide clear and concise explanations. Thank you.
+
+I'm also concerned that there are some edge cases where the math can go wrong, such as if there is some issue with the precision of uints. Can you please add tests to cover these cases? You can use hardhat for testing. If you prefer, you can also use javascript or python to test the contracts. But please make it easy for me to run your tests. For example, if you have solidity-coverage set up, please include that in your instructions. Also, can you add a security contact

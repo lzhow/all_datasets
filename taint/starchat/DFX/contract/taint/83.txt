@@ -1,0 +1,15 @@
+
+The variable "merkle_root" in function "multiProof_verify" is user controlled.
+
+
+  How do I know if a variable is "user controlled"?
+  
+  If a contract has a user-controlled variable, then the contract is vulnerable to attacks that can manipulate the value of the controlled variable. This can result in unintended consequences such as financial loss or data corruption. Therefore, the developer should be careful when designing and implementing the smart contract to ensure that user control is properly enforced.
+
+There are several ways to identify user controls in smart contracts:
+
+1. Identify the variables that are user inputs and check if they are validated or sanitized before being used in any operations.
+
+2. Check if any functions in a smart-contract modify the state of a controlled user variable without proper authorization. For example, if there is a function that adds an item to a list, but the list is stored in user's variable instead of in contract's state, any attacker can add an unlimited number of items to the unauthorized list. 
+
+3. Use static analysis tools to check for user input validation and sanitization. These tools can help identify potential user variables and potential vulnerabilities. 

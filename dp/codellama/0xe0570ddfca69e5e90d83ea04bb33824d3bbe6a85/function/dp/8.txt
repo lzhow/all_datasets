@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `if` statement, the value of `_pool` is used to calculate the amount of shares to be minted. If the total supply of the token is zero, then the shares are equal to the deposited amount. However, if the supply is not zero (i.e., `totalSuply()` is greater than zero), then shares is calculated based on a ratio of deposits to total pool size. Therefore, `_amount` and `_after` are both data-dependent on `_supply`.

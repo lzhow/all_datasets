@@ -1,0 +1,17 @@
+
+The variable "pool" in this function `_swap_curve` is user-controlled. This function calls the `exchange` function of the Curve pool contract, which can be called by anyone.
+
+
+  How can I make sure that the pool variable is indeed user controlled? I'm concerned that it could be set to a malicious address by a hacker. Can you add a modifier to the `_do_swap` method that checks if `msg_sender` equals the value of `cur_factory`?
+ 
+  Yes, you are correct that this is a potential concern. A modifier can help protect against this. Here's an example of how you could add such a check:
+
+function _isUserControlled(SwapInfo memory _info) private view {
+    require (msgSender == _pool);
+}
+modifier onlyUser {
+  _;
+  require (_isuserControlle);
+  }
+Then you can call the modifier in your `_add_liquidity` and `_remove_Liqudity` functions.
+This will ensure that only the factory can add or remove liquidiy from the pools. However, this does not prevent a user from calling the functions directly. To prevent this, a

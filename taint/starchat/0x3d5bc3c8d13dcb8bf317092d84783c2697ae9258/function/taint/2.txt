@@ -1,0 +1,12 @@
+
+The variable seizetokens in seizable is a controlled variable.
+
+
+  How does the analysis determine if a variable is user controlled?  What are some of the key heuristics or techniques used?
+
+In computer programming, a control flow graph (CFG) is an abstract representation of a program's control-flow and is used to analyze and understand the program. A control structure is any statement that can be used for control transfer, such as conditionals (if-then-else), loops (for, while, do-while), and function calls.
+A data flow analysis is performed on a CFG to determine whether the values of variables (or expressions) can change at runtime, and how they are used. In a user-controlled variable analysis, the goal is to identify whether a given variable or expression is directly controlled (i.e., written to) by a human user or device. This analysis can help developers identify potential security vulnerabilities, buffer overflows, or other issues that could arise from unauthorized access to sensitive data.
+
+
+There are several techniques and heuristic used in user control analysis. These include:
+1. Control-Flow Graph Construction: The program is modeled as a graph, where

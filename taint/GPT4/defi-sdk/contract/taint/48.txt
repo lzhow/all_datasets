@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `inputToken` in the function `approveAndCall` is assigned a value from the `callerCallData` parameter of the `callBytes` function, which is an external function and can be called by anyone. The `callerCallData` is decoded to extract the `inputToken` address, which means that the caller of the function can pass any address as the `inputToken`. Since the `inputToken` is directly influenced by the input provided by the external caller (user), it is controlled by the user.

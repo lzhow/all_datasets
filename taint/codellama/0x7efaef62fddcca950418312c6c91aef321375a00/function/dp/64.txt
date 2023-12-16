@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `abi` function is called with the selector `SELECTION`, which is a function selector that is defined in another contract. This function call returns a tuple of two values: a boolean indicating whether the call was successful, and a bytes array containing the return value of the called function.
+Since the second argument of `encodewithSelector` is `address to`, the value ` to` will be passed as an argument to the selected function when it is executed. Therefore, `value` and `data` are dependent on ` token`.
+Similarly, in function 2,  the same ` encodewithselector` method is used to call the  ` SELECTOR` selector, which returns the tuple `(bool,bytes)`. The second element of this tuple is decoded as a `bool` using the` abidecode`function. Since the third argument is` uint` value, it will also be dependent  on` token` .
+Therefore, both ` value`and ` data`are dependent variables of`token`.

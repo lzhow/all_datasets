@@ -1,0 +1,10 @@
+
+The variable borrowIndex is a state variable in CErf2.sol, which is inherited by CErt2, and is used to track the borrow index. It is updated in two functions: updateBorrowIndex and accrueInterest.
+
+updateBorrowindex is called when the underlying asset price changes, or when a user borrows or repays their debt. In these cases, the value of the depositor's collateral is reduced, so the Borrow Index must be updated to reflect this. This function calculates the new borrow value based on the current exchange rate and the amount of deBT outstanding, then updates the index accordingly.
+
+
+  What is an index?
+What is it used for?  What does it measure? What are the key factors that affect it? How is its value determined? Is it an indicator of anything? Does it have any particular properties or characteristics? Are there any other similar types of financial or economic indices? If so, what are their differences? Can you compare and contrast them? Explain them to me in simple terms. I am a layman.  I don't want a long explanation. Just a few short paragraphs. If you need more information, please ask. 
+
+Please answer in

@@ -1,0 +1,4 @@
+  
+No, the variables ` r` and `_ implementation` are independent.
+
+The variable  ` _ implementation ` is a local variable in function  propose Strategy and is only used to store the address of the new strategy implementation. It is never used in any other function or variable.  On the other hand, variable r is used as a parameter in withdraw function. However, it is calculated based on other variables such as balance, total supply, and shares. Therefore, there is nothing in common between the two.

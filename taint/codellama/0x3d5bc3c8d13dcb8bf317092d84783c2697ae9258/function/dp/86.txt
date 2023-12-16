@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `Exp` struct, the field `m` is initialized with the result of the expression `exchangeRatCurrent()`. This means that the value of `exchageRate` depends on `accountTokes[ownder]`, which is a contract variable. Therefore, `ExchangRateScale`, a field of type `uint` in `Math.sol`, is data-dependent on variable `owner` of function`balanaceOfunderlying`.
+ 

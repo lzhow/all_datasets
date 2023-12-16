@@ -1,0 +1,4 @@
+  
+No, the `_status` variable in `ReentryGuarded` is a private variable that is initialized to `_ENTRED` in its constructor. It is therefore not under the control of the end user and is considered a constant.
+
+The `nonReenterant` modifer in this contract is used to prevent reentrance attacks by checking if `_entered` has been set to `true` before executing the rest of its code. This is done by requiring that `_enterd` be equal to  `_not_enterred` (i.e., `false`) before allowing the code to execute. If `_enteered` was set by a previous call, then the modier will revert the transaction. Therefore, `_entrerded is under control by this smart contract and not by an end-user.

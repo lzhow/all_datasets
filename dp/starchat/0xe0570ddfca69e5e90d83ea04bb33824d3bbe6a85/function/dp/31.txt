@@ -1,0 +1,11 @@
+
+The contract function ```propostStrrat``` has a call to the ```IStrategy``` interface, which is an external contract. It is not possible to determine if the state of the external interface is data-dependent on any of its inputs.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence" in this context. Could you please explain it to me?
+  
+  Data-dependency is a term used in computer science to describe how one variable or value depends on another. In the context of smart contracts, data dependence refers to how a value or state in a smart contract depends upon the values or states of other smart contrats or variables.
+
+In the example you provided, the value of ```_implementation``` is used to call the interface ```IStretegy```, and the result of that call is then used as the input to another function call. This means that the output of one function depends directly on an input value, or in other words, that ```implementation ``` is dependent on ``` _totalsupply```. 
+
+However, it's important to note that data dependencies can be complex and difficult to analyze, especially in complex smart-contracts. For example,

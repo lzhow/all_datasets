@@ -1,0 +1,5 @@
+  
+No, the variables ` balance ​​0 ` and ` amount  ` are independent in function  burn and function` swap`.
+
+In function Burn, `Balance 4` is calculated by subtracting the amount of liquid tokens burned from the total balance of the liquid token in this contract. This calculation does not depend on any other variable in `burn`.  On the other hand, in  function Swaps,  the ` Balance ` is updated by adding the input amount to the current balance.  This update does depend  on  input  amount, but not on `Amount1out`. Therefore, there is no data dependence between `BALANCE0 and AMOUNT1OUT` .
+ 

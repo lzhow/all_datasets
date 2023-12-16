@@ -1,0 +1,3 @@
+Unknown.
+
+The variable `amountOut` in the function `_doSwapTokens` may or may not be data dependent on the variable `curBalance_scope_0` in the same function. This is because the value of `amountOut` is assigned based on the condition `if (swapData.supportingFee)`, which depends on the value of `swapData.supportingFee`. The value of `swapData.supportingFee` is not directly dependent on `curBalance_scope_0`, so the data dependency between these two variables is unknown without further analysis of the code.

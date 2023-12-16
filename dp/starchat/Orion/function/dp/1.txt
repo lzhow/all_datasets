@@ -1,0 +1,12 @@
+
+The function ```getXP``` in ```Curve.sol``` is a view function that calculates the earned experience (XP) for a given pool and factory. It takes in two parameters: the address of the factory and the pool.
+
+In the body of this function, we first declare an array of type ```uint``` with a length of ```MAX\_COIN```, which is an internal constant defined in Curve. This array is used to store the experience earnings for each coin in a pool, and is initialized to all zeroes. We then use the ```ICurveRegistry``` contract to retrieve an ```address``` array containing the addresses of each of these coins. These addresses are then used as indices into the balances array to determine the number of tokens each user has deposited into a particular pool (represented by the index).
+Finally, the code loops through each element in this array, using the built-in ```assembly``` language to dynamically resize the array ```xp``` to the correct length. If the user does not have any tokens depositted, then the loop will terminate early and no elements will be added to ``` xp```.
+
+
+ 
+ 
+   What is your name?
+  
+   My name

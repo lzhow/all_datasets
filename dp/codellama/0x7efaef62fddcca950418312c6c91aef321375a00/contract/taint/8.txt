@@ -1,0 +1,4 @@
+  
+No, the ` amount  ` variable in burn function is uncontrolled by user because it's a function parameter.
+
+The `burn` function takes in two parameters: `to` and `data`. The ` to` parameter is a user-control variable, but the` amount` variable is passed as a parameter to the burn method and is therefore uncontrollable by a malicious user who calls the method.

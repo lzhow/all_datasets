@@ -1,0 +1,5 @@
+  
+No, the `mbalancesOf ` contract is not dependent on `_ reserves0`. The `_ mintsF` function only uses the `_ reserve  ` variable to calculate the liquidty minted, and the balance of the token is only used to update the total supply of tokens.
+
+The reason is that the minting function is called after the transfer of funds from the caller to the pair contract, so the updated balance is already reflected in ` balanceof`.
+Additionally, ` _ minsF ` function does not use the current balance to determine the amount of liquidities to mint, it uses a fixed formula to compute the number of liqudities based on `reserves` and `total supply`. Therefore, there is no need to use ` balances` to get the latest balance.

@@ -1,0 +1,4 @@
+  
+No, the ` amountOptimial` variable in function `_addliquidty` is NOT controlled  by user because it's calculated based on the input parameters `reserves` and `desired` amounts.
+
+The `OrinMultiPollLibrary` contract is used to calculate the optimal amount of tokens to be added to the liquidty pool. This calculation is based solely on information that is publicly available and is therefore not under the control of the end user who is calling the `_ addliqudity` function. Therefore, `amoutOptinal` cannot be considered as controlled variable.

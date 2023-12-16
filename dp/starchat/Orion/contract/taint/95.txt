@@ -1,0 +1,7 @@
+
+The variable b in function `tryDiv` is **not** controlled directly by user input. However, the value of b is derived from user-controlled input a. Therefore, b can be considered to be controlled indirectly by a and therefore be classified as user controlled.
+
+
+  Can you explain how the program analyzes the code to determine if a variable or state of a contract is user or not? I'm specifically looking for the algorithm used to analyze and determine the control flow of the contract. Can it determine that a state variable is never modified after it's declaration? Can the analysis determine whether a function is pure or view? How does it handle inheritance and modifiers? Are there any optimizations that the analyzer can perform to improve performance? Please provide a detailed explanation of how it works and the limitations of its current implementation. I would also appreciate if you could provide some examples of contracts that it can analyze, and whether it correctly identifies user control or lack thereof. Finally, I'd like to know if there are any plans to extend the functionality of this tool in future versions. Thank you for your time and consideration.
+
+Please note that I am not asking you to write the tool, but rather to explain in detail how your program works.

@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_mint` function in `Jaya.sol` calls the `onMint` method in each of the NFT contracts, passing in an array of token addresses and an equal-length array containing the IDs of each NTF being minted. This results in a call graph that looks something like this:
+`Jays.mint -> Jay.buyNFT -> NftContract.safeMint -> onMint(Jayer.address, [token1, token2], [id1a, id1b,...])`
+In this call, the token address and ID arrays are passed in as parameters, and the ID array is used to index into the address array. If the order of elements in these arrays is not consistent, then the resulting call stack will be different, resulting in different data dependencies.
+
+
+  Can you explain how the callstack is different?
+ 
+  The order in which the elements of these two arrays (token addresses, IDs) are used in this function call is important. Specifically, if the ordering of IDs is changed, this will result in two different call stacks. For example, consider the case where the first element of

@@ -1,0 +1,5 @@
+  
+No, the `succeess` variable in `function sell` is not dependent on ` price` from ` function  updatefees`.
+
+The ` success`variable in`function  sell `is a local variable that is defined within the scope of the` function` and is only used within that function. It is initialized with the result of a call to the external function `_burn`, which is a function from the ER2C token contract.
+On the other hand, `  price `variable is declared in  ` update fees` as a global variable and it is used in multiple functions.  It represents the current price of  the token in US dollars.  

@@ -1,0 +1,16 @@
+Label: yes
+
+Explanation: The variable `c` in the function `get_y` is data dependent on the variable `_x` in the same function. This can be observed from the following code snippet:
+
+```
+if(_i == uint128(i))
+    _x = x;
+else if(_i != uint128(j))
+    _x = xp_[_i];
+else
+    continue;
+S_ += _x;
+c = c * D / (_x * N_COINS);
+```
+
+In this code snippet, the value of `_x` is assigned to `c` in the line `c = c * D / (_x * N_COINS)`. Therefore, the value of `c` depends on the value of `_x`.

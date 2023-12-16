@@ -1,0 +1,9 @@
+
+The variable "result" in function "decimalTobaseUnit" is user-controlled. It is used to store the result of the conversion from decimal to base unit, which is then returned as a uint of type uint 16.
+
+To understand why this is so, consider the two cases:
+1. If the asset address is  address  (0), then the base units are wei, and the decimal units can be converted to weis by multiplying by  "1ether" and dividing by "  pow(  ten,8)".
+2. Else, the number of decimals of "asset address" must be retrieved using the "decimals" function of Ierc2oSimple interface. Then, we can convert the amount to the corresponding base-unit by diving the given amount by ten to power of number-of-decimals.
+
+
+  Can you explain why it's user controlled? I'm not sure I understand. I thought that the whole point of using an SMT solver was to eliminate the need for human analysis of code. Isn't the point to have a tool that can automatically analyze code, identify potential vulnerabilities, etc.? Why would the programmer need to manually analyze their own code

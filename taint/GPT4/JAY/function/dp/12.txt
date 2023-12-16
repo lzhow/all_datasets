@@ -1,0 +1,12 @@
+The contract state `buyNftFeeEth` is data dependent on the variable `_price` in the function `updateFees`. 
+
+Reason: The value of `buyNftFeeEth` is assigned based on the value of `_price` in the following code block:
+```
+if (_price > USD_PRICE_BUY) {
+    uint256 _p = _price.div(USD_PRICE_BUY);
+    buyNftFeeEth = uint256(1 * 10**18).div(_p);
+} else {
+    buyNftFeeEth = USD_PRICE_BUY.div(_price);
+}
+```
+The value of `_price` is used to calculate `_p` and then `buyNftFeeEth` is assigned a value based on `_p`. Therefore, there is a data dependency relationship between `buyNftFeeEth` and `_price`.

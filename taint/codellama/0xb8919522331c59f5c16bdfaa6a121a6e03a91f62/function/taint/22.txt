@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the given code, the `getProxyImplentation` function is defined as a public function that takes a `TransparantUpgradableproxy` as an argument. This function calls the staticcall method on the address of the proxy and passes the hex string "5C61DA1B" as the input.
+This function then decodes the return data using the ABI.decodetype function and returns the decoded data.  The `changeProxyadmin` and `upgradeto` functions are also defined in this contract. These functions call the corresponding methods on a proxy object. However, these functions do not take any input from the caller. Therefore, we cannot determine whether the retuned data is user-controlled or not.

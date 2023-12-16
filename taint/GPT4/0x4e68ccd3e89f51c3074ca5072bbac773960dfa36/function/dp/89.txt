@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `secondsPerLiquidityCumulativeX128` is used in the function `cross` to calculate the value of `info.secondsPerLiquidityOutsideX128` by subtracting `info.secondsPerLiquidityOutsideX128` from `secondsPerLiquidityCumulativeX128`. On the other hand, the variable `feeGrowthGlobal1X128` is used to calculate the value of `info.feeGrowthOutside1X128` by subtracting `info.feeGrowthOutside1X128` from `feeGrowthGlobal1X128`. There is no direct interaction or dependency between `secondsPerLiquidityCumulativeX128` and `feeGrowthGlobal1X128` within the function `cross`. Each variable is used in a separate and independent calculation that does not influence the other. Therefore, they are not data dependent.

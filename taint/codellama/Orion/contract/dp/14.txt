@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `swap_data` struct contains a `path` field that is an array of addresses representing the token addresses in a swap path (e.g., `[token_in1_address, ...,tokenout_n_addres]`). The `cur_factory` and `support_fee` fields are also present in this struct.
+When the swap function calls the _ swap`function, it passes the`swapdata. path` array as an argument. This array is then used to determine the addresses of the tokens involved in each swap.  The`amountin` variable is calculated based on these addresses. Therefore, ` amountin ` is data-dependent on ` output`.
+ 

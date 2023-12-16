@@ -1,0 +1,5 @@
+Label: no
+
+Reason: The contract state `nonces` is a mapping that keeps track of the number of times the `permit` function has been used by a particular address. It is incremented in the `permit` function to prevent replay attacks. On the other hand, the variable `_token0` in the `swap` function is a local variable that holds the address of the first token in the pair. It is used to facilitate the transfer of tokens during a swap operation.
+
+There is no direct interaction or dependency between the `nonces` mapping and the `_token0` variable within the `swap` function or elsewhere in the contract. The `nonces` mapping is only modified in the `permit` function and is not affected by the `swap` function or the `_token0` variable. Therefore, they are not data dependent.

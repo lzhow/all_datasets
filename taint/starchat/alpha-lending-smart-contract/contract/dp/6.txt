@@ -1,0 +1,14 @@
+
+The contract has a function called `claimCurrentAlpharReward` which is called by the `owner` of the smart contract. This function calls the calculateAlhpaReward function to calculate the amount of Alpha rewards that the `_account` has earned.
+
+In the calculation, the alpha multiplier is multiplied by balance of `_from` and divided by  `10^15`.
+Since the balance is unknown, it is assumed that it remains the same. 
+
+Therefore, `latestAlpahMultiplier[from] == alphaMultipler`
+This means that `calculateAlphaRewards(from) == calculate AlphaRewards (from)`
+Hence, alpha is data-independent of amount.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependent" and "independent." Could you explain these concepts to me?
+ 
+  Data-dependence is a term used in computer science to describe the relationship between two or more variables. In the context of smart contracts, a variable is considered dependent on another if the value of one variable affects the other variable's value. For example, if variable A is dependent upon variable B, then changing the values of B can affect the

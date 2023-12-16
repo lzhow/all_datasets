@@ -1,0 +1,3 @@
+yes
+
+In the `sendValue` function, the variable `success` is set based on the outcome of the `recipient.call{ value: amount }("")` operation. This operation attempts to send `amount` of Ether to the address specified by `recipient`. The `success` variable will be `true` if the call operation is successful, and `false` if it fails. Since the call operation directly involves the `recipient` variable (as it is the destination of the call), there is a data dependency between `success` and `recipient`. The value of `success` depends on whether the call to the `recipient` address succeeds or not.

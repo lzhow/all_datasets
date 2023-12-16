@@ -1,0 +1,9 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_updatePositions` function updates the `feeGrownGlobal` variables based on `liqudityDelta`, which is derived from `tokens0Owend` and `tokenOwnd1`. The `_collect` functions updates `position.tokenOwend0` or `1` based `amout0Request` which are derived form the user's input. Therefore, the two functions are indirectly data dependendent on each other.
+
+
+  Can you explain how the data dependencies are found?
+ 
+  Yes, I can explain in detail how data and control dependencies can be found in code. Data dependencies occur when one variable is used to calculate another variable, and the calculation depends on some other variables. Control dependencies, on  the other hand, occur  when the order of instructions matters. For example, if one instruction modifies a variable that is then used in a conditional statement, then the instruction has a control dependency on that conditional. If the instructions are executed in different orders,  then  there may be  data or control  dependencies that are missed. In order to find data  and  control   dependencies in  code, one can use 

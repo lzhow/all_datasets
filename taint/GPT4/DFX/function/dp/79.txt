@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_oBals` in the function `originSwap` is data dependent on the variable `nBals_` in the function `viewOriginSwapData`. This is because the value of `_oBals` is assigned the value of `nBals_` in the for loop of the `viewOriginSwapData` function. Specifically, the line `oBals_[i] = nBals_[i]` assigns the value of `nBals_[i]` to `_oBals[i]`. Therefore, there is a data dependency relationship between these two variables.

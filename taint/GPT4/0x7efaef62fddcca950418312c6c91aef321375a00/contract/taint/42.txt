@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The `nonces` mapping in the `PancakeERC20` contract is a mapping from an address to a uint, which is used to keep track of the number of times the `permit` function has been used by each address. The `permit` function allows a user to approve a spender to transfer tokens on their behalf by submitting a signed message, and it increments the nonce for the user's address each time it is called to prevent replay attacks. Since the `nonces` mapping is updated based on the actions of the user (specifically, when they call the `permit` function and provide a signature), it is controlled by the user.

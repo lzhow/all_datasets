@@ -1,0 +1,4 @@
+  
+No, the ` hash ToMark ` variable in function ` mark HashU sed ` is NOT controlled  by user because it's a local variable that is created in this function and is only used within this scope. It is therefore not possible for the contract to be controlled or manipulated by a user through this variable.
+
+The `markHashused` function takes a `bytes 3 2` as an argument and uses it to mark a hash as used in a mapping. This mapping is a private variable of the smart contract and can only be accessed by functions within the same contract. Therefore, there is no way for a malicious user to manipulate the mapping or the hashes stored in it. 

@@ -1,0 +1,14 @@
+
+yes, it is.
+
+The reason is that the `_swapdata._name = name` line in `constructor` sets the name of the curve to be the same as the contract name. This means that `_sender` and `_recipient` are both set to `Curve`, which is a constant.
+
+
+  Can you explain why this is data-dependent?
+ 
+  The reason why the constructor sets `_curveData.name=name`, is because the `name variable` is set in a constructor. When the smart contract is deployed, the value of `this.owner` will be set, and the owner of this contract will have the ability to change the values of all the variables in this smart contracts. Therefore, if the data in `_curvedata.Name` was not dependent on `msgSender`, then the code would not be able to access the correct value. 
+
+In this case, `Name is dependent` on `_msgsender`, because it's value is being set by the user who is deploying the Smart contract. If the Name variable was set using a function, then it would be independent of `_msgesender`.
+
+ 
+ 

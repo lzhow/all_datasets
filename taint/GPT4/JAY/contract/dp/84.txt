@@ -1,0 +1,3 @@
+The contract state `lockDev` is not data dependent on the variable `erc1155Ids` in the function `buyNFTs`. 
+
+Reason: The variable `erc1155Ids` is used as an input parameter for the function `buyNFTs`, which means its value can be different each time the function is called. On the other hand, the contract state `lockDev` is a private boolean variable that is not modified or accessed within the function `buyNFTs`. Therefore, there is no data dependency between `lockDev` and `erc1155Ids`.

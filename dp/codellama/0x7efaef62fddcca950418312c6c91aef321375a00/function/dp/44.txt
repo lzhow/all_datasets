@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_safeTranfer` function, the `address token` parameter is passed as an argument to the `.call()` method, which is a method of the ERC-2315 interface. This method takes a `bytes` argument that represents the data to be passed to a contract. In this case, it is an ABI-encoded representation of a function call to `SELECTO` with the arguments `to` and `value`.
+  The `abi` module is used to encode the argument as a bytes array.
+   The `_burn` method in ` burn` also uses the same `safe` transfer method to transfer the tokens. Therefore, ` token ` is data-dependent on `_ token 1`.

@@ -1,0 +1,3 @@
+yes
+
+The variable `tickCumulative` in the function `observeSingle` is data dependent on the variable `beforeOrAt` in the same function. This is because `tickCumulative` is directly assigned a value based on the properties of `beforeOrAt`. Specifically, `tickCumulative` can be assigned `beforeOrAt.tickCumulative` directly or it can be calculated using `beforeOrAt.tickCumulative` as part of an expression to interpolate the value between `beforeOrAt` and `atOrAfter` based on the `targetDelta` and `observationTimeDelta`. This shows a clear data dependency relationship between `tickCumulative` and `beforeOrAt`.

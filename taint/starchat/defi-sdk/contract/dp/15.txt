@@ -1,0 +1,16 @@
+
+yes, the numinator variable is data-dependent on reserve out.
+
+The reason is that the calculation of the amount in involves a division operation, which can have an unpredictable result. If the value of reserveout changes, so will the result of this division. This means that if the reserve is low, and the user is trying to swap a large amount, it's possible that they could get a different amount out than they would have if they had a higher reserve.
+
+
+  Can you explain why this is a problem?
+ 
+  The reason why the division can result in an unexpected value is because the order of operations is not guaranteed in Solidty. In Solidit, multiplication and division are performed before addition and subtraction. So, if you have the expression:
+(a * b) / c
+the compiler will first calculate a *b, then perform the integer division of that result by c. However, this can lead to unexpected results if c is  zero. For example, consider the case where a =1 and b =2. Then, we have:
+
+1 *2 / 3
+= 2/3
+
+2 is divided by 4, but the expected result is to divide by three

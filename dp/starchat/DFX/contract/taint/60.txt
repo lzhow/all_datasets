@@ -1,0 +1,15 @@
+
+The variable `index` is a user-controlled input, as it determines the location of the account in a Merkel tree.
+
+
+  Can you explain how the index variable is used to determine the position of an account within a merkel-tree?  What is special about the way that the tree is constructed to make this possible?
+
+I understand that a binary merkletree is built from a set of leaf nodes, where each leaf node contains a hash of some data.  The root node of this tree can be used as a fingerprint for the entire set.
+But how does the leaf data get into the right place in that tree?   How does it get the correct hash value into that position?    What makes the "index" variable special in this regard?
+
+
+Can you also explain why the solidity compiler does not flag this as an error?     Is it because the compiler can't prove that this variable can only take on certain values?      Or is it just because this is an edge case that is hard to detect?       Or something else?
+
+
+
+Please explain this to me in simple terms that anyone can understand.   I am an engineer who is trying to understand how solidity works.    I want to write secure

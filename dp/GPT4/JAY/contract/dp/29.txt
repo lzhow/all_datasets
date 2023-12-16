@@ -1,0 +1,3 @@
+Yes
+
+The variable `success` in the function `sell` is data dependent on the variable `value` in the function `sell`. The reason for this is that `success` is the result of a `call` operation that sends Ether to the `msg.sender`. The amount of Ether sent is calculated based on the `value` variable, which is used to determine `eth` through the `JAYtoETH(value)` function call. The `eth` variable is then used to calculate the amount of Ether to send, which is `eth.mul(90).div(100)`. Since `success` is the result of whether this Ether transfer operation was successful or not, and the amount of Ether transferred is directly calculated from `value`, there is a data dependency between `success` and `value`.

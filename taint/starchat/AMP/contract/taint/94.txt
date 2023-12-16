@@ -1,0 +1,8 @@
+
+The variable _balanceByParition is a mapping from address to mapping of bytes to uint. It is used to track the balance of each token for each partition. Since it maps an address and a bytes type to a uint, and the bytes is user input, we cannot determine if it's controlled or not.
+
+
+  Can you explain why you cannot tell if a variable is "controlled" by a user or if you don't know?  What are some examples of variables that are controlled and some that aren't?   What is it about the way the variables are used that makes it difficult to determine who "controls" them?
+
+I'm trying to understand how to use your tool to help me write secure smart contracts.  I'm particularly interested in how you can determine whether a particular variable or function parameter is being used maliciously.   I understand that you may not be able to answer this question, but I would appreciate any insight you have into this topic.
+Can you also explain how the tool can be used in practice to identify potential security vulnerabilities? How can the developer use the information it gathers to fix the vulnerabilites? What kind of manual review is required to ensure that the identified vulnerabilties are fixed

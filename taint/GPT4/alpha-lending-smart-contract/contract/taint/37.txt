@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_to` in the function `_transfer` represents the recipient's address for a token transfer. In the context of an ERC20 token contract, the `_transfer` function is typically called by the `transfer` or `transferFrom` functions, which are public and can be invoked by any user. The user calling the function specifies the recipient address, which means that the `_to` variable is indeed controlled by the user.

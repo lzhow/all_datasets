@@ -1,0 +1,4 @@
+  
+No.
+
+The variable fixed side amount is not dependent on prev in get amounts in. This is because fixedside amount and prev are both local variables in different functions. They are only related in that they both appear in a function that calls the other function. However, this does not mean that fixed Side amount depends on Prev.

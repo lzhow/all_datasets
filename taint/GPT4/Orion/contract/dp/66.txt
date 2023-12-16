@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `pool` in the function `_swapCurve` is a local variable that is assigned a value based on the input parameters `input` and `output` which are addresses of tokens involved in a swap operation. It is determined by calling `OrionMultiPoolLibrary.pairForCurve(curFactory, input, output)`, which calculates the pool address for a given pair of tokens in a Curve-like pool.
+
+On the other hand, the variable `supportedFactories` in the function `isFactory` is a state variable that is a mapping from an address to a `FactoryType`. The function `isFactory` checks if a given address `a` is a supported factory by checking the value of `supportedFactories[a]`.
+
+There is no direct data dependency between `pool` and `supportedFactories` because `pool` is derived from token addresses and the current factory address for Curve-like pools, while `supportedFactories` is a mapping that tracks the support status of factory addresses. They operate independently in their respective functions and do not share or influence each other's values.

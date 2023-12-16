@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the variables `mintAmount` and `accruneInterst` in `function mintInernal` because the `uint error` variable is not used in this function.
+However, the value of `Error` is used to determine the return value in function borrowfresh. Therefore, it is possible that the error value is dependent on `comptroller` which is a global variable. 

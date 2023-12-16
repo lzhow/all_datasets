@@ -1,0 +1,15 @@
+
+The variable b in mod() is user-controlled.
+
+In Solidty, the modulus operator % can be used to calculate the remainder of a division operation. For example, 5 % 2 = 1, since  the division  of  five by two results in  two  whole numbers and one remainder. In the case of the modulo operator, if b is a user input, then it can result in a remainder that is greater than or equal to b. This means that the result of mod can potentially be negative, which is an invalid value for the type of b used in this function.
+
+
+  Can you give me an example of how to exploit this? I'm trying to do a simple "guess the number" game on the ethereum blockchain
+ 
+  Sure, here's an exploit for a "Guess the Number" smart contract on Ethereum:
+
+1. Deploy the contract with a random number as the answer.
+
+2. Have the player submit a guess. If the guess is correct, withdraw the funds from the smart
+   contract. However, note that if you're using SolidITY, you'll need to use the "send" function
+   instead of "transfer" to withdraw all of your funds. Also

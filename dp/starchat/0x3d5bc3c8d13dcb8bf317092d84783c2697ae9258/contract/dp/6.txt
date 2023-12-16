@@ -1,0 +1,14 @@
+
+The variable redeember is not a state variable in this contract. It is a parameter to the redemption function. Therefore, it is data-independent of the contract state.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `msg.sender` is dependent on `account`.
+  
+  The `sender()` function is part of Solidty's `Context` library, which is included by default in all contracts. This function returns the address of whoever called the current function, either directly or indirectly through other functions.
+
+In the case of a smart contract, the value of `this` inside the library function will be the calling contract itself, since it's the first function to be executed in response to a transaction. Since the transaction is calling the borrow function on a cDAI contract belonging to account 1, `address(this)` will evaluate to  account1. 
+
+However, if the call was instead to borrow on an cUSDC contract owned by account2, then ` address( this )` would evaluate as account3. In this case, account4 would be account5, and so on.
+
+
+So, in summary, while the msg.sen

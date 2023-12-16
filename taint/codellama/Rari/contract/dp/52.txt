@@ -1,0 +1,6 @@
+  
+No, the variables ` old Admin` and ` borrow State` are independent.
+
+The variable  `Old Admin ` is a local variable in function `_accept Admin`, and it is assigned the value of the `admin` variable, which is also a global variable. Therefore, ` Old Admin  is data-dependent on ` admin`.
+On the other hand,  the  variable` borrow state` is defined in  function` distrubuteBorrwer Comp` as a member of a struct `CompMarkedState`. The struct is passed as an argument to function  `_updateComp Borrow Index`, which updates the index of `comp Borrowe State`. Therefore ` Borrwer State `is data -dependent  on` comp Borow State `.
+In conclusion, there is no data dependence between `  old admin`and ` borrwe state`.

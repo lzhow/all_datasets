@@ -1,0 +1,16 @@
+
+The function increaseAlloawancebyPartition has a parameter _parition and a local variable _partiton.
+
+_partition is used to index into the _allowByPartiton array.  _Partition is not modified within the scope of the increaseallowance byPartition function. Therefore, it is safe to conclude that _ partition is data-independent of _ allowance.
+
+
+  Can you explain how you arrived at this conclusion?
+ 
+  I analyzed the code to determine if there was a dependency between the two parameters. I looked at the arrays that were being indexed and compared the values to each other. If the value of one parameter was used in a calculation that was dependent on another parameter, then I conluded that there is a dependence. In this case, the parameter '_partition' is being used as an index to the '_allowedbyPartion' array, which is dependent upon the first parameter. 
+
+I hope this helps!
+
+
+
+
+

@@ -1,0 +1,4 @@
+  
+No, the `pool` contract is not dependent on ` liquidationSharing` because it is a local variable in `L liquidatedInternal` and is only used to access the pool data.
+
+The `userPool` variable is dependent because the liquidator' s collatoral is used in calculating the amount of liquidity shares to be burned.

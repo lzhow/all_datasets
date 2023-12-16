@@ -1,0 +1,5 @@
+  
+No, the `partitonStratgies ` contract is not dependent on `_ prefix` variable in ` set PartitioStrategy` function.
+
+The ` partitionStrategy ` variable is a mapping that stores the prefix of each partition strategy and the address of the corresponding implementation contract. It is used to store the partition strategies that have been registered in this contract, and it is independent of any specific partition prefix. Therefore, changing the value of `_prefx` does not affect the data stored in `_partitionStrategy`.
+ 

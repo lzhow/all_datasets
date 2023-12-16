@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `tickUpper` is an input parameter to the function `collect` and is used to retrieve the `position` from the `positions` mapping. It is not modified or used in any computation that involves `amount1Requested`. The variable `amount1Requested` is also an input parameter and is used to determine the value of `amount1` based on a comparison with `position.tokensOwed1`. There is no direct computation or assignment that uses both `tickUpper` and `amount1Requested` to derive a new value, nor does the value of one affect the other within the function's logic. Therefore, `tickUpper` and `amount1Requested` do not have a data dependency relationship.

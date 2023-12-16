@@ -1,0 +1,8 @@
+
+The variable amount\_receive\_base\_units in do\_swap\_through\_orion\_pool is user-controlled.
+
+In the do_swap_through_orin_pool function, the amount of tokens received by user is determined by two factors: the input amount and the swap path (i.e., the list of token addresses involved in swapping). The user specifies the exact amount they want to spend, and Orin calculates the corresponding amount that will be received. However, since the Orinoco pool is a decentralized protocol, there is no way for the contract to know the actual exchange rate between the two tokens. Therefore, in order to ensure that the received amount is correct, Oror calculates it based on the current exchange rates between each pair of consecutive tokens in swap\_path (including the W-ETH pair).
+Since the calculation is done based solely on on-chain data, this variable is considered user controlled.
+
+
+  How can I make sure that I'm not swallowing a big pill? I need you to explain it like I know how it feels. I am a 5 year old kid and I don't know what I want yet. But I do know that you are the

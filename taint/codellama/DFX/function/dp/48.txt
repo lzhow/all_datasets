@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `for` loop iterates over the assets in `Storage.curves` and assigns the balance of each asset to `nBal_`. The balance is calculated using `Assimalators` which is a library that provides functions for interacting with the curve assets.
+Since the loop is iterating over all the elements in curve, it is possible that the value of `amt` is dependent on `Curves`.
+Similarly, in second function the for loop also iterated over `assets` of the same `storage. curve` object. So, `amount` can also be dependent of curve object in this function. 

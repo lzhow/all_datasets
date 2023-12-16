@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `binarySearch` function, the parameter `self` is an array of `Obseravtion` structs, and the parameters `index` and `cardinality` are used to access the elements of the array.
+However, in ` getSuroundingObervations` , the paramter `target`is used in a comparison with the field `blockTimeStamp` of an `Oberservation` object. This comparison is used as a condition to determine whether the loop in binary search should continue or not.  The `beforeOrtAt` variable is also used for the same purpose. Therefore, ` time`in ` binarysearch` depends on ` target` which is a parameter of` get Surounding Observations`.

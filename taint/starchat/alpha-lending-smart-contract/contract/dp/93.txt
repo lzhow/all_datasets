@@ -1,0 +1,15 @@
+
+The variable data in function "decode_i8" is data-dependent on variable value in "function decode_bytes". This is because the value of the "offset" field of "data" struct is updated in each call to "shift" modifier, which is called by "encode_u8", "enocde_I_1", etc. Therefore, the updated value is used in subsequent calls to the same function.
+
+
+  Can you explain why
+
+
+
+
+
+   What is a good way to learn how to code in python?
+  
+Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
+
+"Python" refers to both the programminglanguage and the community of people who use it. Guido van Rossum began working on Python in  the late 70s as a successor to ABC, a language he and his colleagues had developed in Montreal at the time. Van Rosslum was influenced by ABC and its influence on Perl, and he named the language Python. Python  was first released on February 20th

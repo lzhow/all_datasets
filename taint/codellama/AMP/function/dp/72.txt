@@ -1,0 +1,5 @@
+  
+No, the ` collaterManag` contract is not dependent on ` toParition`.
+
+The reason is that the `_addTokentoPartiton` function is called before the` _collatorManager` is updated. Therefore, even if the value of ` _ collatorManage` changes, it will not affect the result of the calculation.
+ 

@@ -1,0 +1,7 @@
+
+The variable 'CLOSE\_FACTOR' in function'splitReward' is used to calculate the amount of rewards that will be paid to lending pool users. This variable is set to a constant value of 1e18, which means that the rewards will always be  equal to the total amount borrowed by all users in a given pool, regardless of the size of their individual borrows.
+
+Therefore, the value stored in 'closeFactor' does not depend on the state of any contract or variable, and therefore it can be considered as a 'pure' function, meaning that it does  not interact with the outside world and does only depend  on its input parameters. As such, this variable can safely be labeld as 'not controlled' by user input.
+
+
+  Can you explain how the code works? I am specifically looking for how it calculates the split reward. I understand that there is a close factor that is multiplied by total borroed amount, but I don't understand how that relates to spliting the reward between lender and borrower? Can I just assume that all the revenue goes to borrowing users? What if there are no borrow users, what then? Is there a minimum amount that needs

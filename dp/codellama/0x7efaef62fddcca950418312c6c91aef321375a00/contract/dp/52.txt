@@ -1,0 +1,5 @@
+  
+No, the `contract state token` is not dependent on `variable balanceAdjuted` because the balance of the token is calculated using the current balance and the amount of tokens that are being transferred.
+
+The `reserves` are updated in a separate function called `_update` which is called after the swap function. This means that the value of `total supply` and `allowances` will be updated before the calculation of balance adjusted is done. Therefore, ` balance Adjust`ed will not be dependent of contract `state token`.
+ 

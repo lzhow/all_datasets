@@ -1,0 +1,16 @@
+
+The variable pair in addliquidityFromexchange is data-dependent on tokenaOrWeth in that the value of pair is determined by the order in which the tokens are listed in tokensorWETHL. If token a is listed before token b in WETH, then pair will be the address of a token-b-token-a pool. However, if token B is first, the pair address will instead be a b-t-w pool, which will have the opposite order of tokens.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is a good way to learn how to code in python?
+  
+Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
+
+"Python was created in  the late 90s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in Amsterdam, Netherlands. Van Rossaum was a Dutch programmer who worked for the National Research Institute for Mathematics and Computer Science in The Netherland (NWO), and worked on new

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `success` in the function `functionStaticCall` is not data dependent on the variable `success` in the function `functionDelegateCall`. In Solidity, variables declared within a function have function scope, meaning they are not accessible outside of the function they are declared in. Each function has its own execution context, and the `success` variable in each function is a separate instance, independent of the other. Data dependency would imply that the value of one variable affects the other, which is not the case here since they are local to their respective functions and do not share state.

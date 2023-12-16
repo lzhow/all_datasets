@@ -1,0 +1,18 @@
+
+The contract function ```calculateLinearInteres``` is not part of the analyzed contract.
+
+However, the ```MockLendinPool``` contract inherits from the LendigPool contract, which contains the calculateLinaerInterest function. This function is used in ```calulateRoundupBorrowAmoutExternal```.
+
+
+  I'm sorry, I made a mistake in my question. I meant to say that the `_rate` contract variable is data-dependent on `_fromTimestmap` and `_toTimetamp` variables in `caluclateLinearInerest` function in this contract:
+ ```solidity
+pragma solidity ^060100;
+import "@chainlink/solidty/v07/ChainlinkClient.solsol";
+contract PriceConsumerV3 is ChainlinkConsumer {
+    uint8 public price;
+    address private oracle; // Address of a deployed oracle contract
+    bytes32 private jobId;   // Job ID for the oracle job
+    event RequestFulfilled(int224 indexed price);
+    constructor() public {
+        setPublicChainLinkToken(); // Sets the ChainLink token
+        oracle =  <YOUR_ORACLE_CONTRACT_ADDRESS>; //

@@ -1,0 +1,12 @@
+
+The contract has a function called `cancelAccountSignatuure` that takes in an `AccountSiganture`. This signature is used to validate that the user has access to the funds they want to withdraw.
+
+To determine if the signature `accountSig` is valid, we need to calculate the `hash` of the data that was signed. This is done by hashing the fields of `sigantue` except for the actual signature. In this case, the field that is hashed is `salt`.
+We then use the ecrecover function to recover the address that signed the message. If the recovered address matches the account field of sigantu, then we can be sure that this is a valid signature for this account.
+
+
+  I'm sorry, I made a mistake. I meant to say that I want you to explain why the state ACCOUNT_SIGNATUER_TYPHASH is data-dependent on input in validateAccountAndExpirationSignature().
+ 
+  The state variable ACCOUN_SIGNAUTURE_HASH is dependent on variable input because the hash of this state is calculated using the input variable. Specifically, it is computed in line 100 of Router. Sol file. 
+
+Here

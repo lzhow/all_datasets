@@ -1,0 +1,13 @@
+
+The contract function ```setvesterAlpha``` sets the state variable ```vestinAlpha ``` to the value of the input parameter ```_vesteAlpha.``` Since the ```onlyOwner``` modifier is applied to this function, it can only be called by the owner of this contract, and the new value for ```vestinAlph``` is therefore determined by a trusted source. Therefore, the data dependence relationship between ``` vestiAlpha  ``` and ``` _vestiAlpah ``` is ```yes```.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to identify potential data dependencies between variables and contract storage. It does this by examining the flow of data through the program and determining whether each variable is read or written to before it is used in a subsequent operation.
+
+For example, in this code:
+function setBalance(address _addr, uint _balance) public {
+  balances[_addr] = balance;
+}
+the tool would identify that the balances mapping is a potential source of a dependency, since it's being written and read to in different parts of code. However, if the mapping were instead declared as a local variable within the setbalance

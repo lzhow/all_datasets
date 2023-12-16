@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `returndata` in the function `functionCallWithValue` is data dependent on the variable `value` in the same function. This is because the value of `value` is used as an argument in the `target.call{ value: value }(data)` function call, and the result of this call is assigned to `returndata`. Therefore, any change in the value of `value` will affect the value of `returndata`.

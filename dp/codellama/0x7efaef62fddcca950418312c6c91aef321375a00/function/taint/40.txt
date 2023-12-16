@@ -1,0 +1,4 @@
+  
+No, the ` success` variable in `_safeTranfer` is NOT controlled  by user because it's a local variable that is assigned a value based on the return value of the external call to `token.Call`. The value is determined by whether the call was successful or not, and it cannot be controlled directly by a user input.
+
+The `safe transfer` function is used to transfer tokens from the contract to another address, but it does not allow the recipient to control the transfer. Instead, ` safe transfer ` ensures that the tokens are transferred successfully and that there are no errors or exceptions. 

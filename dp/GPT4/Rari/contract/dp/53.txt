@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `token_` in the constructor is an instance of the `EIP20Interface` and is used to initialize the state variable `token` of the `Reservoir` contract. It represents the token that the contract will interact with. On the other hand, the variable `b` in the function `add` is a local variable used as an operand in an arithmetic operation. The function `add` is a pure function, meaning it does not read from or modify the state of the contract. Therefore, there is no data dependency between `token_` and `b` as they operate in completely separate contexts within the contract and do not influence each other's values.

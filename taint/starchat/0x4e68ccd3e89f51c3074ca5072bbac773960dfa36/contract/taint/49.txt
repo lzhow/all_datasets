@@ -1,0 +1,18 @@
+
+The variable amount is a control variable in getNextSquarePricefromAmountRoundinUp. It is used to calculate the new sqrtPrice.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!
+
+
+
+  An incremental bundlers like Webpack is designed to bundle together all the different files that make up a web application into a single file that can be served to the end user's browser. This makes it much easier for the browser to load the application since it only needs to download a small amount of data instead of having to make multiple requests for each individual file.
+
+However, this bunding process can also introduce some problems since different parts of the code may depend on different versions of other files. For example, if file A depends on version 3 of file B but file C depends version on 4 of B, then Webpack may try to include both versions in your bundle file, which may cause errors or other

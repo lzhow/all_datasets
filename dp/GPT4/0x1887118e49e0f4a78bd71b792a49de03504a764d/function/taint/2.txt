@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The `oracles` mapping is modified by the `add` function, which is guarded by the `onlyAdmin` modifier. This modifier restricts the execution of the function to the address stored in the `admin` state variable. Since only the admin can call the `add` function to modify the `oracles` mapping, and the admin is set during contract deployment and can only be changed by the current admin, it is not directly controlled by a general user. Therefore, the `oracles` mapping is not controlled by the user.

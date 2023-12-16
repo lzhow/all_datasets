@@ -1,0 +1,18 @@
+
+The variable "path" in function `_swap` is a user input and is therefore controlled directly by users.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and serving of web content works under the hood. Thanks!
+
+
+
+  An incremental bundlers like Webpack is used to bundle together all the different files that make up a web application into a single file that can be served to the users browser. This makes it much easier for the browser to load the application since it only has to download a small amount of data instead of having to make multiple requests for each individual file.
+
+When you build a JavaScript application using Webpack, you typically have a "entry point" file where you import all of the other files in your application. Webpack then recursively goes through all these imported files and bundles them all together into one large file, which can then be optimized and minified. Additionally, Webpack can also do other things like automatically optimize images, and bundle CSS files together.

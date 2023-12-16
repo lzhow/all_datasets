@@ -1,0 +1,19 @@
+
+The variable token in safeTranferFrom() is a controlled variable. It is passed into the contract as an argument, and therefore the calling contract has control over it.
+
+
+  How do I know if a variable is "controlled"?
+  
+  If a contract is calling a function in another contract, then the called contract's variables are "under the control" of the caller contract. This means that the variables can be modified by calling functions in that contract and affect the behavior of that function. If the other contract does not have any functions that modify the state of its variables, the values of those variables cannot be changed by any other contracts.
+
+In other words, if you have a piece of code that looks like this:
+`contract A {
+  address public b;
+  function f() {
+    contract B b = new B();
+    b.g(10);
+    // What is b's value now?
+  }
+}
+contract B { function g(uint x) public {} }`
+Then the value of b in contract A is under the direct control of contract F, because it was set to the address of a new instance of B in line 6. Therefore, any changes made to b inside of g

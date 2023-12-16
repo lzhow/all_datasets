@@ -1,0 +1,4 @@
+  
+No, the ` amount Out` variable in function  `_ swap` is not dependent on ` cur Balance ` variable  function` _ swapCurv`.
+
+The reason is that the `_do Swap Tokens` function calls the`_swap` or `_swappCur` functions, which are responsible for performing the actual token swaps. These functions do not have access to the local variables of the parent function, including the  ` `  variable. Therefore, changes to ` _cur Bal` made in `_Swapp` do  not affect the behavior of `_ Swapp Cur`. 

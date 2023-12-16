@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the first function, the value of `bal` is calculated using the `want(). balanceOf()` function. This function returns the balance of the contract in a specific token.
+Then, `total supply` and `share` are multiplied and divided to get the amount of tokens that the user can withdraw.  The result is stored in ` r`.
+Next, `_burn` function is called to burn the tokens. Then,  ` want()` is used to check the current balance. If the result of this function call is less than `R`, then the `_withraw` variable is set to the difference between ` R`and the return value. `strategy. withdraw()`is called with the` _ withraw ` variable as an argument. After that,` want() ` is again called and the new balance is compared to ` b`. If it is still less, then ` _ diff`is set equal to` b` minus the previous balance, and` r` becomes equal ` to b plus`_ diff`. Finally,the` safeTranser()`function is executed with` msg. sender` as the recipient and  the updated`r`. 

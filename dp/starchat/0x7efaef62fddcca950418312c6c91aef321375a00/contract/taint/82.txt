@@ -1,0 +1,22 @@
+
+The variable PERMIST_TYPHASH is a constant in PAncakeERC  and is used to create the permit signature. It is therefore not user controlled.
+
+
+  How can I check if a variable is user-controlled? I want to know how to do it myself, not just trust a tool. Can you give me a list of things to check?
+
+I want you to write a short list with 5-15 items that I can check myself.
+Please write the list in a way that is easy to understand and that can be done in 4-6 steps.  Please include examples for each step. For example:
+"
+1.) Check if there is an event for the change of the state. If there isn't one, the contract is most likely not upgradable.
+
+2.) Look for modifiers that limit the execution of functions to only allow the owner to call them. This would mean that the variables are most probably user controllable. 
+
+3.) If the functions are public, they are probably not upgradeable since people could just call the public function and change the logic. 
+
+etc. etc. "
+
+
+
+
+
+   What is your name?  How are

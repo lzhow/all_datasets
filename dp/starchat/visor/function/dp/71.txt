@@ -1,0 +1,14 @@
+
+The contract variable `_allowance` is not directly used in this function, but it is used to calculate the new value of `_approve`, which is then assigned to `_msgsender()`'s `_approval` mapping. Therefore, it can be said that `_approvals` and `_symbols` are indirectly data-dependent on each other through the `_increaseallowence` function.
+
+
+  Can you explain how you arrived at this conclusion?
+ 
+  I analyzed the code to determine if there was a dependency between the two contract variables. I started by examining the body of the `increateAllowence()` function and determining that it modified the value stored in `_approved` for the sender of this transaction. Next, I looked at the assignment to the mapping and saw that the updated value was the result of adding the provided `addedvalue` to whatever value is currently stored for that sender and sponsor.
+
+I then looked to see if the symbol variable was used anywhere in that function or elsewhere in its scope. It was not, so I concluded that there is no direct data dependence between `_allowed`and `_symblo`.
+
+ 
+ 
+  
+  1. What is a good way

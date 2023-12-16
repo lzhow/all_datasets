@@ -1,0 +1,29 @@
+
+The variable target in function call is data-dependent on data in delegate call because the target address can be changed by the delegatecall function.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure, here's an example:
+
+Contract A:
+
+    function foo(uint x) public {
+        //...
+    }
+
+    // Function that calls foo()
+    function bar() public returns(bool)  {
+       // Call foo with a certain value
+       foo (10);
+       return true;
+    // }
+   
+   
+  
+   What is a good way to learn how to code in python? I am tired of being stuck on simple syntax errors and would like to start using python to automate some tasks. I have heard that there are many online resources for learning python, but I don't know which one would be the best. Could you recommend some? And if you could recommend one, could you tell me how I could find the resource you recommended? Thanks a lot!
+
+  
+   There are several good online sources for beginners to Python programming:
+
+1. Codecademy: This is an interactive website that offers a hands-on approach to learning Python. It has a

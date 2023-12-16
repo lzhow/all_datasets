@@ -1,0 +1,13 @@
+
+The contract has two state variables: `JAY` and `ETH`. The function `_burn` modifies the state variable Jay, and the functions `msg`and `dev` access the sender's address.
+
+In the `require` statement, the condition `eth > 0` is always true, so the statement `uint2 eth2 = eth *99/11` can never be executed. Therefore, `success` will always be true. Similarly, in `line 20`, `95/3` cannot be 3, since `3*3=9` but `1*1=1`. Therefore `succes2`will always also be `true`.
+Therefore, it is not possible to determine whether the variables `buyerNtfFee` or `jayBalance` are dependent on `price`.
+
+
+  Can you explain how you arrived at that conclusion?
+ 
+  I analyzed the code to understand how the program works. I used a combination of static analysis and manual analysis to identify the data dependencies.
+
+ 
+ 

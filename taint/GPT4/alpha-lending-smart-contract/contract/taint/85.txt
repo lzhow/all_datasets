@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The function `from` in the `Obi` library takes a `bytes memory data` parameter as input. This parameter is provided by the user when they call the function, meaning that the user has control over the contents of the `data` variable. The `from` function initializes a new `Data` struct with this user-provided `data` and sets the `offset` to 0. Since the user controls the input, the `raw` field of the `Data` struct, which is assigned the value of the `data` parameter, is also controlled by the user.

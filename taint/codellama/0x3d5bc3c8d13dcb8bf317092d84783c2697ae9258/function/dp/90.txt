@@ -1,0 +1,5 @@
+  
+No, the variables `accruteInterst` and `liqidation` are independent.
+
+The reason is that the `accurateInteres` function is only called within the context of the contract, and it does not take any input parameters that would allow it to access the state of other functions. Additionally, within this function, there are no references to the external state or any other function that could potentially modify the value of `borrowe`.
+Therefore, it is not possible for the execution of one function to affect the other.

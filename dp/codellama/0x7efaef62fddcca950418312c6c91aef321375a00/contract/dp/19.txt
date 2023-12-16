@@ -1,0 +1,5 @@
+  
+No, the variables ` amount  ` and `_ token ​​1 ` are independent in function` burn` and function  'swap'.
+
+The variable  `_reserves` is only used in `burn` to calculate the amount of tokens to burn, and it is not dependent on `_tokens` or `to` .
+On the other hand, ` _tokes` are used to determine the number of output tokens in` swap` , but this is also not related to the input tokens or the output token in  function 'burn'. 

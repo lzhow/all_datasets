@@ -1,0 +1,4 @@
+  
+The variable 'removerReceiverrule' in function 'removeAlphaReleasRule' is labeled as 'No'. The reason is that the 'receiveRulelist' array is declared as a public variable, and the index of the array element to be removed is passed as an argument to the remove function. Therefore, the element being removed can be controlled only by a user who has access to this function and can pass a valid index.
+
+In addition, since the ownership of this contract is restricted to only the owner, only a single user can call this remove method. This means that only one user has the ability to remove an element from the receiver rule list, which is a controlled variable.

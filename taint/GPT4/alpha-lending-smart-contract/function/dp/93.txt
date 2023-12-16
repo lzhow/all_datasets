@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `initPool` function, the local variable `_token` is created and assigned a value from the input parameter `_poolToken`. The local variables `pool` and `tokenName` are also created, but they do not depend on `address(this)`.
+On the other hand, in ` getuserAccount`, the variables `_user` , `_ token`and `userPooldata`are created. However, these variables do no depend directly on`address (this)` or`altoken`.
+Therefore, ` altoken ` is not dependent on  ` compoundL liquidBalanc eBalan ce` .

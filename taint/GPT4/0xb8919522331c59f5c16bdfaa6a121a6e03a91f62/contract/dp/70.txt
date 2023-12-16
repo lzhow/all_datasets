@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the Solidity code provided, the `functionCall` function internally calls the `functionCallWithValue` function, passing the `data` variable as an argument. This establishes a direct data dependency between the `data` variable in `functionCall` and the `data` variable in `functionCallWithValue`. The `functionCallWithValue` function uses the `data` variable it receives to perform a low-level call, which means the execution of `functionCallWithValue` depends on the value of `data` passed to it by `functionCall`.

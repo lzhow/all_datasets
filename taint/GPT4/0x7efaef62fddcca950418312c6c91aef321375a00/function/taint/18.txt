@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `to` in the function `mint` is an argument provided by the caller of the function. Since the function `mint` is an external function, it can be called by any user or contract with access to the blockchain. The user calling this function specifies the value for `to`, which means the address to which the minted liquidity tokens will be sent. Therefore, the variable `to` is controlled by the user.

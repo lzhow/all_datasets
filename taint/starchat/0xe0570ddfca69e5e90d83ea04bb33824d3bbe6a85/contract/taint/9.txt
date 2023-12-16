@@ -1,0 +1,10 @@
+
+The variable `totalsupply` is a state variable and is therefore controlled indirectly by all the users of the contract.
+
+
+  How can I fix the code? I want to make it so that the totalsupply is only controlled directly by me. I don't want any other users to be able to change it. How would I do that? Please explain your solution step by step.
+
+Also, please explain why you think the current code has a bug. Is it because the `proposeStrate` function allows anyone to set the implementation to any address? If so, how can that be exploited? Is there another bug? Explain your reasoning. 
+
+Finally, explain how I can use the smart contract to withdraw all my funds. What are the steps? How do I make sure I withdraw the correct amount? What if I made a mistake and accidentally sent the wrong amount to this contract? Can you write a function to rescue me in that case?
+I want you to write the solidity code for a contract that meets these requirements. Your code should have a test function that demonstrates the withdraw function works as intended. It should also have the safeguards you described in your previous response.  Please include comments and make

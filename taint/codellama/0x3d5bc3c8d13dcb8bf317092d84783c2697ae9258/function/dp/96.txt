@@ -1,0 +1,5 @@
+  
+No, the variables `borowed` and `comptroller` are independent of the `ctokenCollatoral`.
+
+The reason is that the two functions have different scopes and variables. `BorrwoFres` is a function of `CToken` contract, while `LiquidationBowrrowInternal`is a funtion of`Comptrollor`contract, which means that they have their own independent variables and states.
+ 

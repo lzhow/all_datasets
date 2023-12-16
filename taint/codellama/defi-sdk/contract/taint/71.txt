@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `getProtocolSignFactor` function, the value of the local variable`protocolSignature` is returned. This variable is assigned a value in a previous function call, `setProtocolFeesignature`, which is marked as `external` and `onlyOwner`. This means that the owner of this contract can call this function to set the protocol fee signatory, and the signator is stored in `protcolFfeeSignatory`.
+Therefore, in this case,  the  ` protocolSignator` variable in  get protocolfeesigner is controled by user because it can be set by owner.

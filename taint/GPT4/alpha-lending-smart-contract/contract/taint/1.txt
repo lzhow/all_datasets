@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `totalShares` in the function `unstake` is assigned the value of `totalSupply()`, which returns the total supply of the `AlphaStake` ERC20 tokens. This total supply can be influenced by users through the `stake` and `unstake` functions, which mint and burn tokens respectively. When a user calls `stake`, new tokens are minted, increasing the total supply, and when a user calls `unstake`, tokens are burned, decreasing the total supply. Therefore, since users can directly affect the total supply of tokens through their actions, the variable `totalShares` is considered to be controlled by the user.

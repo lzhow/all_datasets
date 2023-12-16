@@ -1,0 +1,4 @@
+  
+
+No, the `_owners` contract variable is not dependent on `_tokens` variable in ` withdraw Reserve` function.
+The `_pool` storage variable depends on `address (_token)` in this function, but the `owner()` function does not depend on it. 

@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `vestingAlpha` is of type `IVestingAlpha` and is a state variable in the `AlphaStakePool` contract. It is set by the `setVestingAlpha` function, which is modified by `onlyOwner`. This means that only the owner of the contract can set or change the `vestingAlpha` variable. Since the owner is typically the deployer or an entity that has been granted ownership, and not a general user, the `vestingAlpha` variable is not controlled by a general user. Therefore, it is labeled as 'no', indicating that it is not controlled by the user.

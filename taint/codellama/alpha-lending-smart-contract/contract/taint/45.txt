@@ -1,0 +1,4 @@
+  
+No.
+
+The `tokenPerblock` variable is defined as a public state variable in contract `AlphaReleaserule`. It is initialized in constructor and can be modified by calling the `setTokenperBlock()` function. However, the value of this variable can only be changed by a user who has the permission to call the contract's `onlyOwner` modifiers. Therefore, this state can not be controlled directly by users.

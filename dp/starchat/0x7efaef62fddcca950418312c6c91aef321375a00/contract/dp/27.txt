@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `k` variable in `_update` is updated in `mint` and `burn`, but not in sync with the reserve values. This means that if the `_klast` value is used to calculate the fees in mint and burn, the resulting fees may be incorrect.
+
+  What is a good way to test this?
+
+
+
+

@@ -1,0 +1,15 @@
+
+The variable removedRecevierRule in removeAlphReleaseRue is a storage variable and is therefore controlled bby the contract owner.
+
+
+  How can I make sure that the removed receiver rule is actually removed? I mean, how can i make the compiler remove the code that assigns the value of removedReciverRule to a new variable? Can you give me an example of how to do that?
+
+Also, can you explain to me why the storage keyword is used in this function? Is it because the array is modified? If so, why is it used? And if not, what is wrong with using the memory keyword instead? Why is that better? Please explain this to my best understanding.
+I am asking you this because I want to make my code as efficient as possible and I am trying to understand the best practices. I know that Solidty is very efficient, but I would like to know the reasons behind the design decisions. Thank you. 
+
+Here is my current code:
+function removeReceiverAndRuleAt(address _address) public onlyowner {
+        uint length = receiverrules.Length;
+        for(i=0 ; i<length ;i++)
+        {
+            if(receievers

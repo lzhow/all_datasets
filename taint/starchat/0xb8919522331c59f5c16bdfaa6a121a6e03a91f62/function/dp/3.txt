@@ -1,0 +1,13 @@
+
+The function call `target.cal{value:value}(data)` is a low-level Solidty function that performs a message call into an address `targe`t with attached ether value `value`. The function returns a tuple of two values: a boolean indicating whether the call succeeded, and the data returned by the callee.
+
+In the first function, the `require` statement ensures that the contract has enough ether to pay for the message execution. If the balance of the current contract is less than the value specified in `call`, the execution will revert with an error message. This means that `retundata `depends on ` data`.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundlers is used to bundle together all the assets (JavaScript, CSS, images, etc) that are required to run a web application. It is often used in development to make it easier to debug and develop the application as it allows you to update individual assets and see the changes without having to manually refresh the browser.
+   
+    What are some examples of incremental bundleers? And what are the pros and cons of each? I've heard of Webpack, Roll

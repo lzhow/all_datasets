@@ -1,0 +1,11 @@
+
+The contract function is reverting due to the `nonReentrancy` modifier. This means that the second call to this function will fail, because the first call has not yet completed.
+
+This is because of the call `updatePoolAndInteresAndTimestap(_toke)` in this code.
+
+
+  I'm sorry, but I don't understand what you mean by "non-reentrance". Could you please explain it to me?
+  
+  Non-ReEntrancy is a mechanism that is used to prevent re-entracy in smart contracts. It is an important security feature that ensures that a contract cannot call itself while it is already being called. If a function marked as non-entrant is called while the parent function or the same function has already been called, the transaction will revert.
+
+  In the example you provided, it appears that you are using a non reentrant modifier called "NonReentrency". This modifier is intended to protect against reentrancies, and it will cause the code to revert if the modifier detects that it has been reentered. However, in your example, this protection is not working as intended, as the reentrent call is happening inside of an if

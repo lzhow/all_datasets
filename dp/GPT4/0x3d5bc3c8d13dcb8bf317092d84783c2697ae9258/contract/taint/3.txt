@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `oldPendingAdmin` in the function `_setPendingAdmin` is assigned the value of the state variable `pendingAdmin` before it is potentially updated to a new value provided as a parameter to the function. The control over the value of `oldPendingAdmin` is indirect and is not directly set by the user calling the function. It is a snapshot of the contract's state at the time the function is called and is used to emit an event for logging purposes. The actual control over changing the `pendingAdmin` state variable is gated by the condition that `msg.sender` must be equal to the current `admin`, which is a privileged role typically controlled by a specific address (or set of addresses) with administrative permissions, not by an arbitrary user.

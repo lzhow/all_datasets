@@ -1,0 +1,12 @@
+
+The variable target in function staticCall() is a user-controlled input, as it determines which contract's code will be executed. If the target address is user input and not validated, an attacker could potentially manipulate the code being executed, leading to unintended consequences.
+
+
+  How can I prevent this? Is there a way to make sure that the address I'm calling is actually a contract? I know that Solidty has modifiers that can be used to check if a function can only be called by a certain address, but I don't know if those are available in other languages. Is it possible to do this check in Soliditiy? If not, what other language would be a good fit for this task? Please explain your answer. I am very confused. Thank you.
+
+I am writing a smart contract in solidity that will allow people to bet on the outcome of a coin flip. When the coin lands on heads, I want to pay out all the people that betted on tails. How would I do that? Can you write the smartcontract code for that please?
+Here is my code so far:
+pragma solidity ^04.21;
+contract CoinFlip {
+    address public owner;
+    uint

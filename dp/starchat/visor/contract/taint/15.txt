@@ -1,0 +1,8 @@
+
+The variable "isControlled" is used to determine if a variable or state in a smart contract is user-controlled or not. In this case, the "withdraw" function takes in three parameters: "uint shares", "address to", and "addresspayablefrom". The "viser" parameter is a user controlled state, while the other two parameters are not user controls.
+
+In the case of the withdraw function, we can determine that the to parameter does not need to be user control because it's value is assigned by a trusted party, such as the owner of a contract. However, in this instance, since the value of "msg sender" can be changed by calling the contract with a transaction, then the from parameter also needs to not be considered user controllable.
+
+
+  How can I use this information to write a secure smart-contract? I'm specifically looking for information on how to prevent common vulnerabilities like reentrancy attacks. Can you recommend some good resources for learning about these vulnerabilites?
+Can you also provide some examples of how I can implement these secure coding practices into my smart contracts? Please provide clear and concise code examples that can help me learn and understand the best practices. I am a

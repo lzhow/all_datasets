@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `tickCumulative` in the function `observeSingle` is data dependent on the variable `secondsAgo`. This is because the value of `secondsAgo` influences the control flow of the function, which in turn affects the value assigned to `tickCumulative`. Specifically, if `secondsAgo` is equal to 0, `tickCumulative` is assigned a value based on the `last` observation. If `secondsAgo` is not 0, `tickCumulative` is assigned a value based on either `beforeOrAt` or `atOrAfter` observations, or it is calculated using a linear interpolation between these two observations. The assignment of `tickCumulative` is therefore directly influenced by the value of `secondsAgo`.

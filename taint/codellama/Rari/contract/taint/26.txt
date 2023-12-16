@@ -1,0 +1,4 @@
+  
+The variable _ reward Token in function Initialize is labeled as 'Yes'. The reason is that the _ rewards Token is set to a value passed as an argument to function. This means that it can be controlled directly by a user who calls the initialize function, and it cannot be set by any other function in this contract.
+
+In general, any variable that is assigned a direct value from an external source, such as a function argument or a message call, is considered to be under the control of the external user and is therefore labled as "yes".

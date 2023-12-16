@@ -1,0 +1,11 @@
+
+The variable a in tryAdd is data-dependent on c in add because the require statement in line 10 of add checks that the sum of a and b is greater than or equal to a. If a were not dependent on b, then the condition in require would always be true, and the addition would never overflow.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The reason why a is dependent in this case is because of the way the SafeMath library is implemented. Specifically, the add function in Safe Math checks if the result of adding a to b would be less than a (i.e. if there was an overflow). If this condition is not met, it will revert the transaction. This means that a will be dependent upon c, as c will always have the value of either a or b.
+
+In other words, if a was not depenedent on any other variables, c would simply be the maximum value between a+b or a depending on which is larger. However, since a depends on both b and c (due to the overflow check), the final value will depend on their values at the time of execution. 
+
+This is why it is important to use libraries

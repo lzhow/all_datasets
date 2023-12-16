@@ -1,0 +1,4 @@
+  
+No, the `_ strategy` variable in function `constructor` is NOT controlled  by user because it's a parameter of the constructor function.
+
+The constructor of a contract is a special function that is called when the contract instance is created. It is used to initialize the state of an instance of that contract.  The constructor can take parameters, which are passed in when an object of this type is constructed. These parameters are used in initializing the instance. In this case, `_ stratey` parameter is passed to constructor and it can't be controlled directly by a user, because the value of `_ strategey` will be set when a new instance  of `BeefVaulV5` contract will created and the `strategey ` variable will have a value that will not be changed after that.

@@ -1,0 +1,6 @@
+  
+No, the `comSuppliersIndex ` contract is data-dependent on ` supplers` variable in ` claimrewards` function.
+
+The ` comp Suppliers Index` contract stores the comp index for each suppler in a ctoken. It is updated in two places:
+1. In the `_setcomp Supply Speed` internal function, which is called when the supply speed is set for a given c token. This function updates the index of the supplerthe comp supply index.  The `updateComp Supplery Index ` function is also called in this function to update the global comp suppy index, but this is a separate contract.  2.In the` distrubuteSupplereComp`internal function , which distributes comp to a suppiler.This function calls the update compsupplry index function and updates comp accrual for the given suppier. However, this does not affect the value of `Supplers`.
+Therefore, `Comp suppliere Index is dependent on suppilers` is `no`.

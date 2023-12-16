@@ -1,0 +1,19 @@
+
+The variable startblock is a state variable that is set in a constructor and is therefore controlled internally by smart contract.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn about the topic for a university assignment. Thank you!
+
+
+
+
+An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the client's browser. This allows for faster loading times as the browser only needs to load a small number of files rather than a large number, and makes it easier for the developer to manage and modify the code.
+
+Webpack is probably the most widely used incremental bundle tool. It takes in entry points, which are the main files of the application, recursively processes all of their dependencies, bundles them together, processes any additional transformations (such as compiling TypeScript or Sass into CSS), and outputs a final bundle file. Additionally, Webpack can also take care of automatically rebuilding the bundle when any of its dependencies change, making it

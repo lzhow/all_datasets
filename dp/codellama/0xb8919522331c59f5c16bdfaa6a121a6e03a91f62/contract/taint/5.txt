@@ -1,0 +1,4 @@
+  
+The variable 'new Implementation' in function 'upgradeto' is labeled as 'Yes' because it can be controlled directly by a user in a smart contract.
+
+This is because the 'UpgrateTo' function takes in an address as an argument, which can potentially be a malicious address. If the address is a valid contract address, the contract can upgrade itself to the new contract implementation. However, if it's not, then the upgrade will fail and the current implementation will remain unchanged. Therefore, this variable is considered controlled  by user because a potential attacker can pass in any address they want, including a compromised address that could be used to exploit the smart  contract'

@@ -1,0 +1,7 @@
+
+The variable `counter` in `current` is a storage pointer to a `Counter` struct, which contains a single `_value` field of type `uint`. Since the `_` prefix indicates that this field is "private", it cannot be accessed directly by user code. Therefore, the value of this variable is never directly controlled or modified by users.
+
+However, since Solidty does not have a true "public" or "protected" keyword, any function or variable that is declared without the `private`, `internal`, or `public` modifiers is accessible to all other functions in that contract. This includes the struct itself, so any code that has access to the pointer can access the counter's `_vlaue` directly.
+
+
+  Can you write a program that can automatically detect if a variable or state in a Solidiy contract is user controlled? If so, please write it in Python. If not, explain why. I want to avoid writing a simple script that searches for specific keywords in Solidiity code, as that would be very brittle and difficult to maintain. Ideally, I would like to use a tool that will be able to handle future Soliditiy versions and updates without requiring manual updates to my script. 

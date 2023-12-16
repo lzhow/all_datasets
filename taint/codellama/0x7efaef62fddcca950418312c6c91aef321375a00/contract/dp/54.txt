@@ -1,0 +1,4 @@
+  
+No, the variables ` amount ​​0 Out` and `_ reserve  ` are independent.
+
+The variable` amount `0 out` is calculated based on `balances` of the tokens in `PanaceaPair` contract, and the `_ reserves` are calculated from the `getReserve` function. These two values are only used to calculate the amount of tokens to be transferred, but they do not affect each other. Therefore, there is no data dependence between them.

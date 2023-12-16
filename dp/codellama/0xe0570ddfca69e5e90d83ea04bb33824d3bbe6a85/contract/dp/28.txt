@@ -1,0 +1,5 @@
+  
+No, the variables `_before` and `_pool` are dependent on each other, but they do not depend on `_strategies`.
+
+The reason is that the `beforeStrateg` function does not modify the value of `_status`, so the only way for the `_bal` variable to change is if the balance of the contract changes, which is dependent only on `wants` (the token being deposited) and not on any of its parameters.
+Therefore, `_total` is independent of any parameters and can be considered as a constant.

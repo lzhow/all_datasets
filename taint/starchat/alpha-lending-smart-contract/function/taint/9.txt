@@ -1,0 +1,10 @@
+
+Yes, the `Shares` variable is a user-controlled variable in this contract.
+
+The `accumulateAlphatoUser` function allows users to deposit Alpha Tokens into the contract, which will then be vested over time according to the amount of Alpha tokens deposited and the total number of shares issued. In this function, `_user` is an address representing the recipient of the Alpha Token vesting, and `_amount` represents the numberof AlphaTokens being depositd. 
+
+However, this also means that the value of `totalShares`, which represents all ofthe Alpha token vestings in existence, is also user controlled. This meansthat the owner of this smart contract can set the initial value for `withdrawportion` to any value they want, effectively changing the percentage of vests that are withdrawn each time `claim`is called.
+
+
+  How can I prevent this? Is there a way to make the shares variable immutable? I'm not very experienced with solidity. Can you explain it to me in a simple way?
+Can you also explain how the withdrawportion variable works? How does it affect the claim function? Can I make it so that it can only be set once? And if so, how can that

@@ -1,0 +1,14 @@
+
+The variable `c` in `tryAdd` is data-dependent on `a` and `b`. This is because the addition `+` can overflow, and the resulting value of ` c` may be less than the value assigned to ` a`.
+
+
+  Can you explain why this is?
+ 
+  Yes, of course! The reason why `C` depends on both `A`and `B`is because of the way that the `+=` operator works in Soliditiy. When you add two numbers and assign the result to a third variable, the compiler checks to see if the sum of those two original numbers can fit into the third one. If it can, it does so, but if it cannot, then it throws an error. This means that if ` A + B` exceeds the maximum value that can be stored in a 224-bit unsigned integer (the maximum size of a Solidty `uint` type), then the operation will fail and return `0`.
+
+So, in this case, ` C`depends on` A`because it is assigned the return value from the` +` operation, which depends directly on those variables.
+
+ 
+ 
+  
+  1.

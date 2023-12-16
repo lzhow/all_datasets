@@ -1,0 +1,3 @@
+yes
+
+The variable `success` in the function `functionCallWithValue` is data dependent on the variable `value`. This is because the `success` variable is the result of the `target.call{ value: value }(data)` operation. The `value` variable is used to specify how much ether (in wei) is sent along with the call to the target address. If the `value` is not sufficient, the call may fail, which would directly affect the value of `success`. Therefore, there is a data dependency relationship between `success` and `value` as the outcome of the call (and thus the value of `success`) can be influenced by the amount specified in `value`.

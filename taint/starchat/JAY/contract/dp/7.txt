@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the loop in `function buyerc2235` increments the `id` variable, which is used to access the arrays `_tokenAddres` and `ids`. However, the value of `i` is not used in any way to update the state of the contract, so it can be removed without changing the behavior of this function.
+
+
+  Can you explain why this is so?
+ 
+  The reason why the total variable is data-dependent on amount is because the amount variable in buyErc1283 is incremented in each iteration of its loop, but the updated value is never used. This means that, in subsequent iterations of that loop where the id variable has been incremente, accessing the array elements at those indices will result in accessing stale data. Therefore, when the code reaches the line `IERC2981Royalties(_address).royaltyInfo(id, salePrice);`, it will be accessing data that has already been overwritten by the previous iteration. As a result, this line will return incorrect information, and the data dependencies will remain undetected. To fix this issue, you can simply remove the incrementation of id

@@ -1,0 +1,5 @@
+  
+No, the ` deltaBocks ` variable in function `updateCompborrrowindex` is NOT controlled  by user because it's calculated based on the difference between the current block number and the last block that the index was updated.
+
+The `lastBorrrowBlock` variable is updated in ` updatecompborrwindex ` function, and it stores the blocknumber of the latest block where the borrwer index is calculated.  The `getblocknumber` function is used to get the  current  block  number,  and  the   `sub_`   function  is   used  to  calculate  `deltablocks`.
+ 

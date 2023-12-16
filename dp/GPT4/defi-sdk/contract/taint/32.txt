@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `swapDescription` in the function `hash` is an input parameter to the function and is of type `SwapDescription` memory, which is a struct. Since this function is internal and can be called by other functions within the contract, the data that populates `swapDescription` would typically come from the user's input when they interact with the contract's public or external functions that eventually call this internal function. The user provides the data for `swapDescription` when they create a transaction, and this data is passed through the call stack to the `hash` function. Therefore, the state of `swapDescription` within the `hash` function is controlled by the user.

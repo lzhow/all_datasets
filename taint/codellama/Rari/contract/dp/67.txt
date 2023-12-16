@@ -1,0 +1,5 @@
+  
+No, the variables `_ reward Token` and ` amount` are independent.
+
+The variable` _ rewardtoken` is a state variable of the contract, and it is initialized in a different function called `initialize`. The function` initialize` takes a parameter `_ rewardeToken`, which is used to initialize the state of `_rewardeToken`.
+On the other hand, `Amount`is a local variable in function  `GrantcompInternal`, and its value is calculated based on other state variables of  the  contract. Therefore, there is no data dependence between `_Rwardtoken `and ` Amount`.

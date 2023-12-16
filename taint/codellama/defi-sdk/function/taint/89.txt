@@ -1,0 +1,4 @@
+  
+No, the `permiType` variable is a constant and is defined in a different contract. It is therefore not user-controlled.
+
+The `Permittype` is an enum that defines the type of permit that can be used to call the permit function. In this case, there are three types of permits: `Eip221`, `DAIPer`, and `Yearner`. The `permittTypeHash` constant is used as a salt to prevent replay attacks. 

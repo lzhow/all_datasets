@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `token` within the `callBytes` function is indirectly controlled by the user. It is assigned based on the first element of the `directions` array and the first element of the `pairs` array, both of which are part of the `callerCallData` that is decoded at the beginning of the function. Since `callerCallData` is provided by the user who calls the `callBytes` function, the user has control over the contents of the `pairs` and `directions` arrays, and therefore has control over the value assigned to `token`.

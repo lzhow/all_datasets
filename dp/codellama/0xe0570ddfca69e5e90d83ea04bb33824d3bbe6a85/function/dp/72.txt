@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `deposit` function, the value of `share` is calculated based on `total_supply` and `balances`. The `after_pool` variable is also calculated in this function.
+On the other hand, in `Withdraw`, the amount of tokens to be withdrawn is determined by the ratio of the current balance to the total supply. This ratio is then used to calculate the number of shares to burn.  The `_pool_after ` variable in withdraw is used in calculating the withdrawal amount. Therefore, `Shares ` in deposits is data-dependent on `_ after`in withdraw.

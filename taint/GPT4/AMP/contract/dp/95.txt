@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `AMP_TOKENS_SENDER` is a constant string defined at the beginning of the contract with the value `"AmpTokensSender"`. It represents a specific interface name for the ERC1820 registry and does not change throughout the contract's lifecycle. On the other hand, the variable `_implementation` in the function `setPartitionStrategy` is a function parameter that represents the address of the implementation for a partition strategy. The value of `_implementation` is used to set an interface implementation for a given partition strategy, but it does not interact with or depend on the `AMP_TOKENS_SENDER` constant. Therefore, there is no data dependency relationship between `AMP_TOKENS_SENDER` and `_implementation`.

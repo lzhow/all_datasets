@@ -1,0 +1,4 @@
+  
+No, the variables `from` and `pool` are dependent on `factory` but not on each other.
+
+The variable factory is used to call the ICURVERegistry contract and get the coin indices.  The coin index is then used in getXp to get an array of x values. These x-values are then passed to the getY function to calculate the y value. This y-value is calculated using the amount passed in. Therefore, `getAmountinCurv` is dependent only on amount.

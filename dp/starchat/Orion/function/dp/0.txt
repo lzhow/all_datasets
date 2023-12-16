@@ -1,0 +1,16 @@
+
+The function "get\_y" has a loop that iterates up to 510 times. Each iteration, the value of "y\_prev" is set to "0" and "c" (the value used in each iteration of the loop) is calculated as follows:
+
+c = d
+d = b-d
+b = s+d/n
+s = sum(x_k)
+n = number of coins
+x\_k = value for coin k
+k=1,2,...,n-1
+In the first iteration (when k=0), the if-statement is not true, so the else-block is executed. In this block, y is assigned the expression:
+
+ y= ( y^2 +c ) /  (  y+b- d )
+This is an approximation of y^(n+1), where n is  the number  of iterations.
+Since y\_0 is initially set equal to d, this means that the initial value y in this iteration is equal  to: ( d^n + d)  /( d +d - d ).
+Now, we need to determine whether this value is greater than or less than the previous value. If

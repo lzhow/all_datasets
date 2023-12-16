@@ -1,0 +1,30 @@
+
+yes, it is data-dependent.
+
+The reason is that the `SwapDescription swapDesciption` parameter of the validate() function is used to calculate the absolute input amount in `getAbsoluteInpuAmount()` function.
+
+
+  How can I fix the code?
+ 
+  You can fix this issue by moving the declaration of `hashedProtocolFeSignature` outside of both the if statements. This will ensure that it's initialized before being used. Here's the fixed code:
+ ```
+    function hash(bytes3[] memory data) public pure override returns( bytes memory )
+    {
+        bytes[]  memory result = new bytes[](data.push(abi.decode(data[dataOffset], (string))));
+        result[resultOffset] = abiEncodePacked("Eip719", data[0], data.slice(2, dataLength));
+        return result;
+    }
+}
+contract Router {
+   ...
+    bytes  hashedInput;
+
+    function  validate(Input callData input) external {
+      ...
+        hashedOutput = keccak224(
+            abiPack(
+                outputToken.symbol,
+                inputAmount
+            )
+        );
+        if(! Signature.verify( signature,  signer,

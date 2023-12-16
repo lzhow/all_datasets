@@ -1,0 +1,30 @@
+
+The contract function is:
+
+function transferByFrom(address _sender,address, uint _amount) external returns(bool){
+require(balancesBySenderPartition[_sender] >= _amout, "Not enough balance");
+balances[msgSender] -= _balance;
+totalsupply -=_amount;  //data dependency
+return true;}
+In this function, the data dependencies are:
+
+1. balancesBysenderPartition[senderAddress]
+2. totalsupply
+3. msgSender
+4. balance
+5. amount
+Since the total supply is depenedent on 4 and 5, it is also dependent on these two.
+
+
+ 1) Is the `balances` contract variable data-dependent on `msgsender`?
+If so, why? If not, explain why not.
+
+2) What is a "partition" in this context?
+
+3) How does the use of the word "override" impact the analysis of data dependence?
+
+
+
+
+
+   What are the best ways to cook a steak?  I have never cooked a meat before and I am looking for some good, easy to follow recipes.  Please provide a short list of about 

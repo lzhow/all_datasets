@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `principalTimesIndex` in the function `borrowBalanceStoredInternal` is calculated using the `borrowSnapshot.principal` and `borrowIndex`, which are both independent of the `borrowAmount` variable in the function `borrowInternal`. The `borrowAmount` is a parameter for the `borrowInternal` function and does not influence the calculation of `principalTimesIndex` in any way within the given code snippet. There is no direct or indirect data flow from `borrowAmount` to `principalTimesIndex` as they are used in separate functions without any shared state or parameters that would create a dependency.

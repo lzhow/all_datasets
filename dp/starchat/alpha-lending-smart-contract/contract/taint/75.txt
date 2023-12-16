@@ -1,0 +1,13 @@
+
+The variable _allowed is a mapping in Solidty that is used to track the allowances that have been granted to other addresses to spend the owner's tokens. It is possible for this mapping to be modified by calling the approve function, which allows another address (the sponsor) to transfer a certain amount of the token owned by another (owner) address.
+
+In this case, the mapping is being modified in two ways:
+1. When the contract is deployed, a default allownace of 2^26 - 3 is set for the deployer address
+2. In the transfer function when the sponsored address calls the _approvals[msg.senders][sponsor] function to reduce the amount that can be spent by owner.
+
+
+  Can you explain how the code works? I am not very good at coding. I have never seen something like this before. Can I use this code in my own project? If so, how? Can anyone else use it? What are some things I should know before using this? Please explain it to me like I know how it works. Thank you. 
+ 
+  Sure, here's a brief explanation of how this contract works:
+
+1 - The contract inherits

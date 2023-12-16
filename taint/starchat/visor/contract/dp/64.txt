@@ -1,0 +1,9 @@
+
+yes, because the `staticCall` function does not execute the code of the called contract, but only checks if the call would be successful. This means that the value of `msg.value` is not considered, and the contract state is also not updated.
+
+However, the data in memory of both contracts can be changed between the two calls, so the result of this function call is unpredictable.
+
+
+  Can you explain why the staticCall function can't be used to determine if a contract has a certain vulnerability?
+ 
+  The staticcall function only returns the return data of a call, it does't modify the state of either the caller or the callee. Therefore, if you are trying to find vulnerabilities in a smart contract you should use a tool that can modify state, such as a transaction that calls a function that changes the balance of an account. If you only use static calls to check if certain functions are vulnerable, you will not be able to detect all vulnerabilites. For example, a vulnerability that only affects the internal state can only be detected by calling the vulnerablity function with a static cal and checking if it changes state. However, this is only a partial solution, as the vulnerability can

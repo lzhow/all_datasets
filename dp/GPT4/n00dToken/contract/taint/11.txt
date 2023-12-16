@@ -1,0 +1,5 @@
+Yes
+
+The variable `_operators` in the `ERC777` contract is a mapping that keeps track of which addresses are authorized as operators for other addresses. The mapping is defined as `mapping(address => mapping(address => bool)) private _operators;`. This variable is controlled by users through the `authorizeOperator` and `revokeOperator` functions.
+
+The `authorizeOperator` function allows a user (token holder) to authorize another address (operator) to send tokens on their behalf. Conversely, the `revokeOperator` function allows a user to revoke this authorization. Both functions can only be called by the token holder (or an authorized operator), which means that the state of `_operators` is indeed controlled by the user. The user can decide who is an operator for their tokens and can change this state at any time by calling these functions.

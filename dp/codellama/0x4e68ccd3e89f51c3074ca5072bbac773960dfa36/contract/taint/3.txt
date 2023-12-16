@@ -1,0 +1,4 @@
+  
+No, the ` wordpos` variable in function `flip tick` is uncontrolled by user because it's a private function and it doesn't take any user input.
+
+The `position` function is called inside the fliptick function, and the result of the position function (wordpos and bitpos) is used to calculate the mask and self variables. 

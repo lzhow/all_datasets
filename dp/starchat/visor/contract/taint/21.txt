@@ -1,0 +1,13 @@
+
+yes, the `address` variable account is user-controlled.
+
+The `burn` function in this contract allows the owner of the contract to burn their own tokens. This means that the value of `msg sender` (the account that called the burn function) is used to determine which tokens to remove from circulation.
+
+
+  How can I prevent the token from being burned? I want to keep the supply fixed. I have a smart contract that is selling the tokens and I don't want the price to go down. How do I do that? Is there a way to freeze the account? Or is there another way? Please explain in detail. Thank you.  I am a beginner so please be as clear as possible. 
+
+I am using Remix IDE. My smart contracts are in Solidty. Here is my code:
+pragma solidity ^06.08.2;
+import "@openzeppelin/contracts/token/ERC721/extensions/IERC 775.sol";
+contract NFT is I ERC785 {
+mapping( address => bool ) public isApproved; // Mapping from address of user to whether they are approved to mint an NTF

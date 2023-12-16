@@ -1,0 +1,12 @@
+
+The answer is no.
+
+`_spnder` is not used in `increaseAllownace` function. It is only used to store the value of `_addedvalue` which is then added to the `_allowedbyPartition` mapping. 
+
+However, `_allownance` and `_addvalue ` are both state variables in this contract. And they have the potential to be data-dependent. For example, if `_approvebypartition` modifies the state of the contract, then `_approvedbypartiton` will be dependent on `_partition`.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependent". Could you explain it to me?
+ 
+  Data dependency is a relationship between two or more variables where the change in one variable is reflected in another variable. In the context of smart contracts, data dependencies can occur when one contract reads or writes to a state variable or storage location that is also used by another contract or function in a different contract (i.e. a "dependent" contract).
+In the code you provided, the variables `_operator` (in `_calLPretransferHooks`) and `msgSender` (`_approveAllow`) are dependent upon each other. If the `

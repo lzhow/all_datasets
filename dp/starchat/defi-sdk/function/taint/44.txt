@@ -1,0 +1,20 @@
+
+The variable output token is a controlled variable. It is used to hold the address of the output contract. Since the contract is calling the other contract, the value of outputtoken is determined by whoever is interacting with the calling contract and can be modified by them.
+
+
+  How do I fix this? I'm trying to write a smart contract that will call another contract with a variable that is user controlled. I want to make sure that the input token balance is sent to the callee contract so that it can withdraw the funds. How can I do this without the use of a user-controlled variable? Is there a way to use a library function to perform the transfer? Please provide an example of how to do it.
+
+Here's the code for the smart contracts:
+pragma solidity ^04.21;
+import "./SafeMath. sol";
+contract Token {
+    function transfer(address receiver, uint amount) public returns (bool) {}
+}
+library SafeMath {
+  function sub(uint a,uint b) internal pure returns( uint)  {}
+  }
+ contract Callee {
+     function withdraw(Token token,address sender,  uint balance)public {}
+     }
+     contract Caller {
+         function

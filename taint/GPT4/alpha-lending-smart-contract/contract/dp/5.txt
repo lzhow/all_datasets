@@ -1,0 +1,3 @@
+Yes
+
+The variable `data` in the function `decodeU128` is data dependent on the variable `data` in the function `decodeU256` because the latter calls the former, passing its `data` as an argument. The `decodeU256` function internally calls `decodeU128` twice to construct a `uint256` value from two `uint128` values. The `data` parameter in `decodeU128` is used to read and decode the raw bytes from the `data` parameter that was originally passed to `decodeU256`. Therefore, there is a direct data dependency between these two variables across the function call boundary.

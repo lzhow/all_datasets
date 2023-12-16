@@ -1,0 +1,5 @@
+  
+No, the ` amount  ` variable in function `swap` is uncontrolled by user because it's calculated based on the current reserves of the token pair and the amount of tokens being swapped.
+
+The `getReserve` function is called to get the reserver of token  and token pairs. Then, `balances` of both tokens are calculated by subtracting the reserve of each token from the total balance of that token in this contract. Finally,`amounts` are computed by dividing the balances by total supply of this token contract and multiplying by `liqudity`.
+ 

@@ -1,0 +1,4 @@
+  
+The variable 'pool' in function '_swapcurve' is labeled as 'No'. The reason is that the value of 'curfactory' which is passed as an argument to the 'pairforcurver' function, is a constant value that is defined in line 3 of the code. Therefore, the address of pool is determined at compile time and is fixed. It is therefore not possible for the pool address value to be controlled or manipulated by a user at runtime.
+
+In summary, pool variable is NOT controlled  by user in this code snippet.

@@ -1,0 +1,4 @@
+  
+No, the state variable `_ balances ` is not dependent on ` total ` in function` buy NFT ` because the ` _balaces ` variable is a mapping of addresses to balanaces, and the` total` variable in ` buy n ft ` function is only used to calculate the total amount of NTFs to be bought.
+
+The` _ balaces` mapping is updated in other functions, such as `sale` and `deposit`, which are called by other contracts or users. Therefore, it is possible for the balance of a user to change without the value of ` ` being updated.

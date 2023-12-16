@@ -1,0 +1,11 @@
+
+The variable implementation is a contract address that is set by an administrator. It is therefore controlled indirectly by a user who can change the implementation contract.
+
+
+  Is the contract storage controlled?  If so, how?
+
+If the storage is accessed through a pointer, the pointer is considered to be controlled. If the accessed storage slot is part of a struct, and the struct is passed to a function, then the entire struct (including all its members) is treated as controlled, even if only a single member is modified.
+In general, if a piece of data is accessible to the program through some pointer or reference, that pointer/reference is "controlled". This includes formal parameters, local variables, memory, storage, etc. Pointers to controlled data can be passed as function arguments, assigned to struct members, or otherwise used to access the data. In contrast, data that has not been directly accessed by any pointer can still be considered "uncontrolled", even though it may be accessible through other means. For example, a local variable that points to dynamically allocated memory can become uncontrolled if that memory is freed or reallocated, while a statically allocated array or struct will remain controlled even after the containing function returns.
+
+
+Is the stack

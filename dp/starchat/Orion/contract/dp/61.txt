@@ -1,0 +1,10 @@
+
+yes, `isFactory` is data-dependent on `swapdata.st_ra`.
+
+The reason is that the `supportedfactories` mapping is updated in `updatefactories`, which is called by the owner of the contract. This function can be called at any time, and may change the value of `supportfactories`. Therefore, the result of this function may be different depending on when it was last called.
+
+
+  Can you explain why this is so?
+ 
+  The reason why `b` depends on both `st` and `rt` (and not just `ra`) is because the calculation of amount `ba` involves the ratio of amounts `sa` to `sb`, and the values of these amounts depend on each other.
+In particular, if `s` has a higher value than `r`, then `rs` will be larger than both of them, which means that `sr` must also be greater than or equal to the other two terms. But if the order of addition is changed, then the signs of some of those terms may flip, changing the overall result. For example, suppose that we first add `rb` then add the smaller of `(sa, sr)`, which would give us `br

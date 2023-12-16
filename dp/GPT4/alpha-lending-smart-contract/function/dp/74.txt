@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The provided Solidity function `splitRewardExternal` does not give any information about the contract state `_ENTERED` or how it interacts with the variable `lendersGain`. The function simply returns the result of calling another function `splitReward`, and there is no code showing the definition of `_ENTERED` or its usage. Without additional context or the implementation details of `splitReward` and the state variable `_ENTERED`, it is not possible to determine if there is a data dependency relationship between `_ENTERED` and `lendersGain`. Therefore, the relationship is labeled as 'unknown'.

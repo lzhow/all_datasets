@@ -1,0 +1,9 @@
+yes
+
+The variable `amountRemainingLessFee` is directly calculated using the variable `feePips`. The line of code that establishes this data dependency is:
+
+```solidity
+uint256 amountRemainingLessFee = FullMath.mulDiv(uint256(amountRemaining), 1e6 - feePips, 1e6);
+```
+
+In this line, `amountRemainingLessFee` is assigned the result of a multiplication and division operation that includes `feePips`. The subtraction `1e6 - feePips` directly uses `feePips`, and the result of this subtraction is used as a multiplier for `uint256(amountRemaining)`. Therefore, any change in the value of `feePips` will affect the computed value of `amountRemainingLessFee`, confirming that there is a data dependency relationship between these two variables.

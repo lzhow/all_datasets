@@ -1,0 +1,5 @@
+Label: yes
+
+Reason: The variable `returnedAmount` in the function `emitExecuted` is indirectly controlled by the user. This variable is passed as an argument to the `emitExecuted` function and its value is determined by the return value of the `getReturnedAmounts` function, which is called within the `execute` function. The `getReturnedAmounts` function calculates `returnedAmount` based on the `outputBalanceChange`, which is the difference between the token balance before and after the swap operation, as well as the `protocolFee` and `marketplaceFee` structures.
+
+Since the swap operation is initiated by the user and the user can influence the `outputBalanceChange` through their actions (such as the amount of tokens they choose to swap), the user indirectly controls the value of `returnedAmount`. The user's interaction with the contract, including the swap details they provide, will affect the balance changes and thus the calculation of `returnedAmount`.

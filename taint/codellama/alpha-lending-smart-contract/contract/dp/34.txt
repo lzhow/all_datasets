@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable 'share' is data-dependent on 'supplied' in function 'accummulateAlphatoUser' because the value of 'share' depends on both 'total share' (which is a contract storage variable) and the 'amount' of tokens transferred to this contract. However, the amount of token transferred is determined by the caller of the method, which is an external actor, and not by any other contract or variable in this code. Therefore, 'Shares' are independent of supply.

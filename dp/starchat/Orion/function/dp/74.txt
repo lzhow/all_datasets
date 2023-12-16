@@ -1,0 +1,11 @@
+
+The function baseunitToCurvDecimal is not a part of the contract. It is a helper function that converts the amount of an asset to the equivalent amount in 1e12 units of Curve.
+
+However, the pair variable is used in pairfor function. If the two tokens are the same, then the pool address is returned. Else, it is calculated using the curve pool factory contract, and the result is stored in a variable called pair.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `assetAdress` variable in `function curveDecimalToBaseUnit` is data-dependent on `decimalValue` and `result` variables in that function, because they affect the calculation of `curveDecimalValue`.
+ 
+  The function curvedecimalTobaseunit is also not part fo the smart contract and is just a help function to convert the decimal value of curve to base unit. 
+
+In the case of assetAdrress, if it's equal to 0, we just return the value as it. But if not, We first get the number of decimals of that asset using Ierc2oSimple contract by calling the decimals function and store it in decimales variable.

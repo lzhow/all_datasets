@@ -1,0 +1,10 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `compIndexDelta` depends on `marketBorrowInde`, which is a value that is updated in `updateCompIndex`. However, `distributeBorrowersComp` is called before `updatCompIndx`, so the updated value is lost.
+
+  What is an example of a code that does not have this data dependence issue?
+
+
+
+

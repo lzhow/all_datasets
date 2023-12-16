@@ -1,0 +1,4 @@
+  
+No, the ` to` variable in function `safeAutoTokenET` is NOT controlled  by user because it's a function parameter.
+
+The ` safeTokenTranserToken` function takes in a `token` address, `address` to and `uint` value as parameters. It then checks if ` address` `this` and the address `from` are equal. If they are, then it calls the safe transfer function from the ER2C library.  If the addresses are not equal, and if token is equal to zero, which means ETH, It calls `IWeth.depost` with the value. Then it sends the Ether to the recipients address. Finally, if neither of the above conditions are met, meaning the token address is different from zero and not the same as the sender address then the Saferc2o.safetransfer function will be called.

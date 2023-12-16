@@ -1,0 +1,15 @@
+
+The contract variable `_shares` is not used in this function, so it is irrelevant for determining if `_share` has a dependency on ` r`.
+
+However, the internal Solidty function `_burn` does use the `_shahres` variable, which means that `_ shares` would be considered a dependent variable.
+In this case, ` _share ` would have to be included in a memory or storage variable in order to maintain the data dependence relationship between the two.
+
+
+  Can you explain how to do that?
+ 
+  Sure! Here's how you can determine if a contract's state is data-dependent on a variable:
+
+1. Identify the relevant contract and function. In this example, it's the `ERC20.sol` contract, and the withdraw function in particular.
+
+2. Determine the scope of the variables. This includes the local variables, parameters, contract storage variables (if any), and global variables in Solidit.y. For example:
+- The local variable _ shares is relevant to the ERC223. Withdraw function and is therefore relevant.  The function does not use _ symbol, but it does modify the balance of msg. sender. Therefore, symbol is

@@ -1,0 +1,12 @@
+
+The contract function ```balanceOf``` is not dependent on ```snapshotID```. However, the internal mapping ```_accountBalances``` may be.
+
+In Solidty, mappings are stored as key-value pairs in a hash table. When a value is stored in this mapping, Solidit creates a copy of the value and stores it in memory. This means that the mapping is a pointer to the data in storage. 
+
+When the ```balanceOFAt``` function is called, it is possible that ```account``` has not been added to ``` _balances``` yet. In this case, ``` balanceOF``` will be called instead, which will access the storage directly. Since ``` account``` does not exist in ```  _balance```, this will result in an error.
+
+
+  Can you explain this in simpler terms?
+ 
+  Sure, here's a simpler explanation:
+A mapping in Solidiy is like a dictionary in Python. It associates a key with a corresponding value. For example, if you have the key "apple" and the corresponding values 10 and "red", you can think of it as a list of key value pairs, where the keys are "apples" (the key) and their corresponding prices (

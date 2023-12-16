@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `feeOn` in the `burn` function is determined by the state of the contract and the address returned by the `feeTo` function of the `IPancakeFactory` contract. It is set to `true` if the `feeTo` address is not the zero address, and `false` otherwise. This is not directly controlled by the user but rather by the state of the `feeTo` address within the `IPancakeFactory` contract, which is typically managed by the governance or owner of the factory contract. The user calling the `burn` function does not have direct control over the `feeTo` address and therefore does not control the `feeOn` variable.

@@ -1,0 +1,3 @@
+The variable `borrowIndex` in the function `distributeBorrowerComp` is not controlled by the user. 
+
+Reason: The value of `borrowIndex` is derived from the `compBorrowState` mapping, which is not directly influenced or controlled by the user. The `compBorrowState` mapping is updated internally within the contract based on certain conditions and calculations. Therefore, the user does not have direct control over the value of `borrowIndex`.

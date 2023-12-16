@@ -1,0 +1,3 @@
+The variable `amounts` in the function `buyERC1155` is data dependent on the variable `erc1155Amounts` in the function `buyJay`. 
+
+Explanation: The variable `amounts` in the function `buyERC1155` is assigned the value of `erc1155Amounts[id]` in the for loop. The value of `erc1155Amounts` is passed as an argument to the function `buyJay`, and it is used to calculate the total number of ERC1155 tokens being bought. Therefore, the value of `amounts` in the function `buyERC1155` is directly dependent on the value of `erc1155Amounts` in the function `buyJay`.

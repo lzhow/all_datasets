@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `feeOn` in the function `_mintFee` is determined by the state of the `feeTo` address, which is obtained from the `IPancakeFactory(factory).feeTo()` call and a comparison to the zero address. It is also influenced by the condition of `_kLast` being non-zero and the comparison of `rootK` and `rootKLast`. On the other hand, the variable `balance1Adjusted` in the function `swap` is calculated within the scope of that function based on the `balance1`, `amount1In`, and some constants. There is no direct interaction or data flow between `feeOn` and `balance1Adjusted` as they are calculated independently in separate functions and do not share state or influence each other's values. Therefore, they are not data dependent.

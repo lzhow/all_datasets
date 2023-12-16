@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `cToken` in the function `mintVerify` is an argument provided to the function when it is called. Since this function is external and does not have any restrictions on who can call it (such as `onlyOwner` or similar modifiers), any user can call this function and pass in any address as the `cToken` argument. Therefore, the `cToken` variable is controlled by the user who calls the function.

@@ -1,0 +1,5 @@
+  
+The variable _ pair in function `setTokenpairMap` is labeled as 'Yes'.
+
+This is because the `onlyOwner` modifer is applied to the entire function, which means that only the contract owner can call this function. Since the `_owner` variable is set in a constructor and is private, only contract owners can access it. Therefore, the value of `_asset` and `_ pair` are controlled only by contract users.
+ 

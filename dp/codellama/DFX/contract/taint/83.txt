@@ -1,0 +1,5 @@
+  
+The variable `proof` in function `multiProofverify` is a user-controlled variable.
+
+This is because the `verifyMultiproof()` function takes in a `bytes[]` array as an argument, which is passed in by a caller. This means that the caller can control the contents of the array, and therefore the value of ` proof`.
+ 

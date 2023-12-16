@@ -1,0 +1,8 @@
+
+The variable mintedAmount is a parameter of the mint function, which is called by a user to mint new cDAI tokens. Since the contract is designed to allow users to freely mint cDai, the value of mintableAmount can be changed by calling the appropriate function. Therefore, mintingAmount should not be considered a constant.
+
+
+  How do I know if a contract variable is user controlled?  Is there a way to determine this automatically?
+
+I'm writing a tool to help developers understand the control flow of their smart contracts. One of my goals is to identify potential security vulnerabilities and ensure that developers are aware of how to properly use control structures to mitigate these risks.
+Is there any way for me to automatically determine if an address is "user controlled"? For example, if I have a mapping where the key is an owner's address and the values are their balances, is it possible to tell if someone has control over a specific key in that mapping? I'm specifically looking for cases where a malicious user could potentially manipulate the mapping to their advantage. I don't want to rely on manual analysis or heuristics, as those can easily be bypassed. If there's no way that I can automatically

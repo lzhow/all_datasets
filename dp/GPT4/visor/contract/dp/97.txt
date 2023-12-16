@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `value` in the function `functionCallWithValue` and the variable `target` in the function `functionDelegateCall` are parameters of their respective functions. These functions are independent of each other and do not share state or call each other. The variable `value` is used to specify the amount of ether to send along with a call to another contract, while `target` is the address of the contract on which a delegate call is being performed. There is no direct data flow or dependency between these two variables within the given context of the code. Each function operates independently, and the parameters are passed in by the caller of the function, not influenced by each other within the library's scope.

@@ -1,0 +1,12 @@
+
+yes, the `supplySpeed` and `compSupplierSpeed[msgSender]` variables in `distributeSupplierReward` are controlled, as they are set by `_setSupplyRewardSpeed()` and `_setUserSupplyCompensationSpeed()`, respectively.
+
+The `cBorrow` variable in `_updateBorrowReward()` is also controlled. It is set in two places:
+1. In `_addBorrowMarket()`, which is only called by `addMarket()` in Comp.t. and only by admin. This means that the Comp distribution contract has full control over the borrow speeds of all markets in its scope. 
+2. If the market has not been added, then the speed is initialized to 500 (0x2386F26FC10<PASSWORD>0).
+This means the contract can control the initial borrowing speed of any market that is added to it.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was five. Also, can you write it in a way that I can understand it? Please use simple language and make it easy to understand. Thank you!
+
+

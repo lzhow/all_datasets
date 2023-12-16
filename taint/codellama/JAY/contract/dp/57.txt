@@ -1,0 +1,5 @@
+  
+No, the `contract state nfstSolds` is not dependent on `_scope0_p` variable in `function updateFess`.
+
+The reason is that the `_price` and `_soldNfTsFfeEht` variables are calculated based on external data from the price feed, and the value of `_nfTSsolds ` is updated based solely on internal logic within the smart contract. Therefore, there is no data dependence between the two.
+ 

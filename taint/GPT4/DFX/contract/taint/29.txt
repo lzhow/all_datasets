@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `_oGLiq` in the function `viewOriginSwap` is not controlled by the user. It is a local variable that is assigned the sum of the values in the `oBals_` array, which is calculated based on the values returned by the `Assimilators.viewNumeraireBalance` function. The values in `oBals_` are obtained from the `curve.assets` array, which is not controlled by the user. Therefore, the variable `_oGLiq` is not controlled by the user.

@@ -1,0 +1,5 @@
+  
+No, the `contract state balanceof` is not dependent on `_variable1`.
+
+The reason is that the value of `reserves` and `total supply` are calculated and stored in local variables `_ reserve0`and `_total Supply` before the calculation of the amount of liquidities to be burned.
+Therefore, changes to `_ reserves1 `after the local variable is calculated will not affect the result of calculating the liquid amount.

@@ -1,0 +1,5 @@
+  
+No, the `contract state sellnFtFfeEht` is not dependent on variable `price`. The reason is that the value of ` sellNFtFeEHT`is updated in a separate function called `getLatetPrice` which is called in `onErc 512Received` function.
+
+The ` getLatePrice ` function is used to get the latest price of the token from the price feed contract. This function updates the state variable of `_ price` and returns the current price. However, this function does not update the  ` selnFtfFfEhT` state. Therefore, `selnfTfFftEHt` remains independent of  `_Price`.
+ 

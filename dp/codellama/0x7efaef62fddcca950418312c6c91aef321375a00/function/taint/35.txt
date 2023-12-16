@@ -1,0 +1,4 @@
+  
+No, the ` balanceAdjuted` variable in function `swap` is NOT controlled  by user because it's calculated based on the current balance of the token and the amount of tokens that are being swapped. It' s not a user input.
+
+The ` swap` function is a public function that allows users to swap tokens in a liquididy pool. When a swap occurs, a portion of each token' balance is subtracted to calculate the new balance. This new balances are then used to update the reserve of both tokens.  The ` balanaceAdusted` value is calculated by subtracting the input amount from the balance and multiplying it by 99.95%. This is done to account for the 50 bps fee that is charged on each swap.

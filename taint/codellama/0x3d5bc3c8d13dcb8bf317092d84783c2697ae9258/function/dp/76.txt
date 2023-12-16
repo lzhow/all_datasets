@@ -1,0 +1,5 @@
+  
+No, the variables ` decimsals` and ` mathError` are independent.
+
+The variable  `initial_exchange_rate_mantisa` is a parameter of the `initialize` function, and it is not used in any way in ` borrow_balance_stored_internal`.
+On the other hand, ` borrower_index` , ` principal_times_ index`and ` result`are all local variables of `  borrow _balances_ stored_ internal` . They are created and used within the scope of this function and are therefore independent of any external variables.

@@ -1,0 +1,4 @@
+  
+No, the `` variable in getBasedBrowRate function is NOT controlled  by user because it's a public variable that is set in constructor and can't be changed by users.
+
+The constructor function sets the value of `` to the parameter passed to it, which is a private variable of the contract. This means that the only way to change the base borrow rate is by calling the constructor again with a new value. Since the caller of this function can only be the deployer of contract, this variable is effectively controlled only by them.

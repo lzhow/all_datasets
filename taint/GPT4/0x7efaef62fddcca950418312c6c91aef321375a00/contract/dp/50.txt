@@ -1,0 +1,5 @@
+Label: no
+
+Reason: The contract state `allowance` is a mapping that tracks how much an address is allowed to spend on behalf of another address. It is defined as `mapping(address => mapping(address => uint)) public allowance;`. The variable `balance1` in the function `burn` represents the balance of `token1` after burning the liquidity tokens. The `burn` function updates the liquidity provider's balance by burning their liquidity tokens and sending them the corresponding amount of `token0` and `token1`.
+
+The `allowance` mapping is not updated or referenced in the `burn` function, and `balance1` is used to calculate the amount of `token1` to send to the liquidity provider after burning the liquidity tokens. There is no direct interaction or dependency between `allowance` and `balance1` within the `burn` function. Therefore, they are not data dependent.

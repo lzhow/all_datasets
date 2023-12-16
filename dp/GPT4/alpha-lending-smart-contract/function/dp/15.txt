@@ -1,0 +1,3 @@
+yes
+
+The variable `userData` in the function `setUserPool` is data dependent on the variable `_borrowShares` because within the function body, the property `borrowShares` of the `userData` struct is directly assigned the value of the `_borrowShares` parameter. This establishes a clear data dependency relationship where the state of `userData.borrowShares` is dependent on the input `_borrowShares`.

@@ -1,0 +1,3 @@
+yes
+
+The contract state `compSupplyState` is data dependent on the variable `cToken` in the function `updateCompSupplyIndex` because the state is accessed and modified based on the value of `cToken`. The function uses `cToken` as the key to access and update the `compSupplyState` mapping. Therefore, there is a data dependency relationship between `compSupplyState` and `cToken`.

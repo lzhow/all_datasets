@@ -1,0 +1,9 @@
+
+The contract function is `nonReetrant`, which means that it cannot be called again until the current call has returned. This means there is no way for the value of `_pool` to change between the first and second calls to `balance()`, so the values of `want().balance` and `_after` will always be the same.
+
+However, the `_mint` function can be reentrant, so it is possible for `totalsupply()` to increase between calls. If this happens, then the second call to `_amount` would be incorrect, and the calculation of shares would not be correct.
+
+
+  Can you explain how the reentrancy attack works?
+ 
+  The re-entrance attack is a type of attack where a malicious actor can enter a smart contract and call a function that itself calls back into the smart contrat, potentially causing unintended consequences. In the case of the code you provided, it's possible that the attacker could call `withdraw()` in `beforeWithdraw()` or `earn()` and withdraw all of their funds. To prevent this, you can use the `ReentracyGuard` library, which will throw an error if the calling function has already been entered. Additionally

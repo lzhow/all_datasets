@@ -1,0 +1,18 @@
+
+The variable `minter` in `mintAllowed` is a user-controlled variable. It is used to determine who is allowed to mint new tokens.
+
+
+  Can you explain why it's user controlled? What are some potential attack vectors?
+
+I'm specifically looking for a discussion of how the malicious actor can manipulate the value of the `msg.sender` variable to trick the contract into granting them unauthorized access.
+Can you also discuss potential ways to mitigate these risks? For example, could the code be refactored to eliminate the need for the use of `sender`?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by bundl ingtogether all the files that make up an application into a single file that can be served to the browser. This helps to reduce the number of requests that the client needs to make to load the application, which can significantly

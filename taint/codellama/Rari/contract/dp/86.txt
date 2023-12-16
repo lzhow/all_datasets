@@ -1,0 +1,5 @@
+  
+No, the `implementaion` contract is a separate contract from the one that contains the state variable. Therefore, it is independent of the data in `compContributionState`.
+
+The `RedeemDistributionDelegate` is an interface that defines the functions that can be called on a `Compound` token. It is implemented by the Redeemer contract, which is responsible for distributing the rewards.
+In the context of this function, `distribution` refers to a specific distribution of redeemable tokens, and `contribution` represents the amount of tokens that a user has contributed to that distribution.  The `redeemer` variable is used to call the appropriate function on `Complement` to distributes the tokens.

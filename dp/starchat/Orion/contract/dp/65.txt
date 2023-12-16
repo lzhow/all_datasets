@@ -1,0 +1,10 @@
+
+Yes, `tryMod` depends on `a` and `m`. The reason is that `mod` returns the remainder of a division, which depends only on a and b.
+
+
+  Can you explain why?
+  
+  Sure! The `SafeMod.sol` contract defines a library called `Math` that contains a function called mod. This function takes two arguments, the first of which is a dividend and the second of wich is an divisor. It then checks if the divisor is zero and if it is it throws an error. If the check passes it returns a modulo of the two numbers.
+
+The reason why `safeMod()` is data-dependent on its arguments is because it uses the modulo operation, `%`, which has the property that `(a % n) = (r)`, where `r` is always in `[-n, n)`, and thus `n` must be a positive integer. In other words, if `x = y % z` then `0 <= x < z`.
+In the case of `safemod()` the value of n is not known at compile time, but it can be determined at runtime. Therefore, it cannot be proven that the result of `%

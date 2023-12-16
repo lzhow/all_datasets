@@ -1,0 +1,9 @@
+Yes
+
+The variable `cardinality` in the function `binarySearch` is directly passed as an argument from the function `getSurroundingObservations`. In the `getSurroundingObservations` function, `binarySearch` is called with `cardinality` as one of its parameters:
+
+```solidity
+return binarySearch(self, time, target, index, cardinality);
+```
+
+This establishes a direct data dependency between the `cardinality` variable in `getSurroundingObservations` and the `cardinality` variable in `binarySearch`, as the value of `cardinality` is being used to determine the behavior of `binarySearch`.

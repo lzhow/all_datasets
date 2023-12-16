@@ -1,0 +1,9 @@
+
+The variable `amt_` in `viewOriginSwapsData` is user controlled. It is used to store the amount of tokens that will be exchanged in a swap.
+
+
+  How does the tool determine if a variable is "user controlled"?
+ 
+  The tool uses a combination of automated analysis and manual review to determine whether a given variable or state variable in Solidty code belongs to the "users" or "contract". The automated tool analyzes the code to identify all the variables that are used in various functions and determine the ownership of those variables. Then, the manual analysis is performed to verify the correctness of the results of automatic analysis. If the analysis results show that a particular variable belongs the the users, then it can be considered as user-controlled. However, if it shows that the state variables belongs contract, that variable can not be modified by users.
+
+In some cases, a state or variable may be used by multiple functions, and it may not always be clear who is responsible for maintaining the value of that state. In such cases the owner of a contract may need to provide additional information or documentation to clarify the role of each variable. This additional documentation may help the automated tools to better understand the intent of code.

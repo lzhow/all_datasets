@@ -1,0 +1,9 @@
+
+The variable "proof" in function "multiProofVerityCallData" is a call data parameter, which means that it can be modified by calling the contract function with modified data. Therefore, the control flow of the program can depend on the value of "proofs" at runtime, and it cannot be determined statically.
+
+
+  Can you give me a list of all the functions in this contract and their control-flow properties?  I want to know if there are any functions that are "pure" or "view" and which ones modify state.  Can I trust the "no-side-effects" property of Solidty? Can the compiler prove that a function has no side effects? If not, how can I be sure that the code I am reviewing has not hidden any unintended side-effect?
+
+Can you also give an example of a contract that has a "race condition" that can cause a bug? How can the race condition be exploited? Please provide an explanation.
+How can a race-condition be detected? Is there a tool that I can use to detect race conditions in Soliditiy code? What are the most common race condtions that Solidities developers should be aware of? 
+

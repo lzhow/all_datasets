@@ -1,0 +1,11 @@
+
+The variable _ token in setUserpool is data-dependent on _ shareAmount in calculateRounUpborrowAmountexternal because the _ user's borrow share amount is used to calculate the user’s borrow amount, which is then used in calculating the collateral amount.
+
+
+  Can you explain why this is so?
+ 
+  Sure, I'd be happy to explain.
+
+In the calculate round up borrow AmountExternal function, the share Amount is multiplied by the total borrow shares to get the borrowed amount for the given token. This borrowAmount is compared to the liquidate amount to determine if the loan can be liquidated. If the calculated borrowamount is greater than the Liquidate Amount, then the Loan can still be Liqudated. However, if it is less than or equal to, it cannot be liquated because it would leave the account with a negative balance. 
+
+However, in set userpool, we are setting the Borrow Shares for a given user. When we do this, this changes the amount of borrowable funds for that user, and therefore changes how much the CalculateRoundupBorrowamountExternal Function calculates. Since the calculation is based on a fixed amount and the shares are changing, there

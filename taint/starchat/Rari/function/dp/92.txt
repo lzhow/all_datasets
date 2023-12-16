@@ -1,0 +1,31 @@
+
+The function `_setReserverFactor` is not part of the code you provided. Could you please provide the entire code?
+
+  I am sorry, here is a corrected version of my code:
+
+pragma solidity ^0.6.0;
+import "./CompliantDepositaryBalanceView.sol";
+contract FUSE is CompliantDepositoryBalance {
+    address public fuseAdmin;
+    uint public accruedInterest; // Accruing interest is only allowed when the contract is paused
+    bool public paused;
+
+    constructor() public ComplianceDepositoryBalance() {
+        fuseadmin = msg.senders;
+        paused = false;
+     }
+
+    function setFuseAdmin(address _fuseadmin) public onlyFUSEAdmin {
+         fuse_admin=_fuse_admi; 
+    }
+    function pause() external onlyWhenNotPaused {
+       paused=true;
+   }
+   function unpause()external onlywhenpaused{
+       pause=false; 
+   }
+
+   function _mint(uint mintAmount) internal override returns(bool)  {
+      require(!paused, 'FUSENOTPAUSED');
+      accuredInterest+=mintAmount*get_exchange_rate()/10**18;
+      return super._mint();

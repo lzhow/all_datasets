@@ -1,0 +1,5 @@
+  
+No, the `distributeSupliercomp` function does not depend on `holder` variable in ` claimrewards` because the two functions are called in different contexts.
+
+The ` distributesupplier comp` is called from the flyweight pre-suppllier action function, which is triggered by the supplifier action in a ctoken contract. This function updates the comp supply index and distrubutes comp to a suppplier.  On the other hand, `clairewards ` is a public function that is used to claim rewards for a holder. It updates comp borrrow index, distibutes borower comp, and grants comp rewrds to holdes. These two function are independent of each other and do not share any data. Therefore, there is no data dependence between the variables ` deltaindex` and ` holdres` .
+ 

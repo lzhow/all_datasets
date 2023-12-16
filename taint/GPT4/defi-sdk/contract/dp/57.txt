@@ -1,0 +1,3 @@
+yes
+
+The variable `swapDescription` in the function `hashAccountSignatureData` is data dependent on the variable `swapDescription` in the function `hash`. This is because `hashAccountSignatureData` calls the `hash` function and passes `swapDescription` as an argument. The `hash` function then uses this `swapDescription` variable to compute a hash value, which means there is a direct data flow from `hashAccountSignatureData` to `hash` involving the `swapDescription` variable.

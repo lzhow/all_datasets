@@ -1,0 +1,10 @@
+
+The variable PROTOCAL_FEESIGNATURE_TYPHASH is a constant and is therefore not user controlled.
+
+
+  How do I know if a variable is user-controlled? Is there a tool that can help me with that? I want to learn how to do it myself, but I don't know where to start. I'm not very experienced with Solidty. Can you give me some tips?
+
+I'm writing a smart contract for a decentralized exchange. One of the functions is to verify that a signature is valid. To do this, I need to calculate a hash of some data and compare it to the signature. However, the data that I am hashing can contain variables that are user input. For example, if I have a function that takes an amount of ether as an input and I verify the input using a user's signature, then the amount is considered user control.
+How can I determine if these variables are actually user controllable? How can a developer be sure that the variables they are using are truly user inputs and not some other internal state? Can a compiler or linter help with this? If so, how can they be integrated into the development process? 
+
+In general, what are the best practices for

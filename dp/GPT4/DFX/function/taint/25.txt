@@ -1,0 +1,3 @@
+The variable `nGLiq_` in the function `viewTargetSwapData` is not controlled by the user. 
+
+Reason: The value of `nGLiq_` is calculated based on the values of `curve.assets` and `_length`, which are internal variables of the contract. The user does not have direct control over these variables, so the value of `nGLiq_` is not controlled by the user.

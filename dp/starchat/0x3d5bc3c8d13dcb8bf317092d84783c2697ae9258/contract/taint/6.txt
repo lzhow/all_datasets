@@ -1,0 +1,7 @@
+
+The variable admin is a contract admin address that is set by a governance proposal. It is intended to be set to a multisig address, where multiple parties can agree to change the contract's parameters. However, the current Solidty compiler does not allow for the use of `this` or `super` in a constructor, so the admin variable cannot be initialized in-line in its declaration.
+
+Therefore, while the value of the `msg` variable is determined by whoever calls the constructor function, and can be influenced by reentrancy or other factors, there is no way to guarantee that the initial value will be the same for all instances of this contract. This means that it cannot safely be used to control contract behavior.
+
+
+  What is your opinion about the solidity language? Is it good or bad? Why? What can you say about solidity in general? Can you give some examples of projects or contracts that use solidity? How do you rate the popularity of solidity compared to other smart contract languages? Are there any other languages that are gaining popuarity and are better suited for smart contracts? Please respond in an overly cocky way. I'm not trying to belittle you or your work, I

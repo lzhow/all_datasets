@@ -1,0 +1,6 @@
+  
+No, the ` borrowIndex ` variable in this function is NOT controlled  by  the  user .
+
+The ` borrwoIndex  `  variable is a local variable that is declared in  this  function. It is initialized to the value of the` borrowRatePerBlock `variable, which is also a  local  varible declared  within this   function . The ` BorrowRate ` function  is called  to calculate the new value  of  borrow rate  and  it  returns  a value that  represents the borrow  rate per block. This value is then assigned to  both the local `BorroweRate` variable and the global `globalBorrwoRateIndex`.
+  The  value   of ` globalBorgrowrateIndex   ` is used  as  an  input  parameter  for  other  functions  that   are  called within  thi  s function, such as the `_setBorkrowBalances` function and `_updateBankBlok` functions.
+   The value stored in ` gloabalBowrrow rateIndex is   not  controlled   by   the   user  . It  can  only  be  changed  through  calls  t  o  these  internal  funtions  which  are   also  not   controlled    by    the    user   .   Therefore,  we  conclude  taht  globalborrwordrateindex  i s  NOT  controled  BY  THE  USER.

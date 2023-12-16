@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `_balences` is data-dependent on `amount` and `to` variables in `_move` function. However, the `_totalsupply ` variable is only updated in ` _Mint` functions, which are called in constructor. Therefore, `_toatlSuppy` variable does not depend on any of the variables passed to constructor, including `initalSuppply`.

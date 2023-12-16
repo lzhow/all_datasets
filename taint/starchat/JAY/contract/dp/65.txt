@@ -1,0 +1,11 @@
+
+yes, the owner variable is data-dependent on roundId.
+
+The reason is that the update function calls the price feed aggregator to get the latest price of Jay in USD. This price is used to calculate the fees for selling and buying NFTs, and the fee amount is based on how much Jays are currently in existence. If the number of Nfts sold or bought increases, then the value of the JY token increases and thus the amount of ether required to cover the transaction fees also increases. Since the ether value is stored in a state variable, it is affected by changes in this value, which in turn affects the calculation of fees.
+
+
+  Can you explain why this is true?
+ 
+  The owner state is dependent on a variable called round ID because the round id is updated every time the aggreagator is called. When the call is made, a new round is created and a unique ID is assigned to it. In the case of this contract, this ID represents the current price for J ay in US dollars. 
+
+When the buyer or seller wants to buy or sel the Nft, there is a check to see if the user has enough ether to complete the

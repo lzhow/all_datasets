@@ -1,0 +1,4 @@
+  
+The variable 'tokenb' in function '_addliquidty' is labeled as 'No'. The reason is that the value of 'tokebB' comes from the 'amountBdesired' variable, which is passed as an argument to the '_adliquity' function. This means that 'tokneB 'is not directly controlled  by a user input.
+
+In general, if a variable is assigned a value that is derived from a function argument or a global variable that can be modified by an attacker, then it should be considered as controlled. In this case, the attack vector is through the argument 'amoutB desired' which can lead to a reentrancy attack.

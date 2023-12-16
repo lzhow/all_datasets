@@ -1,0 +1,9 @@
+
+The contract function '_snapshot' is used to create a new snapshot of the balances of all accounts. This function increments the '_currentSnaphotId' variable and assigns it to a 'currentID' local variable. It then emits a Snapshot event, which is a log that a snapshot has been created.
+
+However, the data dependence relationship between the 'allowance' contract variable in '_allownces' in this function and the local 'balance' variables in other functions in a contract is not clear. Specifically, it is unclear if the allowance variable is updated in any other function in which case the balance variables may be stale. Additionally, if a transfer function is called in another function, then the updated allowances may not be reflected in these stale balance values. Therefore, while it may seem that the snapshot function may depend on these variables, this relationship is difficult to determine definitively.
+
+
+  Can you explain this in simpler terms?
+ 
+  The allownaces variable represents the amount of tokens that an owner has approved to be spent by a spender. When a user calls the transferFrom function to transfer tokens from an approved owner, their allowanace is decreased by the specified amount. If

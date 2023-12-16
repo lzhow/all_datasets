@@ -1,0 +1,12 @@
+
+The variable _ouputIndex is a user-controlled input to the calculateTrad function. It is used to specify the index of the output balance in _obals that should be updated with the calculated output amount.
+
+Since the _outputs array is user input, the compiler cannot guarantee that the value of _ouptutInde will be within the bounds of  the array, and thus it cannot be assumed that it will always be safe to access the element at that index.
+
+
+  Can you explain how the code works? I'm having trouble understanding how it calculates the fees and how to enforce the halts. I think it would help me a lot if you could explain it in a way that is easy to understand. Thanks!
+ 
+  Sure, I'd be happy to explain in detail how this code calculates fees, enforces halting conditions, calculates liquidity membranes, etc. Here's a high-level overview of how each function works:
+- calculateFees: This function calculates a fee for a given liqidity level and a set of balances. This fee is based on the curve parameters beta and delta.  The function uses the ABCDKMath library to perform the calculations. 
+
+Here

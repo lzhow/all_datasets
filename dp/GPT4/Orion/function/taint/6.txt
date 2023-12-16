@@ -1,0 +1,3 @@
+The variable `reserve0` in the function `_swap` is not controlled by the user. 
+
+Reason: The variable `reserve0` is obtained from the `getReserves()` function call, which retrieves the reserves of a token pair from the OrionPoolV2Pair contract. The reserves are internal state variables of the contract and are not controlled by the user.

@@ -1,0 +1,4 @@
+  
+No, the variables `ctoken` and `contriutoraccrueds` are independent.
+
+The function  `updatCompSupllyindex` is called in `flywheelPretranserAction` which is triggered by a transfer event. This function updates the comp supply index for a given ctoken.  The function`updatecontributrorwards`is called by the `setcontributorspeed`. This functions updates comp accruals for contributors based on their comp speeds and the time since their last update. However, this function does not directly interact with the ctokens. Therefore, there is no data dependence between the two functions.

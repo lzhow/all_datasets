@@ -1,0 +1,4 @@
+  
+No, the `contract state nftsSolds` is not dependent on `variable total` because the value of ` nfsSales` does not change in this function.
+
+The function only uses the values of the variables `erc20TokenAdress`, ` erC22Ids`, and `msg` to calculate the total number of NFTs sold. It does this by adding the length of each array to the previous value. However, it does nothing with the result of this calculation, so the state of nFts Sold is never changed. Therefore, there is no data dependence between the two.

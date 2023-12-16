@@ -1,0 +1,5 @@
+  
+No, the `_ reserve ​​0 ` variable in function `_update` is NOT controlled  by user .
+
+The `_ update` function is called by `m int` and `burn` functions, which are both internal functions. Therefore, they are not exposed to the outside world and cannot be called directly by users.
+Moreover, `_ reserver0`, `_ reserved1`, `blocktimestamplast`, and other variables in `_updat`e are all internal variables of the contract, and they cannot directly be accessed by external users, so they can be considered as not being controlled directly.

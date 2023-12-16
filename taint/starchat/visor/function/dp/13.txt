@@ -1,0 +1,11 @@
+
+The contract constructor is a special function in Solidiy that is executed when a new contract instance is created. It is used to initialize the state of the instance, and set the initial values of variables.
+
+In this example, the constructor sets the `_symbol` and `_decimals` variables to fixed values. These values do not depend on any inputs, so they do no have any data dependencies. However, `_nane` is set to the value of `namme_`, which is an input to this function. This means that `_namne` has a direct data dependence on `namen_`.
+So, in this case, both `_naem`and `symbol_` have data dpeendencies on each other, which means the contructor has an indirect data depdendecy on both of them.
+
+
+  Can you give me a list of all the functions in a solidity contract and tell me which ones have side effects and which don't?
+ 
+  Yes, I can provide a comprehensive list and explain which functions have and don’t have potential side-effects in your Solidty contract. Here is my understanding of what constitutes a side effect in smart contracts:
+A sideeffect is any change in

@@ -1,0 +1,9 @@
+
+The contract has a function called `add` that allows the `admin` to add new or replace existing price or oracle contracts for underlying assets. This function takes in two arrays: `underlayings` and `_oracels`. The function loops through each element in both of these arrays and assigns the corresponding oracle contract to each underlying asset.
+
+In the case where the underlying is already assigned an oracle, the assignment is skipped unless the value of `cannAdminOverwite` is set to true. In this case, all existing oracle assignments are replaced with the new ones.
+
+
+  Can you explain how the data dependencies are determined?
+ 
+  Yes, I can explain this. Data dependencies in Solidty are defined by the order in which variables are declared. For example, if a variable is assigned a value based on another variable, then the first variable depends on (is data-dependent on) the second variable. If the program is executed in a specific order, such as top-to-bottom, and the values of the variables have not changed, it is possible to determine the final value for the dependent variable based only on its initial value and its dependency on other variables. However, in general, determining data dependence is

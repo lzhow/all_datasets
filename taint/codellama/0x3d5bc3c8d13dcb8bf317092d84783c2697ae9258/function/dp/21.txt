@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `getAccountSnaphot` function, the local variable  `borrowsBalances` is assigned the value of `accountTokes[address]`, which is a state variable of the contract.
+On the other hand, in `acrruInterst` the state variables `totalBorrrows` and `reserves` are modified by the calculation of interest. However, these variables are never used in calculating the values of  the variables  borrow index and total borrrows in  getAccruedInteres. Therefore, there is no data dependence between the two functions.

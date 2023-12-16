@@ -1,0 +1,4 @@
+  
+The label is 'Unknown'.
+
+In this case, the ` structhash` variable is derived from the input parameters of the permit function, specifically the owner address,  spending address , value , nonced , and deadlines. These parameters are all input by users, so the struct hash is also controlled  by user input. However, this does not necessarily mean that the contract is vulnerable to a reentrancy attack. It is possible that other parts of  the code may also control the value of struct Hash. Therefore, further analysis is required to determine the full scope of control over the  struct  hash.

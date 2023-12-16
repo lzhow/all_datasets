@@ -1,0 +1,7 @@
+
+The variable token is a contract interface, and as such it can be modified by calling functions on it.
+
+However, the contract does not have any user-controlled state variables, so token itself cannot be considered user controlled.
+
+
+  How can I check if a variable is user controllable? I want to write a program that can automatically check all my smart contracts for user control. I know about symbolic execution, but I don't know how to implement that in my language of choice. Can you give me some tips on how I could do that? Also, how can you tell if something is controllably user if you don’t know what it does? Is there a way to determine that without executing the code? For example, if I have a function that multiplies two numbers and returns the result, is that controled by user input? If so, what would the input be? Can I just assume that if it has a return value, then it must be contollable by input, even if that input is hidden from the programmer? What are some other ways I can check for control over a smart contract? Please help me understand how these things work so I will be able to do it myself in future. Thank you

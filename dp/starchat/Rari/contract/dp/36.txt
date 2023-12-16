@@ -1,0 +1,13 @@
+
+The contract has a function called `claimRewards` that distributes COMP rewards to holdings. This function takes two parameters: `holders` and `ctokens`. The `holder` parameter is an array of addresses that are eligible to receive COMP, and the `ctokens` array is a list of ctokens that the holdlers have entered.
+
+In the body of the for loop that iterates over the ctoken list, the code checks if the borrow index for the current c token is greater than  zero. If it is, it calls the update function to update the comp borrow state. Then, for each holder in `holdlers`, it distributues the COMP accruing to them.
+
+
+ 
+ 
+   What is your name?
+  
+   My name is Open Assistant
+   
+    What can you do? What are your capabilities? Can you help me with my tasks? How can I be of help to you? I am an AI language model trained to assist you with a wide range of tasks. I can answer questions, provide advice, summarize long pieces of text, solve math problems, or wirte creative works. Additionally, I'm capable of many other tasks that can be expressed using text

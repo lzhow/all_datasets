@@ -1,0 +1,4 @@
+  
+No, the ` symbol` variable in function `constructor` is NOT controlled  by user, because it's a parameter of the constructor function, and it will be set by whoever calls the contract' s constructor.
+
+The constructor of a contract is a special function that is called when the smart contract instance is created. It is used to initialize the state of  the  contract.  The constructor can take parameters, which are passed by  who  calls  it. In this case, `string symbol_` parameter is passed to constructor, so it can be controlled only by someone who calls this function.

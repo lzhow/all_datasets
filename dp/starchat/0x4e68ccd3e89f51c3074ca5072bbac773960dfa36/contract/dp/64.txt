@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `getFeeGrownInside` function calculates the fee growth for the current tick and the adjacent ticks, and stores it in `info` for each tick. Then, the cross function uses this information to calculate the net liqudity for that tick based on how much liquidity was added and removed in each adjacent tick during the same period. However, if the liquidty in a tick is  changed during this period, then the information stored in info will be outdated.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on liquiudityNet is because the value of feeGrowsAbove is dependent on it. When the getFeesGrowInside function is called, we are calculating the fees for all the ticks that are adjacent to the tick we’re currently in. We store this data in an Info struct for every adjacent pair of ticks. 
+
+When the Cross function gets called later, this is when we use this info to update the values of the Info structs for those adjacent pairs of tickers. If the liquidtyNet value changes during that time frame, those values will no longer

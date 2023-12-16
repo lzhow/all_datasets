@@ -1,0 +1,4 @@
+  
+No, the ` amount  ` variable in function `_swap` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters and the current state of the contract.
+
+The ` _ swap` function takes in an array of amounts and a path of tokens, and it calculates the amount of token to be swapped based the the reserve balances of each token pair in `path`. The ` amounts` array is used to store the amounts of input tokens to swap, while the` amount` variable is a temporary variable used for calculations. Therefore, `  amount ` is determined by internal logic and is fixed for each swap transaction. 

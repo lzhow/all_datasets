@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the constructor of the contract, the `_logic` and `_dat`a are passed as arguments. These arguments are not declared as `constant` or `immutable`, which means they can be modified by other functions or external contracts. Therefore, `_ data` is considered controlled  by user, as it can potentially be changed by an attacker.
+ 

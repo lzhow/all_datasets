@@ -1,0 +1,12 @@
+
+The function `upgradetoAndcall` is a low-level function that is called by the `proxy` contract when a user calls the upgrade function on a proxied contract. It first calls `_authoriseUpgrade` to check if the user is authorized to upgrade the contract, and if so, it calls ` _UpgradeToandCallsecure` which actually upgrades the implementation and calls a function with the given data.
+
+In the `_Upgradetoandcallsecure`, the first argument ` newimplementation` represents the address of the new implementation contract that we want to point to. This address is stored in a mapping called `_implementation`. The second argument is `data`, which is an array of bytes that represents a call to a specific function in `NewImplementation`.
+So, in summary, the variables `implementation `and ` data` are both data-dependent on each other.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain in detail how my tool analyzes Soliditiy contract codes and classifies data dependencies.
+
+1. **Data Dependency Analysis:** My tool starts by analyzing the code to identify all variables and contract state that are used in smart contract functions.

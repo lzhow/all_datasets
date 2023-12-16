@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in `PanchakeLP.sol` calls the `emit` statement with the current block timestamp, which is then assigned to the block variable `blocktimestampLast`. This variable is used in `_safeUpdate` to calculate the time elapsed since the last update, and this calculation depends on `_reserves0` and `_resrve1`.
+
+  What is a good way to test if a variable has a dependency on another variable?
+
+
+
+

@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `us_add` function, the input `x` is a 16-bit integer, and the output `result`is a signed 24-byte integer. This means that the multiplication operation can overflow, resulting in incorrect results.
+Since the overflow can occur, we cannot determine whether the result is user-controlled or not. Therefore, in this case, 'Unknown' is used.

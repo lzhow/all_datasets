@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_trasnferbyPartion` function, the parameter `_partition` is passed to the `PartitonUtils` contract to get the destination partition. This function uses the value of `_data` to determine the partition prefix, which is then used to retrieve the address of the corresponding partition strategy validator contract. If the prefix is not zero, it means that the transfer is happening between two different partitions, and the validators of both partitions need to be called to validate the transaction.
+On the other hand, In the`_transerByDefaulParttion`function, there is no partition parameter, so the default partition is used. Therefore, `_to` and `_value` are directly added to `_balnces` without any partition validation. 

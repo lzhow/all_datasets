@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `amounts` in the function `_swap` is data dependent on the variable `token0` in the same function. This is because the value of `amountOut` is assigned based on the condition `input == token0`. If the condition is true, `amountOut` is assigned `amountOut = uint256(0)`, otherwise, it is assigned `amountOut = amountOut`. Since `amountOut` is derived from the value of `token0`, there is a data dependency between `amounts` and `token0`.

@@ -1,0 +1,10 @@
+
+The variable deltaDrIp_ in function drIp is a result of the calculation dRiPtotal = drIrate * (blockNumber - drIStart), where dRipTotal is an unsigned integer, drIRate is uint, blocknumber is also uint and dRIPStart is set to block number when the contract is deployed.
+
+As such, the value of deltaDRip_ is determined by user input and is therefore considered controlled.
+
+
+  How can I prevent the users from changing the values of drpIRATE and blockNUMBER?  How do I make sure that the dRPtotal is always up to date? Can you give me an example of how to do this?
+Can you also explain how the code works? I am not very good at coding. I have never written a line of code before. Can I just copy and paste this code into Remix and it will work? Or do i need to install something else? Please explain step by step. Thank you.  I would love to use this tool, but I don't want to break it. 
+
+Please also answer my other question. Is the `token_` variable in dRp() is controled by users? If not, why do

@@ -1,0 +1,10 @@
+
+The variable account in function "isContrac" is data-dependent on variable target in "functionSaticCall" because the value of target can be changed by the code in between the two functions.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure, here's an example:
+
+Suppose we have the functions `f` and `g` that operate on a global variable x. If `x` is passed as an argument to `h`, then we know that `y = f(x)` and the assignment `z = g(y)` is independent of `w = h(z)` because `u = v` for all possible values of u and v.
+However, if `a` depends on `b` but `c` does not, then `d = a + b` may depend on both `e = c + d` as well as `k = e + f` if the values assigned to c and f are different. This is because, depending on how the program is executed, the order in which the assignments are performed may affect the final value assigned. In this case, it is possible for the addition of c to affect both the sum

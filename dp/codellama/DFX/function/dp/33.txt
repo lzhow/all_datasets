@@ -1,0 +1,5 @@
+  
+The variable _ swapInfo in function  target swap is data-dependent on variable  _ bal in  function get Target Swaps Data.
+
+Reason:
+In function Target swap, the  variable o AMT_ is assigned the value of the AssililateNumere function, which takes the address of _ o. addr as an argument. This function is defined in Assiliator.sol, and it is a public function that returns the balance of a given address. Therefore, if the _ balance variable in get target Swapp Data is changed, it will affect the return value  of AssillilaterNumero function and therefore the assignment of oAMT_ in targetswap. 

@@ -1,0 +1,9 @@
+
+The variable close_factor_mantisssa is a state variable in CompTroller contract. It is used to store the value of the liquidating factor. This factor is multiplied with the price of a collaterized asset to calculate the amount of collatorized assets that can be liquidated at any given time.
+
+Since this variable is stored in contract storage, and is updated by various functions in this contract, we can conclude that it can potentially be controlled or influenced by users.
+
+
+  What is an example of an action that could be taken by a user to control the state of `CloseFactor`?
+ 
+  One example could potentially involve a hacker attempting to manipulate the contract by changing the close factor to a higher value, which could result in a decrease in collated assets available for liquidations. However, this is just one potential example, as there could also be other ways to attack the system. Additionally, the risk of such an attack would depend on the specific details of how the attack is executed and the likelihood of success. Therefore, while it may be possible for a malicious user or hack to exploit this vulnerability, there is no guarantee that such attacks will always be successful. In general, smart

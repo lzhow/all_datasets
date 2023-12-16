@@ -1,0 +1,13 @@
+
+The function `set_admin` sets the `_ADMIN` variable to the value of ` new_Admin`. The function`_change_ admin emits an event and calls the ` _ set_ Admin` function. Since the two functions are called in sequence, it is possible that the new value for `_admin `is not yet set when the event is emitted. This could result in an inconsistent state, where the admin variable is set to a non-zero value, but the corresponding event has not been emitted, which could lead to errors.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is a Solidty function that sets an admin address for a smart contract. It first checks that `admin!= 0`, which means that it cannot be the null address. Then, the address is stored in a special slot in storage, `_Admin_slot`.
+
+ 
+ 
+
+
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!   An incremental bundling

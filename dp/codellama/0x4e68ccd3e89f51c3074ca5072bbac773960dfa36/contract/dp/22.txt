@@ -1,0 +1,5 @@
+  
+No, the ` quotinent_ scope_  ` variable in ` get NextS qrt PriceFrom Amount1 Rounding Down` is not dependent on ` liquidty` variable from ` GetNext S q rt Price From Input`.
+
+The reason is that the value of ` liqudity ` is used to calculate ` numeratior1 ` in both functions, but the calculation of the quotien is done in a different way in each function.
+In `GetNext sq r t Price from Amoun t1 Round ing Down`, the numeratoir1 is calculated as `Unsafemath. div Roun ding Up( amount << fixedpoint9 6 .RES OLUT ION, liquidit y)`, while in` Get Next S Q r T Price F r om Amou nt  I nput`, it is calcuated as `(amount * liquidi ty) >> fixed point9. RES O LUT IO N`. Although the values of numeratore1 are the same, their calculation is different, so they cannot be considered as data-dependent.

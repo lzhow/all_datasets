@@ -1,0 +1,19 @@
+
+The contract has a function called `withdraw` that allows users to withdraw their proportional share of the curve token. This function is marked as non-reentrant, meaning that it cannot be called recursively.
+
+In the `if` statement, the value of `curve` is updated to reflect the withdrawal of `_curvedToburn` curves. However, this update is not atomic, and another user could call `transfer` or `approve` between the time the user's balance is retrieved and the update to `totalsupply`.
+This could result in a race condition where the balance of a user is reduced, but the total supply is increased, leading to a negative totalsupply.
+
+
+  How can I fix this?
+ 
+  You can add a mutex lock to prevent the race conditions. Here's an example of how you can do this:
+ ```solidity
+pragma solidity 5.0
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts-ethereum-package/drafts/Counters. sol";
+contract MyContract {
+    using Counters for Counter;
+    Counter private _mutex;
+
+    function myFunction() internal {
+       

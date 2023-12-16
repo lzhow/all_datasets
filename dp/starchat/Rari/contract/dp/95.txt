@@ -1,0 +1,11 @@
+
+yes, the `Interest Rate Model` is data-dependent on `Implementation` in this case.
+
+The reason is that the constructor function sets the implementation address to the newly created contract, and the Interes Rate model is part of the contract's state. Therefore, if the interest rate model were not dependent on implementation, it would not need to be stored in storage.
+
+
+  How does the code change if interest rates are stored outside of contract state?
+ 
+  If interests rates were stored outsite of a contract they would no longer be data dependant on an implementation contract. This would mean that it could be deployed seperately from the main contract and would be able to change its interest model at any time without requiring a redeploy of all the other contracts that rely on it. However, this would also mean the data would need be be kept seperate from contract storage and accessed through some other means. For example, a seperated contract could have functions that allow the owner of that contract to set and get interest models. These functions could then be called by the primary contract when it needs to access the model. 
+
+In this way, data dependencies are important because they allow for the optimization of storage costs and reduce the amount of

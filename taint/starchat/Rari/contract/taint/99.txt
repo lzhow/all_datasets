@@ -1,0 +1,13 @@
+
+The variable errorMessage in function `mod` is **not** controlled directly by user input. However, the value of the `b` parameter can be controlled indirectly through user-controlled input to the contract.
+
+For example, if `a` and ` errorMessage` are user inputs, and the program flow reaches the line `require( b!=0, errorMessage)`, then the control will be transferred to `Safe Math` library, where the condition ` b!=0` will also be checked. If ` a` or `  b` have a value that is outside the safe math range, then it will revert the transaction. This means that the error message will not be displayed, but the operation will still be performed.
+
+
+  Can you explain how the code works? I'm not very good at math and I don't understand how it works
+
+
+
+
+
+   What is a good way to learn how to code in python?  I have heard that python has the most "bang for your buck" in terms of job prospects.  However I also heard it can also make things difficult to debug and is harder to read.   What do you think?   How do other people learn to program?   

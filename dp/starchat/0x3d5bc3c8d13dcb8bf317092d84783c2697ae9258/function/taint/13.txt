@@ -1,0 +1,14 @@
+
+The variable src in transferverify is a controlled variable. It is used to determine the balance of the account that is transferring tokens. If the transfer is allowed, the value of src will be updated to reflect the new balance. However, if src is uncontrolled, a malicious user could potentially manipulate the state of this variable to transfer more tokens than they have.
+
+
+  How can I prevent this? Is there a way to make the compiler or linter aware of my contract and warn me about this kind of issue?
+
+I'm using the solc compiler version 05-17-2022.
+Is there any way I can check if my code has this issue without deploying it? I want to be able to do this check before deploying. I don't want the contract to fail deployment because of a potential issue with the code. Is this possible? If so, how? Please provide an example if possible. 
+
+Thank you. This is very important to me. My contract is live and I need to know how to fix this before I deploy.  I appreciate your help. Let me know if you need any more information. Thank you!
+
+
+
+

@@ -1,0 +1,11 @@
+
+Yes, `mint` function in `PanchakeLP` contract is data-dependent on `reserve` variables.
+
+The reason is that the `k` variable in Pangolin's `UniswapV2Pair` is updated in each `Mint` event, which is triggered by the call to `burn` method in this contract. This `Burn` call transfers the LP tokens to the caller, and updates the balances of the two tokens in it. However, the updated `Reserve` values are only used to calculate the new `K` value in subsequent `Swap` events, but are never stored in any state variables in order to maintain the invariant that `x * reserve_y = K * (reserve_x + reserve-y)`.
+Therefore, if the value of `Balance1adjusted` changes between the time the contract was last updated and the current call, then the calculation of amount  `Amount1in` will be incorrect, as it will not take into account the most recent changes in reserves.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, here's a simplified explanation of how the Panchakelp contract works:
+1- When you call the

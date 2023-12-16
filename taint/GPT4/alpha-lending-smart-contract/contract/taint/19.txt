@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_toTimestamp` in the function `calculateLinearInterestExternal` is an argument to a public or external function, which means it can be set to any value by the user calling the function. Since the user can provide any value they choose when they call this function, `_toTimestamp` is controlled by the user.

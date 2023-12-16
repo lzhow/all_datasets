@@ -1,0 +1,13 @@
+
+The variable msgSenders in this function is owned by msg.sender, which is a special variable that holds the address of the account that sent the transaction. Since the constructor function runs only once when the contract is deployed, the value of msgsender will always be the same as the _ownder variable, and therefore it cannot be controlled directly by a user input.
+
+
+  Can you explain why it's not possible to control the msg sender in Solidiy? I understand that it can be modified by miners, but I don't understand why that would make it impossible to determine who sent it. Can't you just check the previous transaction's input to see who the sender was? Or is there some other reason?
+
+Also, I'm not sure what you mean by "special variable". Is that a Solidty thing or a computer thing? If it has to do with Soliditty, can you give me a link to the documentation for that? Thanks!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How about Webpack?  Create a table comparing the two, with columns for

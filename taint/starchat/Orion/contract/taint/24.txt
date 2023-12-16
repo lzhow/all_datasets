@@ -1,0 +1,8 @@
+
+Yes, the `bool supporting_fee` variable in `_swap` is user-controlled. This variable is used to determine whether or not to charge a fee when swapping tokens. If the value of `true` (the default), the fee is charged. However, if it's set to `false`, the swap is performed without the additional fee.
+
+In the case of the Oríon Pool, users can set the supporting fee flag when calling the `_do_swap_tokens` function. By default, this flag is set `True`, meaning that fees are charaged. Users can change this value to set a different fee structure for their pool.
+
+
+  How can I make sure that the contract is secure? I'm concerned about reentrancy and other common attack vectors. Can you recommend some Solidty best practices to prevent these attacks?
+Can you also provide some guidance on how to use the tool you've developed? Is there a way to integrate it with existing tools or IDEs? How often should I run the analysis? What are the limitations of your tool? Can it handle all Solidit contracts or just a subset? Are there any other tools that can perform a similar analysis and what are their limitations? Please provide

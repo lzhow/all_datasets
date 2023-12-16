@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `account` in the `burn` function is not directly controlled by the user because the `burn` function can only be called by the contract's `owner` due to the `onlyOwner` modifier. The `owner` is set to the address that deploys the contract, and only this address has the authority to call the `burn` function and specify the `account` parameter. Therefore, a regular user cannot control the `account` variable in the `burn` function unless they are the owner of the contract.

@@ -1,0 +1,11 @@
+
+The variable `opaqueError` in `failOpaque` is a user-controlled input, and its value is used to provide additional information about the error that occurred. Since it can be used for arbitrary purposes, the control flow analysis cannot determine whether or not it actually affects the program state in any way. Therefore, in this case, we cannot say that the `Error.NOERROR` variable is or is *not* controlled directly by a specific user input.
+
+
+  Can you explain why you cannot tell if it's controlled or uncontrolled?  What are some other ways I could check this?
+
+I'm trying to write a tool that can automatically generate tests for smart contracts.  I want to make sure that I'm not missing any edge cases that could cause problems.
+Is there a way to check if a variable or function is called from a function that is marked as pure?  
+For example, if I have a contract with a pure function `foo` and a non-pure function bar that calls foo, is it possible to determine that bar is pure as well?  
+
+If not, how can I be sure I didn't miss any important edge case? I don't want my tool to generate false positives.  

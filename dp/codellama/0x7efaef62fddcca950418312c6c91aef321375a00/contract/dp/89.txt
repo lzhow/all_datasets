@@ -1,0 +1,5 @@
+  
+No, the variables `_ reserve ​​0 `and` balance  `in the` burn` function are independent.
+
+The` _ reserve` variable is a local variable in`burn` and is initialized with the value of`reserves` from the `getReserve` method. This value is not affected by the execution of the rest of ` burn`.
+On the other hand,`balances` is also a variable local to` Burn` but is calculated based on` I ERC 721 (token 8). balance of ( address (this)) `, which is affected when the contract receives or sends tokens. However, this calculation is performed before the call to ` _ safeTransfers` that transfers the tokens, so the balance is updated before it is used to calculate the amount of tokens to burn. Therefore, ` balance`is not dependent on `reserver`in`Burn`.

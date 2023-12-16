@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `isContract` function, the local variable 'account' is passed as an argument to the external function 'extcodeszie'. This function retrieves the size of the contract at the specified address. Since the 'size' variable is calculated based on 'address account', it is data-dependent on it.
+On the other hand, in ` functioncall`, the parameter 'target' does not appear in any expression that depends on ` account`. Therefore, it can be considered independent of ` target`.
+Therefore, we can conclude that the variables `size` and `address` are dependent on each other.

@@ -1,0 +1,17 @@
+
+The function `totalSuppyAt` is a view function that returns the total supply of the token at a given snapshot ID. It first checks if the snapshot exists, and if it does, it returns its value. If the snapshots do not exist, the value is retrieved from the `TotalSuply` variable.
+
+In the `_BeforeTokenTransfser` function, we have two cases to consider:
+1. When the from address is equal to 0, this means that the tokens are being minted, so we need to update the account snapshot and the Total Supply snapshot.
+
+2. Similarly, when the to address equals  to zero, tokens have been burned and we must update both the accounts snapshot, as well as the supply snapshot
+3. In all other cases, both accounts need an updated snapshot
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is used to optimize the performance of web application by combining multiple files into a single file. This reduces the number of requests made to the server and improves the overall performance.
+   
+    What are some of these tools? Can you give me a list? I'm specifically

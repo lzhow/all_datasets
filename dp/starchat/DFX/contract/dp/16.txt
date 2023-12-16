@@ -1,0 +1,11 @@
+
+The variable _asssets is not a state variable in this contract. It is a local variable that is used to create an array of addresses that are then used in creating the Curve contract instance. Therefore, it is neither data-dependent nor data independent.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `_asset` variable is data dependendent on `_quoteCurrecy`.
+ 
+  The `_assset` is an input to the `Curve` contract, which is then created. Since the curve contract is created using the input `_assest`, the data is dependent on it.
+
+However, the question is whether the state of the contract changes when the value of `_asst` changes. If the answer is yes, then the two are dependent, otherwise they aren't. In this case, since the values of these variables are fixed, there is no change in state when they change. So, no, these two aren’t dependent in data. 
+
+If the variables were not fixed and could change, for example, if they were input parameters to a function, or if the code was changed to use a different value, this would be a dependent relationship, and the output would change

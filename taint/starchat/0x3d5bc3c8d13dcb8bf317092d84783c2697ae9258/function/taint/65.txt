@@ -1,0 +1,9 @@
+
+The variable b in add_Exp() is user-controlled.
+
+This function adds two Exp structs, each of which contains a mantisa field of type uint. Since Solidty does not allow for arithmetic on uints directly, the mantias are first multiplied by a scale factor (in this case, `exp_scale`), and the result is then added. This means that the value of b is effectively multipled by `10^17`, which is a large number that is outside the range of safe unsigned integer operations in Solidiy. As a result, any addition or subtraction performed on b will result in an overflow or underlow, respectively.
+
+
+  Can you explain how the overflow/underflow can be exploited by an attacker? Please provide an example scenario. I want to understand the attack surface and how to prevent it.  I understand that overflows can happen in other situations as well, but I am specifically interested in overflow in this context. Can an integer overflow occur in any other context? If so, please provide a concrete example and explain why it's dangerous. 
+
+I understand how overflow can occur when working with large numbers, and I'm aware that Soliditiy does have some limitations when

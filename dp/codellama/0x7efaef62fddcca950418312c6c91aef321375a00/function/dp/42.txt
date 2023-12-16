@@ -1,0 +1,4 @@
+  
+No, the variables `_reserves0`, `_reverve1`, `total_supply`, and `liqudity` are all data-dependent on `getReserve()` in both functions.
+
+The reason is that the `maint` function calls ` getreserver()` to get the current reserves of the liquidty pool, and the `_burn` method calls it to calculate the amount of liquidy to burn. Therefore, `_totalsupply ` and `_liqudiy` depend on `_getresever()` and are therefore data dependents. 

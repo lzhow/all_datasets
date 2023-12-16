@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `reserve` variables in `Iuniswappair.GetReservse()` are updated by the swap function, which is called in this function. So the value of `reservseIn/reserveout` may change after the call to `GetAmountout`.
+
+  What is a good way to test this?
+
+
+
+

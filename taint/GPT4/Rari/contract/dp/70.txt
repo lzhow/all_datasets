@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `cToken` in the function `updateCompSupplyIndex` is used to access and update the supply state of a specific market within the smart contract. It is related to the supply side of the rewards distribution mechanism.
+
+On the other hand, the variable `contributorAccrued` in the function `updateContributorRewards` is used to track the accumulated rewards for a specific contributor. This variable is updated based on the contributor's speed and the number of blocks that have passed since the last update.
+
+There is no direct interaction or dependency between `cToken` and `contributorAccrued` within the given functions. The `cToken` variable is used within the context of the market's supply state, while `contributorAccrued` is used within the context of a contributor's rewards. They operate independently within their respective functions and do not share a data dependency relationship.

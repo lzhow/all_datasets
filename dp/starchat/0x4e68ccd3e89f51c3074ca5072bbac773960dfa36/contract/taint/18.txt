@@ -1,0 +1,11 @@
+
+The variable self in function `cross` is a mapping from int to TickInfo. Since mappings are not supported in Solidty, the compiler does not know if self is user-controlled. Therefore, in this case, we cannot determine if `tick` and `info` are user controlled.
+
+
+  Can you explain why it's not possible to determine? Is it because mappings aren't first-class objects in solidity? Or is it something else? I'm just trying to understand the limitations of the tool. Thanks!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples? Can I use one for my own web application? If so, how? Please explain to me in detail. I am specifically looking for a tool that can automatically detect changes in my source code, and only re-bundle the parts of my application that have changed.  I want to use this for educational purposes to demonstrate how modern web development tools can help developers build faster, more maintainable applications. Thank you!  If there are other tools that are better for this task, please let me know, but I specifically want an incremental bundling tool, not a task runner or other

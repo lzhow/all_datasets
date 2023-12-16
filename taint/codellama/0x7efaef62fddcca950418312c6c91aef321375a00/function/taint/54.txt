@@ -1,0 +1,4 @@
+  
+No, the ` unlock` variable in function `lock()` is a local variable and is therefore not user-controlled. It is set to  `1` at the beginning of the lock function and set back to `0` before the end of it. Therefore, `locked ` is only controlled within the scope of function lock().
+
+The ` locked` state of a contract is determined by its storage variables, which are not affected by local variables.

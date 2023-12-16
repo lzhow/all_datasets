@@ -1,0 +1,5 @@
+  
+No, the variables `_ amount` and `_ after` are independent in function  ` deposits`.
+
+The variable  `_bal` is calculated using the `available()` function, which returns the balance of the vToken in this contract. This balance is then transferred to this vAULT contract using `w.safe TransferFrom (msg .sender , address (this ) , _ amount )`. The `earn()`  function then deposites the transferred tokens into the strategy contract, and the `_pool` variable is updated to reflect the new balance.
+  The `_ pool` value is used to calculate the number of shares to mint, but it is independent of `_ bal` or `_ _ after`. Therefore, `_ balance` cannot be data-dependent on `_ After`.

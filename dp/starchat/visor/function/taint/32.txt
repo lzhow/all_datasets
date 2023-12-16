@@ -1,0 +1,11 @@
+
+The variable spenders in function `_approve` is a controlled variable. It is used to track the allowances that have been granted to other addresses. Since it's a mapping, the key is `owner` and the value is an `allowance`. The `approve()` function allows users to grant other users the ability to spend a certain amount of their tokens. This is done by updating the `allowed` mapping.
+
+In the case of the `_transferFrom` function, `sender` can be considered the owner of `amount` tokens, and `recipient` the sponsor.
+
+
+  Can you explain how the code works? I'm having trouble understanding how it works. I know it has something to do with the balances and allowences, but I don't understand how exactly. Can I get a high level overview of how this code functions? Please provide a flow chart or something if possible. Thank you. 
+
+
+
+

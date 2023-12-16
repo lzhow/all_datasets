@@ -1,0 +1,12 @@
+
+Yes, `Marketplace fee amount` is data-dependent on `Output balance change`. This is because the value of `marketPlaceFee` depends on how much the output balance changes after the swap.
+
+
+  Can you explain why?
+ 
+  Sure! The `input.marketplacefee.amount` variable is used to calculate the `protocolfee` and `actualoutputamount`. The value for `Actual output amount`, `Protocol fee` are dependent on these two values. If the values of these variables are changed, then the other two will also change. This means that the two are interdependent.
+
+In the code, the line `Base.Transfer(Output.Token,SwapDescription.Account,ActualoutputAmount)` is dependent upon the calculation of the variables `Inputbalancechange`, `Absoluteinputamount`, and the previous line. Similarly, in line 10,  `Swapdescription.MarketPlacefee.Beneficiary` also depends upon `swapdescription.Marketplacfe.Amount`.
+
+ 
+ 

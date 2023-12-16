@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `c` in the function `tryAdd` is calculated within the scope of that function using the parameters `a` and `b`. It is a local variable and its value is determined by the addition of `a` and `b`, followed by a check to ensure that no overflow has occurred. On the other hand, the function `mod` operates independently of `tryAdd`. It takes its own parameters `a` and `b`, and computes the modulus of `a` by `b`. There is no direct reference or computational path from the variable `c` in `tryAdd` to any variable in `mod`, nor is there any shared state or side effects that could create a data dependency between them. Each function's execution and the variables within are isolated in this context, and thus, they are not data dependent.

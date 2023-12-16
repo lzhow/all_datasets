@@ -1,0 +1,12 @@
+
+The variable id in buyJackWithErc712 is data-dependent on variable in JayToEth because the value of id is used to index into the array _tokenId in Ierc77.transferfrom, which is a state variable of the IER78 contract.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is part of a smart contract that allows users to buy Jays with an ERC-791 token. When a user calls the buy function, the contract transfers the J ay token from the user's address to the address of this contract, and updates the owner of that JAy token to be the current user.
+
+When the seller wants to withdraw their funds, it calls a separate function called withdraw. This function calculates the amount of ether that the users would receive if they sold all of their J ays, based on how many JAys they own and how much ether they sent in. It then transfers that amount to them.
+
+
+In the withdraw function the msg sender is set to payable, so that it can receive ether. Then the balance of msgSender is checked, to make sure that there is enough ether in this smartcontract

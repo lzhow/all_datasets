@@ -1,0 +1,18 @@
+
+The variable id in both functions is used to loop through the arrays of addresses and ids, respectively. However, the id variable in buyER712 is not dependent on id from buyWithJAY1, as the two loops are performed independently.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code loops through two arrays, one containing the addresses of the ERC775 and ERC165 compliant NFTs, and the other containing their corresponding token IDs.
+
+In the first loop, it calls the safeTransfer function on each NTF contract, passing in its address, msg sender, token ID, to transfer ownership of that Nft to the buyer. In the second loop it does the same, but for the Jay Nfts. 
+
+It's important to note that the token contracts themselves need to be ERC-785 or ERC 173 compliant to accept these calls. If they aren't, then the calls will fail. Additionally, since these are Ntf contracts, there may be additional rules and restrictions on who can buy them, so it's always a good idea to check the contract's documentation beforehand. 
+
+
+
+
+I hope this helps!
+
+

@@ -1,0 +1,25 @@
+
+The variable "i" in line 59 is used to loop through the "receiverRules" array, and is therefore controlled indirectly by user input.
+
+
+  How do I fix the code? I want to make sure that the loop index is always less than the length of the array. I also want the compiler to throw an error if I try to remove an element from an array that is out-of-bounds. Can you write me a fixed version of this code that meets these requirements?
+
+Here is a possible fixed implementation:
+pragma solidity ^060100
+import "@OpenZeppelin / contracts / access / Owned. sol";
+contract AlphaRuleManager is owned {
+    struct Rule {
+        IRuleReceiver reciever;
+        uint8 percent;
+    }
+    Rule[] rules;
+
+    function addRule (address receiverAddress,uint8 percentage) public onlyowner {
+       Rule memory rule = Rule(RuleRecievers(recievierAddress),percentage);
+       rules. push(rule);
+    };
+
+    // function to get all rules
+    function getAllRules() public view only owner returns(address[]memory,ui8[]memery)
+    {
+         address[] memery addresses

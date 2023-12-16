@@ -1,0 +1,5 @@
+  
+No, the `CompMarkedState` contract is data-dependent on `suppllyspeed` and `Borrrowspeed`, but not on`borrowspeed`.
+
+The reason is that the`updatecompborrrowindex` function updates the state of the borrow index and the block number of a given ctoken, but it does not use the value of `borspeeds` to do so. Instead, it uses the current value stored in `compsupplystate` or `comborrowstate`, which are also contract variables.
+Therefore, `CompsAccured` is dependent on both `SupplisySpeed and`BorsSpeed`, not just`bosspeeed`.

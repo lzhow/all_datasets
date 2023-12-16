@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `amount` variable is assigned a value based on whether the supporting fee is true or false. If the fee supports, then the amount is calculated using the getAmount function. However, if the support fee does not support, it is set to the value of the amounts array at the index i.
+Since the array is passed by reference, any changes made to it will be reflected in all the functions that use it. Therefore, ` amount` is data-dependent on ` amounts` and `i`.
+ 

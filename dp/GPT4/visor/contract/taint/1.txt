@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `rewards` in the `withdraw` function is calculated based on the `shares` parameter provided by the user and the current balance of `visr` tokens held by the contract. The `shares` parameter is an input to the function, which means it is controlled by the user who calls the function. The calculation of `rewards` is directly influenced by the user's input, hence the user has control over the value of `rewards`.

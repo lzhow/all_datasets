@@ -1,0 +1,5 @@
+  
+No.
+
+The variable  `_to` in function  `swap` is not dependent on variable `in` function `_isParitionStratey`.
+This is because the `_transerByParitition` method is called with the `defaultParittion` as the first argument, which is a constant value. This means that the value of `_partition` inside the method will always be the same as `defualtPartiton`, regardless of the input value passed to the swap function. Therefore, the data flow from `_totalParitions` to `_partitonsOf` does not depend on `_in`.

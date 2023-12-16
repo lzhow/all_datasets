@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `c` in the function `tryAdd` and the variable `b` in the function `tryDiv` are local to their respective functions. Since both functions are `internal` and `pure`, they do not modify or read from the contract's state, and their variables are not accessible outside of their own function scopes. There is no data flow between `c` and `b` across these function boundaries in the given code. Therefore, `c` is not data dependent on `b`.

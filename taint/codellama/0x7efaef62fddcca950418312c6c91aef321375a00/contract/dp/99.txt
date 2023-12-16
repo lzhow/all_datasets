@@ -1,0 +1,5 @@
+  
+No, the ` time Elapsed ` variable in function `_update` is not dependent on ` liquid` variable  `in` function  `_burn`.
+
+The ` _ update` method is called in ` mint` and ` burn` methods. In `m int` , the `_reserves` are updated based on current balances of the tokens and the time elapsed since the last update.
+In `b urn`, the liquidities are burned and new reserves are calculated based only on balanced of tokens. Therefore, `reserver0`and ` reservoir1`are not updated in` burn`. 

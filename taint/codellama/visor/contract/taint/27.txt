@@ -1,0 +1,4 @@
+  
+No, the ` from` variable in function `_beforeTranserToken` is NOT controlled  by user because it's a function parameter.
+
+The ` _ beforeTokenTranfer` function is called by other functions in this contract, such as `_m int`, `_burn`, and `_transer`, which are all internal functions. These functions are called with the address of the sender as the first parameter, which is then passed to `_ beforeTransfetToken`. Therefore, `  from ` is a variable that is set by these internal function calls and is therefore not under the control of a user, but rather by internal logic of this smart contract.

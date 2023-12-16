@@ -1,0 +1,21 @@
+
+The Soliditiy code for the transfer function is as follows:
+
+function transfer(address recipient, uint amount) public returns(bool)
+{
+    balances[msg.senders] -= amount;
+    balanes[recipient] += amount
+    emit Transfer(msg, recipient, amount);
+    return true;
+}
+In this function, the balances variable is a mapping from addresses to uints, and the msg variable contains the address of the sender.
+Since the mapping is accessed twice, it is likely that the two addresses are related, meaning that one address is derived from the other.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+    An incremental bundling tool is used to optimize the performance of web pages by combining multiple files into a single file. This reduces the number of requests made to the server, which can significantly improve the page load time.
+
+    There are several popular incremental bundle tools available, including Webpack, Rollup, Browserify, Parcel, esbuild, etc. Each tool has its own strengths and weaknesses, so it's important to choose the one that best fits your project's requirements. Some of these tools are also open-source, allowing developers

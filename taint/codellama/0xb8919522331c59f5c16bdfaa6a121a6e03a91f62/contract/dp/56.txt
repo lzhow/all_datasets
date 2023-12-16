@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `Address` library, the functions `sendValue`, `call`, and `delegateCall` are all implemented using the same pattern: they call the target contract's `receive` function with the provided data and value.
+For example, in `address.sendvalue`, the value is passed as an argument to the contract at `recipient` and the data is empty. In ` address.functionCall`, data can be passed to a contract as a parameter.  In the case of ` function. functioncallwithvalue,` the amount of ether is also passed in as the second argument. This means that the variables `amount`and ` value`are both data-dependent on ` target`.
+Similarly, ` recipients` is data - dependent on` target`in ` sendvalue`.  The variables` amount` `and` value `are also datadependent` on target `in`functioncall`. The same is true for `data` being data dependendent on  ` data` .
+Therefore, we can conclude that ` amount ` and` data ` are both dependent variables on variable`target`.

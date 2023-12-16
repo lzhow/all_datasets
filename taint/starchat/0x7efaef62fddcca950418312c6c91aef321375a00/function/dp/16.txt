@@ -1,0 +1,12 @@
+
+The contract function "burn" is used to destroy liqudity in a Uniswap exchange. It takes two parameters: the address of the recipient of destroyed liqulity, and a boolean value "lock". The function then calculates the amount of token 1 and token2 that should be destroyed based on how much liqiudity there is in total supply, the current reserves of each token, as well as the fees that have been accrued.
+
+It then transfers the destroyed tokens to the specified recipient, updates the reservse values, then emits a BURN event. 
+
+In terms of data dependence, it is not clear if the "balanceOf" variable is data-dependent on any of these variables.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being told to "just learn python" and not having any real understanding of how programming works. I have tried making simple programs but I just can't seem to get them to work. What are some good ways to start learning how code works? I know it must be hard but it would be nice to have some guidance. If there are any good coding websites that teach

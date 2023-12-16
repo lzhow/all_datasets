@@ -1,0 +1,4 @@
+  
+No, the variables `_implentation` and `_b` are independent.
+
+The variable ` _implmentation` is a local variable in function`proposStrate` that is used to store the address of the new strategy implementation. It is only used within the scope of this function and is never accessed outside of it. Therefore, it is independent of any other variable.  On the other hand, variable`_b ` is defined in `earn` function as the balance of want token in this contract. This variable is dependent on `strateg`y, which is an instance of `IStratgy` interface. However, this dependency is indirect and not direct. `balan`ce is calculated by calling the `wanth` method on`strate`, which returns the want balance in`this` contract, and subtracting the current balance. Since `this.balanc`e is also dependent  on  `stragte`, the dependency between `_ b`and `_implementa`tion is transitive.

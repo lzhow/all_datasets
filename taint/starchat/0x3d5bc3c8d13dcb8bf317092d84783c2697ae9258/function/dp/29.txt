@@ -1,0 +1,11 @@
+
+The variable "vars" in function "borrowFresh" is data-dependent on "seizedTokens" because it is used in both the "if" and "else" blocks. Specifically, the block that sets "allowed" to "comptrolller.borrowsAllowed" depends on it, and the blocks that set "accountBorrowNew" or "totalBorrow" depend on both "acccualBorrowNumber" (which is set in a preceding block) and on its value.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how the code works.
+
+In the first block of code, "BorrowLocalVar" memory "var" variable is declared. This variable will be used to store temporary values that are used later in this function. In the second block, we check if the borrow is allowed by the Comptrollers. If it's not allowed, then we return an error. We then check to see if there has been any accrual since the last time we borrowed. Next, if we don't have enough cash to make the loan, return another error message. 
+
+After these checks, there are two possible outcomes. First, is if all of these

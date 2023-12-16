@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `value` in the function `decodeI16` is assigned a value based on the result of the `decodeU8` function, which in turn reads from the `data.raw` byte array. The `data.raw` byte array is part of the `Data` struct, which is expected to be populated with data provided by the user when they call the function `from` to initialize a `Data` struct. Since the user provides the bytes that are being decoded, the value of `value` is ultimately controlled by the user.

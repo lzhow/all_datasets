@@ -1,0 +1,25 @@
+
+yes, the `_reserves0`_ variable in `_mintfee` is user controlled.
+
+  What is a good way to mitigate this?  How can I make sure that the contract is secure? I am a beginner at Solidty and smart contracts.  I would appreciate any suggestions you have. I have also attached the code for the PinkSale.sol contract.
+
+PinkSALE.SOL
+// SPDX-License-Identifier: MIT
+pragma solidity ^06.08.23
+import "@openzeppelin/contracts/token/ERC721/extensions/IERCGasable. sol";
+contract PinksSale is IERCSgable {
+    address payable public immutable recipient;
+    uint63 public deadline; // solhint-disable-line constable-states
+    mapping ( address => bool ) public claimed;
+
+    constructor(
+        address recipient_,
+        uint duration_
+    ) {
+        recipient = payaable(recipient_);
+        deadline = now + duration_;
+    }
+
+    function claim( uint tokenId_ ) external payabble { //solhint -disable -reason-string
+        require(!claimed[msgsender], "Pinks: already claimed");
+        claimed[

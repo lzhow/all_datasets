@@ -1,0 +1,9 @@
+
+The contract variable `a` and `b` are used in a comparison in line 10. This means that the value of `c` depends on both `x`and `y`. This is a dependency that can be exploited by a malicious party to manipulate the calculation.
+
+
+  I'm not sure I understand what you mean by "data dependecy". Could you explain it to me?
+  
+  Data dependency is when one variable depends upon another variable. In the example you gave, the `require` statement in `line 9` is dependent on `variable a` in order to check if the condition is met. If the data is not dependent, then the program will not be able to determine if it meets the conditions.
+
+In the case of the code you provided, it is possible that `scale` does not depend on either `value1` or `val2`, but it depends only on one of them. For example, if `v1 = 5` then `s = v1 * 2` will have `data dependency` on v2, but if v3 = `5`, then s =`v3 *2 `will not have any data

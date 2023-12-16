@@ -1,0 +1,8 @@
+
+The variable latestAlphamultiplier is a mapping of addresses to uints. It is used to store the latest alpha multiplier for each user, so that we can calculate the correct amount of alpha rewards for the users.
+
+However, the mapping is declared as private, and there is no setter function for it. This means that the value of latestalphamultipler is only ever updated inside the contract, which means the state of the program is fully controlled and can be modified by anyone. Therefore, this variable is considered to be controlled entirely by users, as they can modify the values of this mapping at will.
+
+
+  How do I fix the code so the `mapping` is public? I want to keep the rest of it the same. I don't want the owner to have control over the alpha reward. They should only be able to withdraw it, not modify it in any way. Can you do that?
+Can you also add a withdraw function that lets the owners withdraw the rewards? The withdraw should be done in two steps. First, withdraw all the pending rewards, then withdraw any leftover balance. In the first step, you should check if there are any rewards to claim. If there aren't any, don’

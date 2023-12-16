@@ -1,0 +1,3 @@
+The variable `oBals_` in the function `getTargetSwapData` is not controlled by the user. 
+
+Reason: The variable `oBals_` is assigned values based on the result of calling the `Assimilators.viewNumeraireBalance` function, which retrieves the balance of a specific asset. The balance of an asset is typically controlled by the contract itself and not by the user. Therefore, the variable `oBals_` is not controlled by the user.

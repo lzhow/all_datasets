@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `erc1155TokenAddress` in the function `buyJay` is data dependent on the variable `_tokenAddress` in the function `buyJayWithERC1155`. This is because the value of `erc1155TokenAddress` is passed as an argument to the `buyJayWithERC1155` function, where it is assigned to the `_tokenAddress` variable. Any changes made to `_tokenAddress` within the `buyJayWithERC1155` function will affect the value of `erc1155TokenAddress` in the `buyJay` function.

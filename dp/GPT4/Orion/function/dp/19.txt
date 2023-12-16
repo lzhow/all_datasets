@@ -1,0 +1,16 @@
+Label: yes
+
+Explanation: The variable `amountOut` is data dependent on the variable `pair` in the function `_swap`. This is because the value of `amountOut` is assigned based on the value of `pair` in the following code block:
+
+```
+if (supportingFee) {
+    (uint reserve0, uint reserve1,) = pair.getReserves();
+    (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
+    uint256 amountIn = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
+    amountOut = OrionMultiPoolLibrary.getAmountOutUv2(amountIn, reserveInput, reserveOutput);
+} else {
+    amountOut = amounts[i + 1];
+}
+```
+
+Here, if `supportingFee` is true, the value of `amountOut` is calculated based on the value of `pair` by calling the `getReserves()` function on `pair`. Therefore, there is a data dependency between `amountOut` and `pair`.

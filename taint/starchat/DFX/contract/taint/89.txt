@@ -1,0 +1,7 @@
+
+The variable "amt_" in function "outputNumberaire" is a controlled variable. It is used to store the amount of the numeraires that will be transferred to the destination address. This amount is calculated by multiplying the input amount by a conversion rate between the base and quote numeral systems.
+
+In this case, the conversion is performed by calling the "view" function of an assimilation contract, which is an external contract that performs the actual conversion. Since the contract is external to this function, and is therefore controlled and operated by someone else, this variable is considered to be controlled.
+
+
+  Can you explain how the control flow analysis works? I'm having trouble understanding how it determines that a variable or state of a contract can be modified by user input. Can it be done with just the code alone, or does it require some other information? If so, what is that other info? Can I get that info from the solidity compiler? Or do I need to do something else? Please explain it in simple terms if possible. I am a beginner with solidity and smart contracts, so please don't assume I know anything about compilers or other tools. Just explain what the tool is doing so I can understand why it's

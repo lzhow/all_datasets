@@ -1,0 +1,5 @@
+  
+No, the `totalShares` variable in `getPriceFullPerShar` is NOT controlled  by user, because it's a local variable that is calculated based on the current state of the contract.
+
+The `balanace` function returns the total balance of tokens in this contract, which is equal to `wanted.balancOf (this)` plus the balance in strategy contract `strateg. balance()`.
+Then, `available` returns `Wanted(). balanceof (msg .sender)` which means the amount of token that the caller can deposite.  The `deposte` method deposits the specified amount into the strategy, and the remaining amount is transferred to this vaule. Then, `_mints` creates new shares for the depositor. Finally,`getpricePerfullShard` calculates the price per full share by dividing the token balance by total shares. This calculation is based only on internal state and does not involve any user input. Therefore, this variable is uncontrolled by users.

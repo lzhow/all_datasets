@@ -1,0 +1,3 @@
+Yes
+
+The variable `to` in the function `_safeTransfer` is controlled by the user because it is a parameter passed to the function by external calls such as `mint`, `burn`, `swap`, and `skim`, which are all functions that can be called by users of the contract. The value of `to` is determined by the user's input when they initiate a transaction that eventually calls `_safeTransfer`.

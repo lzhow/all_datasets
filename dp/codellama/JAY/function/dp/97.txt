@@ -1,0 +1,6 @@
+  
+No, the ` total` variable in `buynft` is not dependent on ` data` from ` onerc51Received`.
+
+The reason is that the two functions are separate and have no direct interaction. ` buy nFT` function is a public function that is called by the user to buy NFT tokens, while ` OnERc5 5received`is a pure function called when an ERC-1 65 token is transferred to the contract.
+  The ` Total`variable in` buyNFts`function is used to calculate the total cost of the NFts to be bought, and it is calculated based on various parameters such as the number of Nft tokens to purchase, their price, etc. On the other hand, ` Data`in` onErc 75 received` refers to a byte array that contains additional data about the transfer, such  as a message or a signature. This data is passed to `OnER  C5 Received `function when the ERc-7 2  token transfer is initiated. However, this data does not affect the calculation of `Total`
+   in  `BuyNFt` because it does  not contain any information about N FT tokens or their prices. Therefore, there is no data dependence between the  two  variables.

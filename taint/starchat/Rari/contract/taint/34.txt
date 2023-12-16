@@ -1,0 +1,7 @@
+
+The variable borrowindex is a complex data type that is defined in a separate library contract called ExponenialNoerror. This contract is used to handle edge cases that can arise when dealing with very large numbers. It is possible for the value of borrow index to become very very high or very low, which can cause overflow or underflow errors in other parts of the smart contract. To prevent these errors, the borrowing index is stored in an Exp struct, where the mantisas field is an unsigned integer that represents the actual value.
+
+In the case of Solidty, there is no way to check if a variable is overflowing or not. Therefore, in order to prevent overflow errors and ensure that the contract behaves as expected, we need to use libraries like SafeMath or OpenZeppelin's SafeERC23. These libraries provide functions that check for overflow and underflows and revert the transaction if an overflow/underflow occurs.
+
+
+  Can you explain how the safe math library works? I've heard that it can be used for preventing overflows and other errors. Can it be abused? If so, how can it? Can the overflow be exploited for something malicious? How can the exploit be prevented?

@@ -1,0 +1,9 @@
+Label: no
+
+Reason: The variable `decimals` is declared as a public constant with a value of `18` in the `PancakeERC20` contract:
+
+```solidity
+uint8 public constant decimals = 18;
+```
+
+Since it is a constant, its value is set at compile time and cannot be changed thereafter. It is not controlled by the user at any point, as there is no functionality in the contract that allows for its modification. The value `18` is hardcoded into the contract, making it immutable.

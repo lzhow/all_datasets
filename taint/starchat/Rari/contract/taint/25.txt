@@ -1,0 +1,13 @@
+
+The variable allowSign is a boolean value that is set to true when the implementation is upgraded. It is used to determine if an old implementation should be resigned. This variable is therefore controlled indirectly by a user who can set the allowance to be true or false.
+
+
+  How can I prevent users from being able to set allowances to false?  Is there a way to make it so that the value of allowresgin is always true?
+
+I'm trying to write a smart contract that allows users to upgrade their contracts.  I want to prevent the users of my contract from setting the boolean allowsign to a value other than true.   Is this possible?   If so, how can this be done?    If not, what are some other ways I can prevent my users' ability to change the behavior of the contract? 
+
+Please let me know if you need any more information.    Thank you.
+
+
+
+ 1. One way is to use modifiers to restrict the access of functions to only those who have the right to do so. For example, you can create a modifier called onlyByOwner that checks if msg sender is equal to the owner address. Then you apply this modifier to all the functions

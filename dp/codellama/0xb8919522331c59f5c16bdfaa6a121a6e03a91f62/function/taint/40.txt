@@ -1,0 +1,5 @@
+  
+The variable 'success' in function 'functionCallwithValue' is labeled as 'Unknown'. The reason is that the value of 'sucess' depends on the result of the call made to the target contract. If the contract is a user-controlled contract, then the 'call' function will return a value indicating whether the transaction was successful or not. However, if it's a non user controlled contract then it will not return any value. Therefore, the success variable is unknown.
+
+In the case of a function call, there are two possible outcomes:
+1. Success: The function was executed successfully and the return value is available. In this case, 'Success' will be true and retunrdata will contain the returned value from the called function. 2. Failure: There was an error during the execution of function and no return data is returned.In this cas, success will false and returndata is empty.

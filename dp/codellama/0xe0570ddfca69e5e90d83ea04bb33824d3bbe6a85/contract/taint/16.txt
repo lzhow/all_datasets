@@ -1,0 +1,4 @@
+  
+No, the `available` variable in function `depost` is NOT controlled  by user, because it's a local variable that is calculated based on the balance of the contract and the total supply of tokens.
+
+The `bal` value is obtained by calling the public function of `wanted` contract, which is a ER2C token contract. This function returns the amount of token that the specified address holds. In this case, we are calling it with the address of this contract as the argument, so it will return the current balance held by this smart contract in its own token balance.  The `total supply` of  tokens is also obtained from a public getter function on this same contract that returns its total token supply. These two values are then used to calculate the available balance by subtracting the token' balance from its supply, and this value will be used as an argument to call the deposite function. Therefore, this variable is determined by internal logic and not by any user input.

@@ -1,0 +1,4 @@
+  
+No, the `_totalBalance` variable is a contract variable and is therefore not directly controlled or modified by a user, but rather by other contract functions.
+
+The `_transerByParition()` function modifies the balance of the token holder in a specific partition, and the `balanaceOf()` and `totalSuplly()` functions return the total balance and total supply of tokens in all partitions. However, these functions are not user-controlled and are only called by internal contract logic. Therefore, `_balaanceofByPArition ` is also not a variable controlled directly by users.

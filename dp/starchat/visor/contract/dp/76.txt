@@ -1,0 +1,11 @@
+
+The variable errorMessage in function "sub" is not dependent on variable a in "trySub". The reason is that the require statement in Soliditiy is a conditional statement that throws an error if the condition is false. In the case of the "require" statement, if b >a, the error message is thrown and the program terminates. Therefore, there is no data dependence between errorMessage and a.
+
+
+  Can you explain why the code works?
+ 
+  The code in question is an implementation of Safe Math in solidity. Safe math is used to prevent overflow and underflow errors that can occur when working with large numbers.
+
+In the implementation, try functions are used instead of regular math functions to check for overflows and return false if there was an overflow. This way, you can still use the regular mathematical functions and not have to worry about the potential for errors. 
+
+For example, in try add, instead if doing a+b would cause an integer overflow, it returns false and  the value  of c is set to  a default value of  zero. If the addition is successful, then c will be set equal to the sum of a and b.  This is done to avoid the risk of integer

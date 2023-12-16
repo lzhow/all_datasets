@@ -1,0 +1,4 @@
+  
+No, the `_ reserves1 ` variable in mint function is NOT controlled  by user because it's a local variable that is created in function scope and it can't be modified by any external user or function.
+
+The `_ reserve  ` variables are created by calling the `getReserve()` function, which returns the current reserver values for the two tokens. These values are then stored in local variables `_ reserved0` and `_ residue1`. These variables can be used to calculate the liquidty minted, but they cannot be directly modified. Therefore, they are not considered controlled variables.

@@ -1,0 +1,10 @@
+
+yes, the `Competitor` variable is data-dependent on `BecomeImplemenationData`.
+
+The reason is that the Competitior variable in this contract is used to call the `_setImplementaionSafe` function, which in turn calls the initialize function of the implementation contract. This function requires two parameters: the underlying asset address and the address of a Competition contract, both of which are stored in `ImplementationStorage`. The `implementation` address is set to the new implementation address, and `isImplementation` is marked as false.
+`BecoemImplementationDate` contains the bytecode of an implementation of this Compeition contract that is to be deployed. However, since the contract constructor is executed before the deployment of `CEr2c2oDelegatior`, the value of Compentitor is not yet set, so the call to `_seTImplementationSafe()` fails.
+
+
+  Can you explain why it is a problem that it's data is dependent on another variable?
+ 
+  Yes, it can be a bit confusing to see a variable that's used in a constructor function as a parameter to another function that also uses that variable. It's not necessarily a bug or a fl

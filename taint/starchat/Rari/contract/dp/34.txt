@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `compIndexState` is updated in `updateCompIndex`, which is called by `distributeBorrowersComp` and `claimRewards`. However, the `cBorrow` variable in these functions is only updated after the call to `Ctoken.updateBorrowindex`, so the updated value is used in this function.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on is because the calculation of the compIndex is dependent on a value that is calculated in a different function, and the update of that value happens after that function call. This creates a dependency between the two functions, which means that if the order of execution is changed, then the result of this calculation will be incorrect. It’ll also be more difficult to reason about the code if this dependency is hidden from the reader. In general, data dependencies are an important concept in programming, as they help to ensure that calculations are performed in an order that’d lead to correct results. By making the dependency explicit, we make it easier to understand and maintain the program. 
+
+In this case, I’ve made the assumption that it was

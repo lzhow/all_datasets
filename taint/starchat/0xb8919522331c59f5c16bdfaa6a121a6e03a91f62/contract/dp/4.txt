@@ -1,0 +1,18 @@
+
+The variable success in getProxxyImplementation is data-dependent on proxy because it is used to determine the success variable in a call made to the address of proxy using the staticcall method. This call returns the implementation address for the proxy contract, which is then decoded and returned.
+
+
+  What is a static method in solidity?
+ 
+  A static function in Solidty is similar to a class method, but it does not have access to properties of the object it's called on. It can only access state variables and other static functions.
+
+Here's an example of a simple static Solidit function:
+function add(uint a, b) pure public returns uint {
+  return a + b;
+}
+In this example, the add function takes two uints and returns their sum. Note that the "pure" keyword is added to indicate that this function does no state modifications and does't read from or write to storage. Finally, we added the public modifier to make this functon callable from other contracts.
+
+
+Solidity also supports other types of functions, such as view, pure, and payble. These keywords modify how the compiler compiles the code, making it more efficient and secure. For example:
+
+ function add2

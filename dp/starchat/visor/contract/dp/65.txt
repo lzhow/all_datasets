@@ -1,0 +1,11 @@
+
+The variable "b" in tryDivide is not a state variable, so it is assumed to be a constant.
+
+In the mod function, the value of "a" is used to calculate the result of the modulo operation. Since "mod" has a higher data dependence than "tryDiv", the variables are considered data-dependent.
+
+
+  Can you explain how you arrived at this conclusion?
+ 
+  I analyzed the code to determine if the two state variables were dependent on each other. I used a combination of static analysis and manual review to identify the relevant code blocks and determine whether the state was modified within the scope of these functions. If the data was not modified, then I could safely assume that it was constant and not dependent upon the other state. However, if it *was* modified in any way, I would need to perform additional analysis to ensure that the modification did not affect the correctness of my analysis. This is why I concluded that these two states were data dependencies.
+
+  However this is just one possible analysis, and there may be other ways to arrive at the same conclusions. For example, it may not be necessary to analyze all of a function's code in order to make this

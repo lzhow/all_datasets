@@ -1,0 +1,12 @@
+
+Yes, `SafeERC` is a library that is used to call the `approve` function on an `IER2` token contract. This function requires two parameters: the address of the token and the spnder. In the code, the first parameter is `address token` and is passed to the approve function.
+
+The second parameter, spnnder, is not passed directly to `safeERC`, but is instead passed as a parameter to another function called `Base.geBalance`. This second function is also part of `base.sol`, which is included in `openzeppelin-contracts`.
+`Base` has a function that returns the balance of an account for a given token. It takes two inputs: a token address and an address. `Address` refers to an Ethereum account. 
+
+In the context of this code block, we are calling the getbalance function with the parameter `this` which represents the current contract address, and we pass the result to a variable called tokenBalance.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+ 
+  Data dependency is when one variable or state depends on another variable

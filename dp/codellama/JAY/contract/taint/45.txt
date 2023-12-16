@@ -1,0 +1,4 @@
+  
+No, the `_ sell Nft Fee Eth` variable in function `updateFe` is uncontrolled by user because it's calculated based on the current price of the token and the US dollar price. It' s not possible for the users to control the value of this variable.
+
+The variable is calculated using the `priceFeed` contract, which is an external contract that provides the price data. This contract is used to get the latest price and calculate the fee based the the difference between the two prices.  The `US Dollar Price` and `ETHER Price ` are also used in this calculation. These values are not user-controlable and are set by a trusted third party. Therefore, `_Sell NFT FEE Ether` cannot be controlled directly by users.

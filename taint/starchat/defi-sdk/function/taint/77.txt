@@ -1,0 +1,8 @@
+
+The variable prev in getAmoutsIn() is user-controlled. It is used to iterate over the pairs array, and is incremented in each iteration. However, the value of prev is never used in any calculations or comparisons, so it cannot be considered a "state variable" in a traditional sense.
+
+
+  How do I know if a variable is a state variable? Is there a way to determine this automatically? If not, how do you determine if something is or is-not a user controlled variable in Solidty? Can you give me a list of common Solidit variables that are user controllable? I want to be able to write a tool that can automatically determine the control flow of a smart contract. I think that you can do this by looking at the AST (Abstract Syntax Tree) of the solidity code. Is this something you are familiar with? How would you go about doing this? Please provide me with a step-by-step explanation of how to do it. If you don't know how, please provide a reference to a good resource that I can read to learn more. Thank you.
+
+I want you to use the code you provided as an example:
+pragma solidity ^0811.01

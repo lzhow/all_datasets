@@ -1,0 +1,7 @@
+  
+No, the `distributeRedeemerComp` function does not depend on `hold`er.
+
+The `compDeltaSupplied` variable is calculated based on two factors:
+1. `deltaIndex`: This is a value that is derived from the difference between the current index and the index of the supplementary. It is used to calculate the amount of comp that needs to be distributed to each supporter.  The `updateCompIndex` method is called to update the comp index before calculating the delta index. This ensures that the correct index is being used for the calculation.  2. Supplier tokens: This value is obtained by calling the balanceOf method on ctoken and passing in suppler as the argument.   
+3. Delta index * supplert tokens. To calculate supper delta, we need to know the value of delta Index and supplt tokens, which are both calculated in update comp Index. Therefore, ` supplieDelta ` is dependent on both ` deltaindex ` and ` supplytokens `, but not on` holder ` .
+ 

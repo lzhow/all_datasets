@@ -1,0 +1,13 @@
+
+yes
+
+
+ 
+Is the contract an abstract one?
+
+An abstract (or partially concrete) contract is a contract that is declared using the abstract keyword. An abstract function or event declaration is provided without an implementation. Abstract contracts cannot be instantiated, but can be used as a base contract for other contracts to inherit from.
+ 
+  No, the code does not contain an "abstract" keyword, so the smart contract in question is neither abstract nor partially abstract.
+If you meant to ask whether the entire contract was abstract, then the answer is no. A contract can have both abstract and nonabstract functions, and it can also have state variables. However, a smart contact cannot have an explicit constructor, as constructors are implicitly defined. Instead, Soliditiy provides the initializer function, which is called automatically when the object is created. This function can perform any initialization tasks that are required by your contract. It is important to note that the constructor function cannot accept any parameters, whereas the initializers can. Finally, modifiers can only be declared in abstract contracts. 
+
+In summary, while the "contract" in "Solidity" is used to define a new contract, an existing contract may also be abstract or partially-abstract. If the existing

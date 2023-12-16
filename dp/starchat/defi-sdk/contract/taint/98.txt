@@ -1,0 +1,11 @@
+
+The variable returned amount is a result of the swap and is therefore controlled and influenced by both the input and output amounts and the fees. It is calculated based on the formula:
+
+returned_amount = ((input_balance_change * 10^18) // (1 + input_fee_share))
++ 2
+This means that the returned_amout is equal to the difference between the total input balance and total output balance minus the protocol and market place fees, divided by 998%.
+So, yes, the return_amoun is influencd by all the factors that affect the trade, including the inputs, outputs, and fees that are paid.
+
+
+  Can you explain how the market price is determined?  What is used to determine the price of an asset? Is it the current price or is it a weighted average of all prices? If it's a weight average, how is that weight determined and by what criteria? Can the weight be manipulated? How? And if it can be, is there any way to detect and prevent that manipulation?
+Can you also explain why the use of a variable called "returned amount" is considered to be a security vulnerability? What are some alternatives

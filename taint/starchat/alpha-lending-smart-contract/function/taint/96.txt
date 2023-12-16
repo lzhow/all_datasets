@@ -1,0 +1,7 @@
+
+The variable `collaterlPercent` is a parameter of the `DefaultPoolConfigration` contract, and is set at construction time. Therefore, the value of `colleteralPercent `is determined by each individual pool, but is fixed for the life of that pool.
+
+Therefore, while it may be possible for a user to manipulate the collaterization ratio by changing the parameter, this is an internal parameter that is determined algorithmically based on the current state of a pool and does not directly correspond to user input. As such, `getCollateralPercentage` does **not** control the input of this parameter.
+
+
+  How can I check if a variable is user controlled? I want to know how to do this automatically. I don't want a human to look at the code. Can you write a program that can do it? Please write it in Python. If it's too hard for you, please write pseudocode. It doesn't have to be perfect, just good enough for me to use as a starting point. Thanks.  I'm looking for something that I can run on my own code to check for user control. Not a compiler or interpreter. Just a simple script that will check the source code for any

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `totalSupply` is not data dependent on the variable `_token0` in the function `burn`. The variable `_token0` is used to interact with the IERC20 interface to get the balance of tokens, but it does not influence the value of `totalSupply`. The `totalSupply` is used independently to calculate the amounts `amount0` and `amount1` to be burned and transferred, and its value is not modified based on `_token0`. The data dependency would require that the value of `totalSupply` is somehow derived from or affected by `_token0`, which is not the case here.

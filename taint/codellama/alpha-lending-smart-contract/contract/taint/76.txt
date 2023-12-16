@@ -1,0 +1,4 @@
+  
+No, the ` value` variable in `decode I8` function is uncontrolled by user because it's a local variable and it doesn't have any user input.
+
+The ` decode I  ` function takes a `Data` memory as an argument and returns an `int  `. The function uses the` offset` and `raw` fields of the input ` Data` to read the next  bytes from the data stream and convert them into an integer.  The `offset` field is incremented by  to move the pointer to the end of  the read bytes.   The` decode U8 `function is used to convert the bytes into a uint  . The resulting uint is then cast to an int  and returned.

@@ -1,0 +1,5 @@
+  
+No, the ` owner` variable in this function is a contract-level variable that is set to `msg .sender` in its constructor. It is therefore not directly controlled or modified by any user input.
+
+The `onlyOwner` modifer is used to restrict access to certain functions to only the owner of the contract. This modfier checks that the caller of a function has the same address as the current owner. However, this does not mean that ` msg . sender` is directly controlling the value of `  owner`.
+ 

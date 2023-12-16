@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_oGLiq` in the function `targetSwap` is data dependent on the variable `_bal` in the function `getTargetSwapData`. This is because the value of `_oGLiq` is calculated based on the value of `oBals_[i]`, which is assigned the value of `_bal` in the loop of the `getTargetSwapData` function. Therefore, any changes in the value of `_bal` will affect the value of `_oGLiq` in the `targetSwap` function.

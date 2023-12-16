@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `inputBalanceChange` is calculated within the `execute` function as the difference between the initial balance of the input token and the balance after the swap has been performed. This value is influenced by the actions of the user, specifically by the `swapDescription.caller` (which is an address controlled by the user) executing arbitrary code via the `Address.functionCall` method. The user's interaction determines the amount of tokens sent to and from the contract during the swap, thus affecting the `inputBalanceChange`. Therefore, the variable `inputBalanceChange` is controlled by the user.

@@ -1,0 +1,19 @@
+
+The function `isDependent` takes two parameters: a variable name and a contract source code. It uses the solc compiler to parse the contract and look for references to the first parameter in assignments or function calls. If it finds any, it returns true.
+
+For the example contract provided, the output is:
+- oldImplentation in `_acceptImplmentation` is dependent on msg.sennder
+`isDataDependent("oldImpl", "pragma solidity ^0.5.16; contract C { function f(uint a) public { uint b = a; } }")`
+=> true
+ - oldState in `toggleAdminRight` depends on hasAdminRigths
+ ` isDataDepended("state",  "pragm aoid ^ 0.5.1 6 ; contract c { bool state = false; function toggle() public{ state=!state;}}") `
+ => true
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Some of the best places to start are:
+
+   1. Codecademy: This is an excellent resource that offers a hands-

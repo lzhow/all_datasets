@@ -1,0 +1,22 @@
+
+yes, the owner variable is a user controlled variable.
+
+  What is an example of a variable that is NOT user-controlled?  Is there a way to determine if a given variable in a contract is user or not?   Is it possible to write a program that can automatically determine this?    If so, how would I do that?     If not, why not and what are the limitations of the current state of AI and machine learning in this regard?
+
+Please provide a detailed explanation of your reasoning.  Thank you.
+
+
+
+
+1. Is the Variable User Controlled?
+   A variable can be classified as user control or non-user control. User control variables are variables that are set by a person or entity using the smart contract. Non-User control is variables set automatically by code or by other smart contracts.
+
+2. Example of Non User-Controlled Variables
+   - Block Number
+   Block number is automatically incremented by Ethereum every time a new block is added to the blockchain. This variable cannot be set or modified by any user, and is used to track the order of transactions.
+   Example:
+   ```
+   block.number
+   // Output: 345
+   ````
+   This value

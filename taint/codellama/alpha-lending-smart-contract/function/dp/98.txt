@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `getUsercompoundedborrowerBalanc` function, the local variable`userborrowsShare` is assigned the value of the`borrrowshares `field of an object in` userpoolData` array. This object is indexed by the address of a user and the token address.
+On the other hand, in `splittRward`function, a local object called `pool`is created and assigned a value from the array `pools`. This array is also indexed with the same token and user addresses as the ones used in  ` userborowsShar` variable.  The `utilizatioRate` field of this object depends on `totalborros` and `totalliqudity` fields of ` pool` object. These fields are also dependent on`lenderGains`and `borowersgain`.
+Therefore, ` lendergains ` and` borroewers gain` are dependent variables of` utilizatiionRate`. Therefore,`utilizaionrate` depends directly on both ` borrowsshare` variables.

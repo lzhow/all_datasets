@@ -1,0 +1,4 @@
+  
+No, the variables ` cahsPlusborrowsminusReservs` and ` newcomptroll` are independent.
+
+The reason is that the `exchangeRateSoredinternal` function is an internal function that is only called within the same contract. Therefore, it does not have any external dependencies.  The `setcomtroller ` function, on  the other hand, is a public function and can be called by any other contract or external user. It has a dependency on `comptrller` because it is used to set the value of `compotroller`. However, this dependency is not relevant to the analysis of the data dependencies within `exchangerateSotredinternal`.

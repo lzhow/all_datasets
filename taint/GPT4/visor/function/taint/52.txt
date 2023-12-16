@@ -1,0 +1,5 @@
+  
+The variable `hash` in function `toEThSignatureHash` is a parameter of the method, which means that it can be controlled directly by a user of this method. Therefore, the answer is 'Yes'.
+
+In Solidiy, parameters are passed by value, so the value of ` hash` can change during the execution of function. This means the ` toETHSignMessage` function can use the changed value to create a new hash.
+ 

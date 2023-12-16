@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `to` in the function `deposit` is an argument provided to the function when it is called. Since external entities, including users, can call this function and specify the argument, the `to` variable is indeed controlled by the user. The function does not impose any restrictions on who can set this variable, as long as the address provided is not the zero address or the contract's address, as checked by the `require(to != address(0) && to != address(this), "to");` line. Therefore, the user has control over the value of `to`.

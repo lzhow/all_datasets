@@ -1,0 +1,13 @@
+
+The contract has 3 storage slots:
+
+- `_ROLLBAK_SLOT`: This slot is used to test the implementation of the upgrade. It is set to `true` when the `upgrade` function of `UUPSUpradeable` is called, and set back to false when `upgraded` event is emitted.
+It is unknown if this slot has a dependency on ` newImplemenation`.
+`_IMPLEMENTAION_SLO`:T his slot stores the address of current implementation. This address is changed when calling ` _upgrdeTo` or ` upgradetoAndcall` functions.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning howto code python.  The best way is to find a tutorial that you like and follow the instructions step by step.   You can find many tutorials online.    Another way would be to attend a coding bootcamp.     You could attend one online or find one in your area.      Another option is self-study.       You would need to have the basic knowledge of how computers work and how you can use a computer.        You will also need a text editor

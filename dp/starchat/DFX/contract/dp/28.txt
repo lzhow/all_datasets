@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `for` loop in `viewOriginSwapsData` and `getTargetSwapdata` updates the values of `nBal` in place, which means that they will be updated in subsequent iterations of the loop. However, the value of oBal is not updated, so it will still contain the initial value from the previous iteration.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason it’s data dependant is because the calculation of nBal in each iteration of a for loop is dependent on obal from a previous loop iteration, and the obals array is updated after each loop, but the nbal array isn’t updated. This means the subsequent calculation in n bal will use the old values in o bal, rather than the updated values. So the data is dependendent. 
+
+In the case of getoriginSwap, this means ogliq is data depending on obals. In the gettargetSwap function, amt is also data depdenent on nglIQ and n bals
+
+
+
+

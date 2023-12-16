@@ -1,0 +1,11 @@
+
+The variable _before is not used in either function, so it cannot be data-dependent on either of them.
+
+However, the variables _totalsupply and _balance are used, and their values depend on each other. Therefore, it is possible for them to be dependent on one another.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is a Solidty smart contract for a yield farming strategy that allows users to deposit their Ethereum or any ERC-20 token into the contract and earning rewards in return. When a user deposits their funds, a portion of the funds is used to mint new shares of a token representing the user's investment. This token is then used by the users of this smart contracts to withdraw their ethereum or other ERC223 tokens. 
+
+In the deposit function of our smart contact, we first call the strategy's beforeDeposit function. Then, using the safeTransfer function from the ERC 2612 standard, transfer the amount of ether or token the sender has sent to the address of contract. We then call earns function to calculate the rewards for the depositor. After the transfer, calculate how much ether is left in this contract

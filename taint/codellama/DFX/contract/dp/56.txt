@@ -1,0 +1,5 @@
+  
+No, the variables ` symbol_ ` and ` amount ` are independent.
+
+The variable `_symbol` is a private variable in contract `ER2C`, and it is not directly related to any other variable or function in this contract. It is only used to store the symbol of the token.  On the other hand, ` _amount ` is an argument of function `burn` and is used as the amount of tokens to be burned. However, this function does not use the value of `_amount`. Instead, it uses the `balance` of `account` to determine the number of token to burn. Therefore, there is no data dependence between `_ symbol`and `_ amount`.
+ 

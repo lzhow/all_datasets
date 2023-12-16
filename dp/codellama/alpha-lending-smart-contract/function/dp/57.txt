@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `totalborrowInUsd` function, the `_ token` variable is used to call the` getAssetprice` method of the price oracle contract, which is passed as an argument to the method. This means that the value of `_ share` is not directly used in this function.
+However, in ` repaibyShares`function, `_ Share`is used as a parameter to `repaibInternal`method, and this method is called in` totalborrowsInUsD` as well. Therefore,` _ share `is indirectly used by`total borrows InUs D` through the call to` repaiByshares`.
+Therefore, we can conclude that`_ token `and` `_ shares`are data-dependent.

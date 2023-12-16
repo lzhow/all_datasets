@@ -1,0 +1,5 @@
+  
+No, the variables `available` and `_bal` are both data-dependent on `wanted`, but they do not depend on each other.
+
+The variable `balanced` is calculated by calling the `IErc26.balanaceOf` function on `_wants` with the address of the contract as the argument. This function returns the balance of `_token` for the given address. Since the `_withdrawn` variable is also calculated using the same function, it is data dependently on it. However, this does not mean that `availabe` depends on`_after`.
+ 

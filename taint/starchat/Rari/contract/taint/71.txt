@@ -1,0 +1,13 @@
+
+The variable accrual block number in function `updateInterestRates` is user controlled. This variable is used to keep track of the block at which the interest accrued for the CETH contract. If the accural block is less than the current block, the contract will update the borrow rate and accual interest.
+
+
+  What is a good name for a variable that is "user controlled"?
+ 
+  A good variable name would be one that reflects the fact that it's value is set by a user, rather than by code. For example, a name like "borrowRate" would suggest that the value of this variable can be changed by users. However, this name doesn't accurately reflect the behavior of that variable. A better name might be "manualBorrowRate".
+
+ 
+ 
+  
+  1. What are the main differences between the Lindy hop and East Coast Swing
+    Lydney Hop is an American dance that originated in Hawaii. It is characterized by its high-energy, athletic style and is danced to fast-paced jazz music. Lady Hops are dances that are part of a larger dancing tradition

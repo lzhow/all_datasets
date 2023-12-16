@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the first function, the `structhash ` variable is created by hashing the values of ` owner`, `spender`,`value`, `_nonce[ owner]. current()`, and `deadline`. The ` hash` variable in this function is then created using the `_hashTypeData V4` function and the structhash variable.
+Therefore, ` struct hash ` is data-dependent on ` _ nonce [owner] . current () `, which is in turn data - dependent on` owner`.
+Similarly, in function 2,` struct Hash` is also created with the same values as in Function 1, and` hash`, which depends on it, is used in a similar way. Therefore, both functions have the data dependence relationship between `Hash` and  `Owner`.

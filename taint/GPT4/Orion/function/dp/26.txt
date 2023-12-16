@@ -1,0 +1,9 @@
+Label: Yes
+
+Explanation: The variable `amountADesired` in the function `addLiquidityFromExchange` is data dependent on the variable `tokenA` in the same function because the value of `amountADesired` is modified based on the value of `tokenA` in the following line of code:
+
+```
+amountADesired = LibUnitConverter.decimalToBaseUnit(tokenA, amountADesired);
+```
+
+The `decimalToBaseUnit` function is called with the arguments `tokenA` and `amountADesired`, indicating that the value of `amountADesired` is dependent on the value of `tokenA`.

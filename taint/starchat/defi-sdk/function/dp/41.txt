@@ -1,0 +1,13 @@
+
+Yes, `depositEth` and `withdrawEth`, as well as `transferFrom` are functions that modify the balances of the user and the contract. This means that the values of these variables can change after the execution of this function. Therefore, it is possible that `reservesIn`, which is used to calculate `numerator`, is outdated and does not reflect the current state of balances.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure! Let's start with the first function:
+
+`function depositETH(uint amount) internal`
+This function is internal, which means it's only accessible within the smart contract it belongs to. It takes in a parameter `uint` called `value`.
+The next line is: `address wether = _getWether()`
+`_getWther` is a private function that returns the address of an internal variable called `_wether`. This variable is set in another function called the constructor.
+Next, we have:  `IWETH.deposit {value:amount}()`  This function call is to an external contract called IWeTH. IwETH is an interface for a wrapped ether token, and it has a function named `depost

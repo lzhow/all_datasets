@@ -1,0 +1,5 @@
+  
+No, the `_ allowedBy Partitions` variable is a mapping that stores the allowances of the token holders for each partition. It is used to keep track of how much of each token a user is allowed to spend on behalf of another user, and it should not be controlled directly by a single user as it can be used for malicious purposes such as stealing tokens from other users. Therefore, label it as 'No'.
+
+The reason is that the mapping is stored on the blockchain and can only be modified by calling the `approval` function, which requires the address of both the sender and the recipients. This means that only the owner of a token or an authorized operator can modify the value of `_allowancesBypartition`, and any attempt to modify it directly would be detected by smart contracts.
+Additionally, this mapping serves as a security mechanism to prevent unauthorized access to a users' tokens. By storing the allowed amount of tokens for a specific partition, a smart contact can ensure that a malicous user cannot spend more tokens than they are allowed.

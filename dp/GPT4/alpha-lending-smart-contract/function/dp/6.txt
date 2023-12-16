@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `totalLiquidity` in the function `calculateRoundDownLiquidityShareAmount` is calculated within the function itself using the `_token` parameter and the `getTotalLiquidity` function. It does not reference or depend on the variable `_collateral` from the `liquidate` function. The `liquidate` function does not modify or influence the `totalLiquidity` variable, as there is no direct interaction or shared state between these two variables within the given code snippet. Each function operates independently with its own parameters, and there is no code indicating that `_collateral` has any effect on `totalLiquidity`.

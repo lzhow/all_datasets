@@ -1,0 +1,11 @@
+Label: yes
+
+Explanation: The variable `result` in the function `divuu` is data dependent on the variable `lo` in the same function. This can be observed from the following lines of code:
+
+```
+lo = hi << 128;
+if (xl < lo) xh -= 1;
+xl -= lo;
+```
+
+Here, the value of `lo` is assigned to `hi` shifted left by 128 bits. Then, the value of `xl` is compared with `lo`, and if `xl` is less than `lo`, `xh` is decremented by 1. Finally, `lo` is subtracted from `xl`. Thus, the value of `result` is affected by the value of `lo`, indicating a data dependency between the two variables.

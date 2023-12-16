@@ -1,0 +1,5 @@
+  
+No, the `uint b` variable in function `withDraw` is NOT controlled  by user, because it's a local variable that is calculated based on the current balance of the contract and the amount of shares being withdrawn.
+
+The `bal` function returns the total balance in want tokens of this contract, and `wants.balanaceOf` returns  the balance  of want token in this address.  The `sub` method is used to subtract the two values, which gives the number of tokens that are available to be withdrew. This value is then assigned to `r`.
+ 

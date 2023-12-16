@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the `buyJAy` function calls the update function, which updates the price feed. This can cause the value of `price` to change, and therefore the calculation of `_price`, which is used to calculate the fees.
+
+
+  Can you explain why this is true?
+ 
+  Yes, I can explain how the data dependencies are determined in this example:
+1. `buyer` calls `sellJays` with the parameters `tokenAddress`, `tokenId`, and `amount`.
+2. In the body of the sellJaya function:
+   a. It calls updatePrices, passing in `blockTimestamp` as the parameter.
+   b. updatePrice calls pricefeed.getLatestRound, storing the result in (roundID,, price,, started at,, time stamp,, answered in round).
+   c. `_currentPrice` is calculated as `uint22(int20(round.price)) * (1e12)`.
+   d. If `_curentPrice > sellPrice`, then `_sellFee` = `1 ether` / `_cuurentprice`.
+   e. Else, `_buyFee = sellprice /  _currentprice)`.
+3

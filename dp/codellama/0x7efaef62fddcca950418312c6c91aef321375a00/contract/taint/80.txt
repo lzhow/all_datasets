@@ -1,0 +1,4 @@
+  
+No, the ` balance  ` variable in burn function is uncontrolled by user because it's a local variable that is assigned a value based on the current balance of the token in question.
+
+The `burn` function takes in an address `to` as an argument, which is a user-control variable. However, `amount ​​0 ` and ` amount  **1 ** ` are not user controlled variables, they are calculated based the balance and the total supply of tokens. Therefore, these variables are also not under the control of a single user and are considered uncontrollable.

@@ -1,0 +1,3 @@
+The variable `erc1155Amounts` in the function `buyNFTs` is data dependent on the variable `amount` in the function `buyERC1155`. 
+
+Reason: The value of `amount` in the function `buyERC1155` is used to calculate the total number of ERC1155 tokens being bought in the `buyNFTs` function. The `amount` variable is incremented in each iteration of the for loop in the `buyERC1155` function, and the final value of `amount` is returned by the function. This value is then used in the `buyNFTs` function to determine the total number of ERC1155 tokens being bought. Therefore, there is a data dependency between the two variables.

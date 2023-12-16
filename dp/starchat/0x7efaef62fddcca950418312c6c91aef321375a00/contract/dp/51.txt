@@ -1,0 +1,9 @@
+
+The contract has 4 state variables: `reserve`, `blocktimestamplast`, and `pricecumulativelast`. The function `_mintfee` uses the `sqrt` function, which is not a constant-time operation. This means that if the attacker can control the input to the `_update` call, the output of the sqrt function can be influenced by the value of `balance`. This can result in a timing attack, where the time it takes to compute the square root can reveal information about the internal state of a contract.
+
+Additionally, in `_safetransfer`, the call to `token.Call` is also not constant time. If the recipient contract is malicious, it could have an exploit that causes it to revert or spend excessive gas. In this case, if an attacker controls the token address, this could allow them to withdraw more tokens than they have.
+
+
+  I'm not sure I understand the answer. Can you explain it again?
+ 
+  The contract uses a non-constant-timeness function in two places: `_safetransfer` and `_sqrt`. `_SafeTransfer` calls a function on a token contract, but does not check the return value. `_Sqrt` calculates the squarer

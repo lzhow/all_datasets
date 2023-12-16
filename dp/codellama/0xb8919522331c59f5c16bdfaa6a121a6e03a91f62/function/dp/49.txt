@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `funcionCall` function, the data parameter is passed to the internal `functioCallwithValue` method, which is a low-level function that makes a call with value. This function takes three parameters: the target address, a bytes array, and a value in wei.
+  The `bytes` array is used to pass the input data to be executed by the contract. In this case, it is not clear whether the bytes data is dependent on ` target` or not. However, if the value of ` data` is changed, then the call will be made with the new value, so it can be considered as data-dependent. 

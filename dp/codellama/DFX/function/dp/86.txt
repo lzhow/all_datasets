@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `funcitonCall` function, the value of the parameter `address target` is passed as an argument to the internal function call `verifyCallResulFromtTarget`. This function takes the address of a contract as its first argument, and the return value from the contract's `delegateCall()` function as the second argument.
+Since the first parameter of `delegatCall() ` is `bytes` memory, it is possible that the data in ` target ` may be modified by the call to ` delegateCall()`. Therefore, ` data` and ` address` are dependent on each other.

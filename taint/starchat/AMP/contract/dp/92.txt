@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the `_transfer` function in `ERC1155.sol` calls `_callOnERC721Received` with `_from` as the first parameter, which is `_tokenOwner`. `_isApprovedOrOwner` is then called with the same `_owner` parameter and `_spenders` parameters. `_approve` sets `_allowed[_id][owner]` to `_value`, which means that `_allowances[_owner]`, the value of `_id` for `_partition`, is set to the new value `_amount`.
+`_mint` then calls `safeTransferFrom` on `_safeContract` using `_data`, with `operator`, `_approved`, and `tokenId`. This calls the `onERCXXXReceived`, `balanceOf`, etc. functions on `to`.
+
+  What is a partition?
+
+
+
+
+

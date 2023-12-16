@@ -1,0 +1,4 @@
+  
+No, the variables ` pool` and ` numerators` are independent.
+
+The reason is that the ` get AmountIn Curve` function is a view function that only reads the state of the contract and does not modify it. Therefore, it doesnot depend on any state changes made by other functions.  On the other hand, `  get amount out Uv 2` is an internal function, which means it can modify the states of other contracts. However, in this case,  it only depends on its own local variables and parameters, and not on other variables in other function. Hence, there is no data dependence between the two functions and the answer is 'No'.

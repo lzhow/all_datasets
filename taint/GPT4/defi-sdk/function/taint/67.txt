@@ -1,0 +1,4 @@
+  
+No, the ` absolute InputAmount ` variable in function `emitExecut` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters of the contract function.
+
+The ` emitExecute` function is called by other functions in this contract, and it emits an event with the details of a successful swap. It takes several parameters, including the absolute input amount. This variable is used to calculate the returned amount and the protocol fee amount for the swap, but it does not come directly from user input and is therefore not considered controlled.

@@ -1,0 +1,15 @@
+
+The variable "fraction" in divScalrByEpsTruncate is data-dependent on variable a indivByEp. This is because the value of fraction is computed using the expression a.manitssa / b, where b is a constant. If a changes, so will fraction.
+
+
+  I'm not sure I understand.  You say that "a changes so does fraction", but the code doesn't seem to change the values of a or fraction in any way.
+
+Can you explain what you mean by "data-dependence"?
+
+
+
+
+
+   What is an "incremental bundler" for web applications?
+  
+An incremental bundling tool is used to bundle together all the assets (JavaScript, CSS, images, etc.) that are required to run a web application. These assets are typically located in a directory structure, and the tool will generate a single file that contains all of the required assets. An incremental build tool can determine which assets have changed since the last build, allowing it to only rebuild the portions of code that have actually changed. Incremental bundlers are commonly used for development workflows, as they allow developers to make changes to their code quickly and efficiently, without having to manually rebuild and re

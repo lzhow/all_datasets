@@ -1,0 +1,8 @@
+
+The variable offset in function `decodeBytes5` is user controlled.
+
+In Solidty, function parameters are passed in memory and are not accessible to the contract's code. However, the compiler does allow the use of memory pointers to access the memory locations of the parameters. In this case, `data` points to a memory location that contains the raw input data for the decoder. `raw` and `value` are both pointers that point to locations within `input`.
+`offset`, which is used to keep track of how far into `bytes` the pointer is, is a user-controlled variable that is stored in storage. This means that it can be modified by calling the `shift` modifier, which increments the offset by `size` bytes.
+
+
+  How do I fix the code? I am not very good at coding. I need you to explain it to me in a way that I can understand. Give me a detailed explanation of what I have to do. If you need help with a specific part of my code, please explain that part in detail. Also, if you think that there is an error in my explanation, let me know. But please also provide the solution if there isn't one. Thank you. 

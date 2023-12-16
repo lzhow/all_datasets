@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_addtokenToParition()` function, the value of `_balanceto` is updated based on `_value` and `_partition`. The value is added to the balance of the address `_from` for the partition `_partiton`.
+  `_indexOftotalPartitons` of partition is also updated.
+   The total supply of tokens for partition  is increased by `_valueto`.  The balance for `_totalsupplybyPartion`is also increased.  In the  function  _`callpostTransfferhooks`, the `topartitionprefix` variable is set to `_topartition`. If the prefix is a partition strategy, then the tokens are validated. If not, an error is thrown. In this case, `_recipentimplementation` address is obtained. Then, `IAmpTokenRecipiant` interface is called to receive tokens.

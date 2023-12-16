@@ -1,0 +1,4 @@
+  
+The variable token AOr W E T H in add liquidty from exchange is labeled as 'No'. The reason is that the value of token a or W eth is determined by a function call to the Or ionMulti Pool Library. This function returns the address of the token or the Weth address based on the input parameters. Therefore, the output of this function cannot be controlled directly by an external user and is considered uncontrolled.
+
+In general, when analyzing Solidiy code, you should consider all variables and function calls as untrusted and potentially controlled. Only when you can prove that a variable or function output is derived from a trusted source, such as a user input or a constant, can you consider it as controlled and safe to use.

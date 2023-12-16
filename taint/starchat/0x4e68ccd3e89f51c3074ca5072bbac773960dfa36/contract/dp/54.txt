@@ -1,0 +1,14 @@
+
+yes, it is data-dependent.
+
+The reason is that the `getFee` function reads the values of `lower.feesGrowtOutside*` variables, which are updated in `update` and `clear` functions, and the value of the global `feesGrows*` variable is passed to the cross function.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on is because the getFees function is reading the fee growth values from the lower and upper tick info structs, as well as the current global fee values. These values are then passed into the update and clear functions. If the liqidity grows in a tick then the fees grow, so the data is dependent on those values changing. This is why the compiler is giving an error. 
+
+To fix this you could make the variables in getfees function view only, or you can make a copy of them before the call to update or clear. Then you would read the copied values in cross. But this would be more gas consuming. Another option is to make them state variables and update them in update, clear and cross functions
+
+ 
+ 

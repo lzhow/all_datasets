@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `token0` in the function `_swap` is determined locally within the function's scope by calling `OrionMultiPoolLibrary.sortTokens(input, output)`, where `input` and `output` are parameters of the `_swap` function that represent token addresses in a trading pair for a swap operation. The values of `input` and `output` are derived from the `path` array, which is passed to `_swap` as an argument and is not directly related to the `addLiquidityFromExchange` function.
+
+On the other hand, the variable `tokenAOrWETH` in the function `addLiquidityFromExchange` is a local variable within that function's scope and is used to handle the case where the zero address is used to represent WETH in liquidity operations. The value of `tokenAOrWETH` is determined by checking if `tokenA` is the zero address and assigning `WETH` to it if that is the case.
+
+Since `token0` in `_swap` and `tokenAOrWETH` in `addLiquidityFromExchange` are determined independently within their respective functions and do not share state or influence each other's values, they are not data dependent.

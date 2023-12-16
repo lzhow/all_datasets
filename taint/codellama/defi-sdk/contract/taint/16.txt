@@ -1,0 +1,4 @@
+  
+No, the ` baseProtocalFfee` variable in function `validateProtocolfeesignature` is NOT controlled  by user because it's a local variable and it can't be modified by any external user or function.
+
+The ` validateProtcolFefeeSignture` function is a view function, which means that it doesn' t modify the state of the contract, and therefore, any local variables declared in this function are not modifiable by external users or functions. 

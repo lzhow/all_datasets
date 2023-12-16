@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `_name_` and `_swapAddress_` variables are used in both the constructor and the `tokensPreToTransfers` function. However, the compiler does not know this, so it assumes that they do not have any data dependencies.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason why the variables `_names_`and `_SwapAddress` are considered data dependendent in this context is because they have been used to initialize other variables in other functions. In the case of the _names_ variable, this is done in line 10, where the value of `_Name` is set to the input parameter `_Names`. In line12, `_totalsupply`is initialized with the result of a function call to `_getSwapTokenTotalSupply`. This function is called in a separate function, `getswaptokentotalsuply`, which is also called on line21. This means that `_Totalsupply`, `_Partition`, and `senderimplementation` all depend on `_Swaptotalsupply`.
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple things

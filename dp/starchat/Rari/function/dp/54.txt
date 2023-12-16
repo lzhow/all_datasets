@@ -1,0 +1,11 @@
+
+The variable numMarket in function _liquidateBorrowsAllowed is data-dependent on variable ctokenBorrow in that function. This is because the value of numMakets is determined by the number of markets in ctokens array. If the ctockens array is changed, then the nummarkts value will also change.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain it.
+
+In the first function, the `liquidator` variable is assigned a value, but it is not used in any way. In the second function `marktes[ctokenBorrow].listed` and `!markes[ctoknCollater].listd` are used to check if the market is listed. These variables are set in a separate function called `_addMarket`, which is called when a new market gets added to the system. 
+
+If the two conditions are met, we then check the borrow balance of the user. `borrowbalance` is a variable that stores the amount of money that the specific user has borrowed from the given c token. We then use the isDeprecated function to see if this c-token is deprecated or not.  If it's deprecated

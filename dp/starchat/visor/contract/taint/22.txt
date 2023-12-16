@@ -1,0 +1,18 @@
+
+The variable newowner is a parameter of the transferownership function. It is passed in by a user who is calling thefunction, and therefore it can be considered controlledby theuser.
+
+
+  Can you give me a list of all the variables in that contract and label them as either "user controlled" or "not user controlled"?
+ 
+  Yes, here is an updated list with user-controlled and non-user-controllable variables:
+
+User-Controlled Variables:
+
+1. owner: The address of owner of this contract.
+2. _balances: Mapping of token addresses to balances. This mapping is used to keep track of how many tokens each address has.
+
+
+Non-User Controlled: 
+
+1._allowances: A mapping of addresses that are approved to spend a certain amount of tokens on behalf of another address. 
+2._totalSupply: Total supply of NFTs. 3.tokenByIndex: An array that maps token IDs to their index in allTokens.4. tokenOfOwnerByIndex : An  array of  all tokenIds owned by an address, with each tokenId being unique and mapped to its index.5.allTokens: Array of unique tokenIDs. Each tokenID is

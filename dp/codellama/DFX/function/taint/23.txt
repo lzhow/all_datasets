@@ -1,0 +1,4 @@
+  
+No, the `_lenght` variable in function `proportionWithDraw` is NOT controlled  by user because it's a local variable that is defined in a function and it can't be modified by any external user, only by internal code.
+
+The `_ length` value is calculated based on the `curv.asset.lenth` which is a public variable of the contract and can be accessed by anyone. However, this value can not be changed by an external caller, as the only way to modify it would be to call the internal function `_updateLength` and this function is only called by other internal functions of this contract. Therefore, `_ lenght ` is considered as a constant value that can only be read by external users.

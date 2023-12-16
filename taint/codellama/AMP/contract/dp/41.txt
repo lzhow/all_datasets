@@ -1,0 +1,4 @@
+  
+No, the ` total Supply By Partitions` contract is not dependent on `_ from` variable in ` swap` function.
+
+The ` _ total supply` state is a contract-level state that keeps track of the total amount of tokens in existence. It is updated by the `_m int` and `_burn` functions, which are called when tokens are minted or burned. Therefore, it is independent of any specific token holder or partition.  On the other hand, `_bal anceOf` is an account-specific state, and it depends on both the token balance of a specific account and the partition that the account belongs to. In the case of `trans fer`, the balance is only updated for the default partition, so it does not depend on any other variable. Similarly, `allow an ceBy Partit ion` depends only on `default Part ition` because it only keeps the allowances for that partition and not for any others.

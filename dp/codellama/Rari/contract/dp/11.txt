@@ -1,0 +1,4 @@
+  
+No, the `CompMarkedState compborrrowstate` contract is data-dependent on `Borrrowindex` variable in `SetCompborrowspeedInternal` function.
+
+The `updateCompbBorkIndex()` function is called in this function, which updates the comp borrow index for the given ctoken. This function uses the current comp borrwo index and the delta blocks to calculate the new comp index. If the borrw index is zero, it means that the c token is newly added to comp, and it sets the initial comp indexto  compinitialindex and updates it.  The `checkCTOKEN()`function is also called,which checks if the Ctoken is listed in comp and if distributer is added. Finally, if currentcomp speed is different from compspeed,it sets compborkspeed to compspeeds and emits a comp bork speed updated event.

@@ -1,0 +1,5 @@
+  
+No, the ` owner_ ` variable in this function is NOT controlled  by  the  user .
+
+The `  owner _ ` is a private variable that is declared in  line 10 of the code. It is used to store the address of  a  contract's owner.
+This variable is set in line  13 of code, where the owner is assigned the value of ` msg . sender `, which is an address that represents the account that deployed the contract.  The owner variable can only be changed by a call to the setOwner function, and the only way to call this  function  is by using the msg sender address. Therefore,  it  can  be  considered  as  controlled   by   the   user  .

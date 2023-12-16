@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `buyerER711` function, the `_tokenAdress` array is passed as an argument. This array contains the addresses of the ERC-77 tokens that are being bought. These addresses are used to call the` safeTranserFrom` method of each token contract.  The `safeTranferfrom`method is defined in a separate contract, which is not known in advance. Therefore, it is impossible to determine whether the address of this contract is data-dependent on `_price` or not.

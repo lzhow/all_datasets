@@ -1,0 +1,17 @@
+
+The variable admin is a contract administrator, and its value is set to the address of the contract's deployer. This means that the value of admin can be modified by calling the _admin() function, which is only callable by a privileged account (such as the owner of this contract).
+
+In this case, the admin variable is used to control access to critical functions, such as _withdrawFees() and _supportMarket(). These functions allow the administrator to withdraw fees and support new markets, respectively.
+\
+Therefore, while the initial value may be set by an external account, its subsequent value can only be changed by calls to _ admin().
+
+
+  How can I protect my contract from being hacked? I am using Solidty and have deployed my smart contract on the Ethereum blockchain.
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How about Webpack? Etc. etc. 
+
+An incremental bundling tool is designed to optimize the performance of web application development by reducing the number of requests made to a server during the build process. It does this by bundl

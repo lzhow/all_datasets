@@ -1,0 +1,4 @@
+  
+No, the `Strategy` contract is data-independent of the local variable `_shards` because it is a separate contract that is defined outside of this function.
+
+The `withdrawable` function of `Strateg` is called within the deposited function, which is responsible for transferring the funds to this contract. However, this does not affect the data of `_strategies` as it only affects the balance of funds in this smart contract, not its data.

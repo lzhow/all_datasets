@@ -1,0 +1,12 @@
+
+The function signature is:
+
+`function approve( address _spend, uint _value ) public returns ( bool success )`
+This function sets the allowances of the token owner, that is, the address that created the contract, to another address, `_spending`, to a value of `_value`.
+If the `_allowances[msg.sender][_spends]` is less than `_vlaue`, then the transaction will revert.
+Otherwise, it sets `_allowed[sender] = _allowed[_sender].sub(_value)` and emits the Approval event.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `token` and `this` are dependent on each other. Can you explain why?
+ 
+  The function is trying to ensure that `newAllownace` is always less or equal to the current allownance of `msgSender` to `sender`. The `sub` function throws an error if the result is negative. This means that if `allownaces[token][sender]` and `_val` were equal, ` newAlloawnce` would be 0, which would cause the `approve` call to revert, as it

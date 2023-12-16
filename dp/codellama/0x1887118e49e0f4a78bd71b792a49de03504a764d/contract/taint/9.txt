@@ -1,0 +1,4 @@
+  
+No, the `` variable in function ``getunderlingPrice`` is NOT controlled  by user because it's a function parameter.
+
+The function signature is ``function getunderlinPrice (CTokken ctoken)external view return (unit)`` and the parameter ``CTOKEN``  is a contract interface.  The function does not modify the state of the contract, and it doesnot have any external effects. Therefore, this variable is considered to be controlledby the system.

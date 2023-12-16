@@ -1,0 +1,3 @@
+The variable `amt_` in the function `intakeRaw` is not data dependent on the variable `_amt` in the function `transferFee`. 
+
+Reason: The variable `amt_` in the function `intakeRaw` is assigned the value returned by the `delegate` function, which is the result of calling the `iAsmltr.intakeRaw` function with the `_amt` parameter. However, there is no direct data dependency between the variable `amt_` and the variable `_amt` in the `transferFee` function. The `intakeRaw` function encodes the `_amt` value into the `data` variable, but it is not used or accessed in any way that would create a data dependency between the two variables. Therefore, the label is 'no'.

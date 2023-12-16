@@ -1,0 +1,14 @@
+
+The contract is a library contract, and as such, it is not meant to be deployed as a standalone contract. However, I can still provide you with an analysis of the code.
+
+In the `MockLenderPool` contract:
+- The `pools` mapping is used to store data about each pool, including the total borrows and borrow shares, as well as the ALToken contract address and the last update timestamp. This mapping can be updated by calling the`setPools` function, which takes an ERC-223 token address, the new total borrow amount,and the updated borrow share amount.  The function also updates the timestamp to the current block timestamp, indicating that the data has been updated.
+
+
+  Can you explain how the borrower's collateral is calculated?
+ 
+  The borrowers collaterals are calculated by the formula:
+  ```
+  coll = (total borrrowed amount * borrowed shares) / total shares
+  ````
+  This means that each user has a certain amount of collated assets that they can borrow. For example, if a user borroews 100 ALUSD and has 2% of total ALUSDBORROWED shares then they have 

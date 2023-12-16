@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the first function, the `includeAsset` function is called, which takes in 6 parameters: `curve`, `asset`, `_assets`,`_assets1`,  `_asset2`, and `_weight`. The `assets` parameter is an array of addresses, and the `_weights` array is also an address array.
+  The function pushes the address of the asset to the numeraries, derivatives, reservers, assets, _ assets1,  and _ asset2 arrays.  It also push the weight of each asset.   The weight is calculated by the formula: `_ assetWeighs[ i ]`.
+   In the second function the same function call is made, but the assets and weights are passed as caldata. This means that the values of assets are copied to memory and are no longer references to storage. Therefore, in this case, ` numeraire` and ` derivatives` are independent of ` assets`. 

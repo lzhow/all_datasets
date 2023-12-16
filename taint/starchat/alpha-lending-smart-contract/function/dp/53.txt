@@ -1,0 +1,17 @@
+
+The function updateBorowAlphaRewards has a loop that iterates over all the pools and updates the totalAlphaTokensReward and the alphaMultiplier for each pool.
+
+In the first iteration, the value of _totalBoroowShares is 100, and _alphaReward is set to 50. In the second iteration the _toalBorrowShres is now 230 and alphaReward becomes 60 (55 + 4).
+This continues until the end of the loop, when the final value for _borrowShares will be 340
+Now, we have:
+totalAlphatokensReward: 90 + (115 * 8) +... + ((335 - 7) * (326 -7)) =  (9 * ((18 * n) - (n^2)))/2
+alphaMultipler: (2 * totalAlhpaTokens) / totalBorrowshares = (4 *16384)/367
+
+
+  Can you explain how the code works?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being

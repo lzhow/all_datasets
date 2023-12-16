@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `_quoteWeight` in the function `viewProportionalDeposit` is not controlled by the user. It is assigned the value of `curve.weights[1].mulu(1e18)`, which is a constant value derived from the `curve` storage variable. The user does not have any control over this value.

@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `deposits_` in the function `proportionalDeposit` is data dependent on the variable `_baseWeight` in the function `getGrossLiquidityAndBalancesForDeposit`. This is because the value of `_baseWeight` is used as an argument in the function `Assimilators.intakeNumeraireLPRatio`, which is assigned to the elements of the `deposits_` array. Therefore, any change in the value of `_baseWeight` will affect the values stored in the `deposits_` array, indicating a data dependency relationship.

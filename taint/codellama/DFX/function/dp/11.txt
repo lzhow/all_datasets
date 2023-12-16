@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the ` calculate MicroFlee` function, the `_ideall` variable is used to calculate the threshold value. This value is then used in an if-else statement to determine the value of the fee. In the other hand, in `Calculate Liquidty Membran`e function the _`nGli`q variable` is also used for calculating the`_omega` value, which is later used as a parameter for the calculate micro fee function. Therefore, indirectly, `_ threshold` depends on `_ nGl`i`Q`.
+However, it is important to note that the data flows are indirect and not direct.

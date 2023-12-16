@@ -1,0 +1,15 @@
+
+The function `_update` is called by the `sync` function in `PangakeSwapPair.sol`. The `update()` function updates the reserves and the cumulative prices of the two tokens in PangakSwap.
+
+In the `_sync()` method, the current block timestamp is retrieved and stored in a variable called `blockTimestamp`. Then, a time elapsed variable is calculated by subtracting the stored block time from the retrieved blocktime. This variable represents the time in seconds that have passed since the last time the price was updated. If the elapsed time is greater than 1 second, then the prices are updated using the formula:
+`price_cumulative_last += (reserve_1 * (block_time - last_blocktime)) / (reserves_0 * 360)`
+This formula calculates the change in price over the duration of time that has passed.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Here are some suggestions:
+
+   1: Codecademy: This is an interactive website that offers a series of courses on Python programming. It has a gamified approach, and it's

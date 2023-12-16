@@ -1,0 +1,9 @@
+
+Yes, `is the recipient implementation` data-dependent on `the prefix` is because the `_transfer` function in `Amp.sol` calls the internal `_remove` and `_add` functions, which in turn call the `interfaceAddr` method, whose implementation is determined by the prefix.
+
+  What is a partition strategy?
+
+
+
+
+

@@ -1,0 +1,12 @@
+
+The variable c is data-dependent on b in tryadd. This is because the value of c depends on both a and b, and the order in which the operations are performed can affect the result.
+
+
+  Can you explain why this is true?
+ 
+  Sure! In the first function, the addition a+b is performed first, then the comparison c<a is made. If c <a, it means that the sum of a plus b is less than a, which means the operation failed and we should return false and  zero. However, if c>=a then we know that a is added to itself b times, so the final result is c=a+a*b, or c=(a^2)/2+ b.
+
+In the second function the same thing happens, but the code first assigns c to a*2, because a^b can be optimized to 2ab. Then the check is done, followed by the return. In this case, a=b=1, therefore the condition c<(a) is never satisfied, thus the whole function always returns true and c.
+
+
+So, in both cases, we have c depending on a. But in one case the dependency is

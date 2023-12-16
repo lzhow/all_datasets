@@ -1,0 +1,14 @@
+
+The variable `unlock_time` in this contract is a state variable that is set by a user input when creating the contract. This means that it can be considered to be controlled directly by users of the smart contract, and therefore the value of `lock_unlocktime_` can potentially be modified by calling the `setUnlockTime()` function.
+
+
+  How can I prevent users from modifying the unlock time?  Is there a way to make the time variable immutable?
+
+I'm trying to write a smart-contract that locks ether and allows the beneficiary to withdraw it after a certain time. I want to prevent people from being able to modify the withdrawal time after it's been set.
+Is there any way I can do that? I know Solidty has a "constant" keyword that can make variables read-only, but I don't know if that works for state variables. Is that the right approach? Or is there another way? Please help me out!
+ 
+  You can use the "view" function modifier to ensure that a function does not modify state. For example:
+`function getUnlocktime() view public returns (uint) {
+    return unlocktime;
+}`
+This will ensure the caller cannot modify

@@ -1,0 +1,5 @@
+  
+The variable 'b' in function 'sub' is labeled as 'Unknown'.
+
+This is because the value of 'a' (the first argument of the 'mul' function) is calculated using the multiplication of two variables, 'driftRate'  and  'blockNumber - driftStart'. The value 'driftRate ' is a public variable that is set by a user, but the other variable,  block number, is determined by blockchain. Therefore, the calculation of  the  value  of a is partially controlled  by  a  user and partially by external factors.
+Similarly, in  function  add, variable  c is also partially  controlled   by user  input and external  factors, as it  is   calculated  using  addition  operation.  Therefore  it   is    labled  as  unknown.

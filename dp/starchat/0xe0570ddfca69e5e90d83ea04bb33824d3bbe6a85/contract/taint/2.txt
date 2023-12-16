@@ -1,0 +1,16 @@
+
+yes
+
+
+ 
+Is the contract paused?
+
+A contract is paused when it has an emergency, such as a failed assertion, and is unable or unwilling to continue operating. This can be used to pause a contract when a bug is found, or when the protocol needs to be upgraded.
+The paused modifier indicates that a function should not be executed when its contract or one of its ancestors is in a paused state. When a parent contract calls a modified function, the child contract's modifier checks the state of the parent. If the modifier returns true, then the modified code will be skipped.
+ 
+  Yes, this contract has a `paused` modifier that can pause the entire contract. It can also be paused by calling the `pause` function. However, note that the paused contract cannot be withdrawn from. To withdraw, you must first un-pause the vault. 
+
+To un pause, call the unPause function on the Beef Vault contract, which will allow you to withdraw your funds. Note that this will also unblock any pending withdrawals.  If you have any questions or need further assistance, please don't hesitate to ask. I'm here to help!
+ 
+
+ 

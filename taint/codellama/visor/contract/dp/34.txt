@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `while` loop of the findLowerBound function, the value of `low` is updated based on `mid`, which is calculated using the average function from the Math library. This means that the calculation of mid depends on both `a` and `b`, and therefore, `averge` function is data-dependent on variables ` a`and ` b`.
+Similarly, in `if` statement, we have `element` which depends ` array` as it is passed as an argument.
+Therefore, both variables are dependent on each other.

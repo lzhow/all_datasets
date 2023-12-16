@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The function `calculateLinearInterestExternal` is marked as `pure`, which means it does not read from or modify the state of the contract. The variables `_rate` and `_toTimestamp` are both parameters of the function and are independent of each other within the scope of this function. There is no operation in the function body (which is not shown in the provided code) that would create a data dependency between `_rate` and `_toTimestamp`. Therefore, they are not data dependent.

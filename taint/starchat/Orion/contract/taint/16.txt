@@ -1,0 +1,9 @@
+
+The variable amountMin is a minimum amount of token B that should be received, and it can be controlled indirectly by a user if they have control over the amount they are willing to spend.
+
+In the addliquidity function, the code checks if there is an existing pair for the two tokens. If there isn't, then it creates a new pair using the createPair function in Iorionpoolv2factory.sol. Then, getReservse is called to get the reserves for token A and token b. 
+
+If the reserve for either token is  zero, meaning there are no existing liqudity in that token, we set the desired amount for that variable. We then check if amount B optimal is less than or equal to the B desired.  If it's less, that means that the optimal amount is lower than the minimum desired, so we revert the transaction. Else, if it isn’t less or greater, this means the opposite. That means we can get a higher amount out of the pool than we put in, which means our optimal A amount should also be higher than our minimum A desired and we should revert.
+
+
+  Can you explain how the contract owner can control the value of amount

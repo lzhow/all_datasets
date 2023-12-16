@@ -1,0 +1,8 @@
+
+The variable protocol fee is a fee that is paid by users to the protocol to cover the costs of executing the swap. In this case, the fee can be paid in any token that the users have approved the router to spend on their behalf.
+
+In this specific case the contract is using the signature verifier to verify the signatures of the accounts that are making the swaps. This means that in order to execute the transaction, a user needs to provide a signature that proves that they have access to these accounts. However, in this particular case it does not matter who is making these signatures because the code does the verification based on the input parameters. Therefore, we can say that this variable is "controlled by" the smart contract, but not "directly controlled" by a specific user, since the value is determined by code that does no require a direct user input to determine.
+
+
+  How can I prevent the owner of this contract from being able to change the fees? I want to make sure that only the governance contract can change them. I know that I can use modifiers to restrict access, however, I don't know how to do that for this one variable. Can you give me an example of how I could do this?
+Also

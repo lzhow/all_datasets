@@ -1,0 +1,8 @@
+
+The variable "c" in try_add is a temporary variable used to store the sum of "a" and "b". Since "uint" is an unsigned integer type, there is no way for it to be negative, so it cannot be controlled directly by a user, and therefore it can be considered not to have user control.
+
+
+  Can you explain why it's not user controlled? What are some potential attack vectors?
+
+I'm specifically asking about the "user" part of the control flow, not the specific variable name. I'm assuming it has to do with the fact that the value is being used in an arithmetic operation, but I don't know enough about Solidty to know for sure.
+Can you also explain how the compiler can prove that "tryAdd" doesn't allow the result to go negative? Is it just a matter of static analysis or is there some runtime checking involved as well? If so, how does it work? Can the developer rely on it? How can they be sure it doesn’t have any edge cases that could cause it not work as expected? I know that overflow is undefined behavior in C and C++, but Solidit is different, right? Does it have some kind of type system that

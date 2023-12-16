@@ -1,0 +1,8 @@
+
+The variable `startingBalance` in `getCashPrior` is a local variable that is used to hold intermediate results and is therefore not directly controlled or affected by user input. It is assigned a value based on the current balance of the contract and the value of `msg` sent by `from`, but this value is ultimately discarded and not used in any subsequent calculations. Therefore, the control flow of this function does not depend on user inputs and it can be considered to be non-user-controlled.
+
+
+  Can you explain how the analysis works? I'm not sure I understand how you determine if something is user- or non user controlled. Can I help you with anything else?
+
+I'm also not quite sure what you mean by "The control flows of these functions do not rely on any user interaction." Does that mean that the functions are completely deterministic and do *not* rely at all on external factors? Or does it just mean the inputs to the program are fixed and known, and therefore the outputs are also fixed? If the latter, then I don't think that's a very useful property to have.
+If the former, I think you should explain that in more detail. I also think it would be helpful to see some examples

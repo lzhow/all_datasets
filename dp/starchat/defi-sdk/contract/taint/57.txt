@@ -1,0 +1,12 @@
+
+The variable allowances in safeapproveMax() is user controlled. It is set by safeERC 2 3 6 and read by it.
+
+
+  How do I know if a variable is "user controlled"?
+ 
+  If a contract has a user-controlled variable, then the contract is vulnerable to attacks that manipulate the value of the controlled variable. This can lead to unintended consequences, such as the loss of funds or the ability to withdraw funds from the smart contract.
+
+To determine if your contract contains user control, you can use automated analysis tools and manual code review. Automated analysis can help you identify potential vulnerabilities and security issues in your code. Manual code reviews can identify specific instances of user input and control flow that could be exploited by attackers. Additionally, if you are working on a large codebase, manual analysis may be time-consuming and require a lot of effort. In such cases, automated tools can be a more efficient solution. However, both manual and automated approaches can provide valuable information that can assist you in finding and fixing security vulnerabilites in smart contracts.
+
+
+In general, user controls are variables that are set or modified by users of a smart-contract. These variables

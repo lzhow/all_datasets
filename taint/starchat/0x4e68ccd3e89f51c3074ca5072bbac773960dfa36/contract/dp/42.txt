@@ -1,0 +1,13 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `self[lower].feeGrownOutside` can change between the two lines of code:
+- `uint feeGrowsBelow = getLower().feeGrouthOutside - getGlobal().feesGrowtOutside[0];`
+This line of the code assigns the difference between `lower.feesGronthOutSide` and `global.feegrowthoutside[1]` to `feGrowthsBelow`.
+However, the next line:  `info = se[upper];`, assigns `upper` to the memory location of info, which is now the same as `lowwer`. Therefore, when we compute `feesgrownAbove`, the values of both `se[lowew].feesgrowthoutside`and ` se.upper. feesgrowthoutsize` will be used, and the result will depend on which one is accessed last.
+
+  What is a good explanation of how the data dependence works in this case?
+
+
+
+

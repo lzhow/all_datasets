@@ -1,0 +1,9 @@
+
+The variable inputBalanaceChange is a return value from the execute function. It represents the change in token balance of the input token before and after the swap. Since it's a returned value, the value is determined by code execution and is therefore controlled indirectly by user input to the smart contract.
+
+
+  How can I prevent this? I need to know this so I can write a secure smart contracts
+ 
+  You can use modifiers to check if a user is authorized to call the contract and only allow them to execute the code if they are. This will prevent the unauthorized user from changing the state of your contract, which could lead to unintended consequences. Additionally, you can add checks to ensure that the values of input and output are valid before executing the actual swap, and throw an error if any of them are not valid. Finally, if you are concerned about reentrance attacks, modifiers can also be used to prevent recursive calls. These measures can help prevent vulnerabilities such as re-entrances and ensure the safety of users and the contracts.
+
+Overall, preventing vulnerable smart-contracts is an important part of writing secure code. By following best practices and adding additional measures to your contracts, developers can make

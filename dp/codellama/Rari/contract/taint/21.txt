@@ -1,0 +1,5 @@
+  
+No, the ` compcontributorspeeds ` variable in this function is NOT controlled  by  the  user . The ` admin `  variable is set to ` msg . sender ` , which is a public address that can be set by anyone. Therefore, anyone can call the `_setcontributorgcomp speed` function and change the value of ` contributors ` .
+
+The ` _ setcontributercomp ` speed ` function  is only accessible to  ` admins `, which means that only the admin of the contract can change this value. However, this does not mean that the contributer's comp speeds are completely secure. Anyone can still call this  function to change their comp  speed, even if they are not the admn.
+ 

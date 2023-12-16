@@ -1,0 +1,9 @@
+
+The variable reserve is a state variable in Pangake Pair contract. It is used to store the reserve balance of the two tokens in a Pangoke pair. Since it's a contract internal state, the value of reserve can be modified by calling the swap function of Pangaake contract, which can lead to unintended consequences. Hence, we can say that the state of variable "reserve" is "controlled by user".
+
+
+  How can I prevent this? I want to use my tool to find all the places where user input is required.
+ 
+  You can use static analysis tools to identify all user inputs in your smart contract and ensure that they are validated and sanitized before being used in any critical functions. This can help you identify potential vulnerabilities and prevent malicious users from exploiting them. Additionally, you can also use dynamic analysis techniques to monitor the execution of your contract to detect any unauthorized or malignant behavior. These techniques can provide you with valuable insights into the behavior of users and potential security risks.
+
+In general, preventing user-controlled inputs is an important aspect of developing secure smart contracts. By following best practices and using tools like Mythril, Slither, and Echid

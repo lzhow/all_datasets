@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `setPool` function, the value of the state variable `pool` is set to the address of `_altoken`.
+Then, in `giveAlphatoAltoken`, the approval is given to `altokens` to receive `_amount` of `alpha` tokens.
+Finally, `splittRwardExternal` calls `spliRwards` which uses the pool's `totalborrows` and `totaborrowshares` variables. 

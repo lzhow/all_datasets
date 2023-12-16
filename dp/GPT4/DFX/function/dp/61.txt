@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_quoteAssimilator` in the function `newCurve` is data dependent on the variable `_baseAssimilator` in the same function because both variables are assigned the same value in the same order. Specifically, `_assets[6] = _quoteAssimilator;` and `_assets[3] = _baseAssimilator;` assign the values of `_quoteAssimilator` and `_baseAssimilator` respectively to the same array index. Therefore, there is a data dependency between these two variables.

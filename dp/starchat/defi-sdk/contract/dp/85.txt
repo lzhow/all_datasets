@@ -1,0 +1,14 @@
+
+The contract has 2 state variables: `_entered` and `_exited`. The function `_execute` has a local variable called `returnedOutput`.
+
+`_enter` is set to true in `_beforeTokenTransfer` when the `msgSender` equals the `_account` address.
+`returnedInput` (which is returned by the called function) is assigned to `input.balance`
+If `swapDescription` contains a `yearnVault` then `permit` will be checked. If `amount` > 100 ether, then the permit will not be used. This is because the yearn vault does not support permits for amounts over 99 ether.
+
+
+  Can you explain how the data dependencies are determined?
+ 
+  Data dependencies in smart contracts are defined by whether or not a change in one variable can affect the value of another variable. In the case of the code you provided, it is not clear what the relationship is between the variables `state` or `variable`.
+
+ 
+ 

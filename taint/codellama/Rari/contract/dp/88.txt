@@ -1,0 +1,5 @@
+  
+No, the ` delta Blocks ` variable in function  `updateComp Supply Index` is data-dependent on variable  'c Token' in  function ' claim R rewards'.
+
+The reason is that the  variable 'delta Block s' is calculated using the current block number and the last block in which the supply index was updated for the given c Token. This means that if the c token changes, then the delta blocks will also change, and therefore the data dependence relationship between the two.
+On the other hand, in ` claim re wards` function, ` c Tokens` variable is used to iterate over all the tokens in an array, but it does not affect the calculation of `Delta Block` s. Therefore, there is no data dependance relationship  between ` Delta Block ` s and ` C Tok en`s.

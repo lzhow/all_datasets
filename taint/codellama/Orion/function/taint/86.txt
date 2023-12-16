@@ -1,0 +1,4 @@
+  
+The label is 'No'.
+
+In the `safeDecreasAllowence` function, the value of ` newAllownce` is calculated by subtracting `value` from the current allowence of the token held by `spender`. The current allownence is obtained by calling the ER2C token's `allowence()` function with the address of this contract and the spending address as arguments. This function is called by this smart contract, so the allwnce is determined by its own state. Therefore, `NewAllwncce ` is a variable controlled  by  the contract.

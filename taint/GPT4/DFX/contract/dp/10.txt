@@ -1,0 +1,7 @@
+The variable `fee1` in the function `flash` is data dependent on the variable `fee` in the same function. This is because the value of `fee1` is calculated using the value of `fee` in the following line of code:
+
+```
+uint256 fee1 = FullMath.mulDivRoundingUp(amount1, fee, 1e18);
+```
+
+The value of `fee` is used as a parameter in the `mulDivRoundingUp` function to calculate the value of `fee1`. Therefore, there is a data dependency between the two variables.

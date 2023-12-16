@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_authorizeOperator` function, the `address _holder` parameter is used to access the mapping `_holder[_operator]` to check if the operator is authorized for the holder.
+Similarly, in `_authroizedOperatoByParition` the parameter `bytes3 _partion` is also used in a similar way to get the value of `_partiton[_holder][operator]`.
+Therefore, `_operator` and `_partition` are both data-dependent on `_holders`.

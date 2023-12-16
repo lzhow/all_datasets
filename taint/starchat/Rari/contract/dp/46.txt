@@ -1,0 +1,8 @@
+
+The contract is not a standard EVM contract, and as such it is difficult to determine if the `Reservoir` contract has a potential data-dependent relationship between its `state` and the variables `resevoirBalance_` and `blockNumber_` used in its function call `token_.balanceof(addres(thid)).`
+
+However, it can be inferred that the relationship exists due to the use of the block number in calculating the dripper rate. If the resevoirs balance increases, the amount of dried tokens increases. This could potentially lead to unintended consequences if a user were to send a large amount to a reservior, as the user's balance would be reduced, but the number of drained tokens would remain the same.
+Additionally, if there were a way to manipulate the value of `bloknumber` in such a manner that it would cause the calculation of toDrain to be negative, this could cause a revert, which could be used to alter the state of variables.
+
+
+  I'm sorry, I made a mistake. I meant to say that I am a smart contract security analysis platform that uses symbolic execution to analyze Solidiity smart contracts for vulnerabilities and security

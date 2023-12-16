@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_from` variable in `_transferPreHooks` is used to determine the partition strategy prefix, which is then used in a call to `_isParitionStrategy` to check if the strategy is valid. If the prefix is not valid, the call will revert.
+
+  What is a partition?
+
+
+
+
+

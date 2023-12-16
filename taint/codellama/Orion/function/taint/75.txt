@@ -1,0 +1,8 @@
+  
+No, the `` variable in getAmoutInCuve is NOT controlled  by user because it's a local variable that is calculated based on the input parameters of the get AmountIn function.
+
+The get amount in curve function takes in three parameters: factory address,from address and to address. It then calculates the amount of tokens that can be bought with the given amount and the current reserves of both tokens. This calculation is done using the formula:
+``
+(x - getY( j , i , x , getXp( factory , pool ) , A ) ) / getA ( pool );
+``.
+Here, ``x`` is a variable calculated using ``getXP`` function, which is also a function that takes the factory and pool addresses as input and returns the x value. ``A``is the amplifier value, and ``i`` and``j`` are the indices of two tokens in a pool.  The `` get Y``function calculcates y value based  on x and other parameters. Therefore, this variable is dependent on user input, but it does not directly depend on any user-controlled variable.

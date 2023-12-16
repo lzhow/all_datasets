@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `tickUpper` in the function `_updatePosition` is data dependent on the variable `tickUpper` in the function `burn` because `tickUpper` is passed as an argument from `burn` to `_updatePosition` through the call to `_modifyPosition` (which is not shown in the provided code but can be inferred from the context). The `burn` function constructs a `ModifyPositionParams` struct with `tickUpper` as one of its fields and then calls `_modifyPosition`, which eventually calls `_updatePosition`, passing along the `tickUpper` value. This establishes a direct data flow from `burn` to `_updatePosition`, making the two `tickUpper` variables data dependent.

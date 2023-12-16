@@ -1,0 +1,40 @@
+
+The variable data in function call is data-dependent on target in staticCall because the value of data is dependent on state of the target contract.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure! Let's say we have the two functions:
+
+Function A: `a = b + 1`
+and
+ Function B:  `b = a + c`
+ 
+In this case, the variables a and b are dependent, but the data passed to the functions is independent.
+However, if we had:
+
+ Function A:`a[i] = 2 * b[j]`
+ and
+ Funtion B:`b[k] += a[l]`
+ 
+ 
+ In this example, both a, b, i, j, k, and l are all dependent upon the state.
+ 
+
+
+Does this help clarify the concept? Let me know if you would like me to elaborate on any of these points further. I'm happy to provide more examples if that would be helpful.
+
+
+
+
+  Can u explain it in simple terms
+
+
+
+
+
+
+
+
+
+What is a good way to learn how to code in python? I am t

@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `redeeem` function, the local variable  `error` is assigned the value returned by the internal function call `accruteInterst()`. This function is not explicitly defined in this code snippet, but it is likely that it modifies the state of the contract. Therefore, it could be argued that the data in ` error` depends on some state in  the  contract, which could in turn depend on data passed to the`seiz`e function.  Therefore the answer is unknown.

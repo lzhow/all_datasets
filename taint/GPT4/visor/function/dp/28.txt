@@ -1,0 +1,3 @@
+yes
+
+The variable `size` in the function `isContract` is data dependent on the variable `target` in the function `functionStaticCall` because `size` is determined by the `extcodesize` of the `account` parameter, which is passed the `target` address when `isContract` is called within `functionStaticCall`. The `require` statement in `functionStaticCall` uses `isContract(target)` to check if the address `target` is a contract, which internally sets the `size` variable based on the code size of the `target` address. Therefore, there is a direct data dependency between `size` and `target`.

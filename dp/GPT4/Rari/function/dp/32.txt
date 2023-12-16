@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `mErr` in the function `balanceOfUnderlying` is data dependent on the variable `exchangeRate` in the function `exchangeRateStoredInternal`. This is because the value of `mErr` is assigned the result of the function `mulScalarTruncate` which takes `exchangeRate` as one of its arguments. Therefore, any change in the value of `exchangeRate` will affect the value of `mErr`, indicating a data dependency relationship.

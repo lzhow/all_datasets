@@ -1,0 +1,5 @@
+  
+No, the variables `_operator` and `_tokenholder` are the only variables that are directly dependent on `PartionManager` implementation.
+
+The reason is that the `allowenceByParition` function only uses the `_partition` parameter, which is passed as an argument to the method, and the local variables `prefix` which are derived from the value of `_partiton` using the utility function `getParititioPrefix`.
+Therefore, there is no data dependence between the two functions.

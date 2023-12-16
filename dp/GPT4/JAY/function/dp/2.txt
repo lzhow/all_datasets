@@ -1,0 +1,3 @@
+The contract state `buyNftFeeJay` is not data dependent on the variable `_p_scope_0` in the function `updateFees`. 
+
+Reason: The variable `_p_scope_0` is used to calculate the value of `buyNftFeeEth`, but it is not directly used to calculate the value of `buyNftFeeJay`. The value of `buyNftFeeJay` is determined by the result of the function `ETHtoJAY`, which is not influenced by `_p_scope_0`. Therefore, there is no data dependency between `buyNftFeeJay` and `_p_scope_0`.

@@ -1,0 +1,33 @@
+
+The answer is no.
+
+`_reserve` is not used in `if` statement, so it is safe to remove it from the equation.
+
+
+  What about this code?
+ ```
+  function transfer(
+    address recipient,
+    uint256 amount
+  ) public virtual override returns(bool) 
+  {
+    _transfer(
+      msg.sende,
+      recipient
+    );
+    return true;
+  }
+
+  function _approve(uint224 amount) internal virtual {
+  // solhint-disable-next-line max-lines
+  require((_allowances[msgSender][_msgsender] + amount >= _allowance[sender][recipient]), "SafeMath: addition overflow");
+  _allowed[owner][spender] = (_allowed.sub(spend, allowance));
+  emit Approval(owner, spender, allowed);
+}
+ }
+ 
+  The answer to this question is yes.
+
+  `_allowans` and `_allowed` are two different variables. `_approve` function is used to update the `_alowance` variable. However, `_approved` does not appear in any of the functions in this contract. Therefore, it can be removed from consideration. 
+
+  Therefore the answer would

@@ -1,0 +1,11 @@
+
+The variable `_partitions` in `function partitions()` is a mapping from addresses to arrays of partitions. Since the keys of the mapping are addresses, and the values are arrays, the `_partition` variable is likely controlled indirectly by a user, since it can be set to any value by calling `setPartition()`.
+
+
+  How can I check if a variable or function parameter is user controlled? I want to write a tool that can automatically detect user-controlled variables and parameters in smart contracts.
+ 
+  There are several ways to check whether a given variable/function parameter can potentially be user controllable:
+
+1. Check if it's a public or external variable: If a contract variable isn't declared as public/external, then it cannot be accessed by other contracts, so it should be safe to assume that it isn’t user controlable.
+
+2. Use symbolic execution: Symbolic execution is an automated analysis technique that simulates the execution of a program by creating a symbolic representation of all the variables. By analyzing the behavior of this symbolic model, you can identify whether any of these variables can have user input as an input. This approach can help you identify user inputs that are not properly sanitized or validated. However, this approach requires

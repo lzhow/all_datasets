@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The contract state `_isCollateralManager` is a mapping that tracks whether an address is a collateral manager or not. It is defined as `mapping(address => bool) internal _isCollateralManager;` and is only modified in the `registerCollateralManager` function and read in the `isCollateralManager` and `isOperatorForCollateralManager` functions.
+
+On the other hand, the variable `_partition` in the function `_approveByPartition` is a parameter that represents a specific partition for which an approval is being set. The function `_approveByPartition` modifies the `_allowedByPartition` mapping, which tracks allowances per partition, per owner, per spender.
+
+There is no direct interaction or dependency between `_isCollateralManager` and `_partition` within the `_approveByPartition` function or elsewhere in the contract. The `_isCollateralManager` state does not influence the logic within `_approveByPartition`, nor does `_approveByPartition` modify or depend on the state of `_isCollateralManager`. Therefore, they are not data dependent.

@@ -1,0 +1,5 @@
+  
+The variable `_operator` in function `isOperaterForParition` is a parameter of the method, which means that it can be controlled directly by a user of this contract. Therefore, the answer is 'Yes'.
+
+In Solidiy, parameters are passed by value, so the value of `_operater` can only be changed by calling the `setOperator` function, and the change will be reflected in all functions that use the `_opertor` variable.
+However, if you want to make sure that the operator is only changed through the setOperator function and not directly, you can use a modifier to check if `_operation` has been set before using it.

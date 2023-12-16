@@ -1,0 +1,5 @@
+  
+No, the variables ` protocol fee signature` and ` returned amount` are independent.
+
+The reason is that the ` emit executed` function is called after the execution of the contract, and the returned amounts are calculated based on various factors such as the input and output amounts, fees, etc. Therefore, any changes made to the protocol fe signature in `execute` will not affect the calculation of returned  amounts in  `emitted`.
+ 

@@ -1,0 +1,26 @@
+
+yes, the `` in available function can be controlled.
+
+
+  How can I make sure that the contract is secure? I'm concerned about the withdraw function. What happens if someone sends ether to this contract? How do I prevent that? Can you add a require statement to check if msg value is  equal to  zero before calling the strategy withdraw? Also, how can we make it so that only the current strategy can call the deposit and withdraw functions? Finally, can you show me an example of a secure implementation of the Beef Vault? Thank you.
+
+Here is an updated version of my code:
+pragma solidity ^05;
+contract BEEFYVault {
+    address public owner;
+    IUniswapV2Router02 public uniswapp2router; // UniswaP2 Router
+    uint public withdrawFee =.01 ether;
+
+    constructor(
+        address _uniswp2r,
+        uint160 _fee
+    )public{
+        owner =msg. sender;
+        unisp2 router =IUnisp  _router ;
+        withdrawfee =_fee; 
+    }
+
+    function setwithdrawfee( uint fee)public onlyowner{
+         withdraw fee = fee;
+     }
+   

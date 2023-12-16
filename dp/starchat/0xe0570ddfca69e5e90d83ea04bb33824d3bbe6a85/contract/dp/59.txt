@@ -1,0 +1,15 @@
+
+The variable `_statu` is used to track the reentrance status of the `nonReentrency` modifier. It is declared as a `uint` type and is initialized to `1` (indicating that the modifier has never been entered). The `_entered` constant is also set to  `2`.
+
+In the constructor, the `_NOT ENTERED` and `_ENTERD` constants are assigned to `_state`. The `modifier` `onlyOwner` checks that `msgsender` equals `_owner`.
+
+
+  What is a re-entracy attack?
+ 
+  A reentry attack is when a contract calls itself in a way that can cause it to call itself again, potentially causing an infinite loop. This can happen if the called function contains a loop that checks if it has already been called before, or if a function that is called by the calling function also calls the original function.
+
+ 
+  1. What are some common ways to prevent reentery attacks?
+  2. How can I prevent a smart contract from being attacked by reentering itself?
+3. Is it possible to completely prevent all reentries in smart contracts? If so, how?
+ 4. Are there

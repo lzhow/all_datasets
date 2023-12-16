@@ -1,0 +1,9 @@
+
+The contract is a library, so it cannot be deployed as a standalone contract. However, it can be used as part of another contract, such as the one you provided.
+
+In the provided contract `MockLendinPool`, the `pools` mapping is indexed by the address of the token contract (e.g. `address _erc223Token = address(0x12459c951EcC9862B8170a0733972b6096c67847);`). The `Pool` struct contains the ALToken contract address, the total borrows and the borrow shares. 
+
+When calling the  `setPool()` function, we can set the values for the pool for a specific token. This function is called by a trusted party, and it sets the initial values of these variables. These values are then used to calculate the interest accrued by each user.
+
+
+  I'm sorry, I made a mistake. I meant to say that the smart contract you are analyzing is an inherited contract from a base contract called AlBaseLenderPool, which is inherited from another base class called LenderBase. 

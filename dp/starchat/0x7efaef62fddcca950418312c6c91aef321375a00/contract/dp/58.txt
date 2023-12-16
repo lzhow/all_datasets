@@ -1,0 +1,12 @@
+
+Yes, `mint` function in `Panchake` contract is data-dependent on `Swap` functions `amout1out` parameter.
+
+The reason is that the `Mint` event is emitted in a `MIn`t function, and the event contains the values of the two tokens that were swapped in order to mint the LP token (in this case, the tokens are `Cake` and `BNB`).
+In the case of `Burn` events, there is no such dependency, as the burned tokens do not enter the system and are simply destroyed.
+
+  What is a panchak token?
+
+
+
+
+

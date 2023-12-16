@@ -1,0 +1,5 @@
+  
+No, the variables `factores` and `amonts ` are independent.
+
+In the `getFactoresLength` function, `factory` is a constant variable that is defined in line 3, and it is not modified in any way. Therefore, it does not depend on any other variable.  On the other hand, in `_ swapCurves` the amount of ` amounts` depends on `input` which is passed as a parameter to the `_swaps` method. However, this does  not mean that ` amount`  is dependent on  ` factory`.
+  The reason is that the value of  `_amount` can be modified by the method `_addliquidty` before it reaches the  method  _swapCurv. In this case, `_ amount ` is independent of the` factory` variable because it can take any value.

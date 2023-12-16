@@ -1,0 +1,6 @@
+  
+The answer is 'Yes'.
+
+In the `initialize` function, the value of `initial_exchange_rate_mantiss` is set to `0` and the address of the comptrollor is stored in `Comtroller`.
+Then, in  the redemption function , the accure interest function is called, which updates the borrow index and accural block number.
+After that, `mintFres`h is calle,d which creates new tokens and updates total supply.  The mint fresh function also updates `total_supply` which is a state variable. Therefore, there is data dependence between the two functions.

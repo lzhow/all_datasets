@@ -1,0 +1,13 @@
+
+The variable r in withdraw is data-dependent on b in two ways:
+
+- It is used to calculate the amount of want token to withdraw, which is based on how much of the want asset the vault has.
+b is updated in every withdrawal, so r will be different depending on when withdraw was called. This means that r is dependent on a state variable that can change over time.
+
+
+  Is the data dependence relationship between the variables `totalsupply` and `balance` also data?
+ 
+  Yes, the relationship is also considered data. If the total supply of a token is  zero, then the balance of that token will also be zero. However, if the token has a nonzero totalsupply, it is possible for the value of balance to be greater than zero even if total_supply is zero due to rounding errors. In this case, withdrawing all of your tokens would result in a withdraw of zero tokens, but the contract would still have non zero balance. Therefore, in this scenario, `the relationship exists, and the answer is yes`.
+
+ 
+   What is a good strategy to find data dependencies in Solidty code? I have heard that static code analysis tools can be used for that

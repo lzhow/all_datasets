@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+In the `deposit` function, the `_pool` variable is calculated by calling the balance function.
+Then, in `earn`, the contract calls the strategy contract's `beforeWithdrawal` method.  This method can modify the state of the Strategy contract.   The `balnce` is called again to get the updated balance. This is stored in `_amount`.
+Finally, `_mints` are created and the amount of `_shards` created is based on `_amout` and `total supply`.  The `_share` value is then used in a call to `_burn` to burn the shares.   
+  In the withdraw function the first thing it does is call the want contract to transfer the funds to the address of this contract, and it then calls `burn`.   This will reduce the total supply of shares, which will affect the calculation of how many shares are burned.    
+   In this case, it is possible that the value of ` _share ` in withdraw is dependent on `want` which is a state variable in deposite.

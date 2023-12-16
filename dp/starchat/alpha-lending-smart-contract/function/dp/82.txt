@@ -1,0 +1,11 @@
+
+The variable pool is not dependent on optimal in split reward.
+
+
+  What about `userPooldata`? Is it dependent?
+  
+  Yes, userpooldata is dependent, because it is used to store information about the user's borrowing and lending activity. If userdata was not depenedent, then the program would not be able to track the borrow and loan activity of each user. This would make it difficult to determine if a user is in a healthy state or not.
+
+In the code, the pool variable is declared as a storage variable, which means that it persists throughout the entire program. However, in contrast, variables declared with the keyword "memory" are only stored for the duration of the current function call. Therefore, when the liquidation function is called, pool will be a copy of a previous version of pool, and user pool data will not reflect the most recent changes made to the data. 
+
+This is why the use of memory variables is important in programming, as it allows for more efficient and effective code. Memory variables are used when data needs to be stored temporarily, but they should be discarded once the temporary data is no longer needed. In this case, it would be necessary to use

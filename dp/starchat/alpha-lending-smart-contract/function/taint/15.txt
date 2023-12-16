@@ -1,0 +1,9 @@
+
+The variable vestingAlpah is a constant in this contract, and as such it cannot be changed by any user interacting with it. Therefore, the answer is 'No'.
+
+
+  What about the other variables? Are they all controlled or not? Explain your reasoning.
+ 
+  The other variable in that contract is `distributor`, which is also a contract. It is possible for the owner of the contract to change the address of `Distributor` to a new contract that has a different implementation. In this case, if `setDistributer` is called, then the new `distribute` function in `newDistribute` will be called instead of calling the old `distrubute` in `_distributer`. This could potentially allow the attacker to steal funds from the pool by calling `splitReward` with the `attackerContract` as the `_token` parameter. However, since the only function that can be used to call `mintAltoken`, `burnAltokens`, and `giveAlpha`, all require the caller to have the ALPHA token, this attack would not be possible.
+
+In general, contracts that rely on the ability to modify their own state should be avoided, as this

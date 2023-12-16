@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `OBI` library, the functions `encodeBytes`, ` encodeBytes1`, and ` decodeByes` are defined. These functions use the same `Data` struct to store the data to be encoded or decoded.
+When the decode function is called, it takes a ` Data` object as an argument. This ` data` variable is used to access the raw data that needs to decoding.  The ` raw` field of the` Data ` struct is also used in these functions to retrieve the encoded data from the contract state. Therefore, `Raw` is data-dependent on `DATA` because it is derived from ` DATA`.
+ 

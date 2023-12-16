@@ -1,0 +1,4 @@
+  
+No, the variables ` amount  ` and ` balance 1 ` are independent in both functions.
+
+The reason is that the `burn` function only uses the local variable `_reserves` and the global variable` total supply` to calculate the amount of liquid tokens to burn. It does not use the balance of the token in any way.  On the other hand, ` swap` uses ` _ reserves ` to determine the input amount and calculates the output amount based on that. However, it does use ` total Supply` as a factor in calculating the liquid token amount. Therefore, there is no data dependence between the two functions, and they can be executed independently.

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `functionCall` function, the argument `data` is passed to the internal function `funcionCallwithValue`. The `bytes` type is a reference type in Solidiy, which means that it is not copied when passed as an argument. Therefore, `retdata`, which is also a `byte` variable, is data-dependent on `dat`.
+Similarly, in ` _ verifyCall Result`, the local variable`retData`is data - dependent on`error Message` because it uses the`revert`function,which takes` error Message `as an input.
+Therefore, both variables are dependent data.

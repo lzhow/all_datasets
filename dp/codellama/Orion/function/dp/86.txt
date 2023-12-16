@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `function` getD, the parameter `uint[] x` is used to calculate the value of `D`. The value `x` comes from the array `memory x`, which is passed as a parameter to the contract.
+On the other hand, in `Function` ` getAmoutIncurve`, the parameters `address factory` and ` address pair` are used in a call to `ICurveregistry.getcoinsindicies`.
+This function returns a tuple of three values, which are then used as parameters to another function, `Get_XP`. This function is defined in another contract, and it takes the address of the factory as one of its parameters. Therefore, it is possible that the values of x in get D are dependent on factory in function GetAmountincurv.

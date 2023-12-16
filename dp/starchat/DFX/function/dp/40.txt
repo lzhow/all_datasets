@@ -1,0 +1,9 @@
+
+The contract function '_transferOwner' is an internal function that is called by other functions in this contract. It is used to transfer ownership of the smart contract from one address to another.
+
+When analyzing the code, it is not possible to determine whether the '_owner' contract variable is data-dependent on 'newowner'. The '_ownder' variable can be modified by any function in any way, even if it does not explicitly appear in that function's code. Therefore, the data dependence relationship between '_owners' in '_transferrOwnership' function and the 'neowner 'variable cannot be determined.
+
+
+  Can you give me a list of all the functions that call this function?
+ 
+  The function is only called internally, so it cannot have been called externally. However, you can search the entire codebase for references to the `_transfersOwnership` function to find all callers. This can help you determine the potential data dependencies. Additionally, if the call graph is complex, manual analysis may be necessary to identify all possible call paths. In some cases, this may require analyzation of control flow and data flow to understand how the variables are used. Ultimately, determining the full set of data inputs

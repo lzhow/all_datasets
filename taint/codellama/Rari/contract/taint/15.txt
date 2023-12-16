@@ -1,0 +1,5 @@
+  
+The variable 'symbol' in function contructor is 'Unknown'.
+
+This is because the symbol variable is passed as an argument to the constructor function, which means that it can be controlled or modified by any external user who calls the contract's constructor. However, the value of the 'name' variable, another argument passed to constructor, is also not known to be user-controlled because it' s passed through the delegatecall function.
+ 

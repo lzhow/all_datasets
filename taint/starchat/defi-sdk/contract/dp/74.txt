@@ -1,0 +1,9 @@
+
+The contract has a function called `markHashused` that is used to mark a hash as used. This function is called in `validateAndexpireAccountsignature`. The function takes in an input and a salt. It hashes the input with the salt and checks if the hash has already been used by calling `getHashUsage`. If the has has not been marked as being used, it sets the usage to true.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `hashUsed` variable is data-dependent on `account` and `salt`.
+ 
+  The `Hash Used` boolean variable in this contract is dependent on both the account address and the unique salt value used for each signature. If a signature is submitted with a different salt, the same account or a completely different account will have the ability to re-use the signature and mark the associated hash used again.
+
+To prevent this, a unique identifier should be added to the mapping to track each unique signature, such as a counter or timestamp. Then, when checking if a given signature has been previously used in a `require` statement, only the identifier needs to be checked, rather than the entire signature data. Additionally, any time a new

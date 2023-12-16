@@ -1,0 +1,5 @@
+  
+No, the variables ` value` and ` data` are independent.
+
+The function  ` decode I8` does not use the `Data` struct, so it does  not depend on it.  The function` decode U8 ` does use ` Data`, but it only uses the` offset` field, which is not used by `  decode  I2 5  `.
+ 

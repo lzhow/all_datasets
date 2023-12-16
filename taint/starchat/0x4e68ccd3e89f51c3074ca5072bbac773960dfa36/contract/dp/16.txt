@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `self[lower].feeGrownOutside` can change after the assignment to `lower`, which could affect the calculation of the result.
+
+  What is a good strategy to find data dependencies in Solidty code?
+
+
+
+
+

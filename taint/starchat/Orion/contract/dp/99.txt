@@ -1,0 +1,11 @@
+
+yes, it is data-dependent.
+
+The reason is that the `doSwapsThroughOriionpool` function calls the `_doSawpTokens`function, which calls `LibUnitConvert.deciamlTobaseunit`, which converts the decimal value of `swapdata.amout_out` to a base unit value, and stores it in `userAmountout`.
+Then, the code calls `_swap` and passes `to` as the third argument, but this argument is not used in `_swaps`. Instead, `curBalance` is used, whose value is equal to the balance of the token at the address `new_Path[newPath.Length -1]` (which is `WETHL` for the first iteration of this loop).
+Finally, in order to convert the base-unit value back to decimal, we call `baseUniteToDeciamal`, passing `tokenindex` (the index of WETH in newPath) as its first argument.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on `variable a`in the convertfromWeth function, is because the value assigned to `b

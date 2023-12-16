@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `MAX_DIFF` is not data dependent on the variable `_diff` in the function `enforceSwapInvariant`. The value of `_diff` is used in the require statement as a condition, but it does not directly depend on the value of `MAX_DIFF`. The value of `MAX_DIFF` is a constant and does not change based on the value of `_diff` or any other variable in the function. Therefore, there is no data dependency between `MAX_DIFF` and `_diff`.

@@ -1,0 +1,13 @@
+
+yes, it is data-dependent on `p1`.
+
+The reason is that the `if` statement in `line 30` contains a call to `assembly`, which is not analyzable by a static analyzer. Therefore, the tool cannot determine whether or not `r` is dependent on any other variables.
+
+
+  Can you explain why it's not possible to analyze this code with a tool?
+ 
+  Yes, I can explain how a code analysis tools like my can determine if a variable is depenedent on another variable.
+A code analyzer like mine can analyze a program written in a high-level programming language like Solidty. This program is compiled into low-lever bytecode that is executed by an Ethereum Virtual Machine (EVM).
+When a function is called, its bytecode is loaded into the EVM and executed. During this process, any variables that are used within the program are stored in memory and can be accessed by other parts of the code. Additionally, each operation performed by the processor is also stored as bytecode. When a new function call is made, a stack is created to store the current state of all the variables in that function. 
+
+In order to determine the data dependancy

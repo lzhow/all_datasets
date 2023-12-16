@@ -1,0 +1,9 @@
+Label: No
+
+Reason: The variable `amount1` in the `burn` function is not directly controlled by the user. It is calculated within the function based on the contract's state and the amount of liquidity tokens (`liquidity`) that the caller is trying to burn. The calculation is as follows:
+
+```solidity
+amount1 = liquidity.mul(balance1) / _totalSupply;
+```
+
+Here, `liquidity` is the amount of liquidity tokens that the caller of the function has sent to the contract for burning. `balance1` is the contract's balance of `token1`, and `_totalSupply` is the total supply of liquidity tokens. While the user initiates the burn transaction and decides how many liquidity tokens to burn, the resulting `amount1` is determined by the contract's current balance and total supply, not by the user's direct input. Therefore, the user does not have direct control over the value of `amount1`.

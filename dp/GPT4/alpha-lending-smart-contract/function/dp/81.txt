@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `isAccounthealth` function, the value of `totalBorrowerBalancBase` is calculated using the result of the internal function call `getUserAccoun`t. This function takes the address of a user as an argument and returns a tuple containing the user's total collaterization balance, total borrow balance and total supply balance.
+  The value returned by ` getuserAccount` depends on `reserverPercent`, which is a state variable of type `uint246` that is modified by the external function` setreservPercent`. Therefore, ` totalborrowBalanaceBase ` is data-dependent on` reservepercent`.
+  

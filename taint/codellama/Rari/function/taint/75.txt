@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the code, the `RewardDistributionDelegationStorage` contract has a public variable called `admin`. The `pendingAdmin` variable is also public, but it's not used in any of the functions.
+On the other hand, `compSuppliers`, `CompBorrwer`,`compAccured`, and `lastContibutor` are all mappings, which are publicly accessible and can be modified by anyone.  These variables are not user-controlled.

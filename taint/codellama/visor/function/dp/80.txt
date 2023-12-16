@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `bytes3` variable is created by hashing the struct hash using the `_hashTypeData` function. This means that the value of `hash` is dependent on ` structhash`.
+Similarly, in function 2, `signature`is created using `ECDSARecover` and is also dependent ` hash`. Therefore, both ` s`and ` signature` are dependent variables.

@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ total supply is not dependent on balance 1 in function burn. This is because the _ mint function is called before the burn function. Therefore, the value of _ _supply is updated before balance is used in burn, making it independent.

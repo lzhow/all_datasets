@@ -1,0 +1,6 @@
+  
+No, the `` variable in function `_admin` is NOT controlled  by user because it's a private variable and it can only be accessed by internal functions.
+
+The variable is declared as private, which means that it cannot be directly accessed from outside the contract. It can be only accessed through internal methods, such as `_getadmin()` and `_changeadmin()`.
+Additionally, `_setadmin( )` function can also change the value of the `_ADMIn_` variable, but it requires the caller to have the `admin role`.
+So, in summary, while the  `_admIn`  variable can  be changed by external users, they cannot directly access it.

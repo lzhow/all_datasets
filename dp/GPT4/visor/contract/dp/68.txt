@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `target` in the function `functionCallWithValue` and the variable `errorMessage` in the function `functionDelegateCall` are parameters of two different functions. They are not related to each other within the scope of their respective functions, and there is no code in the provided Solidity contract that establishes a data dependency between them. Each function operates independently, and the parameters are passed in by the caller of the function. There is no shared state or computation that would create a data dependency between `target` and `errorMessage`.

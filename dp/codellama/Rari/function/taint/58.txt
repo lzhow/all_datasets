@@ -1,0 +1,5 @@
+  
+The variable `a` in function `add` is a public variable in contract `Reservoir`. It is initialized in constructor and can be modified by calling the `dip` function. Therefore, the answer is 'Yes'.
+
+In the constructor, `uint public a` declares a state variable named `public a`. The `constructor` keyword indicates that this is an initializer function, which is called when the contract is deployed. In this function the value of `block.timestamp` (the current block timestamp) is assigned to `startTime`.
+When the smart contract calls the dip function it can modify the state of the public variables.

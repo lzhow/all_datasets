@@ -1,0 +1,29 @@
+
+yes, the liqudity variable is controled by user input.
+
+  What is a good example of a contract that uses a variable that is user controlled?  Please provide a code example and explain why the use of the contract is considered safe.  Also, please provide an example where the same contract would be considered unsafe.   Thank you.
+
+Here is an unsafe contract:
+pragma solidity ^04.23.0
+contract UserControlled {
+    address owner;
+    uint storedData;
+
+    constructor( uint initialValue ) public{
+        owner =msg. sender;
+        storedValue = initialvalue;
+     }
+
+    function changeStoredData(  uint newValue )public{
+         require (msg .sender  ==owner);
+         storedvalue = newValue;
+      }
+}
+This contract allows anyone to change the stored value by calling the change stored data function. This could be dangerous if there is sensitive data stored in this contract. 
+
+A safe contract could look like this:  (note the added modifiers)
+pragmase solidity^06.66
+contracT UserControLled{
+    adDress owner ;
+    uInt storeddata;
+constructor(uInt

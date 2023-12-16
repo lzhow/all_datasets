@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable 'INPU_TYPHEHAS' is not dependent on 'hashTocheck' in function 'isHasUSe'. The reason is that the 'input' variable is a struct that contains two fields, 'tokenamount' which is also a structure, and a 'permi' field which also is another structure. These structures are defined in a different part of the code, so they do not depend on any other variable. 

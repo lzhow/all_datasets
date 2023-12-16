@@ -1,0 +1,6 @@
+  
+The variable `repayTaken` in function `liquidateCalcualteSeizetokns` is labeled as 'Unknown'.
+
+This is because the `repaidTakens` variable is a local variable in this function, and it's not clear whether it can be controlled directly by a user or not.
+It is possible that the value of this variable can only be set by calling the `_beforeNOnReentrancy` function and the`_afterNReenranc`y function. However, these functions are not publicly accessible, so it cannot be determined whether they can set the values of the local variables in `liqidationCalculateseizTockens`.
+Therefore, the control of ` repaidtokens` cannot determined.

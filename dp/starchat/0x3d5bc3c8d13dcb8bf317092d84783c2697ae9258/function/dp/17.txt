@@ -1,0 +1,11 @@
+
+The variable c in mul\_ is data-dependent on a in div\_ because the value of c is computed using the values of a and b. Specifically, the line c=a*b computes the product of the two values and stores the result in c. Later, in line 10 of mul\_, we require that c/a must equal b (i.e., that the quotient of b and a must be equal to b). This means that if a changes, then the new value for c must also change, which means c depends on both a (the old value) and the current value b of that variable.
+
+
+  Can you explain this in simpler terms?
+ 
+  Yes, I can explain it in a simpler way.
+
+In the first function, mul_, the program is trying to compute the multiplication of two numbers, a* b. The program then checks if the numbers are equal or not. If they aren't equal, it throws an error. However, if they're equal it returns  the number. This is because if both numbers in multiplication are the same, their product is equal. 
+
+However, this is not the case in this function. In this case, both the

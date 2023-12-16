@@ -1,0 +1,12 @@
+
+The function div_() does not use the input parameter a, so it is not affected by the data dependence of a on b. However, the require statement in mul_() uses a and b as inputs, which means that a must be data-dependent on both b and the result of the multiplication. This means the output of mul_(a, b) must also be dependent on a. Therefore, a is data indirectly dependent (indirectly meaning through another function) on all of b's and c's dependencies.
+
+
+  Can you explain what "data dependences" are?
+ 
+  Data dependenices are relationships between variables that are determined by their values. For example, if a variable is assigned a value that is determined at runtime, then that variable has a runtime data dependencies on that value. If a function uses the value of another variable, that function has an implicit data depdenency on its input variables.
+
+In the code you provided, there are two data dendencies:
+1. a depends on c, because c is computed using a
+2. b depends indirecty on (1), because the check on line 10 of div() uses b
+Therefore, both a an b are indirect

@@ -1,0 +1,18 @@
+
+The contract has a function called `transfer` that transfers tokens from one address to another. This function takes in 4 parameters: `_to` (the recipient's address), `_value` the amount of tokens to transfer, `_data` and `_operatordata`. The `_from` parameter is set to `msgSender` which is a variable that represents the address of the account that is calling the `tranfer` function.
+
+In the case of `approval`, the `_tokenholder` is `sender` (`msgsender`) and the spender is `_sender`.
+`_allowedbyPartition` maps the sender and spenders to the value of how much they can spend.
+
+
+ 
+Yes
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications?
+   
+An incremental bundling tool is used to bundle together all the JavaScript files that make up a web application. It is designed to make the process of bunding faster and more efficient by only rebuilding parts of a bundle that have changed since the last time the bundle was built. Incremental bundlers are commonly used in development workflows to speed up the time it takes to see changes in a browser. They can also be used for production bund

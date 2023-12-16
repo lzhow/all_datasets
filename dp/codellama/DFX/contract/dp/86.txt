@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `multiProofverifyCalData` function, the parameter ` proof` is passed as a caldata parameter. This means that the value of `Proof` will be copied to the callee's memory, and the caller' s memory will not be modified.
+Since the `_ hashPair`function is called with ` b` as an argument, it is possible that ` Proof` may be used to compute the hash of the pair `(a , b)`. Therefore, `Proo`f is data-dependent on `B`.
+ 

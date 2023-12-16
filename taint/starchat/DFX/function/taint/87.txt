@@ -1,0 +1,8 @@
+
+The variable amount in function `_burn` is **not** controlled directly by users. However, the value of amount is determined by a user input, and the input is stored in a contract's state. Therefore, in general, any value stored on the blockchain can be considered "controlled" by any user, including the contract creator.
+
+However, if you are specifically asking about the specific value `msg.value` in Solidty, which is a special variable that holds the amount of Ether sent with a transaction, then this value is indeed controlled indirectly by user and can therefore be classified as "user-controlled".
+In general it's a good practice to avoid using user-input directly in smart contracts, as it can lead to security vulnerabilities. Instead, you should use functions like `require()` or `assert()` to validate user inputs, so that your contracts are more secure and resistant to attacks.
+
+
+  Can you give me an example of a smart contract that uses user controlled input in this manner?  I want to see how it would be done.  Also, how would you mitigate these types of vulnerabilites?   I am a beginner so please provide examples using Soliditity.   Thank you

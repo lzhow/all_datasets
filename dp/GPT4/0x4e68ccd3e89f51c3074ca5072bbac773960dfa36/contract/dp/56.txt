@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `compressed` in the function `nextInitializedTickWithinOneWord` is data dependent on the variable `self` because the value of `compressed` is used to determine the `wordPos` and `bitPos` through the `position` function, which are then used to access and manipulate the `self` mapping. The `self` mapping is indexed by `wordPos`, and the bit at `bitPos` within the word is used in the bitwise operations that follow. The result of these operations influences the value of `initialized` and the calculation of `next`, which means that there is a direct data dependency between `compressed` and the state of `self`.

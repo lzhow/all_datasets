@@ -1,0 +1,15 @@
+
+The contract has a function called `calculateInterestrate` which calculates the interest rate based on utilisation rate.
+
+In the `Poolconfiguration` contract, the utilisatio rate is calculated as:
+`utilisationRate= _toalBorows.Waddiv(_toatlLiqudity)`
+where `_toatalBorws` and `_totalliquidity` are the total borrows and total liquidity respectively.
+
+
+Now, let's consider the case where `_totalliquidity` is  zero. In this case, `utilisatonRate ` will be zero and the value of interest will also be  bezero. So, we can say that the conract state  `optimalutiliztionRate`, which is a constant, is data-dependent on `_totaLliquity`.
+This means that if `_Totalliqidity` changes, then the output of the calculateInteresetRate function will change as well.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me again?
+ 
+  Data dependence is when one variable or value is dependent on another variable. For example, if

@@ -1,0 +1,5 @@
+  
+The variable 'data' in function 'decode I6 4' is labeled as 'Unknown'.
+
+This is because the 'Data' struct is defined as a library-level struct, which means that it can only be accessed within the library. Therefore, the value of the `offset` field of `Data` is unknown to the outside world, and it cannot be controlled directly by a user of this library, even if they have access to a `decodeData()` function.
+However, if a malicious user were to call the internal `shift()` modifiers, they could potentially manipulate the offset of a given ` Data` object, potentially leading to unexpected behavior.

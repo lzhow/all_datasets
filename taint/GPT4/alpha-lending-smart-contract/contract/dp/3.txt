@@ -1,0 +1,9 @@
+yes
+
+The variable `receiverRule` in the function `setAlphaReleaseRule` is directly initialized with the value of the input parameter `_receiver`, as seen in the line:
+
+```solidity
+ReceiverRule memory receiverRule = ReceiverRule(_receiver, _rule);
+```
+
+This line creates a new `ReceiverRule` struct in memory, assigning the `_receiver` argument to the `receiver` field of the struct. Therefore, there is a direct data dependency between `receiverRule` and `_receiver` because the value of `_receiver` is used to set a part of the state of `receiverRule`.

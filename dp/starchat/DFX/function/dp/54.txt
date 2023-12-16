@@ -1,0 +1,11 @@
+
+The function liqudity() returns two values: total_ and individual_. The variable total is not used in flash() function. Therefore, it is unknown whether the variables paid and total are dependent on each other.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependent relationship". Could you please explain it to me?
+ 
+  Data-dependent relationships are relationships between variables that depend on their values. In the example you provided, the relationship between the paid variable in function "flash" and the total variable is dependent upon their respective values, as the value of total depends on paid. This means that if the values of paid change, so will the new value for total.
+
+In the context of smart contracts, this can be used to optimize the code by reducing the number of times data needs to be retrieved from storage. For example, if a variable that is used multiple times in a contract is data-independent, then it can only be read once and stored in memory, reducing gas costs. If the data is instead data dependant, each time it needs be accessed, its value must be recomputed, which can increase gas consumption. 
+
+However, in some cases, such as in your example

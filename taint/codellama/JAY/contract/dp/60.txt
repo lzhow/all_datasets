@@ -1,0 +1,4 @@
+  
+No, the state variable USDP_RICESEL is not dependent on variable from in function ER1C51Received because it is a constant value that is defined in contract constructor.
+
+The reason is that the value of USDC_PRISE_Sell is set in constructor and is never changed. Therefore, it does not depend on any external variable, including from.

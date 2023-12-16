@@ -1,0 +1,11 @@
+
+The function mulEx3 takes three Exp arguments a,b,c. It multiplies a and b and stores the result in ab. Then it multiples ab and c and returns the final result.
+
+Now, let's see if a is data-dependent on b in mulExpr3. We can determine this by analyzing the code inside the mulExpression function. Specifically, we can look at the line that multipies ab by c. This line is:
+`return mulexp( ab, c );`
+Since ab is a local variable declared inside mulexpr3, it is not accessible outside of the scope of that function, so it cannot be data dependendent on any other variable. Therefore, a cannot possibly be dependent onb in this function and we conclude that a does not have data dependencies on variables in other functions.
+
+
+  Can you explain how you determined that the local variables ab are dependent?
+ 
+  I analyzed the source code to determine if the variables were dependent or not. I looked at each line of code that used the two local varibles and determined if they were used in a way that could affect the value of either variable after the calculation. If the values of these variables could be affected

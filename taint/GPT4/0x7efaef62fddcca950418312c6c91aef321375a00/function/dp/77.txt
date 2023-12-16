@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `price1CumulativeLast` is not referenced or modified anywhere in the provided `burn` function. The variable `_totalSupply` is used to calculate the amounts `amount0` and `amount1` that are being burned and transferred, but there is no direct interaction or dependency between `_totalSupply` and `price1CumulativeLast` within the scope of this function. Since `price1CumulativeLast` is neither read from nor written to in the context of this function, there is no data dependency relationship between `price1CumulativeLast` and `_totalSupply`.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `vars` in the function `redeemFresh` is a local variable that is declared and used within the scope of the `redeemFresh` function. It is used to store temporary data and calculations related to the redemption process. On the other hand, the variable `cTokenCollateral` in the function `liquidateBorrowFresh` is a parameter that represents the collateral token involved in the liquidation process. These two variables operate in different functions and have no shared state or direct interaction between them. Since there is no code path where the value of `vars` is influenced by or influences the value of `cTokenCollateral`, they are not data dependent.

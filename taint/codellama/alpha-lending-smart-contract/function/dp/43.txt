@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `getPool` function, the local variable  `pool` is assigned the value of the storage variable of `pools` indexed by the address of `_ token`. The `PoolStatus` status of this storage is also assigned to the return variable.
+  The local variables `altokenAddress`, ` poolconfigAddress` and `lastUpdatetimestamp` are assigned values from the pool storage.  Finally, ` totalborrows`,`totalborrowshares`, and`totalliqudity`, are also set to values of poolstorage.   The function returns these values. In the withdraw function , the `_share` variable is used to calculate the amount of liquidity to be withdrawn. This is done by calling the calculate round down liquidty amount function. However, this function does not use the`_token`.  Therefore, it is safe to say that the total liquidities in both functions are independent.

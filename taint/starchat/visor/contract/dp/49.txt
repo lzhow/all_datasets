@@ -1,0 +1,19 @@
+
+Yes, `s` is data-dependent on `r` and `hash`, so `recovery` depends on both of them.
+
+
+  I'm not sure I understand the question. Could you please rephrase it?
+  
+  The question is: Is the value of the `V` parameter in `ECDsa.recover` data dependant on any of its other parameters?
+
+The answer is yes, because the signature is a function of `R`, `S`, and the message hash. If the V parameter changes, the other two parameters will also change, and therefore the resulting address will be different.
+This means that the result of this function is dependent on all three of these parameters. In other words, it is not constant, but rather a mapping from the set of all possible inputs to the output. This is known as a "non-deterministic" function.
+
+
+In general, data dependencies are hard to determine automatically, so it's important to think carefully about the code you're analyzing and to understand how it works before making any conclusions about data flow. Is there anything else I can help you with?
+
+ ```
+
+
+
+    Can you explain how the EVM works? I've heard

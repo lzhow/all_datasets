@@ -1,0 +1,4 @@
+  
+No, the ` compAcrueded` contract is data-dependent on ` newAcquired` variable in function` updatecontributorsRwards`.
+
+The reason is that the` compacruede` state is updated in line 417 of the code, which is inside the if statement that checks if the delta blocks is greater than  zero and the compspeed is also greater zero. This means that if `delta blocks` is zero, then the state will not be updated, and therefore, it is independent of `NewAcquirred`.

@@ -1,0 +1,15 @@
+
+The variable mantisasOne is a uint in Solidty. It is used to store a fixed point number with 1e-12 as the decimal point. This means that the value of the uint is multiplied by 2^110, which is 3402823669219017600 to give a decimal representation of a fractional number.
+
+In this case, the mantissas are not user controlled, as they are used in calculations that are performed on the contract.
+
+
+  What is an example of an application where a user could control the state of this variable?
+Can you provide an explanation of how the application would use this state?  What
+would be the expected outcome? Please provide a code example if possible.  Thank you. 
+
+I am trying to understand how a malicious user can manipulate the smart contract to
+gain an unintended advantage. I understand that a smart contracts state can be
+controlled by a users actions, but I don't understand the potential for abuse that
+could be created by allowing a single user to control a state variable. Can you
+provide an argument for why a contract should not allow

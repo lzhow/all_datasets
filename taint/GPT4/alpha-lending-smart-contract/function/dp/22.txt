@@ -1,0 +1,7 @@
+Label: yes
+
+Reason: The variable `collateralShares` in the function `liquidateInternal` is calculated based on the `collateralAmount`, which is derived from the `liquidateAmount`. The `liquidateAmount` is calculated using the `liquidateShares`, which in turn is derived from `userTokenData.borrowShares`. The `userTokenData` is an instance of `UserPoolData` for the `_user` and `_token`.
+
+In the function `calculateAlphaReward`, the variable `userData` is also an instance of `UserPoolData` for the `_account` and `_token`. The `userData.borrowShares` is used to calculate the pending alpha reward.
+
+Since both `collateralShares` and `userData` are dependent on the `borrowShares` property of the `UserPoolData` struct for the same user and token, there is a data dependency relationship between `collateralShares` and `userData`. Changes to the `borrowShares` in `userTokenData` (which `collateralShares` depends on) could affect the calculation of the alpha reward in `calculateAlphaReward` (which `userData` depends on), assuming `_user` and `_account` refer to the same address and `_token` is the same in both functions.

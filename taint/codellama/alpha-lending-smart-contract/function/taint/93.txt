@@ -1,0 +1,4 @@
+  
+No, the ` alpha Balance ` variable in function `claimCurrent Alphareward` is NOT controlled  by user because it's a local variable that is created and used within the scope of the claimcurrentalpharewards function. It is only accessible within that function and cannot be accessed or modified by any other function or user outside of that scope.
+
+The `lendPool` variable is also not user-controlled because the only way to modify it would be to change the code of `AlToken` contract, which is a smart contract that has been deployed on a blockchain. Therefore, any changes to the contract would require a transaction to be sent to a network, and the transaction would need to have the necessary permissions to make the change. This would ensure that only authorized parties can modify the value of this variable.

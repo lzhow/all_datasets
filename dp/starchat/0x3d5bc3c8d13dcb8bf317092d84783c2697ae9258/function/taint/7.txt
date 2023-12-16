@@ -1,0 +1,13 @@
+
+The variable "data" in function "_becomemImplementation" is a byte array that is passed as an argument to the internal function "delegatecall". This function executes the code contained in "implementation" with the current context, passing in any data provided as a parameter.
+
+As such, the value of "control" of the "variable" "Data" depends on the context in which the contract is being executed. In general, if "allowResig" and "becomImplementationdata " are not user-controlled, then "Control" will be "No". However, in some cases, such as when the implementation contract calls back into the delegator contract, "contro" may be user controlled.
+
+
+  Can you give me an example of a contract that would call back to a delegated contract and provide user input as part of that call?  I want to know how the control flow would be different in that case.  Also, how would the analysis tools handle the recursive nature of this scenario?   I'm specifically asking for a Solidty contract.   Thank you.   
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack.

@@ -1,0 +1,13 @@
+
+The function is a complex internal implementation of a curve swap, and as such it is not straightforward to determine whether or not the variables `_target` and `_origin` are dependent on `_amount`. However, based on their names and context, it seems likely that `_t` is dependent upon `_o`.
+
+`_amt`, the return value of the `calculateSwap` function, is calculated using the values of `_gliqBalance` (the balance of g-liquidity in `_numeraires[0]`) and the `_bals` array, which represents the balances of each numerair in each assimilation contract. These values are determined by the call to `CurveMath::viewSwap`, which calls `Assmilitators::getBalance`, and which in turn calls the view function of `numerairBalance`. It is possible that the value returned by `getBalanace` could be dependent in some way on either `_assim` or `_asset`.
+
+
+  Can you explain how to calculate the derivative of this function with respect to the input variable?
+ 
+  The derivative is given by:
+$$
+\frac{\partial}{\partial x} f(x)
+=
+lim_{h \to

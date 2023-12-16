@@ -1,0 +1,5 @@
+  
+No, the variables `_o` and `_t` are dependent on ` curve` but not `_ swapInfo`.
+
+The reason is that the ` get OriginAnd Target` function is called in both `originSwaps`and `targetSwapp` functions. In ` origin Swapp`, the `_ o` variable is dependent  on` curve`, but the` _ swapinfo`variable is not dependent because it is defined in `Origin Swapps`function.
+In ` target Swappe`,the `_ t` is also dependent, but`_ swap info`is not because the same reason as above.

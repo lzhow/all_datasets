@@ -1,0 +1,13 @@
+
+The variable subtractdValue in decrease allowances is a user controlled variable. This variable is used to reduce the allowable amount of tokens that can be spent by a sponsor. If this variable were not user controllable, then a malicious user could potentially reduce their allowability to zero, which would mean that they could no longer spend any tokens.
+
+
+  Can you explain how the code works? I'm not very good at Solidiy
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.
+
+An incremental bundling tool or bundlers is any tool that takes a set of files that make up a web application and combines them into a single file that the browser can load. Incremental bundl[ing] is useful because it allows developers to make changes to their code without having to manually refresh the page in their browser. It also allows for optimizations such as code splitting, lazy loading, and tree shaking. Tools like Webpack, Rollup, Parcel, Browserify, etc. are examples of incremental bundle tools. They take in entry points, or files which act as the starting point

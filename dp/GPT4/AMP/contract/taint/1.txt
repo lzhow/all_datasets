@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_totalSupply` is an internal state variable of the `Amp` contract, which represents the total supply of the token. It is modified by the internal function `_mint`, which is called by the `swap` function. The `swap` function can only be called with the appropriate permissions and conditions met, and it is not directly controlled by an arbitrary user. The `_mint` function is not a public or external function that can be directly invoked by any user; it is an internal mechanism of the contract to increase the total supply when certain conditions within the contract logic are met. Therefore, `_totalSupply` is not directly controlled by the user.

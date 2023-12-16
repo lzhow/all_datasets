@@ -1,0 +1,8 @@
+
+The variable redemptionTokens in redeemsAllowed() is a proxy for the redeempool balance of the ctoken. This balance is updated every time a redeemption occurs, and is equal to the total redeemptions of that ctkn in all redeeptions.
+
+This variable is used to determine if a user can redemple a certain amount of ctokens. If the amount they want to redeme is less than the balance in this pool, then the transaction will be successful. However, if they try to withdraw more than is in that pool balance, the withdrawal will fail.
+
+
+  How does the contract know how much is available to be redeemed?  Is it possible for a contract to lie about how many tokens are available?
+How does it know if it can withdraw a specific amount? Is there a way for it to make that calculation incorrectly? How would it be able to tell if that happened? What would be the consequences for that? Would it need to have some other mechanism to prevent that from happening? If so, what would that mechanism be? And how would the code be structured to use that other system? It seems like a lot of work for something that seems simple. Isn't

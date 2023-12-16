@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `inputBalanceChange` in the function `emitExecuted` is determined by the difference between the initial input balance and the input balance after the execution of a swap. This value is influenced by the user's actions, as the user is the one who initiates the swap by calling the `execute` function and provides the input token amount. The user's interaction with the contract, including the amount of tokens they choose to swap and the state of their account balance, directly affects the value of `inputBalanceChange`. Therefore, it is controlled by the user.

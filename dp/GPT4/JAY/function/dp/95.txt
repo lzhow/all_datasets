@@ -1,0 +1,3 @@
+Label: Yes
+
+Explanation: The variable `erc721Ids` in the function `buyJay` is data dependent on the variable `_tokenAddress` in the function `buyJayWithERC721`. This is because the `buyJayWithERC721` function is called within the `buyJay` function, and the `erc721Ids` variable is passed as an argument to the `buyJayWithERC721` function. The value of `erc721Ids` affects the execution of the `buyJayWithERC721` function, indicating a data dependency between the two variables.

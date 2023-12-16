@@ -1,0 +1,3 @@
+yes
+
+The contract state `excessUtilizationRate` is directly assigned the value of the variable `_excessUtilizationRate` in the constructor of the `PoolConfiguration` contract. This assignment creates a data dependency relationship between the two, as the state variable `excessUtilizationRate` depends on the value passed to `_excessUtilizationRate` at the time of contract deployment.

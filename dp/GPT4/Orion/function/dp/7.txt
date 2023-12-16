@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `account` in the function `isContract` is data dependent on the variable `target` in the function `functionCall`. This is because the value of `target` is passed as an argument to the `functionCallWithValue` function, which is called within the `functionCall` function. Since the value of `target` is used in the execution of `functionCall`, there is a data dependency between `account` and `target`.

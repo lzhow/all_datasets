@@ -1,0 +1,9 @@
+
+The variables in both functions are used to store data on-chain, but they do not have any direct data dependencies between them.
+
+In the `isContract` function, the code size of the account is retrieved using the EVM instruction `extcodesz`. This instruction returns the size in bytes of any deployed contract at the given address, including any libraries or other contracts that the contract may be linked to. If the returned size is greater than 1, then the address is considered to be a contract. However, this function does not access the storage variables of either function. Therefore, it is not possible to determine whether the variables are directly or indirectly data-dependent on each other.
+
+
+  Can you explain how the data dependence is determined?
+ 
+  Data dependences are determined by analyzing the flow of data through the program. In this case, we can determine that `account` is a parameter to the internal `view` `assembly` block, and `target` and the memory locations of `data` are parameters to `internal` functions `returns` blocks, so they can be considered data sources. `errorMessage` does have an effect on control flow, however, as it's a string literal, its contents

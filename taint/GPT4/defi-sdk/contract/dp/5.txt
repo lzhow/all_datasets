@@ -1,0 +1,3 @@
+Yes
+
+The variable `returnedAmount` in the function `getReturnedAmounts` is data dependent on the variable `marketplaceFee` in the same function. This is because the calculation of `returnedAmount` involves the `marketplaceFee.share` as part of the total fee share calculation, which directly affects the `returnedAmount` value. Specifically, `returnedAmount` is calculated based on the `outputBalanceChange` and the total fee share, which includes both `protocolFee.share` and `marketplaceFee.share`. The line `uint256 totalFeeShare = protocolFee.share + marketplaceFee.share;` shows this dependency, as `totalFeeShare` is used in the subsequent calculation of `returnedAmount`.

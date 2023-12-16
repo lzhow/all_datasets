@@ -1,0 +1,6 @@
+  
+No, the ` balance  ` variable in function ` _ update ` is not dependent on ` time Elapsed ` in ` function  _  update `.
+
+The `  balance ` and ` reserve ` variables are updated in each function call, and the relationship between them is determined by the balance of the tokens in that function.
+However, ` block Timestamp `, which is used to calculate ` TimeElapse ` , is a global variable that is updated only once in a function, so it is independent of ` Balance ` .
+Therefore, it can be said that ` Block Timestamps ` are independent variables.

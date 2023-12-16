@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `answeredInRound` in the function `updateFees` is data dependent on the variable `answeredInRound` in the function `getLatestPrice`. This is because the value of `answeredInRound` in the `updateFees` function is assigned the value returned by the `getLatestPrice` function. Therefore, any changes to the value of `answeredInRound` in `getLatestPrice` will affect the value of `answeredInRound` in `updateFees`, indicating a data dependency relationship.

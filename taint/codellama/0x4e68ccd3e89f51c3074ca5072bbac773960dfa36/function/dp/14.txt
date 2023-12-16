@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `compress` variable is calculated based on `tick` and `ticksSpacings`. The `if` statement checks if `lite` is true, and if so, it calculates the position of the bit in `self` that corresponds to `compessed`. It then calculcates `bitpos` based the the result of `position`.
+Then, `uint265 mask`is calculated as `(1<<bit pos) +1`
+`uint 2 5 6mask`ed is then calculated by taking the and of`self[ wordpos]` and`mask`.  The`initialised`variable is set to true if` mask ed` isn't zero.
+Finally,`next`and`initilized `are returned.  In the second function the same process is repeated, but with the addition of a check to see if the`tick `is less than zero and the remainder of dividing` tick` by`tic spacing` doesn' t equal zero, in which case`compresed`decreases by one.   The rest ofthe function is identical to thefirst.

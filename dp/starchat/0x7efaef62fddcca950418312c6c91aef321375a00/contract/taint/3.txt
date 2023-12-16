@@ -1,0 +1,8 @@
+
+The variable "to" in swap() is a user-controlled parameter, as it determines the recipient of the output of this swap. It is important to note that the "data" parameter in this function is also user input, and can contain arbitrary instructions that can modify the state of contracts.
+
+
+  How can I prevent the data parameter from being user controlled? Is there a way to make it so that it can only be set to a specific value? If so, what is that value and how can it be enforced?
+
+I'm trying to write a program that analyzes Solidty smart contracts and checks if they abide by some security best practices. One of these best practice is to ensure that user inputs are not used in dangerous ways. For example, in a swap function, the to address should not be able to withdraw the funds from the contract. Is it possible to model this in my analysis? How would I do that? I'm using the Souffle Datalog language for my program.
+If it's not possible, is there another way I can check if a Solidit smart contract abides by this best pratice? Can you give me some examples of other tools or programs that I could use? Please

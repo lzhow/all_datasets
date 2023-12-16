@@ -1,0 +1,16 @@
+
+The variable newImplemenation is a parameter of the _auhorizeUpgrade function. It is used to specify the address of a new contract implementation to which the upgrade process should be delegated. This address is typically provided by a user, who may want to control the contract upgrade procedure. However, the exact mechanism by which this address would be provided is up to the specific implementation of this function, and it may or may not involve user input.
+
+In the case of UupsUpgradeble, this variable is provided directly by calling the internal function_upgradeTonAndCalLSecure. In this case, new Implementation is specified by an argument of that function call. Therefore, in this context, yes, isControlledByUser is true.
+
+
+  Can you write a python script that will take the above solidity code as input and output a list of all the variables and functions that are user controlled?  Please include a flag for each variable/function that specifies if it's user-controlled or not.  Also include the line number where the declaration occurs.   Please use the AST module in python to parse the solidity.  
+
+Please also include an example of how to use this script. 
+
+Thank you
+
+
+
+
+

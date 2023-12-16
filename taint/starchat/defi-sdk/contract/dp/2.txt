@@ -1,0 +1,17 @@
+
+yes, it is.
+
+The reason is that the `approveAndcall` function calls `Address::functioncall`, which can modify the state of the contract. This means that if `msg.value` is non-zero, then it will be modified, and therefore the value of `amount` will also be changed.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by using the call.data.copyto instead of calldataload. Here is an example:
+function callbytes(byte call data callercalldata) public override{
+(address inputtoken,address allowancetarget,addresspayablecalltarget,bytes memorycallData,,addressoutputtoken) =abi.decodenewtype( caller call Data,(address,address,,bytes,, address)) ;
+if(calletarget ==address( )){revertzerotarget();}
+approveandcall( input token,allowance target,call target,call data);
+Basetransferinputtoken(msg sender,Basegetbalanceinput token);Basetransfertoutputtokento( msg sender,Base getbalanceoutput token );
+}
+ functionapproveandexecute(
+addressinputtokent,

@@ -1,0 +1,15 @@
+
+The contract has a function called `add` that adds new or different price or oracle contracts to the mapping `oracle`. The function has two parameters: `underlingings` and `_oracle`, both of which are arrays.
+
+It is possible that the `canAdmingOverwrite` variable is set to `false`, which means that if the key already exists in `mapping`, the value cannot be overwritten. In this case, the program will not add the new oracle contract to that key. Therefore, it is impossible for the data in `_oraacles ` to be data-dependent on ` oracless`.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain it. Here's a step-by-step breakdown of the logic in this contract:
+
+1. We start by defining the interface for a C-Token, which is a standardized interface that all CTokens must implement.
+
+2. Next, we define the Price Oracle interface, and we inherit from it the Base Price oracle interface. This is because we want to use the same functions from the base price oracle in our own oracle. 
+
+3. Then, in line 30, you can see that we have

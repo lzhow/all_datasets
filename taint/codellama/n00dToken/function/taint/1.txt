@@ -1,0 +1,4 @@
+  
+No, the `_ name` variable in function `constructor` is NOT controlled  by user because it's a constructor function and it will be called only once when the contract is deployed.
+
+The `_m int` function in line 226 is called in constructor and the `name_` parameter is passed to it. This parameter will always be the same for the entire contract, so it cannot be controlled or changed by any user interaction. Therefore, `_ _ name ` is a constant variable that is set once during the deployment of the smart contract and cannot change.

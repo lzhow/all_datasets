@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `target` in the function `functionDelegateCall` is an input parameter to the function. This means that whoever calls the function can specify the value of `target`. In the context of smart contracts, "the user" typically refers to any external entity that interacts with the contract, which includes other contracts as well as end-users. Since `target` is not hardcoded and its value is determined at the time of the function call, it is controlled by the user.

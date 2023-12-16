@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable  `_total` is used to calculate the reward amount in `function unStaking` but it is never updated or changed in any way. Therefore, the value of `_totals` will always be the same and will not be affected by the change in `_shares`.

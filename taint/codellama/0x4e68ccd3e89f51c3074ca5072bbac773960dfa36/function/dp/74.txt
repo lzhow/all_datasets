@@ -1,0 +1,5 @@
+  
+No, the variables ` lower` and ` feeprotocolOld ` are independent.
+
+The reason is that the `snapshotCummulatesInisde` function is an external function that is called by other contracts, and it does not modify the state of the contract. Therefore, it cannot affect the value of ` feeprotocolOld`.
+On the other hand, ` setfeeprotcol` is a function of this contract that modifies the internal state, specifically the slot  `slots0` . However, this function doesnot call ` snapshotcummulateinside` , so it can't affect its behavior.

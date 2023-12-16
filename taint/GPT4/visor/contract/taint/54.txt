@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `to` in the function `safeTransfer` is an argument provided to the function when it is called. Since this function can be called by any user of the contract, the `to` address is indeed controlled by the user who invokes the function. The user can specify any address they choose as the `to` parameter, thus exercising control over its value.

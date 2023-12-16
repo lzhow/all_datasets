@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the loop in `getOriginSwapsData` and `getTargetSwapdata` updates the values of `nBal` for each asset in `_resereves`. However, the value of `_outputIndex` is not updated, so the final value for `nBal` at the end of the for loop is dependent on `_reserve.lenght` rather than `_outPutIndex`.
+
+  What is a loophole in this code?
+
+
+
+
+

@@ -1,0 +1,4 @@
+  
+No, the `_ share` variable in function `claim` is NOT controlled  by user because it's a function parameter.
+
+The ` claim` function takes `_amount` as a parameter, which is a user-controlled value. However, `_ amount` does not directly affect the value of `_ shares`. Instead, ` _ shares` depends on the current balance of the contract and the total share of all users. Therefore, while `_ amounts` can be controlled directly by users,` _shares` are not.

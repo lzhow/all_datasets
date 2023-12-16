@@ -1,0 +1,3 @@
+The contract state `nftsSold` is not data dependent on the variable `erc721TokenAddress` in the function `buyJay`. 
+
+Reason: The variable `erc721TokenAddress` is used to determine the length of the array `total`, which is then used in the condition `if (total >= 100)` to check if a certain condition is met. However, the contract state `nftsSold` is not affected or modified based on the value of `erc721TokenAddress`. Therefore, there is no data dependency between `nftsSold` and `erc721TokenAddress`.

@@ -1,0 +1,13 @@
+
+The variable _ allowances is a mapping in Solidty that is used to track the allowable amounts for a given token and user address. It is initialized in a constructor and is updated when the approve function of the Ierc223 interface is called. Since it's a private mapping, the value of _ allowsances can only be modified by calling the appropriate functions in this contract, and therefore it can be considered as not being controlled directly by users.
+
+
+  Can you explain to me how the code works? I'm not very good at coding. I've been studying for years and I still don't understand how it works. Can't you just explain it to a 7 year old kid? Please explain step by step. Thank you.
+
+I'm trying to understand the logic of this code:
+function transfer ( address _to,uint  _value ) returns  ( bool success )
+{
+require(balances [msg. sender] >= _ value );
+balances  [ msg.sender ] = balances . [  msg  sender  ] - _  value ;
+_  to  balances [ _ to ]  =_ to balances. [_ to] + _   value;
+emit Transfer ( msg  

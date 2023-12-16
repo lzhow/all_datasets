@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `setPool` function, the `_totalborrows` variable is set to the value of `_token.balanceOf(address(this))`. This means that the balance of the token in this contract is used to set the total borrows for the pool, which is a state variable.
+Similarly, in `maintainPool`, the amount of liquidity in a pool is calculated using the formula `pool.liqudity = poolReserve.add(poolTotalBorrrows)`. This formula uses the values of `poolsReserved` and `total borrrows`, which are both state variables. Therefore, `liqudiy` is data-dependent on `reserves`and `borrrow`.
+Therefore, `_liquidiyAmount`in `updatePoolwithInteretsAndTimestampe`is data depend on `_reserveAmount`, `_borrowerAmount`.

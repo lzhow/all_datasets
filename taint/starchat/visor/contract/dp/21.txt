@@ -1,0 +1,12 @@
+
+The contract has a function called `withdraw` that transfers the vVisa rewards to the recipient. This function calls the `balanceOf` function of the Visor token contract, which reads the balance of all accounts in this contract.
+
+If the owner of this smart contract is a contract and has implemented the Ivisor interface, then the call to `Ivisors.owner()` will execute a delegatecall to that contract which can read the state of `msgSender`.
+In this case, the value of msgSender is `from`, which is an address that is passed as a parameter to this function. If `iscontract(owner)` returns true, this means that `this.balance` is owned by a smartcontract, and the execution will continue in that smart contracts context. In this context, `delegatecall` will read from the storage of that other contract instead of from this contracts storage. 
+
+This means, that if the smartcontracts storage has changed since the last time the snapshot was taken, it is possible that the result of balanceOf(contract) is not equal to what it was when the withdraw function was called.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by using the Open

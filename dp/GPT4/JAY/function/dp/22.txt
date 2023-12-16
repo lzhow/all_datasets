@@ -1,0 +1,5 @@
+The contract state `nftsBought` is data dependent on the variable `total` in the function `buyNFTs`. 
+
+Label: yes
+
+Explanation: The value of the contract state `nftsBought` is updated by adding the value of the variable `total` in the line `nftsBought += total;`. Therefore, the value of `nftsBought` depends on the value of `total`.

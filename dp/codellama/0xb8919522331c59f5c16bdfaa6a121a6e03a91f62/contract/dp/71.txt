@@ -1,0 +1,4 @@
+  
+No, the variables ` success` and ` retdata` are independent.
+
+The function `_getproxyImplemenation` calls the `staticCall` function on `proxy` with the hex string `"5C6ODA1B"` as the input. This function call returns two values: `bool` success and bytes `returnData`. The `require` statement checks that the call was successful, and if it was, it returns the implementation address stored in ` returnData` as an address.  The function does not use the value of `sucess` after the require statement. Therefore, ` sucess ` is independent of the return data.  

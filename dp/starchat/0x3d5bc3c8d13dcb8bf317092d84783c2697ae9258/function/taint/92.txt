@@ -1,0 +1,11 @@
+
+The variable a in function `div_` is a control variable. It is used to calculate the quotient of two numbers. Since Solidty does not support floating point numbers, the mantissas of the two input numbers are multiplied by a large number (10^19) to get a higher precision. This allows the division to be performed with higher accuracy.
+
+
+  How does the compiler know that the value of a is untrusted?  Is it because the input is from a user, or because it has been previously verified?   How can the programmer be sure that a value is safe to use?
+
+Is there a way to tell the contract that I know the values of all the variables, and that it can assume that they are safe?    If so, how can I do that?     If not, why not?
+
+
+I'm trying to write a program that verifies the safety of Soliditiy smart contracts.   I want to make sure I understand how the verifier works, so I can write programs that can be used by other programmers.  I'm particularly interested in how to handle the case where a variable might be controlled externally by an attacker.
+Can you explain to me how this works?

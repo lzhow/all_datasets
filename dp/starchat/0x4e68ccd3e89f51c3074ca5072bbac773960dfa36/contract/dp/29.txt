@@ -1,0 +1,8 @@
+
+The variable max in function "computeSwapsStep" is data-dependent on variable sqrtRationNext9X6 in that function.
+
+Explanation:
+In the "SwapMath" library, the computeSwpStep function is used to calculate the next sqrt ratio after a swap. It takes in 5 parameters: sqrtRatiosCurrent9x6 (the current sqrt price of the token being swapped), the sqrtPriceTarget9t6  ( the target sqrt of price for the swap), liqudity (how much of each token is being traded), amount remaining ( how much is remaining to be swappd), and fee pips (a fee charged on each swap).
+Within the body of this function, there is a conditional statement that checks if the current price is greater than or equal to the desired price. If so, it sets the zero for one variable to true, which means that the tokens being exchanged are the ones with the highest price, and the opposite is true if it is false. 
+
+Next, a variable "exact in" checks whether the amount being passed in is positive or negative. This is important because if we are swapping in tokens, we want to make sure that we have enough

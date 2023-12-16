@@ -1,0 +1,5 @@
+  
+No.
+
+The variable  `blockTimeStamp` is not dependent on ` target` because it is a local variable in function  transform and is only used to calculate the value of `delta`. The value ` delta`  is then used in calculating the values of  tick cumulative and seconds per liquidty cummulative.  The variable target is also a parameter in ` getSurounding Observations` and it does not affect the calculation of the variables `tick cumulatve` or `seconds per liqudity cummumlative`.
+ 

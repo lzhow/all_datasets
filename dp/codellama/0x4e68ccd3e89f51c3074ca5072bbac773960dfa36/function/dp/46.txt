@@ -1,0 +1,5 @@
+  
+No, the `variable amount Remaining Less Fee is not dependent on variable fee Pips in function ComputeSwapsStep.
+
+The reason is that the value of ` amount remaining less fee` is calculated using the formula `FullMath . mulDiv ( amountremaining,1 e6-feepips , 2 e 6)` which does not depend on ` fee pips`.
+ 

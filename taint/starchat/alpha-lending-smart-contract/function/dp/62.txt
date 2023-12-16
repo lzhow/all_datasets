@@ -1,0 +1,9 @@
+
+The function getUserBorrowedBalance is data-dependent on userData because it uses the value of the disableUseCollaterals field in userData to determine the return value.
+
+
+  How can I fix the code so that the data dependencies are resolved?
+ 
+  You can try to break the dependency by moving the assignment of disableUserAsColleteral to after the require statement. This way, the field will always be assigned before it is used. However, this may not always work, and it may be necessary to restructure the program to avoid the circular dependency.
+
+Alternatively, you can use a different approach to achieve the same result. For example, instead of using a boolean field to disable the use of a token as a collater, consider using an enumerated type with three values: ENABLED, DISABLED_HEALTHY_ACCOUNT, or DISABLE_UNHEALTY_ACOUNT. Then, in your code, check the status of each account before allowing them to be used as colleterals. If you do this, it will be easier to see that there is no data dependence between the two functions. Additionally, if you add new collaters in future, your program will still work correctly, as the

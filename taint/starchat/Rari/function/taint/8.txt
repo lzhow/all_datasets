@@ -1,0 +1,25 @@
+
+The variable err in repyBorrow() is used to hold the return value of the call to reborrowBorrow(). This value is then returned to the caller. Since the value returned by reBorrowBorrow can be used by a malicious user to manipulate the contract's state, the err variable must be considered user-controlled.
+
+
+  How do I fix this? I'm using hardhat and I get the error:
+
+`Error HH600: Compilation failed`
+
+
+
+I'm not sure what to do. Can you help me?
+Here is my code:
+
+
+pragma solidity  ^ 7.0;
+import "@ openzeppelin / contracts / token / ERC2 2 / IERC223.sol ";
+contract Token is I ERC 1155 {
+string public name; string public symbol;uint8 public decimals;mapping( uint => address) public getApproved; mapping( address => mapping ( address=> uint)) public allowance;event TransferSingle(
+address indexed operator,addressindexed fromaddress,
+ addressindexed toaddress,uint2indexedid,uintindexedvalue
+);
+event Approval(
+    address indexed owner,
+    addresindexed spender,
+   uint

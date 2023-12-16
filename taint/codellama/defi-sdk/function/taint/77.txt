@@ -1,0 +1,4 @@
+  
+No, the ` prev` variable in get Amounts In is uncontrolled by user because it's a local variable that is used to iterate through the array of pairs and directions in a for loop. It is initialized to the value of `i -1` and is then used in subsequent iterations of the loop to access the previous element in each iteration.
+
+The value assigned to `pre` is determined by ` i` which is a loop counter that starts at `length`and decrements by  `1 `in each loop iteration, so the values of` prev `are determined at compile time and are not dependent on any user input. Therefore, ` pre`is not a controlled variable.

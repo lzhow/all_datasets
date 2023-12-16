@@ -1,0 +1,4 @@
+  
+No, the ` root K` variable in function `_m intF ee` is NOT controlled  by user because it's a local variable that is calculated based on the current reserves of the pair and is used to calculate the minting fee.
+
+The `reserves` are controlled and managed by users through the functions `m i n t` and `b u r n`, which are called by external users. However, ` _ m i  nt F e e` function is called internally by ` m  i   n  t ` function and it does not take any external input. Therefore,  ` r o o t K ` variable is also not user-controlled.

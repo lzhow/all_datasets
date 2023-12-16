@@ -1,0 +1,13 @@
+
+The function `swap` is called by the `_swap()` function in `OrinMultiPooLibrary`. The function takes in two parameters: `curFactor` and `path`. `Path` contains the list of tokens that the swap will take place through. `CurFactor`, on th other hand, is a parameter that is used to determine the correct pair to swap through, as each pair has a unique address.
+
+In the case of the `Swap` function, the data dependence of `Supportingfee` on `AmountADescired`, is determined by whether or not the token that it is being swapped from is in fact the first token in path, which is assumed to be the input token. If it isn't, then the value of supportingfee is not dependent on amountadesired.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+    An incremental bundlers job is to take in many files and output a single file that contains all the code required to run the application. This is done by bundling together all of your javascript files, CSS files etc into a format that can be understood by your browser.
+
+    There are two main types of incremental bundleers

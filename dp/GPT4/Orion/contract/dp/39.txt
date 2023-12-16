@@ -1,0 +1,3 @@
+Unknown.
+
+The variable `inputInd` in the function `_swapCurve` is assigned the value returned by the function `ICurveRegistry(curFactory).get_coin_indices(pool, input, output)`. Without knowing the implementation of the `get_coin_indices` function and its dependencies on the `curFactory` variable, it is not possible to determine if there is a data dependency between `inputInd` and `curFactory`.

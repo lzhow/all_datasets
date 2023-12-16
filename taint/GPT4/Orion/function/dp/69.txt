@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `D_P` in the function `get_D` is not data dependent on the variable `Ann` in the function `get_y`. This is because `D_P` is only dependent on the values of `D` and `xp[j]` within the loop in `get_D`, and it does not use or modify the value of `Ann` from the `get_y` function. Therefore, there is no data dependency between `D_P` and `Ann`.

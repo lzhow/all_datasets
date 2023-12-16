@@ -1,0 +1,3 @@
+The variable `ratio` in the function `updateCompBorrowIndex` is not controlled by the user. 
+
+Reason: The value of `ratio` is calculated based on the values of `compAccrued_` and `borrowAmount`, which are both derived from internal calculations within the contract. The user does not have direct control over these values. Therefore, the variable `ratio` is not controlled by the user.

@@ -1,0 +1,4 @@
+  
+The variable 'to' in function 'safeTranser' is a parameter of the contract. It is passed as an argument to the 'transerFrom' function of IErc2O token and is therefore controlled  by user of this contract, not by this smart contract itself. Therefore, the answer is 'Yes'.
+
+In general, any variable that is defined as a function parameter is considered to be controlled externally, and not internally by a smart  contract unless it has been explicitly initialized by that contract's code.

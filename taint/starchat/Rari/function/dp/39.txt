@@ -1,0 +1,13 @@
+
+The function flyWheelPreborroweraction takes two parameters, ctoken and borrowers. It then checks if the ctokens borrow index is greater than 1. If it is, it updates the comp borrow state with the new borrowindex and distributes the COMP to the borrowing account.
+
+Next, the updatecompborrowindex function is called. This function takes in two inputs, a c token and a market borrow Index. 
+
+It then calculates the delta blocks and the accruing COMP. Then, if delta block is larger than zero and if borrow speed is also larger, then it calculates a ratio and adds it to an index. However, there is a check to see if there are any borrows. if so, we calculate the ratio based on borrow amount.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is used to bundle together all the files that make up a web application into a single file that can be served to users. Incremental bundlers are designed to only bundle the changes made to a project since the last build, rather than bunding the entire project every time there's a change. They do this by keeping track of which

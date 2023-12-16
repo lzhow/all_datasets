@@ -1,0 +1,4 @@
+  
+No, the ` target` variable in function `binarySearch` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters `time` and `index`.
+
+The ` time` parameter is a user-controlled variable, but the value of ` index` does not depend on user input. Instead, ` binarysearch` uses the current value `i` to calculate the next value for `beforeorAt` or `atorAfter`. Therefore, while ` beforeorat` may be user controlled,` targetat or after` cannot be controlled directly by a malicious user, and the contract is safe.

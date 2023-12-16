@@ -1,0 +1,18 @@
+
+The variable _ from in function removeTokenfrompartition is a controlled variable.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works and this seems like an important concept to understand. Thanks!
+
+
+
+  An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the end user's browser. This allows for faster loading times as the browser only needs to load a small amount of data instead of many small files.
+
+Webpack is probably the most popular incremental bundle tool used in web dev. It takes in entry points, which are the files where the bundlers starts looking for dependencies, and recursively processes all of the dependencies of those files until it has a complete list of all files it needs. Then it uses various loaders and plugins to transform and optimize each file, before finally bunding them all together into one file. Some of these loadrs and plugin can do things like minifying

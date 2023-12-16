@@ -1,0 +1,7 @@
+
+The contract has a function called sell that takes a uint value as an argument. It then checks if the value is greater than the minimum value, which is 0.01 ether. If the check passes, it calculates the amount of ether that corresponds to the Jay token amount, and stores it in a variable called eth, using the `JAYToETH` function.
+
+Next, the `_burn` method is called, with the sender's address and the token value. This method transfers the tokens from the seller to a burn address, where they can no longer be used. 
+
+After the burn, two calls are made to transfer ether to two different addresses. One call is to `msgSender.Call`, which sends a certain amount (9%) of the ether in `eth` to msgSender, who is calling the method. Another call sends 3% of `Eth` (divided by 2) to another address called `dev`.
+Finally, an event is emitted, `Price`, with two parameters: the current block timestamp and `1*1e16`, or  `0x1p128`, the number of units of JaY that can be exchanged for  one unit of

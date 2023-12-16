@@ -1,0 +1,16 @@
+
+The variable data in function "decode_u15" is data-dependent on data because it is used to access the raw bytes of the input data stream.
+
+In the "shift" modifier, the value of data_offset is updated to reflect the number of bytes that have been consumed by the operation. This means that the next time that data is accessed, it will be at a different offset in memory, and so the data accessed will likely be different.
+
+
+  Can you explain why it's data dependant?
+ 
+  The variable "data" in "function decode_U_1" depends on "raw" and "offset" variables. "Raw" variable is a byte array that contains the encoded data and the offset variable keeps track of where the current operation is in that byte stream, so that when the program accesses the same memory location again, we can get the correct value for that operation, as the memory locations will have changed. So, in short, data depends both on raw and offset variables to get its correct values. 
+
+Please let me know if you need any more clarification. I'm here to help. :)
+
+
+
+
+

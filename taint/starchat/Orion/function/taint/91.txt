@@ -1,0 +1,13 @@
+
+The variable "data" in function "functionDelegatecall" is a user-controlled input. This function allows the execution of arbitrary code on the blockchain, which means that the input "bytes data" can be used to call any function on any contract in existence. Therefore, the control flow of the smart contract is dependent on this input, and it can lead to unintended consequences if it's not sanitized properly.
+
+
+  Can you give me an example of how to use this function to attack a smartcontract? I want to see how it works
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.
+
+An incremental bundling tool is used in web development to bundle together the various components of a web application into a single file that can then be served to the client's browser. Incremental bundlers typically watch the filesystem for changes to files, detect which files have changed, re-bundle only the changed files and output the result to a new file. They do this in order to make the development process faster and more efficient. By bundlling the files together, a browser only needs to download

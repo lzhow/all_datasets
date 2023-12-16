@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ amount in calculate RoundUp LiquidtySharAmount is not dependent on liquidityBounus in Calculate Collaterl Amount. This is because the two functions are independent of each other. They have no shared variables, and the only connection between them is that they both use the same variable, pool, which is a shared variable. However, the pool variable is only used to access the liquidtyBunus variable in one of the functions, so it is still not a dependency.

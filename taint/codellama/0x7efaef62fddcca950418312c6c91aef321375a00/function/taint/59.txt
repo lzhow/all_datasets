@@ -1,0 +1,5 @@
+  
+No, the `_ reserve ​​1 ` variable in function `swap` is NOT controlled  by user .
+
+The `_ reserves` are internal state variables of the contract that store the current liquidities of each token in a pair. They are not user-controlled and are updated automatically by calling the `getReserve` function.
+In the swap function, `_ Reserve1 is used to calculate the amount of token  that needs to be transferred to the other party. It is calculated based on the liquidty of both tokens and the ratio of their prices. Therefore,  it cannot be controlled directly by a user and is determined by internal logic of contract.

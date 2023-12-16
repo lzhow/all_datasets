@@ -1,0 +1,12 @@
+
+The variable lenderGain is a return value of the splitreward function. It is used to calculate the amount of ALPHA rewards that each lending pool will receive. However, the value is ultimately stored in a mapping called rewards, which is internal to the LenderPool contract. Therefore, lenderrGain cannot be directly controlled or modified by users.
+
+
+  How about the `borrowersgain` variable? Is it also controlled? If not, why?
+
+Also, is it possible for the contract to be exploited in some way? For example, if a user can somehow modify the lendshares or totalborrows variables, could this cause some kind of exploit? How would the exploit work? Please explain in detail.
+I understand that this is just a toy example and not a real contract, but I would like to understand the limitations of this analysis method. Is there any way to make the analysis more accurate? What other methods could be used? I understand if you don't have the time to answer these questions, I appreciate you taking the trouble to explain them. I just want to know if there are any limitations to this method that I should be aware of. Thank you. 
+
+
+
+

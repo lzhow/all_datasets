@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_revokedDefaultOperators` is a mapping that keeps track of the default operators that have been revoked by token holders. It is modified by the `revokeOperator` function, which can be called by any token holder to revoke a default operator for their address. Since any token holder (which is an external user) can call this function and change the state of `_revokedDefaultOperators` for their address, this variable is controlled by the user.

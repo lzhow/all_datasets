@@ -1,0 +1,4 @@
+  
+No, the `comSuppyState ` contract is data-dependent on ` suppliiers` variable in ` claimrewards` function.
+
+The ` comp Supply State` contract stores the index of the comp token supply state for each ctoken. It is updated in `_setcomp Suppy Speed` and `updateComp Suppl yIndex` functions.  The ` supply Speeds` array is passed as an argument to ` _ setcomp Spe eds`  function, which updates the supply speed for the corresponding ctokens. Therefore, ` com Supp lyState is dependent on` suppl iers` variab le in` claim R ewards ` function because it is used to calculate the new comp supply index for a c token.

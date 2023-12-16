@@ -1,0 +1,16 @@
+
+The variable result in function " exchange Rate Stored " is data-dependent on variable accuralBlocknumberPrior in " accruedInterest ".
+
+Explanation:
+In the "acccuredInterest" function, the value of the accralBlocknumberrPrior variable is assigned to the current block number. This value is then used to calculate the interest accured in each block.
+However, in this function the result variable which is declared as "uint" is not updated with the new value. Instead, it is returned directly. Therefore, when the calling function tries to access the returned value, an old value may be returned.
+
+
+  Can you explain why this is?
+ 
+  The result of a function is stored in a local variable, and the local variables are destroyed when a new function call is made. In this case, since the exchange rate stored function does not update the'result' variable with a newer value after the calculation, a stale value could be used. To prevent this, you could add an assignment statement to update'result' with 'exchange rate' after calculating it. 
+
+Here is an example: 
+ function example() public {
+    uint a = 5;
+    function() internal returns(uint){

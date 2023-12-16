@@ -1,0 +1,5 @@
+Label: no
+
+Reason: The variable `SWAP_DESCRIPTION_TYPEHASH` is not explicitly shown in the provided code snippet. However, based on the context and typical patterns in Solidity smart contracts, `SWAP_DESCRIPTION_TYPEHASH` would likely be a constant hash value used for EIP-712 signature verification, which is a standard for hashing and signing of typed structured data.
+
+Such a hash is usually defined as a constant at the contract level and is not meant to be modified during the contract's lifecycle. It is used to ensure that the structure of the data being signed off-chain matches the expected structure within the contract. Since it is a constant and not influenced by user input or transaction data, it is not controlled by the user.

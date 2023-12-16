@@ -1,0 +1,11 @@
+
+The variable y in function `sub` is **not** controlled directly by user input. However, the value of y is derived from user-controlled input, and the result of the subtraction is then used in a comparison to determine the sign of z. This means that the comparison is vulnerable to reentrancy attacks, where the attacker can manipulate the inputs to the contract in order to change the outcome of this comparison.
+
+To prevent this, you could use a safer comparison operator such as `>=` or `==` instead of `>`. This would make it so that y cannot be set to a value that would cause the expression to evaluate to false, thus preventing the reentrant attack.
+
+
+  Can you give me an example of how to do that? I'm not very good at coding. I just want to know how I can make my code more secure. Can I do this manually? Or do I need a tool? Please help me!
+
+
+
+

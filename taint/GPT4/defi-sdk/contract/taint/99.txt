@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `PERMIT_TYPEHASH` is a constant hash value computed from a predefined string using the `keccak256` hash function. It is defined as an `internal constant` which means its value is set at compile time and cannot be changed at runtime. Since it is not influenced by any user input or external interaction after the contract is deployed, it is not controlled by the user.

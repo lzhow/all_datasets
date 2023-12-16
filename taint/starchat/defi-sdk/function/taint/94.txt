@@ -1,0 +1,11 @@
+
+The variable INPUT\_TYPE\_HASH is used to create a unique hash for each input in a transaction. This hash is then signed by each of the users involved in that transaction, allowing each user to verify that the input they are signing is valid and has not been tampered with.
+
+However, the value of this variable is generated using a hashing function, which means that it can be easily computed by anyone who has access to the contract's source code. Therefore, this value is considered to be "controlled by" the developer, not the end user, and is therefore labeled "no".
+
+
+  How can I prevent this? I need to use this contract in production.
+ 
+  You can use a library like OpenZeppelin's ECDSA library to sign the data instead of using the built-in Solidty functions. That way, even if someone gets access the sourcecode, they cannot modify the hash. 
+
+Another option is to store the hashes in an external contract, where they can't be modified. Then, you can check if a hash has been used before by calling the isUsed function in your contract. If the result is true, then the signature is invalid. However, that requires an additional contract call,

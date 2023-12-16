@@ -1,0 +1,15 @@
+
+The contract function'setUseruseasCollatera' is used to set the user's preference for using a particular token as a collater for a loan. This preference is stored in a mapping called 'userPooldata' which is declared as follows:
+
+mapping(address => mapping( address => Userpooldata)) userpoolData;
+In this mapping, the first address key corresponds to the address of the borrower, and the second address corresponds the the token address.
+Userpool data is a struct that contains two fields: 'disableuse ascollateral' (a boolean value indicating whether the collator is allowed to be used) and a 'loan' field that stores the loan ID for which the preference applies. 
+
+Now, let's consider the line of code that is highlighted in bold: 
+ 'userData. disableuse Ascollateral =! _ useAscollaterra'.
+This line is setting the value of 'disbaleuse' in 'UserPool Data' to 'not _Useascollatorla'. This means that if '_Use asCollaterral' evaluates to true, then 'Disableuse'will be set to false, otherwise it will remain true.
+
+
+ 
+ 
+  

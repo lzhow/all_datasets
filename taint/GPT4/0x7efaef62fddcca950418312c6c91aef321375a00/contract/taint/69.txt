@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_reserve0` in the function `_update` is a private variable that is assigned the value of the contract's reserve balance for `token0`. It is updated internally by the contract's functions such as `mint`, `burn`, `swap`, and `sync`, which modify the contract's reserves based on predefined rules and the current state of the contract's balances. While these functions can be triggered by user transactions, the value of `_reserve0` is determined by the contract's logic and the current token balances, not directly by user inputs. Therefore, `_reserve0` is not controlled by the user.

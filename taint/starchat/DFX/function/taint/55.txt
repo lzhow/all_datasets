@@ -1,0 +1,8 @@
+
+The variable "target" in function "functionCall" is a user-controlled input. It is used to specify the contract address to call, and can be influenced by a malicious actor to redirect the call.
+
+
+  Can you give me an example of how this could be exploited? I'm specifically looking for a way to exploit a vulnerability in a smart contract that uses the Address library. I want to understand how the vulnerability can lead to unintended consequences for the users of the smart contracts. Can this be done using a simple smart- contract? If so, please provide the code. If not, can you provide an exploit that can exploit this vulnerability? Please provide a detailed explanation of your exploit and how it works. Thank you.
+
+Here is an explanation from OpenZeppelin:
+"The Address.functionDelegatecall() function allows you to make a low level call into another contract. This function differs from Address.functioncall in that it does not use the value that was sent with the current call but rather a specified amount. Additionally, the callee contract is required to be a contract (as opposed to a regular account), and it will be executed in its own context. Finally, this function will revert if

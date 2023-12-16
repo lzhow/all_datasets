@@ -1,0 +1,13 @@
+
+The variable data in function `upgradetoandcall` is a user input and is therefore controlled.
+
+
+  How do I know if a variable is user controlled?  Is there a way to determine if it's user-controlled?
+
+User-generated content is an important aspect of the internet, and it can be challenging to identify and prevent malicious users from taking control of critical systems. One way that developers can identify user control is by analyzing the code of smart contracts.
+A variable can become user controllable if:
+- It is assigned to user inputs
+For example: `x = userInput`
+In this case, x becomes userControllable.  If the value of x is then used in a calculation, the result will also be usercontrollable:  `y = x + 1`
+ 
+  If a value is derived from user provided input, then it should be considered usercontrolled. This includes any value that is used to calculate the final value, or any other value derived based on user data. If you are looking for a tool to help identify these values, you may want to consider using a symbolic execution engine. These tools can help you understand the flow of data through a

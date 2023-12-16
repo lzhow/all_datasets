@@ -1,0 +1,5 @@
+  
+The variable token AOr W E T H in add LiquidtyFrom Exchange is labeled as 'No'.
+
+This is because the value of token aOr weth is determined by a function call to the Or ionMulti Pool Library.
+Specifically, the getPair function of the I Or ionPool V2 Factory is called, which returns the address of a pair contract for the given tokens. If the pair does not exist, a new pair is created. In either case, this function does  not take any user input. Therefore, we can conclude that the tokenaOrweth variable is uncontrolled by user and is therefore labled as No.

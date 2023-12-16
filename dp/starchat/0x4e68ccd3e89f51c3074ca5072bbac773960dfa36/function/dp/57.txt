@@ -1,0 +1,14 @@
+
+yes, it is.
+
+The reason is that the loop in `write` depends on `index`, which is updated in each iteration of the outer loop. This means that `blocktimestamp` and `tick` are also data-dependent on these two values.
+
+
+  Can you explain how the data dependencies are calculated?
+ 
+  Sure! Let's start with the innermost loop, which has the form:
+`for (i =...) self.[i]...`
+In this loop `self` is an array of `Observation` structs, and the index `I` varies from  `current` to `next`.
+Since the `for` loop is executed in order, the value of each element in this array is dependent on all previous values of that array. In other words, `last` (the value at index I) is data dependant on both `timestamp`, `ticker`, and all other elements in that same array, since they all have to be updated before the next iteration. 
+
+Now, let's move on to the outermost loop: `while (true)...`. This loop has no dependencies on any of its variables, so it can be executed independently of all others. However

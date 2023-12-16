@@ -1,0 +1,17 @@
+
+The variable "b" in function "divUInt" is a control variable. It is used to divide the numerator "a" by it. If the value of " b" can be controlled, then it can cause the division by zero error.
+
+
+  Can you give me an example where the "variable b is uncontrolled"?
+ 
+  Yes, here is an exmaple where " variable b " is "uncontrolled":
+
+pragma solidity  ^ 3.4.2;
+contract ControlledVariable {
+    uint public a = 10;
+    function changeA( uint _a) public {
+        a= _ a; // Here, the control of the "_a " value is passed to the a variable
+    }
+}
+In this example, " a " can change its value by passing the desired value to " changea ". However, if " _ " was not passed, there would be no way to change the original value. In this case, control over " " will be passed from the caller to a.
+This is just one of many examples where control can pass from one variable to another. This is why it's important to always check the code carefully before using it, especially when dealing

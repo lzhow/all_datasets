@@ -1,0 +1,9 @@
+
+The contract is not a standard ERC223 token contract. It is a modified version of the Pancakeswap liqudity pool contract, which is an implementation of Uniswap V2.
+
+In the `Burn` function, the `_totalSuppy` variable is used to calculate the amount of token 1 and token2 to be burned. This variable depends on both the token balances and the total supply of tokens in circulation. Since the balances of both tokens and total supplies can change at any time, it is possible for the value of `_toalSupply `to change, and therefore the values of `amount1` and ` amount2` to change.
+
+
+  I'm sorry, I made a mistake. I meant to say that the state variable `liquidity` is data-dependent on `_reserve`, `balance`, and `_mintFees`.
+ 
+  The liqidity variable in this contract depends directly on reserve0 and reserve1. Reserve0 is dependent on balance of Token0. Balance of toekn0 depends of totalsupply. Totalsupply is also dependent of balance and reserves. So in total the liquidty variable has a complex inter-dependence on many

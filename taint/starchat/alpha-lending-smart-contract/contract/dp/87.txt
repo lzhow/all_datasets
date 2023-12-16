@@ -1,0 +1,9 @@
+
+The contract variable `blockperweek` is data-independent.
+
+However, the `tokens per block` array is a contract-level state that is modified by the owning contract. This means that the value of `tokensperblock` can change dynamically, and therefore the data dependence relationship between `toblock`, `fromblock,` and `totalamount` cannot be determined statically.
+
+
+  How can I determine if a variable is state or not?
+ 
+  You can determine whether a given variable in a smart contract is considered to be state by examining its scope. A state variable has a lifetime that extends beyond the execution of a single function or method. State variables are typically declared at the level of the smart contracts, as opposed to within individual functions or methods. If a state variables is declared within a function, it is likely to have limited scope and visibility, making it a candidate for a "local" variable rather than a true state. Conversely, if the state is defined at a higher level, such as within the body of an inherited contract or a library, then it can be considered a more global state, with broader visibility and potentially a longer lifetime. In general, you should strive

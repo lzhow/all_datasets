@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `function recover` of the contract, the input parameter `signatures` is a `bytes` type, which is an array of bytes.
+When the signature is passed to the recover function, it is first converted to a bytes type using the abi.decode function.  The signature bytes are then extracted from the bytes array using assembly code. Specifically, `r` and `s` are extracted using `mload` instructions, and the v value is extracted as a byte using a similar instruction. These extracted values are used to call the internal `ecrecovery` function and return the address of signers.  

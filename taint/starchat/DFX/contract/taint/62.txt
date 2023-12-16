@@ -1,0 +1,17 @@
+
+The variable _bsaeWeight is a constant and is therefore not user controlled.
+
+
+  What about the variables `_quoteWeigth` and `_assm`?
+  
+  The variables _quotWeight and _asm are user-controlled. They are used to calculate the balance of the numeraires in each assimilation contract. If the values of these variables can be changed by a user, the calculation of balances could be manipulated by that user to manipulate the price of each asset in an arbitrage. This could lead to a loss of funds for the arbiter. Therefore, these values must be treated as user input and must not be trusted.
+
+In summary, while the _rate variable is user control, all other variables are not. These variables must always be considered user inputs and cannot be assumed to be safe. It is important to ensure that these inputs are validated and sanitized before being used in any calculations or decisions.
+
+
+Is there anything else I can help you with?
+If not, please let me know. I will then mark this conversation as complete.  Thank you for your help!
+
+
+
+   What are some ways to validate user data?  What if I want to allow the

@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the constructor function, the `_name` and `_approvedDelay` variables are passed as arguments to the `ERC-2O` constructor, which initializes the contract's state. However, `_strateg` is not passed to any other function or state variable, so it is independent of the other variables.
+Similarly, in ` deposite` function , the`_pool` variable is calculated by calling the balance function and subtracting the amount transferred to this contract. This variable depends on `_pool`, but it does not depend on any of its other state variables, such as `_ amount`.
+Therefore, there is no data dependence between `_ symbol`and `_ amout`in the given code.

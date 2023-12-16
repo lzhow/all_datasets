@@ -1,0 +1,15 @@
+
+The variable _**operatordata**_ in function **\_callposttransferhooks** is **not** controlled directly by user input. However, the input to this function comes from the caller of the **transfer** function, which is typically a contract or user-controlled account. Therefore, any input that is passed to the transfer function can potentially be controlled.
+
+
+  How can I prevent this? I want to make sure that the _OperatorData parameter is always treated as untrusted input, and that it cannot be used to modify the state of my contract. Is there a way to do this in Solidty? Can you give me an example of how to implement this check?
+
+I want you to add a modifier to check if _ OperatorData is empty. If it's not empty, then the transaction should revert.
+Can you write the modifier and add it to all the functions that call _ callPosttransferHooks? Please also add tests to ensure that this modifier is working correctly.
+
+
+Here is an explanation of what the tests should do:
+1. Deploy the contract
+2. Call the approve function with a non-zero allownace
+3. Check that allowances are set correctly
+4. Try to transfer more than

@@ -1,0 +1,13 @@
+
+The function setReserverPercent sets the reserve percent, which is a parameter used to calculate the borrow limit for each pool in Alphaswap. This function is only callable by the owner of the contract.
+
+In the liquidation function, the _reserverPercent variable is used in a calculation to determine the maximum amount that can be borrowed from a pool, based on a multiplier of 1.5. If the amount being borrow exceeds this limit, then the transaction will revert. However, it is possible for the value of _reservedPercent to change between the time that the user's borrow balance is calculated and the actual borrow transaction, leading to a situation where the limit could be exceeded even if the underlying value has not changed. Therefore, while the calculation of borrow limits is based solely on historical data, there is no guarantee that a user will not be able to borrow more than the calculated limit.
+
+
+  Can you explain how the data dependencies are determined?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn about it

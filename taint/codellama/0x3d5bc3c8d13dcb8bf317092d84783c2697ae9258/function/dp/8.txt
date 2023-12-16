@@ -1,0 +1,4 @@
+  
+No, the variables ` c TokenBalances` and ` block Delta` are independent.
+
+The variable c token balance is a state variable that is stored in a mapping called account tokens. It is not affected by the execution of the acc rue interest function. On the other hand, blockdelta is calculated by subtracting the current block number from the previous blocknumber. This calculation is performed in subuint function, which is called in accrate interest. Therefore, this variable is dependent on block numbers, but it is independent of ctokenbalance.

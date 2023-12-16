@@ -1,0 +1,12 @@
+
+The variable _Reserve0 in function MINT is NOT controlled directly by users. However, the value of _Reserver0 can be influenced by user actions such as approvals, transfers, and burns. For example, if a user approves a contract to spend a certain amount of tokens, then the _reserver0 value will be reduced by that amount. Similarly, when a transfer or burn occurs, its corresponding _reserved0 variable will also be adjusted. Therefore, in order to ensure the accuracy of the calculation, we need to consider the impact of user operations on the reserve variables.
+
+
+  How can I check if my smart contract is susceptible to reentrancy attacks? I'm using Solidty and have checked for any calls to external contracts. I've also made sure that all state variables are internal or private. Is there anything else I should be looking for?
+
+I'm trying to deploy my contract on BSC testnet.
+Here is my code:
+pragma solidity ^04.23.6
+import "@openzeppelin/contracts/token/ERC721/extensions/IER775Recipient.sol";
+contract NFT is IERCC785 {
+   

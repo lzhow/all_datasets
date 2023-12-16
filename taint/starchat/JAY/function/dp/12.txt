@@ -1,0 +1,13 @@
+
+The contract has a function called update fees. This function is used to update the fees for selling and buying NFTs.
+
+In the update fee function, the latest price of the NTF is retrieved from the price feed. Then, a variable called _ price is calculated by multiplying the retrieved price by 0.001 ether. 
+
+Next, we check if the time stamp is greater than the next fee update. If it is, then we set the sell Nft fee to be equal to the difference between the current price and the previous price. We also check to make sure that the owner of this contract is either the sender of a transaction or the fee is within a certain range.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being stuck in tutorials all day and not being able to apply what I have learned. I want to create something useful, but I don't know where to start. Some suggestions:
+1. Start with the basics and work your way up. A great place to begin is with a tutorial that introduces you to Python syntax and how you can use it to perform simple tasks. For example, you could start

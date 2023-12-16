@@ -1,0 +1,10 @@
+
+The contract has 4 state variables: `totalsupply`, `balanceOf[msgSender]`, `_reserve{0/1}`, and `klast`.
+
+`reserveX` is dependent on `msgsender` because it is used to calculate the amount of tokens that can be swapped in a single transaction.
+`_reserve` variables are dependent because they represent the total supply of each token in existence. If the supply changes, the reserves need to be updated.
+
+
+  I'm sorry, but I don't understand what you mean by "dependent on". Could you please explain what that means?
+ 
+  "Dependent" in this context means that the value of a variable or state variable depends on another variable. In the case of the code you provided, it means the values of `Reserve0` and/or `Balance1`, which are both state values, depend on other variables. For example, if the `Swap` function were to change the order of operations, such that `Reserve0 * Balance1 < Balance0 ^  Balance  * Reserve1`. Then the calculation of `_k` would be incorrect, because the `_totalSuply` variable would not be correct. This is because `TotalSupply`

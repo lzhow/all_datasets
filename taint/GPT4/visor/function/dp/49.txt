@@ -1,0 +1,3 @@
+yes
+
+In the provided Solidity function `mul`, the variable `c` is directly calculated using the variable `a` in the expression `a * b`. This establishes a data dependency relationship between `c` and `a`, as the value of `c` is determined by the value of `a` (and `b`). Additionally, there is a conditional check `if (a == 0) return 0;` which also affects the flow of the function and the eventual value of `c`. If `a` is zero, `c` is not even calculated, and the function returns 0 immediately. Therefore, `c` is data dependent on `a`.

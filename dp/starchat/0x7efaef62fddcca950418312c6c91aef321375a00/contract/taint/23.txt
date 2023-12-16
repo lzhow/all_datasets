@@ -1,0 +1,12 @@
+
+The variable _Reserve1 is a controlled variable in that it depends on the state of the contract. Specifically, the value of _Reserver1 depends upon the balance of token  and the total supply of LP tokens.
+
+If the token balance is 50 and total LP token supply is also 40 then the reserve  will be 6.2, if token is balanced at 75 and LP supply remains  at  42 then reserve will become 8.4. 
+
+This is because the calculation of reserve is based on a ratio of two balances and a total balance.
+
+
+  How can I prevent the users from changing the values of these variables? I want to make sure that the variables are always controlled in a certain way. How do I do that? Can you give me an example of how to do it?
+Can you also explain to me how the code works? What are the functions and what do they do? How does the program work? Please explain it in simple terms. I am not very good at coding, so please explain in layman's terms if possible. Thank you. 
+ 
+  The user can't change the _reserves variables directly. They can only call

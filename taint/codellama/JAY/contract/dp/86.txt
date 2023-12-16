@@ -1,0 +1,6 @@
+  
+No, the variables `_dev` and `_priceFeed` are independent of the `_erc2359` variable in `updateDevwallet` function.
+
+The reason is that the `devWalllet()` function is called only by the owner of contract, and the ownership is not changed by any other function in this contract. Therefore, it is safe to assume that `_addr` is independent from `_tokeAddress`.
+Similarly, `_pricFeed()` is also independent because it only depends on `pricefeed` which is a constant value and not affected by other functions in contract
+On the other hand, `erc-2299()` depends of `_tokneAddress`, which can be changed in other contracts. 

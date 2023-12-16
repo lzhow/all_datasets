@@ -1,0 +1,14 @@
+
+The variables in both functions are labeled as "unknown" because the tool is unable to determine the exact behavior of the code. Specifically, the behavior is dependent on how the variables are used in each function.
+
+In the `isAccountHealty` function, `_user` is not used directly, so it is considered "independent" of `_reservPercent`. However, `totalCollateraBalance` and `totlaBorrowBalnce` are both derived from `_users` collateral and borrow balances, which are themselves derived based on `_ReserveBalance`. Therefore, it's possible for the values of `toalCollatralBalance`, `totaBorrowalBalance, and `_ReservBalance ` to change between the two functions, leading to an inaccurate result.
+
+
+  Can you give me a list of all the functions and variables used and their dependencies?
+ 
+  Yes, I can provide a comprehensive list. Here is a summary of each variable and function in your code:
+- Variables:
+  - `_collateral` - Independent
+  ```
+  (,) uint totalcollaterbalancebase,uint totalborrowbalanceBase = getuseraccount(_users)
+  returntotalborrowbalnacebase<=totalcoll

@@ -1,0 +1,5 @@
+
+yes, it is data-dependent on token A.
+
+The reason is that the `getWETHPair` function in `OrinMultipoolLibrary` is called with `pair = getPairFor(_factoryAddress, _token0Address == _wethAddress? _wmaticAddress : token, weth)` as its first argument, where `_tokenAddress` and `_wethZAddress are the values of `tokens` passed to the call to `createPool`, and `weht` the value of `_WethAddress`.
+In the case where `WetheAddress!= address0`, the first branch of the ternary operator in this expression will evaluate to `_wEthAddress`, which is a local variable in `_addliquidity`. This local `_Wethaddress` variable is assigned the result of a call `sorttokens(tokens[index], tokens[nextIndex]);`, where the tokens array is passed as the argument to this function. This call returns a tuple containing the two addresses in sorted order. If the `_tokensAddress[currentindex] < _tokensaddress[nexIndex]` then the expression evaluates to true, and the local `nextindex` will be incremented by 3, otherwise it will remain the same

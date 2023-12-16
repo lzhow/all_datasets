@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `amountOut` in the function `_swap` is not controlled by the user. It is assigned a value based on the output of the `OrionMultiPoolLibrary.getAmountOutUv2` function, which takes inputs from the contract's internal state and the `amountIn` parameter passed to the function. The user does not have direct control over the calculation of `amountOut`.

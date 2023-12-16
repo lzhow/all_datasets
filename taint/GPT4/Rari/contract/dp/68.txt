@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `c` in the function `add` is a local variable that is calculated within the scope of the `add` function by adding the parameters `a` and `b` that are passed to this function. Similarly, the variable `b` in the function `sub` is a parameter of the `sub` function and is used locally within that function to perform a subtraction operation. Since both `c` in `add` and `b` in `sub` are local to their respective functions and there is no interaction between these functions that would pass data from `b` in `sub` to `c` in `add`, there is no data dependency relationship between these two variables. Each function's local variables are independent of the other's, and their scopes do not overlap.

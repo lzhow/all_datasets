@@ -1,0 +1,9 @@
+
+The variable proofFlag is a boolean array that is used to determine if a node in a Merkel tree is on the right or left side of the tree. It is initialized to false and is then updated based on if each proof element is even or odd.
+
+In the process of verifying a multi-proof in Solidty, the proof is first split into two arrays, one containing the nodes and the other containing booleans that indicate if that node is part of a left or right branch. Then, each pair of nodes is hashed together using the _pairHash function. This results in an array of hashes that are then used as the input to the next level of hashing. If the length of this array is odd, then the last element in this list is added to it's own array and that array becomes the new input for the hashing process. 
+
+This process continues until the root of of Merkletree is reached. At this point, if all of these steps were successful, and there were no errors, we can be sure that the data we have is correct and has not been tampered with.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a

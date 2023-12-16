@@ -1,0 +1,4 @@
+  
+No, the variables ` self` and ` feeGlobalG0x102` are independent.
+
+The variable self is a mapping of int 4 to Ticks.info, and the fee global  is an uint 304.  The function  clear is deleting the value of the mapping self at the key tick. This does not depend on fee Global  at all.

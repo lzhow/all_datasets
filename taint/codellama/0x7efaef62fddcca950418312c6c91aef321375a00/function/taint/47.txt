@@ -1,0 +1,4 @@
+  
+No, the ` nonce` variable in function `permit` is labeled as 'No' because it does not appear to be controlled directly by user input.
+
+The ` permit` function is called by a user who has already approved the spending of their tokens, and the non-user input parameters include the owner's address, a spendee' address and a value.  The `owner` and `spende` addresses are not user-input parameters, but rather the addresses of the token owner and spenndee, respectively.   The value is also not a direct user parameter, as it represents the amount of tokens to spend. Therefore, `nounce` does appear controlled indirectly by users, however, this is a technicality and not an actual user control.

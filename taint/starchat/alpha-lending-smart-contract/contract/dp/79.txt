@@ -1,0 +1,9 @@
+
+The function is data-dependent on itself because it updates the offset field of the Data struct.
+
+
+  Can you explain why it is dependent on its own offset?
+ 
+  The offset is used to keep track of where in a byte array the next value should be read. If the data is not dependent upon the current offset, then the value of offset will remain unchanged, and the same value will be returned. However, if the input data depends on offset (e.g. because the length of a string is encoded as a prefix of that string), then this will cause the output to be dependent not only on that input, but also on all previous inputs. This is because offset can be changed by the decoding function, which means that the subsequent call to the decode function will read from the wrong position in memory.
+
+To illustrate this, consider the case where the first 4 bytes of an input string are the number of characters in that same string. Let's call this number `n`. If we read `data[0:n]` as an unsigned integer, we can then read the rest of `input[n:]` as `bytes(input)[n:].decode_function()`. However if `offset` is updated

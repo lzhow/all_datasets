@@ -1,0 +1,3 @@
+Label: no
+
+Reason: In the provided Solidity contract code, the variable `decimals` and the variable `name` are both parameters of the constructor function. The variable `decimals` is used to set up the decimal places for the ERC20 token by calling `_setupDecimals(decimals);`, while the variable `name` is used to initialize the ERC20 token with a name by passing it to the `ERC20` and `ERC20Permit` constructors. There is no direct interaction or computation between `decimals` and `name` within the constructor function that would establish a data dependency relationship. Each variable is used independently for different purposes, and the value of one does not influence or determine the value of the other. Therefore, they are not data dependent.

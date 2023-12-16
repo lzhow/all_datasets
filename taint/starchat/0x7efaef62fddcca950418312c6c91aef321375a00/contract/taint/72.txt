@@ -1,0 +1,12 @@
+
+yes, the balance of token  is user controlled.
+
+  What is a good way to mitigate this?  I want to make sure that I can use this tool to analyze my own contracts.  Is there a way I could modify the code to remove this vulnerability?   I am not a solidity expert, so I would appreciate any suggestions you have.   Thank you.
+
+I am trying to write a smart contract that will allow me to sell and buy NFTs. I have written a minting function that allows users to mint NTFs and a buying/selling functions that allow users buy and sell Nfts. However, since I don't have any experience with solidity, there is always a risk that someone could find a vulnerability in my contract. Is it possible for me use a tool like mythril or slither to find these vulnerabilities? If so, how do I do that? I appreciate your help. 
+
+Here is my code:
+pragma solidity ^04.23.0
+import "@openzeppelin/contracts/token/ERC721/I ERC775Token.sol";
+contract NftMarketplace is Ierc765 {
+    address private owner

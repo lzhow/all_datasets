@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `upper` in the function `snapshotCumulativesInside` is a local storage pointer that refers to a specific tick in the `ticks` mapping, based on the `tickUpper` parameter. It is used to access and manipulate the data associated with that particular tick.
+
+The variable `delta` in the function `swap` is a local variable that is calculated as a portion of the `step.feeAmount` based on the `cache.feeProtocol`. It is used to adjust the fee amount and update the `state.protocolFee`.
+
+There is no direct assignment or computational expression that would create a data dependency between `upper` and `delta`. They operate within their respective functions and do not influence each other's values. Additionally, `upper` is related to the state of a specific tick, while `delta` is related to the fee calculation within a swap operation. They are conceptually and functionally unrelated, and there is no shared state or cross-function interaction that would create a data dependency between them.

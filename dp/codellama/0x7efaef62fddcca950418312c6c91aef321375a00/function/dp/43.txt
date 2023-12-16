@@ -1,0 +1,6 @@
+  
+No, the ` liquid` variable in function  `m int` is not dependent on ` balance 1 ` in ` swap`.
+
+The reason is that the two functions are separate and have no direct interaction.
+In the mint function, ` liqudity ` is calculated based on several variables, including ` _ reserve0 ` and `  _ reserver1 `.
+On the other hand, in swap,  the value of ` balanace1  is used to calculate the amount of tokens to be transferred to the recipient. However, this value is only used in a conditional statement and is never used directly to compute the liquidty. Therefore, there is no data dependence between the variables.

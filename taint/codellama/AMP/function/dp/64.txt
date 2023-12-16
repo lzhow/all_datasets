@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `revokeOpeartor` function, the `_authoriziedOperator` mapping is updated with the value `false` for the key `_operatior`. This means that the state of the contract is modified, and the mapping now contains a new value for `_operation`.
+On the other hand, in `AuthorizeOpreatorByParition` the same mapping `_authriziedOprator` is also updated, but with a different value. This indicates that there is a dependency between the two functions.
+Therefore, we can conclude that `_operaotr` variable in revokeOperator is data-dependent on `_opeartior` varaible in AuthorizeOperatoByPArition.

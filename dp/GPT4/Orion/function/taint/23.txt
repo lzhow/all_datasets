@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `amountIn` in the function `doSwapThroughOrionPool` is not directly controlled by the user. It is calculated based on the input parameters and the internal logic of the function. The value of `amountIn` is derived from the `amount_spend_base_units` variable, which is calculated using the `swapData.amount_spend` parameter. The `swapData.amount_spend` parameter is passed as an argument to the function, but its value is determined outside the function and is not directly controlled by the user within the function. Therefore, the variable `amountIn` is not controlled by the user.

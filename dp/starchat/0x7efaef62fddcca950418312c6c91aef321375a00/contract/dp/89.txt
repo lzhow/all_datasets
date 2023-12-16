@@ -1,0 +1,10 @@
+
+yes, it is.
+
+The reason is that the `_safeTranfer` function in `PancekeERC`2`0 contract calls the `transfer` method of the token contract, which can modify the state of that contract. This can cause the value of `reserve` to change, and therefore affect the calculation of liqudity.
+
+  What is a good tool to find data dependencies in Solidty code?
+
+
+
+

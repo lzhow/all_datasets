@@ -1,0 +1,27 @@
+
+The variable account in function "isContract" is data-dependent on variable target in "functioncall" because the value of target can be changed by the called function, which could affect the size of the contract at account.
+
+
+  Can you give me a shortened version of this code?
+ 
+  ```
+  function f(address a) internal {
+    g(a);
+  }
+  //...
+  g = address(new G());
+  f();
+  delete g;
+  h(g); // error
+  i(f);  // ok
+  j(this);   // also ok, but not recommended
+  k(x => f()); // not ok either
+  l(function() { f() }); // or this
+  m(uint x) = f; // this is ok too
+  n(bytes calldata x, uint y) external; 
+  
+  ```
+  
+ 
+   
+    What is a good way to learn how to code in python? I have heard that it is important to practice a lot so you get better at it, however I do not know where to start. I am a high school student who is interested in coding and computer science. Any recommendations? Please be as specific as possible. Thank

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `Pool` struct, the field `totalShareBurns` is defined as a mapping from `address` to `uint`. The `burn` function in `LendPool`, which is called in function  `splitRrewardExternal`, takes an `ER2C` token and a `user` address as input. It then calls the internal function `_burn`, passing in `_token` and `_user`.
+  `_ burn` then retrieves the pool for the given token using the address of the token as the key, and calls `m_burnSharess` on it, passing the `_amount` parameter.
+   `M_ burnShars` updates the total burn shares for that pool, which means that the value of `pools` will be updated. Therefore, ` pool` depends on `_ totalBornShards`.

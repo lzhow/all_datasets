@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_authorizedOperators` mapping is declared as a local variable in both the `revokeOperator` and `isOpertorForParition` functions. This means that each time the contract is deployed, a new mapping will be created for each unique `_partition` value. Since the mapping does not exist prior to the call to `revokOperator`, the value of `_allowedOperators[_operator][defaultParititon]` will always be  `0` when it's accessed in `require(_allowedOperatorss[operator ][defaultPartiton] > value,...)` in `_revokeOpeartor`.
+
+  What is a partition strategy?
+
+
+
+
+

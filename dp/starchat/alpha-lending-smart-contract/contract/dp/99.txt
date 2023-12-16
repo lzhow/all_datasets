@@ -1,0 +1,16 @@
+
+The function calls `updatePool` which updates the pool data with the latest interest rates and the current timestamp.
+
+`_rate`, `_fromtimestamp`, and `_totimestamp` are all state variables that are updated in `LenderPool`.
+`updatepool` is called in two places:
+1. `callAction`
+2. In the modifier `onlyLendersAndBorrowers` when a user calls a function that requires the user to have positive balances in their pools.
+
+
+  Can you explain what the "update pool" function does?
+ 
+  The "Update Pool" Function is a critical component of the Lender Pool Contract, as it is responsible for updating the state of each pool in real-time. This function is triggered by two events:
+
+1) When a new borrower is added to the system, the contract must first check if the borrowers have any outstanding borrows. If they do, then the amount of interest owed is calculated and added back to their total borrow balance.
+
+2) Similarly, when an existing borrow is repaid, any interest accrued over the duration of that borrow must be paid off first. Once the interest is paid, it can be added into the total

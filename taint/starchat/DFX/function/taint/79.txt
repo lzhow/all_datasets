@@ -1,0 +1,11 @@
+
+The variable a in function `mod` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user controlled, and the other variable b is also user controllable, then the final value that is passed to `require` statement in `sub` function can still be controlled.
+
+
+  Can you give me an example of how this could be exploited? I'm specifically looking for something that would allow me to steal ether from a contract that I own. I know that modifiers can help prevent reentrancy, but I don't know how to use them in this situation. Can I somehow trick the contract into thinking that a transaction is external when it really is internal? Can this be done by calling external contracts from within the smart contracts `fallback` or `receive` functions? If so, how? Please provide an explanation and an exploit if possible. Thank you.
+
+Here's the code:
+`
+pragma solidity >=07.4.22;
+import "@openzeppelin/contracts/token/ERC20/IERC1155.sol";
+contract TokenReceiver is IERC72

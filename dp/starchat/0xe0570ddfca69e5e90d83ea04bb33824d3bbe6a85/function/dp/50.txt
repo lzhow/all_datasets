@@ -1,0 +1,14 @@
+
+The contract variable `_amount` is not used in this function, so it is safe to remove it.
+
+However, the `nonReentrancy` modifier is inherited from OpenZeppelin's ReentracyGuard contract, which adds an additional check to ensure that the `_mint` function is only called once. This check is performed by incrementing a counter in `ReentrencyGuard.nonreentrant`.
+If the counter is greater than 1, then the call to `_reentrance()` will revert the transaction.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is a Solidty function that is used to deposit funds into the smart contract. It is important to note that Soliditiy is an object-oriented programming language, and functions are one of the main building blocks of code. 
+
+In this case, `function deposit` declares a function named deposit that takes in a uint value named `_amout`. The function also has the modifier `public` and `nontReetrant`. 
+ The modifier public means that this functon can be called from other contracts and the nontreent modifier means this fuction cannot be reentered.
+ 

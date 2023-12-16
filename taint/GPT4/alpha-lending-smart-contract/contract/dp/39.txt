@@ -1,0 +1,16 @@
+yes
+
+The variable `nextWeekBlock` in the function `getReleaseAmount` is data dependent on the variable `fromBlock` in the same function. This is because `nextWeekBlock` is initially calculated based on the value of `fromBlock` with the following line of code:
+
+```solidity
+uint256 nextWeekBlock = findNextWeekFirstBlock(fromBlock);
+```
+
+Here, `nextWeekBlock` is assigned the result of the function `findNextWeekFirstBlock`, which takes `fromBlock` as an argument. This means that any changes to `fromBlock` will affect the value of `nextWeekBlock`. Additionally, within the `while` loop, `fromBlock` is updated based on the value of `nextWeekBlock`, and then `nextWeekBlock` is recalculated:
+
+```solidity
+fromBlock = nextWeekBlock;
+nextWeekBlock = nextWeekBlock.add(blockPerWeek);
+```
+
+This further establishes a data dependency relationship between `nextWeekBlock` and `fromBlock`, as they are both used and updated in relation to each other within the loop.

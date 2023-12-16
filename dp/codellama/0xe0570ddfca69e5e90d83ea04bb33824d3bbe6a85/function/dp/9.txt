@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `function withdraw` of the given contract, the `_withdrawn` variable is calculated by multiplying the current balance of `msg` by `_share` and dividing it by the total supply. This calculation is dependent on `_shared` because it is used in calculating the amount of tokens to be withdrawer.
+Therefore, `_Balances_` is data-dependent on _share_ in this function.

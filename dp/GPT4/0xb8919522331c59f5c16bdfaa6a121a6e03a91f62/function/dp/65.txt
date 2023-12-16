@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the variables `target` and `data` (in `funcionCall`) and the `success` variable (returned by `delegateCall` function) and  `errorMessage`  (passed as argument to `verifycallResult` ) in ` functiondelegate call`.
+However, the data returned by the delegatecall function is used to determine the value of the success variable, which is then used in a conditional statement in verifycallresult function.
+So, there is a indirect data flow between these variables. 

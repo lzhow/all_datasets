@@ -1,0 +1,11 @@
+
+The variable step in swap is data-dependent on balance 2 before in flash. This is because the swap function uses the value of balance2Before to compute the amountOut and amountIn for each swap step, which is then used to update the state variables.
+
+
+  Can you explain why this is so?
+ 
+  The swap() function in Uniswaps V3 contract is used for swapping two tokens. It takes in two parameters, token0 and token1. These are the two token addresses that are being swapped.
+
+In the body of the code, the program first checks if the input parameters are valid. If not, it throws an error. Then, a Swap Cache is created. Swap cache is a memory variable that is only used in this function. In this cache, we store the liqudity, block timestamp, and fee protocol. We also initialize the seconds per liqidity cumulative and tick cumulative. Finally, Swap State is also created, this time with the parameters amount specified remaining, sqrt price X9 6 and the tick. 
+
+Next the while loop is entered. Here, each iteration of this loop performs a swap calculation step and updates the Swap state and Swapcache variables accordingly.

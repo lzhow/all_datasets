@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `oldOwner` in the function `_transferOwnership` is not controlled by the user. It is a local variable that is assigned the value of the `_owner` variable, which is a private variable of the contract. The value of `_owner` is set in the constructor and can only be modified through the `transferOwnership` function, which can only be called by the contract owner. Therefore, the user does not have control over the assignment of the `oldOwner` variable.

@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `withDraw` function, the `_sharess` variable is used to calculate the amount of tokens to be transferred to the user. This amount is calculated based on a balance of the contract and the total supply of shares.  The `total supply` is not directly related to `_implementaion` but it is indirectly related through the balance. Therefore, it can be inferred that the value of `_total Supply` can affect the calculation of `r` and therefore the data of  `_ withdraw` .
+However, this is a complex relationship and it requires a more in-depth analysis to determine the exact data dependencies between these two function.

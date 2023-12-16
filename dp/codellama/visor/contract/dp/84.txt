@@ -1,0 +1,4 @@
+  
+No, the `_permit_typehash` contract is not dependent on ` amount` variable in ` mint` function.
+
+The `_permits_Typehash ` contract variable is defined in a different contract, `ERCPermit`, and is used to store the hash of the `Permits` struct. This struct is passed as an argument to `Ecrecov` to recover the signatory's address.  The `permis` typehash is a constant value that is set when the smart contract first deploys. It is therefore not affected by the value of `Amount` and does not depend on it.

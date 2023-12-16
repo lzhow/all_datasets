@@ -1,0 +1,3 @@
+yes
+
+The variable `denominator` in the function `getNextSqrtPriceFromAmount0RoundingUp` is data dependent on the variable `liquidity`. The reason for this is that `denominator` is calculated using the variable `numerator1`, which is directly derived from `liquidity` (as seen in the line `uint256 numerator1 = uint256(liquidity) << FixedPoint96.RESOLUTION;`). In both the `if (add)` and `else` branches, `denominator` is computed by either adding or subtracting the `product` from `numerator1`. Since `numerator1` is dependent on `liquidity`, any variable that is derived from `numerator1`, including `denominator`, is also data dependent on `liquidity`.

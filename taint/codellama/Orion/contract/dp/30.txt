@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `createPool` function, the value of `factory` is used to create a new pool. This pool is then stored in a mapping called `supportedPools`. The key of this mapping is `address[]` and the corresponding value is a `Factory`.
+Later, in `getPool`, the mapping `pool` of type `mapping(bytes32 => address)` is created.
+This mapping stores the address of the pool for a given `bytes` key.  The `key` for this map is generated using the hash of a string. In this case, it is "pool".
+So, `Pair` depends on `TokenAorWeth` because it depends directly on a value that depends indirectly on it.

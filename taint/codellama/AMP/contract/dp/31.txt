@@ -1,0 +1,4 @@
+  
+No, the variables ` sender Implementation ` and ` from Partitions Prefix ` are independent.
+
+The variable `_from Partiton` is passed as an argument to the `PartitonsUtils.get Destination Partion` function, which returns a `bytes 3` value. This value is then used to call the `_add Token To Partitiion ` function. However, this function does not use the value of `_ from partition` to determine the implementation of the interface. Instead, it uses the address of this contract as the first argument, and the name of an interface as a string as its second argument. Therefore, there is no data dependence between the two.

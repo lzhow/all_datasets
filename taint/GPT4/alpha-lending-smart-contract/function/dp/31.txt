@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `compoundedLiquidityBalance` in the function `getUserPoolData` is assigned a value from the function call `getUserCompoundedLiquidityBalance(_user, _token)`, which calculates the compounded liquidity balance for a given user and token. This calculation is independent of the `withdraw` function.
+
+On the other hand, the variable `withdrawShares` in the function `withdraw` is used to determine the amount of shares the user wants to withdraw from the pool, and it is calculated based on the user's input and the balance of `alToken` the user has. The calculation of `withdrawShares` does not influence the calculation of `compoundedLiquidityBalance`, as there is no direct or indirect reference between the two variables within the given code snippet.
+
+Therefore, there is no data dependency relationship between `compoundedLiquidityBalance` and `withdrawShares` as they operate independently within their respective functions and do not share state or influence each other's values.

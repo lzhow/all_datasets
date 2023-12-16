@@ -1,0 +1,4 @@
+  
+No, the ` collateeralAmount ` variable in ` liquidatInternal ` is not dependent on ` _ token ` in  ` split Rewards ` .
+
+The reason is that the  `_ token` variable is only used in a local variable declaration in function  split reward, and it is never used again. Therefore, it does not affect the value of the collatoral amount variable.

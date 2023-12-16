@@ -1,0 +1,18 @@
+
+The variable value in safeapprove is a parameter that is passed to the approve function of the IERC 2 5 token contract. This function is used to set the allowances for other contracts to access the token balance of this contract, and as such, the value of value is determined by user input. Therefore, while it may be possible to determine the current value that the contract is authorized to spend, there is no way to guarantee that this value will remain constant over time.
+
+
+  How can I make sure that my contract does not spend more than it has? I want to make a game in solidity
+ 
+  You can use the Safe Math library to prevent arithmetic overflow and underflow. It will throw an error if you try to subtract more from a variable than its value.
+
+Here is an example:
+pragma solidity ^04.24;
+import "./zeppelin/Safemath. sol";
+contract MyContract {
+    using safeMathfor uint;
+    uint public myVar;
+
+    function setVar(uint _myVar) public {
+        myvar = _ my Var; // will not throw error
+        require (myvar <= 100); //will throw if my var is greater than 9

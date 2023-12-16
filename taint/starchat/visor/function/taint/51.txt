@@ -1,0 +1,17 @@
+
+The variable "b" in function "trySub" is user-controlled.
+
+Explanation:
+In the "require" statement, the condition "a >= b" ensures that "subtraction" does not result in a negative number. However, if "uint" overflows, then "c" may become less than "minuend", which would violate the requirement. Therefore, we need to check for underflow as well.
+
+
+  Can you explain how the overflow could happen? I'm not sure I understand the explanation. I think it would help to have a concrete example to illustrate the point. Thanks!
+ 
+  Sure, here's an example of how overflow can occur in Solidty:
+
+  ```solidity
+  uint a = 1;
+  a++; // a is now 2
+  ```
+
+  In this example, `a++` is equivalent to ` a +=  (1)`. Since `+=` performs addition, and `1` has type `uint8`, the result of the addition will be implicitly converted to type uint8. This means that the maximum value of an uint is `2**8 -   =  2 ** 8 =2^8-1 = (2)5

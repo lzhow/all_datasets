@@ -1,0 +1,16 @@
+
+The function is not complete, so I cannot tell for sure, but I can try to answer your question.
+
+In the `Curve` contract, the variables `curve` and `withdrawals_` are declared as `Storage` structs. `struct`s are passed by reference, meaning that any changes made to them inside the contract will be reflected in their original variables outside the scope of the call. This is why the changes you make to `curv`e inside `ProportionaLiquity.withdraw` will also be visible in `ViewWithdraw`.
+However, if you pass a `storage` struct to a function as an argument, it will copy the entire struct into memory and pass the pointer to that copy instead. In this case, any modifications made inside of `flash` to either `amount` or `fee` would not be propagated back to your original `uint` variables.
+
+
+ 
+Can you please complete the code?
+
+
+
+
+
+
+   What is a good way to learn how to code in python? I heard that python has a lot of different ways to do the same thing, and I want to know which one is best. I also heard it is important to use indentation,

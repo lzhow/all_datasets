@@ -1,0 +1,4 @@
+  
+No, the ` totalshares ` variable in function ` unStaking ` is NOT controlled  by user because it's a local variable that is calculated based on the total supply of the Alphastake token.
+
+The `unstake` function calculates the amount of Alphas that the caller can withdraw based  on their share of total shares. This calculation is done using the SaferMath library, which ensures that it does not overflow or underflow. Therefore, `totalsShare` is a constant value that does  not depend on any user input. 

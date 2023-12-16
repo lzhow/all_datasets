@@ -1,0 +1,4 @@
+  
+The label is 'Yes'.
+
+In the `transerOwership` function, the input parameter `address` is passed to the `_transfereOwernship` internal function. This function is called by only the contract owner, which is determined by checking the caller's address against the current owner' address. Therefore, ` newOwenr` in this function can only be controlled  by a user who has the ownership of the smart contract.

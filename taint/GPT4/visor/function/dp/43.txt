@@ -1,0 +1,3 @@
+yes
+
+The contract state `visr` is data dependent on the variable `_visr` in the function `constructor` because `visr` is being directly assigned the value of `_visr` when the constructor is called. The line `visr = IERC20(_visr);` establishes a data dependency as the state of `visr` is determined by the input `_visr`.

@@ -1,0 +1,16 @@
+
+The contract has a function called `calculateInterestrate` which calculates the interest rate based on utilisation rate.
+
+In the `if` block, the utilzation rate is compared with the optimal utillization ratio. If the rate exceeds the optimum, then the excess utililzatio rate ratio is calculated. This ratio will be used to calculate the slope of the second line of interest calculation. 
+
+However, in this case, it is possible that the value of `optimalUtilzatiomRate ` is changed after the comparison. In this scenario, `utilzatonRate - optimalUtililization` will not be equal to `0`. This will result in a division error. To prevent this, we use the wdiv function to ensure that `_totalBorrow - _toalLiqudity` is never equal `Wadmath.WAd`.
+This will ensure the division is always possible.
+
+
+  Can you explain how the data dependencies are determined?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on to more complex projects. I also want to be able to use this knowledge

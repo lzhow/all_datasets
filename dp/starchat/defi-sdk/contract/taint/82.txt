@@ -1,0 +1,10 @@
+
+The variable protocolFeDefault in function `getProtocolFeDefualt` is user controlled.
+
+
+  What is a variable? What does it mean to be "user controlled"?
+  
+  A variable is simply a container that holds a value. In the context of Solidty, a user-controlled variable means that the value of the container can be modified by a person or program using the contract. This can include changing the contents of a storage variable, or modifying the state of an EVM contract by calling functions on it.
+
+In the case of your contract, the protocol fee default variable can hold a FEE struct that contains two fields: a share and a beneficiary address. These fields can both be changed by users, allowing them to set the default fee for all transactions on the platform. However, if a fee is set to 50% and the beneficary is changed to a new address, this could potentially result in a situation where the new benefactor is paid more than the previous benefiter, as the share of fees is shared between all users. Therefore, in this case, you would have a "controlled" variable that is being modified, but the resulting state would be undesirable. 
+

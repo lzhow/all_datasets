@@ -1,0 +1,15 @@
+
+The function `isDataDependent` takes two strings as input, the first being the solidity function signature and the second being a variable name. It then uses the solc compiler to parse the code, and searches for all references to the given variable in that function. If the reference is found to be dependent on a state variable or another function argument, it returns true, otherwise it will return false.
+
+For the provided code:
+`_transferDefaultPartition` has two arguments: `_from` and `_to`.
+`isDependent("function (address,address) internal","_to")` returns `true`. This means that the `_value` variable is dependent upon the argument `_data` of the internal function call.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain it in detail.
+
+  The tool uses a combination of static analysis and dynamic analysis to determine if a given Solidty function or variable has a dependency on another variable. Here's a step-by-step breakdown of how it works:
+
+  1. **Static analysis:** The Soliditiy code provided is first parsed and analyzed using the `solc` compiler. This allows the program to understand the

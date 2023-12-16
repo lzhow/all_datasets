@@ -1,0 +1,3 @@
+The contract state `nftsSold` is not data dependent on the variable `total` in the function `buyJay`. 
+
+Reason: The variable `total` is used to store the length of the `erc721TokenAddress` array and is updated based on the condition `if (total != 0) buyJayWithERC721(erc721TokenAddress, erc721Ids);`. On the other hand, the contract state `nftsSold` is incremented by the value of `total` at the end of the function with the statement `nftsSold += total;`. However, there is no direct assignment or usage of `total` to modify the value of `nftsSold`. Therefore, there is no data dependency between `nftsSold` and `total`.

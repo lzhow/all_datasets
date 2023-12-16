@@ -1,0 +1,4 @@
+  
+No, the `_amount` variable in function `burn` is NOT controlled  by user because it's a function parameter.
+
+The function' s signature is `function burn ( address _ account , uint 2 5 6  _ amount ) external` , and the parameter `_ amount`is passed in by a user when calling the ` burn` function. Therefore, `_ account` and `_ amout` are both controlled and can be manipulated by users.

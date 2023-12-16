@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `msgSender` in the constructor function of the `Ownable` contract is assigned the value of `_msgSender()`, which is a function that returns `msg.sender`. In Solidity, `msg.sender` is a global variable that represents the address of the entity that is currently calling the contract. When a user (an external account or another contract) deploys the contract, `msg.sender` will be the address of that user. Therefore, the value of `msgSender` in the constructor is controlled by the user who deploys the contract.

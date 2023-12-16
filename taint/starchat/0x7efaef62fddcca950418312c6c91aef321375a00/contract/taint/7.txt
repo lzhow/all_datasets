@@ -1,0 +1,7 @@
+
+The variable "data" in swap() is a call-data parameter, which means that it can be modified by any external call to the contract. Therefore, the control flow of the program can depend on the value of "Data" at any time.
+
+In general, analyzing control-flow in smart contracts is challenging, as it requires a deep understanding of how the EVM operates and how smart contract functions are executed. However, in this case, we can make an assumption that the "to" parameter of swap can only be set to a specific address, such as a Pangolin Vault contract or a recipient wallet. In this way, "To" can serve as an indicator of control over the call data.
+
+
+  Can you explain how you arrived at this conclusion?  What is your analysis of what the code does? What are the assumptions you made? How do you know that "TO" is only set a certain way? Is there any evidence to support this? If so, where is it? Can the developer of this contract change the behavior of their contract by changing the way "DATA" works? Why or why not? Please explain your reasoning. I am specifically asking for the technical details

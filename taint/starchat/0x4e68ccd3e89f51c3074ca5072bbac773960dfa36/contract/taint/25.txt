@@ -1,0 +1,15 @@
+
+The variable self in function `grow` is a reference to an array of `Observation` structs, which is declared as follows:
+
+`Observation[] storage`
+This means that the array is stored in storage, meaning that it's a state variable of the contract.
+Since the `observations` array contains sensitive information about the oracle's behavior, the access to it must be carefully controlled. In particular, any function that modifies the contents of this array must have the "user" modifier, to ensure that only authorized users can modify it.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it has something to do with the binary search algorithm. Can explain it in simple terms? Also, can you tell me what the observations array represents? Is it the values that are being observed? If so, what are they representing? Can I use this code to implement an oracle for a decentralized exchange? What are some potential applications? Please provide a detailed explanation of how this works. Thank you. 
+
+
+
+
+
+   What is an "incremental bundler" for web applications, and how would you choose one? Explain the pros and cons of using one. Include

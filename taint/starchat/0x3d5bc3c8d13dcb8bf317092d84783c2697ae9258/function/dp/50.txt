@@ -1,0 +1,13 @@
+
+The variable simpleInteresFactor in function acrureInterest is data-dependent on variable liquidatior in seise function.
+
+Explanation:
+In the accureIntereset function, the simple interest factor is calculated as follows: simple_interest_factor = (borrow_rate * block_delta)
+Where borrow_ rate = the borrow rate of the loan
+block_ delta = number of blocks since the last accrued interest
+Since the liquidation function takes in a liquidators address as an argument, and the seizure function also takes a borrowers address, it is possible that the two addresses could be the same. If this is true, then the value of simple interes factor would depend on both the block deltas and borrow rates of both parties.
+
+
+  Can you explain why this code has this data dependence?
+ 
+  The code snippet you provided has a potential data race condition between the variables `acccual_blocknumber` and `liqudator`. The `accure_intereest` function updates the `borrower_index` variable, which is used to calculate the interest accured. However, there is no synchronization between these two operations, so it's possible for

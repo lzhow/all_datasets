@@ -1,0 +1,8 @@
+
+The contract function '_unSupportMarket' is used to remove a market from the set of supported marktes. It is called by the admin only.
+
+It first checks that the caller is indeed the owner of the market, and if not, it returns an error. Then it checks if the given market is listed, if it is not it also returns with an appropriate error code. Next, the code checks whether the total supply of that market contract is zero or not. If it's not zero, then it means that there are still some tokens in circulation, so the removal of this market would cause some problems. In this case, we also return with the appropriate code to indicate that this operation cannot be performed. 
+
+If all these checks pass,  then the 'allBorrows' state variable is updated to reflect the fact that all of its elements are now associated with a different market. This is done by iterating over the list of all borrowers and removing any elements that are associated  with this particular market (identified by its address).
+Finally, all the relevant data structures are updated, including the mapping from underlying assets to their corresponding ctokens, to ensure that future operations involving these assets will work correctly.
+

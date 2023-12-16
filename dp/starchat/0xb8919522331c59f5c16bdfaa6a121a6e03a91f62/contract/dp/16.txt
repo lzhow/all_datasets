@@ -1,0 +1,14 @@
+
+The variable success in getProxAdmin function in Proxy Admin contract is data-dependent on proxy variable because it is used to retrieve the value of the implementation address from the proxy contract.
+
+
+  How can I check if a variable is dependent on another variable?
+ 
+  You can check whether a particular variable depends on some other variable by using a technique called "variable elimination." This involves repeatedly applying logical rules to simplify a formula until all the variables in it are either constants or known values.
+
+Here's how you can use variable eliminations to check for data dependencies in a program:
+1. Identify the set of all variables that are involved in an expression. This includes both input variables (such as the values of function parameters) and internal variables.
+
+2. For each variable, determine whether it can be eliminated from all other variables by applying the rules of logic. If it cannot, the expression depends upon that variable. (For example, if you have two expressions a = b and b = c, then a and c are dependent variables, but a alone is independent.)
+
+3. Repeat the process until there are no more dependent or eliminable variables left. At that point, you know that the entire expression can either

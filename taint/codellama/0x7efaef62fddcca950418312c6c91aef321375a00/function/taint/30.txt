@@ -1,0 +1,5 @@
+  
+No, the ` root KLast ` variable in function `_m intF ee` is NOT controlled  by user because it's a local variable that is calculated based on the current state of the contract.
+
+The ` _ mintF fee` function is called by ` mint` and ` burn` functions, and it calculates the fee that needs to be paid to the factory. This fee is based  on  the  current  state  of  ` reserve  _  reserve` ,  which  is a  public  variable  that  can  be  accessed  and  modified  directly  from  outside  contract  .
+  Therefore,  it  cannot  controlled   by  user  because  any  changes  to  this  value  will  affect  all  users  who  interact  with  your  smart  contact  ,   and   it   is   not   a   good  practice  for  a smart contract to have a variable controlled directly by users.

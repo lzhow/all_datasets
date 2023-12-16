@@ -1,0 +1,5 @@
+  
+No, the ` supplierdelta` variable in function `distribute suppliecomp` is NOT controlled  by user because it's calculated based on the suppler' s token balance and the comp supply index, which are both internal state variables of the contract.
+
+The supplertoken balance is calculated by calling the Ctoken contract'S balanceOf function, and it represents the amount of tokens that the supply has in their account.  The comp suppply index is also an internal variable of  the  contract,  and  it  represents  a  value  that  is used  to  calculate  how  much  comp  should  be  distributed  based  on  supply  rate.   The  suppplier  delta  variable  calculates  this  amount  of comp based   on these two variables. Therefore, this variable is determined by internal contract logic and is therefore not under the control of a user .
+ 

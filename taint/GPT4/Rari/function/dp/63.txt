@@ -1,0 +1,3 @@
+Label: unknown
+
+Explanation: The variable `cTokenAddress` in the function `exitMarket` is passed as an argument to the `CToken` constructor, which creates a new instance of the `CToken` contract. The `CToken` contract is then used to call the `getAccountSnapshot` function, but there is no direct data dependency between `cTokenAddress` and `oldCollateralFactorMantissa` in the code provided. Therefore, the data dependency between these two variables is unknown.

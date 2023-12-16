@@ -1,0 +1,9 @@
+
+The variable value in decode I8() is a local variable that is used to store the decoded value before it's returned. It is initialized with the value of data[offset], and is then updated with each subsequent call to decode a new value from data using shift().
+
+Since the input data is provided by a user, and the offset is incremented each time a value is decoded, the final value stored in value will be the last value decoded from the data stream. Therefore, value can be considered to be controlled indirectly by user input.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was a kid. Also, can you write it in a way that I can understand it? Please write in simple terms. Thank you.
+I'm trying to understand how you are able to determine if a variable is user controlled or not. Can't you just look at the source code to see if it has been modified? Can it be modified by other contracts? If so, how do you know that it hasn't been tampered with?
+Can you please explain this to my in more detail? Thank You. 

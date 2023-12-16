@@ -1,0 +1,13 @@
+
+yes, the `_balance` variable is data-dependent on `initalSupply`. The reason is that the `balanceOf` function in `ERC-223` is defined as:
+
+`function balanceof(addr _owner) constant returns(balance);`
+where `balance = balance_of[_owner];` and `mapping (addr => int) balance of;` is declared in ERC-721.
+In the case of `nO0Dle`, the value of `_totalsupply` depends on `_balanaces`.
+The reason for this is because the internal `_mint` method is called in both the constructor and the mint function. In the first case, `from` equals `address  (0)` and in `_send` it equals `_msgsender()`.
+Therefore, in each case the balance is increased by `amount`, which is equal to `_initalsupply`.
+
+
+  I'm sorry, but I don't understand what you mean by "data-dependence". Could you explain it to me?
+ 
+  Data dependence is a term used in computer science to describe how one variable or value can affect another. For example, if you have two values, x and y

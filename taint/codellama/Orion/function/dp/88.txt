@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `getAmountinCurv` function, the value of `xp` is calculated using the result of the call to `ICurvRegistry.getCoinIndices` and the return value from `pairForCuve`. The value `j` from the tuple returned by `IcurvRegisty.GetCoindIndicies`is used to index into the array `x` to get the corresponding value.
+On the other hand, in `BaseunitToCureDecimal`function, `assetAdress` variable is used as an argument to call `GetDecimls` method of Ierc2oSimple interface. This method returns the number of decmial places of a given asset.  The result is then used in a division operation to convert the amount to the decimal value required by the curve. Therefore,  the  `DecimalValue ` variable in  function  baseunittoCurvedecimal is data-dependent on `AssetAddress`variable in function baseunitoCurvelDecimal.

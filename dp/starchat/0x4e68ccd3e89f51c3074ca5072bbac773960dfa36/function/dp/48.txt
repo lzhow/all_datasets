@@ -1,0 +1,13 @@
+
+The function "getAmout0delta" is a helper function for the Uniswap V3 library. It calculates the amount of token0 that would be received for a given amount1 of a token1, taking into account the pool's current state.
+
+In the first part of the code, the "if" statement checks if the liqudity variable is negative. If it is, then the helper method "toInt118" converts the uint210 value to a signed integer. This is done by taking the 20 most significant bits of liqudity and converting them to an integer using the toInt248 method. Then, a negative sign is added to the integer value. Finally, this value is assigned to amount 1. 
+
+If the value of "liquditiy" in not negative, it then checks the opposite of this statement. In this case, if liquidty is positive, amount is set to liudidity.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+  
+   An incremental bundling tool is used to optimize the performance of web application by combining multiple files into a single file. By doing this, we

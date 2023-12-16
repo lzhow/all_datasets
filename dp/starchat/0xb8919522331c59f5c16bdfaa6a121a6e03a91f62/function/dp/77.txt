@@ -1,0 +1,9 @@
+
+The function call `isContrac(address target)` is a view function and does not modify the state of the contract. Therefore, it is not a candidate for a race condition.
+
+However, the `staticCall` function is an EVM instruction that can modify state. It is possible for the target contract to modify its state between the time that the call is made and the result is returned. This can result in a potential race-condition vulnerability.
+
+
+  Can you explain how the staticCall function can cause a "race condition"?
+ 
+  Yes, a staticcall function in Solidty can lead to a possible racecondition. A race condtion occurs when two or more threads or processes try to access and modify a shared resource at the same time. In the case of a Solidiy staticcal function, this can occur if the called contract modifies its own state variables between when the caller checks the value of success and when it receives the return data. If this occurs, then the success variable may be set to true even though the data returned is incorrect. To prevent this, Solidit developers should make sure that any state-modifying functions called by a contract are idempotent, meaning that they can be called multiple times

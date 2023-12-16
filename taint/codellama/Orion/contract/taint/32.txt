@@ -1,0 +1,4 @@
+  
+The variable '_to' in function '_swap' is labeled as 'Yes' because it takes in a user-provided address as an argument. This means that the address that is passed to the '_do_swap_tokens' function can be controlled or manipulated by a malicious user and could potentially be used to steal funds or perform other malicous actions.
+
+In the context of the smart contract, the 'to_address' variable is used as the recipient of a token transfer. If a hacker were to manipulate the value of this variable, they could redirect the transfer of tokens to their own address, potentially stealing the tokens. Therefore, this is a potential security vulnerability that should be addressed.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `rootKLast` in the function `_mintFee` is not directly controlled by the user. It is calculated within the contract's function as the square root of the last known product of the reserves (`_reserve0` and `_reserve1`) which are part of the contract's state. The reserves are updated by the contract's internal mechanisms, which are the result of liquidity provision and trading actions. While users' actions can indirectly affect the reserves by adding or removing liquidity or by performing swaps, they do not have direct control over the `rootKLast` variable itself. It is determined by the contract's logic and the current state of the reserves at the time the `_mintFee` function is called.

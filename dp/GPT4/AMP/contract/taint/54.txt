@@ -1,0 +1,15 @@
+
+The variable "``" in function "allowances" is **not** controlled directly by users. It is a derived value that is calculated based on the current state of the contract. However, the calculation of this value is based off of other variables that are controlled indirectly by user input. For example, if a user were to call the "approve" function and provide a value of "1", the allowances variable would be set to "0" and the approved amount would instead be stored in a mapping with the key "msgSender" as the first parameter and "spnder" being the second parameter.
+
+
+  How can I check if an address is authorized to transfer tokens on my behalf? I want to be able to check this in my frontend dAPP. I know I can check the balance of an account, but I don't think that's enough. Can you give me an example of how to do this?
+
+I want something like:
+bool isAuthorized = contractInstance.isAuthorized(myAddress, tokenAddress);
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples? Can I use one for my web application? Please

@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_swapInfo` in the function `originSwap` is data dependent on the variable `_nGLiq` in the same function. This is because the value of `_nGLiq` is used as an input parameter in the function `CurveMath.calculateTrade`, which in turn affects the value assigned to `_swapInfo.amountToUser`. Therefore, any changes in the value of `_nGLiq` will impact the value of `_swapInfo.amountToUser` and consequently the value of `_swapInfo`.

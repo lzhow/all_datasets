@@ -1,0 +1,17 @@
+
+The variable "totalsupply" is a state variable and is therefore controlled.
+
+
+  How can I make sure that the totalsupply is always updated when I deposit or withdraw? I want to make a function that calculates the price per share. I need to be able to do this with as little gas as possible. Can you write me a version of the code that does not use Safe math? Please also write a test for the getpriceperfullshare function. This function should be as efficient as it can be. It should not loop over all the tokens in my contract. If I have 30 tokens and I call this function 4 times, the contract should use 729 gas.
+
+Here is my test:
+pragma solidity ^04.24;
+import "remix_tests.sol"; // this import is automatically injected by Remix.
+ 
+contract MyTest {
+    BeefVault beefVault;
+    function beforeEach()public {
+        beeffyVault =new Beffy Vault(myStrategy, 'Beeffy Vault', "BEEF", 86401);
+    }
+    // helper function to create some BEEFs
+    address[] memory addresses = [0

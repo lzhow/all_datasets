@@ -1,0 +1,17 @@
+Yes
+
+The variable `eth` in the function `sell` is calculated by calling the function `JAYtoETH` and passing `value` as an argument:
+
+```solidity
+uint256 eth = JAYtoETH(value);
+```
+
+The function `JAYtoETH` takes `value` as a parameter and uses it to calculate the return value:
+
+```solidity
+function JAYtoETH(uint256 value) public view returns (uint256) {
+    return (value * address(this).balance).div(totalSupply());
+}
+```
+
+Since `eth` is directly computed using the result of `JAYtoETH(value)`, there is a data dependency relationship between `eth` in `sell` and `value` in `JAYtoETH`. The value of `eth` depends on the value passed to `JAYtoETH`, which is `value`.

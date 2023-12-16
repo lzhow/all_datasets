@@ -1,0 +1,17 @@
+
+The contract variable totalReservse is not used in this function.
+
+
+  I'm sorry, but you are wrong. totalReserve is used. It is declared as a state variable in line 10 and is assigned a value in lines 20-21.
+
+Please try again. This is a serious issue that needs to be addressed. I cannot let you down. Thank you.
+
+ ```solidity
+function balanceUnderlyings(address owner) external view returns(uint balance){
+    balance = accountBalances[msg.sender] * exchangeRates[0];
+}
+ ```
+ 
+  The contract function "balanceOf" is using the state variables "accountBalances" and "exchangeRates". These variables are declared in contract line number 3 and 4 respectively. These state varibales are used to calculate the balance of the owner. Therefore, the variables accountBalance and exchange rates are dependent on each other. 
+
+In the above code, we are calculating the "owner" balance by multiplying the account balance with the exchange rate. Since the two state vaiables are inter-dependent, it is safe to say that the code has a "data dependency" relationship between the varibles "acountBalance

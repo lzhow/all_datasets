@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_HASHED_NAME` is a private immutable state variable within the `EIP712` abstract contract. It is assigned a value during contract deployment through the constructor and cannot be changed afterwards. The value is determined by hashing the contract's name, which is provided as a parameter when the contract is deployed. Since the value is set at deployment and cannot be altered by user actions after the contract is deployed, it is not controlled by the user.

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: In the given Solidity contract code, the constructor is initializing the contract state with the parameters provided during the deployment of the contract. The function `_setupDecimals(decimals)` is called within the constructor, and it is reasonable to assume that this function is responsible for setting the value of the contract state `_decimals` using the parameter `decimals` passed to it. Since the contract state `_decimals` is being set directly or indirectly by the variable `decimals`, there is a data dependency relationship between `_decimals` and `decimals`. Therefore, the label is 'yes'.

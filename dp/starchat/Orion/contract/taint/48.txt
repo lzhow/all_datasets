@@ -1,0 +1,13 @@
+
+The variable "pair" in this function appears to be controlled directly by a user input. Specifically, the "to" parameter of the addliquidity function. This parameter is used to specify the recipient of a newly minted liqudity token.
+
+In the case of this contract, this recipient is a contract that is also controlled and operated by users. Therefore, in order to add liquidity to this pool, a malicious user could attempt to manipulate the value of "To" to steal the newly created liqiudity tokens.
+
+
+  Can you explain how the contract is vulnerable to such attacks? Please provide an example of such an attack. I'm not very good at explaining things, so I'd appreciate a good analogy to help me understand. Thanks!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not particularly experienced with web technologies. Also mention the pros and cons of using an incremental bundlers. What other tools are there for bundling web apps? And what are their pro and contra?  Thank you. 

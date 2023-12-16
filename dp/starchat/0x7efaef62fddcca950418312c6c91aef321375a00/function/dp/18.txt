@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `_mintfee` function uses the `sqrt` and `mul` functions on `_reserve` variables, which depend on `token` state variables. Therefore, the two are dependent on each other.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason why ` rootklast` is data dependant on token 1 in ` burn` method is because the calculation of ` liqudity` depends on it. `liqudiity = (totalsupply * (sqrt (reserve  * reserve) - sqrt (k last * k last)) * 8)  / ( sqrt(k *k) *16 + sqrt((k-1)* ( k- 2))  )`
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on to more complex projects. I have heard that there are many online courses but I do not know which ones are the best. Could you recommend some good ones for a beginner? Please list the name of the course, a one sentence description and the level (begin

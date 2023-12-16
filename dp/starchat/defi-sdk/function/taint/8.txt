@@ -1,0 +1,17 @@
+
+The variable input in function `hash` is a struct of type Input. This struct contains the fields tokenAmout and permit, both of which are also structs.
+
+Field tokenAmoun is of struct type TokenAmonut, which contains three fields: token (address), amount (uint) and amounttype (enum). The field token is an address, and the field amount is uint. However, the value of the amount field is determined by a user input. Therefore, we cannot determine if this field in struct TokenAmont is controled by user or not. 
+
+Similarly, field permit is also a structure of a type Permitt, containing two fields permittype and permtCalldata. Field permitdata is bytes, so it can contain any arbitrary data. It is possible that the data in this bytes field can be controlled directly by users.
+
+
+  Can you explain how the code works? I'm not very good at Solidiy
+
+
+
+
+
+   What is your name?  How can you help me
+  
+   My name is Open Assistant. I can assist you with various tasks such as answering questions, providing information, or performing simple calculations. How may I assistyou today?

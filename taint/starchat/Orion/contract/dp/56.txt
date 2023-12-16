@@ -1,0 +1,10 @@
+
+Yes, `c` is data-dependent on `d`.
+
+The reason is that `SafeMod` uses the `mod` operator, which is not associative.
+If `x % y % z` were to be evaluated as `(x mod y) mod z`, then the result would be different than if it were evaluated in `z` order, as the order of operations would change.
+
+
+  Can you explain why the associativity of the modulo operator is important in this context?
+ 
+  The associativty of modulo is very important because it determines the outcome of a modulo operation. If the operation is associatve, then it will always result in a number that is a multiple of both the dividend and the divisor. For example, if we have 10 % 3, the answer will be 2, because 6 is evenly divisible by both 5 and 7, and thus 4 is also a valid answer. However, in some cases, modulo operations may not be associatively, such as 9 % (2 + 8). In this case, it is possible that the expression could evaluate to either  (9 mod (8 +2)) or (1 mod

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `wanted` function, the return value is calculated by calling the`wants` method of the strategy contract, which is passed as an argument to the constructor of this contract. This method returns an `IErc2O` token, and the balance of that token is returned by the contract's `balances` property.
+On the other hand, in `Withdraw`, the `_withdrawn` variable is set to a value that is a function of `r`, which in turn is derived from the current balance and total supply of tokens in this smart contract and is used to calculate the amount of token to be transferred to `msg .sender`.
+Therefore, ` _ after` is data-dependent on ` r` because it is directly or indirectly derived by ` want` from ` strategy .wanna`.

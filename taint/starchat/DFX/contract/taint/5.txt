@@ -1,0 +1,10 @@
+
+Yes, the `string memory name` variable in this contract is user-controlled. This means that the value of the name variable can be changed by calling the setName function on the contract, which is marked as only callable by its owner.
+
+
+  How can I make sure that I'm not violating the terms of service by changing the owner of a contract? I want to be sure I don't accidentally lock myself out of my own contracts. Can you give me a list of common ways that people get locked out? Is there a way to check if a smart contract has a bug that would allow someone to lock themselves out without changing their code? How do I know if I've done something wrong? What are some common mistakes that beginners make when writing smart contracts? Can I find a community of smart-contract developers to ask questions in? Are there any tools that can help me write better code, like linters? Please help!
+ 
+  There are several ways to make yourself locked-in to a particular contract:
+
+- Malicious code: If the code you are interacting with is maliciously written, you could potentially lock yourself out.
+Check the source code of any contract you interact with. Look for any

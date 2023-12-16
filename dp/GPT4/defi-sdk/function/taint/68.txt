@@ -1,0 +1,4 @@
+  
+No, the ` initial OutputBalances` variable in function `execute` is NOT controlled  by user because it's a local variable that is created and used within the scope of the execute function. It is initialized with the balance of `output` token before the transfer of tokens from the contract to the caller.
+
+The `input` and `swapDescription` variables are also not user-controlled because they are passed as arguments to `cancelAccount Signatures` function and are not modified within that function' s scope. 

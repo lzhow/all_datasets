@@ -1,0 +1,1532 @@
+[
+    [
+        527,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_after`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_after",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_after` in the function `withdraw` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        474,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_after`  in the function deposit data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_after",
+            "deposit",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_after` in the function `deposit` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        472,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_amount`  in the function deposit data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_amount",
+            "deposit",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_amount` in the function `deposit` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        501,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `r`  in the function withdraw data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "r",
+            "withdraw",
+            "_after",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `r` in the function `withdraw` is data dependent on the variable `_after` in the same function because the value of `r` can be modified based on the calculations involving `_after` within the conditional block.']\n"
+    ],
+    [
+        473,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_pool`  in the function deposit data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_pool",
+            "deposit",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_pool` in the function `deposit` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        524,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `r`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "r",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `r` in the function `withdraw` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        475,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `shares` in the function `deposit` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        499,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `r`  in the function withdraw data depended on the variable `b` in the function `withdraw`?"
+        ],
+        [
+            "r",
+            "withdraw",
+            "b",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `r` in the function `withdraw` is data dependent on the variable `b` in the same function because the value of `r` can be modified based on the calculations involving `b` within the conditional block.']\n"
+    ],
+    [
+        55,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "shares",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_totalSupply` is data dependent on the variable `shares` in the function `deposit` because minting shares (via `_mint`) affects the total supply of the contract.']\n"
+    ],
+    [
+        13,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_shares` in the function `withdraw`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_shares",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_balances` is data dependent on the variable `_shares` in the function `withdraw` because burning shares (via `_burn`) affects the balances of the contract.']\n"
+    ],
+    [
+        11,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "shares",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_balances` is data dependent on the variable `shares` in the function `deposit` because minting shares (via `_mint`) affects the balances of the contract.']\n"
+    ],
+    [
+        544,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    }\nfunction inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `amount`  in the function inCaseTokensGetStuck data depended on the variable `_token` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "amount",
+            "inCaseTokensGetStuck",
+            "_token",
+            "inCaseTokensGetStuck",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `amount` in the function `inCaseTokensGetStuck` is data dependent on the variable `_token` in the same function because the value of `amount` is determined by the balance of `_token`.']\n"
+    ],
+    [
+        239,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `stratCandidate` data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "stratCandidate",
+            "BeefyVaultV6",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `stratCandidate` is data dependent on the variable `_implementation` in the function `proposeStrat` because `_implementation` is used to set the `implementation` property of `stratCandidate`.']\n"
+    ],
+    [
+        498,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `r`  in the function withdraw data depended on the variable `_shares` in the function `withdraw`?"
+        ],
+        [
+            "r",
+            "withdraw",
+            "_shares",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `r` in the function `withdraw` is data dependent on the variable `_shares` in the same function because the value of `r` is calculated using `_shares`.']\n"
+    ],
+    [
+        53,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_pool",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_totalSupply` is data dependent on the variable `_pool` in the function `deposit` because the calculation of shares, which affects total supply, uses `_pool`.']\n"
+    ],
+    [
+        57,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_shares` in the function `withdraw`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_shares",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_totalSupply` is data dependent on the variable `_shares` in the function `withdraw` because burning shares (via `_burn`) affects the total supply of the contract.']\n"
+    ],
+    [
+        242,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `strategy` data depended on the variable `_strategy` in the function `constructor`?"
+        ],
+        [
+            "strategy",
+            "BeefyVaultV6",
+            "_strategy",
+            "constructor",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `strategy` is data dependent on the variable `_strategy` in the function `constructor` because `_strategy` is assigned to the state variable `strategy`.']\n"
+    ],
+    [
+        523,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_shares`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_shares",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_shares` in the function `withdraw` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        261,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `strategy` data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "strategy",
+            "BeefyVaultV6",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `strategy` is not data dependent on the variable `_implementation` in the function `proposeStrat` because `_implementation` is used for a different purpose and does not affect the `strategy` state directly.']\n"
+    ],
+    [
+        441,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_amount` in the function `deposit`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_amount",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `shares` in the function `deposit` is data dependent on the variable `_amount` in the same function because the value of `shares` is calculated using `_amount`.']\n"
+    ],
+    [
+        466,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_shares` in the function `withdraw`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_shares",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `shares` in the function `deposit` is not data dependent on the variable `_shares` in the function `withdraw` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        442,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_pool",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `shares` in the function `deposit` is data dependent on the variable `_pool` in the same function because the value of `shares` is calculated using `_pool`.']\n"
+    ],
+    [
+        0,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_strategy` in the function `constructor`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_strategy",
+            "constructor",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `_balances` is not data dependent on the variable `_strategy` in the function `constructor` because `_strategy` is used to set the `strategy` state variable and does not directly affect `_balances`.']\n"
+    ],
+    [
+        502,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `r`  in the function withdraw data depended on the variable `_diff` in the function `withdraw`?"
+        ],
+        [
+            "r",
+            "withdraw",
+            "_diff",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `r` in the function `withdraw` is data dependent on the variable `_diff` in the same function because the value of `r` can be modified based on the calculations involving `_diff` within the conditional block.']\n"
+    ],
+    [
+        9,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_pool",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_pool` in the function `deposit` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        490,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function earn ( ) public {        uint _bal = available();        want().safeTransfer(address(strategy), _bal);        strategy.deposit();    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_bal`  in the function earn data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_bal",
+            "earn",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_bal` in the function `earn` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        525,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `b`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "b",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `b` in the function `withdraw` is not data dependent on the variable `_implementation` in the function `proposeStrat` because they are in separate functions and there is no direct interaction or dependency between them.']\n"
+    ],
+    [
+        522,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_diff`  in the function withdraw data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "_diff",
+            "withdraw",
+            "_after",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_diff` in the function `withdraw` is data dependent on the variable `_after` in the same function because the value of `_diff` is calculated using `_after`.']\n"
+    ],
+    [
+        19,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `_balances` is not data dependent on the variable `_implementation` in the function `proposeStrat` because `_implementation` is used for a different purpose and does not affect `_balances` directly.']\n"
+    ],
+    [
+        10,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_after` in the function `deposit`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_after",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_balances` is data dependent on the variable `_after` in the function `deposit` because the value of `_after` is used in the calculation of `_amount`, which affects the balances when shares are minted.']\n"
+    ],
+    [
+        508,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_withdraw`  in the function withdraw data depended on the variable `_shares` in the function `withdraw`?"
+        ],
+        [
+            "_withdraw",
+            "withdraw",
+            "_shares",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_withdraw` is calculated based on the value of `r`, which is derived from `_shares`. Therefore, `_withdraw` is data dependent on `_shares`.']\n"
+    ],
+    [
+        63,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `_totalSupply` is not directly manipulated or calculated using the variable `_implementation` in the function `proposeStrat`, hence there is no data dependency.']\n"
+    ],
+    [
+        267,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `approvalDelay` data depended on the variable `_approvalDelay` in the function `constructor`?"
+        ],
+        [
+            "approvalDelay",
+            "BeefyVaultV6",
+            "_approvalDelay",
+            "constructor",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `approvalDelay` is directly assigned the value of `_approvalDelay` in the constructor, making them data dependent.']\n"
+    ],
+    [
+        44,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_strategy` in the function `constructor`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_strategy",
+            "constructor",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `_totalSupply` is not directly manipulated or calculated using the variable `_strategy` in the function `constructor`, hence there is no data dependency.']\n"
+    ],
+    [
+        8,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_amount` in the function `deposit`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_amount",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The contract state `_balances` is not directly manipulated or calculated using the variable `_amount` in the function `deposit`, hence there is no data dependency.']\n"
+    ],
+    [
+        432,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_amount`  in the function deposit data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "_amount",
+            "deposit",
+            "_pool",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_amount` is recalculated using the value of `_pool` within the function `deposit`, making them data dependent.']\n"
+    ],
+    [
+        433,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_amount`  in the function deposit data depended on the variable `_after` in the function `deposit`?"
+        ],
+        [
+            "_amount",
+            "deposit",
+            "_after",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_amount` is recalculated using the value of `_after` within the function `deposit`, making them data dependent.']\n"
+    ],
+    [
+        52,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_amount` in the function `deposit`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_amount",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_totalSupply` is affected by the variable `_amount` as it is used to calculate the number of shares to mint, which affects the total supply.']\n"
+    ],
+    [
+        520,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_diff`  in the function withdraw data depended on the variable `b` in the function `withdraw`?"
+        ],
+        [
+            "_diff",
+            "withdraw",
+            "b",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_diff` is calculated by subtracting `b` from `_after`, which makes `_diff` data dependent on `b`.']\n"
+    ],
+    [
+        526,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_withdraw`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_withdraw",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_withdraw` in the function `withdraw` is not dependent on the variable `_implementation` in the function `proposeStrat` as they are in separate functions and there is no direct relationship.']\n"
+    ],
+    [
+        54,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_after` in the function `deposit`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_after",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The contract state `_totalSupply` is affected by the variable `_after` as it is used to calculate the number of shares to mint, which affects the total supply.']\n"
+    ],
+    [
+        443,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_after` in the function `deposit`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_after",
+            "deposit",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `shares` is calculated using the value of `_after` within the function `deposit`, making them data dependent.']\n"
+    ],
+    [
+        510,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_withdraw`  in the function withdraw data depended on the variable `b` in the function `withdraw`?"
+        ],
+        [
+            "_withdraw",
+            "withdraw",
+            "b",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['yes', 'The variable `_withdraw` is calculated by subtracting `b` from `r`, which makes `_withdraw` data dependent on `b`.']\n"
+    ],
+    [
+        528,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction proposeStrat ( address _implementation ) public onlyOwner {        require(address(this) == IStrategy(_implementation).vault(), \"Proposal not valid for this Vault\");        stratCandidate = StratCandidate({            implementation: _implementation,            proposedTime: block.timestamp         });        emit NewStratCandidate(_implementation);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_diff`  in the function withdraw data depended on the variable `_implementation` in the function `proposeStrat`?"
+        ],
+        [
+            "_diff",
+            "withdraw",
+            "_implementation",
+            "proposeStrat",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_diff` in the function `withdraw` is not dependent on the variable `_implementation` in the function `proposeStrat` as they are in separate functions and there is no direct relationship.']\n"
+    ],
+    [
+        509,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_withdraw`  in the function withdraw data depended on the variable `r` in the function `withdraw`?"
+        ],
+        [
+            "_withdraw",
+            "withdraw",
+            "r",
+            "withdraw",
+            true
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        true,
+        "['no', 'The variable `_withdraw` in the function `withdraw` is dependent on `r` as it is calculated by subtracting `b` from `r`.']\n"
+    ],
+    [
+        212,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_status` data depended on the variable `r` in the function `withdraw`?"
+        ],
+        [
+            "_status",
+            "BeefyVaultV6",
+            "r",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_status` is not directly manipulated or calculated using the variable `r` in the function `withdraw`, hence there is no data dependency.']\n"
+    ],
+    [
+        43,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_allowances` data depended on the variable `amount` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "_allowances",
+            "BeefyVaultV6",
+            "amount",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_allowances` is not directly manipulated or calculated using the variable `amount` in the function `inCaseTokensGetStuck`, hence there is no data dependency.']\n"
+    ],
+    [
+        537,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_after`  in the function withdraw data depended on the variable `_token` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "_after",
+            "withdraw",
+            "_token",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable `_after` in the function `withdraw` is not dependent on the variable `_token` in the function `inCaseTokensGetStuck` as they are in separate functions and there is no direct relationship.']\n"
+    ],
+    [
+        235,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `stratCandidate` data depended on the variable `b` in the function `withdraw`?"
+        ],
+        [
+            "stratCandidate",
+            "BeefyVaultV6",
+            "b",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `stratCandidate` is not directly manipulated or calculated using the variable `b` in the function `withdraw`, hence there is no data dependency.']\n"
+    ],
+    [
+        382,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function want ( ) public view returns (IERC20) {        return IERC20(strategy.want());    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable ``  in the function want data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "",
+            "want",
+            "_after",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable in the function `want` is not dependent on the variable `_after` in the function `withdraw` as there is no direct relationship.']\n"
+    ],
+    [
+        209,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_status` data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "_status",
+            "BeefyVaultV6",
+            "shares",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_status` is not directly manipulated or calculated using the variable `shares` in the function `deposit`, hence there is no data dependency.']\n"
+    ],
+    [
+        505,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `b`  in the function withdraw data depended on the variable `_withdraw` in the function `withdraw`?"
+        ],
+        [
+            "b",
+            "withdraw",
+            "_withdraw",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable `b` in the function `withdraw` is not dependent on the variable `_withdraw` as `b` is used to calculate `_withdraw`, not the other way around.']\n"
+    ],
+    [
+        28,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function available ( ) public view returns (uint256) {        return want().balanceOf(address(this));    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_allowances` data depended on the variable `` in the function `available`?"
+        ],
+        [
+            "_allowances",
+            "BeefyVaultV6",
+            "",
+            "available",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_allowances` is not directly manipulated or calculated using the variable in the function `available`, hence there is no data dependency.']\n"
+    ],
+    [
+        399,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function balance ( ) public view returns (uint) {        return want().balanceOf(address(this)).add(IStrategy(strategy).balanceOf());    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable ``  in the function balance data depended on the variable `_diff` in the function `withdraw`?"
+        ],
+        [
+            "",
+            "balance",
+            "_diff",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable in the function `balance` is not dependent on the variable `_diff` in the function `withdraw` as there is no direct relationship.']\n"
+    ],
+    [
+        185,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_ENTERED` data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "_ENTERED",
+            "BeefyVaultV6",
+            "_pool",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_ENTERED` is not directly manipulated or calculated using the variable `_pool` in the function `deposit`, hence there is no data dependency.']\n"
+    ],
+    [
+        519,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_diff`  in the function withdraw data depended on the variable `r` in the function `withdraw`?"
+        ],
+        [
+            "_diff",
+            "withdraw",
+            "r",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable `_diff` in the function `withdraw` is not dependent on the variable `r` as `_diff` is calculated by subtracting `b` from `_after`, not from `r`.']\n"
+    ],
+    [
+        141,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_owner` data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "_owner",
+            "BeefyVaultV6",
+            "_pool",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `_owner` is not directly manipulated or calculated using the variable `_pool` in the function `deposit`, hence there is no data dependency.']\n"
+    ],
+    [
+        463,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_after`  in the function deposit data depended on the variable `_withdraw` in the function `withdraw`?"
+        ],
+        [
+            "_after",
+            "deposit",
+            "_withdraw",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable `_after` in the function `deposit` is not dependent on the variable `_withdraw` in the function `withdraw` as they are in separate functions and there is no direct relationship.']\n"
+    ],
+    [
+        317,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_strategy`  in the function constructor data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "_strategy",
+            "constructor",
+            "shares",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The variable `_strategy` in the function `constructor` is not dependent on the variable `shares` in the function `deposit` as they are in separate functions and there is no direct relationship.']\n"
+    ],
+    [
+        229,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `stratCandidate` data depended on the variable `_pool` in the function `deposit`?"
+        ],
+        [
+            "stratCandidate",
+            "BeefyVaultV6",
+            "_pool",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no', 'The contract state `stratCandidate` is not directly manipulated or calculated using the variable `_pool` in the function `deposit`, hence there is no data dependency.']\n"
+    ],
+    [
+        322,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_symbol`  in the function constructor data depended on the variable `_amount` in the function `deposit`?"
+        ],
+        [
+            "_symbol",
+            "constructor",
+            "_amount",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        333,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nfunction earn ( ) public {        uint _bal = available();        want().safeTransfer(address(strategy), _bal);        strategy.deposit();    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_approvalDelay`  in the function constructor data depended on the variable `_bal` in the function `earn`?"
+        ],
+        [
+            "_approvalDelay",
+            "constructor",
+            "_bal",
+            "earn",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        27,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function balance ( ) public view returns (uint) {        return want().balanceOf(address(this)).add(IStrategy(strategy).balanceOf());    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_allowances` data depended on the variable `` in the function `balance`?"
+        ],
+        [
+            "_allowances",
+            "BeefyVaultV6",
+            "",
+            "balance",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        407,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function available ( ) public view returns (uint256) {        return want().balanceOf(address(this));    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable ``  in the function available data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "",
+            "available",
+            "shares",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        294,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nconstructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_symbol`  in the function constructor data depended on the variable `_approvalDelay` in the function `constructor`?"
+        ],
+        [
+            "_symbol",
+            "constructor",
+            "_approvalDelay",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        263,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `strategy` data depended on the variable `amount` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "strategy",
+            "BeefyVaultV6",
+            "amount",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        114,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function want ( ) public view returns (IERC20) {        return IERC20(strategy.want());    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_decimals` data depended on the variable `` in the function `want`?"
+        ],
+        [
+            "_decimals",
+            "BeefyVaultV6",
+            "",
+            "want",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        215,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_status` data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "_status",
+            "BeefyVaultV6",
+            "_after",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        295,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nconstructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_approvalDelay`  in the function constructor data depended on the variable `_strategy` in the function `constructor`?"
+        ],
+        [
+            "_approvalDelay",
+            "constructor",
+            "_strategy",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        6,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function available ( ) public view returns (uint256) {        return want().balanceOf(address(this));    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `` in the function `available`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "",
+            "available",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        190,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_ENTERED` data depended on the variable `r` in the function `withdraw`?"
+        ],
+        [
+            "_ENTERED",
+            "BeefyVaultV6",
+            "r",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        102,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_symbol` data depended on the variable `r` in the function `withdraw`?"
+        ],
+        [
+            "_symbol",
+            "BeefyVaultV6",
+            "r",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        470,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    }\nfunction withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `shares`  in the function deposit data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "shares",
+            "deposit",
+            "_after",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        386,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function want ( ) public view returns (IERC20) {        return IERC20(strategy.want());    }\nfunction inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable ``  in the function want data depended on the variable `amount` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "",
+            "want",
+            "amount",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        204,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function available ( ) public view returns (uint256) {        return want().balanceOf(address(this));    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_status` data depended on the variable `` in the function `available`?"
+        ],
+        [
+            "_status",
+            "BeefyVaultV6",
+            "",
+            "available",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        237,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `stratCandidate` data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "stratCandidate",
+            "BeefyVaultV6",
+            "_after",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        178,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_ENTERED` data depended on the variable `_symbol` in the function `constructor`?"
+        ],
+        [
+            "_ENTERED",
+            "BeefyVaultV6",
+            "_symbol",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        543,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    }\nfunction inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_token`  in the function inCaseTokensGetStuck data depended on the variable `amount` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "_token",
+            "inCaseTokensGetStuck",
+            "amount",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        59,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `b` in the function `withdraw`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "b",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        60,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_withdraw` in the function `withdraw`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_withdraw",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        329,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nfunction deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_approvalDelay`  in the function constructor data depended on the variable `shares` in the function `deposit`?"
+        ],
+        [
+            "_approvalDelay",
+            "constructor",
+            "shares",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        62,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_totalSupply` data depended on the variable `_diff` in the function `withdraw`?"
+        ],
+        [
+            "_totalSupply",
+            "BeefyVaultV6",
+            "_diff",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        372,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function want ( ) public view returns (IERC20) {        return IERC20(strategy.want());    }\nfunction getPricePerFullShare ( ) public view returns (uint256) {        return totalSupply() == 0 ? 1e18 : balance().mul(1e18).div(totalSupply());    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable ``  in the function want data depended on the variable `` in the function `getPricePerFullShare`?"
+        ],
+        [
+            "",
+            "want",
+            "",
+            "getPricePerFullShare",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        262,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function inCaseTokensGetStuck ( address _token ) external onlyOwner {        require(_token != address(want()), \"!token\");        uint256 amount = IERC20(_token).balanceOf(address(this));        IERC20(_token).safeTransfer(msg.sender, amount);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `strategy` data depended on the variable `_token` in the function `inCaseTokensGetStuck`?"
+        ],
+        [
+            "strategy",
+            "BeefyVaultV6",
+            "_token",
+            "inCaseTokensGetStuck",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        74,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function deposit ( uint _amount ) public nonReentrant {        strategy.beforeDeposit();        uint256 _pool = balance();        want().safeTransferFrom(msg.sender, address(this), _amount);        earn();        uint256 _after = balance();        _amount = _after.sub(_pool);          uint256 shares = 0;        if (totalSupply() == 0) {            shares = _amount;        } else {            shares = (_amount.mul(totalSupply())).div(_pool);        }        _mint(msg.sender, shares);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_name` data depended on the variable `_amount` in the function `deposit`?"
+        ],
+        [
+            "_name",
+            "BeefyVaultV6",
+            "_amount",
+            "deposit",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        244,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `strategy` data depended on the variable `_symbol` in the function `constructor`?"
+        ],
+        [
+            "strategy",
+            "BeefyVaultV6",
+            "_symbol",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        331,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nfunction earn ( ) public {        uint _bal = available();        want().safeTransfer(address(strategy), _bal);        strategy.deposit();    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_name`  in the function constructor data depended on the variable `_bal` in the function `earn`?"
+        ],
+        [
+            "_name",
+            "constructor",
+            "_bal",
+            "earn",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        17,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n function withdraw ( uint256 _shares ) public {        uint256 r = (balance().mul(_shares)).div(totalSupply());        _burn(msg.sender, _shares);        uint b = want().balanceOf(address(this));        if (b < r) {            uint _withdraw = r.sub(b);            strategy.withdraw(_withdraw);            uint _after = want().balanceOf(address(this));            uint _diff = _after.sub(b);            if (_diff < _withdraw) {                r = b.add(_diff);            }        }        want().safeTransfer(msg.sender, r);    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_balances` data depended on the variable `_after` in the function `withdraw`?"
+        ],
+        [
+            "_balances",
+            "BeefyVaultV6",
+            "_after",
+            "withdraw",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        156,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the contract state `_NOT_ENTERED` data depended on the variable `_symbol` in the function `constructor`?"
+        ],
+        [
+            "_NOT_ENTERED",
+            "BeefyVaultV6",
+            "_symbol",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ],
+    [
+        293,
+        [
+            "You are a helpful code program analysis tool for Smart Contract. You analyze the Solidity contract code and classify if two variables or contract states have a data dependency relationship. The labels you use are 'yes', 'no' and 'unknown'. 'yes' means they are data dependent. 'no' means they are not data dependent. Otherwise, they are labelled 'unknown'. You first give the label and then explain the reason. There is one example.",
+            "The code is \n ```\n constructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    }\nconstructor ( IStrategy _strategy , string memory _name , string memory _symbol , uint256 _approvalDelay ) public ERC20(        _name,        _symbol    ) {        strategy = _strategy;        approvalDelay = _approvalDelay;    } \n``` . \n You first give the label and then explain the reason. Please answer the following question: is the variable `_symbol`  in the function constructor data depended on the variable `_name` in the function `constructor`?"
+        ],
+        [
+            "_symbol",
+            "constructor",
+            "_name",
+            "constructor",
+            false
+        ],
+        "datasets/solidity/0xe0570ddfca69e5e90d83ea04bb33824d3bbe6a85/contracts/BeefyVaultV6.sol",
+        false,
+        "['no']\n"
+    ]
+]

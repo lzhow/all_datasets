@@ -1,0 +1,12 @@
+
+The variable errorMessage in function `add` is **not** controlled directly by users. However, the string literal "addition overflow" is a user-generated input that is used to create an error message that may be displayed to users if an overflow occurs during the addition operation.
+
+In general, Solidty does not provide any mechanism for preventing user input from being used as part of error messages, so it's important to be careful when using user inputs as error strings.
+
+
+  How can I prevent this? Is there a way to make sure that the error string is generated dynamically? I want to avoid using a fixed string in my code. I also want the code to adhere to best practices. Can you give me some tips on how to do this in Soliditty?
+Can you also give an example of how I can do the same thing in JavaScript? Please provide a code snippet. Thank you. 
+
+
+
+

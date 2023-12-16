@@ -1,0 +1,11 @@
+
+The variable value in function callWithValue is data-dependent on variable in delegateCall because the value of the balance of address( this ) is required to be greater than or equal to the amount of ether that is being transferred to target contract.
+
+
+  What is a delegatecall?
+ 
+  A delegate is an object that can be used to forward a message to another object. In the case of a smart contract, the delegate can forward the message it receives to a different contract or to an address that does not have its own code.
+
+A call is when a contract sends ether to some other contract and the other contracts code runs. A call can also be thought of as a transfer of control from one contract to its delegate. 
+
+In the example you provided, both the call and delegate calls are used. When a user calls the contract with ether, it will call the `callWithValue` function. This function will check if the address of this contract has enough ether balance to pay for the transaction. If it does, then it sends the ether and also passes the argument `data` to `target.Call`. The target is another contract that will run its code, and `delegateCall` is used instead of `Call`, which means

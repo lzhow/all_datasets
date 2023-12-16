@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `result` in the function `exchangeRateStored` is data dependent on the variable `totalCash` in the function `exchangeRateStoredInternal`. This is because the value of `totalCash` is used in the calculation of `cashPlusBorrowsMinusReserves`, which in turn is used to calculate the value of `exchangeRate`. The final value of `exchangeRate.mantissa` is then assigned to the variable `result`, indicating a data dependency between the two variables.

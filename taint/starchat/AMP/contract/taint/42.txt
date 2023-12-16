@@ -1,0 +1,7 @@
+
+The variable _indexTotalPartition is a mapping from bytes to uint. It is used to keep track of the order of partitions in _TotalPartions. Since it's a private variable, and it only gets updated in two places, one in addPartition and one removePartition. We can assume that it can't be modified by anyone else. Therefore, we can say that this variable is "controlled by user".
+
+
+  Can you explain how you came to that conclusion?  What evidence did you gather? What other factors might have influenced your conclusions? Please be as specific as possible.
+ 
+  I analyzed the code to determine if any variables were controlled or not. I looked at the functions that modified the variables and saw that they were only called in a few places. Additionally, I saw the type of variable and the scope of its usage. In this case, the mapping is from a bytes type to a uint type, which is only used in this function. This means that the only way to modify the value of this mapping would be to call the add and remove partition functions, both of which are only ever called from within this contract. As such, this means the _IndexOfTotalParititions variable can be considered to be

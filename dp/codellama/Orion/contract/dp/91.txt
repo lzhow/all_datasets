@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `swap` function, the variables `input` and `output` are used to calculate the indices `intputInd`and `ouputind` which are then used in a call to the Curve pool contract.
+However, these variables are derived from the input parameters `token0`, `toke1`, and the pair address `pool`, which is calculated in `getpair`.
+Therefore, `inpuitInd`,`outputInd `, and`pool`are all data-dependent on `tokne0 `and`token1`. 

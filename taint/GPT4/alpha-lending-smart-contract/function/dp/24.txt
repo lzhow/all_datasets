@@ -1,0 +1,3 @@
+yes
+
+The variable `collateralShares` in the function `liquidateInternal` is data dependent on the variable `liquidationBonus` in the function `calculateCollateralAmount`. This is because `collateralShares` is calculated using the `collateralAmount`, which is returned from the `calculateCollateralAmount` function. Within `calculateCollateralAmount`, the `liquidationBonus` is used to calculate the `collateralAmount`. Therefore, any changes to `liquidationBonus` will affect the `collateralAmount`, which in turn will affect the `collateralShares`. The data dependency is established through the flow of data from `liquidationBonus` to `collateralAmount` and then to `collateralShares`.

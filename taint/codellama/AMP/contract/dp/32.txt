@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the `_maint` function, the value of `_total_supply` is increased by `_value`, and the token is added to the default partition.
+Then, `_call_post_trans_hook`s are called, which include the `to_toke_received` hook.  This hook is called on `_operator`, `_from`,`_ to`, ` _ value`, _`data`,  and _ `operator_data`.
+This hook calls the`tokes_recieved` method on `IAmp_Tockens_Recipiant`, which is an interface implemented by the contract. This interface has a method `tokensReceived` that takes the same parameters as the hook, and is implemented in a different contract, `Aamp_Token_Receiver`. This contract has the method `_tok_rcv` which calls `transer_by_default_parition` with the parameters `_oprator`, `__to`, __value__, `__data__`,and `__operator__data`
+So, when the transfer is made, it is dependent on both the variables `_ to` and `_ value` from the parent function.

@@ -1,0 +1,13 @@
+
+The variable _withraw is data-dependent on b in withdraw because it is used in an if-statement to determine the value of r, which is then used to transfer funds from the contract to the sender.
+
+
+  Can you explain why this is true?
+ 
+  Sure! The reason why the `_withdraw` variable is dependent on ` b` is because the purpose of the `if` statement is to ensure that the amount of WETH that is withdrawn from Compound is not more than the balance of `want()` in this contract. If the W-ETH balance in Compound was less than `r`, then the remaining balance would be withdraw from `strategy` and added to ` r`. However, if the current balance is greater than or equal to r then there is no need to withdraw any more WETHe and the remainder of `_diff` can be ignored. Therefore, the final value assigned to  ` _r` will be equal the minimum of (r, b + _difference).
+
+ 
+ 
+
+
+  What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on to more complex projects. I also want to use

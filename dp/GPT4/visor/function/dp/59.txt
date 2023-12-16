@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `a` in the function `tryMod` and the variable `a` in the function `div` are function parameters that are scoped to their respective functions. They are not dependent on each other because each function call provides its own arguments for these parameters. Changes to one will not affect the other since they are isolated within their function's execution context. There is no shared state or reference between the two variables, and they do not influence each other's values.

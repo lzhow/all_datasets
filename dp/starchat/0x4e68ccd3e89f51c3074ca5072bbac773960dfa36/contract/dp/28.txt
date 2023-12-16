@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of ` feeGrowsAbove` is computed based on `self[upper]`, which is a state variable that is updated based off of the current function call. Therefore, `upper. feegrowthOutside` will be updated before `lower.feegrowthoutside` and therefore `feeeGrowhInside` would be affected by the change in ` upper.feeGrownOutside`.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on is because the calculation of fee growth inside the loop is dependent on a value that changes within the same loop.
+
+ 
+ 

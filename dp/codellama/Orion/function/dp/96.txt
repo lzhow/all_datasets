@@ -1,0 +1,9 @@
+  
+The label is 'Yes'.
+
+In the `function` ` getAmoutOut` , the local variable  ` from` is used to calculate the value of the  variable` i` .
+  ```  ( int  i , int j , ) =  ICurlRegistry ( factory ).get _coins_ indices ( pool , from  , to ) ;  ```.
+   The variable i is calculated based on  the values of  from and to.
+   
+ In the` function` get AmountIn ,  there is no direct dependency between the variables  'from'  and  "i".
+ However, the calculation of variable 'i' in ` function  get  AmoutIn` depends on variable'from'.  The value  of ' from' is passed as an argument to the internal function 'pairForCurl' which is called in  function'get AmounIn'. The function pairforCURL calculates the pair address based  on 'factory',  which in turn depends  directly on' from'. Therefore,  indirectly, variable "from" is data-dependent on " i" in function "getAmounOut".

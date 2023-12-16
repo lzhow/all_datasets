@@ -1,0 +1,12 @@
+
+The contract has a function called `_isDataDependency` that takes in two parameters: a contract and a state variable. It checks if the state variables of the two contracts have any data dependencies. If they do, it returns true, otherwise it will return false.
+
+In this case, the `_from` and `_to` variables are the parameters that we are looking for. We can call the `isStateDependent` function with the current contract address and the names of these two state parameters. This will then check if these parameters have data dependence on any other parameters in this contract. In this example, there is no data-dependence, so it would return `false`.
+If we were to change the parameter `_data` to `_operator`, then it could have some data depending on `_allowed`. However, since `_allowance` is a mapping, and mappings are generally not considered data, this would not be considered a true data dep.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain in detail how my tool analyzes Solidty code to determine if variables have dependencies on each other.
+
+  The tool starts by parsing the code into an abstract syntax tree (

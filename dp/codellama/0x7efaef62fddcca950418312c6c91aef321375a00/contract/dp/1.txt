@@ -1,0 +1,5 @@
+  
+No, the ` numerators` variable in function `_mintsF` is not dependent on variable`_token`1 in `function swap`.
+
+The reason is that the `_reserves` variables are passed as arguments to the` _ mintF ` function, and the numeration variable is calculated based on these reserves.
+On the other hand, in` function` swap, a new set of reservers is created, which are different from the ones used in `_ mintFees`. Therefore, there is no data dependence between the two functions.

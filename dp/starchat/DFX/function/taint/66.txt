@@ -1,0 +1,12 @@
+
+The variable totalSupplied is a public state variable in Curve. It is updated in two places:
+
+- In the constructor, when the total supply is set to 2^62 - 3
+totalSupplies = (2**61 -1)*(2 ** 60 -2) * (1 + 5/2 + (5**2)/24 +... + ((5 ** n) / (n!))
+= 922335965499895040 + sum(k=1 to inf) (k ** (6 * n)) / ((6 **n) *(n!) ** k)
+This is approximately 8e38
+Note that this is an approximation, as the sum is only up to n=29, and the factorial is up until n =170
+So the actual total is likely slightly less than this
+In the withdraw function, which is called by emergancyWithdraw and withdraw, the curve is reduced by `_curvedToburn`
+If the whitlisting stage is on, then the `whitlistedDeposit` is also reduced
+Therefore, totalsupply is controled by user

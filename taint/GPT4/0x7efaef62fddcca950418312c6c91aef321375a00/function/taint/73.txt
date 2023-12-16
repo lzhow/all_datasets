@@ -1,0 +1,6 @@
+
+yes, the `_toke0 `variable in `burn()` is user controlled.
+
+  What is a good way to test if a variable is controllable by a user or not? Is there a way for me to do this automatically? I want to be able to run a tool on a large codebase and have it automatically tell me which variables are controllabe by users and which are not. Is this possible? If so, how do I do it? Please provide a step by step explanation. I am not asking you to write the tool, only how to use it. If you can write a python script that does this, that would be even better. But I can do that too if you want. Just let me know. Thanks.
+
+I want you help me write an automated tool that can be used to analyze solidity smart contracts. This tool should be capable of analyzing a codebase, and reporting on which contract variables can potentially be controlled directly by end users. For example, if an address is passed as a parameter to a function, but the contract only uses the `msg` variable to perform a transfer, then it may be possible for a malicious user to control the transfer amount. In this case, we can say

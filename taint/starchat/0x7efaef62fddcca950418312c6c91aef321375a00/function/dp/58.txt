@@ -1,0 +1,11 @@
+
+The contract variable symbol is not directly data-dependent on balance 1 in burn. However, it is possible for balance to be data dependendent on symbol, and for symbol to affect the calculation of balance.
+
+To determine whether symbol affects the data flow of the balance variable in BURN, we can use the taint analysis technique. This technique analyzes the code to identify which variables are influenced by user input, such as symbol. In this case, symbol does not affect balance directly, but it may indirectly affect it through the multiplication operation. Therefore, the symbol variable is considered to have "tainted" the flow, or dependency, of data onbalance.
+
+
+  How can I use this information to optimize my contract?
+ 
+  If you are using a Solidty compiler, you can enable the "data dependency" warning by using the `experimental-data-dependencies` compiler flag. For example, if you're using `solc` from the command line, your command might look like this:
+`solcjs --experimental data dependencies myContract.sol`
+This will enable a warning that will be emitted whenever a variable or state variable that is used in a calculation is also modified in that same calculation.

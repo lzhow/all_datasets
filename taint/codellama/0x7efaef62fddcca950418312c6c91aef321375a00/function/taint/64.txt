@@ -1,0 +1,4 @@
+  
+No, the ` blockTimestap` variable in function `_update` is NOT controlled  by user because it's a built-in variable of the blockchain. It' s a timestamp of a block that the transaction is included in.
+
+The ` _ update` function is called in several places in this contract, including the constructor, ` mint`, ` burn`, and ` swap` functions. Each time it updates the reserves of token  and the timestamp when the last update was made.  The `  blocktimestamp` value is used to calculate the time elapsed since the previous update and to update the price of each token accordingly. However, this value cannot be controlled directly by a user, as it comes from the Ethereum block chain.

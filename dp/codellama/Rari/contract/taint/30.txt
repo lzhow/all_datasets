@@ -1,0 +1,4 @@
+  
+No.
+
+The variable totalAdminFess is a state variable in CERC2ODelegate contract. It is initialized to 100 in its constructor. Therefore, the value of total AdminFeess cannot be controlled directly by a user, as it can only be changed by calling the _updateAdminfees function. This function is only accessible to the contract owner, which is determined by its implementation contract, and not by any user interaction. 

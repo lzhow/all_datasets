@@ -1,0 +1,4 @@
+  
+No, the ` marketPlaceFund` variable in ` emitEmitted` function is not dependent on ` output`variable in` emitEmitter`function.
+
+The ` execute` method in ROUTER contract calls the` get Returned Ammounts`method to calculate the returned amount and the protocol fee amount. These amounts are then passed to the emit executed method as parameters. Therefore, ` MarketPlace FEE Amout` is dependent only on` output`, ` protocol FE Amoumt`, and ` swap Description` variables in function` execute`.

@@ -1,0 +1,14 @@
+
+The variable "msg" is a structure that contains information about the current call, such as the sender and the recipient of the call. In Solidty, the "calldata" keyword is used to pass data to functions. This data is stored in a special structure called "memory". The "data", "sig" and "value" variables are all part of this structure.
+
+In the context of "transfer", the data variable contains the information that is passed to the transfer function. It is possible to control the value of these variables, but not the structure itself.
+
+
+  How can I control msg? I need to be able to change the msg sender in my tests. I tried making a new msg variable, and assigning it to msg, with the new sender, however, this does not work. Can you explain how I can do this?
+I also tried using assembly to modify the memory directly, which also did not change anything. How do I modify msg in order to test my code? Please provide an example if possible. Thank you. 
+
+Here is my test code:
+`
+it('should allow a user to withdraw their funds', async () => {
+    const user = accounts[112];
+    await token

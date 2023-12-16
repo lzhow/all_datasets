@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `function recover` of the contract, the signature is first parsed into its components, including the r and s values. These values are then used to compute the signatory address using the Ethereuem's ECC algorithm.
+  The `address signers` is then computed using `ecrecovery` function, which takes the hash of a message, a signature, and the recovery id as input.  In this case, `hash` and `v` are passed as arguments, while `r`and ` s`are computed from the input signature. Therefore,`signers `is data-dependent on ` r` `and` s`.

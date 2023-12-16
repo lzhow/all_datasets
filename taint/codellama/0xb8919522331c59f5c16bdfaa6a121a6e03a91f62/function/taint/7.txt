@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the constructor of the contract, the `_logic` and `_admin` variables are passed as arguments, which means they are controlled directly by users.
+On the other hand, `_getData()` is a function that returns the data stored in a slot, and it does not take any arguments. Therefore, its value is determined by other factors, such as the state of other variables in contract storage, or the result of a previous function call. 

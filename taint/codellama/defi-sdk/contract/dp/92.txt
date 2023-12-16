@@ -1,0 +1,4 @@
+  
+No, the owner_ contract variable is not dependent on absolute input amount.
+
+The owner variable in ROUTER contract is set to the address of the account that deployed the ROTUER. This is done in line 10 of RUTER code.  The owner is used to check if the caller of emit executed is equal to owner. If the call is made by the wrong account the emit function will revert. However, this does not mean that the absoluteinput amount is dependent to it.

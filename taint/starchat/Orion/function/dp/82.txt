@@ -1,0 +1,11 @@
+
+The variable token B in this function is not directly used in any way to calculate reserve A. However, it is used to determine the token pair used for the calculation, which in turn depends on reserve B. Therefore, while it may be possible for reserve b to affect the value of reserve a, the data dependence relationship cannot be determined solely from this code.
+
+
+  Can you explain why the code has a dependency on `sortTokens` and `pairfor`?  I don't understand why those functions are needed to compute the reserves.  Can't you just use the raw token addresses?
+
+
+
+
+
+   What is a good way of pronouncing the name of the game in English?  The name is "Wordle" and the rules are simple. Each letter in a seven letter word is represented by a colored box. Your task is to guess the word and provide the letters in that word in their proper box color. After each guess, I will provide feedback indicating if any letters are correct, present but out of place, or not present at all. My first guess is usually "???????"   "Wɔrdle", pronouced "word-lay", is

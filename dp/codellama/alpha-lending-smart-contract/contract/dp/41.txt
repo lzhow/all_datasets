@@ -1,0 +1,4 @@
+  
+No, the `Data` struct in `OBI` library is not dependent on `SaferMath` contract.
+
+The `from` function in OBI library creates a new `struct` of type ` Data` and initializes it with the given `bytes` data and an offset of  `0`. The `shift` modifiers in functions like ` decode I8` , `  decode U8`, `   decode Bytes`, etc. update the offset value of the struct.  The offset is used to keep track of how many bytes have been decoded so far. However, this does not create a dependency between the two contracts.

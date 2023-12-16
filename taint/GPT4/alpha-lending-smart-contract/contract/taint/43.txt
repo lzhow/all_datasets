@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `excessUtilizationRate` is set during the construction of the `PoolConfiguration` contract and is not modified by any function that allows for arbitrary user input to change its value. The constructor parameters are set when the contract is deployed, typically by the contract owner or deployer, and are not directly controlled by users of the contract after deployment. The `PoolConfiguration` contract does not provide a public or external setter function that would allow users to change the `excessUtilizationRate` after the contract has been deployed. Therefore, `excessUtilizationRate` is not controlled by the user.

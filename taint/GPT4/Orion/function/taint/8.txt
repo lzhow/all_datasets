@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `amount_receive_base_units` in the function `doSwapThroughOrionPool` is not controlled by the user. It is assigned the value returned by the function `LibUnitConverter.decimalToBaseUnit`, which takes the `swapData.amount_receive` as an argument. The `swapData.amount_receive` is passed as an argument to the `doSwapThroughOrionPool` function, but it is not controlled by the user within the function itself.

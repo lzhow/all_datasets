@@ -1,0 +1,12 @@
+
+The contract variable `curvFactory`, which is of type `address`, is not explicitly used in any function parameters or return types. Therefore, it is impossible to determine whether or not it has a direct data-dependence relationship with the `_origin` parameter in `Swaps` contract's `swap` function.
+
+However, the `Curves` and `Swap` contracts are separate and independent contracts, and their functions are called by the target contract via function calls. It is possible that the data stored in these contracts could be modified by other functions or by external entities, leading to unpredictable behavior. Additionally, Soliditiy does not support true data race detection, so race conditions could still occur even if the dependency is determined.
+
+
+  Can you give me a list of all the variables in this contract and the relationships between them?
+ 
+  The following are the list and relationships of variables:
+1. `origin`: This is a contract address of the token that is being sold. 
+2. `_target`:  This contract is an address to the curve contract that will be used to calculate the amount of tokens that can be sold for a given amount.  
+3.  `_maxOrigianlAmount`: The maximum

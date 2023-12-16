@@ -1,0 +1,14 @@
+
+The variable snapshoted in totalSuppyAt is data-dependent on snapshotID in _ValueAt. This is because the value of snapshot ID determines which snapshot in memory to access, and whether or not the snapshot exists.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how this works.
+
+In the first function, totalsupplyAt, the program accesses the _valuesAt function. In this function the parameter snapshotid is used to determine which of the stored snapshots is being accessed. If the accessed snapshot does not exist, then the return value is ( false,0 ). If it exists, it returns the values of that snapshot. 
+
+However, in this case, since the total supply is not stored in a snapshot, when the index is equal to the length of snapshots, this means that the requested snapshot is greater than the most recent snapshot stored, which is therefore not available. Therefore, we return the ( true,totalsupply ) value.
+
+
+This means the data in snapshot id determines whether the second function can access the correct snapshot of total Supply. Since the access to total suppy is dependent on this value, therefore the two functions are dependent and therefore data depend on each other.

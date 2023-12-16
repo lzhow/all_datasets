@@ -1,0 +1,3 @@
+yes
+
+The variable `_p` in the function `updateFees` is directly calculated from the variable `price` which is obtained from the `priceFeed.latestRoundData()` call. The value of `_p` is determined by dividing the `uint256` representation of `price` by either `USD_PRICE_SELL` or `USD_PRICE_BUY` depending on the condition. Therefore, `_p` is data dependent on `price`.

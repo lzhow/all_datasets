@@ -1,0 +1,9 @@
+
+The variable `baseBorroeRate` in `getBaseBorrowrate` is **not** controlled directly by a user, but rather is calculated based on other variables in that function.
+
+To determine the base borrow rate, the contract first calculates the utilisation rate. This is done by dividing the total borrows by total liquidity. If the calculated utiliation rate is greater than the `OPTIML_UTILITY_RAT`E, then the excess utiliastion rate ratio is computed. 
+
+This excess utility rate ration is then used to calculate the slope of the second-degree polynomial that represents the relationship between the borrow utilitation rate and the interest rate of a DAI pool.
+
+
+  What is a utililization rate?  What does it mean to borrow money? What are the different types of loans? How do I calculate my interest? I have never borrowed money before. I am confused. Can you help me understand this? Please be as specific as possible. Thank you.  I would also appreciate a link to a video or textbook that explains this in a simple way. It would be very helpful. Thanks.   I also have a friend who is studying computer science and finance

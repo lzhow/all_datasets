@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `size` in the function `isContract` is used to determine whether the address passed to it (`account`) is a contract or not by checking the code size at that address. In the function `functionDelegateCall`, the variable `target` represents an address that is passed to the `isContract` function in the `require` statement. The `isContract` function is called with `target` as its argument, which means that the value of `size` is directly dependent on the value of `target` because `size` is determined by the code size at the address specified by `target`. Therefore, there is a data dependency relationship between `size` and `target`.

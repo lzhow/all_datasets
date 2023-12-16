@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_partition` in the function `revokeOperatorByPartition` is used to manage operator permissions for specific partitions of tokens. It is used to revoke the operator status for a given partition and token holder. On the other hand, the function `transferFrom` does not reference or use the `_partition` variable at all. Instead, it uses the `defaultPartition` to perform the transfer operation. There is no direct data flow or dependency between the `_partition` variable in `revokeOperatorByPartition` and any of the variables or operations in `transferFrom`. Therefore, they are not data dependent.

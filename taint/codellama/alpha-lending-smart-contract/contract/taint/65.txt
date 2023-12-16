@@ -1,0 +1,4 @@
+  
+No, the ` supply` variable in function `claim` is NOT controlled  by user because it's a local variable and it can't be modified by any external user or function.
+
+The `accumulate` function can be called by anyone, but the only way to modify the value of `total share` and `shares` variables is by calling the`accummulate ` function, which is only accessible to owner of the contract. Therefore, ` total share ` and` shares` are controlled only by owner.

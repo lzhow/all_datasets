@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `SafeTranser` function, the value of `token` is passed as an argument, but the address of the contract is not used in any way. Therefore, it is unclear whether the data in `to` and `newAllowence` are dependent on each other.
+Similarly, in function`safeTransfe`, the`value `variable is used to call the transfer function of`token`, but it does not seem to be used anywhere else in this function. It is also unclear if the state of this contract depends on any other state. 

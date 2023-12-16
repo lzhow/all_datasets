@@ -1,0 +1,4 @@
+  
+The variable 'amount' in _ swapCurves is labeled as 'Unknown'. The reason is that the amount is calculated based on the input and output tokens, which are not necessarily controlled directly by users.
+
+In the _ add liquidities function, the amounts are calculated using the decimalToUnit function. This function converts the desired amounts from decimal to base units. However, in this case, we do not know the exact amount of base unit that will be used, so we cannot determine whether the ' amount' variable is user-controlled or not.

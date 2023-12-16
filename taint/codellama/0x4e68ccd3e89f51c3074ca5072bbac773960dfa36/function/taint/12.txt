@@ -1,0 +1,6 @@
+  
+No, the ` at Or After` variable in binary search is a local variable and is created by Solc. It is therefore not under the control of the end user and the answer is 'No'.
+
+The `binarySearch` function is an internal function that is used to search for a specific observation in an array of observations. This function takes in several parameters, including the array `self`, the time `time`, and a target observation `target`. The function then uses a binary-search algorithm to find the observation that has a timestamp closest to the target timestamp.
+Inside the binary Search function, a new local `Obseration` type variable is declared and initialized to `before Or At`. This variable represents the current observation being considered in each iteration of binarysearch.  The `after Or at` is also declared as a variable of type `observation`.
+However, these variables are not user-controlled and are created and managed by solc, so the labels are set to 'NO'.

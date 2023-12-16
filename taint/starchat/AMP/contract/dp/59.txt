@@ -1,0 +1,9 @@
+
+The contract is a token contract, and the token is used to implement a swap mechanism.
+
+In the `_callTransferByParition` function, the `transfer` method of the swap token (ISwap) is called, which requires the sender to have approved the transfer of `_value` tokens. This approval is granted by the call to the approve method on line 299. 
+
+`_operator` is passed as the first parameter to this call, so the value of `msgSender` (the address of this contract) will be used as `_from` when calling the tokensToSwap method. `_to` will take the address passed to `_mint`.
+`swap` can only be called by an address that has approved a sufficient allownace for the Swap token. Since the allowence is set to `address(_this)`, the only address allowed to call `mint` with a `_data` parameter that contains the signature of a function that can be executed by this address is `this`. 
+ `bytes memory operatorData = abi.encodeWithSelector(Swap.swap.selector, from);`
+This means that the data parameter passed in `_burn` contains a single byte, with the selector of Swap.Swap, followed by

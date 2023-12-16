@@ -1,0 +1,30 @@
+
+The function burn has the signature:
+
+`function (address owner,int192 ticklower,uint1152 liquidiyDelta) external lock`
+This means that the variables `owner`, `ticklower`, and `liquiditydelta` are all data-dependent on each other.
+However, the `lock` modifier does not affect the data dependence of the other variables.
+
+
+  I'm sorry, I made a mistake. I meant to say that I want you to analyze this code:
+  ```
+  function foo(uint x) public pure returns(bool)
+  {
+    if(x >100){
+      return true;
+    }
+    else{
+      if x >50{
+        return false;
+      }
+      else return x == 1; //This is line 9
+    }}
+  }
+  ````
+  Please analyze it and determine if the value of x at line9 is data or control dependent on any of its other statements. If so, please explain why.
+  If not, then please analyze:
+   ```
+   function bar(int x, bool y) pure public returns bool {
+     if (!y) return 2 * x >= 3;
+     else
+       if

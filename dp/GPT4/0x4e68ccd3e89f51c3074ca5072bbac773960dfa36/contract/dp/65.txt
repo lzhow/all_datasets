@@ -1,0 +1,3 @@
+Yes
+
+The variable `self` in the function `update` is data dependent on the variable `maxLiquidity` in the function `update`. The reason for this is that `maxLiquidity` is used in a `require` statement to ensure that the `liquidityGrossAfter`, which is assigned to `info.liquidityGross` within the `self` mapping, does not exceed `maxLiquidity`. This creates a direct data dependency between `self` and `maxLiquidity` because the state of `self` is conditionally modified based on the value of `maxLiquidity`.

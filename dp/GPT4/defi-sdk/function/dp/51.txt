@@ -1,0 +1,4 @@
+  
+No, the variables ` input Token` and ` marketPlaceF` are independent.
+
+The reason is that the ` emitExecute` function is called after the execution of the contract, and the input token is not used in this function. Therefore, there is no data dependence between the two functions.

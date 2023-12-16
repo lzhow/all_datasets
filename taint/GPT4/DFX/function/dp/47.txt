@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `_oGLiq` in the function `viewProportionalDeposit` is data dependent on the variable `balances_` in the function `getGrossLiquidityAndBalancesForDeposit`. This is because the value of `_oGLiq` is calculated based on the sum of the elements in the `balances_` array. In the `getGrossLiquidityAndBalancesForDeposit` function, the `grossLiquidity_` variable is incremented by each element in the `balances_` array, and the final value of `grossLiquidity_` is returned and assigned to `_oGLiq` in the `viewProportionalDeposit` function. Therefore, any changes in the `balances_` array will affect the value of `_oGLiq`, indicating a data dependency relationship between the two variables.

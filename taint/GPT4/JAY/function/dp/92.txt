@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `erc721Ids` in the function `buyNFTs` is data dependent on the variable `id` in the function `buyERC721`. This is because the `buyERC721` function is called within the `buyNFTs` function, and the `id` variable is used as an index to access elements in the `erc721Ids` array. The value of `id` determines which element of `erc721Ids` is accessed, thus creating a data dependency between the two variables.

@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `OBI` library, the functions `encodeBytes`, ` encodeBytes1`, and ` decodeByes` are defined. These functions use the same `Data` struct to store the data to be encoded or decoded.
+When the decode function is called, it takes a ` Data` object as an argument. This object contains the raw data and the offset of the current position in that data stream.  The `offset` field is used to keep track of where the decoding process is in relation to the beginning of ` raw`.
+To decode the bytes, these functions first read the next 4 bytes from the input data using the` decode` function. Then, using these bytes as indices, a slice of bytes is extracted from ` data` and returned. In the case of`decodeBye3`, the slice is of length 2, and in `decodByt6`, it is length of 5. Therefore, ` decodBytes` is data-dependent on ` offset` because it uses the value of this field to determine the position of data in` raw` to extract.

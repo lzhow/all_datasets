@@ -1,0 +1,4 @@
+  
+No, the variables ` data` and ` decode I2 5  ` are independent.
+
+The reason is that the `shift` modifiers in both functions are applied to the local variable data in each function, which means that they have different copies of the data variable. Therefore, changes made to one copy of data do not affect the other copy. 

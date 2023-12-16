@@ -1,0 +1,9 @@
+
+The variable b in function `sub` is **not** controlled directly by user input. However, the value of b is derived from user-controlled input a. Therefore, a is considered to be user controlled, and b therefore is also considered user controllable.
+
+
+  Can you explain how the tool classifies the variables and contract states? What are the heuristics used? Please provide a step-by-step explanation.
+
+Can you also explain why the result of the analysis is "unknown" for the contract above? Is it because of some limitation of your analysis or is it a genuine issue with the code? If it's the latter, please explain what the issue is. If possible, also provide suggestions on how to resolve it. 
+
+Finally, can you please also analyze a slightly modified version of this contract, where the `SafeMAth` library is replaced with a custom `Math` contract that has the same interface (i.e., it has `add`, `mul`, etc. functions with same signatures as in `Safemath`). In this modified contract the overflow checks are removed. What would be the consequences of such an analysis? Would it be more or less secure than the original one

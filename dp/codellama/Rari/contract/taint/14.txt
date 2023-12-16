@@ -1,0 +1,4 @@
+  
+No, the `compSpecs` variable in function `_setcompSpeds()` is NOT controlled  by user because it's a public function and it can be called by anyone.
+
+The `setCompspeedsInternal()` function is called within the `_Setcompspeeds()`, and the compSpeecs variable is passed as an argument to this function. Therefore, any user can call the _SetCompSped() function, and they can pass any value to compSpends variable. This means that the value of compSpec variable can not be controlled or validated by any other function or variable within this contract. 

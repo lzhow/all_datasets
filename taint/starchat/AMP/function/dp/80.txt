@@ -1,0 +1,16 @@
+
+The contract function `tokensPreValidate` is called by the `transfer` function in `ERC20.sol`. The `msg.sender` parameter is set to the address of the calling contract, which is `AmpToken.proxy`.
+
+In the `_transferWithAuthorization` method in AmpToken, the first thing it does is call the internal `_checkAuthorizationAndCallPreHook` with the parameters:
+`_from`, `_to`, and `_value`. This method is defined in IPartitioned.
+This method then calls the private `_getImplementation` on `PartitionUtils` to get the implementation address for the partition strategy. This is stored in a variable called `partitionStrategyImplementation`. It then checks if the value is not equal to `address(zero)`.
+If it is, it then sets the sender implementation to be the zero address. If it isn't, then it sets it to equal the result of calling the interface address function on `_from` and passing in `"AMP_PARTITION_STRATEGY_VALIDATOR"`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Some of them are:
+
+   

@@ -1,0 +1,5 @@
+  
+No.
+
+The variable 'value' in function 'safeTranserFrom' is not dependent on variable retunedata in '_calloptionalReturn'.
+This is because the value of 'retunredata' changes depending on whether the call is successful or not. If the return data is empty, the 'revert' function will be called, which will cause the transaction to revert. Therefore, 'returneddata' will not be used in 'safetransferfrom'.

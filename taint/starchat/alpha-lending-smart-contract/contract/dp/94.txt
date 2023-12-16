@@ -1,0 +1,11 @@
+
+The contract is using the OpenZeppelin library, which provides a Safe Math library. This library provides functions to perform safe math operations, such as addition, subtration, multiplication, and division.
+
+In the Pool Configuration contract, the `baseBorowRate`, `rate1`, and `collateraPercent` variables are set to be public. These variables can be accessed by anyone, so they could potentially be changed by a malicious actor. Additionally, `optimalUtilzationRate ` and the `_totalBorrow` and `_toalLiqudity` parameters are all public, allowing anyone to read the values of these variables. 
+
+Therefore, it is possible that the value of `utilzatioRate`,`excesUtilizationrate`, or `_collatralPercent ` could be manipulated by an attacker.
+
+
+  Can you explain how the attacker could manipulate these values?
+ 
+  The attacker can manipulate the variables by changing their values in a way that would affect the calculation of the interest rate. For example, if the attackers sets the excess utilzations rate to a very high value, this could cause the utilizations rate, or the borrow rate calculation, to become very low, resulting in very little

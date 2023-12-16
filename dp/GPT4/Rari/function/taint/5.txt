@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `token` in the function `getCashPrior` is not controlled by the user. It is assigned the value of `EIP20Interface(underlying)`, where `underlying` is a state variable of the contract. The value of `underlying` is set in the `initialize` function, which is called internally within the contract. Therefore, the value of `token` is determined by the contract itself and not by any user input.

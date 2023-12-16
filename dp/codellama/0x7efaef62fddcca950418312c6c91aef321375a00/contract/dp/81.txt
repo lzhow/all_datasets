@@ -1,0 +1,5 @@
+  
+No, the state variable ` reserve ​​0 ` is not dependent on variable` _ token  ` in function` swap`.
+
+The reason is that the ` swap ` function does not modify the` reserve ` state variables, and the value of` balance  _  token `is not used to calculate the amount of tokens to be transferred.
+Therefore, there is no data dependence between the two.

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `SELECTOR` is a private constant of type `bytes4` and is assigned the value of the keccak256 hash of the bytes representation of the string 'transfer(address,uint256)'. This value is computed at compile time and cannot be changed at runtime. It is not influenced by any user input or external interaction with the contract after deployment. Therefore, it is not controlled by the user.

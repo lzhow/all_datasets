@@ -1,0 +1,5 @@
+  
+No, the `_deciamls` variable in function `BNToken` is a constant and is set to 9. It is therefore not user-controlled.
+
+The `_setupDecimal` function in `ERCToken` sets the value of `_totalDec` to `decimal_`, which is passed as an argument to this function. This value is then used to set the number of decmial places for the token. Since this value comes from a trusted source (the contract creator), it can be considered as not being controlled directly by a user, but rather by an external entity (in this case, a smart contract).
+ 

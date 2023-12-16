@@ -1,0 +1,4 @@
+  
+The variable 'allowresing' in function '_setimplementationSafer' is labeled as 'Yes' because it can be controlled directly by a user through the input parameter.
+
+This variable is used to determine whether the implementation contract can resign or not. If the value of this variable  is set to true, the current implementation can no longer be used and a new implementation must be set. This means that the control of the contract is transferred to the new contract, and the old contract will no long be able to perform any actions. Therefore, this parameter is a critical one that can have a significant impact on the security of a smart contract. 

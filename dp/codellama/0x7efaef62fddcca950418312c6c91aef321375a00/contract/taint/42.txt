@@ -1,0 +1,5 @@
+  
+No, the ` nonce` variable in function `permit` is labeled as 'No' because it does not appear to be controlled directly by user input.
+
+The ` permit` function is called by a user who has already signed a message, and the signature is used to authorize the transfer of tokens. However, within the body of the permit function, there is no direct interaction with the caller's account or any other user account. Instead, a new non-fungible token is minted and transferred to the recipient address. Therefore, `nounce` doesnot appear  to  be directly controlled  by  the  user  input,  and  is therefore labled as "No".
+ 

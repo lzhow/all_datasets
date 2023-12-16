@@ -1,0 +1,28 @@
+
+The function assmilator is not part of the code you provided. Could you please provide the complete code?
+
+  I'm sorry, here is a complete version of that code:
+
+pragma solidity ^0.5.0;
+import "./IERC20Detailed.sol";
+contract Curve {
+    address public owner;
+    mapping (bytes32 => address) public assm; // derivative => assamilated derivative
+    function addAssm(bytes memory _symbol, address payable _assm) external {
+        require(msg.sender == owner, "only owner can add assms");
+        asss[_symbol] = assmm;
+        emit AssmAdded(_symbol);
+    }
+    event AssmmAdded(string _symbole);
+}
+
+
+
+
+
+
+ 
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+ 
+  An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to the user's browser. This makes it easier for

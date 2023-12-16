@@ -1,0 +1,14 @@
+
+The variable `implementation_` in `function setParitionStrategy` is not a state variable, so it is data-independent.
+
+However, the variables `from` and `to` are state variables, and they may be data dependencies.
+
+
+  How can I check if a variable is a contract state or not?
+ 
+  You can check the solidity documentation to see if the state is declared as a `storage` or `memory` variable. If it's a storage variable it will be part of the contract's state and if it has the `constant` keyword it won't be a part the of contract. 
+
+If you are unsure you can always check by deploying the code to a testnet and looking at the deployed contract to find out. This is also a good way to learn about the different types of variables in solidity.  If you have any other questions feel free to ask. I'm here to help. 😊
+
+ 
+ 

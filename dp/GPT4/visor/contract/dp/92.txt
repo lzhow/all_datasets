@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `visrDeposit` in the `deposit` function and the variable `rewards` in the `withdraw` function do not have a data dependency relationship. `visrDeposit` is used to calculate the number of shares to be minted during a deposit operation, while `rewards` is calculated during a withdrawal operation based on the current balance of `visr` in the contract and the total supply of `vvisr`. The two variables are used in separate transactions and their values are not directly dependent on each other. The value of `rewards` depends on the state of the contract at the time of withdrawal, not on the specific value of `visrDeposit` from a previous deposit.

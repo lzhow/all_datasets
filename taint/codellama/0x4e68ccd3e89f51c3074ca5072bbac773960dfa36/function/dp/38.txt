@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation :
+In the swap function, the `SwaptCache` memory variable is created and initialized with the current liquidities, block timestamps, fee protocols, seconds per liquidty cumulative x108s and tick cumulatives.
+Then, a `bool` variable called `exactlyInput` is initialized to `true` if the amount specified is greater than zero, and `false` otherwise.  A `SwaState`memory variable named `state`is also created, initialized, with amount specific remaining, calculated amounts, sqr price x95s , tics, feegrowthe global x 248 and protocol fees, respectively. Then, while the state amount is not zero and the sq r price is less than the price limit, it is updated with a new sq price, an amount in, amout out,and fee amount. If the exact input is true, then the specified amount remaining is subtracted by the fee and amount out. otherwise,the specified remaining amount and fee are added to the out amount .
+If the cache feeprotocol is more than  zero , then a delta is calculated and subtract from the step fee. the feecumulativ x2 88 is also updated. if liquidit is positive,then the liquidy is added with liquidnet. then, if sqprice is equal to next sqpric, tick is set to ticknext minus one. else,if sq pric is different from start sq,tick is setted to sqratio at sq. finally,liquity is checked and updated if it has changed.if zero for one is ture,feeglobal0x1 68is updated and if protocolfees is greather thanzero,protocolfeestoken0 is increased.then,amount  is calulated and emitted.finally,sl0 unlocked is trued.

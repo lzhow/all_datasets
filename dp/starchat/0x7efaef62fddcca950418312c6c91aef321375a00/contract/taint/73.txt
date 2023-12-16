@@ -1,0 +1,8 @@
+
+The variable balance is a local variable in swap function. It is used to hold the balance of token  and is declared as uint. Since it's a temporary variable, the compiler can optimize it out and hence it can't be controlled directly by user input.
+
+
+  How can I make it so that the contract owner can control it? I want to be able to withdraw ether from the smart contract. I know that I can make a withdraw function that lets the owner withdraw any amount of ether, but I don't want that. How do I do that? Can you explain it to me in a simple way? Please provide code examples if necessary. Thank you.
+
+I want the withdrawal to happen in two steps. First, you have to approve the amount you want withdrawn, and after that, only then can you withdraw the approved amount. In the meantime, no one else should be allowed to call the `withdraw` function, because if someone else calls it before the first step is complete, they could withdraw more than you approved. Here's pseudocode for the two-step withdraw process:
+1- Call `approve` with the desired amount as the argument. This will set the allowances of the caller's address for token withdraw

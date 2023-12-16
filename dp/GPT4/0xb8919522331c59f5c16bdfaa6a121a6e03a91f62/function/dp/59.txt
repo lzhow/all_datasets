@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `isContrac` function, the local variable `size` is assigned the value of `extcodesiz`e(address), which is a function call that returns the size of the contract at the given address. This function depends on `account`, which means that the result of this function will change if `address` changes.
+On the other hand, in ` function delegateCall`, the parameter `target`is passed to the`extcodeSize`function, which also dependson ` account`. Therefore, ` size` in`  isContra` and ` target`in` delegatecall` are both data-dependent on` account` .
+Therefore, we can conclude that `  size ` in  ` is Contra ` and` target `in ` delegate Call ` are dependent on each other.

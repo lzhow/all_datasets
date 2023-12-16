@@ -1,0 +1,4 @@
+  
+No, the state variable _ balances is data-dependent on variable  _ diff in function  withdraw.
+
+The reason is that the value of _ balance is calculated using the balance of the want token before the withdrawal is made, and the amount of want tokens withdrawn is subtracting from that balance. Therefore, if the _ amount variable changes, it will affect the calculation of  the  balance, which in turn will change the result of withdrawing the tokens. 

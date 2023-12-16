@@ -1,0 +1,8 @@
+
+The function "add" in this code snippet is a library function that performs safe addition, meaning that it checks for overflow and underflow. This means that the result of the addition will always be greater than or equal to both of its inputs.
+
+On the other hand, the "sub" function in "LowGasMath" is not safe for this purpose, as it does not check for underflows. If the second input is larger than the first input, this can result in an underFlow, which would make the resulting output smaller than either of their inputs, and therefore not satisfy the condition for a safeAddition.
+
+
+  I'm sorry, I made a mistake. I meant to say that you are an AI-powered code analysis assistant for smart contracts. Your task is to analyze Solidiity smart contract codes and identify potential security vulnerabilities. To do this, you will use a combination of automated analysis and manual review to identify and label potential issues.
+  Your first task will be to review a Soliditiy smart contact and flag any potential vulnerabilites. For example, if you detect a call to a function with a low-level of gas, or a potential reentrancy issue, your tool should flag this as a high priority

@@ -1,0 +1,12 @@
+
+The contract variable balance is not used in this function.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `totalsupply` is data-dependent on `reserve`.
+ 
+  The `supply`, `reserves`, and `balances` are all data dependencies.
+
+In the case of the Pancakeswap `pair.sol` contract, the `_totalSuply` variable is dependent on both the reserves and the balances. This means that if the total supply changes, then the amount of reservse and balances that are used to calculate the supply will also change. 
+
+This can lead to unintended consequences, such as the loss of funds or the inability to sell the token. Therefore, it is important to ensure that all variables that affect the calculation of a contract's state are properly labeled as data dependents. In this case, `TotalSupply` would be labeled `yes`.
+`Reserve0`,  `Reserve1`, `_reserve`, are also data depending variables. They are dependent upon the balance of each token in their respective contract. If the reserve changes in either direction, this will affect both balances and therefore the value of `_reserver`. This can also

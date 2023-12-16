@@ -1,0 +1,3 @@
+The variable `compContributorSpeeds` in the function `_setContributorCompSpeed` is not controlled by the user. 
+
+Reason: The function `_setContributorCompSpeed` can only be called by the `admin` address, as specified by the `require` statement `require(msg.sender == admin, "only admin can set comp speed")`. Therefore, the `compContributorSpeeds` variable can only be modified by the `admin` and not by the user.

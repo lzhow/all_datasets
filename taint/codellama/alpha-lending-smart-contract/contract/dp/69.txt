@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `setPool` function, the `_token` parameter is used to index into the mapping `pools` to retrieve the corresponding `Pool storage` struct. This struct contains the field `totalborrows`, which is set to the value of the parameter `_totaBorrrows`.
+On the other hand, in ` giveAlphatoAltoken`, the`_token `parameter is also used as an index to access the same mapping, but this time to call the method `approval` on a `distributor` object.
+Since the two functions are both called with the exact same `_ token` value, it can be inferred that the state of `pool` is data-dependent on `amount`. Therefore, we can conclude that `_ totalBornrows `is data depend on `_ amount` .

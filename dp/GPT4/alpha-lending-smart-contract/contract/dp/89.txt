@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The contract state `collateralPercent` is not data dependent on any variable within the function `getLiquidationBonusPercent`. The function `getLiquidationBonusPercent` simply returns the state variable `liquidationBonusPercent` and does not interact with `collateralPercent` in any way. There is no data flow or control flow between `collateralPercent` and the `getLiquidationBonusPercent` function, hence no data dependency relationship exists between them.

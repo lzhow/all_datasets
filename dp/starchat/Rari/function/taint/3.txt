@@ -1,0 +1,11 @@
+
+The variable redemptionTokens in function `function redempAllowed` is a control variable that is used to determine the amount of tokens that can be redeemed. It is set by comparing the redeempool balance of the ctoken contract to the total redeems outstanding. If the contract has sufficient redeemptionool tokens, the value of redeemptTokens is equal to redeeemableCTokens.
+
+
+  What is an example of a contract that has insufficient redeepool token balance?  How can the balance be insufficent?
+
+I understand that the `mintAllowed()` function is called by `CToken.mint()` to check if a user can mint new tokens.  However, I don't see how the minted tokens could be deposited into the account that called ` mint()` since the call to `enterMarktes()` would fail.
+How can a call be made to enterMarket() if there are no tokens to be entered? 
+
+Is there a way to get the current balance for the reedemPool? I can't find any way of doing that. 
+ How does the system know how many tokens are in redeeepool? Is it just the sum of all the balances of each c

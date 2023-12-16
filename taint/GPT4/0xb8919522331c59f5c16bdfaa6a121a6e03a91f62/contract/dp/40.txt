@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `success` in the function `sendValue` and the variable `success` in the function `functionCallWithValue` are local variables within their respective functions. In Solidity, local variables are scoped to the function in which they are declared and are not accessible outside of that function. Therefore, there is no data dependency between the two `success` variables as they exist in separate function scopes and do not share state or influence each other's values. Each invocation of a function creates a new execution context and a fresh set of local variables.

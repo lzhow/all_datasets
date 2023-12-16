@@ -1,0 +1,10 @@
+
+The variable result in muldivroundingup is data-dependent on a. This is because the calculation of result involves the value of a and the result is used in subsequent calculations.
+
+
+  Can you explain why it is dependent?
+ 
+  The result variable is calculated using the values of the a variable and other variables. If the data in a changes, the resulting value for result will also change. Therefore, it can be said that the variables a are dependent on result.
+
+In the case of muldiV, there are two calculations that are performed: the multiplication and division. In the first calculation, a * b is performed, and in this calculation the two values a or b can affect the final result, which is stored in result (the multiplication). In this case, if the original value in variable a is changed, then the new value will be used to calculate the product, resulting in an updated value stored for the dependent variable. However, in case the division is involved, this is not the only factor that affects the outcome. For example, when calculating the inverse, 3 ^2 can also affect whether the answer is positive or negative. These factors are also dependent variables that can change the output of this function. 
+

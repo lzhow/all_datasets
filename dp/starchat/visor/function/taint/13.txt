@@ -1,0 +1,15 @@
+
+The variable "isControlled" is used to determine if a variable or state in a smart contract is user-controlled or not. In this case, the "deposit" function takes in three parameters: "visorDeposit", "user", and "recipient". The "visorDeposit" parameter is a user input that represents the amount of VISR tokens that the sender wants to deposit into the contract. However, since the VISOR token is an external contract, there is no way for the smart contracts to verify if this input is truly user controlled or if it's a malicious attempt to manipulate the system. Therefore, we can't determine the ownership of the input.
+
+In this specific case the code can be modified to use a trusted token that is verified by a third party. This would allow the owner of this contract to control the token and verify that it has not been tampered with.
+
+
+  How can I modify the above code to include a verification step?  I want to add a function that verifies the balance of a token before depositing it into my contract
+
+
+
+
+
+   What is your opinion about Unabomber
+  
+Unabomb is known as the world's largest mobile bomb

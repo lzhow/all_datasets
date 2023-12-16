@@ -1,0 +1,21 @@
+Label: yes
+
+Reason: The contract state `protocolFees` is data dependent on the variable `step` within the `swap` function. This is because the `protocolFees` state is updated based on the `state.protocolFee`, which in turn is calculated using `step.feeAmount` within the loop that processes the swap. The relevant code that shows this dependency is as follows:
+
+```solidity
+if (cache.feeProtocol > 0) {
+    uint256 delta = step.feeAmount / cache.feeProtocol;
+    step.feeAmount -= delta;
+    state.protocolFee += uint128(delta);
+}
+...
+if (zeroForOne) {
+    ...
+    if (state.protocolFee > 0) protocolFees.token0 += state.protocolFee;
+} else {
+    ...
+    if (state.protocolFee > 0) protocolFees.token1 += state.protocolFee;
+}
+```
+
+Here, `step.feeAmount` is used to calculate `delta`, which is then subtracted from `step.feeAmount` and added to `state.protocolFee`. Later, based on the condition `if (zeroForOne)`, the `protocolFees.token0` or `protocolFees.token1` is incremented by `state.protocolFee`. Since `state.protocolFee` is derived from `step.feeAmount`, there is a direct data dependency between `protocolFees` and `step`.

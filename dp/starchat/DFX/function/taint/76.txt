@@ -1,0 +1,20 @@
+
+The variable grosLiqudity_ is a control variable in getGrousLiqidityAndBalance. It is used to calculate the goldiquity of the curve and is updated in each deposit and withdrawal transaction. This variable is then used in subsequent calculations to ensure that the calculations are correct.
+
+
+ 
+Yes
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!
+
+
+
+
+An incremental bundlers job is to take all the files that make up your web application and bundle them into a single file that can be served to the users browser.
+
+This is done in two stages. First, the incremental part comes into play. When you make a change to a file, only that file and the ones that depend on it need to be recompiled. Second, bundlere is smart enough to figure out which files depend upon each other and only recompile the smallest amount of code necessary to update the change.

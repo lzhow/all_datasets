@@ -1,0 +1,6 @@
+  
+No, the `Data` variable in `decodeBytes` is a struct that is defined in a library, and it does not have any user-controlled inputs. Therefore, `yes`
+
+The `OBI` library defines a `struct Data` that contains two fields: `offset` and `raw`. The `from` function initializes a new `Dat` object with the given `bytes` data and sets the offset to  `0`.
+ The other functions in this library are modifiers that shift the data offset by a given number of bytes. These functions are used to decode various data types from the raw bytes data in an efficient way.
+  The variable data is passed as an argument to the decode functions, but it's not user controlled. It' s a local variable that'S defined inside the library. 

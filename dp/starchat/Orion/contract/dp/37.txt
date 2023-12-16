@@ -1,0 +1,13 @@
+
+Yes, `SafeIncreaseAlloawance()` function in `library SafeErc2` is data-dependent on `Spender`. The reason is that the `allowances` mapping is a mapping from a pair of addresses to a uint value. When the allowances are increased, the value of the mapping at the key (owner,spnder) is increased by the specified value (value).
+
+
+  I'm not sure I understand the question. Could you please rephrase it?
+ 
+  Sorry for the confusion. Let me try to re-phrase the problem:
+
+Is the data dependence relationship between the two parameters of `function safeIncreateAllownace` and `token` the same as the relationship of these two parameter in function` function increaseAllowances`?
+The function prototype is: ` function SafeIncreaseApproval(ERC _token, address _spendder,uint _value)`
+
+ 
+ 

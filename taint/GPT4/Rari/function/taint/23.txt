@@ -1,0 +1,3 @@
+The variable `dripTotal_` in the function `drip()` is not controlled by the user.
+
+Reason: The value of `dripTotal_` is calculated based on the `dripRate_` and the difference between the current block number and the `dripStart_` value. The `dripRate_` is set during the contract's initialization and the `dripStart_` value is set when the contract is deployed. Both of these values are controlled by the contract itself and not by the user. Therefore, the variable `dripTotal_` is not controlled by the user.

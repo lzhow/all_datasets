@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `cToken` in the function `exitMarket` and the variable `cTokenCollateral` in the function `seizeAllowed` are function parameters that are independent of each other. Each function call operates with its own set of parameters, and there is no code within this interface definition that establishes a data dependency between the two. Since they are parameters of different functions and there is no shared state or operations that link the two variables within the given code, they are not data dependent.

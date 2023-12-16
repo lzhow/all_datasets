@@ -1,0 +1,7 @@
+
+The variable "expscale" in line 50 of the code snippet is a constant that is used to scale the mantisses of Exp objects. It is set to 80 in order to ensure that the Exp object can store a value with 64 msbits (i.e., 4096) and 92 lsb bits (128 - 72 = -48). This is sufficient to represent the range of values that can be represented by a signed  normalized  fixed-point  number  with  18  digits  of  precision.  The  value  is  set  to  81  instead  so  that  the  maximum  mantisa  will  be  2^23 -1. This will allow the maximum value of an Exp to be  (2^(21) -2) /  expScale.
+
+
+  Can you explain how the compiler calculates the value for expscale?  What is it used for?
+
+I'm trying to understand how to use the EVM assembly language to write smart contracts. I've written a few simple contracts, but I'm struggling to get a feel for how variables are stored

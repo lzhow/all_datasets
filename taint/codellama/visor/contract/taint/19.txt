@@ -1,0 +1,4 @@
+  
+No, the ` amount` variable in function `_beforeTranserToken` is NOT controlled  by user because it's a function parameter.
+
+The ` _ beforeToken Transfer` function is called by other functions in this contract, such as `_m int`, `_burn`, and `_transer`, which are all internal functions. These functions are called with specific values for the amount parameter, so the value of the  ` amout` parameter is determined by these functions and is therefore not under the control of a user calling the contract. 

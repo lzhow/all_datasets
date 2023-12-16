@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `Address` library, the functions ` function staticCall` and `  function delegateCall ` are defined. These functions call the target contract and return the result.
+ The ` success` variable in `   function  static Call` is data-dependent on `target` because it is used to determine whether the call was successful or not. If the  ` target` contract reverts, then the` success ` variable will be set to false. Therefore, ` ` is dependent on` ` because if `is` false, it means that the contract did not execute successfully, and the value of `ret` will not be returned. 

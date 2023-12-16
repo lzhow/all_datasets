@@ -1,0 +1,6 @@
+  
+No, the variables ` nBal_ ` and ` oBal _` are independent of each other in both functions.
+
+In the `getTarget SwappData` function, `oBal` is calculated by subtracting the amount of the input asset from the balance of that asset. This calculation does not depend on `iGLq` or `tGLQ`.
+Similarly, in ` view Origin Swappedata`, ` tBal ` is also calculated independently of ` iGL q ` or` tGL Q `.
+Therefore, there is no data dependence between `nbals` and` nglq ` in` get Target Swapedata`and` view origin swappeddata`.

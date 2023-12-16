@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `enterMarketing` function, the parameter `address [] caldData ctokens` is passed by reference. This means that the array of addresses is not copied, but rather a reference to the original array is used.
+Similarly, in `exitMarking`, the address of the ctoken is also passed as a parameter. Therefore, when the redemption amount is calculated in reedemverify, it is dependent on c token.

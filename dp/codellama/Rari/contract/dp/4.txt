@@ -1,0 +1,5 @@
+  
+No, the `CompMarketingState compborrrowstate` contract is data-dependent on `Holder` variable in `Claimrewards` function.
+
+The `updateCompborrowspeed` internal function is called in this function, which updates the comp borrow speed for the given ctoken. This function uses the current comp borrows state to calculate the new comp index, and the updated comp state is then stored in comp Borrow State. Therefore, `comborowstate. index` is dependent on`holder`.
+ 

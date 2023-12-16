@@ -1,0 +1,4 @@
+  
+No, the ` balanceAdjuted` variable in function `swap` is NOT controlled  by user because it's calculated based on the current balance of the contract and the amount of tokens that are being swapped. It' s not possible for the balance to be controlled directly by a user, as it would require a malicious actor to have access to the smart contract' 's private key.
+
+The ` swap` function is designed to ensure that the liquidty of a pool is maintained, and that there is always a sufficient supply of liquid tokens available for trading. By adjusting the balances of each token based  on their current reserves,  the swap function ensures that a fair price is achieved for each trade. 

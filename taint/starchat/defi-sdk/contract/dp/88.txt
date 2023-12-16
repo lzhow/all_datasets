@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the value of `reserve` can change between the two lines of code. Specifically, the line `uint num =...` and the assignment to `numer`.
+If the values of the variables `amount` or `direction` are such that `0 * anything = anything`, then the result of this function will be `anything / anything`. This is clearly not what we want.
+
+
+  Can you explain how the data dependence is calculated?
+ 
+  Sure! The data dependencies in Soliditiy code are calculated using a technique called "static single assignment form" (SSA). SSA is a property of an intermediate representation (IR) of a program that ensures that each variable is assigned exactly once and is only assigned a value once. This makes it easier to reason about the program, because it's clear when a variable can be considered a constant, and when it can have multiple possible values. In the case of Solidty, this means that we can calculate the dependencies between variables in terms of which other variables they depend on. For example, in this code:
+ ```
+    a = b + c
+    d = a + e
+ ````
+ The variables "a

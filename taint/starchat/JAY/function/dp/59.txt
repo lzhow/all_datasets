@@ -1,0 +1,18 @@
+
+The contract variable `_balances` is data-dependent on `msgSender` and `spender` because it is updated in two places:
+
+- In the `approve` function, when `allowance` for a given `owner` - ` spender ` pair is set to a new value.
+`balances[msgsender][spenders] = value`
+This line updates the `_balance` of the sender by the amount of tokens that the sponsorship is approved for. 
+
+In the same function: 
+ `balances[_from] -= _value`  and  ` balances[_to] += _values` are called. These lines update the balances of both the owners.
+
+
+  Can you explain how the data dependencies are found?
+
+
+
+
+
+   What is a good way to learn how to code in python? I am tired of being stuck on simple things and wanting to move on. I also want to do this for work.  Please give me some good ways to start and best ways as I progress. Thank you.   I have heard that you need experience but I do not have any.    I know some other languages and could learn those but do I need that experience to be

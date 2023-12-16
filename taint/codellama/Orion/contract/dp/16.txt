@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `_swap` function, the `pair.exchange` method is called, which takes in `input` and `output` as parameters. These parameters are derived from the variables `token0` (which is derived by calling `OrinMultiPollLibrary` to sort the tokens) and the current token being swapped (either `path0[pathIndex]` or `Weth`). The `exchange()` method then calls the internal `_exchange_underlying()` function which uses the passed in tokens to calculate the amount of tokens that will be swaped.
+Since the method `getExpectedReturn` is used to get the expected return of the swap, it is dependent on `reserves` which is calculated using the token balances of `IOrnPoolvV1Pair` contract. Therefore, `swap.doTokes` depends on `_initialTranferSouce` because it depends indirectly on reserves.

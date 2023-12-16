@@ -1,0 +1,9 @@
+yes
+
+The variable `total` in the function `buyJay` is directly dependent on the variable `erc721TokenAddress` in the same function. This is because `total` is initially set to the length of the `erc721TokenAddress` array:
+
+```solidity
+uint256 total = erc721TokenAddress.length;
+```
+
+This line establishes a direct data dependency, as the value of `total` is determined by the number of elements in the `erc721TokenAddress` array. If the length of `erc721TokenAddress` changes, the initial value of `total` will also change accordingly.

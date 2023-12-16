@@ -1,0 +1,9 @@
+Yes
+
+The contract state `_totalSupply` is data dependent on the variable `_value` in the function `_mint`. This is because within the `_mint` function, `_totalSupply` is directly modified based on the value of `_value`. Specifically, `_totalSupply` is incremented by `_value` using the `add` function from the SafeMath library:
+
+```solidity
+_totalSupply = _totalSupply.add(_value);
+```
+
+This line of code creates a direct data dependency, as the new value of `_totalSupply` is calculated by adding the value of `_value` to the current value of `_totalSupply`.

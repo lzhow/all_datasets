@@ -1,0 +1,5 @@
+  
+No, the `_ reserve ​​1 ` variable in mint function is NOT controlled  by user .
+
+The `_ reserves` are internal state variables of the contract that store the current liquidities of each token in a pair. They are not user-controlled and are updated automatically by calling the `getReserve` function.
+In the minting function, `_ reserved` is used to calculate the liquidty minted and is updated by `_update` method. 

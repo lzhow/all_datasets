@@ -1,0 +1,10 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `amount[n]` depends on `n`, which is determined by the length of the `path` array. Since the compiler does not know the actual value at compile time, the code must assume that `length(array) > n` is always true, which means that accessing `array[length]` is safe.
+
+  Can you explain why it's data dependant?
+
+
+
+

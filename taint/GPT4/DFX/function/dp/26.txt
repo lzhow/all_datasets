@@ -1,0 +1,9 @@
+Label: yes
+
+Explanation: The variable `tAmt_` in the function `originSwap` is data dependent on the variable `_swapData` in the same function. This is because the value of `tAmt_` is calculated using `_swapData` in the following line of code:
+
+```
+tAmt_ = Assimilators.outputNumeraire(_t.addr, _swapData._recipient, _swapInfo.amountToUser);
+```
+
+The value of `_swapData` is used as an argument in the `outputNumeraire` function, which affects the value assigned to `tAmt_`. Therefore, there is a data dependency relationship between `tAmt_` and `_swapData`.

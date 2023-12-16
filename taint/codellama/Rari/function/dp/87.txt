@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `updateCompSuplyindex` function, the local variable  ` supplystate` is not dependent on any external variable. It is a local state variable that is defined within the scope of the  function.
+On the other hand, in ` grantcompInternal` , the external state variables ` user` and ` rewardToken` are used. However, these variables are never used in  the updatecompSuppyIndex function and are therefore not related to the data dependence of ` suppyState`.
+Therefore, we can conclude that the variables  are independent of each other.

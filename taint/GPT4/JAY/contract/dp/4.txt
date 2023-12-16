@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The contract state `_balances` is an implicit state variable that is part of the ERC20 token standard, which tracks the balance of tokens for each address. In the `buyNFTs` function, the `_burn` function is called, which modifies the `_balances` state by reducing the balance of the `msg.sender` by the amount of `total.mul(buyNftFeeJay)`. Since the `total` variable is used to calculate the amount of tokens to burn from the sender's balance, there is a data dependency between `total` and `_balances`. The change in `total` will affect the amount by which `_balances[msg.sender]` is decreased.

@@ -1,0 +1,19 @@
+
+The contract has two mappings: `_accountBalances` and `_totalSupplies`. The `_accountsBalances[from]` is updated in `_transfer` function, which is called when `from` is not `address  (0)`. The `to` mapping is also updated, but in a different function.
+
+In the `transferFrom` method, the `_approve` call updates the allowances mapping. This mapping depends on both `owner` (the sender) and `spenders` mappings.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Here are some of the best:
+
+   1. Official Python Documentation: The official Python documentation is an excellent resource for learning the basics of Python and for finding information on specific Python features and libraries.
+
+   2. Codecademy: Codeacademy offers a variety of courses on Python, including courses for beginners and intermediate programmers. These courses are designed to introduce you to Python programming concepts and syntax.
+
+  3. FreeCodeCamp: FreeCodecamp is another great resource that offers courses and tutorials on various programming languages,including Python.
+
+  4. YouTube: There many Python-related videos

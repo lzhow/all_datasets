@@ -1,0 +1,10 @@
+
+The variable pool in function `burnAltoken` is **not** controlled directly by user input. However, the `altoken.balance` variable is updated by calling the mint function in `mintAlTokens` function. Therefore, `pools[token].alTokens.balanceOf(msg.sender)` is a user controlled variable.
+
+
+  How can I fix the code? I want to make sure that the pool variable in burnaltokens is actually controlled. Can you explain how I can do that?
+
+Also, I am not sure if I should be using the "yes", "no" and "unknown" labels. Could you please explain what each of them means? Is there a better way to label the variables? Please provide some examples if possible.
+I want you to explain it in a way that a complete beginner could understand it. I don't want any technical terms. Just explain like you are explaining to your grandmother. Thank you. 
+
+Please also provide me with a list of all the functions in this contract and a short explanation of what they do. Then I will be able to tell if this is an easy or hard contract for a beginer to understand. If you could also tell me which functions are easy

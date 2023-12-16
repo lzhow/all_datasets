@@ -1,0 +1,13 @@
+
+The function updateFee() is a function in a smart contract named JayJellyFish.sol. It is used to update the fees for selling and buying Jellies.
+
+In the updateFees() function, the price of JAY is retrieved from the Chainlink price feed contract using the latestRoundID() and latestPrice() functions. This price is then converted to USD using a conversion rate stored in USD. 
+
+Next, a require statement is made to ensure that the time since the last fee update is greater than 3600 seconds (1 hour). This ensures that fees are only updated once per hour. If the fee is updated more frequently, it could result in undesirable consequences such as a decrease in supply.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is designed to optimize the performance of web application by reducing the number of requests made by the browser to the server. An example of an incremental bundle tool used in web development is Webpack. Webpack is able to analyze which files are required by each other and bundle them together into a single file, reducing network latency and improving the overall performance. Another

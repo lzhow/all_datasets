@@ -1,0 +1,11 @@
+
+The variable raw in function `decodeBytes` is a reference to a memory location that contains the raw bytes of the input data stream. This data is read-only and cannot be modified by any function. Therefore, the value of raw is never controlled directly by a user, and it can be considered to be "not controlled" by this analysis.
+
+However, in order to fully understand the behavior of this function, we need to consider the context in which it was called. Specifically, this data may be passed as an argument to another function or stored in a contract's state. In either case, if this value is modified or accessed by other functions or contracts, then it could be controlled. For example, consider a function that takes a bytes argument and returns the length of that argument:
+function getLength( bytes calldata data ) external pure {
+  return bytes.len( data );
+}
+In this case the argument data would be a copy of some other data that is stored elsewhere, or modified in some way by another contract. If the data was modified, getLenght would return the modified length, rather than the original length.
+
+
+  Can you explain how the analysis works? I'm not sure I understand how it determines

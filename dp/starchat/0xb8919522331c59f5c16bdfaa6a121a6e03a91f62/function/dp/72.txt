@@ -1,0 +1,20 @@
+
+The variable account in function "isContract" is not dependent on success in "sendvalue" because the assembly block in iscontract does not access success.
+
+
+  I'm sorry, but I don't understand what you mean by "assembly block". Could you please explain it to me?
+ 
+  The assembly keyword is used in Solidty to access and manipulate the EVM directly. It allows you to write low-level code that directly interacts with the Ethereum Virtual Machine.
+
+In this case, the code in assembly is accessing the size of the contract at the given address using the extcodesiz opcode. This is a low level operation that allows Soliditiy to read the deployed code of other contracts. However, it does so without executing the actual code. As such, there is no data dependence between account and success because they do not directly affect each other. 
+
+I hope this helps!
+
+ 
+ 
+  
+  1. What is an "incremental bundler" for web applications?
+  2. How does it work? Explain it in simple terms.
+  3. Why is it useful? Give an example use case.
+
+  A common approach to optimize the performance of web pages is to reduce the number

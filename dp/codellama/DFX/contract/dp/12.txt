@@ -1,0 +1,5 @@
+  
+No, the variables ` curves _` and `_ bal` are independent.
+
+The variable` curves` is defined in function` view Proporional Deposito` as a local variable, and it is not affected by the execution of the` get Gross Liquidty And Balances For Deposition` function. Therefore, it does not depend on any variable in that function, including `_ balance`.
+On the other hand, `_ Balance`is a variable defined within the ` get gross Liqidy And BAlances for Depostion`function, which is a private function that is only called within`view Propotional deposit`. Therefore it cannot be accessed or modified outside of that context, so it also doesnot dependon any other variable. 

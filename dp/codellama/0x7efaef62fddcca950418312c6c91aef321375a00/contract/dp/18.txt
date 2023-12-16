@@ -1,0 +1,5 @@
+  
+No, the ` root KLast ` variable in ` _ mintF ` is not dependent on ` balance  ` in` swap `.
+
+The ` swap ` function updates the reserves of the pair before calling ` mint `, so the value of ` reserve  last ` will be updated before `  mint  `. Therefore, ` k  Last ` and ` total Supply ` are dependent variables, and the data dependence relationship between `k  LAST `and `total SupplY `is not established.
+ 

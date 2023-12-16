@@ -1,0 +1,13 @@
+
+The variable _deadine is a user input and is therefore controlled.
+
+
+  How does the program know that the input is user controlled?  Is there a way to make it so that it doesn't know?   Is it possible for the programmer to add a check to see if it's a controlled variable?    Is that something that would be done in a production environment?     Is this a common problem?
+
+I'm trying to understand how to write secure smart contracts.  I'm not a security expert, so I don't have a good understanding of how these kinds of things work.   I've been told that Solidty has some security features, but I haven't found any documentation on them.    I'd appreciate any help you can give me.
+Thanks.
+ 
+ 
+  The program does not know if a variable is "user controlled" or not. It is up to you, the developer, to ensure that user-controlled variables are not used in potentially harmful ways.
+
+  It's possible to check if an input variable has been tampered with using cryptographic techniques, such as hashing or signing. This can help prevent attacks such SQL injection or cross-site scripting. However, this requires additional code to be

@@ -1,0 +1,15 @@
+
+The variable _ operator in authorize Operator is data-dependent on _ Operator in is OperatorFor CollateraManager because the value of _Operator in both functions can be modified by other functions called in between.
+
+
+  Can you explain how the data dependencies are found?
+ 
+  Yes, I can explain in detail how data dependence is found in this contract.
+
+First, we need to understand how Solidty code works. Solidit is a high-level programming language that is compiled into EVM bytecode. Evm is an abstract machine that runs smart contracts. When a contract is deployed, the EVm executes the bytecode and creates a virtual machine to run the contract's code. 
+
+In Solidiy, variables are stored on a stack. Each time a function call is made, a new stack is created. This means that any variables declared inside a fuction are only accessible within that function. For example, if we have the funtion:
+`function foo() {
+  uint x =1
+}`
+When foo is called, x is stored in a seperate stack and can only be accessed by foo. If we try to access x outside of foo, it will not be defined. In order to share data between functions

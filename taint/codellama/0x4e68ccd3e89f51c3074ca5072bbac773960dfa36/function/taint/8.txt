@@ -1,0 +1,4 @@
+  
+No, the ` time` variable in function `observe` is NOT controlled  by user because it's a function parameter.
+
+The ` observe` function takes in a `uint31` parameter `seconds` and a  ` uint 33` `tick` as input. It then uses these inputs to calculate the cumulative tick and liquidty values for the given time.  The ` seconds` input is a user-controlled variable, but the` time ` variable is calculated based on the current block timestamp and the seconds input, so it cannot be controlled directly by a malicious user and is therefore not considered a vulnerability.

@@ -1,0 +1,3 @@
+yes
+
+In the function `findUpperBound`, the variable `high` is data dependent on the variable `mid`. This is because within the `while` loop, the value of `high` is conditionally set to the value of `mid` with the statement `high = mid;`. This assignment occurs if the condition `array[mid] > element` evaluates to true. Since `mid` is calculated using `Math.average(low, high)` and can influence the value of `high` in subsequent iterations of the loop, there is a clear data dependency relationship between `mid` and `high`.

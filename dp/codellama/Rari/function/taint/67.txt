@@ -1,0 +1,5 @@
+  
+No, the ` borrow` variable in this function is NOT controlled  by a user because it's a mapping that maps an address to a boolean value. It is a state variable that is set by other functions in contracts.
+
+The ` borrow` mapping is used to keep track of the borrowing status of each account. When a borwer requests a loan, their address is added to the mapping with a value of `true`. If the borrwer repays the loan or the collatoral is liquidated, they are removed from the map with the value `false`.
+ 

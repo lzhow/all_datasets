@@ -1,0 +1,22 @@
+
+The variable input token is a controlled variable. It is passed into the call to the allowancetarget and the caltarget. If the inputtoken is set to address 1, then the attacker can set the value of inputtokento address2, which would result in a transfer of all of the users funds to that address.
+
+
+  Can you write a test for this contract?  I want to make sure that the contract behaves as expected.  Please include a few test cases.
+
+Here is an example of a unit test in javascript:
+const SimpleCallee = artifacts.require("SimpleCalle");
+contract("TestSimpleCaller", accounts => {
+  it("should call the target function", async () =>  {
+    const simpleCaller = await SimpleCall.deployed();
+    await simpleCaller.callBytes("0x00", {from: accounts[0]});
+    assert.equal(await simpleCallTarget.called(), true);
+  });
+});
+
+
+
+
+
+   What is your opinion about Unabomber
+    As an AI language model, I don't have personal opinions or beliefs. However, the UnaBomba incident is significant and has

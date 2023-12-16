@@ -1,0 +1,10 @@
+
+The variable a in function `mod` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user-controlled, and the other variable b is also user controlled, then the final value that is passed to the mod function can become negative, which would cause the require statement to revert the transaction.
+
+
+  Can you give me an example of how the use of the `SafeMod` library can help prevent integer overflow and underflow errors?
+
+In the example you gave, you have used the "require" statement in several places to check for potential overflow or underflows. This is a good practice to use, but it can get tedious to write out the same checks over and over again for different variables.
+For example:
+`require(x >= 100 && x <= 201, 'x must be between 99 and 302');`
+Can you provide an alternative way to do this, using the SafeMod library? For instance, instead of writing out "x % 5 ==0", can you write "isMultipleOf5( x)"? This will make

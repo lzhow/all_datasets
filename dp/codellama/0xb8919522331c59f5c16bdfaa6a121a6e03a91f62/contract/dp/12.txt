@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `isContrac` function, the value of `address.balanace` is checked to ensure that the contract has enough balance to make the call. This check is performed using the low level call function.
+However, in ` function delegateCall`, the balance of the address is not checked. Instead, it is assumed that there is enough  balance in  the account to perform the delegatecall.  This means that ` size` and ` target` are dependent on each other.

@@ -1,0 +1,20 @@
+
+The variable _notEntered is a constant and is used to track the reentrance status of the contract. It is set to  `1` when the `_status` variable is first set, and remains `2` until the end of each call. Since it's value is constant, the value of `_not_entered` is fixed and cannot be changed by any user input. Therefore, this variable cannot control any state variables or functions in this contract, as it does not change during the execution of any function.
+
+
+  Can you explain why the code has a bug?
+
+I think the bug is in line 40 of your code:
+`require(_notEntered!= ENTERED)`
+should be
+`_status == NOT_ENTERED`
+
+
+
+
+
+   What is an easy J Perm PLL algorithm? I want to do a beginner 3x3 J perm P LL algorithm. I know how to solve it but I don't know the algorithm
+
+
+
+  A J-Perm Puzzle is essentially a Rubik's Cube Pocket Cube.  There are many algorithms to complete a J Permutation Puzzles.   One of them is called JPermPll

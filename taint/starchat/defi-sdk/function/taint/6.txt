@@ -1,0 +1,18 @@
+
+The variable denominator in getAmoutIn() is user-controlled. It is used to calculate the amount of input token that will be returned to the caller. This value is derived from the reserves of the input and output tokens in a pair.
+
+In the case of Unipool, the denominator is calculated as follows:
+reserve_in * ( amount_out *1_0**3 ) / ( ( reserve_Out- amount _out ) *9_9**7 )
+where:
+  - reserve _in is equal to reserve of token 2 in pair
+  (token 3 in case the swap is from token2 to token3)
+  and
+  reserve Out is reserve token1 in this pair
+( token4 incase the swaps is token to 4)
+-amount_ out is amount token we want to swap
+9  _9 **7 is a constant that represents the fee of 50 bips
+1 _0 **3 is also a constat that represent the number of decimal places
+This calculation is performed on the fly by Unipep and is based on on-chain data.
+
+
+  Can you explain how the contract works? I'm not very good at coding. I

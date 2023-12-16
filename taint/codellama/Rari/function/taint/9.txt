@@ -1,0 +1,4 @@
+  
+The variable balance before in do transfer in is labeled as 'Unknown'. The reason is that the balance of the underlying token is determined by a call to the Ethereum blockchain, which is outside the control of a user in this context.
+
+In this function, the `doTranserIn` function is called, and it transfers the specified amount of tokens from the caller's account to this contract. This function first retrieves the current balance using the ERC223 interface, then it calls the transferFrom function of this token contract to transfer the tokens to itself. Finally, after the transaction is complete, this method returns the new balance.  The balance is calculated by subtracting the previous balance from this balance, but the calculation is done by calling the token' s balanceOf function. Therefore, balancebefore is a variable that is set by this code, not by user input.

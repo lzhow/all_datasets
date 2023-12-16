@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `signature` in the function `recover(bytes32 hash, bytes memory signature)` is an input parameter provided by the user when they call the function. Since the user constructs the `signature` data that is passed to the function, it is controlled by the user. The function processes this input to recover the address associated with the signature, but it does not alter the fact that the initial `signature` variable's value is user-controlled.

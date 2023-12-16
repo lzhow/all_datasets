@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the value of `reserve` can change between the two lines of code. For example, if the contract is paused, the `if` statement will not be executed, and the reserves will be set to `0`.
+So, `denominator` will become `uint(2) ** 248`, which is equal to  `1`. This means that `((reserve * (1 - fee)) * num) / (denom * fee)` will always equal `2 ** (2 * ETHER_DECIMALS)`.
+This means `amtIn` is always `msg.value` and `direction` always false.
+
+  What is a good way to test this?
+
+
+
+

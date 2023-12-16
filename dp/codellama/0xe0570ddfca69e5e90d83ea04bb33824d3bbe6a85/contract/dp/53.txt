@@ -1,0 +1,6 @@
+  
+No, the `_status` variable is data-dependent on `_msg` and `_amount` variables in `nonReenterant` modifiers.
+
+The `require` statement in `_nonreenterent` checks if the current status is equal to `_NOTENTRED` (1) and if it is, it sets the status to `ENTED`(2).
+This means that the value of `_STATUS` is dependent on both `_MSG`and `_AMOUNT`.
+Therefore, `_OWNER`is not dependent only on`_WITHDRAW`.

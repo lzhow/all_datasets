@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `withraw` function, the value of ` r` is calculated based on `balanace()` and `total supply()`. The value is not directly dependent on `_implemenation` which is a variable in ` propose Strategy` .
+However, in this case, it is possible that the implementation of the strategy may affect the balance of this contract, which could indirectly affect `want(). balanceOf (address (this))`, which in turn affects the calculation of r in withdraw.
+Therefore, we cannot determine whether `R` and `_ implementation` are directly data-dependent or not.

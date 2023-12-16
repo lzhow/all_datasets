@@ -1,0 +1,5 @@
+  
+No, the variables `pool` and `rewards` are independent of the `UserPoolDate` variable in `calculateCurrentAlphRward`.
+
+The reason is that the two functions have different scopes and access different variables. `Pool` is a local variable of `calcuateRounUpborrowSharAmount` function, while ` UserpoolData ` is local to the` claimcurrentAlpha reward`function.
+ 

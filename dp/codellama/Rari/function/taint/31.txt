@@ -1,0 +1,5 @@
+  
+No, the ` comp Accru_ ` variable in update Comp Borrow Index is NOT controlled  by user because it's a local variable that is created in this function and is only used within this scope. It is a temporary variable used to calculate the amount of comp that needs to be distributed to a borrwer.
+
+The `updateComp BorroweIndex` function is called by other functions in RedeemDistributionDelegate contract, and it calculates the comp accrual for a specific borower. This function does not take any input from the outside world, so the value of `CompAccrue_ is determined by internal calculations and cannot be controlled directly by a user .
+ 

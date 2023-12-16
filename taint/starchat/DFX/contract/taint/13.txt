@@ -1,0 +1,17 @@
+
+The variable spenders in function `_spedAllownace` is a controlled variable. It is used to track the allowances that have been granted to other addresses. Since it's a mapping, the key is an address and the value is another mapping that tracks the amount of tokens that the owner has approved to be spent by each sponsor.
+
+
+ 
+Please explain why it’s a control variable
+ 
+  The variable is control because it tracks how much each address has allowed to spend from another address. This is important because if an attacker can control the spends of a particular address, they can potentially manipulate the balances of other accounts. By tracking how many tokens each account has spent, we can ensure that no one account can spend more than they have approved.
+
+In the case of the `approve` function, this variable allows the approved address (the second address in `_approve`) to withdraw a specific amount from an owner's balance. If the second variable was not control, an attack could be made where the attacker could set the first variable to a high value, allowing them to bypass the check in `transferFrom`.
+
+ 
+ 
+   
+    What is your name?
+    How can you help me?
+I

@@ -1,0 +1,8 @@
+
+The variable merkelRoot is a state variable in this contract. It is used to store the computed Merkel root of the leaves provided to the multi-proof verification function. Since it's a contract-level state, the value of this variable can be modified by calling the process function with a different set of leaves, and the modified value will be reflected in subsequent calls to this function as well.
+
+Therefore, in general, we can't say that the merkeRoot variable is "controlled" by a user, as it can always be changed by any other function call.
+
+
+  Can you explain how the control flow of that function can lead to a modified merkleroot?  I'm specifically looking for a situation where the call to `_hashpair` can modify the values of `a` and `b` in memory.  Can that happen?
+Can you also explain why the compiler can optimize out the assignment to `value` if it knows that it will never be used? Is there a way to force the optimizer to keep the result of `_efficienthash` around? Can the `assembly` block be moved into a separate function so that its result can then be assigned to value? Finally, can you provide an example of

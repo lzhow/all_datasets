@@ -1,0 +1,4 @@
+  
+The variable 'to' in function 'skim' is a parameter of the skimming function. It is passed as an argument to the 'safe transfer' function, which is an external function that is called within the context of this contract. Therefore, the value of ' to' cannot be controlled directly by a user, but it can be influenced by an attacker who has access to this function's call.
+
+In this case, an adversary could potentially exploit this vulnerability by calling the `skim` function with a malicious ` to` parameter, potentially leading to a loss of funds or other unintended consequences. However, this is only possible if an unauthorized user has gained access or control over the contract' s state. 

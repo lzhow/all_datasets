@@ -1,0 +1,7 @@
+
+yes, it is.
+
+The reason is that the `_do_swap_tokens` function calls the `OrinMultipoolLibrary` contract, which contains the implementation of the Uniswap V3 algorithm. This library contains a function called `getAmoutsOut`, which calculates the amount of output tokens that will be received when swapping a given amount in for a pair of tokens. In the case of our code, the pair is comprised of `WETHL` and `USDC`.
+In the first iteration of this loop, `i` is set to  `0`, so `input` will take the value of`WETHERL` (which is represented by the index `1` of path). `output` takes the role of USDC. `pair` represents the address of a Unipool contract that manages the swap between WETHE and USD. Finally, we set `to` to be the same address as `cur_factory`, since we are swappinng the WETHER token for USD using the curve pool. 
+
+After the loop completes, and before the final `require` statement, there is another loop that runs from `uint i=0`. This time, however, i is increment

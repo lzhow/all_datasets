@@ -1,0 +1,4 @@
+  
+No, the data of the state variable _ total supply is not dependent on variable_ from in function_ swap.
+
+The function "swap" is responsible for transferring tokens from the swap token to the AMT token. It does not use the _ from variable at all. Instead, it uses the msg . sender variable to determine the address of who is calling the method. This is because the "transfers" method is called by the user who wants to swap their tokens, and the sender of this method will be the same as the owner of these tokens. Therefore, there is no data dependence between the two.

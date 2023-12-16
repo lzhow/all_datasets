@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there are indirect data dependencies.
+In the `_getParitionStrategeyValidatorName` function, the `fromParitition` variable is passed as an argument. This variable comes from the same function that calls `_toParittion` and `_frompartition`.
+This means that the data in `_operatordata` is dependent on `_topartition`. However this is not a direct dependence.

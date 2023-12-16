@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the constructor function, the `Weth()` function is called with the argument `address w eth`. This means that the value of `eth w` is passed to the contract constructor. However, this value is not used in any way in this function.
+On the other hand, in ` get Amounts In` function , the amount of the input is calculated using the amounts in array. This array is initialized with a length of pairs +1 and the last element is set to amount out. Then, for each element in pairs, it calculates the previous element using get amount in function and stores it in amounts In array .
+Therefore, there is no data dependence between the two functions.

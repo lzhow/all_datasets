@@ -1,0 +1,8 @@
+
+The variable `tokens` in `function getReleasAmount` is a user-controlled variable. It is used to determine the amount of tokens that can be released for a given block range.
+
+In the `AlphaRealseRule` contract, the `_tokensperBlock` parameter is set to be a list of user controlled variables. This means that the list can only be changed by calling the`setTokenperblock` function, which is only accessible to the contract owner.
+
+
+  How can I protect my users from malicious actors who try to manipulate the tokenPerblock list? How do I make sure that only the intended owner can call this function? Can you provide an example of how to do this?
+Can you also provide a way to check if a contract is indeed the AlphaRealeaseRule contract? I want to make it so that I can't call the settokenperblok function on any other contract than the one I'm expecting. Can I do that with the current solidity version? If not, what would be the best way of doing this in solidity? Please provide me with a code example if possible. I know that there are other ways to protect against maliucious attacks, but I would

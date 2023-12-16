@@ -1,0 +1,5 @@
+  
+No, the variables `_address` and `erc235` are independent.
+
+The variable  `_tokensAddress ` is a parameter of the ` buy ER731` function, which is called from the` buy Jay`function. However, this does not mean that the two functions have data dependencies.  The ` success` variable is only used in a conditional statement in ` buyerc22` to check if the transfer was successful. It is not used to determine the value of `_ tokensAddress`.
+ 

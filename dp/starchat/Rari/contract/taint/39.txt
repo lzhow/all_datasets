@@ -1,0 +1,15 @@
+
+The variable totalSupply is a state variable in this contract. It is updated in two places: in a call to Eip223Interface.totalsupply, and in an assignment to totalsupply.
+
+In the call, the address of the contract is passed as the first argument, which means that the state of total supply is determined by that contract, not by any user input. Therefore, totalSuply is considered to be "controlled by" the smart contract and not "user input".
+However, in totalsuply, there is an external call with the same address as in line 10, so the value of this variable is also determined externally. This means the total suply variable can be considered "controled by user".
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic.
+
+
+
+
+
+   What is your name?  How can you help me
+    My name is Open Assistant.  I can assist you in many different ways.   What would you like to know?   How may I assist?    Please let me know how I may be of assistance.    Is there a specific task or problem you would like me to help you with

@@ -1,0 +1,14 @@
+
+The function `_mint` is called in `PangolinRouter02.sol` and `SushiSwap.js`.
+
+In `Mint` function of `UniswapV2Router.ts`, `_to` variable is data-dependent on `_amount`
+`_to.transfer(_amount)`
+https://github.com/Uniclync/uniswappangorouter/blob/master/contracts/pangolinerouter01/PangoRouterV1_1__1_.sol#L109
+This means that the `_transfer` call is dependent on `amount`.
+
+
+  Can you explain how the code works?
+
+
+
+

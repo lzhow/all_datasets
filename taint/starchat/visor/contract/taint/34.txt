@@ -1,0 +1,11 @@
+
+The variable "isControlled" is used to determine if a variable or state variable is user-controlled or not. In this case, the "deposit" function takes in a "visorDeposit" and "address from" as arguments. "visorDeposit", which represents the amount of VISR tokens being deposited, is a user input and is therefore controlled. However, since the address "msgSender" can be modified by a malicious actor, we cannot determine whether or nor "addrFrom" was user controlled at the time of the call. Therefore, in this instance, `isUserControl` is set to "unknown".
+
+
+  How can I make sure that the contract is secure? I'm new to Solidty and smart contracts in general.
+ 
+  There are several ways to make your Solidit smart contract more secure:
+
+1. Use modifiers: Modifiers are used in Solidiy to control access to functions and variables. By using modifiers, you can restrict access so that only certain functions can modify certain variables or states.
+
+2. Avoid using external calls: External calls are functions that are not part of your contract and are instead called from other contracts. External call can have unintended consequences and can lead

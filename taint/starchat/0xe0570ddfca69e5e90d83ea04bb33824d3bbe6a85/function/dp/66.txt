@@ -1,0 +1,9 @@
+
+The contract function is asking the strategy contract to return the address of the token it wants. This address is then cast to type Ierc223, which is an interface for a token that can be transfered via the transfer function.
+
+In Solidty, interfaces are used to define a contract that only defines the signatures of its functions, but not its implementation. In this case, the IER213 interface defines a function called want that returns an address.
+
+
+  I'm sorry, I made a mistake. I meant to say that the `_totalSupply` variable is data-dependent on `decimals`.
+  
+  The `_decimal` and `_name` variables are contract-level state variables that are set when the smart contract is deployed. They are unlikely to change during the lifetime of a smart contact, so they do not have any data dependencies on other contract variables. However, `_supply` is a user-defined state variable that is initialized to 0 and can change over time. It is possible for the value of `_suply` to be data dependendent on `_deciaml`, but this would require a malicious actor to manipulate the state of your smart contracts in a way that violates the

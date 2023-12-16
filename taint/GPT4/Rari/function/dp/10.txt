@@ -1,0 +1,3 @@
+The variable `scaledMantissa` in the function `mulScalar` is data dependent on the variable `a` in the same function. 
+
+Reason: In the given code, the value of `scaledMantissa` is assigned the result of the multiplication operation between `a.mantissa` and `scalar`. Since `a` is used as an input to calculate the value of `scaledMantissa`, there is a data dependency between these two variables.

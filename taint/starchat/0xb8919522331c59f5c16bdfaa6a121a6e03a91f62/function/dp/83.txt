@@ -1,0 +1,9 @@
+
+The variable logic in constructor is data-dependent on admin in TransparrentUpgradebleProxy because the logic contract address is used to initialize the proxy contract, which is then used in subsequent upgrades.
+
+
+  What is a proxy?
+ 
+  A proxy is an object that provides a surrogate or placeholder for another object to control access to it. In the context of smart contracts, a contract acting as a "proxy" for other contracts is often used as an upgrade mechanism to enable changes to the underlying contract without requiring all callers to be updated. This can be useful for a variety of reasons, such as enforcing access restrictions, adding additional functionality, or enhancing functionality with caching, logging, and other features.
+
+In the case of the TransparencyUpgradeProxy contract used by Uniswap, the primary purpose is to allow the owner of a smart contract to upgrade the contract's code without having to update all existing call sites. By using a separate contract as the "actual" implementation, it is possible to make changes without breaking existing code, while still allowing the original owner to access the old version of code if needed. Additionally, since the upgrade process is managed by a different contract than the one being upgraded, there

@@ -1,0 +1,6 @@
+  
+No, the variables `_ reserve ​​1 `and` balance  `in the` swap` function are independent.
+
+The` _ reserve` variable is a local variable in` getreserves` and is not affected by the value of`balances`in`swap`.
+On the other hand,` balances `is a parameter of the ` swap `function and its value is determined by` amount  `.
+Therefore, there is no data dependence between`_ reserve ` and` Balance ` in ` Swaps`.

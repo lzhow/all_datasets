@@ -1,0 +1,5 @@
+  
+No, the state variable ` EC _5 C _ADDRES S_ CONF LIC T` is not dependent on variable _ partition in function  ` re vo ke OperatorBy Partit ion`.
+
+The reason is that the `require` statement in this function checks if the address of the collatoral manager is already registered, and if it is, it throws an error with the message `Address conflict`. This error is thrown regardless of whether the `_ partition` variable is used or not. Therefore, there is no data dependence between the two.
+ 

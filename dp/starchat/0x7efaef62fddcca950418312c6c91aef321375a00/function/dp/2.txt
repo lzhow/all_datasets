@@ -1,0 +1,12 @@
+
+The function `_update` is called in both branches of the `if` statement. This means that the value of `kLast` may be updated multiple times, which may result in incorrect behavior or even reentrancy vulnerabilities.
+
+
+  Can you explain how the data dependence is determined?
+ 
+  Data dependences are determined by analyzing the flow of data through the program. In this case, the variables `balance` and `_reserve` are used in multiple places in `PangolinSwap.sol`, so they must be data-dependent on each other.
+
+In the first branch of `_mintFees`, the values of these variables are read and used to calculate the new value for `totalFees`. In the second branch, these values are also read, but they're used again to update the reserves. Since these two branches may execute in different orders, it's possible for the final value to be different depending on which branch is executed first. Therefore, `reserveA` must depend on `feesA`, and `reservesB` depend `feeB`.
+
+ 
+ 

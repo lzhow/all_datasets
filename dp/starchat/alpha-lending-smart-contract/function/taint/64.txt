@@ -1,0 +1,11 @@
+
+The variable utilizedRate in calculateInteresRate function is user controlled.
+
+
+  What is a user-controlled variable? Is it possible for a variable to be user and contract controlled at the same time? If so, how is it determined which one takes precedence?
+
+User-defined variables are those that are defined by a programmer and are not part of the program's input. They are typically used to store intermediate results or to control program flow.
+A variable can be both user defined and also contract-specific. In this case, the value of a contract variable is determined by its contract, while the values of user variables can vary depending on the input of an external actor. For example, a smart contract can have a state variable that is used by all users, and a separate user variable for each user that can modify the state. This can allow each individual user to have their own preferences and restrictions on how the contract operates. However, this can also lead to confusion and potential security vulnerabilities, as it can become difficult to determine which variable takes priority. It is important to note that user control can still be used in conjunction with contract control, allowing for more flexibility and control over the smart contracts.
+
+
+Is it true that all

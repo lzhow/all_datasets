@@ -1,0 +1,3 @@
+The variable `borrowerAmount` in the function `distributeBorrowerComp` is not controlled by the user. 
+
+Reason: The value of `borrowerAmount` is calculated based on the result of the `CToken(cToken).borrowBalanceStored(borrower)` function call, which retrieves the borrow balance of the `borrower` from the `CToken` contract. The value of `borrowerAmount` is not directly influenced or controlled by the user.

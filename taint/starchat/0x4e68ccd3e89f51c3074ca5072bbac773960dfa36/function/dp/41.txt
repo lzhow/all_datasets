@@ -1,0 +1,15 @@
+
+The function is data-dependent on `index` and `cardinality`.
+
+`index % self.length` is used to calculate the next index, which depends on both `length`, and the current index.
+If `next_index = index +1` then ` next_inde % length = next %length = 0`
+if ` length > next` (which is always true) then the result is `0`. 
+
+However, if ` index = length -1`, then `(index+1)%length=0`, which is not equal to `1`. This means that the index is dependent on cardinality.
+
+
+  Can you explain this in layman's terms?
+ 
+  Sure, I'd be happy to explain it in a way that's easy to understand.
+
+  In the first function, the `if` statement checks if the block timestamp of the last observation in `Observation[self.capacity]` is equal the the timestamp passed in as an argument. If it is, it returns the original index and cardinality, indicating that there is no need to update the array. However, this check is only performed if both the timestamps are equal. This is because if they were not, then it would be possible for

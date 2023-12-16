@@ -1,0 +1,5 @@
+  
+No, the `direciton` variable in `getAmountout` function is NOT controlled  by user because it's a function parameter.
+
+The `swap` method in UniSwap contract takes in a `bool` parameter called `directio`n, which indicates whether the swap should be performed in one direction or the other. This parameter is set by a user when calling the contract, and it determines the direction of the token transfer. However, in this case, ` getamountout ` function does not take in any user input, so the value of ` direction` is determined by ` swap` and is therefore not under the control of a  user .
+ 

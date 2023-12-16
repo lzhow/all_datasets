@@ -1,0 +1,13 @@
+
+The variable `_partition` in `function transferbyPartition` is user controlled.
+
+
+  How can I make sure that the `_operator` variable is indeed user-controlled? I'm concerned that it could be set to a contract address that has some special privileges, like being able to withdraw all of the contract's funds. Is there a way to verify that `_from` and `_to` are user addresses and not contract addresses? If not, how can we be sure the transfer is being executed as intended?
+
+Additionally, I noticed that there are no checks to ensure that a user cannot transfer more than their balance. This could allow a malicious user to drain the entire contract of tokens by repeatedly transferring the maximum amount of their token balance until the balance is zero. How could we prevent this? Is it possible to add a check to the `transfer` function that ensures that `balanceOf(_sender) >= amount`?
+
+
+
+
+
+   What is a good way of storing large amounts of text data?  I want to be able search through the data and be up to date with the latest information.  Also I would like to easily share the information with others.   I have used google docs before but they

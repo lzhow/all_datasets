@@ -1,0 +1,9 @@
+yes
+
+The variable `protocolFeeAmount` in the function `getReturnedAmounts` is data dependent on the variable `totalFeeAmount` within the same function. This is because `protocolFeeAmount` is calculated directly from `totalFeeAmount` using the following line of code:
+
+```solidity
+protocolFeeAmount = (totalFeeAmount * protocolFee.share) / totalFeeShare;
+```
+
+Here, `protocolFeeAmount` is assigned a value that is derived from the multiplication of `totalFeeAmount` with `protocolFee.share`, followed by division by `totalFeeShare`. This clearly establishes a data dependency relationship between `protocolFeeAmount` and `totalFeeAmount`.

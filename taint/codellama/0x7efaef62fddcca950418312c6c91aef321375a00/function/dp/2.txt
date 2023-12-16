@@ -1,0 +1,4 @@
+  
+No, the variables ` amount 1 ` and `_ total Supply ` are independent.
+
+The reason is that the ` burn ` function is called twice in this code, and the two calls have different values for the `_reserves` and `balances` variables. Therefore, even if the same value is assigned to the` _ total supply ` variable in both calls, it is not guaranteed that it will be the case. 

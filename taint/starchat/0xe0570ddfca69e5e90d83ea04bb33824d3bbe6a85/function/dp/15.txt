@@ -1,0 +1,11 @@
+
+The contract has a function called withdraw that takes in a uint called _share. It then calculates a value r which is equal to the product of the balance of want multiplied by the shares divided by total supply. Then it burns the sender's shares and transfers the amount of r to them.
+
+However, the code does not take into account the fact that the withdraw function of strategy could also withdraw from other contracts. This means that if the strategy contract also has the same function, it could withdraw more than r, which would cause the calculation of b to be less than the value of R. In this case, we would want to withdraw the difference between the two values. However, this would mean that we have to make another calculation to see if we can withdraw even more, and so on. 
+
+This means we cannot determine if _totalsupply is data-dependent on _shared in this function.
+
+
+  Can you explain this in simpler terms?
+ 
+  The withdraw() function in smart contract is used to transfer funds from the smart contracts to a user. When a withdrawal is requested, a calculation is made to determine how much should be transferred. If the user's balance in their wallet is less that this amount, then

@@ -1,0 +1,12 @@
+
+The variable result in function " borrowBalanaceStored" is data-dependent on variable borrowIndePrior in "acccueInteres".
+
+This is because the value of the result variable is used to calculate the new value for the borrow index variable, which is then used in subsequent calculations.
+
+
+  Can you explain why this is so?
+ 
+  The result of borrowing balance is a function of both the current borrow balance and the previous borrow rate. If the rate changes, the amount borrowed will change, and therefore the resulting balance. This means that the calculation of result must be recomputed every time the interest rate or borrow amount changes.
+In the case of accruing interest, this means the accumulative interest must also be calculated based on both current and previous values. Since the total amount of borrrowed assets is also a factor, it must always be kept track of. 
+
+Therefore, in order to avoid having to recompute the entire calculation every single time, these values are stored in memory and only updated when necessary. In this case, when the block number changes and interest is accumulating, all the variables are updated to reflect the changes in interest. When the balance of a borrow

@@ -1,0 +1,9 @@
+
+The function "sub" in this code snippet is not a pure function, meaning that it has "side effects" such as modifying the state of the contract or modifying variables outside of its scope. This can make it difficult to determine if a variable is data-dependent on another variable.
+
+In general, it is recommended to avoid writing functions that have side effects and to instead use pure functions which do not have any side-effects. However, in some cases, such side effect may be necessary for the program to function properly. In this case, the data dependence relationship between the variables "a" and "b" cannot be determined.
+
+
+  Can you explain why it's difficult?
+ 
+  Yes, I can explain how it can be difficult. A function can have multiple effects on different parts of a program, and it may not be clear which parts are dependent on which other parts. For example, consider the case where the "add" function has a side affect of changing the value of "c". If we call "tryAdd" with the same arguments, we may get different results because the side affects of one call may have affected the other call. Additionally, if the code calling "trAdd", "tSub", etc

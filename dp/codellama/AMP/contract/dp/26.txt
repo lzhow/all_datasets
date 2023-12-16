@@ -1,0 +1,5 @@
+  
+No, the variables `_from` and `_value` are the only variables in `_transerByDefaulPartion` that are directly dependent on `_totalValue` from `_callTranserHooke`.
+
+The reason is that the `_balnceOf` variable is updated in both functions, but the update is done using different values. In `_tranferbyDefaultParition`, the balance is decreased by `_amount`, while in ` _trnaserbyPartiton`, it is increased by the same amount. Therefore, even though the two functions update the `balanaceOf`, they do not depend on each other.
+ 

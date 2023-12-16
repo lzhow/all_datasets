@@ -1,0 +1,4 @@
+  
+No, the `compIndexSupplied` variable in function `distributeComplierSuppllier` is NOT controlled  by user because it's a local variable that is calculated based on the current state of the contract and the blockchain. It' s not possible for a user to manipulate this variable directly.
+
+The `updateCompIndex()` function is called before the distribution of comp to ensure that the index is up-to-date. This function calculates the new index based  on  the total supply of tokens, total comp accruing, and comp index.  The `safe214()`  function ensures that  any overflows are handled correctly.   The new compIndex is then stored in `CompMarkedState` struct.

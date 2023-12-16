@@ -1,0 +1,11 @@
+
+The variable token in getcashPrior in CEric2O is a controlled variable. It is used to determine the balance of the contract in Ether.
+
+
+  How does the code determine that the token variable is "controlled"?
+ 
+  The code determines that a variable or state controlled or not by a user is based on the ownership and control of that variable in a program. In the case of Solidty, the control is determined by whether the state or variable has been declared as public or private. If the declaration is public, then it can be accessed by any other function or code in that contract. However, if it has a private declaration, only other functions within the same contract can access it. This is important to note because it allows for better security and prevents unauthorized access to sensitive data.
+
+In the example of get cash prior, token is declared private, so it cannot be directly accessed outside of its contract, and therefore cannot control the program state. Instead, get Cash Prior is called by other public functions in order to access the current balance in ether of this contract and determine how much can still be withdrawn. 
+
+Overall, Soliditiy is designed to prevent unintended access and modification of program states by

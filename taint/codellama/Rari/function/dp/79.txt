@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `borrrowAllow` function, the value of ` totalborrows ` is calculated by adding the current value to the borrow amount. This value is then used to check if the market borrow limit has been reached.
+However, in ` repaidBorrrow` , the same variable is not used. Instead, a new variable called `payer` is used, which is never used in any other function. Therefore, there is no data dependence between the two functions.

@@ -1,0 +1,23 @@
+
+yes, `block.timestamp` is a global variable that represents the current block timestamp. It is updated every block and can be freely accessed by any contract.
+
+
+  How can I fix the code? I want to make sure that the delta blocks is always positive. I also want the block number to be 64 bit. Can you write me a new function that does this? Please also explain what the new code does.
+
+The original code:
+function updateBlockTimestamp(uint blockTimestamp) private {
+    if(deltaBlock > blocknumber) deltaBlock = delta - blocktimestamp;
+    blocktime = (blocktimestamp - starttime) / 86.4;
+}
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples?
+I ask because I'm considering using one in a project I am working on. If you could give me an overview of what I should be looking out for when choosing a bundling tool, that would be very helpful. Thanks!
+
+
+
+  An incremental bundlers job is to bundle together all the files that make up your web application into a single file that can then be served to users

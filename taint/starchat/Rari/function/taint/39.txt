@@ -1,0 +1,13 @@
+
+The variable success in doTranferOut() is a return value from the call to to.call.value (amount)(“”). This call transfers ether from this contract to the address to and returns a boolean indicating success or failure. Since the value of amount is determined by msg. value, which is user input, the return variable is likely controlled indirectly by user control of msg, which in turn is indirect control over the success variable.
+
+
+  Can you explain how the control flow graph works? I'm having trouble understanding how it works. I've read the paper you linked, but I still don't understand how to use it. Can I use a CFG to determine if a variable or function is "controlled" by a user or not? If so, how do I do it? Can a simple CFG be used to do this? Please explain it to me in a way that requires no previous knowledge of formal languages or compilers. If you could also provide me with a list of resources that would help me learn more about CFGs, that'd be great. Thanks!
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain to a beginner.
+
+An

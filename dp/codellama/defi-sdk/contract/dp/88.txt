@@ -1,0 +1,5 @@
+  
+No.
+
+The variable 'direcitons' in function 'getAmoutOut' is not dependent on variable denominater in ' getAmounIn'.
+This is because the 'direction' variable is passed as an argument to the getreserves function, which is called in both functions. However, the return value of the call to get reserves is assigned to different variables in each function. Therefore, there is no data dependence between the two functions, and the answer is 'No'.

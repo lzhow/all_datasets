@@ -1,0 +1,11 @@
+
+The variable visrbalance is a derived value and is therefore not directly controlled or manipulated by users. It is calculated based on the current state of the smart contract, and its value is used to calculate the amount of vVisr tokens that should be minted for a given deposit amount. However, the value of visRbalance can change over time as the contract interacts with the Visor contract to update its balance. Therefore, while the calculation is performed on a per-transaction basis, its result is ultimately stored in a state variable that is updated over the lifetime of a contract.
+
+
+  How does the owner of this contract withdraw their funds?  How do they know the address of their contract?
+
+I'm assuming they have a wallet that they control.  If they do not, then they can't withdraw the funds.
+If they DO have the wallet, how do I withdraw them?   I don't see any withdraw functions in my code.  
+Please explain how this works.    I'm not a programmer, so I can only guess at how things work.  
+
+Also, please explain any risks or dangers associated with this code, such as hacking attempts or other potential security risky behaviors. 

@@ -1,0 +1,17 @@
+Yes
+
+The contract state `_decimals` is data dependent on the variable `decimals` in the function `constructor`. This is because in the `constructor` of the `vVISR` contract, the `_setupDecimals` function is called with `decimals` as its argument:
+
+```solidity
+_setupDecimals(decimals);
+```
+
+The `_setupDecimals` function is defined as:
+
+```solidity
+function _setupDecimals(uint8 decimals_) internal virtual {
+    _decimals = decimals_;
+}
+```
+
+Here, the internal state variable `_decimals` is directly assigned the value of the `decimals_` parameter, which is the `decimals` variable passed from the `constructor`. Therefore, there is a direct data dependency relationship between `_decimals` and `decimals`.

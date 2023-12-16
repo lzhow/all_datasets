@@ -1,0 +1,4 @@
+  
+No, the ` value` variable in function `decode U3 2` is NOT controlled  by user because it's a local variable that is created by function and it can't be modified by users.
+
+The ` decode U 4` function takes a `Data` memory object as an argument and returns a uint  value, which is calculated by shifting the offset of the data object by  `1` and reading the next byte as a  uint value and returning it.  The `data` object is a struct that contains an offset and a raw bytes array. It is passed as argument to the decode function, and the value of `offset` in ` data` struct is modified in each call to `shift` modifiers. Therefore, ` offset` can be controlled only by internal code, not by external users, so the  variable  is also not user-controlled.

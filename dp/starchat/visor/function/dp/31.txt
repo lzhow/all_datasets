@@ -1,0 +1,18 @@
+
+The variable snapshot is used in both functions, but it is not directly data-dependent on each other.
+
+In the first function, snapshot represents the value of the _snapshot variable in _snapshots. This variable is a mapping from addresses to Snapshot structs, which contain an array of ids and an arrary of values. snapshot[msg.sender].ids contains the list of all snapshot IDs at which the balance of msg.sennder was stored, and snapshot [msg sender].values contains a list the balances at each of those IDs.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is designed to optimize the delivery of web pages by reducing the number of requests made to the server. It does this by bundl ingtogether multiple files into a single file, reducing HTTP requests and improving the performance of your web application.
+
+    There are several popular incremental bundle tools available for modern web development. Some of them are:
+
+    - Webpack
+    - Rollup
+    – Parcel
+    These tools work by analyzing your project's dependencies and generating a graph of how the various files are interconnected. They then use this graph to determine which files should be included in each bundle,

@@ -1,0 +1,4 @@
+  
+No, the `locked()` state is not dependent on `amount` variable in `_transer()` function.
+
+The `lock()` modifer is used to prevent reentrancy attacks by setting the unlock variable to  `0` before the execution of the `_maintain()` and `_burn()` functions. This modifiers ensures that the functions can only be called once at a time.  The `transfers()` are called in these functions, and the amount of tokens to be transferred is calculated based on various factors such as the current balance of each token and other parameters. Therefore, changing the value of ` amount` will not affect the state of un locked.

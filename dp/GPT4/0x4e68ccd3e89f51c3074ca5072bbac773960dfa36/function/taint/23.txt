@@ -1,0 +1,3 @@
+Label: unknown
+
+Reason: The variable `y` in the function `sub` is a parameter to the function. Whether it is controlled by the user or not depends on how the function is called and who has access to call it. Since the library itself does not provide any context about who can call these functions and where the input parameters are coming from, we cannot determine from the given code alone whether `y` is user-controlled. It would require additional context about the contract that is using this library and how it is interacting with external callers.

@@ -1,0 +1,20 @@
+
+The variable returnData is a memory variable that is used to store the return value of the low level call. It is declared as a bytes type and is allocated on the stack. Since it does not have a storage modifier, Solidty doesnot consider it to be a user controlled variable.
+
+
+  How can I make it so that it considers it a controlled user variable? I want it labeled as such
+ 
+  You can make the compiler consider a variable as user-controlled by declaring it as public or external. For example, you can change the declaration of return data to public and the code will compile successfully.
+
+pragma solidity ^074.0
+contract ControlledUserVariable {
+    bytes public return_data1;
+    function call_function() public {
+        return1 = "Hello World";
+    }
+}
+
+
+
+
+

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `targetAtOrAfter` in the function `binarySearch` is calculated using the function `lte`, which takes `time` as one of its arguments. This `time` argument is the same `time` that is passed to the `observeSingle` function. Since `targetAtOrAfter`'s value is determined based on the comparison involving `time`, there is a direct data dependency between `targetAtOrAfter` and `time`. When `observeSingle` calls `binarySearch`, it passes `time` along, which is then used in the calculation of `targetAtOrAfter`. Therefore, any changes to `time` in `observeSingle` would affect the value of `targetAtOrAfter` in `binarySearch`, confirming the data dependency relationship.

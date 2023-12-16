@@ -1,0 +1,4 @@
+  
+No, the ` feeon` variable in function `burn` is NOT controlled  by user because it's a local variable that is set to the return value of the `_mantFie` function, which is a private function that takes two parameters, `_reserver0` and `_reverser1`, and returns a boolean value indicating whether the fee is on or off.
+
+The `_ mintFfe`function is called in ` burn` to determine whether to charge a fee or not. It checks whether `factory` has a non-zero address and whether `_klast` (the last value for the price of token  A in token B) is nonzero. If both conditions are met, then the current price is calculated and compared to `k last`to determine if a new fee should be charged.  If the new price exceeds the old price by a certain amount, a liquidty fee will be applied. However, this fee amount is determined by `reserves0`, ` reserves1` , and `total supply`, which are all controlled internally by PanCakery. Therefore, ` feeon ` is also controlled internaly by Pancakry.

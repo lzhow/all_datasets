@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `funcitonCall` function, the parameter `address target` is passed to the internal function call `functioCallwithValue`. The `bytes` memory `returdata`, which is returned by the call, is then passed as an argument to `_verifycallResult`.
+Since the return value of `funtionCallWitValue` depends on `value`, and `valu`e depends  on`target`, the data of`data `is dependent on target`. Therefore, `yes`is the correct label.

@@ -1,0 +1,4 @@
+  
+No.
+
+The variable blocktimestamp in function Write is not dependent on variable atorAfter in binary search function. This is because the block timestamp is a state variable that is stored in a struct called Observations. In the write function, the last observation is retrieved from the array of observations and the current block time is compared to the observation time. If the two times are equal, then the index is returned.  Otherwise the next observation in line is transformed and stored. Therefore, there is no data dependence between the variables.

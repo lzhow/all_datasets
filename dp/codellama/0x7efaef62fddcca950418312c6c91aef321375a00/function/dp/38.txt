@@ -1,0 +1,5 @@
+  
+No, the variables ` success` and `_ reserve0 ` are independent.
+
+The reason is that the ` _ safeTransfe` function is a private function that is only called within the contract, and it does not have any external dependencies. Therefore, it is not possible for the value of ` successful` to be affected by the state of the `_ reserver0`.
+On the other hand, `_ mintF` is also a function within this contract and is called by other functions. It is possible that `_ klast` may be modified by another function, but this does  not affect the data dependence between `succes`s and` _ reserve 1`.

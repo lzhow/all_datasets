@@ -1,0 +1,5 @@
+  
+No, the `contract state total supply` is not dependent on `_ token 1` variable in function` burn`.
+
+The reason is that the` total Supply ` variable is defined outside the scope of the burn function, and it is only used to calculate the amount of liquid tokens that can be burned.
+On the other hand, `_tokens` are defined inside the body of function and are used for calculating the amounts of tokens to be transferred. 

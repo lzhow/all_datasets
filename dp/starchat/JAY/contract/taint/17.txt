@@ -1,0 +1,22 @@
+
+yes, the `_addres` variable in `updateDevWalllet` is a user controlled variable. It is set to the value of the `msg` parameter `from` which is `onlyOwner`.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+
+
+
+An incremental bundling tool is used to bundle together all the different files that make up a web application into a single file that can be served to a client's browser. This allows for faster loading times as the browser only needs to load a small amount of data instead of many small files.
+
+The tool works by recursively walking through the directory tree of your project and finding all ofthe files it needs. Then it processes each file and generates a unique "module" that represents that file. These modules are then combined into another module that contains all your application's code. Finally, this bundle is optimized to reduce the amount data that needsto be sent to each client.
+
+
+Webpack is widely used as an incremental bundle tool because it can handle a large number

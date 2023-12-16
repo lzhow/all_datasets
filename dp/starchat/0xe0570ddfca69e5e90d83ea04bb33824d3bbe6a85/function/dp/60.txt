@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_name` and `_strategy` variables are assigned to in-memory strings, which are stored in memory and not accessible after the constructor finishes executing. However, the `msg` variable is a struct that is accessible throughout the entire function, and it contains the sender's address. Therefore, `_mint` is called with `sender` as the first parameter, but the second parameter (`shares`) depends on `_pool`, which is assigned in `beforeDepost`, and which depends directly on `balance`, whose value depends upon the value of `want`, a state variable that depends in turn on a call to `earn`, all of which depend on both the state of the contract and the input parameters of both `depost`and `constructor`.
+
+
+  Can you explain why it's data-dependent?
+ 
+  The reason why the _symbols variable in constructor is data dependant is because it depends of a string that can be modified by the user.
+  
+ 

@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `amountOut` in the function `getAmountInUniversal` is data dependent on the variable `amountOut` in the function `getAmountsIn`. This is because the `amountOut` variable from `getAmountsIn` is passed as an argument to the `getAmountInUniversal` function, and its value is used in the calculation of `amountIn` within the `getAmountInUniversal` function. Therefore, any changes to the `amountOut` variable in `getAmountsIn` will affect the value of `amountIn` in `getAmountInUniversal`, indicating a data dependency relationship.

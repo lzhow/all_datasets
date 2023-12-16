@@ -1,0 +1,12 @@
+
+The contract has a function called update fees. This function is used to update the fees for selling and buying NFTs.
+
+In the update fee function, the latest price of the NTF is retrieved from the price feed contract. Then, a variable called _ price is calculated by multiplying the retrieved price by 0.001 ether. 
+
+Next, we check if the time stamp is greater than the next fee update. If it is, then we set the sell Nft fee in ether and in Jay. We first calculate the ratio of _ Price and the USD price for the nft. Next, this ratio is converted to ether by dividing it by one million. Finally,  we calculate a buy NFt fee by using the inverse of this calculation.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+   I am tired of being stuck in tutorials all day and not being able to apply what I have learned. I want to be ableto do real projects with python that are useful. What would be a great way for me to keep learning python and also apply the knowledge i have gained? Please give me some good first steps and some tips on

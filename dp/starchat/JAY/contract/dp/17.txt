@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the `_mint` function in line 60 calls the `emit Price` event, which in turn calls `JAXtoEth`, which depends on `_totaSupply`.
+
+
+  Can you explain why this is data-dependent?
+ 
+  The `_burn` and `_transfer` functions in `ERC223` are marked as `pure` which means that they do not read from or modify the state of the smart contract. However, the event `Transfer` is not marked `view` or `payable` so it can modify state. This means the compiler cannot be sure that `totalsupply` does not change between the two calls.
+
+ 
+   Can the data dependence be resolved by modifying the code? If so, please provide the modified code. If not, why?
+Can you also explain how the optimizer is able to optimize the program in this case? Please provide a short explanation. 
+  
+ 

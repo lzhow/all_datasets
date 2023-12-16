@@ -1,0 +1,4 @@
+  
+No, the `_ price` variable in function `updateFe es` is NOT controlled  by user because it's a local variable that is calculated based on the current price of the token. It is set to the value of `price`, which is a public variable of type `int 8` that represents the price in US dollars.
+
+The ` price ` variable is derived from the `latest Round Data` function of an external contract called `Aggregate V3 Interface`, and it represents a price feed that provides the latest price for the JPY/US Dollar exchange rate. This price is used to calculate the fees for buying and selling NFT tokens. 

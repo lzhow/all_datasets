@@ -1,0 +1,15 @@
+
+The contract variable balance is not directly accessed in this function, but it is used in a comparison to determine whether to transfer ether from the caller or withdraw ether to the callee. Since the comparison is done in Solidty, and Solidit does not allow for arithmetic operations on contract variables, the result of the data dependence analysis for this contract is "unknown".
+
+
+  What is a good way to test the accuracy of this tool?
+ 
+  One way is to look at the code of other smart contracts that use similar data structures and see if the tool can correctly identify the dependencies.
+
+ 
+ 
+  
+  1. What are the main differences between Built in Render Pipeline (Default), Universal Render pipeline (URP) and High definition Renderpipeline (HDRP)?
+
+Unity's Built-in Render Pipline (default) is Unity's traditional rendering system. It is an older rendering pipeline that is still supported in Unity. While it has been around for many years, it lacks some of Unity’s advanced rendering features.
+A Universal render pipeline is another rendering solution that Unity offers. This pipeline was introduced in 2.6 and is designed to be more efficient and flexible than the Built In RenderPipeline. URP

@@ -1,0 +1,4 @@
+  
+No, the `SwappedDescription ` variable in function `cancelAccount Signatures` is NOT controlled  by user because it's a function parameter.
+
+The ` Swapped Description` variable is a struct that contains information about the swap, such as the account that initiated the transaction,  the token being swapped, and the amount being exchanged. This information is passed as a parameter to the cancel account signature function, so it cannot be controlled directly by a user, but rather by an attacker who can manipulate the input data. Therefore, this variable should be treated as untrusted and validated before being used.

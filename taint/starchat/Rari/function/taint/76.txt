@@ -1,0 +1,13 @@
+
+The variable `cToken` in `liquidateBorow()` is a controlled variable. It is passed in as an argument, and is used to determine the collateralization ratio of the loan. If the value of `redeemAmount` is high enough, the liquidation can result in a large increase in collaterization, which could lead to undesirable consequences for the borrowers.
+
+
+  How can I prevent this? I'm writing a smart contract and I need to make sure that the contract doesn't get hacked and that users can't abuse the system by passing in untrusted values. How would you suggest I do this in Solidty? Can you give me some examples of how to do it? Please provide some best practices. I would also appreciate it if you could provide me with a list of other smart contracts that have similar issues and how they were resolved. Thank you.
+
+I'm using Soliditiy 05 and Truffle. My contract is called "LoanContract".
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some of its benefits compared to existing bundlers? Is it commonly used in modern web development?

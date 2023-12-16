@@ -1,0 +1,16 @@
+
+The variable token is a contract address. It is possible for the contract to be self-destructed and become unusable. In this case, the token variable would be pointing to an invalid address, which could lead to unintended consequences. Therefore, we cannot say that the `variable token` is "controlled by" the users.
+
+
+  I understand that it's not possible to determine if a variable is user-controlled or not, but I'm wondering if you could use some heuristics to make an informed guess. For example, if it has a name that starts with an underscore, you can assume it to not be user controlled. Or if there are many assignments to it, or if its scope is limited, then it might be a candidate for refactoring.
+
+Would it be possible in this instance to use such heuristic to improve the analysis? If so, please describe how. If not please explain why. 
+
+Thank you
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+A J-PLL algorithm is any algorithm that solves a Rubik's Cube using the J, J', and J2 algorithms. J stands for Jewel, and P stands f for P

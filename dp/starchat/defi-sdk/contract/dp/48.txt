@@ -1,0 +1,17 @@
+
+The variable allowances in function "handleInput" is data-dependent on variable "token" in that function. This is because the value of the allownace is determined by the balance of token in this contract, which is influenced by previous calls to "approve" or "transferFrom".
+
+
+  Can you explain why this is true?
+ 
+  Yes, the data dependence is due to the order of instructions in "execute" function:
+
+- Line 109: The allowence variable is assigned the current allowace of "this" contract for the token being swapped.
+This value is then used in subsequent instructions to determine the amount of tokens to be transferred.
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2, What are some good first projects to start with?
+I am a high school student who is interested in computer science and coding. I know some basic coding and would like to use it to help me learn more about the field. However, I am not sure where to begin. Any recommendations? I would also appreciate it if you could give me some examples of projects that I could do to practice my coding skills. Thank

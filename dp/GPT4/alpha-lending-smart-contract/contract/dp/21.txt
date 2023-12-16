@@ -1,0 +1,3 @@
+yes
+
+The contract state `receiverRuleList` is data dependent on the variable `_rule` in the function `setAlphaReleaseRule`. This is because within the `setAlphaReleaseRule` function, a new `ReceiverRule` struct is created and assigned to the `receiverRule` local variable, which includes `_rule` as one of its properties. This struct is then pushed onto the `receiverRuleList` array, which means that the state of `receiverRuleList` is directly affected by the value of `_rule`. The `receiverRuleList` array holds elements of type `ReceiverRule`, and any changes to `_rule` when calling `setAlphaReleaseRule` will result in a corresponding change in the `receiverRuleList` state.

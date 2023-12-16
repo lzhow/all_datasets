@@ -1,0 +1,5 @@
+  
+The variable `pair` in function `getAssetPric` is a local variable, and it's not directly controlled or modified by any user input. Therefore, the answer is 'No'.
+
+In the `setTokenPariMap` function, a user can pass a `string[ 2]` array as an argument, which is then stored in `tokenToPai`r mapping. However, this mapping is only accessible to the contract owner, so it cannot be modified directly by a regular user without the owner' permission.
+ 

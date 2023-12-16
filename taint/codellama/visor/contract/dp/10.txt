@@ -1,0 +1,5 @@
+  
+No, the ` retuendata ` variable in function  `_ callOptional Return` is not dependent on variable  ` token` .
+
+The reason is that the  variable is defined inside the scope of the `_calloptionalReturn` function, and it is passed as an argument to the` address.functioncall` method. This means that it will be evaluated and passed to `address. functioncall ` before the body of `_ calloptinalReturn ` is executed. Therefore, it cannot be dependent  on `  token `, which is a local variable defined in `_  caloptinal Return`.
+ 

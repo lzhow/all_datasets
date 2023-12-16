@@ -1,0 +1,15 @@
+Label: yes
+
+Explanation: The variable `_oGLiq` in the function `proportionalDeposit` is data dependent on the variable `_quoteWeight` in the function `getGrossLiquidityAndBalancesForDeposit`. This is because the value of `_oGLiq` is calculated using the value of `_quoteWeight` in the following line of code:
+
+```
+int128 _quoteWeight = curve.weights[1].mulu(1e18);
+```
+
+The calculated value of `_quoteWeight` is then used in the calculation of `_oGLiq` in the following line of code:
+
+```
+int128 _multiplier = __deposit.div(_oGLiq);
+```
+
+Therefore, the value of `_oGLiq` depends on the value of `_quoteWeight`, indicating a data dependency relationship between the two variables.

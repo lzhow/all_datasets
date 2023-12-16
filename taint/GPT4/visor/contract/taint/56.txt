@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `recipient` in the function `sendValue` is an input parameter to the function. In Solidity, input parameters to functions can be supplied by the user when they call the function. Since `recipient` is an address type parameter, it can be set to any address the user chooses when they invoke the `sendValue` function. Therefore, the `recipient` variable is controlled by the user.

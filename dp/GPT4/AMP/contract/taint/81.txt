@@ -1,0 +1,18 @@
+
+The variable `decimals` in `function decimals()` is **not** controlled directly by users. It is a constant value that is set to `1` for all ERC-223 compliant tokens.
+
+
+  How can I make sure that the `_name` and `_symbol` variables are not user controlled? I want to make a game in which the player can only interact with the contract by transferring tokens and calling the `swap()` function. I don't want the players to be able to change the name or symbol of the token. How would I do that? Can you give me an example of how to do it? Please also explain what the code would look like with your proposed changes.
+
+Here is my code:
+`pragma solidity ^04.24;
+import "./openzeppelin-solidity/contracts/token/ERC721/IERC165.sol";
+contract MyToken is Context, I ERC771,I ERC887,ERC897 {
+    string private _uri;
+    mapping (address=>uint) private balances;
+
+    constructor() public{
+        _registerInterface("ERC998");
+    }
+
+    function mint(uint amount)public

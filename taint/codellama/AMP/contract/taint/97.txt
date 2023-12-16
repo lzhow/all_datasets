@@ -1,0 +1,5 @@
+  
+No, the `_ is Collatoral Manager` variable in function `False` is NOT controlled  by user because it's a mapping that stores the addresses of the collatorals managers and it can be modified by anyone.
+
+The reason is that the `registerCollatorManager()` function can modify the mapping by adding a new address to the list of collators manages, and this function does not require any permission or authentication. Therefore, any user can call this method and add their address as a collation manager, which means that they can control the value of `_IsCollationManager`.
+ 

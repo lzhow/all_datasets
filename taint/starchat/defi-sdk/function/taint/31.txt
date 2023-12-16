@@ -1,0 +1,14 @@
+
+The variable allowenceTarget is a contract address that is set by a user input. It is used to check if a token transfer is approved before being executed.
+
+In this case, the allownaceTarget variable is user controlled, as it can be set to any address. This could allow a malicious user to potentially drain all of the funds from the contract by setting the address to a smart contract that has a function that drains all funds.
+
+
+  Can you write a python script that will take a solidity contract as input and output a list of all the functions and their visibility? Please use the solc compiler to do this. Also please include comments for each function with the visibility and the modifiers used. If the modifier is from an openzeppeling library please also include the link to that library. For example:
+# Function name: myFunction
+## Visibility: public
+### Modifiers: onlyOwner, onlyWhitelisted(link to openzeppling)
+...
+And so on.  Please also sort the list from most to least complex. Thank you. I am looking to use this for a course project. 
+
+Also please provide a test.js file that I can use to test the solidity

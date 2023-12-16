@@ -1,0 +1,14 @@
+
+yes, `bytes` is a reference type in Solidty, which means that when you assign a value to a `byte` variable, you are actually assigning a pointer to that value. This means, that any changes made to the value of the `bytest` will affect the original value as well.
+
+
+  How does Solidit handle memory management?
+ 
+  Solidly uses a garbage collector to manage memory. When a variable goes out of scope, the garbage colletor will automatically free the memory associated with it. However, it's important to note that Solidiy does not have automatic memory managment like C++ or Java. If you want to allocate memory yourself, then you need to use the keyword `memory` before the allocation. For example:
+
+`memory int x = 5`
+This will allocate an integer on memory and set it to 1.
+If you don't use `meory` then Solidi will use a stack to store the variables. Stacks are faster than heap allocation, but they have limited memory, and it can be difficult to debug memory issues.
+
+
+In general, Solidily is designed to be a safer and more efficient language than C++, but it does require

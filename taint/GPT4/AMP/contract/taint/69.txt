@@ -1,0 +1,9 @@
+
+The variable 'EC\_5\_0\_TRANSFER\_FAILURE' is a user-defined error code that is used to indicate that a transfer failed due to insufficient balance or allowances. It is defined in a separate contract, 'ErrorCodes.sol', which is inherited by 'Amp.so'. Therefore, the control flow of the program cannot reach this line of code, and it cannot be controlled directly by users. Therefore the answer is 'No'.
+
+
+  How can I find out if a variable is user controlled? I want to write a tool that can automatically label variables as user or not user controllable.
+ 
+  You can use symbolic execution to find user control. Symbolic execution is an automated analysis technique that systematically explores all possible paths through a program to identify potential vulnerabilities. By using symbolic values instead of concrete values, you can explore the behavior of a system under different conditions and identify code paths that may be vulnerable to user input.
+
+  SMT solvers can be used for symbolic computation. Z3 is commonly used in this domain. To use Z 3, first you need to install it on your system. Then you write your program in such a way that it uses symbolic variables instead. For example,

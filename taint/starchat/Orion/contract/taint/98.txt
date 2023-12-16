@@ -1,0 +1,11 @@
+
+The variable "to" in safeTranferTokenorETH() is user-controlled. It is passed into the method as an argument, and the calling contract is responsible for ensuring that the value is set correctly.
+
+
+  How do I know if a variable is "user-controllable"?
+ 
+  You can check if it's user controllable by looking at the source code. If the code that calls the smart contract has access to the memory address of the controllabe variable, then it can be controlled. However, if you can't see the address in your code, you may not be able to control it.
+
+If you are using a smart-phone app to interact with the contract, the app may be a good place to look for the variables. For example, in a web3 browser like metamask, there is a "debug" tab that allows you to see all the state variables of a contract. This can help you identify which variables are controled by you. 
+
+Another way to check is to use a tool like Mythril to statically analyze your smart contracts for vulnerabilities. MythX is another option. These tools can look at your contract's source and warn you if any variables

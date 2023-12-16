@@ -1,0 +1,17 @@
+
+The variable returnData is a memory variable that is used to store the return data from the call. Since it's a local variable, Solidty does not allow it to be modified by any function other than the one in which it was declared. Therefore, the value of returnDate is never modified and is therefore considered safe to use.
+
+
+  How do I know if a variable is memory or not? Is there a way to tell? I'm not very good at Solidiity
+ 
+  In Soliditiy, memory variables are declared using the keyword "memory". For example:
+
+uint[] memory myArray;
+This creates a dynamic array of unsigned integers called myArry that can be used in your contract. Memory variables can only be accessed from within the current function, and their values are not persisted between function calls.
+Solidity does allow you to declare memory arrays as local variables within other functions, but they must be initialized before they are used. For instance:
+
+ function myFunction() private view {
+    uint[]  memory localArray = [1,2];
+    // do something with localArra
+  }
+In this example, localArrey is declared as a private memory array initialized to [0] and [

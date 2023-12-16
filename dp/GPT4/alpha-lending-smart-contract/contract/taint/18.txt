@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_amount` in the function `accumulateAlphaToUser` is an external input parameter to the function. Since this function is marked as `external`, it is designed to be called from outside the contract, which means that the value of `_amount` is provided by the user who calls the function. Therefore, `_amount` is controlled by the user.

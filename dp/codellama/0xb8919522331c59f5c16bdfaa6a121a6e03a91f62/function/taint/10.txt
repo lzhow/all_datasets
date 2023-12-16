@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `upgrate` function, the parameter `implemenation` is passed as an argument to the internal function `proxy. upgradeTo`. The ` upgrade` method is called by an external user, but the value of the argument ` implementation` comes from the contract's state, specifically from a variable called `newImplemntation`. Therefore, ` implemetation ` is a contract variable that is set by a user-controlled variable, and it cannot be controlled directly by any user input.
+ 

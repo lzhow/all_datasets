@@ -1,0 +1,3 @@
+Yes
+
+The contract state `totalSupply` is data dependent on the variable `_reserve1` in the function `_mintFee`. The reason for this is that within the `_mintFee` function, there is a conditional statement that checks if `feeOn` is true, which is determined by whether the `feeTo` address is not the zero address. If `feeOn` is true and `_kLast` is not zero, the contract calculates `liquidity` based on `_reserve0` and `_reserve1`. If the calculated `liquidity` is greater than zero, the `_mint` function is called, which in turn alters the `totalSupply` state variable by adding the `liquidity` to it. Therefore, changes to `_reserve1` can affect the `liquidity` calculation and consequently the `totalSupply`.

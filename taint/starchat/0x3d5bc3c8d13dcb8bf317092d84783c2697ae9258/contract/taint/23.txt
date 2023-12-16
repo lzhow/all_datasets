@@ -1,0 +1,8 @@
+
+The variable `newPendingadmin` in function `_setpendingadmin()` is a user-controlled variable. It is set by a trusted administrator, and subsequently read by other functions in this contract.
+
+
+  How can I prevent the admin from being set to a contract that does not have the same interface as the Comptrller?  How do I know the contract has the correct interface?
+
+I want to be able to call the _setpendingadmin function with a new contract address, but I don't want the new address to point to any contract other than a controller that has a compatible interface. How would I do this? Can you show me an example? I want it to work similar to the way the uniswap _approve function works.
+How can we make sure that the address we are setting as pending admin is actually a valid controller? How does univwap do it? They have a function that checks if a given address is an implementation of the Uniswappool interface, right? Is there something similar we can do to check if an address conforms to our Comproller interface without actually deploying it and calling a method? If so, please show an exmaple. If not, how can you be

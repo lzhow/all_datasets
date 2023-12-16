@@ -1,0 +1,4 @@
+  
+The variable shares in function `accumulateAlphatoUser` is labeled as 'Yes' because it stores the amount of tokens that the contract has accumulated for each user in a mapping. This mapping is publicly accessible, so the value of `share` can be controlled and manipulated by users.
+
+In the `claim` function, the mapping ` shares`is used to calculate the number of shares that a user has, and the corresponding amount that they are entitled to withdraw. However, this function does not modify the values in ` sharess`, so it doesnot affect the control of the users over the state of this variable. Therefore, ` share` in this context is also labled as'Yes'.

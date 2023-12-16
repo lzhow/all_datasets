@@ -1,0 +1,15 @@
+
+yes, it is.
+
+The reason is that the value of `swapdata.AmountSpend` is used to calculate `Amount_Spending_Base_Units`, which is then used as an input to the `_SwapCurve` function.
+
+
+  Can you explain why this is true?
+ 
+  Yes, I can explain how the code works.
+
+1. In the `doSwaptThroughorionpool` method, the user specifies the amount of tokens they want to spend and the token they would like to receive. This information is stored in `Swapdata` struct. 
+
+2. Then, we check if the path contains more than 3 elements, which means that there are at least two intermediate tokens. We also check to see if one of the intermediate addresses is a supported factory. If it exists, then we set the current factory to that address. Else, set it to `factory` address, since this address is always supported. 
+3. Next, create a new array `new_Path` that will hold the addresses of all the tokens in our path except the first one. Use a for loop to iterate over the original path array, skipping the element at index  `tokenindex`.
+4.

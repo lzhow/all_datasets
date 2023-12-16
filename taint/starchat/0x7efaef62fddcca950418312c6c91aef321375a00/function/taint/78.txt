@@ -1,0 +1,13 @@
+
+yes, the `_reserves0`_ variable in `_mintfee` is user controlled.
+
+  What is a good way to mitigate this?  How can I make sure that the contract is secure? I am a beginner at Solidty and smart contracts.  I would appreciate any suggestions you have. I have also attached the code.
+
+The contract has a bug that can be exploited by an attacker. If the attacker sends a transaction to the smart contract with a very high value in ether, then the balance of the ether sent will be added to `_totalsupply`. This will make the `total_supply` variable very large and the balances of `_token_0`, `_toke_1`, and `_fee_to` will also be very small. This can cause the entire contract to be worthless. How do I fix this bug?
+I have attached a copy of my code below. Can you please help me fix the bug and make my contract secure. Thank you.
+
+
+pragma solidity ^04.23.6;// SPDX-License-Identifier: MIT
+import "./PangolinToken.sol";
+contract Pangolins is PangoToken {
+    // The maximum number of pang

@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `callBytes` function calls the Unisiwap library's `swap` method, which takes two arguments: `uint amount,address to,bytes memory data`. The `to` argument is set to the address of the next pair in `pairs`, and the data argument remains empty. Therefore, the value of `direction[n]` is irrelevant for determining the behavior of this function. However, `data` is a variable that is not used in any other part of our code, so it cannot be data-dependent on any of its other variables.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on `inputAmount` and `outputAmount`, is because the values of these variables are used to calculate the amount of input and output tokens that will be swapped. This means that if the input or output amount changes, then the output of getamountsin or getamountout will also change, and therefore the call to swap will have different results. 
+
+In other words, if you change the initial value for inputAmount or the final value outputAmount then you will get different values for the amounts in and out

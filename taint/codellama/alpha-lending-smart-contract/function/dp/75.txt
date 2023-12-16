@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `isHealtyAccount` function, the `_token` variable is used to call the internal `getUserAccout` method, which returns the total collteral balance and total borrow balance of the user. These values are then used in a comparison to determine if the account balance is sufficient to cover the borrow amount.
+On the other hand, in `liqidationInternal` the collatoral pool is not used directly. Instead, it is accessed through the address of a token, and the balanceOf method is called on it to get the amount of collaterial owned by the liquidator. This is then compared to the maximum amount that can be liquidated. 

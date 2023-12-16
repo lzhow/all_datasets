@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `function callbytes`, the first line of code decodes the caller call data into the variables `inputtoken`, `outputtoken` and `paires`. The `swap type` is also decoded.
+Then, the code checks if the length of the pairs is zero, and if so, it reverts. It also checks that the lengths of `direcions` are equal to the number of pairs and reveres if they aren't.  It then calculates the amounts of tokens to be swapped. Finally, if `fixedsideamount` isn' t zero and the swap type is fixed inputs, then it calls the getamountout function. If the amount is greater than the balance of token  then the input slippagerevert is called. Then, for each pair, a swap is made. This swap function is from the Iuniswappair contract. In this function, there is a call to deposite.eth. So, in this case, `calldatadata` depends on ` w eth`.

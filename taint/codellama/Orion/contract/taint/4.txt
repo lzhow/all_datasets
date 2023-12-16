@@ -1,0 +1,4 @@
+  
+No, the ` amountBDdesired ` variable in function `_addliquidty` is NOT controlled  by user because it's a function parameter.
+
+The ` _ addliqudity ` function takes in 6 parameters: `token A`, ` token B`,` amount A desired`,  `amout B desired` , ` amout A min` and ` Amount B min`. The `Amount B Desired`, which is `ammountBdesire` in this case, is a parameter that is passed into the  function. This means that the value of `AmoutB Desire ` is determined by whoever calls the `_ add liquidty `function, and it cannot be controlled directly by a user input. Therefore, `AmmountBDDesire is labeled as 'No' because the contract does not allow the users to control the amount of liquidities that are added to the pool.

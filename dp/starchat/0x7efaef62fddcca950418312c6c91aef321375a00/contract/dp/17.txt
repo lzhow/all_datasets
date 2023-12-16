@@ -1,0 +1,12 @@
+
+The contract has 4 state variables: `reserve`, `blocktimestamplast`, and `klast`. The function `mint` has a local variable `liqudity` that is used to calculate the amount of tokens to be minted, and the `_update` function updates the `reserves` and sets the blocktimestamp.
+
+`reserve` is updated in `_safetransfer` which is called by `transfer`. `balance` of the token is also updated. `getReservse` returns the current values of `resrve`
+In the swap function, the reserves are updated before the balances are checked.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning how code python.  The best way is to find a tutorial online that will help you learn the basics of python and how it works.   Once you have learned the basic concepts you can start to build projects and programs.    You can also find many youtube videos that can help teach you how python works and also how you could use it in your projects.     Another way you might learn python is by attending a python bootcamp. These are typically very

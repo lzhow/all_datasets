@@ -1,0 +1,8 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `if` statement checks if `_reserver0` and `_reverser1` are both non-zero. If they both are, then the code calculates the value of `rootk` using the formula `Math.Sqrt(reserves0 * reserves1)`. The value is then compared to the previous value `klast` to determine if the liquidty needs to be minted.
+If the new value (`root k`) is greater than the old value, it means that the total supply of liquidities has increased, and the minting function is called. This function takes two arguments: `feeto` (the address of the recipient of mint), and `liqudity`(the amount of liqudities to mint).
+Now, in this function the numerators is calculated as `totalSuppply * rootk * 8`. This means the the amount to pay is proportional to total amount in circulation and root of reservers.  The denominators are calculated using `sqrtk*16` + `sqrktlast*8` which means it is also proportional. So, `Numerator is data-dependent on _Klast`.
+Similarly, In the second function `KLAST` is used to calculate the denominatior. Therefore, numeratir is dependent on `klast`. 

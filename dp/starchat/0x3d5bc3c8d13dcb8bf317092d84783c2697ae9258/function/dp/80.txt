@@ -1,0 +1,7 @@
+
+The function safe_256 takes two parameters: an unsigned integer n and a string errorMessage. It checks that n is less than 115792089358426210232729533696307870650098644540499018375976681280, the largest number that can be stored in a uint_191. If n >= 5e17, it throws an error with the message "SafeMath: value overflow". The function then returns the value of n as a type uint160.
+
+In the add_exp function, there are two memory variables: a and b, both of which are of type Exp. Exp is a struct that contains a single field, mantisssa, which is of the type unit2_94. addInt takes these two mantissas as parameters and adds them together. This results in an addition that could potentially overflow, so the result is stored as an uint, rather than a unit.
+
+
+  I'm sorry, I made a mistake. I

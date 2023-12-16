@@ -1,0 +1,4 @@
+  
+No, the state variable ` stratCandiate` is not dependent on variable  `_ after`  in function  ` withdraw`.
+
+The reason is that the ` strateCadidate ` state is defined outside the scope of the  function, and it is only accessed within the context of function calls to the external contract ` strategy`. The variable` _ after ` is also defined within function scope and is used to calculate the amount of tokens to transfer to a user.

@@ -1,0 +1,8 @@
+
+The variable _sharedAmount in calculateRundownLiqudityAmountExtern is a control variable that is used to calculate the amount of liquidity that can be withdrawn from the lending pool for a given token. This variable is determined by dividing the total amount borrowed by all users of the token by 100,0 and is updated every time a user borrows or repayes the loan.
+
+As such, the value of this variable can vary depending on the current state of all borrowers of a token, and as such it can not be considered a constant value that the users control.
+
+
+  Can you explain how the borrower share is calculated?  I understand that it's a percentage of total borroers, but how is it calculated exactly?   For example, if I borrow 2 ether, with 3 people, how does the system calculate my share?    I know that there is some interest, so I assume that my borrow share will be reduced over time, until it reaches 50% of my total borrow amount.   But how exactly does it work?     Can I see the code that does this calculation?
+Can you also explain what the "1 ether" in "

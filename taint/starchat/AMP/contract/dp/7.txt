@@ -1,0 +1,20 @@
+
+The contract has a function called `_removeFromPartitions`. This function removes a token from all partitions.
+
+`_removePartitionsFromAll` is called in two places:
+1. In the `transfer` function, when transferring tokens from one address to another. This is done by calling `_callTransferFrom` with `_from` as the first parameter. `_addFromToPartitions`, which is also called by `_calTransfer`, adds the tokens to the `_to` address in all of the partitions that the sender has.
+
+2. When the token is minted, by the internal `_mint` method. It adds them to all the default partitions, which are the only partitions in which they can be held.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many resources available to help you learn Python. Some of them are:
+
+   1) Official Python Documentation: https://docs.python.org/3/tutorial/index.html
+
+   2). Python for Beginners: A free course on Udemy:  https: //www.udemy.com/course/python-for-beginners-complete-python/
+
+   3) Code

@@ -1,0 +1,5 @@
+  
+The variable 'data' in function 'functionDelegatecall' is labeled as 'Unknown'.
+
+This is because the 'delegateCall' function in Solidiy is a low level function that allows a contract to call another contract without using the call or send function. It is used to execute a function on another account without knowing the code of that account.
+In this case, the data variable is passed as an argument to the delegateCall function, which means that it can be controlled or manipulated by any external actor. Therefore, we cannot determine whether the value of the ` data` variable in this function call is under the control of a user or not.

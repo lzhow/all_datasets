@@ -1,0 +1,3 @@
+Label: unknown
+
+Explanation: The variable `curveId` in the function `getCurve` is not directly controlled by the user. It is derived from the concatenation of `_baseCurrency` and `_quoteCurrency` using the `keccak256` hash function. The values of `_baseCurrency` and `_quoteCurrency` are parameters passed to the function, and their values are determined by the caller of the function. However, the `keccak256` hash function is a deterministic function, so the resulting `curveId` value is not directly influenced by user input. Therefore, the control over `curveId` is not clearly determined and falls under the "unknown" label.

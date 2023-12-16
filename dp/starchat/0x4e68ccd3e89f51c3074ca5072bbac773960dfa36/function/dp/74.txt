@@ -1,0 +1,14 @@
+
+The variable lower in snapshot CumulativessInside is data-dependent on feeProtoclOld in setFeesProtocol because the value of feeProcotolOld is used to determine which branch of the if-else statement is taken, and the values of lower are used in each branch.
+
+
+  Can you explain why the data dependence is there?
+ 
+  Yes, I can explain how the code works.
+
+In the first branch, the program calculates the difference in tick cumulaties between the lower and upper ticks. This is done by subtracting the tick cumulative outside of tick lower from the cumulative tick outside the upper tick. These values are stored in variables called tickcumulativelower and tickcumulativeupper. 
+
+Next, it calculates how much time has passed since the contract was deployed. It does this by calling the blocktimestamp function, which returns the current block timestamp. Then, using the time variable, program determines the amount of time that has elapsed since deployment.
+
+
+Finally, in order to calculate the return value, we need to consider the case where the slot  is less than the lowest tick, or the highest tick in this case. In this scenario, there is no data to compare the cumulated ticks

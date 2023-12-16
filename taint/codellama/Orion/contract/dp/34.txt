@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `_do_swap` function, the `amount` variable is assigned the value of `IOrinPool.balancesOf(_to)` before the call to `_autoTranserTo`. This means that the balance of the token being transferred is dependent on `_token`. Therefore, `token` is data-dependent on ` _token `.
+ 

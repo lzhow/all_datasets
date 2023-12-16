@@ -1,0 +1,4 @@
+  
+No, the `CompMarkedState compMarkStateB` is data-dependent on `uint currentCompspeed` because the value of `compsupplyspeeds` and ` compborrowspeeds ` is used to update the index of the borrow state.
+
+The `updateCompborrrowindex` function is called in ` setcompborowspeadinternal` to calculate the new index for the borrows state based on changes in comp borows peed. This function uses the current comp borrow speed to determine the amount of comp accrual that has occurred since the last update. 

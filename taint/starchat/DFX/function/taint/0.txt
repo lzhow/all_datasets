@@ -1,0 +1,21 @@
+
+The variable _interace is a constant string that is used to check if a contract supports a certain interface. Since it's a string, and not a variable that can be modified by a user, the answer is no.
+
+
+  How can I check that?  Is there a way to determine if it can change?
+
+I'm trying to write a program that will check the source code of a smart contract and determine whether or not it uses a specific interface, such as IUniswapV3Pool.  I want to be able to do this without running the contract on a testnet or mainnet.
+Is there any way I can do that with the information I have access to?  
+If not, what other information do I need to get?  
+
+Please let me know if you need any more information.   I'm happy to provide it.  
+ I would like to know how to find out if this contract uses the ICurveFactory interface without actually running it on the blockchain. 
+
+Here is an example of the code:
+pragma solidity 5.0
+interface IFactory {
+    function createPool(string callData symbol)
+        external
+        returns(ICore);
+}
+contract Factory is ICore

@@ -1,0 +1,3 @@
+yes
+
+The contract state `alphaToken` is data dependent on the variable `_alphaToken` in the function `constructor` of the `MockAlphaReceiver` contract. This is because the value of `_alphaToken` passed to the constructor when the `MockAlphaReceiver` contract is deployed is directly assigned to the state variable `alphaToken`. The line `alphaToken = _alphaToken;` within the constructor creates a data dependency, as the state of `alphaToken` is determined by the value of `_alphaToken` at the time of contract creation.

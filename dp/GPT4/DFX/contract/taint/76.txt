@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `_reserves` in the function `getOriginSwapData` is not controlled by the user. It is a local variable that is assigned the value of `curve.assets`, which is a storage variable of the `Storage.Curve` struct. The `curve.assets` variable is not directly controlled by the user, but rather represents the assets stored in the curve contract.

@@ -1,0 +1,5 @@
+  
+No, the variables ` storedlist` and ` newcloseFacormantiss` are independent.
+
+The reason is that the `exitmarket` function is only concerned with the state of the contract at the time it is called, and the `_ setclosefactor` is a separate function that is not called within the context of ` exitmarket`. Therefore, any changes made to the value of` new closefactor mantissa ` in `_ SetClosefactor ` will not affect the behavior of  `exitmap` .
+ 

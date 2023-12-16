@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `name` in the constructor of the `vVISR` contract is set by the value passed to the constructor at the time of contract deployment. The constructor is a special function that is only called once when the contract is first deployed to the blockchain. The arguments for the constructor are provided by the user (deployer) of the contract. Therefore, the initial value of the `name` variable is controlled by the user who deploys the contract. After deployment, the `name` variable is not intended to be changed as there is no function in the contract that allows for modifying it, but its initial value is indeed set by the user.

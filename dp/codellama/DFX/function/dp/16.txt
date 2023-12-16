@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `Curves` contract, the `_assets` and `_assetWeight` arrays are created and initialized with the values of the input parameters `_baseAsset`, `_quoteAsset` , `_weight`, and `address(baseAssets)`. The `assets[]` array is then used to create a new `Asset[]`. The `_name` parameter is used as the name of this new asset.
+Then, a `NewCurv` event is emitted with a reference to the newly created curve and the curve's address. Finally, `return curve` is returned. 

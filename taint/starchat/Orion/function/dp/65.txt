@@ -1,0 +1,14 @@
+
+The variables `a` and `b` in both functions are used in comparisons to ensure that `require` statements are satisfied. This means that the variables are indirectly dependent on each other, and therefore, are considered data-dependent.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to identify potential data dependencies between variables and contract state. It does this by examining the instructions in each function and determining whether each variable is read or written to. If a variable appears on both the left-hand and right- hand sides of an assignment statement or a function call, it is considered a potential dependency.
+
+For example, in this code:
+`x = y + z`
+x and y are both read from, while z is written. Therefore, x is dependent upon y and z. Similarly, this function:  `f(x) = g(y, z)`
+depends on y,z, as well as the state of the contract when f is called. 
+
+In order to determine whether two or more variables have data dependence, the analysis must examine all instructions and function calls in all functions in a contract. Once the dependencies are identified,

@@ -1,0 +1,11 @@
+
+yes, the `_resereveApprove` variable is user controlled. It is set to the address of the contract that is calling the `includeAsset` function, and is used to approve the transfer of tokens from the numerator asset to its asssimilating reserve.
+
+
+  How does the program know what address to set `_approveTo`?
+ 
+  The program does not know the exact address that will be calling `orchestrator.includeAssset()` function. This is because the smart contract is deployed by a user, who can set the desired address. However, in order to prevent malicious users from setting a mallory address, a check is performed to ensure that the calling address is a contract. If the check passes, then the malleable address can be set.
+
+In summary, `_approverTo ` is malletable because it can hold a different address depending on the context in which the orchestrator contract was called. In order for the value to be malled, an attacker would need to have access to change the code of a deployed contract, which is generally not possible. Therefore, this value is considered safe. 
+
+However, if you have any other questions, please let me know.

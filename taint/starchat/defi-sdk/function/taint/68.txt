@@ -1,0 +1,14 @@
+
+The variable initialOutBalance is a local variable that is declared within the execute function and is used to store the initial balance of the output token before the swap is executed. This variable is then used in various calculations to determine the amount of input and output tokens that are returned to the caller.
+
+However, the value of this variable can be influenced by a malicious user who can manipulate the contract's state in order to manipulate these calculations. Specifically, they could set the balance to a specific value, which would cause the calculations performed by this function to be incorrect. Therefore, while the local initialBalance variable may not be strictly necessary for the functionality of execute, we have decided to classify it as "controlled by user" to highlight the potential for mishandling of user input in this case.
+
+
+  Can you explain how the maliucious contract owner can influence the outcome of a swap? Please provide an example
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+A J-PLL algorithm is any algorithm that solves a Rubik's Cube using the J, J', and J2 algorithms. J stands for Jewel, and P stands in place of Pll. P is

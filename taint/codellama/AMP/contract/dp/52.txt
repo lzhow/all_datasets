@@ -1,0 +1,4 @@
+  
+No, the variables ` _ partition` and `_to` are independent in function  `transerFrom` . The variable  `_ partition ` is a parameter of the ` revokeOperatorbyPartion` function, and the `_ to` variable is an argument of function `_transfebyPartiton`.
+
+The reason is that the  function`_transfeByParition` is called within the context of a different function (`revockOperator`) and therefore has access to the local variables of that function. However, this does not create a dependency between the two functions.

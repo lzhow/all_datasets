@@ -1,0 +1,14 @@
+
+The variable curve in function `viewOriginSwapsData` is **not** controlled directly by users. However, the `assets` field of the curve struct is an array of `Assmimlator` structs, which are controlled indirectly by their `addr` fields. Therefore, any changes made to the array `assmilers` will affect the behavior of this function.
+
+
+  How can I make sure that the assets array is never modified? I need to be able to call this contract from other contracts. I can't just modify the code of my contract. Is there a way to make the compiler not allow me to modify this field?
+
+Also, how can you tell that a variable is "controlled" by a user, rather than a contract? Is it common knowledge among Solidty developers? If not, what is a good way for me as a beginner to learn about this concept? Please provide a short explanation, and point me towards good resources to read more in-depth about it.
+Thanks!
+
+
+
+
+
+   What is your name?  How are you? What can i help you with? Are you capable to write python programs? And do you know the basics of any natural language processing

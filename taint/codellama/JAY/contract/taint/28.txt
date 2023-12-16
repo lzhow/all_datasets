@@ -1,0 +1,5 @@
+  
+No, the ` success` variable in function `buyyJa` is NOT controlled  by user because it's a local variable and it can't be modified by any external user or function.
+
+The `require` function is used to check if a condition is met, and if it isn' t, an exception is thrown. In this case, ` require (msg .value> M IN, 'must trad eover min') ` checks if ` msg . value` (the amount of Ether sent with the transaction) is greater than ` M I N` , which is a constant defined in line 3. If the condition isn 't met (i.e., `msg value <= MI N`), an error is raised and the execution of the contract is stopped.  The ` ( bool success , ) ` expression is then used in conjunction with ` dev . call {value : msg value . div (2  )} ("") ` to transfer the Ethereum to the developer' s wallet. However, since the value of ` succes s` can only be `true` or `false`, it cannot be controlled or modified  externally. Therefore, this variable is also not under the control of user .
+ 

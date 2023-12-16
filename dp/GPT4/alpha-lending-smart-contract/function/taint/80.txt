@@ -1,0 +1,10 @@
+
+The variable `collaterallPercent` is a parameter of the `Poolconfiguration` contract, and is therefore controlled entirely by its owner, the address that deployed the contract. This means that the value of `colleteralPercent`, which is returned by `getCollateralPercentage()`, is always the same, regardless of any changes made to the state of that contract by any other user or smart contract (such as a lending pool).
+
+In other words, while it may be possible for other smart contracts to call `setCollatoralPercetage()` on the Poolconfiguration contract to change the current value, this change will have no effect on any calculations performed by that smart contrac.
+
+
+  How can I make sure that this is true? I am a user of this contract and I want to make a deposit. I need to know that I can trust the owner of it. Can you write me a piece of code that will allow me to deposit 1 ether into the pool? Please use the web3.js library.
+I want you to write the code for the deposit function. It should be able to be called by anyone.  Please include comments and make it as clear as possible. 
+
+Please also include

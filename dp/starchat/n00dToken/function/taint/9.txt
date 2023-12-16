@@ -1,0 +1,12 @@
+
+yes, the `_ERC_1155_RECEIVER_INTERF` is a constant that is used to check if a contract implements the `ERC-127` standard. This is an important standard that allows contracts to verify if another contract is in fact a legitimate contract.
+
+
+ 
+Please explain why it's important to know if an interface is implemented by a smart contract
+ 
+  Implementing an `interface` in Solidty is like defining a set of rules or requirements that a `contract` must follow in order to be considered an instance of that interface. When you create an implementation of an inteface, you are making a specific contract that meets those requirements.
+
+When you interact with a Solidiy contract, like calling a function or accessing a variable, Soliditiy needs to determine if that contract actually has the code that implements that function. It does this by looking at the contract's bytecode and looking for the specific code for that functon or variable. If the bytecode doesn't contain that code, then Solidiity assumes that the conract doesn' have that functionality. 
+
+This is why Solidities `interfaces` are so important. They allow you to define a standard for how other

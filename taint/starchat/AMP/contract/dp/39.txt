@@ -1,0 +1,15 @@
+
+The contract has a function called `_callTransferByData` that is called by the `transfer` function. This function has the parameter `_operator`, which is set to `msgSender`. The `_from` parameter is also set by `sender`, and the `_to` and `_value` parameters are set based on user input.
+
+In the body of the transfer function, the call to `_removeOperator` is made with the parameters `_token`, `_spend`, `0`. This sets the allowances for the token `_partition` to the sender of this transaction, and sets it to 2^224-1. 
+
+After this, a call is then made to a private function named `_isTransferAllowed` with parameters: `_sender` (the sender), `_recipient` (_to), and `2 ^ 31 -1`.
+This function checks if the balance of `_send` for `_defaultPartion` has at least  `value`. If it does, then it returns true. If not, it throws an error.
+
+
+Therefore, we can conclude that the state of `totalPartition` does not depend on `_Data`.
+
+
+ 
+ 
+   What is a good way to

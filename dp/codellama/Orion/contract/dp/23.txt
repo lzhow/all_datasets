@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `_swap` function, the `pair.exchange` method is called, which updates the balances of the tokens in `path`. The `exchange()` method takes in two amounts: `input` and `output`. If the input amount is greater than the output amount, then the token in position `i` is sold, and the amount of token `j` that is bought is calculated using the current reserves of `token0` (the token at position  `0`) and  the  token  at  position   `1`.  The  amount  of  tokens  that  are  bought  is   calculated  using  a  function  called  `_getExpectedAmount`.
+  In  this  case,   the   amount   of   tokens   that   are   bought   is    calculated   using   a   function   called   `_quote`.   The   input   to   this   method   includes   two   amounts   and   their   corresponding   reservers.   These   values   can   be   used   in   calculations   involving   token   balancing.
+   In the case of `_addliquidty`, the method `IOrinPoolvV1Factory.createpair` creates a new pair for the two tokens. This method also updates  reservesthat are used in calculations involving token balacing.  Therefore, ` amounts` are dependent on ` curbalances` because the reseveres are updated in both functions.

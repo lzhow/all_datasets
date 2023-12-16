@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `decimalToBseUnit` function, the value of `amount` is passed as an argument, which is a user-controlled variable. This means that the result of the calculation will also be user controlled.
+However, in this function the multiplication and division operations are performed using the SaferMath library, and the results are checked for overflows. Therefore, while the input value is user controllable,the output value will not be overflowed. 

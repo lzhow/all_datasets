@@ -1,0 +1,4 @@
+  
+No, the ` n GLi q_ ` variable in view Target Swapping Data is uncontrolled by users.
+
+The `viewTarget SwapingData` function is a view function, which means that it does not modify the state of the contract. Therefore, any changes made to the value of `ngliq` within the scope of this function are not reflected in any other part of contract, including the caller's code.  The value ` ngli q _` is calculated based on the balances of other assets in `curves` and the amount of liquidity in each asset. It is therefore not under the control of users and is considered uncontrollable.

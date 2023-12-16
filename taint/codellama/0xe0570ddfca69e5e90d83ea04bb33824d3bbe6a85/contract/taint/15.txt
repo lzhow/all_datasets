@@ -1,0 +1,4 @@
+  
+No, the `bal` variable in `function balance()` is NOT controlled directly by a user in this contract.
+
+The `wanted` function returns the balance of the token that the contract is managing, which is stored in a variable called `strategies`. The `before` and `after` variables are used to calculate the amount of tokens that have been deposited or withdrawn, and the `_amount` is calculated by subtracting the two.  The `_pool` value is also calculated using the same formula. However, these variables do not directly depend on user input. They are all calculated based on the current state of other variables in contract, such as the total supply of shares and balances of different tokens. Therefore, they are not considered to be controlled or influenced by user inputs.

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `viewTargetswap` function, the `_o` variable is assigned the value of the output of `Assililatros.GetOriginandTarget` which is a function that returns a tuple of two `Storage` objects.
+One of these objects is `_t`, which represents the target `assililiator`.
+Then, in line 10, `_amt` is calculated by calling the viewRawamount function on `_target` and passing it the result of calling viewNumereireamount on _`t` with the parameter `_TargetAmount`.  This means that `_amount` depends on both `_T`and `_O`.   The variable _O is also used in a call to the getRate function in lines 20 and 30.  The getrate function is defined in another contract, but it is clear that it depends only on a single parameter, which in this case is _T.   Therefore, we can conclude that the data dependence relationship between _Origin and _OBals is yes.

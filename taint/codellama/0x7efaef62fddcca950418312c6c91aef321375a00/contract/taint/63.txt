@@ -1,0 +1,4 @@
+  
+No, the ` root K` variable in function `_m intF ee` is NOT controlled  by user because it's a local variable that is calculated based on the current reserves of the token pair. It is a constant value that does not change based  on user input.
+
+The ` _ mintF  e e` function is called in ` mint` and ` burn` functions, and it calculates the fee that needs to be paid to the factory. This fee is based the the amount of liquidty that was minted or burned, as well as the reserver of token  pair at the time of minting or burning.  The `  root k` value is used to calculate the liquidtiy that will be mint or burnt, based of current reserve of tokens. Therefore, ` roo t k ` is also a variable controlled internally by smart contract.

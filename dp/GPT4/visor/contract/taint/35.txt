@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_name` is a private state variable in the ERC20 contract, which is set during the contract's deployment and is not modified by any function that is exposed to the users. It is assigned a value from the constructor's parameter `name_` and is not changed afterwards. The constructor is only called once when the contract is deployed, and typically the deployer (often the contract's owner or creator) sets the initial value. After deployment, there is no function in the provided code that allows users to change the `_name` variable, hence it is not controlled by the user.

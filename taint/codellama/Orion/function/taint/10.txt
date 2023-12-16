@@ -1,0 +1,5 @@
+  
+No, the ` amount Out` variable in function `do Swap Through Orin Pool` is NOT controlled  by user because it's calculated based on the amount of tokens that are swapped and the exchange rate between the tokens.
+
+The ` do SwapthrougHOrinPool` function takes in a `SwaptData` struct as an argument, which contains the information about the swap, including the path of the token, and whether the exact amount is spent or received. Based on this information, ` _ do swapTokes` calculates the amounts of input and output tokens using the OrnMulti Pool Library, then calculcates ` amountsOut`, which is used to calculate ` amounOut`.
+ 

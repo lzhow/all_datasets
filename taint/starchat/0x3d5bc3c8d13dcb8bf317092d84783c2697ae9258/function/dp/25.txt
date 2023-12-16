@@ -1,0 +1,11 @@
+
+The variables `redeemTokenIn` and `repaymentAmount` are used in both functions, but they do not have direct data dependencies on each other.
+
+However, the variables in `Redeem` event in redemption function are dependent on `exchange_rate_mantisa` which is calculated in exchange rate function. Similarly, `actual_repaid_amount` is dependent upon `Exchange_Rate_Mantiss` variable. 
+
+In the `Liquidate` function, there is a dependency on variable called `seized_tokens` that is derived from `comptrollers.liqudate_calculate_seise_token` method. This method takes in two parameters `CToken_Address` (which is `this` contract) and the collateral token address. It then calculates the amount of collaterals that needs to be seized based on a formula. However, this calculation is not dependent directly on either of the two input parameters. Instead, it depends on two other variables that are calculated within the method: `total_borrows`, `borrow_index`. These variables are also dependent in some way on other parameters that the methods takes.
+
+
+ 
+ 
+  

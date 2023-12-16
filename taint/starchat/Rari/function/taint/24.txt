@@ -1,0 +1,11 @@
+
+The variable compspeed in function `_setcompsupplyspeed` is a user input and is therefore controlled.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization process works in web development. Thanks!
+  
+   An incremental bundlers like Webpack is used to bundle together all the different files that make up a web application into a single file that can be served to users. This makes it easier for the browser to load the application since it only has to download a small amount of data instead of having to make multiple requests for each file. Additionally, the incremental nature of the build process means that only the files which have changed since the last build will be rebuilt, which can save a lot of time and resources.
+
+Webpack also performs other optimizations like minification and tree shaking, to reduce the size of your application and make it load faster. These optimizations are based on the idea that you can often get a good performance benefit by only including the code that is actually being used by your users, rather

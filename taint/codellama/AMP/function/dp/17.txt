@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_getParitionManager` function, the `toParitition` variable is used to determine the prefix of the partition. This prefix is then used in a call to the`_getStrategyManagerIAddress` method to get the address of a strategy manager contract.
+This strategy managers contract is stored in `strategeyManagerAddress`.
+Then, in `_calPostTranferhooks`, the same `partiton` is passed to `_isParittionStrategy` to check if the parition is a partition strategy. If it is, then the strategy validator implementation is retrieved from the contract using the  `interfaceAddres`s method.  The `address` of this implementation  is assigned to `paritionManagmentImplemenation`.  This implementation can then be used  to call the method `tokenToParitiotnToValdiate` which takes the parameters `msg.signature`, ` _partion`, `_operator`,` _ from`,  `_to`, and `_value`. The `_data` and `operatordata`. These parameters are all passed from `_postTranserHooke`. Therefore, ` partitionManageImplementaion` depends on ` prefix` because it uses the value of ` partitin` from `callParionStrategeOperatorhook`

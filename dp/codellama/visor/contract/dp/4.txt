@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `isContrac` function, the value of `address.balancesize` is assigned to the local variable size. This variable is then used in a comparison to determine whether the target address is a contract.
+However, in ` function delegateCall`, the address of the contract is passed as an argument, and the size of this contract's code (i.e., the number of bytes of code in its storage) is stored in variable 'size'. This means that the ' size' variable in 'iscontrac' is data-dependent on 'target' in function 'function delegatecall'.

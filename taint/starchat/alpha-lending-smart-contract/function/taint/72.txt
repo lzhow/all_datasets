@@ -1,0 +1,13 @@
+
+The variable "c" in function "divCeilo" is a control variable, because it can be changed by assignment.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn as much as I can about how modern web development works. Thanks!
+  
+    An incremental bundling tool is used to bundle together all the different files that make up a web application, such as JavaScript, CSS, and HTML files, into a single file that can then be served to the browser. This makes it easier for the web browser to load the application and make it more responsive.
+
+    The key feature of an incremental bundle tool like Webpack is that it only updates the parts of the bundle that have changed since the last time the tool was run. For example, if you make a change to a JavaScript file, Webpack will only re-bundle the JavaScript files and leave the other files unchanged. It does this by using a dependency graph to figure out which files depend on which other ones.
+
+Webpack also has a lot of other features, like support for loading

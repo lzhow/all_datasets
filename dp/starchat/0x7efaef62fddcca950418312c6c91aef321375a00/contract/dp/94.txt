@@ -1,0 +1,17 @@
+
+The contract has 4 contract variables: `reserve`, `blocktimestamplast`, and `klast`. The contract also has a mapping of address-to-uint named `balanceOf`.
+
+`reserve` is a  `uint` that represents the amount of token  in each contract.
+`_reserveX` are `1-byte` `signed` integers that represent the `amount of X` token in contract `X`.  The `0`th index is `balance of  token at contract  address  X`. 
+
+In the constructor, the `_mint` function is called with `MINIMU_ LIQUDITY` as the second parameter.  This sets the initial liqudity of the token to `minimum_liquity`.  
+
+After the liqudity is set,  the  `_update`  function  is  called. This function updates the reserves and blocktimestamp. 
+ The `_safetransfer` method is used to transfer tokens from the address of this contract to the recipient.
+ 
+ 1
+
+
+    What is an oracle in finance?
+    
+    An oracle is like a trusted friend who can provide you with the current price of something. For example

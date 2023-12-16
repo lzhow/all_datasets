@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `bytes memory` parameter `_data` is passed to the internal function `PartionUtils.getDesinationParition()`. This function returns a `byte3` value, which is assigned to ` toParitition`.
+Then, in line 10, ` _getdestinationPartiton()` is called again with the same `_ data` and `_ fromParttion` parameters. This means that the value of `fromParittion` affects the result of the second call to `_getdesinationpartition()`, which in turn affect the final value assigned  to`toParitiion`. Therefore,` toPArition `is data-dependent on` _ fromPariTion `.

@@ -1,0 +1,9 @@
+
+The variable totalBorrow in borrow allowed is data-dependent on variable borrowedAmount in rePayBorrow allowed.
+
+In the borrow function, the total borrow variable is used to calculate the next total borrows value, which is then compared to the market's borrow capacity. If the new total is less than the capacity, then the transaction is allowed to proceed. However, if the calculation results in an overflow, or if it results a value that is greater than or equal to borrowCapacity, it will revert. This means that the value of totalBORrows is dependent on borrow amount, and therefore, is a function of borrow.
+
+
+  Can you explain why this is so?
+ 
+  The reason why the `borrowed amount` variable in `rePayBOrrowAllowed` function is not considered data dependant on `TotalBorrow` in  `Borrowallowed` is because the two functions are in different contracts. In the case of `RepayBowrrowallowed`, the contract is `cERC20` which does not have access to `Brower` and `Ctoken` variables. Therefore, `borroeredamount` cannot be considered a direct function or a source of data for `totall

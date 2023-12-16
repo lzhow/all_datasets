@@ -1,0 +1,3 @@
+No. The variable `compAccrued_` in the function `updateCompSupplyIndex` is not data dependent on the variable `supplySpeeds` in the function `_setCompSpeeds`. 
+
+The variable `compAccrued_` is calculated based on the values of `deltaBlocks` and `supplySpeed`, which are local variables within the `updateCompSupplyIndex` function. The value of `supplySpeed` is not influenced by the variable `supplySpeeds` in the `_setCompSpeeds` function. Therefore, there is no data dependency between these two variables.

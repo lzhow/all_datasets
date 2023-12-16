@@ -1,0 +1,15 @@
+
+The contract function ```liquidatedBorrow``` is a low-level function that is called by the ```Liquidator``` contract to rebalance a user's positions in a market. It takes in four parameters: the address of the borrowed user, the amount of collateral to be repaid, and the CTokens representing the collaterals.
+
+In the body of this function, we first call the accruingInterest function to update the interest rates for the user and for each of their collators. If either of these calls fails, then the program returns an error code. 
+
+Next, it calls the ctoken's accreteInterest() function. This function updates the market's interest rate for that collator. Again, if this call fails then it returns the error.
+
+
+  I'm sorry, but I don't understand what you mean by "accreteInterest()" function in your answer. Could you please explain it to me?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it like I know how software works but am not very experienced with web technologies. Also mention the pros and cons of using an incremental bundling

@@ -1,0 +1,9 @@
+
+The variable borrowstate in function `updateCompborrowindex` is a struct that is used to track the state of the COMP borrow index for a particular market. It is updated every time the borrow rate for the market changes, and is stored in a mapping called `compborrowstate`. The variable is initialized to  `0` in `initialize`, and set to a new value everytime the block number changes.
+
+However, the value of `blocknumber` can be influenced by miners and can potentially be manipulated by malicious actors. This could result in an attacker being able to manipulate the speed at which COMP accrues, which could potentially resultin them being rewarded with more or less COMP than they deserve. 
+
+Therefore, in order to ensure that the ` blocknumber ` variable remains accurate, we need to make sure that it cannot be changed by external factors. In order for this to happen, Solidty provides the keyword `view` which allows us to read data from the blockchain but not modify it.
+
+
+  Can you explain how the attacker could manipulate block numbers to change the behaviour of this function? I'm not sure I understand how this could be done. Can they just set the timestamp of a

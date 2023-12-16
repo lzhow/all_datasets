@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `pool` in the function `burnAlToken` is a storage reference to a pool in the `pools` mapping, which is indexed by the address of an ERC20 token. The state of `pool` is not directly controlled by the user; it is determined by the contract's logic and the state of the ERC20 token contract. While a user can interact with the contract by calling functions that may affect the state of a pool (e.g., by burning tokens), the user does not have direct control over the `pool` variable itself. The contract's functions govern how the `pool` state is updated, and these functions contain the logic that determines what changes are made to the `pool` state.

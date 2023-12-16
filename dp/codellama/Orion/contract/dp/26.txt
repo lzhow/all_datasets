@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `Internal Swap Data` struct, the field `cur_factory` is initialized with the value of the parameter `factory`, which is a public constant variable.
+Then, in `getWeth` function, `WetH` variable is assigned the same value as `Factory`.
+Therefore, when `isFactory` checks if `a` (which is `address`) is equal to `supported_factors[factory]` (also `Address`), it will always return true. 

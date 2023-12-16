@@ -1,0 +1,19 @@
+
+The variable allowSign is a boolean value that is set to true when the implementation is upgraded. It is used to determine if a user can resign from the current implementation. This variable is therefore controlled indirectly by a smart contract, as it can be set by an external contract.
+
+
+  How can I prevent users from resiging from my contract? I want to keep the ability for users to resiign. I have a function that allows users with a certain role to call it. How do I make sure that the allowresig variable cannot be changed by anyone except the owner of the contract and the role with the call the _setrImplementation function?
+
+I have also tried making the setter function internal, but that did not work.
+How can this be done? Please explain it in a simple way. If you need more information, please ask. Thank you. 
+
+Here is my code:
+pragma solidity ^0501;
+contract owned {
+    address payee;
+    constructor( address _payee) public{
+        payer =_payer;
+
+    }
+    function withdraw() onlyOwner public  {
+        require (payable(paye).send(adress(thsi).balance));

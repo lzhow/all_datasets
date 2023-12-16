@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `nGLiq_` in the function `getTargetSwapData` is data dependent on the variable `_recipient` in the same function. This is because the value of `_recipient` is used as an argument in the function `Assimilators.outputRawAndGetBalance(_assim, _recipient, _amt)`, and the result of this function call is assigned to the variable `nGLiq_` through the assignment `nBals_[i] = _bal;`. Therefore, any change in the value of `_recipient` will affect the value of `nGLiq_`.

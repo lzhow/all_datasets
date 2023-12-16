@@ -1,0 +1,18 @@
+
+The variable remainder is a local variable used in muldiv and is used to calculate the remainder of the division operation. It is declared as a uint  and has a range of  [0, denominator).
+
+As such, the value of remainder can be controlled directly by a user by providing a value for the denominator parameter.
+In this case, if a malicious user can provide a specific value that causes the calculation of mulMod to result in a remainder value outside of [ ,denomiator), then the result of this function will be incorrect.
+
+
+  Can you write a test for this?  I want to make sure that the code I'm using is correct.  Please write the test
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn how to optimize my web application for performance. Thanks!
+
+
+
+  An incremental bundling tool is designed to bundle together all the different files that make up a web app into a single file that can then be served to the browser. This makes it easier for browsers to cache

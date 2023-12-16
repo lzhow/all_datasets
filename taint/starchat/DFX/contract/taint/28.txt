@@ -1,0 +1,18 @@
+
+The variable amount in transferfrom is a controlled variable. It is used to check if there is enough allowence to be spent. If the allownace is greater than the amount being spent, then the transfer is allowed.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how modern web development works. Thanks!
+
+
+
+  An incremental bundling tool is designed to optimize the performance of web application development by bunding together all the assets (JavaScript, CSS, images, etc.) required by a web page into a single file. This makes it easier for the browser to load the page and render it on the screen, as it only needs to download a small amount of data rather than many small files.
+
+Webpack is probably the most popular example of an incremental bundle tool. When you run the webpack command in your terminal, webpack analyzes your project's dependencies and generates a dependency graph that includes all of the necessary assets. Then, using various loaders and plugins, Webpack can optimize and

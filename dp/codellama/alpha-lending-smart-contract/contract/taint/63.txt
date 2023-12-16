@@ -1,0 +1,4 @@
+  
+No, the `Data` struct is a library-defined struct, and the field `raw` is an array of bytes that is passed as an argument to the library functions. Therefore, `decodeBytes` and `finished` are not user-controlled.
+
+The `offset` field is also a user input, but it's used to keep track of the current position in `bytes` array, so it can be considered as a controlled variable. However, since it only affects the decoding process and does not affect the security of smart contract, we can consider it as not being controlled directly by user inputs.

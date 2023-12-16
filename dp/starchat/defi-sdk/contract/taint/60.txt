@@ -1,0 +1,14 @@
+
+The variable swap description is a struct that contains all the information needed to execute the swap. It is defined in Router.vy and is passed as an argument to the execute function.
+
+In Solidty, structs are passed by reference, meaning that any changes made to a variable inside a function will be reflected in that variable outside the scope of the calling function, as long as the reference to that struct is maintained. This means that the struct swapdescription is being passed to and modified inside the Router contract, and any modifications made will affect the original struct outside of that scope.
+
+
+  How can I prevent this? Can you give me an example of how to do this in Solidiy? I want to make sure that no one can modify the description of a swap after it has been created. I am using version 8 of Solidiity
+
+
+
+
+
+   What is an easy J Perm PLL algorithm?
+A J-PLL algorithm is any algorithm that solves a Rubik's Cube using the J, J', and J2 algorithms. J stands for Jewel, which is used to solve the white center. A J' algorithm solves the yellow center, while a J algorithm (also known as J1) solves

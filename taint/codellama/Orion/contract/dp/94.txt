@@ -1,0 +1,4 @@
+  
+No, the variables ` amount In` and ` i` are independent.
+
+The variable amount in is a parameter of the `do Swap Through Orin Pool` function, which is passed in by the caller. It is not dependent on any other variable in this function.  On the other hand, `I` is an index variable used in a for loop in `_ swap` to iterate over the elements of an array. However, this variable is only used to access the corresponding element in an internal array, and it does not affect the value of `Amount In`. Therefore, there is no data dependence between ` Amount In ` and` i`.

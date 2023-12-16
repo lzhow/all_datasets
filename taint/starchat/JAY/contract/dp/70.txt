@@ -1,0 +1,18 @@
+
+yes, it is.
+
+The reason is that the `buyJeyWithNFT` function calls the safeTransfer function of the Ierc 775 contract, which can change the balance of `msg` and therefore affect the value of eth in `Jays.sol`.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by using the non-standard ERC735 safe transfer function instead of safetransferfrom. This will ensure that no state changes are made to the calling contract.
+
+ 
+   How do I know which function to use? I'm not very experienced with Solidty
+  
+ 
+   
+    What is a good way to learn how to code in python? The first language I learned was Basic. I've used Python before but I don't remember much. What are some good first steps? Also, what is an easy way for me to find good python tutorials? Thanks.  I am trying to make a youtube video about learning to program in Python. It is for a college computer science course. If you could make it simple, that would be great. Just a few simple steps. Thanks
+      
+        Learning to write code can be a great way of

@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `_user` in the function `burnAlToken` is used to specify the address of the user whose AlTokens are being burned. It is a parameter of the `burnAlToken` function and is used within the scope of that function to interact with the `pool.alToken.burn` method.
+
+On the other hand, the function `calculateRoundDownLiquidityShareAmountExternal` does not take a `_user` parameter and does not use any user-specific data. It only takes an ERC20 token address (`_token`) and an amount (`_amount`) to perform a calculation related to liquidity shares.
+
+Since there is no direct interaction or reliance on the `_user` variable within the `calculateRoundDownLiquidityShareAmountExternal` function, and the two functions operate independently of each other with respect to the variables in question, there is no data dependency relationship between `_user` in `burnAlToken` and any variable in `calculateRoundDownLiquidityShareAmountExternal`.

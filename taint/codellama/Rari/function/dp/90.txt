@@ -1,0 +1,5 @@
+  
+No, the `contract state allBorrower` is not dependent on `variable ctoken`  in function  `_unspportMarked`.
+
+The reason is that the state variable is `markers`, which is a mapping of addresses to `Markers`. The `address` of the marker is used as the key in this mapping, and the value is an instance of `Marker`.  The function does not use the mapping to retrieve the corresponding `marker` instance, so it is independent of any particular `ctoken` variable.
+ 

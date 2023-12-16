@@ -1,0 +1,4 @@
+  
+No, the ` total` variable in function `buynft` is NOT controlled  by user because it's a local variable and it can't be changed by any external user, only by internal functions.
+
+The ` buynFT` function is a public function that can be called by anyone, but it doesn' t accept any user input. Instead, all the input parameters are passed as arguments to the internal ` buynFTWithErc` and ` BuyjaywithErC` functions, which are responsible for the actual NFT buying logic. These functions are not exposed to external users, so they can only be accessed by other internal contract functions or by calling the public `BuynFt`function. Therefore, `Total` can not be controlled directly by a user and is considered to be an internal variable.

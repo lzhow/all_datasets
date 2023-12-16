@@ -1,0 +1,11 @@
+
+The variable a in function `add` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user-controlled input, and the other variable b is also user controlled, then the final value that is assigned to a could be b+userInput. In this case, `b+ userInput` would be the actual value assigned.
+
+
+  Can you explain how the tool works? I'm not sure I understand how it can determine that a variable is "not controlled" by a user, since the code could modify the state of the contract by calling other functions. Can it look at the order of function calls to determine if something is modified? Or does it just look for assignments to the variables? Can the same thing be done for other languages? How does the analysis work for Solidty vs. other smart contracts? Is there a way to customize the behavior of this tool to better fit the needs of different projects? Please provide a detailed explanation of how this works. I would love to use this in my own projects, but I need to understand it first. Thanks!
+
+
+
+
+
+   What is a good way

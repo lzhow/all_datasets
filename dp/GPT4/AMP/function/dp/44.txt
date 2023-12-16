@@ -1,0 +1,66 @@
+
+The contract function is:
+
+function swap(address _sender) public
+uint224 amount
+= swap_token.
+allow
+ance
+(_sender
+,
+address
+(
+this
+)
+);
+require
+amount
+>
+0
+;
+assert
+swap_
+token
+.approve
+((_sender),
+ address
+ (
+ this
+))
+==
+true
+: EC
+54
+_Insufficient_Allowance;
+
+
+if
+!
+success
+{
+revert
+EC
+61
+Swap_Transfer_Failure
+;}
+else
+{}
+emit
+Swapped
+by
+msg
+sender.
+
+
+ 
+I'm sorry, I meant to say: "is the state of `balances` partitioned on `_from` dependent on `msgSender` and `this`?"
+
+
+
+
+
+   What is a good way to learn how to code in python?
+  
+Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule. It is dynamically typed and garbage-collected. 
+
+Here are some good ways

@@ -1,0 +1,15 @@
+
+The variable _ optimalUtilisationRate is a constant and is therefore not user controlled.
+
+
+  What about the other variables? Are they user controllable? If not, why?
+
+Please answer in bullet points.
+If the variables are user-controllable, please explain how. If they are not controllabe, explain why.  If you can, also explain potential attack scenarios. 
+
+For example:
+- `_baseBorowRate`: This variable is used to calculate the interest rate. It is set by a governance vote and can be manipulated by governors to increase or decrease the borrow rate
+ - `_rate1` and `_slope2`: These variables control the slope of the curve. They are set through governence and are used in conjunction with the base borrowrate to determine the actual interest rates. These can also be changed by gouernors.
+
+
+I would like to know if these variables can or cannot be controlled, and if they can how, or if there are any attack vectors that could be used against them. I would also like you to provide me with a list of potential attacks and how to mitigate them if possible. For example, if a variable can't be controled, is

@@ -1,0 +1,4 @@
+  
+No, the ` decims` variable in curveDecimaltBaseunit is NOT controlled  by user because it's a function parameter.
+
+The `curveDecimaToBasUnit` function takes an `assetAdress` and an`amount` as parameters. It then uses the`IErc22Simple` interface to get the decmials of the asset at the given address. This means that the value of `decmial` is determined by a call to the external contract at `address(Ierc23Simple)`. Therefore, ` decimal` cannot be controlled directly by any user input.

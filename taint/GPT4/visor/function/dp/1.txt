@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `size` in the function `isContract` is determined by the `extcodesize` of the address provided as the argument `account`. In the function `functionCallWithValue`, the `isContract` function is called with the argument `target`, which means that `size` is directly dependent on the value of `target` when `isContract` is invoked within `functionCallWithValue`. Therefore, there is a data dependency relationship between `size` and `target` because the value of `size` is computed based on the `target` address's code size.

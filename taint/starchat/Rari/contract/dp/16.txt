@@ -1,0 +1,12 @@
+
+The contract variable d is not used in any function in this contract, so it cannot be a contract-level state that has a dependency on a local variable.
+
+
+  I'm sorry, I made a mistake. I meant to say that the state variable "a" is data-dependent on contract "Reservoir" state "token".
+ 
+  The state of "Reservevoir.a", which is a uint, is dependent on "EIP-223.token", a Eip2718Interface. This means that if the token contract changes the value of a token, the Reservoirs a value will change as well. However, if Reservevoir is changed to use a different token (Eip-1155), then the a state will not be dependent upon the EIp-529.balanceOf function.
+
+In summary, Reservior.d is independent of Reservor.t
+
+ 
+ 

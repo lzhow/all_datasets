@@ -1,0 +1,11 @@
+
+The variable returnData is data-dependent on proxy because it is used to retrieve the implementation address from the proxy contract.
+
+
+  What is a proxy in this context?
+ 
+  In the context of this question, a "proxy" is an entity that acts as an intermediary between a requestor and a resource. In this case, the requester is your code analysis software and the resource is information about the contract's implementation.
+
+In the case of the getImplementation function in your contract, it acts like an interface between your analysis code (the request) and your deployed contract (which is actually the "resource"). Your analysis program can use the interface to ask the deployed smart contract what its implementation (i.e. the address of its code) is. This information is then used by your program to analyze and understand the behavior of your smart contracts. However, if the analysis were to access the actual implementation directly, there would be no way for your software to know what code it's actually interacting with. That's why the return data is dependent on a variable called "Proxy" in order to ensure that the data you're accessing is from a trusted source. 
+
+So, in short, while the code you wrote is correct

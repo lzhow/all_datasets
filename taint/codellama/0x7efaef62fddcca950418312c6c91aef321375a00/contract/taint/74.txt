@@ -1,0 +1,6 @@
+  
+No, the `_ reserve ​​1 ` variable in function `swap` is NOT controlled  by user .
+
+The `_ reserves` are internal state variables of the contract, and they are not directly controlled or modified by any external user input. They are updated by calling the `getReserve` function, which retrieves the current balances of token  `token  _0` and ` token _1`.
+  The ` swap`function is a public function that allows users to swap tokens, but it does not modify the internal `_  reserv` variables.
+   The `_ _ reserver` variable is used to calculate the amount of tokens that can be swapped, based on the balancesthe contract holds and the liquidty pool. It is an internal variable that is updated when the balance of one ofthe tokens is changed. 

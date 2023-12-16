@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_authorizedOperators` mapping is declared as a mapping from the sender's address to the mapping of authorized operators, and the partition parameter is used as the first key in that mapping. This means that if the value of `_from` is changed in `authorizeOperator`, the data dependence will be propagated to `_allowedOperators`.
+
+  What is a partition strategy?
+
+
+
+
+

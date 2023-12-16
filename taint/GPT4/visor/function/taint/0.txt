@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `hash` in the `permit` function is computed using parameters that include `owner`, `spender`, `value`, `nonce`, and `deadline`, which are either directly provided by the user or derived from the user's address nonce. The `v`, `r`, and `s` parameters are part of the signature provided by the user to authorize the transaction. Since the user provides the signature and the other parameters, they have control over the value of `hash`. Therefore, the variable `hash` is controlled by the user.

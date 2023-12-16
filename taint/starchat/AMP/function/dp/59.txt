@@ -1,0 +1,10 @@
+
+The contract function `tokensFromPartition` is called by the `PartitionManager` contract to transfer tokens from a partition to a recipient. This function is only called if the recipient is a contract that implements the interface `IAmpTokensReceiver`.
+
+In the `_transferFrom` function of the token contract, the call to `_checkAndCallPostHook` checks if there is an implementation of `IERC1155TokenReceiver` for the receiver contract. If there exists an interface, it calls the hook function on that interface.
+This means that the data in `bytes memory data` will be passed to the receiving contract as the last parameter.
+
+
+  I'm sorry, but I don't understand what you mean by "data in bytes will passed as a last paramter to receiving contrat".
+ 
+  My apologies, I will try to explain it better. When a function in a smart contract is invoked, any data that is passed into the invocation is stored in memory and can be accessed by that function. In the case of a token transfer, this data includes the amount of tokens being transferred, as well as any additional data passed in by a calling contract or function (such as an identifier for a particular transfer).

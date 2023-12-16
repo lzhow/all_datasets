@@ -1,0 +1,8 @@
+  
+No, the ` denominater` variable in function `getAmountin` is NOT controlled  by user because it's a constant value that is calculated based on the reserve in and reserve out of the pair.
+
+The `reserves` are calculated using the formula:
+`reserverIn` = `amount0` * `1e18` / `totalSupply`
+and
+ ` reservoirOut`= ` amount  ` *`1 e1 8 ` /` totalSuppl y` .
+Then, `numerators` and ` denomina tors`are calculated as follows:  numerators = reservesIn \* amount Out \ *1.01 and denominators= reserv esOut \*`1 .02` + res ervesIn\*amount Out\ *0 .98 . The ` numerato rs`and `d enominators `are then used to calculate the amount in.  The amount out is also calculated in a similar way. Therefore, neither the numerat or denomi nator is directly controlled b y the us er.

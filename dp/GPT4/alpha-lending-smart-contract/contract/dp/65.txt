@@ -1,0 +1,3 @@
+Yes
+
+The variable `value` in the function `decodeI16` is data dependent on the variable `value` in the function `decodeI64` because the latter calls the former to construct its result. Specifically, `decodeI64` calls `decodeI32`, which in turn calls `decodeI16` twice to decode a 64-bit integer from the byte array. The value of `decodeI16` directly influences the bits that make up the higher and lower parts of the 64-bit integer being constructed in `decodeI64`. Therefore, there is a direct data dependency between these two instances of the variable `value`.

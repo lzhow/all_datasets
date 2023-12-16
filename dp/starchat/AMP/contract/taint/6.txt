@@ -1,0 +1,7 @@
+
+The variable _values is a controlled variable in this function. It is used to track the total supply of the token. Since it's a state variable, the value of _supply is directly tied to the balance of each token holder.
+
+
+  How does the code control the state of `_totalsupply`?
+ 
+  The code does not directly control `_totalsUpply`. The `_toalSupply` variable is declared as a `public` state varible in `Amp.sol`. This means that any function or smart contract that has access to an instance of `amp.so` can read the `_totlalSuply` varibale and use it to keep track of how many tokens have been minted. However, since Solidty does allow for the creation of multiple instances of a contract, this means there could be multiple `_totaSupply`'s in existence at once. This could lead to issues if one instance is updated and the other is left unchanged. To prevent this, Solidit provides the `view` keyword, which allows a function to read data from the blockchain but not modify it. In this case, we can use the view keyword to make the totlalsUply function a view function, meaning that it can

@@ -1,0 +1,5 @@
+  
+No, the variables ` suppli er` and ` contributo r` are independent.
+
+The function `distribute Supplier Comp` is called in `flywhee lPre Suppli e rAction`, which is triggered by the `CTok en` contract. This function updates the comp accrual of the suppl ier based on their comp balance and the current comp index. It does not depend on any external factors, such as the contributors' comp speeds or the last contributio n block, which are updated in `_ setContri butorComp Speed`.
+On the other hand, `_SetContribu torComp speed` updates a contributer's comp accumulation based o n their last contribution block and their current contributi on speed. However, this function does n ot affect the supply index or comp balances of supplie rs. Therefore, `Suppli ere`and `Contribute r `are independent variables.

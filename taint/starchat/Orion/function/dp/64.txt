@@ -1,0 +1,9 @@
+
+The function getA in getAmoutOutCurv is a view function, which means it does not modify the state of the contract. Therefore, it is not possible for the value of A to change during the execution of this function.
+
+However, the token variable in pairFroCurve is modified by the find_pair_f_curves function in ICurveregistry. This function is also a non-view function and modifies the internal state. As a result, there is potential for A and token to become inconsistent.
+
+
+  I'm sorry, but I don't understand what you mean by "A and Token can become incosistent." Could you please rephrase your question?
+ 
+  In the code you provided, `pairForCurves` modfies the `pool` variable, and `amount` is passed to `curveDecimaltoBaseunit` which also modifes the pool variable. Since the two functions are called in a row, this can result in an inconsistent state where the values of `from` and/or `to` are incorrect. In this case, since the functions have the potential to modify `address` variables, I would say that the variables are inconsistent, as they

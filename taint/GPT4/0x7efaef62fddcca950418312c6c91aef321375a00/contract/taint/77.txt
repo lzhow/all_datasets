@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `blockTimestamp` in the function `_update` is assigned the value of `block.timestamp`, which is a global variable in Solidity representing the timestamp of the current block. It is determined by the network and the miners who produce the blocks, not by any individual user. Therefore, it is not controlled by the user.

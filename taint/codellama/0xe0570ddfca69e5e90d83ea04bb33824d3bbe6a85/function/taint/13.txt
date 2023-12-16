@@ -1,0 +1,4 @@
+  
+No, the `wanted` variable in `function want()` is NOT controlled directly by a user in this contract.
+
+The `strategies` contract is a library that is imported into the contract, and it has a `vaule` property that returns the address of the strategy contract that the library is currently using. This address is set in a constructor of a strategy implementation contract and is immutably stored in memory. Therefore, `Wanted.value` is determined by an external contract at deployment time and cannot be changed by users. 

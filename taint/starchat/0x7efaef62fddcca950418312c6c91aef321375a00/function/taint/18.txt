@@ -1,0 +1,10 @@
+
+The variable "to" in function "mint" is a user-controlled variable. It is used to specify the recipient of the minted liqudity. Since the "msg" variable contains the address of whoever is calling the contract, the value of "address" to is set to " msg. sender ".
+
+
+  How do I know if a variable is user controlled? I've heard that it's possible to determine if something is "user controlled" by looking at how the program uses it. For example, if it has a "public" or "external" visibility, then it could be user controllable. Is there a better way to do this? Or is it just a matter of common sense?
+
+Also, how do you determine that a contract is malicious? Is it possible for a program to be "malicious" without being "intentionally malign"?
+ 
+  It's not possible in general to definitively determine whether a given variable or state variable in a smart contract can be considered user control. However, in some cases, a developer may be able to make an educated guess based on the context of how and where the smart contracts are being used.
+For example:

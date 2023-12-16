@@ -1,0 +1,4 @@
+  
+No, the ` become Implementation Data` variable in function `_prepare` is NOT controlled  by user because it's a function argument that is passed to the `_set ImplemenationInternal` function.
+
+The `_ setImplemntationinternal`function is called by `_ prepare` and it takes the` become implementation data` as an argument. This means that the value of `come implementationdata`is determined by whoever calls the  `_preapare` method, which is typically the contract' s admin. Therefore, ` come implementationData ` is under the control of the administrator.

@@ -1,0 +1,5 @@
+  
+No, the ` reservein` variable in function `getAmountin()` is NOT controlled  by user because it's a local variable that is calculated based on the input parameters `amountout` and `pair` which are both controlled the the contract' s user, but the value of ` reserverIn ` is determined by a call to the external function  ` getreserves()` which is also controlled and managed by contract.
+
+The ` amountout ` variable is passed as an argument to `  getamountin() ` function and is therefore controlled directly by  the  contract 's user . The ` pair ` argument is a reference to a UniSwap pair contract, which can be controlled indirectly by users through the Uniwap protocol. However, ` Iuniswpair. get reserves()  is an external call that can only be made by other contracts or users, and the result is stored in ` ( reserve in , reserve out ) ` which  are local variables in  function` get amountin () ` and are not directly controlled or managed  directly  or indirectlly  controlled   by   the   contract  ' s  user  .
+ 

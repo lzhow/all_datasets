@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `mathErr` is a local variable within the function `borrowBalanceStoredInternal` and is used to store the result of mathematical operations to check for errors. The contract state `admin` is not mentioned or used anywhere in the function, and there is no interaction between `mathErr` and any potential `admin` state variable. Since there is no code indicating a relationship between `admin` and `mathErr`, they are not data dependent.

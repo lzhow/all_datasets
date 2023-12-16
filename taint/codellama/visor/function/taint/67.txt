@@ -1,0 +1,4 @@
+  
+The variable `r` in function `recover` is a local variable that is declared inside the `assembly` block. It is initialized with the value of the first 31 bytes of `signatures` array, which is passed as an argument to the method. Therefore, the content of this variable is determined by user input, and it can be controlled.
+
+Therefore, we label this as 'Yes'.

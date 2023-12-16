@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `_owner` in the contract `Ownable` is initially set to the address of the user who deploys the contract, as seen in the constructor where `address msgSender = _msgSender(); _owner = msgSender;`. This means that the user who deploys the contract has control over the `_owner` variable initially. Furthermore, the contract provides a `transferOwnership` function that allows the current owner to transfer ownership to another user. This function can only be called by the current owner (as enforced by the `onlyOwner` modifier), and it allows the owner to change the `_owner` variable to any other address. Therefore, the state of the `_owner` variable is controlled by the user who is the current owner of the contract.

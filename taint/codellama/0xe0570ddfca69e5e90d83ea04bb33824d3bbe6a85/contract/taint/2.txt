@@ -1,0 +1,5 @@
+  
+No, the `_ owner` variable in function `Owable` is labeled as 'No' because it does not directly interact with the end user and is only used to store the address of the contract owner.
+
+The variable is set in two places:
+1. In the constructor, where it takes the value of `msg .sender`, which is a built-in Solidiy function that returns the current contract caller. This means that the ownership of contract is transferred to whoever deployed the smart contract.  However, this does  not mean that it can be controlled directly by an end-user. It is still controlled indirectly by who deployed it.  

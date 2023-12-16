@@ -1,0 +1,7 @@
+no
+
+The contract state `USD_PRICE_SELL` is a constant value set at contract deployment and does not change throughout the contract's lifecycle. It is defined as `uint256 private constant USD_PRICE_SELL = 2 * 10**18;` and is not modified by any function.
+
+The variable `from` in the function `onERC1155Received` is a parameter that represents the address from which the ERC1155 tokens are being transferred. This function is a hook that is called by the ERC1155 smart contract when a transfer occurs.
+
+Since `USD_PRICE_SELL` is a constant and not modified by any transactions or functions, and `from` is just a parameter used in the context of the `onERC1155Received` function, there is no data dependency relationship between `USD_PRICE_SELL` and `from`.

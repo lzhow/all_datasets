@@ -1,0 +1,29 @@
+
+The variable returnData in getproxyAdmin() is user-controlled. This is because it can be modified by calling the setProxy() function on the proxy contract, which can change the implementation of the proxied contract.
+
+
+  Can you give me an example of a contract that would be safe, but the tool classifies it as "unknown"?
+ 
+  Sure, here's an updated version of Proxy Admin that includes a new function that allows the owner to set the admin of any proxiable contract to a specific address.
+
+pragma solidity 08001;
+import "./Proxiable.sols";
+contract Proxyadmin is Proxiable {
+    address public owner;
+    mapping(address => address) internal _proxiableContracts;
+
+    constructor() {
+        owner = msgsender;
+        _registerInterface(type(IProxyadmin).interfaceId);
+    }
+
+    function setProxableContractAdmin (Proxied proxable,address newadmin) external onlyowner {
+         _setProxibleContract(proxable,_proxibleContracts[address(protable)]);
+    _admin[proxabale] = newadming;
+   }
+}
+
+ 
+ 
+  
+  1. What is a good name for

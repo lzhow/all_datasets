@@ -1,0 +1,5 @@
+  
+No, the `Data` variable in `decodeDataI` is a local variable and is therefore not user-controlled.
+
+The `from` function in library `OBI` creates a new `struct Data` object and returns it. This object is then passed as an argument to the various `encode` and `decoder` functions. Since the object was created by a trusted function, and not by user input, we can assume that it does not contain any malicious data and that the data it contains is trustworthy. Therefore, `variable data` in function ` decodeData I` can be considered as not being controlled user data .
+ 

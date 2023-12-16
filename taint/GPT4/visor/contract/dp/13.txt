@@ -1,0 +1,3 @@
+yes
+
+The variable `returndata` in the function `functionCallWithValue` is data dependent on the variable `data` in the same function. This is because `returndata` is the result of the low-level call `target.call{ value: value }(data)`, where `data` is passed as an argument to the call. The contents of `data` determine how the call is executed and what the resulting `returndata` will be. Therefore, there is a direct data dependency relationship between `data` and `returndata`.

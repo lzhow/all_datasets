@@ -1,0 +1,12 @@
+
+The variable balance in function `callBytes` is user-controlled. This is because the balance of the contract is reduced by `amount` before the call to `swap` and is increased by a value returned by that call.
+
+In the case where `output_token` equals `ETH`, the value is first deposited into the WETH contract, which is then used as the input token for the swap. In this case, the amount of W-ETH received is `input_amount`, and the output amount is equal to the `reserve_in` of token0 in `pair`.
+If `direction` for token1 is true, then the reserve with index 2 is used, otherwise the index is 3.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it has something to do with the Unisiwap exchange, but I don't know what. Can explain it to me like I know how to explain to my 5 year old. Thank you. 
+
+
+
+

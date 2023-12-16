@@ -1,0 +1,7 @@
+
+The variable `ruleSeletor` in function `constructor` is a user-controlled contract address. This address is used to determine the release rules for Alpha rewards.
+
+In the `poke` function, the address of the rule selector contract is called, and the rules are retrieved. These rules determine who receives Alpha and how much they receive. However, since the contract does not have any way to verify that the retrieved rules have not been tampered with, there is no way for the system to know for sure that these rules were created by a trusted source. Therefore, in order to ensure that this information is accurate, we need to trust that `getReleaseSelectors` returns a valid address and that no one has tinkered around with it.
+
+
+  How can I make sure the getReleaseSelector function returns the correct address? Can you give me an example of how to do that? I want to make it so that only the owner of this contract can call the setRuleSelecotr function. Can I do this by requiring the msg.sennder to be the same as the owners address when they call setReleasSelector? Or do I need some other way of making sure only one person can set the RuleSe

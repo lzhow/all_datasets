@@ -1,0 +1,16 @@
+
+The variable accountTokens in this function is unknown because it depends on the value of msg.caller, which is a user-controlled value.
+
+
+  What is an example of a situation where the msg caller is user controlled?  What are some examples of how this could be exploited?
+
+I'm trying to understand how to prevent common vulnerabilities like reentrancy attacks.  I understand that the attacker can set the caller to a contract that contains the attack code, but how can I prevent that contract from being called in my own code?  
+
+Is there a way to check the call stack to see if I'm already in a call to that function?   If so, I could just return or throw an error.
+Can you give me an explanation of the exploit you're referring to? I'd like to better understand the context. 
+
+Thanks!
+
+
+
+

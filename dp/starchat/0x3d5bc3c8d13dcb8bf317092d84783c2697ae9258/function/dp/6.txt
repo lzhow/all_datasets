@@ -1,0 +1,11 @@
+
+The function rePayBorrow has a parameter called rePAYAmount. This parameter is used to calculate the exchange rate.
+
+
+ 
+Yes, the `ExchangeRate `variable is data-dependent on `Repay Amount` variable.
+
+In the code, `BalanceOf Underlying` function calculates the balance of the user by multiplying the current exchange rates with the number of tokens owned by the owner. `Repayment` is a process of transferring the ownership of these tokens from one user to another. When the repayment is made, it also calculates an exchange ratio based on which the amount of underlying tokens is transferred to the borrower. Since both the functions are related to money transfer, there is an indirect dependency between the variables. In other words, if the value of `rePayAmount `is changed, then the calculation of exchange ratios will also change, and the final value will be different. Therefore, these two functions have an implicit data dependence on each other.
+
+
+To reiterate, yes, both variables are dependent on one another and changing one variable will affect the other variable's value. However, this dependency is indirect and not directly visible in code. It is only apparent when the values of both these variables affect

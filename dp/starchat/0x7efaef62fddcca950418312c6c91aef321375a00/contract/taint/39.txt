@@ -1,0 +1,8 @@
+
+The variable rootKLast is a temporary variable used in calculating the amount of fees to be minted for the Pangake liqudity pool. It is used to compare the current value of the sqrt of total liqidity in Pangoke with the previous value. If the new value is greater than the old value then the fees are mintted.
+
+In this case, the value rootKlLast is set to  zero in each of its calculation steps. Therefore, rootklast is considered to not be controlled directly by user input.
+
+
+  How does the program know that the `msg` variable is user controlled? Is there a way to make it so that it doesn't have that knowledge? If not, why is it important to know? What are some ways that a program like this could be made more secure?
+Can you explain how the use of `assembly` affects the security of this program? Why is this used here? Can you provide an alternative implementation that does not use assembly? How would that implementation be more or less secure than this one? Please provide a detailed explanation of your response. I am specifically looking for a response that addresses the potential for vulnerabilities in smart contracts and how to address them. Thank you

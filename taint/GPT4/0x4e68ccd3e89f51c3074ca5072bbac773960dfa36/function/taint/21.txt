@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `current` in the function `grow` is a parameter passed to the function when it is called. It is not directly controlled by the user because it is not a value that the user can arbitrarily set; instead, it is determined by the contract's logic and the state of the contract at the time the function is called. The function `grow` is marked as `internal`, which means it can only be called from within the contract itself or from derived contracts, not directly through a transaction initiated by an external user. Therefore, the value of `current` is controlled by the contract's internal logic rather than by user input.

@@ -1,0 +1,4 @@
+  
+The variable 'swapdata' in function '_doSwaopTokes' is labeled as 'Unknown'. The reason is that the 'Swappedata' variable is a struct that contains several variables, and it's not clear whether all of these variables are controlled or not.
+
+For example, the `path` variable in 'swappedData' struct is an array of addresses, which could be controlled, but it depends on the context in which the struct was created. Similarly, other variables such as `amountSpend`, `isexacSpent`, and `supportFfee` could also be user-controlled or uncontrolleld. Therefore, we cannot determine whether the entire ' swapdata ' variable or any of its sub-variables are user controlled.

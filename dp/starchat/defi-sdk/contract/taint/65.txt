@@ -1,0 +1,9 @@
+
+The variable returned amount is a value that is returned to the caller of the router contract. It is calculated based on the input and output amounts and the fees that are charged. Since the returned value is derived from the inputs and outputs, and not directly from any state variables, the value of returned is considered to be controlled only by input parameters. Therefore, in this case, yes, this variable is fully controlled and can be considered as a user input to this function.
+
+
+  Can you explain how the signature validation works? I see that the account signature is validated by checking if it matches the hash of some data. What is that data? How is it generated? Is it possible for the data to change between the time the transaction is signed and when it's executed? If so, how does this affect the security of this contract?
+
+Also, I don't understand how this signature verification works. How does the contract know which account is allowed to sign the message? Why can't any account sign it? What prevents an attacker from signing it with a different account? Can the attacker just skip the validation and call the execute function anyway? 
+
+Finally, why is this validation done in a separate function instead of being done directly in execute? This

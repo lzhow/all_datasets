@@ -1,0 +1,12 @@
+
+The contract has 3 data dependencies:
+
+- `_msgsender()` is called in `onlyOwner` and `_changeadmin`
+`msg` is a global variable and is always available.
+Therefore, `_sender` cannot be data-dependent on `msg`.
+`_msgdata()` does not have any data dependence on its parameters. It is safe to remove it.
+
+
+  Can you explain how the data flow analysis works?
+ 
+  Data flow analyses are used to determine if a variable or expression depends on a certain value or set of values. In this case, we are trying to figure out if the `_implementation` variable in a `TransparentUpgradable` proxy depends upon the value of the `implementationAddress` parameter. To do this, the analysis starts by initializing the set `defs` to contain the definition of `_implemenation`. Then, it iterates over each statement in our contract and updates the definitions of variables as they're used. If the current statement assigns to `_implementaion`, it adds the assigned value to the list of definitions. Finally, if `implementatonAddress == implementation`, then we know that `_implmentation` must be defined in this branch of code. However,

@@ -1,0 +1,12 @@
+
+The variable protocolSigner_ is a private variable in Router contract. It is used to verify the signature of the protocol fee. Since it's a variable used in a function that is called by other functions, the compiler can't determine if it should be marked as controlled or not. Therefore, we can say that it can be controlled if and only if:
+
+- The contract is inherited from Owned contract, which means the owner can change the value of protocol signer.
+OR
+the contract has a modifier that checks if msg sender is equal to the contract owner.
+
+
+  I don't understand what you mean by "the owner".  Is this a contract that has an owner?  If so, what is its address?
+Can you please explain what "controlled" means in this context? Is it like a "this" pointer in C++? Or is it a security feature in Solidty? I'm not sure what the right terminology is for this.  Please explain. Thanks. 
+
+Also, please provide a more detailed explanation of your answer. I am not a native speaker and I would like to understand the nuances of what your saying. For example, you say "The contract can only be changed by its owner",

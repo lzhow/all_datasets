@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `uint265 _before` variable is assigned the value of the balance of `want` tokens in `strategy`. The `earn()` function is then called, which transfers `msg` to `address(0)`. The balance is updated and the `_amount` is subtracted from the pool.
+Then, in line 10, `total_supply()` is called to get the total supply of tokens. If the supply is zero, then the shares are set to the amount. However, if the token supply exists, it is set as the product of `_ amount` and ` total_ supply` divided by the current pool balance.  The `_m int` function then mints the tokens to msg. sender. In the second function the same process is repeated. Therefore, `_ after` depends on `_pool` because it depends directly on it.

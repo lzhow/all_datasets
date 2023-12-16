@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `directions` in the function `getAmountsIn` is an input parameter to the `callBytes` function, which is a public or external function that can be called by anyone. The `callerCallData` parameter, which includes `directions`, is provided by the user when they call `callBytes`. Since the user provides the `callerCallData`, they have control over the contents of `directions` when it is decoded and passed to `getAmountsIn`. Therefore, `directions` is controlled by the user.

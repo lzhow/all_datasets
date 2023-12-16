@@ -1,0 +1,3 @@
+The variable `erc1155TokenAddress` in the function `buyNFTs` is not data dependent on the variable `erc721Ids` in the same function. 
+
+Reason: The variable `erc1155TokenAddress` is used as an input parameter for the function `buyNFTs`, while the variable `erc721Ids` is used as an input parameter for the function `buyERC721` which is called within the `buyNFTs` function. There is no direct data dependency between these two variables within the same function.

@@ -1,0 +1,11 @@
+
+The variable _name in this function is a string that is used to set the name of the token. Since the owner of this contract is able to change the string, this variable is considered to be controlled indirectly by users.
+
+
+  What about the other variables? Are they all controlled? If not, why?
+
+Please also explain how you determined that the variables were controlled.
+Is there a way to make this determination without analyzing the code? For example, by looking at the way the contract functions are used? Or by observing how the state of variables changes over time? 
+
+I'm looking for a tool that can help me identify if a contract has user-controlled variables, and if so, what those variables are. I want to use this information to help users understand how to securely interact with my contracts. 
+ I'm not looking to replace static analysis tools like Mythril or Slither. Rather, I'd like to build a more comprehensive tool to assist users in securing their contracts, which includes analyses like this one.  I would like your help in building such a system. Can you help guide me in how I can do that? I know some Python, but I am not an

@@ -1,0 +1,25 @@
+
+Yes, `finishInterestAcrrual` and `_SetReservefactorFresh` are dependent on each other.
+
+The reason is that the `reserveFactor` is used in both functions to calculate the interest accrued.
+
+
+  How do I fix this?
+ 
+  You can fix the issue by removing the line that sets the value of `acccualblocknumber` to the current block number. This line is unnecessary because the blocknumber is already being set in `checkpointinterest` function. 
+
+Here is how the code would look like after the change:
+ ```  function _checkpointBorrowInterest() internal {
+        uint _totalborrowsbefore = _getTotalBorrrowBalance();
+        if (_totalborrowbefore > 0)
+        {
+            uint acc = (_block.number - borrowindex.block) * borrowrate;
+            borrowbalance = acc;
+        }
+        borrowinterestacuumulated += borrowacc;
+    }
+
+    function checkpointInterest (  uint  borrowrmantisas) internal  {
+         _checkpoints[borrowindexforcheckpoint].block = block.numer;
+         borrowcheckpoint.borrowrmantisa =borrowratemantissas;
+          borrowcheckpoin.accbalance =

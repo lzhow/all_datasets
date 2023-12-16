@@ -1,0 +1,10 @@
+
+The contract does not have any state variables named `Input`, `AbsoluteTokenAmout`, or `SwapDescription`. However, it does have state variable named `_input`.
+
+`_input` is a struct of type `LibInput.Input`. `struct`s are always passed by reference, so the state of the struct is modified by the called function.
+`LibInout.input.balance` and `outputBalance` are both `uint24` types, which are 32-bit unsigned integers. Therefore, the arithmetic operations on them can overflow. This can result in unexpected behavior, such as the `actualOutoutAmount` being less than the specified `absoluteOutputAmmount`.
+
+
+  I'm sorry, I made a typo in my previous response. I meant to say that the variables `InputTypeHash`,  `OutputTypeHash`, and  SwapType are all data-dependent on each other.
+ 
+  The contract has the states `OutputTypeHash`,`InputTypehash`, and Swaptype.  The states are dependent on one another. For example, if the swap type is 0, then the input type hash is dependent upon the output typehash. If the Swap type changes, for example to 

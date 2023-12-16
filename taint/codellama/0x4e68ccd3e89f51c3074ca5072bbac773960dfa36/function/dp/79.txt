@@ -1,0 +1,5 @@
+  
+No, the variables ` tick Cumulate` and ` flipedLower ` are independent.
+
+The variable tick cumulative is defined in function `snapshotCulumativesinside` as a local variable, and it is not modified in this function. Therefore, it does not depend on any other variable in ` _ updatePosition`.
+On the other hand, `fipedlower` is a variable defined inside the `if` statement in `_ updateposition` function, which is only executed when `liquitydelta`is not equal to  zero. This means that `flpiedlower ` is dependent on ` liquidtydelta `, but it's not a direct dependency. It' s a indirect dependency because it depends on other variables that are modified inside ` if` statements. 

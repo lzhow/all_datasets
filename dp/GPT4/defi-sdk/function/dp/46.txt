@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `depostitET` function, the local variable amount is passed as a parameter to the external function call `IWTH9.depoist`. The `value` parameter of the call is set to `amout`, which means that the value of `ammount` is used as the input to this function.
+On the other hand, in ` getAmoutIn`function, ` amount` variable is not used directly as an input. Instead, it is calculated based on other variables, such as `reserverIn`, ` reserveout` and `direction`. Therefore, there is no data dependence between ` ammount`and ` pair` variables.

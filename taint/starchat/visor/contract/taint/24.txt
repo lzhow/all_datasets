@@ -1,0 +1,16 @@
+
+The variable _ownder is a state variable in Ownble contract. It is used to store the address of the contract owner. Since it's a public state, anyone can read the value of _owners and hence it can be considered as controlled.
+
+
+  Can you explain why it should be classified as "yes"?
+ 
+  Because it could be modified by any external party. For example, if a user sends ether to the smart contract, the _balance variable will be updated. This could lead to unintended consequences.
+
+In general, state variables that are not modified internally are considered to be controlled, as they can have unpredictable consequence if modified. However, this is just a heuristic and not a definitive rule. In some cases, a variable may be intentionally left uncontrolled to allow for more flexibility. If you are concerned about this, you should check the code thoroughly to ensure that the control flow is secure.
+
+
+Is there anything else I can help you with?
+I'm here to answer any questions you may have. Let me know if you have any other questions. I'm happy to help!
+
+ 
+ 

@@ -1,0 +1,11 @@
+
+The variable a in function `sub` is **not** controlled directly by user input. However, the value of a can be influenced by other variables and functions in smart contract. For example, if a is user controlled, and the other variable b is calculated using a as input, then b can become user controllable.
+
+To determine if variable is directly controlled or not, we need to trace the data flow and check if any of the input variables are user-controlled. If a variable can affect the calculation of another variable, but the latter is never directly user control, this would be a potential vulnerability.
+
+
+  Can you explain how to do that? I'm not very good at math. I know a little bit of programming but not enough to understand how the code works. Can't you just explain it to me in a simple way? Like give me a step by step process. Thanks. Also, can you write a python program that can do the same thing? Thanks
+
+
+
+

@@ -1,0 +1,3 @@
+Label: No
+
+Reason: The variable `_accountBalanceSnapshots` is a private mapping in the `ERC20Snapshot` contract that keeps track of the balance snapshots for each account. It is updated internally by the contract's functions such as `_beforeTokenTransfer`, `_updateAccountSnapshot`, and `_updateSnapshot`. These functions are called by other functions within the contract that handle token transfers, minting, and burning, which may be triggered by user actions but are not directly controlled by the users. The snapshots are a historical record of balances at particular block numbers and are not something that users can arbitrarily set or modify. The control over this variable is governed by the contract's logic and rules, not by direct user input.

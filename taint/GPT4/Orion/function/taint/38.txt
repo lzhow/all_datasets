@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `amount_spend_base_units` in the function `doSwapThroughOrionPool` is not controlled by the user. It is calculated based on the input `swapData.amount_spend` and the conversion rate from decimal to base units using the `LibUnitConverter.decimalToBaseUnit` function. The user only provides the `swapData.amount_spend` value, but the calculation of `amount_spend_base_units` is done internally in the contract. Therefore, the variable is not controlled by the user.

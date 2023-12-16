@@ -1,0 +1,10 @@
+
+The function sub has a require statement that requires b to be less than or equal to a. If b were greater than a in this case, then the subtraction would result in a negative value, which would violate the require condition. Therefore, it can be assumed that b is not dependent on a and therefore, b does not have any data dependencies on sub.
+
+However, the relationship between a & b in add is more complex. It is possible that the value of b could be changed between the two statements, causing the addition to result a different value than the one in sub, even if b remains less or equivalent to the original value. This could result is unpredictable behavior of the contract.
+
+
+  Can you give me a simple example where this would be the case?
+ 
+  Sure, here's an example:
+Suppose we have two functions, `add` and `subtract`, that each take two arguments and return their sum and difference, respectively. Let's say we call `result = add(a,b)` and assign the result to `c`. Then, we might assume that `a` is independent of `sum` (i.e., `d = sum - a` for some value `

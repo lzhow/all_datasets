@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `function` getAmoutOutUniswap, the variables `reserveIn` and `reverveOut ` are assigned values from the call to the internal function  ` getreserves`. The variables  are then used to calculate the value of ` amountout`.
+  In the  function`getAmoutsIn`, the values of the parameters `from`and `to` are used in a call  to `  getamountinUniversall`.  The value returned by this call is then assigned to  the array element ` amounts [i-1]`.
+   The variable  amount out is not directly dependent on ` factory` because it is calculated using the return value from `GetAmountinuniversal` which is dependent  on  variables from and to.

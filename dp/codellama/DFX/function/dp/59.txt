@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `targetswap` function, the `_origin` variable is assigned a value from the input parameter `_delegation`, which is a public variable. However, in `ViewDeposition`, the`_deposition` parameter is not used to assign a new value to the public `_curvedata`variable. Therefore, there is no data dependence between the two functions.
+ 

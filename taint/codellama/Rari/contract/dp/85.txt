@@ -1,0 +1,5 @@
+  
+No, the variables ` delta Blocks ` and ` comp Speed ` are independent.
+
+The variable  `DeltaBlock` is calculated in function  `_updateComp Supply Index` as the difference between the current block number and the last block when the supply index was updated. This value is used to calculate the new supply rate for the ctoken.  The variable is only dependent on  the blockchain block height and not on any other variable.   The function `_ update Contribution Rate` updates the contribution rate of a contributors, which is a separate variable from the `Comp Speed` variable used in `_UpdateComp supply Index`. The contribution  rate is updated based on a different set of parameters, such as  block time and contribution amount. Therefore, there is no data dependence between ` DeltaBlock `and ` Comp Speed `.
+ 

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The contract state `underlying` is not directly used in the function `doTransferOut`. However, the variable `amount` is used as an argument in the `to.call.value(amount)("")` statement. This statement transfers the specified `amount` of Ether to the address `to`. Since the transfer of Ether can potentially affect the contract state, there is a data dependency relationship between the variable `amount` and the contract state `underlying`.

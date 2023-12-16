@@ -1,0 +1,5 @@
+  
+No, the `CompMarkedState compSuplystate` is data-dependent on `Exp memory Borrowindex` variable in function`distriubteBorerComp`.
+
+The reason is that the`compSyplyindex `is updated in`updateCompSypplyIndex` function, which is called in `flywheePreborweraction` before the call to `distrubuteBorrwercomp`. Therefore, `compsupply index` will be updated before `Distributeborrwer comp`is called, and the value of `Compsupyly Index`will be used in that function.
+ 

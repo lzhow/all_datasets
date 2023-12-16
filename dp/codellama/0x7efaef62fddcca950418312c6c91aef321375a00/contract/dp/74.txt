@@ -1,0 +1,5 @@
+  
+No, the `total_supply` is not dependent on `balances[msg_sender]` in `transer`.
+
+The `getReserve` function is called in both `burn` and `swap` functions, which updates the reserve values. However, in these functions the balance of the sender is also updated, but this does not affect the reserves.
+Therefore, `Reserver0`, `reverser1`, and the total supply are independent of `msg sender` balance.

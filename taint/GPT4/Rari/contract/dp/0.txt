@@ -1,0 +1,7 @@
+yes
+
+The contract state `compAccrued` is data dependent on the variable `newAccrued` in the function `updateContributorRewards`. This is because the value of `newAccrued` is used to update the value of `compAccrued` in the following line of code:
+
+```
+uint contributorAccrued = add_(compAccrued[contributor], newAccrued);
+```

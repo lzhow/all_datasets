@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the loop in `getTargetSwapdata` iterates over the length of the `assets` array, which can change between calls to the view function. This means that `_inputix` and `_ouputix`, which are used to access the correct elements of `oBal`and `nBal`, may not be correct.
+
+
+  Can you explain why this is a problem?
+ 
+  Yes, the problem is because the code in gettargetSwap data is not deterministic. It depends on a variable that is outside of its scope. In this case, that variable is length, and it changes depending on how many assets are in curve assets. If the number of assets changes, then the output of get target swap data will change, even if the input remains the same. Therefore, this code cannot be used in a smart contract that needs to be deterministic, as it will give different outputs depending upon how the contract is called. 
+
+To fix this, you can make the get Target Swap Data function use a fixed length for the assets array. For example, by using a for loop to iterate over a predetermined number, or by hardcoding the array length. Another option is to use

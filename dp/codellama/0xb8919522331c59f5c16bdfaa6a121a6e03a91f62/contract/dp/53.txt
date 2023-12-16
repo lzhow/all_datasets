@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `sendValue` function, the value of the parameter `amount` is passed to the internal function call `recipient`. The `value` parameter of this function represents the amount of Ether to be transferred to `target`. Therefore, `sender` and `receiver` are both data-dependent on `address`.
+Similarly, in ` functionSendValue`, the data parameter is also passed as an argument to another internal call. Therefore ` data`is also data - dependent on`sender`.

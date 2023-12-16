@@ -1,0 +1,3 @@
+no
+
+The variable `b` in the function `tryAdd` and the variable `b` in the function `tryMod` are function parameters that are local to their respective functions. Each function has its own scope, and the parameters are not shared between them. When `tryAdd` is called, it receives its own arguments for `a` and `b`, and similarly, when `tryMod` is called, it receives its own arguments for `a` and `b`. There is no data dependency between the two variables because they are independent of each other and do not affect one another's state. The value of `b` in one function does not influence the value of `b` in the other function.

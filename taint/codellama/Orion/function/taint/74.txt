@@ -1,0 +1,4 @@
+  
+The variable `_owner` in function `owner()` is a private variable, which means that it can only be accessed within the contract itself. It is initialized in constructor and can be modified by `transferOwership()` function. Therefore, the answer is 'No', the `_ownder` variable is NOT controlled directly by user, but it's controlled indirectly by other functions in contract.
+
+In this case, `_ownwer` is an internal state of the smart contract, and it cannot be directly controlled or modified from outside the scope of this contract without using the functions provided by this smart contact.

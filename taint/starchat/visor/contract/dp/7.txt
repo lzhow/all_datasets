@@ -1,0 +1,10 @@
+
+Yes, `sender` is data-dependent on `signature`.
+
+The reason is that the `ecrecover` function in Solidty takes a `hash` and `v`, `r`, and` s` as input and returns the address that signed the hash. Since `sign` depends on both `message` (the hash of the message) and the private key, the value of `sig` also depends directly on these two inputs.
+
+
+  Can you explain why it is so?
+ 
+  The reason why `ecdsa.recover()` is considered data dependant on its input parameters is because the output of this function depends entirely on those parameters. Specifically, it depends upon the signature and hash values. If the input signature or hash is changed, then the resulting output will also change. This means that any code that calls `ECDA.Recover()` will be recompiled and redeployed every time the contract is updated, which can be very expensive in terms of gas costs.
+In contrast, if the two input values are constants, or if they do not change, there is no reason for the result to change and so it can safely be cached and reused. In this case, caching the return value can save significant gas

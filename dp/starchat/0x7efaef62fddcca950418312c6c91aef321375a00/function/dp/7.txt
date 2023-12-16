@@ -1,0 +1,16 @@
+
+yes, it is data-dependent on `_reserve` and `_last`.
+
+The reason is that the `_supply` variable is used in both the num and denominators, and the two `_reserves` variables are used as the square roots of the values of `_num` & `_denom`.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason why `root_k` is dependent on both `_resrve0` (the first reserve) and `reserve_1` (`_reserve`) is because the `sqrt` function is a monotonic function, meaning that if `x` increases, then `y = sqrt(x)` also increases.
+This means that when calculating `k`, we need to take into account both `res_0 * res_2` as well as `last_root * last_res`. This is why the expression `total_supply * (sqrt_r0 - sqrt_last) * 8` becomes dependent upon both reserves.
+
+ 
+ 
+
+
+  What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am

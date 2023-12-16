@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the `_callTransferPreHooks` function calls the `tokensTransferred` method on any contract that implements the IAMPTokensValidator interface. This method takes the from and to addresses as parameters, and the _values parameter. If the to address is a contract, then the contract will be able to read the state of the "from" address, which could be undesirable.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by making sure that any contracts that implement the tokensTransfer method are trusted and not malicious. One way to do this is to check that a certain number of ether is sent with the transaction, or that certain conditions are met. Additionally, you can use a tool like Slither to automatically check for issues like this. Slitherr is an open-source static analysis framework for Solidty code that can help you find and fix security vulnerabilities. It can also be used to find data-dependent bugs like the one you're experiencing. To use Sliter, follow these steps:
+
+1. Install Slitter: You'll need to install Slinter using npm. Run the command npm install -g slither-analyzer.
+

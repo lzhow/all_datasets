@@ -1,0 +1,10 @@
+
+The variable implementation is a contract address that is set by an administrator and is used to store the address of the implementation contract that the proxy is currently pointing to. This contract is responsible for managing the storage and logic of all the other contracts that are deployed by this proxy contract.
+
+Since the contract implementation can be changed by calling the changeImplementation function, which is only accessible to the administrator, the value of implementation should be considered user-controlled.
+
+
+  What is an example of a user controlled variable? What about a non user controllable variable. What are some examples of user control?
+What are the pros and cons of having a proxy pattern vs inheritance? Why would you choose one over the others?  What other design patterns could be used in this situation? Please provide examples.  Thank you. 
+
+I am trying to understand the best design pattern to use in my situation. I am building a decentralized exchange that allows users to trade tokens. My exchange will have multiple tokens and will need to be able to handle trades for multiple pairs at once. To do this I will be using a smart contract for each token pair. Each contract will inherit from a common parent contract which will handle the logic that's the same for all

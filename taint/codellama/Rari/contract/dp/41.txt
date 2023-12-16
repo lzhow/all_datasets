@@ -1,0 +1,4 @@
+  
+No, the `CompMarkedState compborrrowstate` contract is data-dependent on `uint compspeed` variable in function`setcompborrowspeedinternal`.
+
+The reason is that the`compspeed `variable is used to update the value of the comp borrow index in line 40 of code. This means that if the borrow speed is changed, it will affect the calculation of comp borrows index, which in turn affects the data stored in `combborrowstate`. Therefore, ` compbborowstate `is datadependenton`compspeeds`.

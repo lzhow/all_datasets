@@ -1,0 +1,14 @@
+
+The variable _Reserve1 in function BURN is NOT controlled directly by users. However, the value of _Reserver1 is determined by two variables: balance of token  and total supply. If the total amount of tokens is large, then the _reserver1 will be large as well. This means that the users can control the amount that can be withdrawn by manipulating the balance and the supply of the token respectively.
+
+
+  How can I prevent that? Is there a way to make sure that _resver0 and _ reserve  are always small enough so that I can make the contract more secure? I am not a programmer, so I don't know how to do that myself. Can you help me with that please?
+
+I am writing a smart contract for a decentralized exchange. I want to prevent users from being able to withdraw more tokens than they have, as this would allow them to manipulate the price and take advantage of price movements.
+How can this be done? Please explain it in simple terms. Thank you. 
+
+Here is my code:
+pragma solidity ^04.23.0
+import "./PangolinToken.sol";
+contract PangolinsExchange {
+    using

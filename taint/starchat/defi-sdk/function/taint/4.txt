@@ -1,0 +1,9 @@
+
+The variable hashedProtcolFeeSignaturData is a hash of data that is signed by a protocol fee signer. This data includes the input and output amounts, the swap description, and a salt.
+
+Since the protocol fees are paid by users, this means that the hashed protocol signature data is likely controlled and signed in some way by each user who pays the fees.
+
+
+  How do I know if a variable is "likely controlled"?
+ 
+  It depends on the context and the purpose of the code. In general, if you are working on a project that involves sensitive data, you should be careful to ensure that you have appropriate safeguards in place to prevent unauthorized access or modification of that data. For example, in a smart contract, a common approach is to use modifiers to restrict access to certain functions or state variables based on certain conditions. Another approach would be to implement access control lists or other mechanisms to control who has access and what they can do. It's important to note that even with these safeguard measures in mind, there is no guarantee that a particular variable or function will not be used inappropriately or maliciously by someone with malignant intentions. Therefore, while it can be helpful to

@@ -1,0 +1,11 @@
+
+yes, it is.
+
+The reason is that the `_allowed` variable in `approve` and `_amount` parameter in `_approvePartition` are both of type `uint`, and the `sub` function in Solidty is defined as `function sub(uint b) pure internal...`. This means that when the code executes `allowed = allowed.sub(...)` it will first convert the type of `_value` from `int` to `unit`, which will cause the value of `b` (which is of the same type) to be converted to 2^224 - b. This will then result in a value that is outside the range of uint, which is undefined behavior.
+
+  What is a good way to prevent this type error from happening?
+
+
+
+
+

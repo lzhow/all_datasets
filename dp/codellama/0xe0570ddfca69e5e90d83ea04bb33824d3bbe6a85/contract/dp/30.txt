@@ -1,0 +1,4 @@
+  
+No, the `share` variable in ` deposits` is data-dependent on ` _ pool` because it is calculated using the ratio of the `_amount` to `total_supply` and the balance of `wants` before the deposited amount is transferred.
+
+The `bal` function calculates the current balance by calling the want's ` balanceof` method and subtracting the amount of want tokens that have been depositted. This balance is then used to calculate the number of shares that will be minted.  The ` shares` are then minting using `_mints` which is a function that mints new tokens to an address.  

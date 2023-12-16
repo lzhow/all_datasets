@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `tryMod` function, the local variable 'a' is not dependent on any external state, including the state of the contract or any other function. It is a local parameter that is passed to the method.
+On the other hand, in `function` ` div`, the parameter `a` is dependent upon the external contract state. This is because the value of ` a` depends on whether the condition `require( b >0 , error message)` is met. If the requirement is true, then the return value is `true`, otherwise, it is false. Therefore, ` function` div is data-dependent on ` b` because it depends upon its value. 

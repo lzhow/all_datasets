@@ -1,0 +1,17 @@
+
+The answer is no.
+
+In the `exitMarkert` function, the value of `amountOwned` is not dependent on `collateraFactor`.
+However, in `_SetCollaterlaFactor`, the collateral factor is dependent upon the underlying price of the ctoken.
+
+
+  How can I prove that the two are dependent?
+ 
+  You can prove this by using a mathematical proof. For example, you can use a chain rule to show that if `x` and `y` are both functions of some variable, then `f(x) + g(y)` is also a function of that variable. In this case, `a` could be the address of a c-token, and the other variable could represent the current collatoralization factor. By using the chain-rule, we can show the relationship between the variables. However, this is just one way of proving this relationship, there may be other ways as well. It's important to note that this type of proof is only valid for simple cases, for more complex relationships you may need to use more advanced techniques. 
+
+I hope this helps!
+
+
+
+
+

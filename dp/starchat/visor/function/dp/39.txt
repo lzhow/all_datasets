@@ -1,0 +1,15 @@
+
+The variable account in function "isContrac" is data-dependent on variable target in "functionCalValue" because the value of target can be changed by the called contract.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure! Let's say we have the two functions:
+
+A: `uint a = 5; uint b = a + 10;`
+B: ```uint c = f(); uint d = g(c);```
+where `f` and `g` are unknown functions.
+In this case, the variables `a` (5) and the result of `+` (`15`) are dependent on `b`. The variables c and d are independent of each other. However, in general, it is possible for the values of multiple variables to depend on a single variable. For example, `c = b + a` would make both `d`and `e` dependent upon `x`.
+
+ 
+ 

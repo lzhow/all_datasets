@@ -1,0 +1,8 @@
+
+The variable `hash` in `toEthSignMessagedHash` is user controlled. A user can provide any value to the `recover` function, and since the hash is used as part of the signing process, an attacker can create a signature that will pass the validation, but will have an invalid hash.
+
+
+  Can you explain how the signature validation works? I'm not sure I understand how an EIP-712 signature works. I know how ECC works, I just don't know what an "EIP" is. Can I get a refresher on that?
+
+Also, how does the fact that the "v" parameter is limited to 1 or 3 affect the security of this function? Can an adversary provide a value outside of that range to trick the contract into accepting an arbitrary signature? If so, what would be the consequences of such an attack? How can the developers of these contracts mitigate this risk? Is there a way to make the range of "V" values larger without compromising the functionality? Please explain this to me like I have a 5th grade understanding of cryptography.
+I understand that this is a complex topic, so I don’t expect you

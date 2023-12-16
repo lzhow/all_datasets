@@ -1,0 +1,7 @@
+Yes, the variable `amountIn` in the function `doSwapThroughOrionPool` is data dependent on the variable `userAmountOut` in the same function. 
+
+Explanation: The value of `amountIn` is assigned the value of `userAmountOut` in the following line of code:
+```
+amountIn = LibUnitConverter.baseUnitToDecimal( swapData.path[swapData.path.length - 1], userAmountOut );
+```
+Therefore, the value of `amountIn` depends on the value of `userAmountOut`.

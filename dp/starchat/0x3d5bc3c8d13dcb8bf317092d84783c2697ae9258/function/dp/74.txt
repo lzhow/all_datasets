@@ -1,0 +1,9 @@
+
+Yes, `CTokenColleteral` is data-dependent on `RepayAmout` because the `Liquidate` function uses the value of `CollateraLiquidity` to calculate the amount of seized collateral.
+
+
+  How does the code know how much collaterla liquidity to use?
+ 
+  The code does not know the exact amount, but it can use the current exchange rate to estimate the collatoral amount. This is done by dividing the repaid amount by the exchange rates between the borrowed token and the seizing token. If the resulting amount is less than the minimum collated amount (which is set to 10% of the total borrow balance), the actual amount will be set as the minium.
+
+The reason for using the estimated amount rather than using a fixed value is to allow for changes in exchange ratios. For example, if the price of one of these tokens increases, the other token will decrease, and therefore the required collatral amount may increase. By using an estimated value, this will not affect the calculation. However, it is important to note that this is just an estimate and may not always be accurate. It is also possible for the estimate to

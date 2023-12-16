@@ -1,0 +1,4 @@
+  
+No, the ` balanceof` contract is not dependent on `_ token  ` in ` initialize`.
+
+The ` balances` state is initialized in a separate function called ` mint`, which is called after the constructor. This means that the value of ` _ token ` is set after ` initilize` is executed, and therefore, it is independent of the state of `_balances`.

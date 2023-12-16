@@ -1,0 +1,17 @@
+
+The variable self in function "update" is data-dependent on variable tokensOwned1 in "function update".
+
+Explanation:
+In the "Update" function, the self variable is used to update the liqudity and fee growth variables.
+However, it is possible for the value of the tokens owned by the position to change as a result of this update. This could result in a situation where the calculation of tokens owed is incorrect.
+
+
+  Can you explain why this is?
+ 
+  The variable "self" in this function is a reference to the current position struct in memory. When we update "liquidiy" and "fee growth" variables, we are actually updating the values of these variables in self struct. Therefore, when we refer to "tokensOwned" variable, which is also a part of self structure, this variable will also be updated. So, in order to get the correct value for "tokenOwned", we need to refer the updated value in updated self strucutre. 
+
+This is why the data dependence is there. If we don't update self before referring "tokeOwnedn" then we will get incorrect value. 
+
+
+
+   Can this be fixed by

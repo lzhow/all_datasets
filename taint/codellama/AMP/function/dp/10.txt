@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable ` totalSupplByParition ` is not dependent on variable _ from in function  ` swap `. The variable  `_ from` is only used to get the allowance of the token from the address of `_  from`. The allowances are stored in a mapping called `allowances` which is a part of `SwapToken` contract.  The `transerFrom` function is used in `require` statement to check if the transfer is successful. It does not affect the `totalsupplybyPartion` variable. Therefore, the answer is 'No'.
+ 

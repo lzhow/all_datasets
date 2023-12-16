@@ -1,0 +1,4 @@
+  
+No, the ` factory` variable in get Amount Out Curve function is NOT controlled  by user because it's a function parameter.
+
+The `getAmount OutCurves` function takes in a `address` parameter called `Factory` which is used to call the getPair function. This function returns the address of the pair contract.  The `pair` is then used in other functions to get the reserves and calculate the amount out. Therefore, ` Factory` cannot be controlled directly by a user, but rather by other contracts or functions.

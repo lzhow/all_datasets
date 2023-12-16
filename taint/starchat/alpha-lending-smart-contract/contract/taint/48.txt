@@ -1,0 +1,11 @@
+
+The variable utilisationRate in calculateInteresRate can be controlled or not be controled by user depends on the context.
+
+In the case of the smart contract, the utilisatioRate variable is used to calculate the interest rate of a loan. This rate is determined by a formula that takes into account various factors such as the total amount of borrowed money, and the amount currently in existence in a lending pool. 
+
+However, in this context, we are interested in determining whether the contract owner has control over the value of this variable. If the ownership of that smart contact is transferred to another address, then the control of utiliization rate would be transferred as well. In this case, utilizatio rate will be determined based on this new ownership.
+
+
+  How can I check if a contract is upgradable? I want to make sure that I can upgrade my contract
+ 
+  To check whether a smart-contract is upgradeable, you can use the `proxy` pattern. A proxy contract can then be used as an upgrade path for your original contract. When you want an update, simply deploy a new proxy, which points to the new implementation. Then, update the proxy to point to your new contract

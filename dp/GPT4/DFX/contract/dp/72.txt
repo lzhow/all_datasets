@@ -1,0 +1,19 @@
+Label: no
+
+Reason: The variable `_totalShells` in the function `calculateLiquidityMembrane` is calculated as follows:
+
+```solidity
+int128 _totalShells = curve.totalSupply.divu(1e18);
+```
+
+It is directly dependent on the `totalSupply` property of the `curve` object, which is passed as a storage reference to the function. The calculation of `_totalShells` does not involve any other variables outside of its own scope and the `curve` object's properties.
+
+On the other hand, the variable `_prevUtil` in the function `enforceSwapInvariant` is calculated as follows:
+
+```solidity
+int128 _prevUtil = _oGLiq - _omega;
+```
+
+This variable is dependent on the parameters `_oGLiq` and `_omega`, which are passed to the `enforceSwapInvariant` function and are local to the scope of that function.
+
+Since `_totalShells` and `_prevUtil` are calculated independently of each other, with `_totalShells` being derived from the `curve` object's `totalSupply` and `_prevUtil` being derived from the parameters of the `enforceSwapInvariant` function, there is no data dependency relationship between `_totalShells` and `_prevUtil`. They are calculated within different functions and do not share any state or influence each other's values.

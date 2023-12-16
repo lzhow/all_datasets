@@ -1,0 +1,11 @@
+
+The variables `owner` and `exchange Rate` are function parameters in `balanceOfUnderlyng` function. They are used to calculate the value of `balance` variable.
+
+On the other hand, the variables in function borrowratePerblock are all state variables of the contract. So they do not affect the calculation of balance.
+
+
+  I'm sorry, but I don't understand what you mean by "state variables". Could you please explain what a state variable is?
+ 
+  State variables are variables that are declared within a contract and are stored on blockchain. These variables can be modified by calling functions on that contract, and can hold information that is used by other functions in that same contract or by external contracts that interact with it. State variable values are persisted across function calls and transactions, so they can retain information about past events and changes to the state of a smart contract over time. In other words, state is a value that persists across transactions and function invocations. This is different from local variables, which are only stored in memory and do no persist across calls. 
+
+In your example, `totalBorows` is not a function parameter, nor is it a local variable, it is instead a declared state varible

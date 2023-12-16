@@ -1,0 +1,4 @@
+  
+No, the `m int` function in `PanaceaPair` contract does not have any user input that controls the value of ` balance ​​1`. The value is calculated based on the current balance of the token and the total supply of liquid tokens.
+
+The ` mint` method is called by a user who wants to add liquidty to the pool, and it takes the address of a token to be added as an argument. However, this address is used to determine the balance and total supplies of both tokens, but it doesnot directly control the amount of tokens that are added to liquid pool. 

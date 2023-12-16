@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `deltaBlocks` in the function `updateCompSupplyIndex` is calculated as the difference between the current block number and the block number stored in `supplyState.block`. It is used to determine the number of blocks that have passed since the last supply index update for a given market.
+
+On the other hand, the variable `compSpeed` in the function `updateContributorRewards` represents the speed at which rewards are accrued to a contributor. It is used to calculate the new accrued amount for a contributor based on the number of blocks that have passed since the last contributor reward update.
+
+These two variables operate within different contexts and are used for different purposes. The calculation of `deltaBlocks` does not rely on the value of `compSpeed`, nor does the calculation of the new accrued amount for a contributor depend on the value of `deltaBlocks`. They are independent of each other and there is no direct data dependency relationship between them.

@@ -1,0 +1,10 @@
+
+The variable borrowAccured is data-dependent on borrowed in both functions.
+
+In the flyWheelPreborrowAction function, the borrow index is updated and the distribute borrow function is called, which updates the comp borrow state and distributes the accruing COMP to the user. In the distribution function the variables borrowindex and borrowstate are used, where borrowaccured and compborrowstate[ctoken][borower] are both data dependencies.
+
+
+  Can you explain how the code works?
+ 
+  Sure! The code in question is a Solidty function that is used to distribute COMP rewards to users who have borrows in Compound. Here's a breakdown of what the different parts of the contract do:
+- The function takes in three parameters: ctoken, a borrowing address, and market borrow rate.  The ctokens parameter is an address of a Compound token contract, such as cDAI or cUSDC. Borrower is simply the address that has a COMP borrow balance. Market borrowrate is stored in a Exp struct, defined as follows:  struct Exp { uint mantisser; uint exponent; } This struct is essentially a fixed point number, with the mantissas being the number

@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `hashedData` in the function `hashProtocolFeeSignatureData` is computed based on the input parameters provided to the function. These parameters include `Input memory input`, `AbsoluteTokenAmount memory output`, `SwapDescription memory swapDescription`, and `uint256 deadline`. Since these parameters are supplied by the user when they call the function, the resulting `hashedData` is indirectly controlled by the user. The user's input determines the value of `hashedData` through the hashing process.

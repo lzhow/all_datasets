@@ -1,0 +1,12 @@
+
+yes, it is.
+
+The reason is that the `_swap` function in line 399 uses the `pair` variable, which is computed using the line `address pool= OrionsMultiPoolsLibrary.pairforCurve (curfactory, tokena,tokenb);`.
+This line uses `curfactor` and `tokens` as input. `Curfactor `is data-dependent on `toknema`and `tokend`is dependent on`tokena`.
+
+  What is a curve pool?
+
+
+
+
+

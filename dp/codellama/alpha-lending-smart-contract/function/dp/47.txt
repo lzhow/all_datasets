@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+Explanation:
+In the `getUserPollData` function, the value of `compooundedBalanced` is calculated using the result of the internal function call ` getCompoundLiuidtyBalanc`e. This function takes two arguments, `_user` and `_token`, and returns a value that is not dependent on `_amout`.
+On the other hand, in `calcuate RoundUp BorrowSharAmount`function, The value returned by the `_ amount` argument is used to calculate the return value, but it is only used in a calculation that involves the values of other variables, such as `pool`and `totalborrows`. Therefore, there is no data dependence between the two functions.

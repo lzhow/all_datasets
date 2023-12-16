@@ -1,0 +1,19 @@
+
+The contract has a function called `approve` which allows `_spenders` to withdraw an `_amount` of tokens from `_tokenHolders` account. This function has the signature `function approve (address spender, uint amount)` and is called by the `_owners` accounts.
+
+In the `Amp` contract, the mapping `_allowed` is used to store the allowances for each `_owner` and `_sender`. The key for this mapping is a tuple of the form (`_sender`, `_operator`).
+This means that the key is unique for every `_allower` that has called the approve function. 
+
+So, if we have the two mappings:
+`_allowed[sender]` and  `_balances[owner]`
+We can calculate the value of `allowed(owner, sender)` as: `balances( owner ) - allowed( sender, owner)`
+And we can also calculate `balance(holder) + allowed (holder, sponsor)` if `sponsor` has approved `holder` for more than the current balance.
+
+
+  I'm sorry, but I don't understand what you mean by "data dependecy relationship". Could you please explain it to me?
+
+
+
+
+
+   What

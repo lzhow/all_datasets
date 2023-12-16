@@ -1,0 +1,5 @@
+  
+No, the ` i` variable in getAmounOut function is uncontrolled by user because it's a loop variable that is automatically incremented by  the for loop.
+
+The `for` loop in `getAmountOu` function iterates over the length of the pairs array, and the loop index `I` is used to access the corresponding element in each iteration. However, since the value of `length` comes from the input parameter `paires` which is a user-control variable, ` I` can be controlled  by a malicious user who calls the contract with a large value for `pair`.
+ 

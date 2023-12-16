@@ -1,0 +1,4 @@
+  
+No, the `_deciamls` contract variable is data-independent of the `amount`. The `bal` variable in `earn` is dependent on `wants` and `strategies`, but the amount is only dependent of `msg` sender.
+
+The `withDraw` function also depends on `_bal`, which is also dependent only on msg sender and not on amount.

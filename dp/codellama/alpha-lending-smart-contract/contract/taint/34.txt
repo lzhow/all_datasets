@@ -1,0 +1,4 @@
+  
+No, the `pendig` variable in function `claimCurrentAlphRward` is NOT controlled  by user because it's a local variable that is calculated based on the balance of the AlphToken contract and the current alpha multiplier, and it does not depend on any user input.
+
+The `alphaBalanc`e variable is also not user-controlled because its value is obtained from a call the the lendinPool' s distributoer'  s alpha token contract, which is a trusted contract that has been deployed by a third party. Therefore, both `alhpaBalanace` and ` pending` are not under the control of a user and are considered safe to use.

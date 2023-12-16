@@ -1,0 +1,3 @@
+Label: Yes
+
+Explanation: The variable `result` in the function `baseUnitToDecimal` is data dependent on the variable `amount` in the same function. This is because the value of `result` is assigned based on the value of `amount` through the `amount.mul(10**8).div(1 ether)` expression. Any change in the value of `amount` will affect the value of `result`.

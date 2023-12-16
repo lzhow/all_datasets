@@ -1,0 +1,4 @@
+  
+No, the ` cur Factory` variable in function `_swap Curve` is NOT controlled  by user because it's a parameter of the `_ swapCurv` function.
+
+The ` _ swap Curv ` function takes the address of a curve pool as a first parameter, which is `CurFactory`. This address is passed to the  `Or ionMulti Pool Library` to get the pair address for the given curve factory and tokens.  The `pair` address returned by ` Or ion Multi PoolLibrary`is then used to call the` exchange` method of `ICURVEPOOL` interface. This method takes `input` and `output` indices as parameters, and the amount of tokens to be exchanged as the third parameter. Therefore, ` CurFactory ` is a fixed parameter that is determined by calling the contract' s `get pair`method, rather than being controlled directly by a user input.

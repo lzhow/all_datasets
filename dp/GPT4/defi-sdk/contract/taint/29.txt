@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `owner_` is initially set to the address of the creator of the contract in the constructor (`owner_ = msg.sender;`). After that, the control of `owner_` can be transferred to a new owner through the `setOwner` function, which can only be called by the `pendingOwner_`. The `pendingOwner_` is set by the current `owner_` through the `setPendingOwner` function. Since the `owner_` and `pendingOwner_` can be externally controlled addresses and the `setOwner` function allows the `pendingOwner_` to become the new `owner_`, the state of the `owner_` variable is controlled by the user(s).

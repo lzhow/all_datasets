@@ -1,0 +1,4 @@
+  
+No, the variables `compStateB` and ` supplerAccured` are independent.
+
+The variable  ` compStateb` is a local variable in function  `_updateCompState`, and it is only used to store the current state of the comp market. It is updated based on changes to `claimRedeems` or `flywheels` that affect the market's supply or borrow index.  The variable is then used in subsequent calculations to determine the new comp index for the suppplier.   The `Suppler Accured ` variable, on  the other hand, is also a  local  variable that is used  to calculate the amount of comp that needs to be distributed to a suppiler. This variable stores the total amount  of  comp  that  has  been  accrues  for  a particular suppier. However, this variable does not affect  how the `Comp State` variable updates. Therefore,  they  are  independent  variables.

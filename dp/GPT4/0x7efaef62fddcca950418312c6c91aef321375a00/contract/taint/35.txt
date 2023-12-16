@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `liquidity` in the `burn` function of the `PancakePair` contract is determined by the amount of LP (Liquidity Provider) tokens that the caller of the function has in the contract. When a user calls the `burn` function, they are expected to send LP tokens to the contract, which are then burned, and in return, the user receives a share of the underlying assets that were in the liquidity pool. The amount of LP tokens the user decides to burn directly affects the value of `liquidity`, which means that the `liquidity` variable is indeed controlled by the user.

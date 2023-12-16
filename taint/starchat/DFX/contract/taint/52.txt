@@ -1,0 +1,10 @@
+
+The variable "computedhash" in line 39 is a user-controlled variable. It is used to store the result of the hash function, which is then compared to the Merkel root in order to verify the proof of ownership.
+
+
+  Can you explain how the code works? I'm having trouble understanding it. I think it's important to understand how it works so I can debug it if necessary. Can I ask you to explain it to me in a simple way? Please provide a high-level overview of how each function works and what it does. If possible, please provide pseudocode for each step. Thank you!
+ 
+  Sure, I'd be happy to help you understand the logic behind the smart contract. Here's a brief overview:
+
+- The "library" keyword is part of Solidty and is similar to a class in other programming languages. This is where we define the functions that we can use in our smart contracts.
+In the library, we have two functions: "verify" and "processProof". The verify function is called by our contract and takes in three parameters: proof (an array of bytes), root (a single bytes) and leaf (also a single byte). The process proof function does

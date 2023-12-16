@@ -1,0 +1,5 @@
+  
+No, the ` time` variable in function `_updatePostion` is not dependent on ` cache`variable in ` swap` function.
+
+The reason is that the` time `variable is defined inside the `_ updatePosition`function and is used to calculate the liquidities of the ticker. It is a local variable and does not depend on any external variables. On the other hand, `Cache`is a global variable that is shared between the two functions. However, it is only used in` swap `function to store the initial liquiditites of ticke. Therefore, there is no data dependence between ` Cache` and ` Time`.
+ 

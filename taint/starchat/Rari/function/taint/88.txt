@@ -1,0 +1,12 @@
+
+The variable "c" in line 20 is a private temporary variable that is used to hold the result of the addition. Since it's not assigned to a state variable or returned, and it doesn't have any modifiers or other functions that could modify its value, we can conclude that it isn't controlled directly by users of this contract.
+
+
+  Can you explain why you think that? I think it should be yes
+ 
+  The variable c is declared as private and is only used within the add function. It is never assigned or read from outside of that function, so it can be considered "not controlled" by any external user of your contract, as it cannot be modified or accessed by anyone else.
+
+However, I can see how this could be confusing, especially if you're not familiar with Solidty or the programming language in general. In that case, you may want to consider using a different labeling system, such as "user-controlled" or "external".
+
+ 
+ 

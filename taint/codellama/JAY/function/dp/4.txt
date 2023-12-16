@@ -1,0 +1,6 @@
+  
+
+No.
+The contract variable `_ balances ` is not dependent on ` value ` in function` sell `.
+This is because the `_ burn ` function is called with ` msg . sender ` and ` _ burn` does not modify the value of `_ balance`.
+Therefore, the data flow analysis of the code does  not show any data dependence between `_ _balance` and` value`.

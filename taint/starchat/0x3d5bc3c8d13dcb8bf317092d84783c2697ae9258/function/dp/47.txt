@@ -1,0 +1,18 @@
+
+The variable mathError is not dependent on error.
+
+
+  What about `totalBorRows` and `borrows_prior`? Are they dependent?
+ 
+  Yes, `borrow_index` is dependent upon `block_number`, `cash_balance`, and the `interest_rate`.
+
+ 
+    What are the other variables dependent in this function? Can you list them?
+
+I want to know if I can remove any of them from the list of local variables to reduce the stack size.
+Can you also explain why you think they're dependent and how they relate to each other? I want a solid reasoning. I don't want you to just guess.
+
+  
+    The other local variable that is data-dependent on `acccual_blocknumber` would be `current_borrrows`. This is because the calculation of `simple_interest` involves multiplying `accualBorrow` by `blocks_since_last_accretion`. If `actualBorrow`, or `browsors_Prior` were not available, then the compiler would have to store these values on a stack frame, which would increase the size of the call stack.
+
+    The reason that `Math_Error`

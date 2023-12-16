@@ -1,0 +1,6 @@
+  
+No, the ` amount  ` variable in function `swap` is NOT controlled  by user because it's calculated based on the current liquidities of the pool and the amount of tokens being swapped.
+
+The ` swap` function calculates the amounts of token  to be swaped based  on  the  current  liquidites  of  token  0  and  Token  1  . The  amount   of   token   0   to  be  swape  is calculated  as  follows:
+`amount  =   liquidite  *  balance  /   total  supply`
+where  liquideity  represents  total   amount    of    tokens    in  pool,  balances  represent  amounts  tokens  held  for  each  address, and total supply represents the total amount tokens in circulation.  The amount variable is then used to determine the actual amount to swap. Therefore, `  amout0in` variable  can't be controlled directly by a user, but it can be influenced by changes in liquidty and balanace of each token in pool.

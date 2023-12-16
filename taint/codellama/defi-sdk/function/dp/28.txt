@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `for` loop iterates over the array `pair` and assigns the value of `i -1` to `prev`. The `if` statement checks if `directions[ prev ]` is true, and if so, it calls the internal function`getAmoutIn()` with the arguments `amoutOut`, ` pairs [ prev]`, and ` directions [prev]`. The return value is then assigned to the element at index ` prev` of the`amountIns` array.
+Since the loop is iterating over ` pair` , the index of each element in ` amountIn ` is dependent on ` i `, which is in turn dependent  on` pair`. Therefore, ` amounts In`is data-dependent on  ` pais`.
+Similarly, in  the second function , ` for`loop iterated over`pair`, the return values of` getAmounIn() ` are assigned  to elements of  array` amount In`. Since the  loop  isiterating  over  'pair', the indices of elements in` amounts  In `are dependenton` i`, which inturn isdependent  of ' pair'. Therefore ,` amoun In 'isdata- dependent 'on 'pais'.

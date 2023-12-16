@@ -1,0 +1,9 @@
+
+The variable bitpos is used to determine the position of the bit in a word. Since the value of bit pos is derived from the input variable tick and the tickspacing, the result of this calculation is only used for comparisons and is therefore considered safe.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it would help me a lot if you could explain it to me like I was a 5 year old. Thanks!
+ 
+  Sure! Let's say you have a list of numbers, like the list [1, 7, -3, etc]. Now, you want to find the largest number in that list. One way to do this is to start at the beginning of that array and keep track of where the biggest number is. Then, move on to the next number and see if it's bigger than the current biggest one. If it isn't, then you don't have to change anything. But if, while moving on, a new biggest value is found, that's the new number you'll keep going with.
+
+  So, in this case, we start with  the number  `1`. It's not the greatest number we've seen so far, so we move

@@ -1,0 +1,22 @@
+
+The variable "b" in "tryMul" is user-controlled.
+
+Explanation:
+In the "mul" function, the value of "a" and "c" are compared to ensure that there is no overflow. If "overflow" occurs, then the operation is reverted. However, in this case, if "0" was passed as the second argument, there would be no "require" statement to revert the transaction. This would allow the attacker to bypass the check and perform an unchecked multiplication, which could result in an overflow and subsequent reversion of the contract's transaction, potentially resulting in loss of funds.
+
+
+  Can you explain how the overflow could be exploited? I'm specifically looking for a Solidty example
+ 
+  Sure, here's an example of how an attacker could exploit the unchecked overflow in Soliditiy:
+
+  ```solidity
+  pragma solidty ^074.06;
+
+  contract OverflowExploit {
+      function overflow() public pure {
+          uint a = 1;
+          a *= 2**224 - 3; // Overflow occurs here
+          //...
+      }
+  }```
+This contract multiplies a variable `a` by a large number, causing an integer

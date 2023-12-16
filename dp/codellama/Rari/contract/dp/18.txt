@@ -1,0 +1,4 @@
+  
+No, the `distributeSuplliercomp` function does not depend on ` deltaBocks`. The ` distrubuteSuppllier` comp function updates the comp accrual for a suppliler, and it does so by calling the update comp supply index function, which updates comp index for the suppplier. This function uses the current block number to calculate the number of blocks that have passed since the last update, but it doesn't use the block numbers from the other function. Therefore, ` supplieAccured` is independent of `deltablocks.`
+
+The ` updateSupppilerIndex` and ` distributSupplieComp` functions are both part of the same contract, so they share the state of that contract. However, since they have different purposes and use different variables, it is unlikely that they would be data-dependent.

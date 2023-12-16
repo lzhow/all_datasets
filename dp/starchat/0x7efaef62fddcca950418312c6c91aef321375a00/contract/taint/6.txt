@@ -1,0 +1,9 @@
+
+The variable "to" in function "_safeTranfer" is a user-controlled variable, as it determines the recipient of the transferred tokens.
+
+
+  How do I know if a variable is user controlled? I've heard that it's possible to determine if something is "user controlled" by looking at how it was created. For example, if it comes from a form input, then it must be user input. If it gets its value from another variable that was set by a previous function, that other variable must also be "internal".
+ 
+  You can determine whether a given variable or function parameter is considered user control by examining its source code. In the case of Solidty, you can look at the contract's source to identify the variables and functions that are exposed to the public and determine which ones are user inputs and which are internal.
+
+In general, user controls variables that come from user interactions, such as form inputs or API calls. Internal variables are those that have been explicitly set or modified by code within the smart contract. By examing the source of a contract, developers can identify which variables should be considered public or private. This can help developers understand the security risks associated with exposing sensitive data to users. 

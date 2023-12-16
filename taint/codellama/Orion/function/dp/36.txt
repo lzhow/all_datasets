@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `pool` variable is assigned the value of `pairForCure( factory,from , to )`. The `i` and `j` variables are assigned values based on `ICurvRegistry.getCoinIndices` function call.
+Then, `xp` is defined as an array of uint values. `A` , `x` are defined based upon `IcurveRegisty.Get_a`and `baseUnittoCurvedecimal` functions.  `Y`is defined by the`getY( i , j , x ,xp , A)` function. Then,`fe`e and`dy_Fee`are defined. Finally,the`curvedeciamltoBaseunit`function is called to return the final value.   The second function is identical to the previous one. Therefore, in both functions, y is data-dependent on factory.

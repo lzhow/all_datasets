@@ -1,0 +1,30 @@
+Yes
+
+The contract state `nftsBought` is data dependent on the variable `amount` in the function `buyERC1155`. This is because the `amount` variable represents the total number of ERC1155 tokens being bought in the `buyERC1155` function, and this value is used to update the `nftsBought` state variable.
+
+In the `buyNFTs` function, we see that `nftsBought` is incremented by the `total` variable:
+
+```solidity
+nftsBought += total;
+```
+
+The `total` variable is calculated as the sum of the lengths of the `erc721TokenAddress` array and the return value of the `buyERC1155` function call:
+
+```solidity
+uint256 total = erc721TokenAddress.length;
+...
+total = total.add(buyERC1155(erc1155TokenAddress, erc1155Ids, erc1155Amounts));
+```
+
+Inside the `buyERC1155` function, the `amount` variable accumulates the total number of ERC1155 tokens being transferred:
+
+```solidity
+uint256 amount = 0;
+for (uint256 id = 0; id < ids.length; id++) {
+    amount = amount.add(amounts[id]);
+    ...
+}
+return amount;
+```
+
+Since the `amount` returned from `buyERC1155` contributes to the `total` variable, which in turn is used to update `nftsBought`, there is a direct data dependency between `nftsBought` and the `amount` variable within the `buyERC1155` function.

@@ -1,0 +1,10 @@
+
+yes, it is data-dependent.
+
+The reason is that the `supplySpeed` variable in `RewardsDistributionDelegate` is updated in two places:
+1. In the `_setSupplyCompensationSpeed()` function, which is called by the admin. This function updates the supply speed for the given ctoken. 
+2. When `updateCompSupplier()` is executed, this function is responsible for updating the supplier index for a given market. It is also called when a transfer of tokens occurs, and when the fly wheel is triggered.
+
+  What is a c-token?
+ 
+  A c token is an asset that is pegged to a currency, such as the US dollar.  The value of the c tokens is determined by supply and demand for that currency.   The ctokens are used to buy and sell the underlying currency in order to increase the value.    The reason that they exist is to provide a way to hedge against inflation.     The US Dollar is currently the most heavily invested currency globally, so it makes sense to have currencies that are peg to it.      The main reason for using c tokes is so that people can invest in a stable currency that will not be affected

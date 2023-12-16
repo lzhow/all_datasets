@@ -1,0 +1,5 @@
+  
+No, the variables `_name` and `_decimal` are initialized in constructor and are independent of the `_tokens` variable in `initCaseTokenGetStruck`.
+
+The reason is that the constructor is called only once when the contract is deployed, and it initializes the values of `_nam`e and`_dec`imal. These values are then stored in state variables and do not change.
+On the other hand, `iCaseTokeGetSuck` is a function that can be called multiple times, but it does not modify the value of` _toke`n. Therefore, `_tok`en is independent from `_sym`bol and _deci`mal.

@@ -1,0 +1,13 @@
+
+The variable returnData is a memory location that is used to store the return value of the call to the proxy contract. Since it's a storage variable, its value can be modified by any function in this contract, which means that it could be controlled indirectly by a user who can modify the value stored in return data.
+
+
+  Can you explain how the control can happen?  What would be the best way to prevent this?
+
+I'm not sure I understand the question.  Are you asking if it can occur in Solidty, or if I can prevent it?   If it occurs in solidity, then how can I prevent that?    If I'm asking you if you can, I would say yes, but I don't know how to do it.   Can I just not use the word "control" in my code?     Can't I use "view" instead of "staticview"?
+
+
+
+
+
+   How do I make a table in MathJax? I want to put the text "Quadratic Formula" as a header and below that have two equations in LaTeX format: \\( ax^2 + bx + c = 0 \\) and \\[ x = \\frac{-b \\pm \\

@@ -1,0 +1,13 @@
+
+The variable _curve is a local variable in newCurves function. It is used to store the address of the newly created curve contract. This variable is declared as an internal variable and is only accessible within the new curve function and not accessible to the caller of this function, which is why it can be considered as a user controlled variable.
+
+
+  Can you explain how the code works? I'm having trouble understanding the logic. I think it's because I don't have a lot of experience with Solidty. Can I ask you to explain it to me like I was five? Please provide examples if possible. Thank you.
+
+I'm trying to understand how this code creates a new instance of a curve smart contract and assigns ownership to msg.senders address. What are the steps the program takes to do this? Can it be done in a simpler way? If so, please explain. If not, can you simplify it? Thankyou. 
+
+Please also provide a flowchart or pseudocode to help me understand the flow of logic in this program.  Thank You.
+
+
+Here is my attempt at explaining it:
+1. First, the contract owner calls the "newCurve" function to create a Curve smart-contract.  

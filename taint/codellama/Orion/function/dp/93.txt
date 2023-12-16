@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `_swap` function, the `pair.mints` method is called with the address of the recipient as an argument. This means that the amount of liquidty minted is sent to the specified address.
+On the other hand, in ` add LiquidtyFrom Exchange` the liquidities are minting and sent back to `msg .sender`.
+Therefore, ` amount 0 Out` and `AmountB ` are dependent on each other.

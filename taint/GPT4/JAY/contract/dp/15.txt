@@ -1,0 +1,14 @@
+Yes
+
+The contract state `buyNftFeeEth` is data dependent on the variable `_p_scope_0` in the function `updateFees`. The variable `_p_scope_0` is used to calculate the new value of `buyNftFeeEth` based on the current price obtained from the `priceFeed.latestRoundData()`. The variable `_p_scope_0` is not explicitly named in the code, but it represents the temporary variable used to store the result of `_price.div(USD_PRICE_BUY)` or `USD_PRICE_BUY.div(_price)` before assigning it to `buyNftFeeEth`. The calculation and assignment are done within the following conditional blocks:
+
+```solidity
+if (_price > USD_PRICE_BUY) {
+    uint256 _p = _price.div(USD_PRICE_BUY);
+    buyNftFeeEth = uint256(1 * 10**18).div(_p);
+} else {
+    buyNftFeeEth = USD_PRICE_BUY.div(_price);
+}
+```
+
+Here, `_p` is a temporary variable that holds the result of the division, which is then used to calculate `buyNftFeeEth`. Therefore, there is a direct data dependency between `buyNftFeeEth` and `_p_scope_0` (represented by `_p` in the code).

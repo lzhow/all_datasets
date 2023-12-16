@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `curBalance` in the function `_swapCurve` is not controlled by the user. It is a local variable that is assigned the value of `IERC20(path[i + 1]).balanceOf(address(this))` which represents the balance of a specific token held by the contract itself (`address(this)`). The user does not have control over the contract's balance.

@@ -1,0 +1,4 @@
+  
+No, the `redemption` function is not dependent on `comptroller` or `accountToken` variables in `liqidation` functions.
+
+The `Redeemer` variable in redemptions function depends on rederemption amount and exchange rate.  The `Comptrollor` and `AccountToken ` variables are used in liquidation function to check if the liquidators are allowed to liquidated the borrows.

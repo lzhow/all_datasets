@@ -1,0 +1,5 @@
+  
+No, the ` amount  ` variable in function `swap` is NOT controlled  by user .
+
+The ` swap` function is a public function that allows users to swap tokens in a liquididy pool. It takes in two amounts of tokens as input, `  amount  0  Out` and `   amount   1  out`, and the address of the recipient of these tokens.
+  The ` _ safeTransfers` are used to transfer the tokens from the liquiddity pool to the caller of this function.  These transfers are not under the control of user, but rather are performed by this contract. Therefore,  the  variable  is also not  controlled   by  user  .

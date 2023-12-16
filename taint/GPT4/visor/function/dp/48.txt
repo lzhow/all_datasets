@@ -1,0 +1,3 @@
+yes
+
+The contract state `_HASHED_VERSION` is directly assigned the value of the local variable `hashedVersion` within the constructor. This assignment creates a data dependency relationship between `_HASHED_VERSION` and `hashedVersion`, as the state of `_HASHED_VERSION` is determined by the value of `hashedVersion` at the time the constructor is executed.

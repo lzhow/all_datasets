@@ -1,0 +1,15 @@
+
+The variable seizedError is not dependent on borrowed in seiseInternal.
+
+
+  What about `vars`
+ 
+  The variable vars is a struct that is declared within the scope of the two functions. It is used to store intermediate values that are used in calculations within those functions, but are otherwise not returned as part of their outputs. Therefore, it is safe to say that the data dependence relationship between seisedError and borrowers is unknown.
+
+However, if you have any other questions about this contract or other Solidty code, feel free to ask!
+
+
+
+   What is an internal function?
+  
+ 

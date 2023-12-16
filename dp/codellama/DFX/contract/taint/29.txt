@@ -1,0 +1,4 @@
+  
+No, the `_ogliq ` variable in view origin swap is uncontrolled by user because it's a local variable that is created in a function and is only accessible within that function. It is also not a state variable of the contract, so it cannot be modified by any user action.
+
+The reason for this is that the `getOriginSWapdata` function is called within the vieworigin swap function, and the value of `_ ogli q` is passed as an argument to the getoriginSwapedata function as a parameter. This means that `_ o gliq _` variable is set to a value that depends on the input parameters of `vieworiginswap` and cannot change during the execution of that method. Therefore, `_OGLIQ` cannot control the behavior of view Origin Swapped.

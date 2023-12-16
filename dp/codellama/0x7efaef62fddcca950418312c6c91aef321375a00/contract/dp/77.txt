@@ -1,0 +1,5 @@
+  
+No.
+
+The contract variable `reserves` is not directly dependent on `balances` or `allowances`. The `mints` and `burns` functions update the `supply`, `tokenBalances`, and the allowances, but they do not update `reverves`. Therefore, the data in `totalsupply `is not dependent directly on `_reverses`.
+ 

@@ -1,0 +1,9 @@
+
+yes, it is.
+
+The reason is that the `updateCompIndex()` function updates the supply and borrow indices for each market, and the distribute functions use those indices to calculate the COMP accruations.
+
+
+  Can you explain why?
+ 
+  Sure! The `compSupplierSpeed` and ` compSuppliersIndex ` variables are used to track the speed and index of the market's supply of COMP tokens, respectively. Similarly, the` compBrowerSpeed `and `  compBorowerIndex  `variables are for tracking the borrowing market. When a user borrows or supplies tokens in a market that has a non-zero COMP speed, their COMP balance increases by the amount of accrual COMP. However, if the user's balance of tokens is reduced, this accumulative COMP is only reduced by a proportionate amount. This means that if a borrow or supply reduces the balance by more than it increases, some of that accreted COMP will remain in their account. For example, let's say a person borRows 500 DAI from a CDP in Compound. If the Cdp's borrow index increases from 90% to 80%, the person's COMP supply

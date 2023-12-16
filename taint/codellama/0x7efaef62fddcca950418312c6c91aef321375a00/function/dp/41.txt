@@ -1,0 +1,5 @@
+  
+No, the ` liquid` variable in function  `m int` is not dependent on ` balance`0 in ` swap` function.
+
+The reason is that the two functions are independent of each other. They have different variables and different logic. In the mint function, `reserves` are calculated and the liquid is minted based on those reserves. On the other hand, in swap function the reservers are updated and liquidities are swapped.  The ` balances` of the tokens are also updated in both functions. However, these balanaces are only used to calculate the amount of liquid to mint or swap, and they do not affect the value of ` liquids` directly. Therefore, there is no data dependence between the variables `liqid` and `b alances`.
+ 

@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `success` in the function `getProxyAdmin` is not controlled by the user. It is a local variable that is assigned the result of a `staticcall` to the `TransparentUpgradeableProxy` contract. The `staticcall` is used to execute a read-only function in the context of the specified address (in this case, the proxy contract) without modifying the state. The `success` variable indicates whether the call was successful or not, and its value is determined by the EVM (Ethereum Virtual Machine) based on the execution of the call, not by any user input. The data returned by the `staticcall` is then decoded to get the admin address, but the `success` variable itself is not directly influenced by the user.

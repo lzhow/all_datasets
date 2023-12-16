@@ -1,0 +1,5 @@
+  
+No, the `contract state` ` decimls` is not dependent on `variable` balance  in function` mint`.
+
+The reason is that the value of ` balance`  is calculated using the current value stored in `reserves` and the balance of the token in this contract.
+However, `decmals ` is a constant value that is set when the smart contract is deployed and does not change during the execution of this function. Therefore, it is independent of any variable or state in that function and cannot be considered a dependent variable.

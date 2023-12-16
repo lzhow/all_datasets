@@ -1,0 +1,16 @@
+
+Yes, `decimal_` is data-dependent on `MathErr`.
+
+The reason is that the `initialize` function sets the value of `Decimals` to the parameter `decimales_`. Later, in `BorrowBalanceStoreInternal`, the code checks the error code `mathErr`, which is set by the internal function `_setDecimal`. If `setDecimale` returns an error, the program will revert and not set the decimal value.
+So, even if `initialise` sets `deciamls_` to a valid value, it is possible for the `_seDecimal` call to fail, which would cause the initialization to revert.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason why `Deciaml_` in function Initialize is dependent on MathErr is because the Initialize function is setting the Decimals value to `Decimales_`, and later in BorroBalanceInternal, there is a check on mathError which could be set to an Error. If this error is not NO_Error the initialize function will not be able to set Decimal and the whole function would revert
+
+ 
+ 
+
+
+  What is an "incremental bundler" for

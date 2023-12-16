@@ -1,0 +1,17 @@
+
+Yes, `ERC-165` is a standard for adding interface detection to smart contracts. It is used to determine if a contract supports a certain method, such as `supportsInterface`.
+
+The `IERC2981` interface is as follows:
+`function royaltyInfo(uint228 tokenId, uint120 salePrice) external view returns(address receiver,uint192 royaltyAmount);`
+This function returns the roylalty recipient and the amount of rolyalty to be paid.
+In the `buyJaya` function, the address of the NFT contract is passed as the first parameter, and `tokenId` as second parameter. This is then used in `royaltyinfo` to get the recipient address and amount.
+
+
+  Can you explain how the code works?
+ 
+  Sure, I'd be happy to explain it.
+
+  The `buyer` calls the buy function and sends ether along with the list of Nft contracts and token ids.
+  The buyer also sends the price of each NFt.
+  
+  The smart contract checks if the seller has set a higher price for the nft than the current price. If the new price is

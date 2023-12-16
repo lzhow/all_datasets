@@ -1,0 +1,10 @@
+
+Yes, `is the recipient implementation` data-dependent on `the to partition prefix` is true.
+
+The reason is that the `_transfer` function in `Amp.sol` calls the internal `_remove` and `_add` functions, which update the `balanceOf` mapping and the partition-specific `totalsupply` mappings. These mappings are then used to update `_totalSuppy` (line 229) and to emit the corresponding `Transfer` or `Minted` events (lines 309 and 402).
+However, the implementation of the token recipient contract may depend on both the transfer's `_to` address and its `_partition`. For example, if the contract is a wrapper for an existing token, it may need to know the destination partition in order to call the correct `approve` method on that token. Therefore, while the call to the post-transfer hook is made with the original `_from` partition, we need the updated `_destinationPartition` to ensure that any dependent data is up-to-date.
+
+
+  Can you explain why this is data dependant?
+ 
+  The reason why `RecipientImplementation ` is dependent on `_To Partition` can be understood by considering the

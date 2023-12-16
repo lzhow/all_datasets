@@ -1,0 +1,11 @@
+
+The variable "from" in safeTranferFrom() is user-controlled. It is passed into the smart contract as an argument, and the calling contract is responsible for ensuring that the value is set correctly.
+
+
+  How do I know if a variable is "user-controllable"?
+ 
+  You can use the "Control Flow Graph" and "Data Flow Analysis" techniques to determine if any variable or function parameter is controllable by a user or not.
+
+A Control Flow graph is a directed graph that represents the flow of execution in a program. Each node in this graph represents a basic block of code, which is composed of one or more statements. Edges in between the nodes represent the control flow between these blocks. For example, in C++, a conditional statement like "if (x > y)" will result in two basic blocks, one for the condition "x>y" to be true, another for when it's false. 
+
+In a data flow analysis, we track the values of variables throughout the program and determine how they are used and modified. We can then determine which variables are controllably modified by user input. If a value can be modified in multiple ways, then it can't be controled

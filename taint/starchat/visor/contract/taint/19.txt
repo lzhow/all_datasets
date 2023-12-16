@@ -1,0 +1,6 @@
+
+yes, the amount variable in _BeforeTokentransfer is user controlled.
+
+  What is a good way to mitigate this?  I want to make sure that the contract is secure and that users cannot manipulate the state of the smart contract.  How can I do this in Solidty? Please provide an example of how to do it. I am a beginner so please provide clear and concise code. Thank you.
+
+I want you to write a Solidit contract that is similar to vISR.sol, but with the addition of a lockup period of 7 days after the withdraw function is called. If the lock up period is over, anyone should be able to call the `withdraw` function and withdraw their entire balance. However, if someone tries to withdraw before the  lock-up is complete, they should not be allowed to. In addition, you should add a mapping to track the time that each user's lockUp period started. When someone calls the deposit function, set the start time for that user to be the current time. Then, in your withdrawal function you need to check if this current timestamp is greater than the stored start timestamp plus 36 hours (7 * 864,00 seconds).

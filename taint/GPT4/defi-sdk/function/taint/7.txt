@@ -1,0 +1,4 @@
+  
+No, the ` protocolSignFer` variable is a contract address and is therefore not under the control of the end user, but rather the address of another contract.
+
+The `SignedFunds` contract is responsible for managing the funds that are transferred to the protocol, and the signer of these funds is determined by a separate contract called `Funder`. The ` Funder` is an external contract that is used to fund the contract, so it's not directly controlled or managed by any user or end-user. Therefore, `signerF` should be labeled as 'No'.

@@ -1,0 +1,5 @@
+Unknown.
+
+The variable `amountOut` in the function `_swap` is assigned the value of `amounts[i + 1]`, which is an element of the `amounts` array. The value of `amounts[i + 1]` is determined by the function `OrionMultiPoolLibrary.getAmountOutUv2`, which takes the `amountIn` and the reserves `reserveInput` and `reserveOutput` as parameters. 
+
+However, without further information about the implementation of `OrionMultiPoolLibrary.getAmountOutUv2` and how it calculates the `amountOut`, it is not possible to determine if there is a direct data dependency between `amountOut` and `reserveInput`.

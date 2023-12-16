@@ -1,0 +1,15 @@
+
+yes, it is data-dependent.
+
+The function `_claimReward` calls `distributeBorrowersComp`, which uses the `holders` variable to iterate over each borrowing account and call `Ctoken.totalBorrow()` to get the total amount of COMP accruing to that account.
+
+
+  Can you explain why?
+ 
+  The function "claimrewards" is used to claim COMP rewards for a user. It iterates over all the ctokens the user has entered and calculates the amount that should be rewarded to them. This amount is calculated by multiplying the number of blocks that have passed since the last time the rewards were updated (stored in lastblock) with the speed of the COMP reward for that ctoken (which is stored in compspeeds).
+
+ 
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. I am tired of being stuck in my comfort zone, and I want to explore new things. Which of these things should I do? Build a jet engine, go on a backpacking trip, learn to play basketball, attend a coding bootcamp, or start a youtube channel. All of them seem like great ideas, but I

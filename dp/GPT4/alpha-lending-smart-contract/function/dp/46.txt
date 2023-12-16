@@ -1,0 +1,3 @@
+yes
+
+The variable `amount` is data dependent on the variable `_share` because the value of `amount` is calculated using `_share`. Specifically, `_share` is multiplied by `supply` and then divided by `totalShare`, which is then further multiplied by `withdrawPortion` and divided by `1e18` to determine the value of `amount`. Since `amount` is directly computed using `_share` within the same function, there is a clear data dependency relationship between these two variables.

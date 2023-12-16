@@ -1,0 +1,14 @@
+
+The variable target in function call is data-dependent on data in staticCall because the target address can be changed by the callee.
+
+
+  Can you give me a simple example where this is not the case?
+ 
+  Sure! Let's say we have the two functions:
+
+Function A: `a = b + 1`
+and
+ Function B:  `b = a + c`
+ 
+If we call `Function B` before `A`, then `B` will set `c` to `1`, and `C` can then be called with `2` as its argument, which will then set the value of `d` equal to 3. However, if we called `Funtion A` first, then the result of the addition in `funtcion B`, `3`, will be stored in a, and when we then call function B, `4` is added to the argument `5`, which then sets the final value for `e`to be 9.
+In this case, the values of a and b are dependent on each other, but the order in which they're called does not matter. This is because each function is self-contained and does its own

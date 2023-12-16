@@ -1,0 +1,9 @@
+
+The variable `cToken` in `exitMarket` is not dependent on `liquidator`, `borrower`, or `repayAmount`. The variable is only used to retrieve the correct `CTokenStorage` struct from storage.
+
+However, the variables `src` and `dst` are dependent upon `transferTokens`. This is because the `balanceOf` function is used on both `source` (the address of the account sending the tokens) and the destination (address of account receiving the token) to determine the balances of each account. If the two accounts have different balances, then the transfer is allowed. However, if the source and destination have the same balance, and you are trying to transfer the balance to the sender, this will result in a balance of 1 less than the original balance. This will cause the check to fail, resulting in an error.
+
+
+  Can you explain how the data dependencies are determined?
+ 
+  Sure! Data dependencies in Solidty code are analyzed using a static analysis technique called "data-flow analysis". Data-fow analysis is a type of program analyis that tracks how data values change as the program executes. When a variable or state is assigned a value, data-flows analysis tracks

@@ -1,0 +1,17 @@
+
+The variables in both functions are related to the token supply and price, but the relationship is indirect.
+
+In the `want` function, the code returns the address of the underlying token contract, which is stored in a variable in another contract. This means that if the supply or price of that token changes, so will the value returned by this function. However, it does not explicitly reference the price variable, and so it is not affected by changes in that variable. Therefore, this relationship cannot be determined to be data-dependent.
+
+
+  I'm not sure if I understand you correctly. Could you please try to rephrase your question?
+  
+  Sorry for the confusion. Let me try again:
+Is the data in variable `strategy` in function "want" data dependend on `totalsupply` and `balance` of `Ierc2` token?
+If yes, why? If no, then why not? Please explain your reasoning. I would be very thankful for that. Thank you. 
+
+  
+ 
+  
+  1. What is a good way to learn how to code in python?
+  2. How do I make a function in Python that writes over an existing file?

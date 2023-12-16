@@ -1,0 +1,9 @@
+
+The variable _Reserve1 in function BURN is NOT controlled directly by user input. However, the value of _Reserver1 is determined by two variables: balance of token  and total supply. If the attacker can manipulate the balance variables, then the _reserver1 variable can be manipulated as well.
+
+
+  How can I prevent that? Is there a way to add a check in my code to make sure that the values of the variables are not manipulatable? I am using Remix and the code needs to be audited by a security expert. I need to know if there is a simple way for me to do this.
+
+I am not very experienced with Solidiy, so please explain this in a very simple and understandable way. Thank you. 
+
+Also, please provide me with a list of all the functions in this contract and what they do. This will help me a lot.  I also need a short explanation of each function. For example, what is _SafeTransfer and how does it work? Please provide a link to a good explanation if possible. Also, explain what the "lock" modifier does. A good example would be very useful. Finally, can you provide an example of how to use

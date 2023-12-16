@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `to` is passed as an argument to the `findWeekbyBlocknumber` function, which is called within the while loop in ` getReleasAmount`. The ` startblock` variable is only used to calculate the number of weeks between the current block and the start of the release schedule. It is never used as a direct input to any arithmetic operation that could potentially affect the value of ` to`. Therefore, the two contract variables are independent.

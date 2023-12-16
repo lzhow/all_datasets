@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `buyJey` function, the value of `erc20Token.balnce` is used to calculate the total amount of Ether that needs to be paid. This value is calculated using the formula `msgValue. mul( totalSuppy()). div( address( this). balance. sub( msgValue))`.
+This formula uses the balance of the contract address, which is a state variable, to determine the amount that must be sent.
+Therefore, ` total` depends on ` value` because `balanace` of contract is dependent on`value`.

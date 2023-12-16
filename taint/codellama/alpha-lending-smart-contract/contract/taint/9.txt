@@ -1,0 +1,4 @@
+  
+The variable _ amount in set Pool Reserves function is unknown.
+
+This is because the _ amout variable is passed as an argument to the set pool reserves method, which means that it can be controlled or not by a user depending on how the method is called. If the caller of the contract passes a value for _amout, then it will be under the control of a malicious user, but if they do not pass a specific value, the default value will still be used, and the state of _ammount will not be affected by any user input.

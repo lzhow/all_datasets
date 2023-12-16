@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `tick` in the function `observe` is an input parameter to the function. In Solidity, function parameters can be supplied by the user when they call the function. Since `tick` is not derived from any contract state and must be provided when the function is called, it is controlled by the user.

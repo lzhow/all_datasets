@@ -1,0 +1,5 @@
+  
+No, the ` seiseError ` variable in ` liquidatBorroweFres ` is not dependent on ` borower ` in` sezeInternal ` .
+
+The reason is that the` borowwer `variable in sezieInternal is a local variable, and it is only used in this function. It is never passed as an argument or returned as a value, so it cannot be accessed from outside the scope of this variable.
+On the other hand, ` borrowError  `in liquidationBorrwoFress is returned by the seieInternal function, which means that it can be used outside of the local scope. Therefore, it depends on borrowError in liquidatioBorgrowFrees.

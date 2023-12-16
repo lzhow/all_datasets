@@ -1,0 +1,5 @@
+  
+No, the state variable `AM_PTOkens_Recipiet` is not dependent on `_From_Partiton` variable in function`_call_Pre_Transer_HooKs`.
+
+The reason is that the `to_Token_To_Validat` function of the interface `IAmp_Tockens_Receiver` does not use the `_toP_artition_` parameter. Therefore, it is impossible for the implementation of this interface to access the value of `_ToP _artit_ion_`. As a result, there is no data dependence between the two.
+ 

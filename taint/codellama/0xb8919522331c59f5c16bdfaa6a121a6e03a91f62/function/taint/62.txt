@@ -1,0 +1,4 @@
+  
+The variable error message in function call is labeled as 'Unknown'. The reason is that the error Message is a string that is passed as an argument to the `functionCall` function. It is unclear whether the string is user-controlled or not.
+
+In general, when analyzing Solidiy code, we need to consider the context in which the code executes and the inputs that are provided to it. In this case, the value of `errormessage` is determined by a user input, but it's not clear whether that input is trusted or untrusted. Therefore, labeling it as unknown is appropriate.

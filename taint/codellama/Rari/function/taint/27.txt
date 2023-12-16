@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the constructor of the contract, the `delegateTo` function is called with the address of an implementation contract and the data to be passed to it. This function calls the implementation's `initialize` method with parameters that include the name of this contract.
+However, this name is passed as a parameter to the delegate call, which means that it can be controlled directly by an attacker. Therefore, we cannot determine whether the value of ` name_ ` is under the control of a user or not.

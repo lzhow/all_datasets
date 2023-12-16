@@ -1,0 +1,20 @@
+
+The variable b in function `divCeild` is user-controlled.
+
+Solidity does not allow for the use of user input as a loop counter in a `for` loop, so the value of `i` in `while (i < b)` must be determined by a separate input. This means that the loop body will never be entered if `a` and `c` are both zero, which is possible if user inputs are not sanitized.
+
+
+  Can you give me an example of a contract that would allow a user to enter a value for `x` that will cause the contract to go into an infinite loop?
+Can you also give an explanation of why this is a problem and how it can be fixed? I would appreciate if you could provide an actual Solidty code that demonstrates this issue. 
+
+Thank you
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your own development workflow.  How about Webpack? Etc. etc. explain like I am five
+
+
+
+  An incremental bundling tool is used to optimize the performance of web application development. It works by analyzing the

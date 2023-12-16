@@ -1,0 +1,5 @@
+  
+The label is 'No'.
+
+In the `deposit` function, the `_amount` variable is calculated by subtracting the current balance of the contract (`_pool`) from the balance after the deposited amount is transferred (`after`). The `_after` and `_before` variables are calculated using the same formula, so they have the exact same value. Therefore, `_pools` is not dependent on `_implementations`.
+ 

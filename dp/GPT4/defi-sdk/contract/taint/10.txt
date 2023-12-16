@@ -1,0 +1,3 @@
+Yes
+
+The variable `token` in the function `returnLostTokens` is an argument to the function, which means its value is provided by the caller of the function. Since the function is external, it can be called by any user of the smart contract, and thus the user controls the value of `token` that is passed to the function. However, it's important to note that the function can only be called by the owner of the contract due to the `onlyOwner` modifier, but the owner, when calling this function, is still a user who controls the value of `token`.

@@ -1,0 +1,3 @@
+No, the variable `supplierAccrued` in the function `distributeSupplierComp` is not data dependent on the variable `deltaBlocks` in the function `updateContributorRewards`. 
+
+The reason is that there is no direct assignment or usage of `deltaBlocks` in the function `distributeSupplierComp`. The value of `supplierAccrued` is calculated based on other variables and not influenced by `deltaBlocks`. Therefore, there is no data dependency between these two variables.

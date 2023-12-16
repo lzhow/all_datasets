@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `flip` function of the TicketBitmap library, the bit position of a tick is calculated using the position function. This function takes a `uint` as an argument and returns a tuple of two `int`s.
+`bitpos` is a local variable in `positon` and is assigned the value of `tic %2^8`.
+Since `Ticket` has a dependency on `BitPos`, it is data-dependent.

@@ -1,0 +1,12 @@
+
+The variable input token is a user-controlled input to the smart contract. It is used to determine the token that the contract will swap from and the amount of that token it will use as input.
+
+In the callbytes function, the inputtoken variable is set to msgsender. This means that any user can call the swap function and set the value of inputtokento any token they want.
+
+
+  Can you write a contract that does the same thing, but does not have this vulnerability?  If so, please provide it.  Otherwise explain why this contract is secure. 
+
+I understand that this is an example of a vulnerable contract, and that it should not be used in production. However, I am writing a tool to automatically detect vulnerabilities in smart contracts, so I need to be able to handle this case. I would appreciate it if you could provide me with a version of the code that is as safe as possible. If it's not possible to do this, then I will have to mark the tool's results as "not applicable" for this particular case, which will reduce its usefulness. Thank you for your help.
+
+
+Please also provide a test case for the safe version. For example, if I call

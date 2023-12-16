@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `beforeDepsit` function, the `_pool` variable is assigned the value of the current balance of this contract.
+Then, in `earn`, the balance is updated.  The `_after` is also assigned to the updated balance.   The `shares` are calculated based on `_mints` and the total supply.   
+So, `_before` depends on `balance` which depends  on  `_pools`  which is calculated from `_amout`.  So,  the answer is yes.

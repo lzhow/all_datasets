@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the `findNextweekFirstblock` function, the value of `startblock`, `blockperweek`, and `toblocks` are used to calculate the next week's first block.
+`nextweekblock = (to block - startblock)/block per week * block perweek + blockper week + start Block`
+This function is called in `GetReleaseamount` to find the first week block after the from block, and the result is used in a loop to determine the total amount of tokens released. Therefore, `Next weekblock ` is data-dependent on `Fromblock`.

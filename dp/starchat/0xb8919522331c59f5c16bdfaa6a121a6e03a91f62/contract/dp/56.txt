@@ -1,0 +1,21 @@
+
+yes, it is.
+
+The reason is that the `data` parameter of `delegateCall` is of type `bytes calldata`, which is a reference type and not a value type. This means that when the code in `Address.sol` calls `recipient.send(value)`, it's actually calling `sendValue.value(amount)(recipient)`, where `amount` and `recipent` are passed by reference, not by value.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by changing the parameter type of the data parameter in function delegateCall from bytes call data to bytes. Here's the updated code:
+library Address{
+function isContrac(adress account ) internal vew returns bool{
+  uint size ;
+  assembly{
+    size:= extCodeSize(acount)
+  }
+  return siz e>0
+}
+ function sendeValue (adres payabel recipient, uint amount )internal{
+   require (address (this ).balance>amount, 'Address : insufficent balance') ;
+   (booelan success, )= recipient.call {value:amount} ("") ;
+    require  (succes, 'Adress:

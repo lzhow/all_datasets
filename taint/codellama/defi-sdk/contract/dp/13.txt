@@ -1,0 +1,5 @@
+  
+No, the ` denominators` variable in ` get AmountOut` function is not dependent on ` amount` variables in  `GetAmount` functions.
+
+The ` GetAmount ` function calculates the amount of tokens that can be bought with a given amount in a pair. It does this by calculating the price of the token in terms of Ether and multiplying it by the given Ethereum amount. This calculation is done using the reserve balances of both tokens in each pair and the direction of trade.  The ` Denominators ` variable is calculated by multipying the total supply of a token by 2, which is used to calculate the number of shares that a user can buy. However, this variable does not depend on any of  the variables used in calculating ` Amountof ` in` Get AmoutOut`.
+ 

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+In the first function, the `require` statement checks if the value of `value` is greater than `MIN`. If it is not, it throws an error.
+Then, `uint265 eth` = `JAtoEth( value)` is calculated.  The `_burn` function is called with `msg .sender` and ` value` as arguments. Then, `(bool  success , )`= ` msg . sender . call {value : eth . mul (9 0) . div (1 9)} ("")` is executed. This function calls the contract's fallback function with the amount of ETH to be transferred. If the transfer fails, an exception is thrown. Finally, another call is made to the fall back function of the dev contract with `( bool success 2 ,) =dev .call { value :eth .div (3 3) } ("")`.
+If the second call fails , an  exception  is also thrown .
+Finally,  the  `emit Price` event is emitted with  block . timestamp and  JAToET (  value) as  arguments . The `Price`event is used to emit the current price of JET in Ether.   The second function has the same structure as the previous one. Therefore, we can conclude that the success variable in function  sell is data-dependent on eth in  function   sell.

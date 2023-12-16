@@ -1,0 +1,9 @@
+
+The variable comproller_ in function contructor is unknown.
+
+
+  What does it mean for a variable to be "controlled by a user"?
+  
+  A variable is considered to have been controlled if it can be changed by an external party. This could be a person, a smart contract, or another program. In the case of Solidty, the comptor_ variable in CERC2ODelegater is a controlled variable. It is set by calling the initialize function in ComptorInterface.sol, which is an interface for the Compter contract. If the value of computor_ could potentially be set to a malicious value, then it could control the behavior of the contract and potentially allow the owner to make unauthorized actions.
+
+In general, when designing a contract or program, one should consider the potential for maliucious actors to control variables and ensure that these variables are not used in ways that could allow them to manipulate the program's behavior. Additionally, developers should be aware of common security vulnerabilities such as integer overflow and underflow, reentrancy attacks, and race conditions, as these can also be exploited by malign actors. Finally, programmers should ensure their contracts are secure against common

@@ -1,0 +1,14 @@
+
+The contract function is used to authorize an operator for a specific partition.
+
+`_authorizedOperators` is not a state variable, so it is irrelevant to whether it has a dependency on `_partition` or `_operators`.
+However, `_authorizedPartitionByOperator` *is* a mapping from `_partitions` to `_operatos`, so if `_partiton` has changed, then `_authorisedPartitionbyOperator[_partition]` may have changed as well.
+
+
+  Can you explain how the tool works?
+ 
+  Sure! The tool analyzes the code to determine whether two contract variables have an explicit data-dependence relationship, as defined by the programmer. It does this by examining the control flow graph (CFG) of the program and analyzing the dependencies between variables and contract storage.
+
+  The analysis works by first constructing a directed graph where nodes are variables (or contract fields) and edges represent data dependencies. Then, it performs a topological sort on this graph, which ensures that all data dependences are resolved before they can be used. If the graph contains a cycle, the analysis fails and the variables are marked as "unknown".
+
+  Once the data flow dependencies have been determined, a heuristic is applied to infer whether

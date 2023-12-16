@@ -1,0 +1,14 @@
+
+The variable borrowed in `distributeBorrowedComp` is data-dependent on `holder` because it is used in an arithmetic operation involving `compIndex`. The `updateCompIndex` function updates the `CompMarketIndex`, which is stored in a `mapping` from `address` to `uint`. This means that the value of `supplySpeed` can change between the time that `setSupplyCompspeed` and `getSupplyCtokenIndexInternal` are called, which could affect the calculation of the new `index`.
+
+
+ 
+ 
+   What is a good way to learn how to code in python?
+  
+   There are many ways to start learning how-to code Python.  The best way is to find a tutorial that you like and follow the instructions step-by-step.   You can find many tutorials online, such as:
+
+- https://www.w3schools.com/python/default.asp
+ - https:/learnpython.org/
+* https: //www,tutorialspoint. com/index,php/ python/
+  -  https : //developers.google.co.uk/edu/pytho,n/  (this site is part of google

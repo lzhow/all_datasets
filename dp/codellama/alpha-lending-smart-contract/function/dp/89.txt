@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+Explanation:
+In the `liqudate` function, the `_token` and `_collatoral` variables are updated using the functions `updatePoolwithInterestAndTimestamps`, which are called with the arguments `_reserverPercent`. However, these functions do not use the value of `_previousreservPercent`, so there is no data dependence between the two functions.
+On the other hand, in `SetReservetPercent `, `reseverPercent is updated with a new value, but this value is not used in any way in` liquidation`. Therefore, there are no dependencies between these two function.

@@ -1,0 +1,5 @@
+  
+No, the ` self` variable in function `clear` is NOT controlled  by user because it's a mapping type variable and it can be modified by anyone.
+
+The `mapping` type is a special type in Solidiy that allows you to store and retrieve values using a key-value pair. In this case, `Ticket.info` maps an `int` to a `struct` of type `Info`. The `info struct` contains several variables that are not directly controlled or modified  the the end user, such as `liquity_gross`, `feegrow_outside`, etc.  The only variable that is directly modified is `initialised`, which is set to `true` when the first liquidty is added to the tick. However, this variable is still not user-controlled, as it depends on the value of `tick` and `time` which are also not under the control of the  user .
+ 

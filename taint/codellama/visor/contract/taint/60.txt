@@ -1,0 +1,5 @@
+  
+The variable 'retundata' in function 'functionDelegatecall' is labeled as 'Unknown'.
+
+This is because the 'delegateCall' function in Solidiy is a low level function that allows a contract to call another contract and execute its code. It does not have any control over the state of the called contract, and therefore the return data is also not under the control of user, as it can be modified by any other contract that calls the delegateCall function.
+ 

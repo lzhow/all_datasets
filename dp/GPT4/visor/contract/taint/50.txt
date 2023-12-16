@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `errorMessage` in the function `functionDelegateCall` is an internal parameter that is passed to the function when it is called from within the contract. It is not directly set by an external user or through a transaction initiated by an external user. Instead, it is defined by the developer within the contract code to provide a custom error message in case the delegate call fails. Since it is not influenced by the user and is determined by the contract's logic, it is not controlled by the user.

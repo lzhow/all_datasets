@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `binarySearch` function, the parameter `cardinality` is used to calculate the value of `l` and `r`, which are used as indices to access the elements of the array `Observaion[self]`. The value `i` used in this function is also calculated using the values of these indices. Therefore, `Self` has a dependency on `Cardinalty` as it is being used for indexing.
+Similarly, in `getSourrounding Observations` the parameters `time`, `target`, and`index`, are all used together to determine the indices of elements in`Obsevation` array. This means that `Time`,`Target`,and`Index` are also dependent on each other. 

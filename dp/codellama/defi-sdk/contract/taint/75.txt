@@ -1,0 +1,4 @@
+  
+No, the ` absolute InputAmount ` variable in function `execute` is NOT controlled  by user because it's calculated based on the input parameters and the contract' state.
+
+The `getAbsolutInputAmout` function is called to calculate the absolute input amount based  on  the token amount and amount type. This function checks the amount  type and calculates the  absolute amount accordingly. If the type is `Aboslute`, it returns the value of the`amount` parameter.  If it  is`Relative`,  it calculatesthe absolute value by multiplying the balance of  token by amount divided by DELEMITOR. In this case,  `amount ` is a user-controlled variable, but the result of this calculation is also not user controlled. Therefore, `absolueInput Amout `is not  controlledby theuser.

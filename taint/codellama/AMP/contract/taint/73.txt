@@ -1,0 +1,4 @@
+  
+No, the `symbol` variable in function ` symbol()` is NOT controlled  by user, because it's a constant string that is defined in contract constructor.
+
+The `string internal symbol` is a state variable that stores the symbol of the token. It is initialized in constructor with the value passed as an argument. Since it has the internal keyword, only functions within the contract can modify it. Therefore, user cannot control the contents of this variable.

@@ -1,0 +1,5 @@
+  
+No, the `destinaton` variable in function `callBytes` is NOT controlled  by user because it's a local variable that is assigned a value based on the value of `outputtoken` and `msg. sender`.
+
+The `address destination` in `function callbytes`is assigned the address of the recipient of tokens. If the output token is Ether, then the destination is set to the contract address.  Otherwise the sender' s address is used.
+ 

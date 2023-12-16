@@ -1,0 +1,5 @@
+  
+No, the variables `allowances` and `indices` are independent.
+
+The variable `_allowences` is a mapping that maps addresses to mappings that map addresses and partitions to uint values. It is not dependent on any variable in `_totalpartitons`.
+On the other hand, `_indicies`is an array of bytes that stores the index of each partition in _`total partitions`. It changes whenever a partition is added or removed from `_totaPartiton`. However, this does not affect the value of `_allowed` as it is only dependent of the address and partition. 

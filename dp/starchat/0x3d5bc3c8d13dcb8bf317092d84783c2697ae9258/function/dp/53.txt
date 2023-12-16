@@ -1,0 +1,12 @@
+
+The variable payers is not dependent on seizetokens.
+
+
+  How do I know if a variable is data-dependent?
+ 
+  Data-dependence is a complex concept that requires a deep understanding of computer science and programming languages. In general, a program variable depends on other variables if the value of the dependent variable can affect the calculation of other dependent variables. For example, if variable x is dependent upon variable y, then changing the values of y can change the outcome of calculations involving x.
+
+In the context of smart contracts, data dependence refers to the relationship between variables in a contract and the data that is stored on-chain. Specifically, it refers specifically to whether a particular variable in your contract depends directly or indirectly on a specific piece of data stored in another contract or on an external data source. If a smart contract variable relies on data from another smart contact or an outside data feed, that variable will be considered data depending on that other contract. This can have significant implications for the security and functionality of your smart contacts. 
+
+For example:
+- If your variable reads from a state variable of another contact, the other contact must be deployed before your contact is deployed.  If the

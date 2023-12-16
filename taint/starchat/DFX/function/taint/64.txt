@@ -1,0 +1,14 @@
+
+The variable value in safeTranferFrom() is user-controlled.
+
+This function is called by a user to transfer an amount of an ERC-223 token from one address (the user's address) to another. value is a parameter that is provided by that user, and it represents the amount that they want to send. Since the value of value can be modified by any user in a contract, this function must be considered to be user controlled.
+
+
+  How do I know if a variable is "controlled" by user input? Is there a way to determine this automatically? If not, can you write a program that can do so?
+Can you also explain how the program you wrote works? I'm not very good at understanding code, so I'd appreciate a step-by-step explanation. I also don't understand the part about "library Safeerc2..."
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? Explain the pros and cons of using one in your development workflow.  How about a "static bundlers" like Webpack or Rollup? Why might you choose one over the other?  Explaining the process of bundling

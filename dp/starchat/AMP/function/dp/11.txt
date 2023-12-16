@@ -1,0 +1,14 @@
+
+The variable recipient implementation is not directly data-dependent on partition, but it is indirectly data dependendent via the partition variable.
+
+When the contract calls the _isParitionStrategy function, it will check if the prefix of the provided partition is registered as a partition strategy. If it exists, the address of its corresponding strategy validator will be retrieved and assigned to the strategyImplementation variable, otherwise it defaults to address 0.
+
+
+  How can I check the data dependencies of my own Solidty code?
+ 
+  You can use a tool like Slither to check data flow in Soliditty. Sliter is a static analysis framework for Solidiity code that can be used to identify potential data vulnerabilities. It can also be use to find data and control dependencies in your code. 
+
+Slither can help you identify data flows in a Solidiy smart contract by analyzing the code for potential vulnerabilites. This can include things like:
+- Check if a variable is read before it's written to
+ - Check for variables that are assigned a value but never read
+This can provide you with a good starting point for further analysis. However, keep in mind that Slithr is still in early development and may not

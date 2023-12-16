@@ -1,0 +1,9 @@
+
+The function call `require(recipient.send(amount), "Transfer failed.")` is a call to the low-level Solidty function recipient send. This function sends ether to recipient and throws an exception if the transfer fails.
+
+In Solidit, the send function is not a member of the address type, but rather a built-in function that is available for all addresses. When you call send on an address, it forwards the call internally to a low level transfer function. If the recipient address is non-contract, then the ether is simply sent to that address. However, if recipient is actually a contract, Solidiy will execute the fallback function of that contract. In this case, since the contract does not have any ether of its own, and the amount sent is zero, there is no way for the transaction to succeed.
+
+
+  I'm sorry, I made a mistake. I meant to say that the variables `amount` and `balance` are dependent on each other. Can you explain why?
+ 
+  The variables amount and balance are related to eachother through the use of require. Require is used to check if a certain condition is met. For example, in this code, require is checking if address(balance)

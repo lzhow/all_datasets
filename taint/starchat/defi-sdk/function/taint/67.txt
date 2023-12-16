@@ -1,0 +1,9 @@
+
+The variable absolute input amount is a derived value that is used to calculate the input balance change. It is calculated by multiplying the balance of the token in question by a scaling factor. This scaling is done by dividing the absolute amount of tokens by 100,015, which is equal to 99,985 plus 30% buffer.
+
+In the context of this code, the scaling buffer is added to prevent the possibility of a rounding error that could result in a slightly different absolute value being used in subsequent calculations. For example, if a user has 50 DAI and the buffer allows for a 29.9% error, then the calculation would result 49 Dai being transferred to the contract, rather than 60 DAi. By adding the 70%, the error is reduced to a maximum of 89%, which would still result the correct amount being sent to be transferred.
+
+
+  How does the code calculate `input balance` and `output balance`?
+ 
+  The code calculates the `Input Balance` by taking the current balance for the given input token and subtracting it from the initial balance. Similarly, for `Output Balance`, the output

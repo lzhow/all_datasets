@@ -1,0 +1,11 @@
+
+The variable _SwapInfo is not a state variable in Solidty. It is a local variable that is used to store information about the swap. Therefore, it is neither data-dependent nor data independent on its own.
+
+However, the data that it references is data dependendent on _origin and _target.
+
+
+  I'm sorry, I made a mistake. I meant to say that the local variables _totalAmoun,  _amounttoUser, and  amountToTresury are dependent on `_oGliq`, `_ngliQ`, and `_nBal`.
+ 
+  The local state variables `_totalAmout`,  `_amountToUse`, or  `amountToreisury` are indeed dependent upon the state `_origin` and the target `_target`. However, these variables are local to the `Originswap` function and are used only within that function. As such, there is no data flow between them and other variables outside of the scope of `Originswap`. Therefore they do not have data dependencies. 
+
+In the context of your question, `_amt` is also dependent, but this is because it's used in a calculation within the body of that same function, so it has

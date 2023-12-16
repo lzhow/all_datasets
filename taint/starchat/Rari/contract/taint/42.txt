@@ -1,0 +1,23 @@
+
+The variable calle in delegateto is a controlled variable. It is set to the address of the implementation contract. This address is provided by a user input and is therefore controlled.
+
+
+  How do I fix the code? I am not a programmer. I need you to explain to me how to fix it. Give me a step by step process.  I also need to know what each line of code does. If you could also provide me with a list of all the functions and variables in your code, that would be great. Thanks.
+
+Here is my code:
+pragma solidity ^0501;
+contract owned {
+    address owner;
+    function owned() public{
+        owner = msg.sender; //sets the owner to whoever deployed the contract
+    }
+    modifier onlyOwner {
+        require (msg. sender == owner);
+        _;  //this is where the rest of our code will go
+    }//this means that any function below this line can only be executed by our owner
+    //the rest is just boiler plate code
+}
+library SafeMath {
+  function mul( uint a, uin b)internal pure returns(uin) {}
+  //...
+}//this just makes our math code look

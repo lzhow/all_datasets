@@ -1,0 +1,4 @@
+  
+No, the `_ blockTimestamplast` variable in function `getReserve` is NOT controlled  by user because it's a local variable that is defined in a function and it can't be modified by any external user or function.
+
+The variable is assigned a value in line 40 of the code, which is `uint33 blocktimestamp =uint( block .timestamp%2 ** 8);` and the value is calculated based on the current block timestamp.  The variable can only be accessed within the scope of function  ` getreserves` and can not be changed by external users or functions.

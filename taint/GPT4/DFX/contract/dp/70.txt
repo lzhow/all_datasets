@@ -1,0 +1,7 @@
+no
+
+The variable `_baseWeight` in the function `viewProportionalDeposit` is calculated within the scope of that function using the `curve.weights[0].mulu(1e18)` expression. It is a local variable and its value is derived from the `curve.weights` array at index 0 and a constant `1e18`.
+
+The variable `y` in the function `mintAdd` is a parameter of that function, which means its value is determined by the argument passed to `mintAdd` at the time of its call. The function `mintAdd` is a private pure function, which implies that it does not read or modify the state of the contract; it only performs operations on its input parameters.
+
+Since `_baseWeight` is calculated independently of the `mintAdd` function and there is no interaction or shared state between `_baseWeight` and `y`, there is no data dependency relationship between these two variables.

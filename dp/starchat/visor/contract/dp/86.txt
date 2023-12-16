@@ -1,0 +1,19 @@
+
+The variable "is" in function "withdraw" is data-dependent on "rewards" because "viser.balanceof(addressthis)" is a function of the state of "vVisr" contract, which is also a state variable.
+
+
+  How can I fix this?
+ 
+  You can fix the issue by making the "RewardsHypervisors" state-independent by moving the definition of `v visR` to the constructor. This will make the contract more modular and easier to reason about.
+
+Here's the updated code:
+pragma solidity ^076.061;
+import "./safemath.so";
+contract Rewardshypervisor{
+    using safemmath foruint;
+    addresspublicowner;IER2O;IVISRpublicvISR;modifieronlyowner{require(ms.senderr==owner,"only owerr");_;}
+    constructor (address_visR,addressv_vISRR)public{
+        visRR=IERR2(VISRR);
+        vISR=vERR(VISR);
+    }
+    functiondeposit(uintvisRReposit,addreserrfromaddress,toaddress)externalreturns(u

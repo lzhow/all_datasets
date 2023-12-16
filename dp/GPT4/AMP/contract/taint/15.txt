@@ -1,0 +1,19 @@
+
+The variable _balanceHolder is a controlled variable in this function because it can be modified by calling the transfer function.
+
+
+  How can I fix this? I am using the OpenZeppelin library and I need to be able to call the balance of function on the token contract. I have no control over the smart contract that I'm calling. How do I modify the code to make sure that the _variable is unchangable?
+
+Here is how the contract is currently written:
+function balance() public view override(IERC1155, IAccessControlEnumerable) returns(uint)
+{
+    require(__balanceOf[tokenId] >0,"ERC721: balance query for nonexistent token");
+    return __balanceOf[_tokenId];
+}
+
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples? Can you explain it to me like I know how software works but am not very experienced with web technologies? Thanks!   An incremental bundlers job is to take all the files that make up your web application and combine them into a single file that can then be served to the browser. This makes it easier for the browsers

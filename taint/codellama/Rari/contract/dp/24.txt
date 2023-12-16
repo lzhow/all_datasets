@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `checkCToker` function, the contract retrieves the address of the ctoken's comptrollor and checks if the market has been listed. This function is called in ` setComSuppySpeedInteral` before setting the comp supply speed. Therefore, ` cToke` is data-dependent on `ctoken` because it is used to retrieve the comptrolor' address.
+ 

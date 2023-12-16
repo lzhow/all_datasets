@@ -1,0 +1,4 @@
+  
+The variable 'reward' in withdraw function of the contract is labeled as 'No'. The reason is that the value of 'Reward' is calculated based on the balance of VISR tokens in this contract and the total supply of vVisr tokens. This value is determined by a formula and is therefore not under the control of a user, but rather a fixed value determined at the time of execution.
+
+In the withdrawal function, the revenue is transferred to the address specified by 'to' using the 'visit. safeTransfers' function. However, this function does not allow the transfer of tokens to a contract address, so the only way to transfer tokens is to specify a valid Ethereum address. Therefore, in order to withdraw tokens, a human user must provide a non-contract address as the recipient.

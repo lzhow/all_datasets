@@ -1,0 +1,4 @@
+  
+No, the ` offset` variable in function `decodeBytes` is NOT controlled  by user because it's a local variable and it can only be modified by other functions in this contract.
+
+The `shift` modifer in `OBI` library is used to modify the offset of the data being decoded. However, this modier is only applied to the functions that are using the modifiers, such as ` decodeByte3`, `deocdeBytes`, etc. Therefore, `offest` in these functions is also controlled and modified only by these modiers. 

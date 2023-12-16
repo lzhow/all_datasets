@@ -1,0 +1,19 @@
+
+The function signature is:
+
+`_beforetokentransfer(address,addressuint2)internal`
+This means that the internal function \_beforetokentransfer has 3 parameters: the first two are addresses and the third is a uint.
+In the body of the \_beforesendtoken function, there is an assignment to the local variable amount: `uint amount =...`.
+Therefore, the data dependence relationship between the amount parameter and \_decimals is unknown.
+
+
+  I'm sorry, I made a mistake. I meant to say that is `_totalSupply` dependent on `from` and `to`
+  
+  The function signatures are:
+
+  `_mint(addresspayable,uint)`
+  `_burn(uint)`:
+  This means the public functions \_mint and _burn have two parameters, a payable address and a non-payable uint respectively.
+  In the bodies of these functions, `msg.sender` is assigned to `account` for the mint function and to `_msgSender()` for \_burn.
+
+  Therefore, it is not possible to determine whether the total supply is dependent upon the from and/or to parameters. However, if the `_balances` mapping is used

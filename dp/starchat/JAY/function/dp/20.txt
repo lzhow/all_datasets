@@ -1,0 +1,8 @@
+
+The function "updateFee" is a function that is used to update the fees for the JayCrust NFT marketplace. It takes in no parameters and returns 4 values.
+
+- The first value is "sellNFTFee", which is set to the ratio of the current price of JAY to 0.01 ETH. If the price is higher than 5 Jays per ETH, then the sellNFT fee is 99.9%. If it is lower than that, the fee will be calculated as the inverse of how much the ETH is worth. For example, if the value of ETH goes from 300 to only 60, it will cost 720 JY, which would be a 88% sell fee. 
+
+In the code, this is calculated using the formula:
+`_sell_nft_fee_eth =  uint(eth_price) /  (1 ether)`
+If the eth_value is greater than the USD value for  JAy, we then calculate the percentage difference between the two using:  `_selln_ft_percentage = (eth price)  / (JAy price)` and multiply it by  `1e16`

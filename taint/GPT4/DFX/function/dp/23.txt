@@ -1,0 +1,10 @@
+Label: yes
+
+Explanation: The variable `nGLiq_` is data dependent on the variable `oBals_` in the function `viewTargetSwapData`. This can be observed from the following lines of code:
+
+```
+oGLiq_ += oBals_[i];
+nGLiq_ += nBals_[i];
+```
+
+Here, the value of `oBals_[i]` is added to `oGLiq_`, and the value of `nBals_[i]` is added to `nGLiq_`. Since `oBals_` is used to calculate `nGLiq_`, there is a data dependency between these two variables.

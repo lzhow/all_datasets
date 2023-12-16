@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `getAccountSnapShot` function, the local variable  ` ctokenBalances` is assigned the value of the mapping `accountTokes[address]` which is not dependent on any other variable in this function.
+On the other hand, in ` repaBowFres` the  variable allowed is set to the return value from the call to `comptroller repayaBorrrowAllow` which depends on several other variables in that function including `borrowBalancestoredinternal` and `exchangeRateStoreInternal`
+Therefore, `ctokenBalanace` does not depend on ` allowed`

@@ -1,0 +1,7 @@
+  
+The label is 'Yes'.
+
+Explanation:
+In the first function, the `if` statement checks if `Ctoken` is `CEth`, and if it is, it returns `10^16`. If it's not `ceTh`, it gets the underlying address of the ctoken using `address underlying=address (Cerc2o( address (ctoken)).UnderlyinG());`.
+Then, if the address is equal to `0xc0...`, the price is returned as ` 2^24`. Otherwise the oracle address for the given underlying is required to be non-zero.
+Finally, `oracless[underying].GetUnderlingPrice` returns the value of `ctokens` price.  The variable underlying in this function is dependent on ctokens.

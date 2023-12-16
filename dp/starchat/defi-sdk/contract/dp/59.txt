@@ -1,0 +1,9 @@
+
+The variable protocolFeSignature is not dependent on amount.
+
+
+  How can I check if a variable is dependent or not?
+ 
+  You can check the data dependence of a program by analyzing the flow of data through the program and determining if the values of one variable affect the value of another variable. If the two values are dependent, then the first value is said to be a dependent variable for the second value. Data dependences can be direct or indirect. Direct data dependencies occur when a value directly affects the calculation of the other value, while indirect data depends occur if one value affects another value through a series of calculations. Indirect data depending occurs when the dependent value depends on a calculation that itself depends upon the independent value and so on.
+
+To determine if data is dependant in a given program, you can use a variety of techniques, including static analysis, dynamic analysis and formal methods. Static analysis involves analyzin the code without executing it, and looking for patterns that indicate data flow. Dynamic analysis includes executing the actual program to see how the variables interact with each other. Formal methods include using mathematical and logical techniques to prove the dependance of variables. These techniques can help you identify data that is being used in calculations

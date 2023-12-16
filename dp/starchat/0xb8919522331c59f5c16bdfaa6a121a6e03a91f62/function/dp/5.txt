@@ -1,0 +1,12 @@
+
+The function call `success =  target. call {value:value} (data)` is a low-level Solidty function that executes a message call into an address. It takes two parameters: the address of the contract to call and the data to send.
+
+In the first function, the target contract is called with the value of `value` and `data`. The function then checks if the call was successful by checking the `succes` variable. If the success variable is true, it then assigns the return data from the called contract into the memory location ` returnData`.
+If the second function is executed, then the program will first check if there is enough ether in `address (this)` to pay for the transaction. Then, `iscontract (target)` will be checked to ensure that the targeted contract exists. After this, a new message will call the specified contract with ` value` as the amount of ether to be sent.
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications?
+   
+    An incremental bundling tool is used to optimize the performance of web application by combining multiple files into a single file. This reduces the number of requests made to the server and improves the overall

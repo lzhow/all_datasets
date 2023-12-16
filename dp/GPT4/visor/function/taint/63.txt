@@ -1,0 +1,6 @@
+  
+No.
+
+The variable _allowance is a mapping type in Solidiy, which is defined as follows:
+`mapping( address => uint ) _allowed;`
+It is declared in a contract and is used to store the allowance of a user to spend tokens on behalf of another user, as defined in ER2C771. It is an internal variable and cannot be controlled directly by a smart contract user as it can only be modified by calling the `approve` function. Therefore, the answer is no.

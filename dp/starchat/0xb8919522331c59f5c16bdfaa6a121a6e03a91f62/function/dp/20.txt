@@ -1,0 +1,9 @@
+
+Yes, `isContract` and `FunctionCall` are dependent on each other.
+
+The reason is that the `extcodeSize` function in `assembly` block reads the size of the code at the given address, and the address is determined by the value of `account` variable. So, if the account variable is changed in one function, the other function will also be affected.
+
+
+  Can you explain why this is so?
+ 
+  Yes, I can explain how this works. In the isContrac function the assembly block is used to read the length of code stored at an address. This length is then compared to 1 to determine if there is any code present at that address or not. If the target variable in function call is a contract address then the extCodeSize function would return a length greater than 2, which would make the result of this function true. However, this does not mean that target is dependent upon the input of isConract. To see this, consider the case where the contract at target address has a function that reads from the state of another contract. Since the second contract is not present in this code, it is impossible to know if this will happen or will not happen. Therefore

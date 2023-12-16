@@ -1,0 +1,5 @@
+  
+The variable 'amountout' in function 'doSwaTthroughOrinPool' is labeled as 'Yes'. The reason is that the value of ' amountout ' is calculated based on the input parameters 'swapdata. amountspent'and ' swapdata .amountreceived' which are both controlled  by user input.
+
+In the code, the ' doSwiptTrohoughorionpool' function takes in a 'SwaptData' struct as a parameter, which contains the amount spent and the desired amount received. These values are then used to calculate the output amount using the OrinMultiPooLibrary's 'getamountouts' or ' getamountins' functions.  The output of these functions is then stored in ' amounts' array, and finally, 'amountout' variable is set to the first element of the array. Therefore, since the values of  'swaptdata' are controlledby the users, so is ' amounout'.
+ 

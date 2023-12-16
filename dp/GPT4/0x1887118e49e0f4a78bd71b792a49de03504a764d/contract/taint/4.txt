@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `newAdmin` in the function `changeAdmin` is a parameter that is passed to the function when it is called. Since function parameters are provided by the caller of the function, and in this case, there are no restrictions on who the caller can be (other than the `onlyAdmin` modifier which restricts the caller to be the current admin), the value of `newAdmin` is indeed controlled by the user who invokes the `changeAdmin` function. However, it's important to note that only the current admin can successfully execute this function due to the `onlyAdmin` modifier, but the choice of the `newAdmin` address is at the discretion of the current admin, who is a user.

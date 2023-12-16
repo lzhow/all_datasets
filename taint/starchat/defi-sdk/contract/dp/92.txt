@@ -1,0 +1,13 @@
+
+The contract has a function called `cancelAccountSignatu`re that takes in an `Account Signature`. This signature is used to prove that the user has access to the funds in their account.
+
+If the `msg sender` is not the same as the account address, then the signature will be invalid and the transaction will revert.
+
+
+  I'm sorry, I made a typo. I meant to say `execute`.
+ 
+  The contract does not have an execute function. It has an function named `call` that is called when the caller calls the execute method. This function is responsible for executing the swap.
+
+  The function call is made by the router contract, which is a contract that implements the Irouter interface. When the call function in Router contract is executed, it calls `handleInput` and `validateAndExpi`rre to validate the input and account signature. After the validation is complete, the Router calls execute on itself, passing in all the necessary parameters. 
+
+  The execute call in turn calls other functions to perform the actual swap, such as `getReturnedAmou`nts and`emitExecut`ed. These functions are responsible to calculate the output amount and emit the Execut event. Finally,

@@ -1,0 +1,14 @@
+
+The variable err in mulEx3() is a local variable that is used to hold the error code for the operation. It is declared as a uint type and is initialized to MathErr.NoError.
+
+Since the purpose of the mul_Exp() function in this contract is to perform multiplication on two Exp structs, which are essentially rationals represented as integers, the err variable is set to the result of a call to mul() on the mantissas of both input Exp objects. This call is made using the SafeMath library, and the input values are first scaled by a factor of 3, to ensure that the final result will not overflow.
+
+
+  Can you explain how the `mul_exp` function works? I'm having trouble understanding the code. I think it's supposed to multiply two exponentials, but I don't understand how it works. Can I ask you to explain it to me? If you could explain in detail, I would appreciate it. Thank you. 
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples?
+I ask because I've seen the term in relation to Webpack, Rollup, Browserify,

@@ -1,0 +1,4 @@
+  
+The variable 'reserves1' in function '_swap' is labeled as 'Unknown' because it depends on the input parameters of the swap function.
+
+In the _ swap() function, the reserve variables are calculated based on input amounts and the current reserves of each token in a pool. However, these reservations are not directly controlled or manipulated by any user input. Instead, they are determined by other factors, such as the amount of tokens that are being swapped and their current balances in each pool, which are in turn determined based the liquidities of users in those pools. Therefore, while the reservation variables may be influenced by user inputs, their values are ultimately determined and controlled indirectly by these other variables.

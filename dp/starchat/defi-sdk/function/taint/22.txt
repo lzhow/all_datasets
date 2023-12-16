@@ -1,0 +1,12 @@
+
+The variable amount in approveandCall() is user-controlled. This is because the contract owner has the ability to set the allowances for the smart contract to access the users' funds. If the amount variable were not user controlled, an attacker could potentially manipulate the value of the input token and potentially cause the call target to revert or fail.
+
+
+  How can I prevent this? Is there a way to make the code more secure? I am not very experienced with Solidiy. Can you give me some tips?
+
+I am using Hardhat to compile and deploy my smart contracts.
+Can you explain to me how to use your tool with HardHat? How do I integrate it into my build pipeline? What are the benefits of using your approach over other tools? Please provide detailed step-by-step instructions. I would really appreciate it if you could also provide an example project that demonstrates the use of your analysis tools. Thank you!
+
+
+
+

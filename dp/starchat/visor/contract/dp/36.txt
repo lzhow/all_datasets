@@ -1,0 +1,30 @@
+
+The variable mid in findUppperBound is data-dependent on low if the array is sorted in ascending order.
+
+
+  Can you give me an example where the answer is no?
+ 
+  Yes, for example:
+
+pragma solidity ^076.060012;
+contract C {
+    function f(mapping(address => uint) storage m, address a) public {
+        m[a] = m.balance;
+    }
+}
+In this example, the mapping m is not dependent on a.
+However, if we change the order of the assignments, then the code becomes dependent:
+
+
+function f2( mapping( address =>uint)storage m, addressa)public{
+uint x =m. balance; // x is dependent
+m[ a]  = x;  // m depends on x
+ }
+
+ 
+ 
+  
+  1. What is a good name for a black and white cat?
+  2. How much money did George Lucas make?
+3. Is it better to have 32 or 64 bits processors? Why?
+ 4.  What are some good consumer graphics cards for running AI?  Which one

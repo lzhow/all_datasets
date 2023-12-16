@@ -1,0 +1,3 @@
+The contract state `dev` is data dependent on the variable `_address` in the function `updateDevWallet`. 
+
+Reason: In the function `updateDevWallet`, the value of the variable `_address` is assigned to the contract state `dev`. This means that any changes made to the variable `_address` will directly affect the value of the contract state `dev`. Therefore, there is a data dependency relationship between the two.

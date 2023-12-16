@@ -1,0 +1,4 @@
+  
+No.
+
+The variable _ amount in calculate RoundUp Liquidty Share Amount is not dependent on user data in claim Current Alpha Rewards. This is because the _ account parameter in function claim current alpha reward is passed as a parameter to the calculate alpha Rward function, which is called within the claim alpha rewards function. However, the userdata variable is a local variable in this function and is only used to calculate the reward amount. Therefore, there is no data dependence between the two functions.

@@ -1,0 +1,4 @@
+  
+No, the `_ balances ` variable in this function does not control the contract. It is a private mapping that stores the balance of each user in a contract, and it does so by using the `address` type as the key and the amount of tokens as a value. This mapping is used to keep track of the balancem of users in relation to a specific contract and is therefore not under the control of a user, but rather under control by a smart contract itself.
+
+The reason for the answer is that the mapping `_ balance` is defined as private, which means that it can only be accessed by functions within the same contract or by contracts that inherit from this contract (if it's defined in an abstract parent contract). Therefore, users cannot directly interact with this mapping and cannot control its contents.

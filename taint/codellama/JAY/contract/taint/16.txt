@@ -1,0 +1,4 @@
+  
+No, the ` success` variable in function `buynft` is NOT controlled  by user because it's a local variable and it can't be modified by any external user, only by internal code.
+
+The `require` function is used to check if a condition is met, and if it isn' t, an exception is thrown. In this case, ` require (msg .value> = ( total) .mul (buyenftfeeeth),"You must pay more Ether");` checks if `msg` .`value` >= `total` * ` buyenft feeeth`. If the condition isn 't met , an error is raised. However, this doesn' `t mean that the value of `sucess` can be controlled. It' s a variable that is created and used internally by `transer` and `call` functions.

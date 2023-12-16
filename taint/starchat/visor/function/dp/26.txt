@@ -1,0 +1,9 @@
+
+Yes, the `V` variable in this function is data-dependent on both the signature `s` and the hash `hash` variables.
+
+The reason is that the ECDSA `ecrecover` function takes as input the v value, which is derived from the R and S values and a hash of the original message. If the V value is incorrect, then the ecdsaRecover function will not be able to correctly recover the public key that was used to create the signatures. This means that if the value of V is dependent on either the S or R values, or the message hash, it is possible that there could be a dependency between the two.
+
+
+  Can you explain why this is true?
+ 
+  The reason this code has a potential data dependence on `S` is because the condition on line 3 of `function ecrcover` requires that `uint(S) < 115,791,998,100,039,344,093,437,594,495,608` be true. Since `184` does not fit in 64 bits, Solidty will

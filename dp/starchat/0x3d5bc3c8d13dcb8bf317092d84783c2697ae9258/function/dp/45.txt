@@ -1,0 +1,12 @@
+
+The function balanceofUnderlyings reads as follows:
+
+`function BalanceOfunderlying( address Owner ) public returns(uint){`
+&nbsp;&nbsp;`Exp memory ExchangeRate=Exp({Mantisas:ExchangeRatecurrent()})`&emsp;
+`(Matherror merr,uint balance)=mulScalartruncate(Exchangerate,accounttokens[Owner])` &emsp;&emsp;`require(Merr==Matherr.noerror,"balancecouldnotbecalculated")`  
+return balance;}
+In this function, the exchange rate is calculated and stored in a variable called exchangerate. Then, a mathematical operation is performed to calculate the balance of the user.
+Now, let's look at the transfertokens function:
+
+ `function TransferTokens(Address Spender,Address Src, Address Dst,Uint Tokens)internal returnsuint{`   
+•&ensp;•`uint Allowed=Comptrollerransferallowed(Addressthis,Src,Dst,Tokens)`&emsp;&enbsp;&em&sp;`if(Allowed!=0){returnfailopaque(error.comptrollersubjection,Failureinfo.Transfer_Comptrller_Rejection,allowed);}`&ems&bsp;

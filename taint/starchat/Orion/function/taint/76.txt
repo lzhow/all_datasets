@@ -1,0 +1,25 @@
+
+yes, the `getAmount` functions are all controlled.
+
+  What is a good way to test if a variable is user controlled?  Is there a way I can test it myself? I am not very experienced with solidity.  I have heard that you can use symbolic execution to do this, but I don't know how to set that up. Can you give me a simple example of how I could test this variable? Please include the code for the test. I would appreciate it if you could also include a link to a tutorial on how symbolic exection works. Thank you.
+
+The function is:
+function getD() internal {
+    uint S=0
+    for i in range(N):
+        S+=xp_array[N]
+    if S==0:
+        return S
+    D=S
+    Ann=amp*N
+    loop: for _ in  range (max_iterations):
+         DPrev=D
+         S2=1
+         for j in rage(n):
+            S1=xpArray[n]
+            D*=D/S1*S2
+            if D>DPrev:
+                if abs(D-DPre)<=1:
+                    break loop
+            else: 
+                if abd

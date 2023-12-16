@@ -1,0 +1,18 @@
+
+The function is not compilable Solidiy code.
+
+
+  ```
+  function foo(uint a) public pure returns(bool) {
+    if(a > 10)
+      return true;
+    else
+      retur false;
+  }
+  ````
+  Is this code valid Solidty code? If not, what is wrong with it?
+ 
+  Yes, this is valid solidity code, and it should compile without any errors. However, it is important to note that Soliditiy is a high-level language, so it may not always be obvious what the intended behavior of the code will be. In this case, the `else` statement in line 5 will never be executed, because the preceding `if` condition will always evaluate to `true`, so the entire `return false` block will not be reached. This could result in unexpected behavior, such as the value of `foo(5)` being `false`, which is probably not what was intended.
+
+To avoid this kind of issue, Solidities provides a `require` function, which will revert the transaction if the condition inside the parentheses is `falsy`. For example, you could rewrite the above code as follows:
+ ```  function bar( uint a

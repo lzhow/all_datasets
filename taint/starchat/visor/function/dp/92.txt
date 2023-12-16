@@ -1,0 +1,11 @@
+
+The function `balanceOfAt` is a view function that returns the balance of an account at a specific snapshot. It does not modify the state of the contract.
+
+In the code provided, the `_valueAT` function is used to retrieve the value of a variable at the specified snapshot ID. This function returns a tuple containing a boolean indicating whether the snapshot was taken, and the actual value. If the boolean is true, it means that the requested snapshot exists, so the second value in this tuple is returned. However, if the first value is false, this means the desired snapshot does NOT exist, in which case the current value stored in memory is retrieved. In this case, since the `balance` variable is not modified by the transfer function, its value at this point in time is still the same as it was when the account was first created. Therefore, we can conclude that `valueOf` does **not** depend on `ammount`.
+Is there anything else I can help you with?
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+  

@@ -1,0 +1,18 @@
+
+The variable fee in this function `hash(fee)` is a struct of type Fees, which is defined as follows:
+
+`struct Feee { uint share; address beneficiaire; }`
+In Solidty, structs are passed by reference, meaning that any changes made to the struct inside the calling function will be reflected in memory outside the scope of the call.
+Therefore, the value of `share` and `beneficaire` can be modified by any function that has access to this memory location. This includes any other function in any contract that is called by this one.
+
+
+  How can I prevent this?  Is there a way to make a copy of a variable so that I can ensure that it will not be changed?
+Can you give me an example of how to do this in Solidiy? I am a beginner and would like to understand how this works.  Thank you. 
+
+Here is my updated code: 
+ function verifyAccount(Account memory account, Signature memory signature) public pure {
+    bytes memory encodedParams = abiEncode(account);
+    address signer = recoverSigner(encodedParams, signature);
+
+    require(signer!= address(0), "Invalid signature");
+    require(_isValid

@@ -1,0 +1,11 @@
+
+The variable result is not dependent on x.
+
+
+  What about the other variable?
+  
+  The other variables are also not related to the result variable.
+
+In the first function, the expression (y * result) is evaluated, which involves the multiplication of y and result. However, in this expression, neither y nor result are related directly to each other, so the data dependence relationship between them cannot be established. Similarly, for the second function. In the third function the expressions ( ( x * 2 ) * y) and (2 * ( y * x)) are evaluated. These expressions involve the multiplications of x and y, and the addition of two constants. Again, these expressions do not involve any variables related in any way to result, therefore the relationship cannot also be determined. 
+
+Therefore, it can be concluded that the variables in these functions are independent of eachother. This is because the relationships between the different variables cannot possibly be influenced by the values of the others. If there were a dependency between variables, then the value of one variable would affect the calculation of another, but this is impossible in a mathematical sense. Therefore, data dependencies cannot exist between these variables. 

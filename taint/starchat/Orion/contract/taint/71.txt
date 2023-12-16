@@ -1,0 +1,16 @@
+
+The variable token in safeTransfserTokenorETH() is a contract address that is passed in by a user, so it can be considered controlled.
+
+
+ 
+Please explain why
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies. I am trying to learn more about how the bundling and optimization of web apps works under the hood. Thanks!   An incremental bundlers job is to take all the files that make up a web application and combine them into a single file that can then be served to the users browser. This makes the application load faster as the browser only has to download a small file instead of many files.
+
+An incremental build system only updates the parts of the code that have changed since the last build. For example if you are working on a react component and only change the text inside of it, the incremental system will only update the changed text instead the entire component. 
+
+This makes development much faster and easier as you don't have to wait for the build to finish before you can see the changes you have made

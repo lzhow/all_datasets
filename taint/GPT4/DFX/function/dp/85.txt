@@ -1,0 +1,3 @@
+Label: yes
+
+Explanation: The variable `tAmt_` in the function `originSwap` is data dependent on the variable `_outputIx` in the function `getOriginSwapData`. This is because the value of `_outputIx` is used to update the `nBals_` array in the `getOriginSwapData` function, which is then used to calculate the value of `tAmt_` in the `originSwap` function. Therefore, any changes to the value of `_outputIx` will affect the value of `tAmt_`.

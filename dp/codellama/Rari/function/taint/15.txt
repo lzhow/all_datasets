@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the constructor of the contract, the `multipliersPerblock` and `baseRatesPeryear` are set to the values passed as arguments to constructor. These values are controlled directly by users.
+On the other hand, `kick` is set based on the value of `borrowRate` which is calculated based `utilization rate` of borrower. `Utilization Rate` in turn is based  on `cahs`, `Borrows` , and  `reserver` values.  These are all controlled indirectly by user through the use of other functions. Therefore,  the  variable  is indirectlly controlled  by  user and the lable is yes.

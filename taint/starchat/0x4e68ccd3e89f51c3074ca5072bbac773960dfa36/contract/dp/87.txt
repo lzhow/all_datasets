@@ -1,0 +1,12 @@
+
+yes, it is data-dependent.
+
+The reason is that the value of `maxLiqidity` depends on `tickSpacing`, which in turn depends directly on both `minTick` and `MAXTICK`, and indirectly on all the other variables in that function.
+
+
+  Can you explain why it's data dependant?
+ 
+  The value `liq` is dependent on two factors: `x` (the value passed to the `add` function) and the current value in memory of the contract. Specifically, the memory value is `y`, the second parameter to `LiqudityMath::add`.
+If `z` were not dependent upon `memory`, then the compiler could optimize the code to remove the dependency. However, since `Z` *is* dependent, this optimization is not possible. Therefore, `Y` must be included in `X` to ensure that `LIQ` remains correct. This is why `Memory` needs to be considered when analyzing data dependencies. 
+
+In general, data flow analysis is a complex and important topic in computer science. It is used to determine which parts of a program need to change in order to maintain correctness. In this case,

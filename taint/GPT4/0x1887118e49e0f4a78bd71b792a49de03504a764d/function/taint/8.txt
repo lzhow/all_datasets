@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `i` in the function `add` is a loop counter variable used to iterate over the arrays `underlyings` and `_oracles`. It is not directly controlled by the user; instead, it is initialized and incremented by the Solidity runtime as part of the for-loop construct. The user can influence the length of the loop by passing arrays of a certain length, but they cannot control the value of `i` directly within the loop. The loop counter `i` is determined by the loop's internal mechanics and is used to index the arrays provided as input to the function.

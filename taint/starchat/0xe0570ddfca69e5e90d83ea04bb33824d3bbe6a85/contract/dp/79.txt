@@ -1,0 +1,10 @@
+
+yes, the `approveDelay ` is data-dependent on `_ token` because it is used to control the time period during which a new strategy can be proposed and accepted.
+
+
+  Can you explain why this is true?
+ 
+  The `approvalsDelay`, which is a constant defined in Solidty, is part of the state of a contract. It is updated by the smart contract owner and is therefore a state variable. When a user calls the proposeStrategy function, it updates the value of `stratCanddiate. proposedtime` to `block. timestamp`. This value is then used in conjunction with the approval delay to determine if the proposed strategy is valid. If the delay has passed, then the user can call the upgradeStrategy() function to update the strategy to a different implementation. This function updates `strategy` with a reference to an implementation of Istrategy and sets `straCandidate. implementation` back to  `address (0)`.
+
+ 
+ 

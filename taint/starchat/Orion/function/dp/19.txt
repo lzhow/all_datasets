@@ -1,0 +1,9 @@
+
+Yes, `amoutOut ` is data-dependent on ` pair ` in `_ swap`. The reason is that the value of ` amount ` depends on whether the ` input ` token is `token0` or not. If `input` is equal to `toke0`, then `reserveOutput` will be equal `0`. This means that `getAmoutInUv` can't be computed, and therefore ` amout ` can also not be calculated.
+
+
+  Can you explain why this is?
+ 
+  Sure, I'd be happy to explain.
+
+In the first function, the code assigns the values of the variables ` reserveIn ` and ` reserverOut `. The value assigned to the input token will determine which of these two values is assigned a value. For example, if the token input is token 0 (token 3), then the reserve input will have the same value as the resereve output. However, in this case, token3 is not the one being swapped, so the second token (in this example token1), will always have its reserve output assigned the the swap amount. This is because the amount of token2 that is being exchanged is dependent on token one's reserve

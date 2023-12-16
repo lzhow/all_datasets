@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `prod0` in the function `mulDiv` is local to that function and is not accessible outside of it. Similarly, the variable `b` in the function `mulDivRoundingUp` is a parameter of that function and is also local to the `mulDivRoundingUp` function. Since both variables are local to their respective functions, there is no direct data dependency between them. Data dependency would require that the value of one variable directly influences or is derived from the other, which is not the case here as they exist in separate function scopes and there is no shared state or passed reference between them.

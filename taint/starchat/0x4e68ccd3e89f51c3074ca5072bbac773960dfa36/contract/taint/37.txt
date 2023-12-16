@@ -1,0 +1,14 @@
+
+The variable `blocktimestamp` in line 30 is a user-controlled variable. It is used to determine the time delta between two observations, which is then used in a calculation to update the cumulative tick and seconds per liqidity values.
+
+
+  Can you explain how the blocktimestamp variable is user controlled?  What is it used for?
+
+I understand that it's used as part of the calculation of tick_cumulative and second_per_liq_cum, but I don't understand how it relates to user input.  Can someone explain it to me? I'm struggling to understand the code.
+Can you also explain why the "initialized" variable in Observations is set to true in both the initialize function and in transform? Is it just a redundant check? Can it be removed? 
+
+Thanks!
+
+
+
+

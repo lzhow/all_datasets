@@ -1,0 +1,4 @@
+  
+No.
+
+The contract variable `pool` is not directly dependent on `_userPool`. The `userData` variable is created and assigned to the `UserData[userAddress][tokenAddress]` mapping, which is a separate data structure from the pool data. Therefore, the data in `Pool` does not depend on `usePool`, and the answer is 'No'.

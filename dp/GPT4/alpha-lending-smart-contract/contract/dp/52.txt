@@ -1,0 +1,3 @@
+Label: no
+
+Reason: The variable `_account` in the function `burn` and the variable `_from` in the function `_transfer` are function parameters that are independent of each other. Each function call provides its own arguments for these parameters, and there is no code within the `burn` function that references `_from`, nor is there code in the `_transfer` function that references `_account`. They are used in different contexts and do not share a data dependency relationship within the given code.

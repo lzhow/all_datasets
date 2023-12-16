@@ -1,0 +1,15 @@
+
+yes
+
+
+ 
+Is the contract address that is being passed in as a parameter to the `interfaceAddr` function controlled or not?
+
+The `ERC165` standard defines a way for contracts to publish a list of interfaces that they support. This can be used by other contracts or applications to check if a contract supports a certain feature, for example if it supports some kind of token standard like `EIP223`.
+To check for support, contracts use the interface identifier, also known as the "interface hash", which is a keccak26 hash of the canonical name of an interface.
+For example, the ERC-2981 interface hash is `0xb47e3cd837dDF8e4c5424d3885b67b76C508D3B4`.
+ 
+  The contract being checked is an address passed as an argument to a function. It is therefore not under the control of a user, and therefore cannot be considered to be "controlled by a specific user".
+ 
+  What is this code doing? I don't understand it 
+  This code defines an implementation of IAMPToken

@@ -1,0 +1,4 @@
+  
+No, the ` comp Accru_ ` variable in update Comp Supply Index is NOT controlled  by user because it's a local variable that is created in this function and is only used within this scope. It is a temporary variable used to store the value of the comp accrual for the given ctoken.
+
+The value is calculated based on the current comp supply speed, total supply of ctokens, and the number of blocks that have passed since the last update. This variable is used in a calculation to determine the new comp index for a given market. However, since it only exists within the scope of this specific function, there is no way for an external user to control its value.

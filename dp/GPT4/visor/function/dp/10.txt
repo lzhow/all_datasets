@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `snapshotted` in the function `totalSupplyAt` is directly assigned the value returned from the function `_valueAt`, which computes its return values based on the state of the `snapshots` variable. The `snapshots` variable is used to determine the index and subsequently to check if the snapshot exists and to get the value associated with that snapshot. Therefore, `snapshotted` is data dependent on `snapshots` because its value is determined by the logic and data contained within `snapshots`.

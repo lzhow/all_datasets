@@ -1,0 +1,14 @@
+
+The variable "time" in function "lte" is a user-controlled input. It is used to compare the block timestamps of two observations, and determine whether or not the first observation occurred before or after the second observation.
+
+In the given code, the "block.timestamp" variable is also used in this manner. However, in order to prevent reentrancy attacks, this variable cannot be directly accessed by users. Instead, a timestamp is passed as an argument to each function that requires access to the current block timestamp.
+
+
+  Can you explain how the re-entrance attack works? I'm not sure I understand how it's possible to call a function like "getSurroundObservatons" recursively. Can the attacker call this function again and again, causing the stack to keep growing? If so, how does the code handle this? Can this attack be used against the contract? How? Please explain in detail. I would appreciate it if you could also provide an example of how this could be exploited. Thank you. 
+
+
+
+
+
+   What is an "incremental bundler" for web applications?
+A common approach to optimize web application delivery is to use a bundling and minification tool to

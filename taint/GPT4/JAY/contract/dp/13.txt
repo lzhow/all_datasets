@@ -1,0 +1,11 @@
+Label: yes
+
+Reason: In the Solidity contract provided, `_balances` is an implicit state variable that is part of the ERC20 token standard, which tracks the balances of token holders. Although `_balances` is not explicitly mentioned in the provided code snippet, it is affected by the `_mint` and `_burn` functions of the ERC20 standard, which are used to increase or decrease the balance of an account.
+
+In the `buyNFTs` function, the `erc721TokenAddress` array is used to determine the number of ERC721 tokens being bought by calling the `buyERC721` function. The total number of tokens bought (including ERC721 and ERC1155 tokens) is then used to calculate the amount of JAY tokens to be burned from the sender's balance:
+
+```solidity
+_burn(msg.sender, total.mul(buyNftFeeJay));
+```
+
+The `_burn` function will internally update the `_balances` mapping to reflect the decrease in the sender's JAY token balance due to the purchase of NFTs. Since the `erc721TokenAddress` array influences the `total` variable, which in turn affects the amount of JAY tokens to be burned, there is a data dependency relationship between the contract state `_balances` and the variable `erc721TokenAddress` within the `buyNFTs` function.

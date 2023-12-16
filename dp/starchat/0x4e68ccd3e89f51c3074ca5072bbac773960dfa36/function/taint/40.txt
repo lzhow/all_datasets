@@ -1,0 +1,13 @@
+
+The variable blocktimestamp in function Write is NOT controlled directly by a user, but it can be indirectly controlled through the variables block timestamp and time. Block timestamp is a variable that is updated by each block, and it represents the time when the block was created. Time is another variable in Solidty that represents how much time has passed since the contract was deployed. If the value of block.timestamp is greater than the input time variable, then the difference between the two values will be greater or equal to the amount of time that has elapsed since block time was updated. This means that the control flow can reach the point where blocktime is compared to time and the comparison will always evaluate to true, regardless of the actual value stored in blockTime.
+
+
+  Can you explain how the code works? I'm not very good at it
+
+
+
+
+
+   What is an "incremental bundler" for web applications? How does it work? What are some examples?
+
+An incremental bundling tool or bundlers is used to bundle together the various components of a web application, such as JavaScript files, CSS files and images, into a single file that can then be served to users. Incremental bundl[ing] is useful because it

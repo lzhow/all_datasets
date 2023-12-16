@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The contract state `pools` is indexed by the address of the ERC20 token, which in this case is derived from the variable `_collateral`. The line `Pool storage collateralPool = pools[address(_collateral)];` shows that the state of `pools` is accessed using the address of `_collateral`, establishing a data dependency relationship between `pools` and `_collateral`. Changes to `_collateral` would affect which entry in `pools` is accessed or modified, hence they are data dependent.

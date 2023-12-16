@@ -1,0 +1,12 @@
+
+The function "sub" has two parameters "a" and "b". The "require" statement checks if the value of " b" is less than or equal to the " a" value. If the condition is not met, the program will revert and an error message will be displayed.
+
+In the first function, "errorMessage" represents a string that is used to provide additional information about the error that has occurred. In the second function the same string is passed as an argument, but it is never used. This means that the string can be removed without changing the functionality of the code. Therefore, it can also be considered as a redundant parameter.
+
+
+  Can you explain how the tool works in more detail?
+ 
+  Sure, I'd be happy to explain in detail how my tool analyzes Solidty contract codes and classifies variables and contract state dependencies.
+
+1. Data Dependency Analysis:
+My tool starts by analyzing the contract's source code to identify all variables, functions, and state variables. It then uses a set of rules and heuristics to determine whether each variable or state has a direct or indirect dependency on any other variables in scope. These dependencies are then classified as either data-dependent or independent.

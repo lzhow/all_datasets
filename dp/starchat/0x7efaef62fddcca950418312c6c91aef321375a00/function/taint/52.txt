@@ -1,0 +1,11 @@
+
+The variable reserve is a state variable in Pangake Pair contract. It is used to store the reserve balance of the two tokens in a Pangoke pair. Since it's a contract internal state, the value of reserve can be modified by calling the swap function. Therefore, we can say that the state of variable is "controlled by user".
+
+
+ 
+ 
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+  
+   An incremental bundling tool is typically used in web development to bundle together all the different files that make up a web application into a single file that can then be served to the end user's browser. This makes it easier for the browser to load the application since it only needs to download a small amount of data instead of many small files.
+
+   The key feature of an incremental bundle tool like Webpack is that it can automatically figure out which files depend on which other files and bundle them together in an optimal way. For example, if a file makes a call to a function defined in another file, Webpack can figure this out and ensure that both files are included in

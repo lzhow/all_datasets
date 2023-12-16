@@ -1,0 +1,3 @@
+Label: no
+
+Explanation: The variable `roundID` in the function `getLatestPrice` is not controlled by the user. It is a local variable that is assigned the value of `priceFeed.latestRoundData().roundID`, which is a function call to an external contract. The value of `roundID` is determined by the external contract and not by the user.

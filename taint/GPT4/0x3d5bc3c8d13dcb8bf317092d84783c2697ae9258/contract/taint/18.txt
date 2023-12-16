@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `liquidator` in the function `seizeVerify` is a parameter that is passed to the function when it is called. Since this function is external and does not have any restrictions on who can call it (such as `onlyOwner` or a similar modifier), any user can call this function and specify the value for `liquidator`. Therefore, the variable `liquidator` is controlled by the user.

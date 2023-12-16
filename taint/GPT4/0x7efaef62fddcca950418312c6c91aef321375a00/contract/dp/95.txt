@@ -1,0 +1,7 @@
+Label: no
+
+Reason: The variable `balance1` in the function `_update` represents the balance of `token1` held by the contract at the time of the function call. It is calculated by querying the balance of `token1` from the corresponding ERC20 token contract and is used to update the contract's internal `reserve1` state variable.
+
+The variable `feeTo` in the function `_mintFee` is an address that represents the recipient of the trading fees if the fee mechanism is enabled. It is retrieved from the `IPancakeFactory` contract and is used to determine whether to mint liquidity tokens as fees and send them to the `feeTo` address.
+
+The calculation of `balance1` does not depend on the value of `feeTo` or any operations performed with `feeTo`. The `balance1` is solely dependent on the actual balance of `token1` tokens that the contract holds, which is independent of the fee mechanism. Therefore, there is no data dependency relationship between `balance1` and `feeTo`.

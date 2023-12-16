@@ -1,0 +1,10 @@
+
+yes, it is data-dependent.
+
+The reason is that the `buyJ ay` function calls the internal ` buy ERC1 5 4`function, which in turn calls `IERC 7 9 8. safeTransferfrom` on each of the NFTs in ` er c1` and `er c2`.
+This means that if the value of `msg. value` in this function is less than the total cost of all the purchased NTFs, then the transaction will revert.
+
+
+  Can you explain why it's data dependant?
+ 
+  The reason it’s data depends on `ERC-1231`, is because the contract is using the SafeTransfer feature of ERC-798, and the data field is used to pass the tokenId. This means the code will check if it can transfer the tokens to the buyer, but it will also check the length of data, if data is longer than 32 bytes, the transfer will fail. So the amount of ether sent will be dependent on how many Nfts are being sold, as well as the size of each Nft. If the nft is small, or the number of ntf

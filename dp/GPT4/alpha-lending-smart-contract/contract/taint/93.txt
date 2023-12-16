@@ -1,0 +1,3 @@
+Label: Yes
+
+Reason: The variable `data` in the function `decodeI64` is of type `Data`, which is a struct containing an offset and a raw bytes array. This struct is used to decode data from a bytes array that is passed into the function `from(bytes memory data)` which initializes the `Data` struct. Since the bytes array that initializes `data` can be provided by the user when they call the function `from`, and subsequently passed to `decodeI64`, the contents of `data` and thus the variable `data` itself in the context of `decodeI64` can be controlled by the user.

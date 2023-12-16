@@ -1,0 +1,3 @@
+no
+
+The variable `_oGLiq` in the function `targetSwap` is not directly dependent on the variable `_bal` in the function `getTargetSwapData`. The value of `_oGLiq` is calculated based on the values of `_oBals` and `_nBals` arrays, which are obtained from the `getTargetSwapData` function. The variable `_bal` is used to populate the `_oBals` and `_nBals` arrays, but it is not directly used in the calculation of `_oGLiq`. Therefore, there is no direct data dependency between `_oGLiq` and `_bal`.

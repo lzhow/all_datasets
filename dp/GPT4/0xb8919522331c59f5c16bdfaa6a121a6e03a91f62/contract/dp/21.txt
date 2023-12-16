@@ -1,0 +1,3 @@
+yes
+
+In the `functionStaticCall` function, the variable `returndata` is assigned the result of the `staticcall` operation, which is directly dependent on the input variable `data`. The `staticcall` is performed on the `target` address using the `data` as the input to the call. The success of the call and the contents of `returndata` are determined by the execution of the call, which uses `data` as its input. Therefore, `returndata` is data dependent on `data` within the context of the `functionStaticCall` function.

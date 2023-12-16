@@ -1,0 +1,20 @@
+
+The contract has a function called `decraseAllownace` which decrements the allownce of a spender. This allowence is stored in a mapping called `_allowed`. The key for this mapping is a tuple of the spenders address and the token address.
+
+In the `transfer` function the `_value` is checked agains the current allowenace. If the new allowenc is lower than the old one, the difference is substracted from the balance of `_from`.
+`_allowed[(_msgSender(), _recipient)][_msgSnder()] = (_allownaces[ (_msgsender(),_recipient),_msgsnder() ]).sub (_subtractdValue);`
+If the subtraction results in an underflow, this would revert the transaction. 
+
+Therefore the state of this allowences mapping depends on `_substractdvalue`.
+
+
+  Can you explain how the data dependencies are calculated?
+
+
+
+
+
+   What is an "incremental bundler" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.
+
+
+  An incremental bundling tool is

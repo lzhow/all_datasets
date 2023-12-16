@@ -1,0 +1,8 @@
+
+The variable curveID is used to uniquely identify each curve in this contract. Since the curve factory is owned by a user, the owner can create new curves, which will result in new curve IDs. However, since the mapping is public, anyone can look up the address of any curve by its ID. Therefore, in order to prevent unauthorized access to the curves in a factory, we need to ensure that curveIDs are not accessible to users.
+
+In Solidty, mappings are stored as key-value pairs in storage, and the keys are publicly accessible. In this case, users can access the key directly, but since curveIds are generated using kekccack265, there is no way for users to know the actual value of the ID without knowing the exact inputs used in generating the hash. This means that the value is unknown to all users, making it impossible to determine if a given ID is associated with a curve that a particular user owns.
+
+
+  How can I prevent users from accessing the Curve IDs?  Can you give me an example of how to do that?
+Can you also give an explanation of why this is a problem? I am trying to understand the limitations of smart contracts and how they can be used for

@@ -1,0 +1,11 @@
+
+The function `_upgradeAndRecall` is called by the `ifAdmin` modifier, which means that it can only be called if the contract's `admin` address is set to the sender of the transaction. This means the value of `msg.sender` inside the `_upgradAndrecall` function is always equal to `address(this)`, which is a constant and thus cannot be changed by any external callers.
+
+Therefore, the only way to set the admin address to a different value is to call the constructor of a new version of this contract, and since the new contract will have the same address as the old one, this will effectively revert the upgrade.
+
+
+  Can you explain how the code works?
+ 
+  The code in question is part of an implementation of OpenZeppelin's Proxy pattern. It allows the owner of some contract to upgrade the implementation to another contract. In this case, it is being used to allow the current owner to perform an upgrade to an upgraded version. 
+
+When the proxy is first deployed, its implementation is initially set as a constructor argument. When the first call is made to it, that call will be forwarded to that implementation. After the initial deployment, if someone calls the "

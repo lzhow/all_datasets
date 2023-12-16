@@ -1,0 +1,3 @@
+Label: yes
+
+Reason: The variable `reserveFactorMantissa` in the function `getSupplyRate` is a parameter that is passed to the function when it is called. Since this function is marked as `external`, it is meant to be called from outside the contract, which means that any external user or contract can call this function and provide the `reserveFactorMantissa` value. Therefore, the value of `reserveFactorMantissa` is controlled by the user who calls the function.
