@@ -1,0 +1,4 @@
+  
+The variable 'left' in lessThenExp function of the contract is a local variable and is therefore not user controlled.
+
+This is because the value of ' left' is determined by a function call to 'getExp' which is also a part of this contract. Therefore, the 'maintissa' field of left is set to the result of a call of getexp, which in turn is dependent on the values of num and denum. These values are not directly controlled or set by any user input. 

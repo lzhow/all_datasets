@@ -1,0 +1,6 @@
+  
+The label is 'Yes'.
+
+In the `liquidateborrowInternal` function, the parameter `CTokenInterface` `CtokenCollatoral`, which is a contract state, is used to call the method `accruInterst()` and to pass it as an argument to the internal function `liqidationBorroWfresh()`.
+On the other hand, in `_ setComtroller` method, there is no direct use of the contract variable`ctokencollaterl`. However, it is possible that the value of `comptrolller` is changed by the `_SetComprtller` internal method.
+Therefore, `ctokencollatorl` and `Comptrlller `are data-dependent.

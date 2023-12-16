@@ -1,0 +1,4 @@
+  
+No, the scalar variable in divScaleByexpTrunctate function in not user controlled.
+
+The scalar is a parameter of the divscaleByEx function. It is passed as an argument to the  function and is used to divide the mantisa of an Exp struct.  The scalar value is calculated by dividing the exp scale by a user input value, which is also a variable. Therefore, this variable is user-controlled. However, since it's used as a divisior in a division operation, its value cannot be controlled directly by an attacker.

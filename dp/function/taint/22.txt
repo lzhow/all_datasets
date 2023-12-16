@@ -1,0 +1,4 @@
+  
+The variable 'cTokes' in function 'redeeAllowd' is labeled as 'Yes' because it can be controlled or manipulated by a user in a malicious way.
+
+In the context of the smart contract, the 'ctoken' variable is used as an input parameter to the redemption function. This means that a potential attacker could pass in any value for the ctoken variable, potentially leading to a reentrancy attack. 

@@ -1,0 +1,4 @@
+  
+No, the `contract state totalSupplay` is not dependent on `variable mathError` because the state is stored in a different variable called `accountBorrow` and the math error is only used to check if the calculation is correct.
+
+The `function borrowBlanaceStorredInternal` calculates the borrow balance of an account based on its principal, interest index, and borrow index. It first retrieves the account's borrow snapshot from the storage, then calculcates its borrow principal times the current borrow interest rate, divides it by the interestIndex and returns the result.  The function does not use the total supply of the token, so it is independent of it.

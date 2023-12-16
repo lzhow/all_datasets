@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `addExp` function, the variables `m` and `n` are passed as arguments and are used to calculate the result of the addition.
+ In the`mul Exp3`function,the variables`a`,`b`, and`c`are passedas arguments, and theyare usedtocalculate theresult ofthe multiplication.  The`add Exp`and` mul Exp 3 `functions are both pure functions, which means that they do not modify the state of any variables. Therefore, there is no data dependence between the two functions. However, since the arguments of ` mul  Exp `are also used in ` add Exp`, there are indirect data dependencies between them. Specifically, ` a` is indirectly data-dependent on ` b` because ` ab`is calculated in` add  exp` using ` m` as an input, but `ab` itself is calculated using` b`. Therefore the answer is yes.

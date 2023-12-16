@@ -1,0 +1,4 @@
+  
+No.
+
+The variable 'markers' is a mapping of addresses to structs, and the struct contains a bool field called 'isList', which is set to true if a market is listed. This field is determined by a call to the 'list' function, which can only be called by an admin. Therefore, the value of 'market' cannot be controlled directly by any user, but rather by admins.

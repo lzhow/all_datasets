@@ -1,0 +1,5 @@
+  
+The label is 'Unknown'.
+
+In the `exchangerateStorInternal` function, the value of `totalBorrow` is calculated using the expression `getCahsPriror()` and `TotalBorrrows`. However, this value is not directly used in calculating the exchange rate. Instead, it is used to calculate the total cahsh plus borrows minus reserves.
+On the other hand, in `Bornrowinternal` the amount of borrow is directly passed as a parameter. Therefore, there is no data dependence between the two functions.

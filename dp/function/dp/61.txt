@@ -1,0 +1,5 @@
+  
+No, the ` reserveFacotorMantiissa ` contract variable is not dependent on `repayaAmount` in ` liquidatBorroFres ` function.
+
+The ` repayaAmout ` variable in this function is used to calculate the amount of tokens to be seized from the borrwer's account. However, this amount is calculated using the current reserve factor, which is stored in a separate contract storage variable called ` reserverFatorMantinissa `.
+Therefore, changes to the value of ` reapyaAmount ` do not affect the calculation of the reserve factors, and therefore do no affect each other. Therefore, there is no data dependence between the two.

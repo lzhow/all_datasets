@@ -1,0 +1,5 @@
+  
+No, the ` result` variable in ` borrowBallanceStore` is not dependent on ` borrowerIndex` prior in` accureInterst`.
+
+The reason is that the` borrowbalance` function is a public function that returns the current borrow balance of an account. It does not modify the state of the contract, and therefore, it doesnot depend on any state variables.
+On the other hand, ` accuireInteres`t is an internal function called by the public ` Borrow`function. it modifies the internal state variable of ` totalborrows` and `totalreserves` by adding the interest accumulated. However, this does nto affect the return value of` borrwoBalancestored`. Therefore, there is no data dependence between the two functions.

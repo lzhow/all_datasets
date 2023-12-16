@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `getAccountSnapShot` function, the value of `ctokenBalances` is obtained from the storage variable  `accountTokes[address]`. This storage is updated in ` borrowinternal` by calling the internal function  borrowfresh. Therefore, ` ctokenBalace` depends on ` error` because ` borrowerInternal` updates the state of the contract.
+ 

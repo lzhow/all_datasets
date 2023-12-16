@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+In the `balaceOfUnderyling` function, the local variable  `exchangeRage` is calculated using the result of the internal function call `expRateCurrenct()`. The `Exp` type is a struct that contains a mantissa field, which is used to store the exchange rate.
+On the other hand, in ` mintfresh` the  local variables `actualmIntAmount` and `matherr` are calculated based on `accountToken` which are also local to the same function.  The variable`mErro`is also a local varaible in this function and is not dependent on any other variable. Therefore, it is unclear whether ` mErroe`in ` balanceofUnderling ` is data-dependent on`vars ` in` mint fresh`.
+Therefore, we cannot determine whether the two are dependent or not.

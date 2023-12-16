@@ -1,0 +1,6 @@
+  
+No, the ` srcTokenNew ` variable in ` transferToken ` is not dependent on ` vars ` in  ` redemptionFresher ` .
+
+The `transfertToken` function is a separate function from the` reedemfresh`function, and the variables used in each function are independent.
+In the transfer function, `accountToken[ src ]` is used to calculate `startToken`, and ` accountToken [dst]` is calculated to be `dstToken`.
+However, in redenfres,` accounttoken[ redermer]`is used, which is different from`accounttoken [src]` used by transfer. Therefore, there is no data dependence between the two functions.

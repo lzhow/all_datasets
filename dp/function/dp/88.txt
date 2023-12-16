@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `BorrowInternal` function, the `_NotEnter` contract variable is used to prevent reentrancy. It is set to `true` at the beginning of the method and set back to false at its end.
+However, if the error variable has a value other than `Error::NOERROR`, the borrow function will fail and the _NotEntrant variable will not be set. Therefore, it is data-dependent on error.

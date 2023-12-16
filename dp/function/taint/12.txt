@@ -1,0 +1,5 @@
+  
+The variable mintToken in mintverify is labeled as 'Unknown'. The reason is that the minttoken variable is a function parameter, and it can be controlled or not by a user depending on the context in which the contract is used.
+
+For example, if a contract that implements the Comtroller interface is deployed and used to mint tokens, the ` minttokens` variable will be set by calling the` mint` function with a specific amount of tokens to be minted. In this case, `mintokes` is set to a value that is determined by an external user, so it should be labled as "yes".
+On the other hand, If the same contract were to implement a mint function that mints tokens based on a predefined formula, such as the total supply of the token divided by 100, then the value of ` mintoke` would be determined internally byt the smart contract and not be under the control of an exteranl user , so the lable shouldbe "no". 

@@ -1,0 +1,4 @@
+  
+No, the `Exp` struct in Soliidty is a user-defined type, and the variables of this type are not directly controlled or manipulated by users. Instead, they are created and manipulatd by functions within the contract. Therefore, `left` and ` right` in `lessThantOrEqualexp` are controlled internally by other functions in this contract, not by user input.
+
+The `mintissa` field of the Exp struct is also not user controlled, as it's a public field that can be accessed and modified by any function within this smart contract or by external contracts that interact with this one. However, this does not mean that the value of `exp` is directly user controllable, because the values of its fields are determined by internal functions and cannot be directly manipuated by a malicious user without modifying the code of other contract functions.

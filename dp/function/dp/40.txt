@@ -1,0 +1,6 @@
+  
+The label is 'No'.
+
+In the `addExp` function, the local variable error is not dependent on any other variable in any function. It is only used to return the error code from the internal function call `getExp`.
+On the other hand, in ` div Exp` the parameter `b` is used in a function internal call to ` get Exp`. However, this does not mean that ` error` depends on ` a`. The ` b` parameter is passed to the external function as a parameter, and the value of `  b ` is determined by the caller of the contract.
+Therefore, ` add Exp ` and ` Div Exp  ` are independent of each other.

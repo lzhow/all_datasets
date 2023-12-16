@@ -1,0 +1,5 @@
+  
+The label is 'Yes'.
+
+In the `mulScalartruncateaddUint` function, the local variable err is assigned the result of the call to the mulscalar function. This function returns a tuple containing an error code (the first element of this tuple) and an Exp object (second element). The err variable is set to this error value.
+On the other hand, in `dividScalarsByexp` the numerators variable in this function is calculated by multiplying the expScale variable with the scalar variable.  This variable numeratior is then passed as an argument to getexp function which returns an exp object.

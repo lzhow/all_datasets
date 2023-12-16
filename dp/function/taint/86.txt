@@ -1,0 +1,4 @@
+  
+No, the ` err` variable in function `mulExp` is uncontrolled by user because it's a local variable that is assigned the result of the internal function call ` mul_` which is also uncontroled.
+
+The `exp` struct is defined in this contract and is used to represent a fixed-point number with 38 decimal places. It has a single member variable, `m_ant`, which represents the mantisa of this number. This variable is initialized to  `0` in all the functions that use it. 

@@ -1,0 +1,5 @@
+  
+No, the ` oldimplementation` variable in function `_acceptimplementation()` is NOT controlled  by user because it's a local variable that is created by Soliidty compiler and it can't be modified by any user input.
+
+The `accept implementation` function is called by a user who wants to accept a new implementation of the contract. However, this function does not modify the value of `comptrollorImplemenation` which is a state variable controlled directly by users. Instead, It modifies the local `pendingComtrollerImplmentation`, which can only be set by an authorized user (the admin).
+ 

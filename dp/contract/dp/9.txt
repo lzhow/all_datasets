@@ -1,0 +1,6 @@
+  
+The label is 'Unknown'.
+
+There is no direct data dependence between the two functions. However, there is an indirect data flow between them.
+In the `mintAllow` function, the parameter `minter` is used to calculate the value of `repayTotals` which is then used in `liquidateCalcualteSeizTkns` to determine the amount of tokens to be seized. In the same way, in function  ` reedemAllowe` the paramter `borrowe`r is also used  to calulate the  value  of  repa`yTota`ls`  which  is   then  used   in  the   function   `liq`uidate`Calcu`late`Sei`ze`T`ok`ens to  determine  amount  tokens  that  should  be  seized .
+So,  there  are  indirect  data  flow  between  these  two  functions  and  hence  they  have  a  dependency  relationship  .
