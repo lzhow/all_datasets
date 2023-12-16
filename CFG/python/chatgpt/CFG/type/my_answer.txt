@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "Assignment",
+      "value": "str_val = \"123\""
+    },
+    {
+      "id": 1,
+      "type": "Assignment",
+      "value": "int_val = int(str_val)"
+    },
+    {
+      "id": 2,
+      "type": "Assignment",
+      "value": "int_val = 42"
+    },
+    {
+      "id": 3,
+      "type": "Assignment",
+      "value": "float_val = float(int_val)"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "value": "float_val = 3.14"
+    },
+    {
+      "id": 5,
+      "type": "Assignment",
+      "value": "str_val = str(float_val)"
+    },
+    {
+      "id": 6,
+      "type": "Assignment",
+      "value": "list_val = [1, 2, 3]"
+    },
+    {
+      "id": 7,
+      "type": "Assignment",
+      "value": "tuple_val = tuple(list_val)"
+    },
+    {
+      "id": 8,
+      "type": "Print",
+      "value": "print(f\"list {list_val} => tuple: {tuple_val}\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "InterfaceDeclaration",
+      "code": "public interface Greeting"
+    },
+    {
+      "id": 2,
+      "type": "MethodDeclaration",
+      "code": "void greet()"
+    },
+    {
+      "id": 3,
+      "type": "AnonymousClassCreation",
+      "code": "Greeting greeting = new Greeting() { @Override public void greet() { System.out.println(\"Hello!\"); } }"
+    },
+    {
+      "id": 4,
+      "type": "MethodOverride",
+      "code": "public void greet() { System.out.println(\"Hello!\"); }"
+    },
+    {
+      "id": 5,
+      "type": "MethodInvocation",
+      "code": "greeting.greet()  // 输出 \"Hello!\""
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "factorial",
+      "label": "factorial"
+    },
+    {
+      "id": "display_factorial",
+      "label": "display_factorial"
+    },
+    {
+      "id": "print",
+      "label": "print"
+    }
+  ],
+  "edges": [
+    {
+      "from": "display_factorial",
+      "to": "factorial"
+    },
+    {
+      "from": "display_factorial",
+      "to": "print"
+    },
+    {
+      "from": "factorial",
+      "to": "factorial"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "preprocessor_directive",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "function_definition",
+      "value": "int main(void)",
+      "children": [
+        {
+          "type": "declaration",
+          "value": "int n",
+          "children": []
+        },
+        {
+          "type": "function_call",
+          "value": "scanf(\"%d\", &n)",
+          "children": []
+        },
+        {
+          "type": "if_statement",
+          "value": "if (n > 10)",
+          "children": [
+            {
+              "type": "function_call",
+              "value": "puts(\"Large\")",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "else_clause",
+          "value": "else",
+          "children": [
+            {
+              "type": "function_call",
+              "value": "puts(\"Small\")",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

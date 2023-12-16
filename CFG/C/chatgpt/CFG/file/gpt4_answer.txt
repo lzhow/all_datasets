@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main()"
+    },
+    {
+      "id": 2,
+      "type": "FileOperation",
+      "code": "FILE *file = fopen(\"example.txt\", \"r\")"
+    },
+    {
+      "id": 3,
+      "type": "Conditional",
+      "code": "if (file != NULL)"
+    },
+    {
+      "id": 4,
+      "type": "FileOperation",
+      "code": "fclose(file)"
+    },
+    {
+      "id": 5,
+      "type": "Return",
+      "code": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "condition": "true"
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "condition": "false"
+    }
+  ]
+}

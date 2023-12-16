@@ -1,0 +1,199 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: pragma solidity ^0.8.0;
+
+contract ArrayExample {
+    uint[] public dynamicArray;
+    uint[5] public fixedArray;
+
+    function addElement(uint element) public {
+        dynamicArray.push(element);
+    }
+}
+
+
+    Here's your output:
+
+   {
+    "nodes": [
+        {
+            "id": 0,
+            "label": "ArrayExample"
+        },
+        {
+            "id": 1,
+            "label": "uint"
+        },
+        {
+            "id": 2,
+            "label": "public"
+        },
+        {
+            "id": 3,
+            "label": "dynamicArray"
+        },
+        {
+            "id": 4,
+            "label": "addElement"
+        },
+        {
+            "id": 5,
+            "label": "element"
+        },
+        {
+            "id": 6,
+            "label": "push"
+        },
+        {
+            "id": 7,
+            "label": "fixedArray"
+        }
+    ],
+    "edges": [
+        {
+            "from": 0,
+            "to": 1,
+            "label": "is a"
+        },
+        {
+            "from": 0,
+            "to": 2,
+            "label": "has a"
+        },
+        {
+            "from": 1,
+            "to": 3,
+            "label": "is a"
+        },
+        {
+            "from": 2,
+            "to": 3,
+            "label": "has a"
+        },
+        {
+            "from": 0,
+            "to": 4,
+            "label": "has a"
+        },
+        {
+            "from": 4,
+            "to": 5,
+            "label": "is a"
+        },
+        {
+            "from": 4,
+            "to": 6,
+            "label": "calls"
+        },
+        {
+            "from": 3,
+            "to": 6,
+            "label": "is a"
+        },
+        {
+            "from": 7,
+            "to": 1,
+            "label": "is a"
+        },
+        {
+            "from": 7,
+            "to": 2,
+            "label": "has a"
+        }
+    ]
+}
+
+Please note that the output format is json, and the id field in nodes is used to match up with edges.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, which are typically a lower range of notes than the main guitar.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to

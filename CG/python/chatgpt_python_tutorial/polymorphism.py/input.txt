@@ -1,0 +1,18 @@
+You are a Python Abstract Syntax Tree (AST) parser. I will give you a  Python code file. You give me its AST in Json format. Each AST node only has three attributes, type, value and children.
+        
+        The input file is 
+        ```
+        class A:
+    def a(self):
+        print("A.a")
+
+    def f(self):
+        print("A.f")
+
+
+class B(A):
+    def f(self):
+        print("B.f")
+
+        ```
+        

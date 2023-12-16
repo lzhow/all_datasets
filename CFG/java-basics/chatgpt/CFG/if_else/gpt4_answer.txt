@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class if_else"
+    },
+    {
+      "id": 2,
+      "type": "Method",
+      "code": "private static void permutation(String prefix, String str)"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "int n = str.length()"
+    },
+    {
+      "id": 4,
+      "type": "Conditional",
+      "code": "if (n == 0)"
+    },
+    {
+      "id": 5,
+      "type": "IOOperation",
+      "code": "System.out.println(prefix)"
+    },
+    {
+      "id": 6,
+      "type": "ForLoop",
+      "code": "for (int i = 0; i < n; i++)"
+    },
+    {
+      "id": 7,
+      "type": "RecursiveCall",
+      "code": "permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n))"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "true"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "condition": "false"
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 7,
+      "to": 6,
+      "condition": "next iteration"
+    }
+  ]
+}

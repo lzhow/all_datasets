@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "FunctionDeclaration",
+      "code": "unsigned int f(unsigned int l)"
+    },
+    {
+      "id": 2,
+      "type": "Function",
+      "code": "unsigned int f(unsigned int l)"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "unsigned int s"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "s = 0"
+    },
+    {
+      "id": 5,
+      "type": "ForLoop",
+      "code": "for (unsigned int i = 1; i <= l; i += 1)"
+    },
+    {
+      "id": 6,
+      "type": "Assignment",
+      "code": "s += i"
+    },
+    {
+      "id": 7,
+      "type": "Return",
+      "code": "return s"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "condition": "loop body"
+    },
+    {
+      "from": 6,
+      "to": 5,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "condition": "loop exit"
+    }
+  ]
+}

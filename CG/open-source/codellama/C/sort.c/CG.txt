@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "name": "main",
+      "type": "function",
+      "address": 140737328347072,
+      "size": 104,
+      "children": [
+        {
+          "name": "sort",
+          "type": "function",
+          "address": 140737328347072,
+          "size": 104,
+          "children": [
+            {
+              "name": "bubbleSort",
+              "type": "function",
+              "address": 140737328347072,
+              "size": 104,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bubbleSort",
+      "type": "function",
+      "address": 140737328347072,
+      "size": 104,
+      "children": []
+    },
+    {
+      "name": "selectionSort",
+      "type": "function",
+      "address": 140737328347072,
+      "size": 104,
+      "children": []
+    },
+    {
+      "name": "sort",
+      "type": "function",
+      "address": 140737328347072,
+      "size": 104,
+      "children": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "sort",
+      "type": "call"
+    },
+    {
+      "from": "sort",
+      "to": "bubbleSort",
+      "type": "call"
+    }
+  ]
+}

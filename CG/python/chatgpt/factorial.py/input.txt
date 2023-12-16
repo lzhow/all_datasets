@@ -1,0 +1,20 @@
+You are a python call graph analyzer for programs. I will give you a python program 
+        and you tell me its call graph. 
+
+        The input file is 
+        ```
+        def factorial(n):
+  if n == 0 or n == 1:
+      return 1
+  else:
+      return n * factorial(n - 1)
+
+def display_factorial(num):
+  result = factorial(num)
+  print(f"The factorial of {num} is {result}")
+
+number = 5
+display_factorial(number)
+
+        ```
+        

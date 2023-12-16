@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id": 1, "type": "function_definition", "label": "def square_numbers(n):"},
+    {"id": 2, "type": "for_loop", "label": "for i in range(n):"},
+    {"id": 3, "type": "expression", "label": "yield i ** 2"},
+    {"id": 4, "type": "variable_initialization", "label": "squares = square_numbers(5)"},
+    {"id": 5, "type": "for_loop", "label": "for num in squares:"},
+    {"id": 6, "type": "expression", "label": "print(num)"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 4, "target": 5},
+    {"source": 5, "target": 6}
+  ]
+}

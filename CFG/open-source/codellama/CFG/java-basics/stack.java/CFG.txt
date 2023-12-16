@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "push",
+      "label": "stack.push(1)"
+    },
+    {
+      "id": 2,
+      "type": "push",
+      "label": "stack.push(2)"
+    },
+    {
+      "id": 3,
+      "type": "push",
+      "label": "stack.push(3)"
+    },
+    {
+      "id": 4,
+      "type": "peek",
+      "label": "stack.peek()"
+    },
+    {
+      "id": 5,
+      "type": "pop",
+      "label": "stack.pop()"
+    },
+    {
+      "id": 6,
+      "type": "pop",
+      "label": "stack.pop()"
+    },
+    {
+      "id": 7,
+      "type": "pop",
+      "label": "stack.pop()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

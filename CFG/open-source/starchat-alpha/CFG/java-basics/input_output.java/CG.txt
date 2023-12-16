@@ -1,0 +1,382 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SimpleReader {
+    private Scanner scanner;
+
+    public SimpleReader() {
+        scanner = new Scanner(System.in);
+    }
+
+    public int readInt() {
+        return scanner.nextInt();
+    }
+
+    public double readDouble() {
+        return scanner.nextDouble();
+    }
+
+    public String readString() {
+        return scanner.next();
+    }
+
+    public char readChar() {
+        return scanner.next().charAt(0);
+    }
+
+    public boolean hasNextChar() {
+        return scanner.hasNext();
+    }
+
+    public boolean hasNextLine() {
+        return scanner.hasNextLine();
+    }
+
+    public String readLine() {
+        return scanner.nextLine();
+    }
+
+    public int[] readAllInts() {
+        ArrayList<Integer> ints = new ArrayList<>();
+        while (scanner.hasNextInt()) {
+            ints.add(scanner.nextInt());
+        }
+        return ints.stream().mapToInt(i -> i).toArray();
+    }
+
+    public static void main(String[] args) {
+        SimpleReader reader = new SimpleReader();
+        System.out.println("Reading an integer: " + reader.readInt());
+        System.out.println("Reading a double: " + reader.readDouble());
+        System.out.println("Reading a string: " + reader.readString());
+        System.out.println("Reading a char: " + reader.readChar());
+        System.out.println("Has next char: " + reader.hasNextChar());
+        System.out.println("Has next line: " + reader.hasNextLine());
+        System.out.println("Reading a line: " + reader.readLine());
+        System.out.println("Reading all integers: ");
+        int[] allInts = reader.readAllInts();
+        for (int i : allInts) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+    Here's your output:
+
+   {
+  "nodes": [
+    {
+      "name": "java.util.ArrayList",
+      "type": "class"
+    },
+    {
+      "name": "java.util.Scanner",
+      "type": "class"
+    },
+    {
+      "name": "SimpleReader",
+      "type": "class"
+    },
+    {
+      "name": "args",
+      "type": "parameter"
+    },
+    {
+      "name": "readInt",
+      "type": "method"
+    },
+    {
+      "name": "readDouble",
+      "type": "method"
+    },
+    {
+      "name": "readString",
+      "type": "method"
+    },
+    {
+      "name": "readChar",
+      "type": "method"
+    },
+    {
+      "name": "hasNextChar",
+      "type": "method"
+    },
+    {
+      "name": "hasNextLine",
+      "type": "method"
+    },
+    {
+      "name": "readLine",
+      "type": "method"
+    },
+    {
+      "name": "readAllInts",
+      "type": "method"
+    },
+    {
+      "name": "main",
+      "type": "method"
+    },
+    {
+      "name": "System.out.println",
+      "type": "method"
+    },
+    {
+      "name": "System.out.print",
+      "type": "method"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SimpleReader",
+      "to": "java.util.Scanner"
+    },
+    {
+      "from": "SimpleReader",
+      "to": "System.out.println"
+    },
+    {
+      "from": "SimpleReader",
+      "to": "System.out.print"
+    },
+    {
+      "from": "readInt",
+      "to": "scanner"
+    },
+    {
+      "from": "readDouble",
+      "to": "scanner"
+    },
+    {
+      "from": "readString",
+      "to": "scanner"
+    },
+    {
+      "from": "readChar",
+      "to": "scanner"
+    },
+    {
+      "from": "hasNextChar",
+      "to": "scanner"
+    },
+    {
+      "from": "hasNextLine",
+      "to": "scanner"
+    },
+    {
+      "from": "readLine",
+      "to": "scanner"
+    },
+    {
+      "from": "readAllInts",
+      "to": "scanner"
+    },
+    {
+      "from": "readAllInts",
+      "to": "java.util.ArrayList"
+    },
+    {
+      "from": "main",
+      "to": "SimpleReader"
+    },
+    {
+      "from": "main",
+      "to": "readInt"
+    },
+    {
+      "from": "main",
+      "to": "readDouble"
+    },
+    {
+      "from": "main",
+      "to": "readString"
+    },
+    {
+      "from": "main",
+      "to": "readChar"
+    },
+    {
+      "from": "main",
+      "to": "hasNextChar"
+    },
+    {
+      "from": "main",
+      "to": "hasNextLine"
+    },
+    {
+      "from": "main",
+      "to": "readLine"
+    },
+    {
+      "from": "main",
+      "to": "readAllInts"
+    },
+    {
+      "from": "main",
+      "to": "System.out.println"
+    },
+    {
+      "from": "main",
+      "to": "System.out.print"
+    }
+  ]
+}<|end|>
+<|user|>
+Can you add the types of the nodes and edges?<|end|>
+<|assistant|>
+Here's the updated output:
+
+{
+  "nodes": [
+    {
+      "name": "java.util.ArrayList",
+      "type": "class",
+      "subtype": "java.util"
+    },
+    {
+      "name": "java.util.Scanner",
+      "type": "class",
+      "subtype": "java.util"
+    },
+    {
+      "name": "SimpleReader",
+      "type": "class",
+      "subtype": ""
+    },
+    {
+      "name": "args",
+      "type": "parameter",
+      "subtype": ""
+    },
+    {
+      "name": "readInt",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "readDouble",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "readString",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "readChar",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "hasNextChar",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "hasNextLine",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "readLine",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "readAllInts",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "main",
+      "type": "method",
+      "subtype": "SimpleReader"
+    },
+    {
+      "name": "System.out.println",
+      "type": "method",
+      "subtype": "java.lang"
+    },
+    {
+      "name": "System.out.print",
+      "type": "method",
+      "subtype": "java.lang"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SimpleReader",
+      "to": "java.util.Scanner",
+      "type": "uses"
+    },
+    {
+      "from": "SimpleReader",
+      "to": "System.out.println",
+      "type": "uses"
+    },
+    {
+      "from": "SimpleReader",
+      "to": "System.out.print",
+      "type": "uses"
+    },
+    {
+      "from": "readInt",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readDouble",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readString",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readChar",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "hasNextChar",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "hasNextLine",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readLine",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readAllInts",
+      "to": "scanner",
+      "type": "uses"
+    },
+    {
+      "from": "readAllInts",
+      "to": "java.util.ArrayList",
+      "type": "uses"
+    },
+    {
+      "from": "main",
+      "to": "SimpleReader",
+      "type": "uses"
+    },
+    {
+      "from": "main",
+      "to":

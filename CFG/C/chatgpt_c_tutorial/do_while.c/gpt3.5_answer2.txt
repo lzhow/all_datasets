@@ -1,0 +1,48 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "void"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "int c = 0;"
+            },
+            {
+              "type": "DoWhileLoop",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf",
+                  "children": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "\"%d\\n\""
+                    },
+                    {
+                      "type": "Variable",
+                      "value": "c"
+                    }
+                  ]
+                }
+              ],
+              "value": "while (c++ < 5)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

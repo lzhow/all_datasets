@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {"id": 1, "type": "variable_initialization", "label": "original_string = 'Hello, Python!'"},
+    {"id": 2, "type": "function_call", "label": "len(original_string)"},
+    {"id": 3, "type": "variable_initialization", "label": "length = len(original_string)"},
+    {"id": 4, "type": "method_call", "label": "original_string.upper()"},
+    {"id": 5, "type": "variable_initialization", "label": "upper_string = original_string.upper()"},
+    {"id": 6, "type": "method_call", "label": "original_string.split(',')"},
+    {"id": 7, "type": "variable_initialization", "label": "split_string = original_string.split(',')"},
+    {"id": 8, "type": "method_call", "label": "original_string.find('Python')"},
+    {"id": 9, "type": "variable_initialization", "label": "position = original_string.find('Python')"},
+    {"id": 10, "type": "function_call", "label": "' '.join(['Joined', 'string'])"},
+    {"id": 11, "type": "variable_initialization", "label": "joined_string = ' '.join(['Joined', 'string'])"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 1, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 1, "target": 6},
+    {"source": 6, "target": 7},
+    {"source": 1, "target": 8},
+    {"source": 8, "target": 9},
+    {"source": 10, "target": 11}
+  ]
+}

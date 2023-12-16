@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "name": "average",
+      "type": "function",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "median",
+      "type": "function",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "visualize_data",
+      "type": "function",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "sum",
+      "type": "builtin",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "sorted",
+      "type": "builtin",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "len",
+      "type": "builtin",
+      "args": [
+        "data"
+      ]
+    },
+    {
+      "name": "matplotlib.pyplot.plot",
+      "type": "function",
+      "args": [
+        "data",
+        "label"
+      ]
+    },
+    {
+      "name": "matplotlib.pyplot.axhline",
+      "type": "function",
+      "args": [
+        "y",
+        "color",
+        "linestyle",
+        "label"
+      ]
+    },
+    {
+      "name": "matplotlib.pyplot.legend",
+      "type": "function",
+      "args": []
+    },
+    {
+      "name": "matplotlib.pyplot.show",
+      "type": "function",
+      "args": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "average",
+      "to": "sum"
+    },
+    {
+      "from": "average",
+      "to": "len"
+    },
+    {
+      "from": "median",
+      "to": "sorted"
+    },
+    {
+      "from": "median",
+      "to": "len"
+    },
+    {
+      "from": "visualize_data",
+      "to": "average"
+    },
+    {
+      "from": "visualize_data",
+      "to": "median"
+    },
+    {
+      "from": "visualize_data",
+      "to": "matplotlib.pyplot.plot"
+    },
+    {
+      "from": "visualize_data",
+      "to": "matplotlib.pyplot.axhline"
+    },
+    {
+      "from": "visualize_data",
+      "to": "matplotlib.pyplot.legend"
+    },
+    {
+      "from": "visualize_data",
+      "to": "matplotlib.pyplot.show"
+    }
+  ]
+}

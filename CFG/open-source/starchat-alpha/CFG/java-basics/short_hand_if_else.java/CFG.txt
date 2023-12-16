@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MethodDeclaration",
+      "label": "public static void main(String[] args)"
+    },
+    {
+      "id": 2,
+      "type": "VariableDeclarationStatement",
+      "label": "int money = args[1]"
+    },
+    {
+      "id": 3,
+      "type": "IfStatement",
+      "label": "(money < 18)"
+    },
+    {
+      "id": 4,
+      "type": "Block",
+      "label": "{"
+    },
+    {
+      "id": 5,
+      "type": "ExpressionStatement",
+      "label": "String result = "
+    },
+    {
+      "id": 6,
+      "type": "ConditionalExpression",
+      "label": "(money < 18)? "
+    },
+    {
+      "id": 7,
+      "type": "Literal",
+      "label": "\"Enough.\""
+    },
+    {
+      "id": 8,
+      "type": "Literal",
+      "label": " : "
+    },
+    {
+      "id": 9,
+      "type": "Literal",
+      "label": "\"Insufficient.\""
+    },
+    {
+      "id": 10,
+      "type": "ExpressionStatement",
+      "label": ";"
+    },
+    {
+      "id": 11,
+      "type": "MethodInvocation",
+      "label": "System.out.println(result)"
+    },
+    {
+      "id": 12,
+      "type": "ExpressionStatement",
+      "label": ";"
+    },
+    {
+      "id": 13,
+      "type": "Block",
+      "label": "}"
+    },
+    {
+      "id": 14,
+      "type": "MethodDeclaration",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 8
+    },
+    {
+      "source": 6,
+      "target": 9
+    },
+    {
+      "source": 4,
+      "target": 10
+    },
+    {
+      "source": 4,
+      "target": 11
+    },
+    {
+      "source": 4,
+      "target": 12
+    },
+    {
+      "source": 3,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "class",
+      "name": "A"
+    },
+    {
+      "id": "2",
+      "type": "method",
+      "name": "a",
+      "class": "A"
+    },
+    {
+      "id": "3",
+      "type": "statement",
+      "content": "System.out.println(\"A\");"
+    },
+    {
+      "id": "4",
+      "type": "class",
+      "name": "P"
+    },
+    {
+      "id": "5",
+      "type": "method",
+      "name": "a",
+      "class": "P"
+    },
+    {
+      "id": "6",
+      "type": "statement",
+      "content": "System.out.println(\"P\");"
+    },
+    {
+      "id": "7",
+      "type": "class",
+      "name": "D"
+    },
+    {
+      "id": "8",
+      "type": "method",
+      "name": "a",
+      "class": "D"
+    },
+    {
+      "id": "9",
+      "type": "statement",
+      "content": "System.out.println(\"D\");"
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "target": "2"
+    },
+    {
+      "source": "2",
+      "target": "3"
+    },
+    {
+      "source": "4",
+      "target": "5"
+    },
+    {
+      "source": "5",
+      "target": "6"
+    },
+    {
+      "source": "7",
+      "target": "8"
+    },
+    {
+      "source": "8",
+      "target": "9"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "def ifelse(a, b):"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "print(\">\")"
+    },
+    {
+      "id": 3,
+      "type": "expr",
+      "label": "a > b"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "print(\"=\")"
+    },
+    {
+      "id": 5,
+      "type": "expr",
+      "label": "a == b"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "print(\"<\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    }
+  ]
+}

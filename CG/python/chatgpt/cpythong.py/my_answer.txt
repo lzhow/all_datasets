@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "id": "generate_number",
+      "label": "generate_number"
+    },
+    {
+      "id": "user_input",
+      "label": "user_input"
+    },
+    {
+      "id": "check_repeat",
+      "label": "check_repeat"
+    },
+    {
+      "id": "bulls",
+      "label": "bulls"
+    },
+    {
+      "id": "discard_repetition",
+      "label": "discard_repetition"
+    },
+    {
+      "id": "cows",
+      "label": "cows"
+    },
+    {
+      "id": "player_wins",
+      "label": "player_wins"
+    },
+    {
+      "id": "main_func",
+      "label": "main_func"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main_func",
+      "to": "generate_number"
+    },
+    {
+      "from": "main_func",
+      "to": "user_input"
+    },
+    {
+      "from": "user_input",
+      "to": "check_repeat"
+    },
+    {
+      "from": "main_func",
+      "to": "bulls"
+    },
+    {
+      "from": "main_func",
+      "to": "discard_repetition"
+    },
+    {
+      "from": "discard_repetition",
+      "to": "check_repeat"
+    },
+    {
+      "from": "main_func",
+      "to": "cows"
+    },
+    {
+      "from": "main_func",
+      "to": "player_wins"
+    },
+    {
+      "from": "player_wins",
+      "to": "main_func"
+    },
+    {
+      "from": "main_func",
+      "to": "generate_number"
+    },
+    {
+      "from": "main_func",
+      "to": "user_input"
+    },
+    {
+      "from": "user_input",
+      "to": "check_repeat"
+    },
+    {
+      "from": "main_func",
+      "to": "bulls"
+    },
+    {
+      "from": "main_func",
+      "to": "discard_repetition"
+    },
+    {
+      "from": "discard_repetition",
+      "to": "check_repeat"
+    },
+    {
+      "from": "main_func",
+      "to": "cows"
+    },
+    {
+      "from": "main_func",
+      "to": "player_wins"
+    },
+    {
+      "from": "player_wins",
+      "to": "main_func"
+    }
+  ]
+}

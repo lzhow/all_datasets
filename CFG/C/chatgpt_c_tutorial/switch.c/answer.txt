@@ -1,0 +1,164 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "PreprocessingDirective",
+      "value": "#include <stdio.h>"
+    },
+    {
+      "type": "FunctionDefinition",
+      "children": [
+        {
+          "type": "TypeSpecifier",
+          "value": "int"
+        },
+        {
+          "type": "Declarator",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "ParameterTypeList",
+              "children": [
+                {
+                  "type": "ParameterDeclaration",
+                  "children": [
+                    {
+                      "type": "TypeSpecifier",
+                      "value": "void"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "InitDeclarator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "aCount"
+                    },
+                    {
+                      "type": "AssignmentExpression",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "int"
+                },
+                {
+                  "type": "InitDeclarator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "grade"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "IterationStatement",
+              "value": "while",
+              "children": [
+                {
+                  "type": "AssignmentExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "grade"
+                    },
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "getchar"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "SelectionStatement",
+                      "value": "switch",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "grade"
+                        },
+                        {
+                          "type": "Case",
+                          "value": "'a'",
+                          "children": [
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "UnaryOperator",
+                                  "value": "++",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "aCount"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "JumpStatement",
+                              "value": "break"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Default",
+                          "children": [
+                            {
+                              "type": "JumpStatement",
+                              "value": "break"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

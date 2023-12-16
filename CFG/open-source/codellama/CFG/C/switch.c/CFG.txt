@@ -1,0 +1,146 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "unsigned int aCount = 0"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "label": "int grade"
+    },
+    {
+      "id": 3,
+      "type": "while",
+      "label": "while ((grade = getchar()) != EOF)"
+    },
+    {
+      "id": 4,
+      "type": "switch",
+      "label": "switch (grade)"
+    },
+    {
+      "id": 5,
+      "type": "case",
+      "label": "case 'a':"
+    },
+    {
+      "id": 6,
+      "type": "assignment",
+      "label": "++aCount"
+    },
+    {
+      "id": 7,
+      "type": "break",
+      "label": "break"
+    },
+    {
+      "id": 8,
+      "type": "case",
+      "label": "case 'b':"
+    },
+    {
+      "id": 9,
+      "type": "printf",
+      "label": "printf(\"%d\\n\", aCount)"
+    },
+    {
+      "id": 10,
+      "type": "case",
+      "label": "case 'c':"
+    },
+    {
+      "id": 11,
+      "type": "assignment",
+      "label": "--aCount"
+    },
+    {
+      "id": 12,
+      "type": "break",
+      "label": "break"
+    },
+    {
+      "id": 13,
+      "type": "default",
+      "label": "default:"
+    },
+    {
+      "id": 14,
+      "type": "break",
+      "label": "break"
+    },
+    {
+      "id": 15,
+      "type": "exit",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 4,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 4,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 4,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "class Animal:"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "__init__"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "make_sound"
+    },
+    {
+      "id": 4,
+      "type": "function",
+      "label": "__repr__"
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "label": "Animal"
+    },
+    {
+      "id": 6,
+      "type": "class",
+      "label": "Dog"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "def __init__(self, name, sound):"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "self.name = name"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "self.sound = sound"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "def make_sound(self):"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "return f\"{self.name} says {self.sound}\""
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "def __repr__(self):"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "label": "return f\"Animal('\" + self.name + \", '\" + self.sound + \")\""
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "label": "class Dog(Animal):"
+    },
+    {
+      "id": 15,
+      "type": "function",
+      "label": "__init__"
+    },
+    {
+      "id": 16,
+      "type": "function",
+      "label": "__repr__"
+    },
+    {
+      "id": 17,
+      "type": "statement",
+      "label": "super().__init__(name, sound)"
+    },
+    {
+      "id": 18,
+      "type": "statement",
+      "label": "self.breed = breed"
+    },
+    {
+      "id": 19,
+      "type": "statement",
+      "label": "def __repr__(self):"
+    },
+    {
+      "id": 20,
+      "type": "statement",
+      "label": "return f\"Dog('\" + self.name + \", '\" + self.sound + \", '\" + self.breed + \")\""
+    },
+    {
+      "id": 21,
+      "type": "statement",
+      "label": "generic_animal = Animal(\"Generic Animal\", \"some sound\")"
+    },
+    {
+      "id": 22,
+      "type": "statement",
+      "label": "print(generic_animal)"
+    },
+    {
+      "id": 23,
+      "type": "statement",
+      "label": "print(generic_animal.make_sound())"
+    },
+    {
+      "id": 24,
+      "type": "statement",
+      "label": "my_dog = Dog(\"Rex\", \"Bark\", \"Golden Retriever\")"
+    },
+    {
+      "id": 25,
+      "type": "statement",
+      "label": "print(my_dog)"
+    },
+    {
+      "id": 26,
+      "type": "statement",
+      "label": "print(my_dog.make_sound())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 2,
+      "target": 7
+    },
+    {
+      "source": 2,
+      "target": 8
+    },
+    {
+      "source": 2,
+      "target": 9
+    },
+    {
+      "source": 3,
+      "target": 10
+    },
+    {
+      "source": 4,
+      "target": 12
+    },
+    {
+      "source": 5,
+      "target": 14
+    },
+    {
+      "source": 6,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    },
+    {
+      "source": 14,
+      "target": 16
+    },
+    {
+      "source": 15,
+      "target": 17
+    },
+    {
+      "source": 15,
+      "target": 8
+    },
+    {
+      "source": 15,
+      "target": 9
+    },
+    {
+      "source": 16,
+      "target": 19
+    },
+    {
+      "source": 16,
+      "target": 20
+    },
+    {
+      "source": 17,
+      "target": 18
+    },
+    {
+      "source": 21,
+      "target": 22
+    },
+    {
+      "source": 21,
+      "target": 23
+    },
+    {
+      "source": 22,
+      "target": 24
+    },
+    {
+      "source": 23,
+      "target": 24
+    },
+    {
+      "source": 24,
+      "target": 25
+    },
+    {
+      "source": 24,
+      "target": 26
+    }
+  ]
+}

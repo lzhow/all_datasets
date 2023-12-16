@@ -1,0 +1,85 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "char"
+        },
+        {
+          "type": "Identifier",
+          "value": "x"
+        },
+        {
+          "type": "Assignment",
+          "value": "="
+        },
+        {
+          "type": "Number",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "char"
+        },
+        {
+          "type": "Identifier",
+          "value": "y"
+        },
+        {
+          "type": "Assignment",
+          "value": "="
+        },
+        {
+          "type": "Number",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "float"
+        },
+        {
+          "type": "Identifier",
+          "value": "z"
+        },
+        {
+          "type": "Assignment",
+          "value": "="
+        },
+        {
+          "type": "Cast",
+          "children": [
+            {
+              "type": "Type",
+              "value": "float"
+            },
+            {
+              "type": "Identifier",
+              "value": "x"
+            }
+          ]
+        },
+        {
+          "type": "Division",
+          "value": "/"
+        },
+        {
+          "type": "Identifier",
+          "value": "y"
+        }
+      ]
+    }
+  ]
+}

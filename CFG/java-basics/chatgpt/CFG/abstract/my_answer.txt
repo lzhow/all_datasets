@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "name": "Shape",
+      "modifiers": ["public", "abstract"],
+      "methods": [
+        {
+          "name": "draw",
+          "modifiers": ["public", "abstract"],
+          "parameters": [],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "class",
+      "name": "Circle",
+      "extends": "Shape",
+      "methods": [
+        {
+          "name": "draw",
+          "modifiers": ["public", "override"],
+          "parameters": [],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "code": "Shape shape = new Circle();"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "code": "shape.draw();"
+    }
+  ],
+  "edges": [
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

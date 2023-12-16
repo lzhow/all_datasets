@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {"id": 1, "type": "import_statement", "label": "import threading"},
+    {"id": 2, "type": "function_definition", "label": "def print_numbers():"},
+    {"id": 3, "type": "for_loop", "label": "for i in range(1, 6):"},
+    {"id": 4, "type": "expression", "label": "print(i)"},
+    {"id": 5, "type": "function_definition", "label": "def print_letters():"},
+    {"id": 6, "type": "for_loop", "label": "for letter in 'ABCDE':"},
+    {"id": 7, "type": "expression", "label": "print(letter)"},
+    {"id": 8, "type": "variable_initialization", "label": "thread1 = threading.Thread(target=print_numbers)"},
+    {"id": 9, "type": "variable_initialization", "label": "thread2 = threading.Thread(target=print_letters)"},
+    {"id": 10, "type": "method_call", "label": "thread1.start()"},
+    {"id": 11, "type": "method_call", "label": "thread2.start()"},
+    {"id": 12, "type": "method_call", "label": "thread1.join()"},
+    {"id": 13, "type": "method_call", "label": "thread2.join()"}
+  ],
+  "edges": [
+    {"source": 2, "target": 3},
+    {"source": 3, "target": 4},
+    {"source": 5, "target": 6},
+    {"source": 6, "target": 7},
+    {"source": 8, "target": 10},
+    {"source": 9, "target": 11},
+    {"source": 10, "target": 12},
+    {"source": 11, "target": 13}
+  ]
+}

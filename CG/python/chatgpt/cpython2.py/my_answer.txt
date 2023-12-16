@@ -1,0 +1,438 @@
+{
+  "nodes": [
+    {
+      "id": "num_nucleotides",
+      "label": "num_nucleotides"
+    },
+    {
+      "id": "specific_codon_count",
+      "label": "specific_codon_count"
+    },
+    {
+      "id": "num_codons",
+      "label": "num_codons"
+    },
+    {
+      "id": "get_all_codons",
+      "label": "get_all_codons"
+    },
+    {
+      "id": "get_codon",
+      "label": "get_codon"
+    },
+    {
+      "id": "first_start_codon",
+      "label": "first_start_codon"
+    },
+    {
+      "id": "first_stop_codon",
+      "label": "first_stop_codon"
+    },
+    {
+      "id": "first_stop_after_start",
+      "label": "first_stop_after_start"
+    },
+    {
+      "id": "is_valid_start",
+      "label": "is_valid_start"
+    },
+    {
+      "id": "random_seq",
+      "label": "random_seq"
+    },
+    {
+      "id": "get_all_start_codons",
+      "label": "get_all_start_codons"
+    },
+    {
+      "id": "get_all_stop_codons",
+      "label": "get_all_stop_codons"
+    },
+    {
+      "id": "rna_split",
+      "label": "rna_split"
+    },
+    {
+      "id": "codon_to_amino_acid",
+      "label": "codon_to_amino_acid"
+    },
+    {
+      "id": "show_amino_acids",
+      "label": "show_amino_acids"
+    },
+    {
+      "id": "rna_seq_length",
+      "label": "rna_seq_length"
+    }
+  ],
+  "edges": [
+    {
+      "from": "num_nucleotides",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "num_nucleotides",
+      "to": "len"
+    },
+    {
+      "from": "num_nucleotides",
+      "to": "print"
+    },
+    {
+      "from": "specific_codon_count",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "specific_codon_count",
+      "to": "get_all_start_codons"
+    },
+    {
+      "from": "specific_codon_count",
+      "to": "get_all_stop_codons"
+    },
+    {
+      "from": "specific_codon_count",
+      "to": "len"
+    },
+    {
+      "from": "specific_codon_count",
+      "to": "print"
+    },
+    {
+      "from": "num_codons",
+      "to": "len"
+    },
+    {
+      "from": "get_all_codons",
+      "to": "num_codons"
+    },
+    {
+      "from": "get_all_codons",
+      "to": "range"
+    },
+    {
+      "from": "get_all_codons",
+      "to": "append"
+    },
+    {
+      "from": "get_codon",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "first_start_codon",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "first_start_codon",
+      "to": "get_all_start_codons"
+    },
+    {
+      "from": "first_start_codon",
+      "to": "get_all_stop_codons"
+    },
+    {
+      "from": "first_start_codon",
+      "to": "len"
+    },
+    {
+      "from": "first_start_codon",
+      "to": "print"
+    },
+    {
+      "from": "first_stop_codon",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "first_stop_codon",
+      "to": "get_all_stop_codons"
+    },
+    {
+      "from": "first_stop_codon",
+      "to": "len"
+    },
+    {
+      "from": "first_stop_codon",
+      "to": "print"
+    },
+    {
+      "from": "first_stop_after_start",
+      "to": "get_all_codons"
+    },
+    {
+      "from": "first_stop_after_start",
+      "to": "get_all_start_codons"
+    },
+    {
+      "from": "first_stop_after_start",
+      "to": "get_all_stop_codons"
+    },
+    {
+      "from": "first_stop_after_start",
+      "to": "len"
+    },
+    {
+      "from": "first_stop_after_start",
+      "to": "print"
+    },
+    {
+      "from": "is_valid_start",
+      "to": "None"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.choice"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",
+      "to": "random.randint"
+    },
+    {
+      "from": "random_seq",

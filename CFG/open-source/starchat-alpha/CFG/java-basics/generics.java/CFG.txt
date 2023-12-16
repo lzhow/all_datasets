@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "class Box<T> {"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "private T t;"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "public void add(T t) {"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "this.t = t;"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "public T get() {"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "return t;"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 7
+    }
+  ]
+}

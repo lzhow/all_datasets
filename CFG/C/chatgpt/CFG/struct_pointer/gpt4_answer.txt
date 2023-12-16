@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "StructDeclaration",
+      "code": "typedef struct Point { int x; int y; } Point"
+    },
+    {
+      "id": 2,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 3,
+      "type": "MemoryAllocation",
+      "code": "Point *a = (Point *)malloc(sizeof(Point))"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "a->x = 2"
+    },
+    {
+      "id": 5,
+      "type": "Assignment",
+      "code": "a->y = 1"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    }
+  ]
+}

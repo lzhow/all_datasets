@@ -1,0 +1,82 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "stdio.h"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "Declaration",
+          "value": "int c = 0",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "int"
+            },
+            {
+              "type": "InitDeclarator",
+              "value": "c = 0",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "c"
+                },
+                {
+                  "type": "NumberLiteral",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "DoWhileStatement",
+          "children": [
+            {
+              "type": "FunctionCall",
+              "value": "printf",
+              "children": [
+                {
+                  "type": "StringLiteral",
+                  "value": "%d\\n"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "c"
+                }
+              ]
+            },
+            {
+              "type": "PostfixExpression",
+              "value": "c++",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "c"
+                }
+              ]
+            },
+            {
+              "type": "RelationalExpression",
+              "value": "c < 5",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "c"
+                },
+                {
+                  "type": "NumberLiteral",
+                  "value": "5"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

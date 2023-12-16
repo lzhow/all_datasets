@@ -1,0 +1,43 @@
+Here is the call graph for the given program:
+
+```json
+{
+    "nodes": [
+        {
+            "id": 0,
+            "type": "function",
+            "label": "main"
+        },
+        {
+        "id" : 1,
+        "type" : "function",
+        "label" : createNode
+        },
+         {
+        id" :2,
+        type" : function",
+         "label":"insertNode"
+        }
+        {
+         "id":"3",
+         "type":"function",
+         label:"printList"
+        },{
+         " id":"4",
+         type":"function"
+         " label":"malloc"
+        }],
+    "edges": [
+         {
+         source: 0,
+         target: 1
+        }, {
+         target : 2,
+         source : 0
+        },
+       {
+         id" :"5",
+         source" :"2",
+         target" :"3"
+        }]
+}```

@@ -1,0 +1,188 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [],
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.8.0;"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "VariableDeclaration",
+              "value": "uint"
+            },
+            {
+              "children": [],
+              "type": "Identifier",
+              "value": "_i"
+            }
+          ],
+          "type": "VariableDeclarationStatement",
+          "value": "function testRequire(uint _i) public pure"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "BinaryOperation",
+                  "value": ">"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Identifier",
+                      "value": "_i"
+                    },
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "10"
+                    }
+                  ],
+                  "type": "BinaryOperation",
+                  "value": "+"
+                }
+              ],
+              "type": "Expression",
+              "value": "require"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "StringLiteral",
+                      "value": "Input must be greater than 10"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": ","
+                }
+              ],
+              "type": "Expression",
+              "value": "string"
+            }
+          ],
+          "type": "FunctionCall",
+          "value": "require"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "BinaryOperation",
+                  "value": "<="
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Identifier",
+                      "value": "_i"
+                    },
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "10"
+                    }
+                  ],
+                  "type": "BinaryOperation",
+                  "value": "+"
+                }
+              ],
+              "type": "Expression",
+              "value": "if"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "StringLiteral",
+                      "value": "Input must be greater than 10"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": ","
+                }
+              ],
+              "type": "Expression",
+              "value": "string"
+            }
+          ],
+          "type": "FunctionCall",
+          "value": "if"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "BinaryOperation",
+                  "value": "=="
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "1"
+                    },
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "2"
+                    }
+                  ],
+                  "type": "BinaryOperation",
+                  "value": "+"
+                }
+              ],
+              "type": "Expression",
+              "value": "assert"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "1"
+                    },
+                    {
+                      "children": [],
+                      "type": "NumberLiteral",
+                      "value": "2"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": ","
+                }
+              ],
+              "type": "Expression",
+              "value": "string"
+            }
+          ],
+          "type": "FunctionCall",
+          "value": "assert"
+        }
+      ],
+      "type": "ContractDefinition",
+      "value": "contract ErrorHandling {"
+    }
+  ]
+}

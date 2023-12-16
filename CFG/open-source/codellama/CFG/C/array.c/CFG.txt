@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "entry"
+    },
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "float arr[3];"
+    },
+    {
+      "id": 2,
+      "type": "assignment",
+      "label": "arr[0] = 1;"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "label": "int mul_arr[][COL] = {{1,2}, {3,4}};"
+    },
+    {
+      "id": 4,
+      "type": "declaration",
+      "label": "static int array[] = {12, 23, 54,};"
+    },
+    {
+      "id": 5,
+      "type": "return",
+      "label": "return (0);"
+    },
+    {
+      "id": 6,
+      "type": "exit",
+      "label": "exit"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    }
+  ]
+}

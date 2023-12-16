@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "code": "char str1[20] = \"Hello\";"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "code": "char str2[20] = \"World\";"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "code": "char str3[40];"
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "code": "printf(\"Length of str1: %zu\\n\", strlen(str1));"
+    },
+    {
+      "id": 5,
+      "type": "function_call",
+      "code": "strcpy(str3, str1);"
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "code": "strncpy(str3, str2, 3);"
+    },
+    {
+      "id": 7,
+      "type": "assignment",
+      "code": "str3[3] = '\\0';"
+    },
+    {
+      "id": 8,
+      "type": "function_call",
+      "code": "printf(\"str3 after strncpy: %s\\n\", str3);"
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "code": "strcat(str3, str2);"
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "code": "strncat(str3, \"!!!\", 2);"
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "code": "printf(\"str3 after strncat: %s\\n\", str3);"
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "code": "printf(\"strcmp(str1, str2): %d\\n\", strcmp(str1, str2));"
+    },
+    {
+      "id": 13,
+      "type": "function_call",
+      "code": "printf(\"strncmp(str1, str2, 3): %d\\n\", strncmp(str1, str2, 3));"
+    },
+    {
+      "id": 14,
+      "type": "function_call",
+      "code": "printf(\"First occurrence of 'l' in str1: %s\\n\", strchr(str1, 'l'));"
+    },
+    {
+      "id": 15,
+      "type": "function_call",
+      "code": "printf(\"Last occurrence of 'l' in str1: %s\\n\", strrchr(str1, 'l'));"
+    },
+    {
+      "id": 16,
+      "type": "function_call",
+      "code": "printf(\"Substring 'lo' in str1: %s\\n\", strstr(str1, \"lo\"));"
+    },
+    {
+      "id": 17,
+      "type": "return",
+      "code": "return 0;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    },
+    {
+      "source": 15,
+      "target": 16
+    },
+    {
+      "source": 16,
+      "target": 17
+    }
+  ]
+}

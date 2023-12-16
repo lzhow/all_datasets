@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class HeapExample"
+    },
+    {
+      "id": 2,
+      "type": "Method",
+      "code": "public static void main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "HeapDeclaration",
+      "code": "PriorityQueue<Integer> minHeap = new PriorityQueue<>()"
+    },
+    {
+      "id": 4,
+      "type": "HeapOperation",
+      "code": "minHeap.offer(10)"
+    },
+    {
+      "id": 5,
+      "type": "HeapOperation",
+      "code": "minHeap.offer(5)"
+    },
+    {
+      "id": 6,
+      "type": "HeapOperation",
+      "code": "minHeap.offer(15)"
+    },
+    {
+      "id": 7,
+      "type": "IOOperation",
+      "code": "System.out.println(\"stack top: \" + minHeap.peek())"
+    },
+    {
+      "id": 8,
+      "type": "WhileLoop",
+      "code": "while (!minHeap.isEmpty())"
+    },
+    {
+      "id": 9,
+      "type": "IOOperation",
+      "code": "System.out.println(minHeap.poll())"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 9,
+      "to": 8,
+      "condition": "next iteration"
+    }
+  ]
+}

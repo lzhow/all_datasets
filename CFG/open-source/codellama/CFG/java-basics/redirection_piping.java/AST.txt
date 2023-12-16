@@ -1,0 +1,236 @@
+{
+  "type": "class",
+  "value": "RedirectionAndPipingExample",
+  "children": [
+    {
+      "type": "method",
+      "value": "main",
+      "children": [
+        {
+          "type": "parameter",
+          "value": "String[]",
+          "children": []
+        },
+        {
+          "type": "block",
+          "value": null,
+          "children": [
+            {
+              "type": "variable",
+              "value": "PrintStream",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "ps",
+                  "children": []
+                },
+                {
+                  "type": "operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "new",
+                  "value": "PrintStream",
+                  "children": [
+                    {
+                      "type": "new",
+                      "value": "FileOutputStream",
+                      "children": [
+                        {
+                          "type": "string",
+                          "value": "output.txt",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "method",
+              "value": "setOut",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "System",
+                  "children": []
+                },
+                {
+                  "type": "variable",
+                  "value": "ps",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "variable",
+              "value": "PrintStream",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "ps",
+                  "children": []
+                },
+                {
+                  "type": "operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "new",
+                  "value": "PrintStream",
+                  "children": [
+                    {
+                      "type": "new",
+                      "value": "FileOutputStream",
+                      "children": [
+                        {
+                          "type": "string",
+                          "value": "output.txt",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "method",
+              "value": "setIn",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "System",
+                  "children": []
+                },
+                {
+                  "type": "new",
+                  "value": "FileInputStream",
+                  "children": [
+                    {
+                      "type": "string",
+                      "value": "input.txt",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "variable",
+              "value": "BufferedReader",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "reader",
+                  "children": []
+                },
+                {
+                  "type": "operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "new",
+                  "value": "BufferedReader",
+                  "children": [
+                    {
+                      "type": "new",
+                      "value": "InputStreamReader",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "value": "System",
+                          "children": []
+                        },
+                        {
+                          "type": "variable",
+                          "value": "in",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "variable",
+              "value": "String",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "line",
+                  "children": []
+                },
+                {
+                  "type": "operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "method",
+                  "value": "readLine",
+                  "children": [
+                    {
+                      "type": "variable",
+                      "value": "reader",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "while",
+              "value": null,
+              "children": [
+                {
+                  "type": "operator",
+                  "value": "!=",
+                  "children": [
+                    {
+                      "type": "variable",
+                      "value": "line",
+                      "children": []
+                    },
+                    {
+                      "type": "null",
+                      "value": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "block",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "method",
+                      "value": "println",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "value": "System",
+                          "children": []
+                        },
+                        {
+                          "type": "string",
+                          "value": "read from the file ",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+You are a Solidtiy Abstract Syntax Tree (AST) parser. I will give you a Solidtiy code file. You give me its AST in Json format. Each AST node only has two attributes, type and value.
+    
+    The input file is 
+    ```
+    pragma solidity ^0.5.0;
+
+contract S {
+   function A(uint j) internal pure returns (uint) {
+      while (j != 0) {
+         j += 10;
+      }
+        return j;
+   }
+}
+    ```
+    

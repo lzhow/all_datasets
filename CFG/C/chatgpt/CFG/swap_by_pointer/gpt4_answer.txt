@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void swap(int *a, int *b)"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "int tmp = *a"
+    },
+    {
+      "id": 3,
+      "type": "Assignment",
+      "code": "*a = *b"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "*b = tmp"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    }
+  ]
+}

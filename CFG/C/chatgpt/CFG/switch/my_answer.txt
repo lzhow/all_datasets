@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "code": "unsigned int aCount = 0;"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "code": "int grade;"
+    },
+    {
+      "id": 3,
+      "type": "loop",
+      "code": "while ((grade = getchar()) != EOF)"
+    },
+    {
+      "id": 4,
+      "type": "switch",
+      "code": "switch (grade)"
+    },
+    {
+      "id": 5,
+      "type": "case",
+      "code": "case 'a':"
+    },
+    {
+      "id": 6,
+      "type": "increment",
+      "code": "++aCount;"
+    },
+    {
+      "id": 7,
+      "type": "break",
+      "code": "break;"
+    },
+    {
+      "id": 8,
+      "type": "case",
+      "code": "case 'b':"
+    },
+    {
+      "id": 9,
+      "type": "print",
+      "code": "printf(\"%d\\n\", aCount);"
+    },
+    {
+      "id": 10,
+      "type": "case",
+      "code": "case 'c':"
+    },
+    {
+      "id": 11,
+      "type": "decrement",
+      "code": "--aCount;"
+    },
+    {
+      "id": 12,
+      "type": "default",
+      "code": "default:"
+    },
+    {
+      "id": 13,
+      "type": "break",
+      "code": "break;"
+    },
+    {
+      "id": 14,
+      "type": "end",
+      "code": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 4,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 8,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 4,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 3,
+      "target": 14
+    }
+  ]
+}

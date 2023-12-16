@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "code": "Stack<Integer> stack = new Stack<>()"
+    },
+    {
+      "id": 2,
+      "type": "method_call",
+      "code": "stack.push(1)"
+    },
+    {
+      "id": 3,
+      "type": "method_call",
+      "code": "stack.push(2)"
+    },
+    {
+      "id": 4,
+      "type": "method_call",
+      "code": "stack.push(3)"
+    },
+    {
+      "id": 5,
+      "type": "method_call",
+      "code": "System.out.println(\"栈顶元素: \" + stack.peek())"
+    },
+    {
+      "id": 6,
+      "type": "condition",
+      "code": "!stack.isEmpty()"
+    },
+    {
+      "id": 7,
+      "type": "method_call",
+      "code": "System.out.println(stack.pop())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 6
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 6
+    }
+  ]
+}

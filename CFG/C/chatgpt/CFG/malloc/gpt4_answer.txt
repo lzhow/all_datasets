@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 2,
+      "type": "MemoryAllocation",
+      "code": "int *ptr = (int *)malloc(sizeof(int))"
+    },
+    {
+      "id": 3,
+      "type": "Conditional",
+      "code": "if (ptr != NULL)"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "*ptr = 10"
+    },
+    {
+      "id": 5,
+      "type": "IOOperation",
+      "code": "printf(\"%d\\n\", *ptr)"
+    },
+    {
+      "id": 6,
+      "type": "MemoryDeallocation",
+      "code": "free(ptr)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "condition": "true"
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    }
+  ]
+}

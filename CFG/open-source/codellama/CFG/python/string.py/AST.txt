@@ -1,0 +1,164 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "original_string"
+        },
+        {
+          "type": "Str",
+          "value": "Hello, Python!"
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "length"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "len"
+            },
+            {
+              "type": "Name",
+              "value": "original_string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "upper_string"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Attribute",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "original_string"
+                },
+                {
+                  "type": "Name",
+                  "value": "upper"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "split_string"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Attribute",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "original_string"
+                },
+                {
+                  "type": "Name",
+                  "value": "split"
+                }
+              ]
+            },
+            {
+              "type": "Str",
+              "value": ","
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "position"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Attribute",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "original_string"
+                },
+                {
+                  "type": "Name",
+                  "value": "find"
+                }
+              ]
+            },
+            {
+              "type": "Str",
+              "value": "Python"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "joined_string"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "join"
+            },
+            {
+              "type": "Str",
+              "value": " "
+            },
+            {
+              "type": "List",
+              "children": [
+                {
+                  "type": "Str",
+                  "value": "Joined"
+                },
+                {
+                  "type": "Str",
+                  "value": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

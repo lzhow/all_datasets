@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "short_hand_if_else"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "Read money from args"
+    },
+    {
+      "id": 4,
+      "type": "conditional",
+      "label": "money < 18 ?"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "Assign result = \"Enough.\""
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "Assign result = \"Insufficient.\""
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "Print result"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "condition": "true"
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "condition": "false"
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

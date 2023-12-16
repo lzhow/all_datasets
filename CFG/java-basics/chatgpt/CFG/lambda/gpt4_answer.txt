@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ListCreation",
+      "code": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5)"
+    },
+    {
+      "id": 2,
+      "type": "LambdaExpression",
+      "code": "numbers.forEach(n -> System.out.println(n))"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    }
+  ]
+}

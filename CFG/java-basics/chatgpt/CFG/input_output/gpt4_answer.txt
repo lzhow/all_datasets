@@ -1,0 +1,200 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class SimpleReader"
+    },
+    {
+      "id": 2,
+      "type": "FieldDeclaration",
+      "code": "private Scanner scanner"
+    },
+    {
+      "id": 3,
+      "type": "Constructor",
+      "code": "public SimpleReader() { scanner = new Scanner(System.in); }"
+    },
+    {
+      "id": 4,
+      "type": "Method",
+      "code": "public int readInt() { return scanner.nextInt(); }"
+    },
+    {
+      "id": 5,
+      "type": "Method",
+      "code": "public double readDouble() { return scanner.nextDouble(); }"
+    },
+    {
+      "id": 6,
+      "type": "Method",
+      "code": "public String readString() { return scanner.next(); }"
+    },
+    {
+      "id": 7,
+      "type": "Method",
+      "code": "public char readChar() { return scanner.next().charAt(0); }"
+    },
+    {
+      "id": 8,
+      "type": "Method",
+      "code": "public boolean hasNextChar() { return scanner.hasNext(); }"
+    },
+    {
+      "id": 9,
+      "type": "Method",
+      "code": "public boolean hasNextLine() { return scanner.hasNextLine(); }"
+    },
+    {
+      "id": 10,
+      "type": "Method",
+      "code": "public String readLine() { return scanner.nextLine(); }"
+    },
+    {
+      "id": 11,
+      "type": "Method",
+      "code": "public int[] readAllInts() { ArrayList<Integer> ints = new ArrayList<>(); while (scanner.hasNextInt()) { ints.add(scanner.nextInt()); } return ints.stream().mapToInt(i -> i).toArray(); }"
+    },
+    {
+      "id": 12,
+      "type": "Method",
+      "code": "public static void main(String[] args)"
+    },
+    {
+      "id": 13,
+      "type": "ObjectCreation",
+      "code": "SimpleReader reader = new SimpleReader()"
+    },
+    {
+      "id": 14,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Reading an integer: \" + reader.readInt())"
+    },
+    {
+      "id": 15,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Reading a double: \" + reader.readDouble())"
+    },
+    {
+      "id": 16,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Reading a string: \" + reader.readString())"
+    },
+    {
+      "id": 17,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Reading a char: \" + reader.readChar())"
+    },
+    {
+      "id": 18,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Has next char: \" + reader.hasNextChar())"
+    },
+    {
+      "id": 19,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Has next line: \" + reader.hasNextLine())"
+    },
+    {
+      "id": 20,
+      "type": "IOOperation",
+      "code": "System.out.println(\"Reading a line: \" + reader.readLine())"
+    },
+    {
+      "id": 21,
+      "type": "IOOperation",
+      "code": "int[] allInts = reader.readAllInts()"
+    },
+    {
+      "id": 22,
+      "type": "Loop",
+      "code": "for (int i : allInts) { System.out.print(i + \" \") }"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 10
+    },
+    {
+      "from": 10,
+      "to": 11
+    },
+    {
+      "from": 1,
+      "to": 12
+    },
+    {
+      "from": 12,
+      "to": 13
+    },
+    {
+      "from": 13,
+      "to": 14
+    },
+    {
+      "from": 14,
+      "to": 15
+    },
+    {
+      "from": 15,
+      "to": 16
+    },
+    {
+      "from": 16,
+      "to": 17
+    },
+    {
+      "from": 17,
+      "to": 18
+    },
+    {
+      "from": 18,
+      "to": 19
+    },
+    {
+      "from": 19,
+      "to": 20
+    },
+    {
+      "from": 20,
+      "to": 21
+    },
+    {
+      "from": 21,
+      "to": 22
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    { "id": 1, "type": "interface", "label": "Flyable" },
+    { "id": 2, "type": "method", "label": "fly" },
+    { "id": 3, "type": "interface", "label": "Swimmable" },
+    { "id": 4, "type": "method", "label": "swim" },
+    { "id": 5, "type": "class", "label": "Bird" },
+    { "id": 6, "type": "method", "label": "fly (Bird)" },
+    { "id": 7, "type": "class", "label": "Fish" },
+    { "id": 8, "type": "method", "label": "swim (Fish)" },
+    { "id": 9, "type": "class", "label": "FlyingFish" },
+    { "id": 10, "type": "method", "label": "fly (FlyingFish)" },
+    { "id": 11, "type": "method", "label": "swim (FlyingFish)" }
+  ],
+  "edges": [
+    { "source": 5, "target": 1 },
+    { "source": 6, "target": 2 },
+    { "source": 7, "target": 3 },
+    { "source": 8, "target": 4 },
+    { "source": 9, "target": 1 },
+    { "source": 9, "target": 3 },
+    { "source": 10, "target": 2 },
+    { "source": 11, "target": 4 }
+  ]
+}

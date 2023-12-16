@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "int n"
+    },
+    {
+      "id": 3,
+      "type": "IOOperation",
+      "code": "scanf(\"%d\",&n)"
+    },
+    {
+      "id": 4,
+      "type": "Conditional",
+      "code": "if(n>0)"
+    },
+    {
+      "id": 5,
+      "type": "IOOperation",
+      "code": "printf(\"large\\n\")"
+    },
+    {
+      "id": 6,
+      "type": "Conditional",
+      "code": "else if(n>-5)"
+    },
+    {
+      "id": 7,
+      "type": "IOOperation",
+      "code": "printf(\"mid\\n\")"
+    },
+    {
+      "id": 8,
+      "type": "IOOperation",
+      "code": "print(\"small\\n\")"
+    },
+    {
+      "id": 9,
+      "type": "Return",
+      "code": "return"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "true"
+    },
+    {
+      "from": 5,
+      "to": 9
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "condition": "false"
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "condition": "true"
+    },
+    {
+      "from": 7,
+      "to": 9
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "condition": "false"
+    },
+    {
+      "from": 8,
+      "to": 9
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "BuyMeACoffee",
+      "label": "BuyMeACoffee"
+    },
+    {
+      "id": "NewMemo",
+      "label": "NewMemo"
+    },
+    {
+      "id": "Memo",
+      "label": "Memo"
+    },
+    {
+      "id": "owner",
+      "label": "owner"
+    },
+    {
+      "id": "memos",
+      "label": "memos"
+    },
+    {
+      "id": "ownerOnly",
+      "label": "ownerOnly"
+    },
+    {
+      "id": "constructor",
+      "label": "constructor"
+    },
+    {
+      "id": "getMemos",
+      "label": "getMemos"
+    },
+    {
+      "id": "buyCoffee",
+      "label": "buyCoffee"
+    },
+    {
+      "id": "withdrawTips",
+      "label": "withdrawTips"
+    },
+    {
+      "id": "changeOwner",
+      "label": "changeOwner"
+    }
+  ],
+  "edges": [
+    {
+      "from": "BuyMeACoffee",
+      "to": "NewMemo"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "Memo"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "owner"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "memos"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "ownerOnly"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "constructor"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "getMemos"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "buyCoffee"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "withdrawTips"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "changeOwner"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "emit"
+    },
+    {
+      "from": "buyCoffee",
+      "to": "emit"
+    },
+    {
+      "from": "withdrawTips",
+      "to": "require"
+    },
+    {
+      "from": "changeOwner",
+      "to": "require"
+    }
+  ]
+}

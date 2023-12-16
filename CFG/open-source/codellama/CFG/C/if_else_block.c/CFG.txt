@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "entry"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "int n;"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "scanf(\"%d\", &n);"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "if (n > 10){"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "puts(\"Large\");"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "else {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "puts(\"Small\");"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 9,
+      "type": "exit",
+      "label": "exit"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 9
+    }
+  ]
+}

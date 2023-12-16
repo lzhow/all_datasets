@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "Main"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "try_block",
+      "label": "Try Block"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "Initialize array"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "Access array element"
+    },
+    {
+      "id": 6,
+      "type": "catch_block",
+      "label": "Catch ArrayIndexOutOfBoundsException"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "Handle exception"
+    },
+    {
+      "id": 8,
+      "type": "finally_block",
+      "label": "Finally Block"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "condition": "ArrayIndexOutOfBoundsException occurs"
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "condition": "finally block"
+    }
+  ]
+}

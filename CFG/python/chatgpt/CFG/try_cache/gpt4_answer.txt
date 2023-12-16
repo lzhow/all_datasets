@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {"id": 1, "type": "function_definition", "label": "def trycatch(x):"},
+    {"id": 2, "type": "try_block", "label": "try:"},
+    {"id": 3, "type": "expression", "label": "print(x)"},
+    {"id": 4, "type": "except_block", "label": "except NameError:"},
+    {"id": 5, "type": "expression", "label": "print('Variable x is not defined')"},
+    {"id": 6, "type": "except_block", "label": "except:"},
+    {"id": 7, "type": "expression", "label": "print('Something else went wrong')"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 2, "target": 6},
+    {"source": 6, "target": 7}
+  ]
+}

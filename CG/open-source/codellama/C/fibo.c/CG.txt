@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "name": "main",
+      "type": "function",
+      "address": 400600,
+      "size": 100
+    },
+    {
+      "name": "fibonacci",
+      "type": "function",
+      "address": 400700,
+      "size": 100
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "fibonacci",
+      "type": "call"
+    },
+    {
+      "from": "fibonacci",
+      "to": "fibonacci",
+      "type": "call"
+    },
+    {
+      "from": "fibonacci",
+      "to": "fibonacci",
+      "type": "call"
+    }
+  ]
+}

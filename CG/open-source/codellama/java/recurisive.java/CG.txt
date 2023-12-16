@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "name": "Main.main",
+      "type": "method",
+      "args": [
+        {
+          "name": "args",
+          "type": "array"
+        }
+      ]
+    },
+    {
+      "name": "Main.s",
+      "type": "method",
+      "args": [
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "Main.m",
+      "type": "method",
+      "args": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "Main.main",
+      "to": "Main.s",
+      "type": "call"
+    },
+    {
+      "from": "Main.s",
+      "to": "Main.s",
+      "type": "call"
+    },
+    {
+      "from": "Main.s",
+      "to": "Main.m",
+      "type": "call"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UnionDeclaration",
+      "code": "union Data { int i; float f; char str[20]; }"
+    },
+    {
+      "id": 2,
+      "type": "Function",
+      "code": "int main()"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "union Data data"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "data.i = 10"
+    },
+    {
+      "id": 5,
+      "type": "Return",
+      "code": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    }
+  ]
+}

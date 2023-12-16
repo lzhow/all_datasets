@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "id": "tkinter",
+      "type": "module"
+    },
+    {
+      "id": "tkcalendar",
+      "type": "module"
+    },
+    {
+      "id": "tkinter as tk",
+      "type": "module"
+    },
+    {
+      "id": "tk.Tk",
+      "type": "class"
+    },
+    {
+      "id": "gameList",
+      "type": "variable"
+    },
+    {
+      "id": "show",
+      "type": "function"
+    },
+    {
+      "id": "options",
+      "type": "variable"
+    },
+    {
+      "id": "selected1",
+      "type": "variable"
+    },
+    {
+      "id": "selected2",
+      "type": "variable"
+    },
+    {
+      "id": "L1",
+      "type": "variable"
+    },
+    {
+      "id": "drop1",
+      "type": "variable"
+    },
+    {
+      "id": "L2",
+      "type": "variable"
+    },
+    {
+      "id": "L3",
+      "type": "variable"
+    },
+    {
+      "id": "drop2",
+      "type": "variable"
+    },
+    {
+      "id": "cal",
+      "type": "variable"
+    },
+    {
+      "id": "button",
+      "type": "variable"
+    },
+    {
+      "id": "label",
+      "type": "variable"
+    }
+  ],
+  "edges": [
+    {
+      "source": "tkinter",
+      "target": "tk.Tk"
+    },
+    {
+      "source": "tkcalendar",
+      "target": "cal"
+    },
+    {
+      "source": "tkinter as tk",
+      "target": "window"
+    },
+    {
+      "source": "window",
+      "target": "gameList"
+    },
+    {
+      "source": "selected1",
+      "target": "options"
+    },
+    {
+      "source": "selected2",
+      "target": "options"
+    },
+    {
+      "source": "L1",
+      "target": "window"
+    },
+    {
+      "source": "options",
+      "target": "selected1"
+    },
+    {
+      "source": "options",
+      "target": "selected2"
+    },
+    {
+      "source": "drop1",
+      "target": "selected1"
+    },
+    {
+      "source": "window",
+      "target": "L2"
+    },
+    {
+      "source": "L2",
+      "target": "window"
+    },
+    {
+      "source": "L3",
+      "target": "window"
+    },
+    {
+      "source": "options",
+      "target": "selected2"
+    },
+    {
+      "source": "drop2",
+      "target": "selected2"
+    },
+    {
+      "source": "cal",
+      "target": "window"
+    },
+    {
+      "source": "window",
+      "target": "button"
+    },
+    {
+      "source": "button",
+      "target": "show"
+    },
+    {
+      "source": "window",
+      "target": "label"
+    }
+  ]
+}

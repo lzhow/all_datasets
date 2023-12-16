@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    { "id": "ChainBattles", "type": "contract" },
+    { "id": "constructor", "type": "function", "parent": "ChainBattles" },
+    { "id": "generateCharacter", "type": "function", "parent": "ChainBattles" },
+    { "id": "getLevels", "type": "function", "parent": "ChainBattles" },
+    { "id": "getTokenURI", "type": "function", "parent": "ChainBattles" },
+    { "id": "mint", "type": "function", "parent": "ChainBattles" },
+    { "id": "train", "type": "function", "parent": "ChainBattles" },
+    { "id": "RandomNumbers", "type": "external_contract" },
+    { "id": "ERC721URIStorage", "type": "external_contract" },
+    { "id": "Strings", "type": "library" },
+    { "id": "Counters", "type": "library" },
+    { "id": "Base64", "type": "library" }
+  ],
+  "edges": [
+    { "from": "constructor", "to": "RandomNumbers", "type": "contractCreation" },
+    { "from": "mint", "to": "_tokenIds.increment", "type": "functionCall" },
+    { "from": "mint", "to": "_tokenIds.current", "type": "functionCall" },
+    { "from": "mint", "to": "_safeMint", "type": "functionCall" },
+    { "from": "mint", "to": "tokenIdToLevels", "type": "stateVariableAssignment" },
+    { "from": "mint", "to": "_setTokenURI", "type": "functionCall" },
+    { "from": "mint", "to": "getTokenURI", "type": "functionCall" },
+    { "from": "train", "to": "_exists", "type": "functionCall" },
+    { "from": "train", "to": "ownerOf", "type": "functionCall" },
+    { "from": "train", "to": "tokenIdToLevels", "type": "stateVariableAssignment" },
+    { "from": "train", "to": "RandomNumbers.getRandomNumber", "type": "functionCall" },
+    { "from": "train", "to": "_setTokenURI", "type": "functionCall" },
+    { "from": "train", "to": "getTokenURI", "type": "functionCall" },
+    { "from": "getTokenURI", "to": "generateCharacter", "type": "functionCall" },
+    { "from": "generateCharacter", "to": "tokenIdToLevels", "type": "stateVariableAccess" }
+  ]
+}

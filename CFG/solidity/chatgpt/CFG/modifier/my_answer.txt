@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "ContractDefinition",
+      "name": "P"
+    },
+    {
+      "id": 1,
+      "type": "StateVariableDeclaration",
+      "name": "s",
+      "visibility": "public",
+      "isConstant": false,
+      "isImmutable": false,
+      "isIndexed": false,
+      "isOverride": false,
+      "isVirtual": false,
+      "isAbstract": false,
+      "isDeclaredConst": false,
+      "isDeclaredImmutable": false,
+      "isDeclaredPublic": true,
+      "isDeclaredPrivate": false,
+      "isDeclaredInternal": false,
+      "isDeclaredExternal": false
+    },
+    {
+      "id": 2,
+      "type": "ModifierDefinition",
+      "name": "mm"
+    },
+    {
+      "id": 3,
+      "type": "FunctionDefinition",
+      "name": "f",
+      "visibility": "public",
+      "stateMutability": "view",
+      "isConstructor": false,
+      "isFallback": false,
+      "isReceive": false,
+      "isDeclaredPublic": true,
+      "isDeclaredPrivate": false,
+      "isDeclaredInternal": false,
+      "isDeclaredExternal": false
+    },
+    {
+      "id": 4,
+      "type": "VariableDeclarationStatement",
+      "name": "a",
+      "dataType": "uint256",
+      "isDeclaredConstant": false,
+      "isDeclaredImmutable": false,
+      "isDeclaredPublic": false,
+      "isDeclaredPrivate": false,
+      "isDeclaredInternal": false,
+      "isDeclaredExternal": false
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "type": "contains"
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "type": "contains"
+    }
+  ]
+}

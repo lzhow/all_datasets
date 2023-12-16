@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "char x = 1"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "char y = 2"
+    },
+    {
+      "id": 4,
+      "type": "Declaration & Assignment",
+      "code": "float z = (float)x / y"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    }
+  ]
+}

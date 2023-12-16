@@ -1,0 +1,149 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "int"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "c"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "c"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "WhileStatement",
+              "children": [
+                {
+                  "type": "RelationalExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "c"
+                    },
+                    {
+                      "type": "LessThan",
+                      "value": "<"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "FunctionCall",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "printf"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Argument",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "%d\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Argument",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "c"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "c"
+                            },
+                            {
+                              "type": "Addition",
+                              "value": "++"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

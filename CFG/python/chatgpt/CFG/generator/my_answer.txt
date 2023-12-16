@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "name": "square_numbers",
+      "code": "def square_numbers(n):\n  for i in range(n):\n    yield i ** 2"
+    },
+    {
+      "id": 1,
+      "type": "assignment",
+      "name": "squares",
+      "code": "squares = square_numbers(5)"
+    },
+    {
+      "id": 2,
+      "type": "loop",
+      "name": "for num in squares",
+      "code": "for num in squares:\n  print(num)"
+    },
+    {
+      "id": 3,
+      "type": "print",
+      "name": "print(num)",
+      "code": "print(num)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 2
+    }
+  ]
+}

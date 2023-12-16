@@ -1,0 +1,287 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "type": "ImportDeclaration",
+          "value": "import java.io.*;"
+        }
+      ],
+      "type": "CompilationUnit",
+      "value": "import java.io.*;\n\npublic class RedirectionAndPipingExample {\n    public static void main(String[] args) throws IOException {\n        PrintStream ps = new PrintStream(new FileOutputStream(\"output.txt\"));\n        System.setOut(ps);\n\n        System.setIn(new FileInputStream(\"input.txt\"));\n        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));\n        String line;\n        while ((line = reader.readLine())!= null) {\n            System.out.println(\"read from the file \" + line);\n        }\n        PipedOutputStream pout = new PipedOutputStream();\n        PipedInputStream pin = new PipedInputStream();\n        pout.connect(pin);\n\n        Thread producer = new Thread(() -> {\n            try {\n                pout.write(\"Hello from one thread to another!\".getBytes());\n                pout.close();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n        });\n\n        Thread consumer = new Thread(() -> {\n            try {\n                int data = pin.read();\n                while (data!= -1) {\n                    System.out.print((char) data);\n                    data = pin.read();\n                }\n                pin.close();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n        });\n\n        producer.start();\n        consumer.start();\n    }\n}"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "type": "ClassOrInterfaceDeclaration",
+          "value": "public class RedirectionAndPipingExample {"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "FormalParameter",
+                  "value": "String[] args"
+                }
+              ],
+              "type": "MethodDeclaration",
+              "value": "public static void main(String[] args) throws IOException {"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "ClassOrInterfaceType",
+                  "value": "PrintStream"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "PrimaryExpression",
+                      "value": "new"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "ClassOrInterfaceType",
+                          "value": "FileOutputStream"
+                        }
+                      ],
+                      "type": "MethodInvocation",
+                      "value": "FileOutputStream"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "Literal",
+                          "value": "output.txt"
+                        }
+                      ],
+                      "type": "Arguments",
+                      "value": "(\"output.txt\")"
+                    }
+                  ],
+                  "type": "AllocationExpression",
+                  "value": "new PrintStream(new FileOutputStream(\"output.txt\"))"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "MethodInvocation",
+                      "value": "System.setOut"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "VariableDeclaratorId",
+                          "value": "ps"
+                        }
+                      ],
+                      "type": "VariableDeclarator",
+                      "value": "ps = "
+                    }
+                  ],
+                  "type": "ExpressionStatement",
+                  "value": "System.setOut(ps);"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "ClassOrInterfaceType",
+                      "value": "FileInputStream"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "PrimaryExpression",
+                          "value": "new"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "ClassOrInterfaceType",
+                              "value": "FileInputStream"
+                            }
+                          ],
+                          "type": "MethodInvocation",
+                          "value": "FileInputStream"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "Literal",
+                              "value": "input.txt"
+                            }
+                          ],
+                          "type": "Arguments",
+                          "value": "(\"input.txt\")"
+                        }
+                      ],
+                      "type": "AllocationExpression",
+                      "value": "new FileInputStream(\"input.txt\")"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "MethodInvocation",
+                          "value": "System.setIn"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "VariableDeclaratorId",
+                              "value": "ps"
+                            }
+                          ],
+                          "type": "VariableDeclarator",
+                          "value": "ps = "
+                        }
+                      ],
+                      "type": "ExpressionStatement",
+                      "value": "System.setIn(new FileInputStream(\"input.txt\"));"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "ClassOrInterfaceType",
+                          "value": "BufferedReader"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "PrimaryExpression",
+                              "value": "new"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "ClassOrInterfaceType",
+                                  "value": "InputStreamReader"
+                                }
+                              ],
+                              "type": "MethodInvocation",
+                              "value": "InputStreamReader"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "MethodInvocation",
+                                  "value": "System.in"
+                                }
+                              ],
+                              "type": "Arguments",
+                              "value": "(System.in)"
+                            }
+                          ],
+                          "type": "AllocationExpression",
+                          "value": "new BufferedReader(new InputStreamReader(System.in))"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "VariableDeclaratorId",
+                              "value": "reader"
+                            }
+                          ],
+                          "type": "VariableDeclarator",
+                          "value": "reader = "
+                        }
+                      ],
+                      "type": "ExpressionStatement",
+                      "value": "BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "VariableDeclaratorId",
+                          "value": "line"
+                        }
+                      ],
+                      "type": "VariableDeclarator",
+                      "value": "line = "
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "VariableDeclaratorId",
+                              "value": "reader"
+                            }
+                          ],
+                          "type": "FieldAccess",
+                          "value": "reader.readLine()"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "EqualityExpression",
+                              "value": "!="
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "Literal",
+                                  "value": "null"
+                                }
+                              ],
+                              "type": "NullLiteral",
+                              "value": "null"
+                            }
+                          ],
+                          "type": "BinaryExpression",
+                          "value": "!= null"
+                        }
+                      ],
+                      "type": "WhileStatement",
+                      "value": "while ((line = reader.readLine())!= null) {"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "StringLiteral",
+                              "value": "read from the file "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

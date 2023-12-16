@@ -1,0 +1,173 @@
+{
+  "type": "class",
+  "children": [
+    {
+      "type": "method",
+      "children": [
+        {
+          "type": "method_name",
+          "value": "printArray"
+        },
+        {
+          "type": "parameters",
+          "children": [
+            {
+              "type": "parameter",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "int"
+                },
+                {
+                  "type": "name",
+                  "value": "arr"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "block",
+          "children": [
+            {
+              "type": "for",
+              "children": [
+                {
+                  "type": "for_init",
+                  "children": [
+                    {
+                      "type": "type",
+                      "value": "int"
+                    },
+                    {
+                      "type": "name",
+                      "value": "i"
+                    },
+                    {
+                      "type": "assign",
+                      "value": "="
+                    },
+                    {
+                      "type": "value",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "type": "for_condition",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "i"
+                    },
+                    {
+                      "type": "less_than",
+                      "value": "<"
+                    },
+                    {
+                      "type": "name",
+                      "value": "arr"
+                    },
+                    {
+                      "type": "dot",
+                      "value": "."
+                    },
+                    {
+                      "type": "name",
+                      "value": "length"
+                    }
+                  ]
+                },
+                {
+                  "type": "for_update",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "i"
+                    },
+                    {
+                      "type": "assign",
+                      "value": "="
+                    },
+                    {
+                      "type": "name",
+                      "value": "i"
+                    },
+                    {
+                      "type": "plus",
+                      "value": "+"
+                    },
+                    {
+                      "type": "value",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "block",
+                  "children": [
+                    {
+                      "type": "if",
+                      "children": [
+                        {
+                          "type": "if_condition",
+                          "children": [
+                            {
+                              "type": "name",
+                              "value": "i"
+                            },
+                            {
+                              "type": "greater_than",
+                              "value": ">"
+                            },
+                            {
+                              "type": "value",
+                              "value": "9"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "block",
+                          "children": [
+                            {
+                              "type": "break"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "print",
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "arr"
+                        },
+                        {
+                          "type": "dot",
+                          "value": "."
+                        },
+                        {
+                          "type": "name",
+                          "value": "length"
+                        },
+                        {
+                          "type": "minus",
+                          "value": "-"
+                        },
+                        {
+                          "type": "value",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

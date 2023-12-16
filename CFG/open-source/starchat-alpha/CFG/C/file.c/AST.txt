@@ -1,0 +1,55 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "Preprocessor",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "Function Definition",
+      "value": "int main()",
+      "children": [
+        {
+          "type": "Compound Statement",
+          "value": "{",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "FILE *file = fopen(\"example.txt\", \"r\");",
+              "children": []
+            },
+            {
+              "type": "If Statement",
+              "value": "if (file!= NULL)",
+              "children": [
+                {
+                  "type": "Compound Statement",
+                  "value": "{",
+                  "children": [
+                    {
+                      "type": "Expression Statement",
+                      "value": "// \u6267\u884c\u6587\u4ef6\u64cd\u4f5c",
+                      "children": []
+                    },
+                    {
+                      "type": "Function Call",
+                      "value": "fclose(file);",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Return Statement",
+              "value": "return 0;",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

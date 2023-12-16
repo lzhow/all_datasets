@@ -1,0 +1,59 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "function_declaration",
+      "value": "void copy(char * const s1, char * const s2)",
+      "children": [
+        {
+          "type": "parameter_declaration",
+          "value": "char * const s1"
+        },
+        {
+          "type": "parameter_declaration",
+          "value": "char * const s2"
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "value": "void copy(char * const s1, char * const s2)",
+      "children": [
+        {
+          "type": "parameter_declaration",
+          "value": "char * const s1"
+        },
+        {
+          "type": "parameter_declaration",
+          "value": "char * const s2"
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "for_loop",
+              "children": [
+                {
+                  "type": "declaration",
+                  "value": "size_t i = 0"
+                },
+                {
+                  "type": "expression",
+                  "value": "(s2[i] = s1[1]) != '\\0'"
+                },
+                {
+                  "type": "expression_statement",
+                  "value": "{; }"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

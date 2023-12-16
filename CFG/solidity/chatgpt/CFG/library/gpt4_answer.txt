@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": 1, "type": "pragma_directive", "label": "pragma solidity ^0.8.0;"},
+    {"id": 2, "type": "library_definition", "label": "library Math {"},
+    {"id": 3, "type": "function_definition", "label": "function add(uint x, uint y) internal pure returns (uint) {"},
+    {"id": 4, "type": "return_statement", "label": "return x + y;"},
+    {"id": 5, "type": "contract_definition", "label": "contract UsingMath {"},
+    {"id": 6, "type": "function_definition", "label": "function testAdd(uint _a, uint _b) public pure returns (uint) {"},
+    {"id": 7, "type": "function_call", "label": "Math.add(_a, _b)"}
+  ],
+  "edges": [
+    {"source": 2, "target": 3},
+    {"source": 3, "target": 4},
+    {"source": 5, "target": 6},
+    {"source": 6, "target": 7}
+  ]
+}

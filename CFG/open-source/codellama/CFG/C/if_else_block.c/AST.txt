@@ -1,0 +1,158 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "int"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "n"
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "CallExpression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "scanf"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "Argument",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "%d"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Argument",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "CallExpression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "puts"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "Argument",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "Large"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "CallExpression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "puts"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "Argument",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "Small"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

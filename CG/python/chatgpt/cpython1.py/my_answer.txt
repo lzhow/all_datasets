@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": "print_board",
+      "label": "print_board"
+    },
+    {
+      "id": "player_input",
+      "label": "player_input"
+    },
+    {
+      "id": "place_marker",
+      "label": "place_marker"
+    },
+    {
+      "id": "win_check",
+      "label": "win_check"
+    },
+    {
+      "id": "choose_first",
+      "label": "choose_first"
+    },
+    {
+      "id": "space_check",
+      "label": "space_check"
+    },
+    {
+      "id": "full_board_check",
+      "label": "full_board_check"
+    },
+    {
+      "id": "player_choice",
+      "label": "player_choice"
+    },
+    {
+      "id": "replay",
+      "label": "replay"
+    },
+    {
+      "id": "main",
+      "label": "main"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "print_board"
+    },
+    {
+      "from": "main",
+      "to": "player_input"
+    },
+    {
+      "from": "main",
+      "to": "choose_first"
+    },
+    {
+      "from": "main",
+      "to": "space_check"
+    },
+    {
+      "from": "main",
+      "to": "full_board_check"
+    },
+    {
+      "from": "main",
+      "to": "player_choice"
+    },
+    {
+      "from": "main",
+      "to": "replay"
+    },
+    {
+      "from": "main",
+      "to": "place_marker"
+    },
+    {
+      "from": "main",
+      "to": "win_check"
+    },
+    {
+      "from": "print_board",
+      "to": "main"
+    },
+    {
+      "from": "player_input",
+      "to": "main"
+    },
+    {
+      "from": "choose_first",
+      "to": "main"
+    },
+    {
+      "from": "space_check",
+      "to": "main"
+    },
+    {
+      "from": "full_board_check",
+      "to": "main"
+    },
+    {
+      "from": "player_choice",
+      "to": "main"
+    },
+    {
+      "from": "replay",
+      "to": "main"
+    },
+    {
+      "from": "place_marker",
+      "to": "main"
+    },
+    {
+      "from": "win_check",
+      "to": "main"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+Here is the call graph for the given program:
+
+```json
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "label": "matplotlib.pyplot.plot"
+    },
+    {
+        "id" : 1,
+        "type" : "function",
+        "label" : "<module>"
+    }, 
+    {
+     	"id":2,
+     	 "type":"function",
+       "label":"average"
+    },
+    {
+       "id":"3",
+      	"type":" function",
+      	  "label " : "median"
+    },{
+       " id " : 4,
+       "type " : function,
+      	 "label ": "visualize data"
+    }],
+  "edges": [
+     {
+       	"source":0,
+       	 "target":2
+     },
+     {
+      		" source " :1,
+      	 	 "target " :3
+     },
+   	{
+      	      "source " :2,
+      	     "target ":4
+     },
+	{
+     		“source”:3,
+     		 “target”:4
+     }
+  ]
+}
+```

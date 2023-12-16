@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "method",
+      "name": "permutation",
+      "parameters": [
+        "prefix",
+        "str"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "if",
+      "condition": "n == 0"
+    },
+    {
+      "id": 3,
+      "type": "print",
+      "message": "System.out.println(prefix)"
+    },
+    {
+      "id": 4,
+      "type": "for",
+      "init": "int i = 0",
+      "condition": "i < n",
+      "update": "i++"
+    },
+    {
+      "id": 5,
+      "type": "methodCall",
+      "name": "permutation",
+      "arguments": [
+        "prefix + str.charAt(i)",
+        "str.substring(0, i) + str.substring(i + 1, n)"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2,
+      "type": "true"
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "type": "false"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "type": "true"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "type": "false"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "type": "true"
+    },
+    {
+      "source": 4,
+      "target": 1,
+      "type": "false"
+    }
+  ]
+}

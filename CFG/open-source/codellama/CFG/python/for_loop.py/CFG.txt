@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "start",
+      "label": "start"
+    },
+    {
+      "id": 1,
+      "type": "assignment",
+      "label": "cdic = {\"a\": 3, \"b\": 2, \"c\": 1}"
+    },
+    {
+      "id": 2,
+      "type": "for",
+      "label": "for x in cdic:"
+    },
+    {
+      "id": 3,
+      "type": "if",
+      "label": "if x == \"d\":"
+    },
+    {
+      "id": 4,
+      "type": "break",
+      "label": "break"
+    },
+    {
+      "id": 5,
+      "type": "for",
+      "label": "for y in range(2, 3):"
+    },
+    {
+      "id": 6,
+      "type": "print",
+      "label": "print(x, y)"
+    },
+    {
+      "id": 7,
+      "type": "end",
+      "label": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 7
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 2
+    }
+  ]
+}

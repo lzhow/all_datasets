@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "int i = 1;"
+    },
+    {
+      "id": 2,
+      "type": "while",
+      "statement": "while (i++ < 6)"
+    },
+    {
+      "id": 3,
+      "type": "if",
+      "statement": "if(i==2)"
+    },
+    {
+      "id": 4,
+      "type": "continue",
+      "statement": "continue;"
+    },
+    {
+      "id": 5,
+      "type": "print",
+      "statement": "System.out.println(\"Hello World\");"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "label": "true"
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "label": "false"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "label": "true"
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "label": "false"
+    },
+    {
+      "source": 4,
+      "target": 2
+    }
+  ]
+}

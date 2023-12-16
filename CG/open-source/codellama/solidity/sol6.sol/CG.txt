@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "pragma solidity ^0.8.0;",
+      "label": "pragma solidity ^0.8.0;"
+    },
+    {
+      "id": "contract Voting",
+      "label": "contract Voting"
+    },
+    {
+      "id": "struct Vote",
+      "label": "struct Vote"
+    },
+    {
+      "id": "struct Proposal",
+      "label": "struct Proposal"
+    },
+    {
+      "id": "Proposal[] public proposals",
+      "label": "Proposal[] public proposals"
+    },
+    {
+      "id": "mapping(address => Vote) public voters",
+      "label": "mapping(address => Vote) public voters"
+    },
+    {
+      "id": "constructor(bytes32[] memory proposalNames)",
+      "label": "constructor(bytes32[] memory proposalNames)"
+    },
+    {
+      "id": "function vote(uint8 proposal)",
+      "label": "function vote(uint8 proposal)"
+    },
+    {
+      "id": "function winningProposal()",
+      "label": "function winningProposal()"
+    }
+  ],
+  "edges": [
+    {
+      "from": "pragma solidity ^0.8.0;",
+      "to": "contract Voting"
+    },
+    {
+      "from": "contract Voting",
+      "to": "struct Vote"
+    },
+    {
+      "from": "contract Voting",
+      "to": "struct Proposal"
+    },
+    {
+      "from": "contract Voting",
+      "to": "Proposal[] public proposals"
+    },
+    {
+      "from": "contract Voting",
+      "to": "mapping(address => Vote) public voters"
+    },
+    {
+      "from": "contract Voting",
+      "to": "constructor(bytes32[] memory proposalNames)"
+    },
+    {
+      "from": "contract Voting",
+      "to": "function vote(uint8 proposal)"
+    },
+    {
+      "from": "contract Voting",
+      "to": "function winningProposal()"
+    }
+  ]
+}

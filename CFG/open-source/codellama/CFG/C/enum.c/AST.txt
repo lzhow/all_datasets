@@ -1,0 +1,118 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "EnumDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "Le"
+        },
+        {
+          "type": "EnumBody",
+          "children": [
+            {
+              "type": "EnumConstant",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "L"
+                }
+              ]
+            },
+            {
+              "type": "EnumConstant",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "M"
+                }
+              ]
+            },
+            {
+              "type": "EnumConstant",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "H"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FunctionDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "FunctionBody",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "m"
+                },
+                {
+                  "type": "EnumType",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "Le"
+                    }
+                  ]
+                },
+                {
+                  "type": "EnumConstant",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "M"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "StringLiteral",
+                      "value": "%d"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "m"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "children": [
+                {
+                  "type": "IntegerLiteral",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

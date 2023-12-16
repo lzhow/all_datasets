@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "interface",
+      "code": "public interface Greeting {\n    void greet();\n}"
+    },
+    {
+      "id": 2,
+      "type": "variable_declaration",
+      "code": "Greeting greeting = new Greeting() {\n    @Override\n    public void greet() {\n        System.out.println(\"Hello!\");\n    }\n};"
+    },
+    {
+      "id": 3,
+      "type": "method_invocation",
+      "code": "greeting.greet();"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    }
+  ]
+}

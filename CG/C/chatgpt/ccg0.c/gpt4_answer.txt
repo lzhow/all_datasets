@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {"id": "main", "type": "function"},
+    {"id": "readInput", "type": "function"},
+    {"id": "computeSalary1", "type": "function"},
+    {"id": "computeSalary2", "type": "function"},
+    {"id": "printOutputs", "type": "function"}
+  ],
+  "edges": [
+    {"from": "main", "to": "readInput"},
+    {"from": "main", "to": "computeSalary1"},
+    {"from": "main", "to": "computeSalary2"},
+    {"from": "main", "to": "readInput"}
+  ]
+}

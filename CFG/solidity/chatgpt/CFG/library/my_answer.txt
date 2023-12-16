@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "FunctionDeclaration",
+      "name": "add",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "uint"
+        },
+        {
+          "name": "y",
+          "type": "uint"
+        }
+      ],
+      "visibility": "internal",
+      "pure": true,
+      "returns": {
+        "type": "uint"
+      }
+    },
+    {
+      "id": 1,
+      "type": "LibraryDeclaration",
+      "name": "Math"
+    },
+    {
+      "id": 2,
+      "type": "FunctionDeclaration",
+      "name": "testAdd",
+      "parameters": [
+        {
+          "name": "_a",
+          "type": "uint"
+        },
+        {
+          "name": "_b",
+          "type": "uint"
+        }
+      ],
+      "visibility": "public",
+      "pure": true,
+      "returns": {
+        "type": "uint"
+      }
+    },
+    {
+      "id": 3,
+      "type": "ContractDeclaration",
+      "name": "UsingMath"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 2,
+      "target": 0
+    },
+    {
+      "source": 3,
+      "target": 2
+    }
+  ]
+}

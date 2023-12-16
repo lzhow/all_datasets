@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "start",
+      "label": "start"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "Set<String> set = new HashSet<>();"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "set.add(\"apple\");"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "set.add(\"banana\");"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "set.add(\"orange\");"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "set.add(\"banana\");"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "for (String fruit : set) {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "System.out.println(fruit);"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 9,
+      "type": "end",
+      "label": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    }
+  ]
+}

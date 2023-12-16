@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "enum T { L, M, H }"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "statement": "public static void main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "statement": "T m = T.M"
+    },
+    {
+      "id": 4,
+      "type": "method_call",
+      "statement": "System.out.println(m)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

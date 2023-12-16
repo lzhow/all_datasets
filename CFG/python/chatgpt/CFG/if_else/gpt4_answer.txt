@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": 1, "type": "function_definition", "label": "def ifelse(a, b):"},
+    {"id": 2, "type": "conditional_expression", "label": "a > b"},
+    {"id": 3, "type": "expression", "label": "print('>')"},
+    {"id": 4, "type": "conditional_expression", "label": "a == b"},
+    {"id": 5, "type": "expression", "label": "print('=')"},
+    {"id": 6, "type": "expression", "label": "print('<')"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 4, "target": 6}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id": "JC", "type": "class"},
+    {"id": "f", "type": "method"},
+    {"id": "b", "type": "method"},
+    {"id": "c", "type": "method"},
+    {"id": "main", "type": "method"}
+  ],
+  "edges": [
+    {"from": "main", "to": "f"},
+    {"from": "main", "to": "c"},
+    {"from": "f", "to": "b"},
+    {"from": "b", "to": "c"},
+    {"from": "b", "to": "b"}
+  ]
+}

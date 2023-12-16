@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class A"
+    },
+    {
+      "id": 2,
+      "type": "FieldDeclaration",
+      "code": "protected String m = \"A\""
+    },
+    {
+      "id": 3,
+      "type": "Method",
+      "code": "public void p() { System.out.printl(\"A\"); }"
+    },
+    {
+      "id": 4,
+      "type": "ClassDeclaration",
+      "code": "class B extends A"
+    },
+    {
+      "id": 5,
+      "type": "FieldDeclaration",
+      "code": "private String n = \"B\""
+    },
+    {
+      "id": 6,
+      "type": "Method",
+      "code": "public static void main(String[] args)"
+    },
+    {
+      "id": 7,
+      "type": "ObjectCreation",
+      "code": "B b = new B()"
+    },
+    {
+      "id": 8,
+      "type": "MethodInvocation",
+      "code": "b.p()"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    }
+  ]
+}

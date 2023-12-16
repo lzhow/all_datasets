@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "assignment",
+      "value": "original_string = \"Hello, Python!\""
+    },
+    {
+      "id": 2,
+      "type": "assignment",
+      "value": "length = len(original_string)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "value": "upper_string = original_string.upper()"
+    },
+    {
+      "id": 4,
+      "type": "assignment",
+      "value": "split_string = original_string.split(\",\")"
+    },
+    {
+      "id": 5,
+      "type": "assignment",
+      "value": "position = original_string.find(\"Python\")"
+    },
+    {
+      "id": 6,
+      "type": "assignment",
+      "value": "joined_string = \" \".join([\"Joined\", \"string\"])"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 1,
+      "target": 6
+    }
+  ]
+}

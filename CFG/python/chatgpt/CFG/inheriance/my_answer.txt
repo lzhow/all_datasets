@@ -1,0 +1,191 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "class",
+      "name": "Animal"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "name": "__init__"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "name": "make_sound"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "name": "__repr__"
+    },
+    {
+      "id": 4,
+      "type": "class",
+      "name": "Dog"
+    },
+    {
+      "id": 5,
+      "type": "function",
+      "name": "__init__"
+    },
+    {
+      "id": 6,
+      "type": "function",
+      "name": "__repr__"
+    },
+    {
+      "id": 7,
+      "type": "assignment",
+      "name": "generic_animal"
+    },
+    {
+      "id": 8,
+      "type": "function",
+      "name": "__repr__"
+    },
+    {
+      "id": 9,
+      "type": "print",
+      "name": "generic_animal"
+    },
+    {
+      "id": 10,
+      "type": "function",
+      "name": "make_sound"
+    },
+    {
+      "id": 11,
+      "type": "print",
+      "name": "generic_animal.make_sound()"
+    },
+    {
+      "id": 12,
+      "type": "assignment",
+      "name": "my_dog"
+    },
+    {
+      "id": 13,
+      "type": "function",
+      "name": "__repr__"
+    },
+    {
+      "id": 14,
+      "type": "print",
+      "name": "my_dog"
+    },
+    {
+      "id": 15,
+      "type": "function",
+      "name": "make_sound"
+    },
+    {
+      "id": 16,
+      "type": "print",
+      "name": "my_dog.make_sound()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 0
+    },
+    {
+      "source": 2,
+      "target": 0
+    },
+    {
+      "source": 3,
+      "target": 0
+    },
+    {
+      "source": 4,
+      "target": 1
+    },
+    {
+      "source": 4,
+      "target": 3
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 0
+    },
+    {
+      "source": 5,
+      "target": 1
+    },
+    {
+      "source": 5,
+      "target": 3
+    },
+    {
+      "source": 6,
+      "target": 0
+    },
+    {
+      "source": 6,
+      "target": 4
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 7
+    },
+    {
+      "source": 9,
+      "target": 7
+    },
+    {
+      "source": 10,
+      "target": 2
+    },
+    {
+      "source": 11,
+      "target": 10
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 12
+    },
+    {
+      "source": 14,
+      "target": 12
+    },
+    {
+      "source": 15,
+      "target": 2
+    },
+    {
+      "source": 16,
+      "target": 15
+    }
+  ]
+}

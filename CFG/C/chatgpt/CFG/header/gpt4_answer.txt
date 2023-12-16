@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "PreprocessorDirective",
+      "code": "#include <inbuilt.h>"
+    },
+    {
+      "id": 2,
+      "type": "PreprocessorDirective",
+      "code": "#include \"./custom.h\""
+    },
+    {
+      "id": 3,
+      "type": "MacroDefinition",
+      "code": "#define N 1000"
+    },
+    {
+      "id": 4,
+      "type": "Typedef",
+      "code": "typedef ll long long"
+    },
+    {
+      "id": 5,
+      "type": "Function",
+      "code": "void main()"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    }
+  ]
+}

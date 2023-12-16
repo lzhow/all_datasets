@@ -1,0 +1,33 @@
+{
+    "nodes": [
+        {"id": 0, "name": "<module>"},
+        {"id": 1, "name": "print_board"},
+        {"id": 2, "name": "player_input"},
+        {"id": 3, "name": "place_marker"},
+        {"id": 4, "name": "win_check"},
+        {"id": 5, "name": "choose_first"},
+        {"id": 6, "name": "space_check"},
+        {"id": 7, "name": "full_board_check"},
+        {"id": 8, "name": "player_choice"},
+        {"id": 9, "name": "replay"}
+    ],
+    "edges": [
+        {"source": 0, "target": 1},
+        {"source": 0, "target": 2},
+        {"source": 0, "target": 5},
+        {"source": 0, "target": 9},
+        {"source": 2, "target": 1},
+        {"source": 5, "target": 1},
+        {"source": 8, "target": 6},
+        {"source": 1, "target": 3},
+        {"source": 1, "target": 4},
+        {"source": 1, "target": 8},
+        {"source": 3, "target": 0},
+        {"source": 4, "target": 0},
+        {"source": 5, "target": 6},
+        {"source": 6, "target": 0},
+        {"source": 7, "target": 0},
+        {"source": 8, "target": 0},
+        {"source": 9, "target": 0}
+    ]
+}

@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "unsigned int a = 5;"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "statement": "unsigned int b = 3;"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "statement": "unsigned int result = a & b;"
+    },
+    {
+      "id": 4,
+      "type": "assignment",
+      "statement": "result = a | b;"
+    },
+    {
+      "id": 5,
+      "type": "assignment",
+      "statement": "result = a ^ b;"
+    },
+    {
+      "id": 6,
+      "type": "assignment",
+      "statement": "result = ~a;"
+    },
+    {
+      "id": 7,
+      "type": "assignment",
+      "statement": "result = a << 2;"
+    },
+    {
+      "id": 8,
+      "type": "assignment",
+      "statement": "result = a >> 1;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    }
+  ]
+}

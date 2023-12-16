@@ -1,0 +1,431 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [],
+      "type": "ImportDeclaration",
+      "value": "import java.util.HashMap;"
+    },
+    {
+      "children": [],
+      "type": "ImportDeclaration",
+      "value": "import java.util.Map;"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "ReferenceType",
+              "value": "Map"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "ReferenceType",
+                  "value": "String"
+                }
+              ],
+              "type": "ParameterizedType",
+              "value": "<"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "ReferenceType",
+                  "value": "Integer"
+                }
+              ],
+              "type": "ParameterizedType",
+              "value": "<"
+            },
+            {
+              "children": [],
+              "type": "ReferenceType",
+              "value": ">"
+            }
+          ],
+          "type": "ClassOrInterfaceType",
+          "value": "Map"
+        },
+        {
+          "children": [],
+          "type": "SimpleName",
+          "value": "map"
+        }
+      ],
+      "type": "VariableDeclarationStatement",
+      "value": "Map<String, Integer> map = new HashMap<>();"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "SimpleName",
+              "value": "map"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "StringLiteral",
+                  "value": "apple"
+                }
+              ],
+              "type": "MethodInvocation",
+              "value": ".put("
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "IntegerLiteral",
+                  "value": "5"
+                }
+              ],
+              "type": "ParenthesizedExpression",
+              "value": "("
+            },
+            {
+              "children": [],
+              "type": "IntegerLiteral",
+              "value": "5"
+            },
+            {
+              "children": [],
+              "type": "ParenthesizedExpression",
+              "value": ")"
+            },
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": ");"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "SimpleName",
+                  "value": "map"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "StringLiteral",
+                      "value": "banana"
+                    }
+                  ],
+                  "type": "MethodInvocation",
+                  "value": ".put("
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "IntegerLiteral",
+                      "value": "3"
+                    }
+                  ],
+                  "type": "ParenthesizedExpression",
+                  "value": "("
+                },
+                {
+                  "children": [],
+                  "type": "IntegerLiteral",
+                  "value": "3"
+                },
+                {
+                  "children": [],
+                  "type": "ParenthesizedExpression",
+                  "value": ")"
+                },
+                {
+                  "children": [],
+                  "type": "MethodInvocation",
+                  "value": ");"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "SimpleName",
+                      "value": "map"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "StringLiteral",
+                          "value": "orange"
+                        }
+                      ],
+                      "type": "MethodInvocation",
+                      "value": ".put("
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "IntegerLiteral",
+                          "value": "8"
+                        }
+                      ],
+                      "type": "ParenthesizedExpression",
+                      "value": "("
+                    },
+                    {
+                      "children": [],
+                      "type": "IntegerLiteral",
+                      "value": "8"
+                    },
+                    {
+                      "children": [],
+                      "type": "ParenthesizedExpression",
+                      "value": ")"
+                    },
+                    {
+                      "children": [],
+                      "type": "MethodInvocation",
+                      "value": ");"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "SimpleName",
+                          "value": "System"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "StringLiteral",
+                              "value": "out"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "FieldAccess",
+                                  "value": "."
+                                },
+                                {
+                                  "children": [],
+                                  "type": "SimpleName",
+                                  "value": "println"
+                                }
+                              ],
+                              "type": "MethodInvocation",
+                              "value": "("
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "StringLiteral",
+                                  "value": "amount of apple "
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "type": "SimpleName",
+                                      "value": "map"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "type": "StringLiteral",
+                                          "value": "get"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "StringLiteral",
+                                              "value": "apple"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getKey"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getValue"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getKey"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getValue"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getKey"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getValue"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "type": "FieldAccess",
+                                              "value": "."
+                                            },
+                                            {
+                                              "children": [],
+                                              "type": "SimpleName",
+                                              "value": "getKey"
+                                            }
+                                          ],
+                                          "type": "MethodInvocation",
+                                          "value": "("
+                                        },
+                                        {
+                                          "children": [],
+                                          "type": "SimpleName",
+                                          "value": "entry"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

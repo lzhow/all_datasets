@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "name": "Animal",
+      "type": "class",
+      "methods": [
+        {
+          "name": "Animal",
+          "type": "constructor",
+          "params": []
+        },
+        {
+          "name": "Animal",
+          "type": "constructor",
+          "params": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "getName",
+          "type": "method",
+          "params": [],
+          "returnType": "String"
+        },
+        {
+          "name": "sound",
+          "type": "method",
+          "params": [],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "name": "Dog",
+      "type": "class",
+      "methods": [
+        {
+          "name": "Dog",
+          "type": "constructor",
+          "params": []
+        },
+        {
+          "name": "Dog",
+          "type": "constructor",
+          "params": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "getName",
+          "type": "method",
+          "params": [],
+          "returnType": "String"
+        },
+        {
+          "name": "sound",
+          "type": "method",
+          "params": [],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "name": "AnimalInheritanceTest",
+      "type": "class",
+      "methods": [
+        {
+          "name": "main",
+          "type": "method",
+          "params": [
+            {
+              "name": "args",
+              "type": "String[]"
+            }
+          ],
+          "returnType": "void"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "Animal",
+      "to": "Animal",
+      "type": "extends"
+    },
+    {
+      "from": "Dog",
+      "to": "Animal",
+      "type": "extends"
+    },
+    {
+      "from": "AnimalInheritanceTest",
+      "to": "Animal",
+      "type": "uses"
+    },
+    {
+      "from": "AnimalInheritanceTest",
+      "to": "Dog",
+      "type": "uses"
+    }
+  ]
+}

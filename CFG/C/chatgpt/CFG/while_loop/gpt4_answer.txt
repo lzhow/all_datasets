@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main(void)"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "int a = 0"
+    },
+    {
+      "id": 3,
+      "type": "WhileLoop",
+      "code": "while (a < 100)"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "a += 1"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 4,
+      "to": 3,
+      "condition": "next iteration"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "import",
+      "label": "import java.util.HashMap;"
+    },
+    {
+      "id": 1,
+      "type": "import",
+      "label": "import java.util.Map;"
+    },
+    {
+      "id": 2,
+      "type": "class",
+      "label": "public class MapExample {"
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "label": "public static void main(String[] args) {"
+    },
+    {
+      "id": 4,
+      "type": "local",
+      "label": "Map<String, Integer> map = new HashMap<>();"
+    },
+    {
+      "id": 5,
+      "type": "method_invocation",
+      "label": "map.put(\"apple\", 5);"
+    },
+    {
+      "id": 6,
+      "type": "method_invocation",
+      "label": "map.put(\"banana\", 3);"
+    },
+    {
+      "id": 7,
+      "type": "method_invocation",
+      "label": "map.put(\"orange\", 8);"
+    },
+    {
+      "id": 8,
+      "type": "method_invocation",
+      "label": "System.out.println(\"amount of apple \" + map.get(\"apple\"));"
+    },
+    {
+      "id": 9,
+      "type": "for",
+      "label": "for (Map.Entry<String, Integer> entry : map.entrySet()) {"
+    },
+    {
+      "id": 10,
+      "type": "local",
+      "label": "String key = entry.getKey();"
+    },
+    {
+      "id": 11,
+      "type": "local",
+      "label": "Integer value = entry.getValue();"
+    },
+    {
+      "id": 12,
+      "type": "method_invocation",
+      "label": "System.out.println(key + \": \" + value);"
+    },
+    {
+      "id": 13,
+      "type": "}"
+    },
+    {
+      "id": 14,
+      "type": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 4,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8
+    },
+    {
+      "source": 3,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 11
+    },
+    {
+      "source": 9,
+      "target": 12
+    },
+    {
+      "source": 10,
+      "target": 12
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 5,
+      "target": 8
+    },
+    {
+      "source": 6,
+      "target": 8
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 10,
+      "target": 13
+    },
+    {
+      "source": 11,
+      "target": 13
+    },
+    {
+      "source": 12,
+      "target": 13
+    }
+  ]
+}

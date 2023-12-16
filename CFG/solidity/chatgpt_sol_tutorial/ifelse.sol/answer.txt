@@ -1,0 +1,158 @@
+{
+  "type": "SourceUnit",
+  "value": null,
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "^0.5.0",
+      "children": []
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "S",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "f",
+          "children": [
+            {
+              "type": "FunctionParameterList",
+              "value": null,
+              "children": [
+                {
+                  "type": "FunctionParameter",
+                  "value": "a",
+                  "children": []
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": "b",
+                  "children": []
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": "c",
+                  "children": []
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": "r",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "FunctionVisibility",
+              "value": "public",
+              "children": []
+            },
+            {
+              "type": "StateMutability",
+              "value": "view",
+              "children": []
+            },
+            {
+              "type": "FunctionReturnType",
+              "value": "uint",
+              "children": []
+            },
+            {
+              "type": "Block",
+              "value": null,
+              "children": [
+                {
+                  "type": "IfStatement",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "value": ">",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a",
+                          "children": []
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "b",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "value": "=",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "r",
+                              "children": []
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "a",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "value": "=",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "r",
+                              "children": []
+                            },
+                            {
+                              "type": "BinaryOperation",
+                              "value": "+",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "b",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "c",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Return",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "r",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

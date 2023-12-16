@@ -1,0 +1,7 @@
+The AST is represented as a nested JSON object with two attributes for each node: type and value. The type attribute indicates the type of the AST node, while the value attribute contains any additional information about the node.
+
+In this case, the top-level type is "translation_unit", which indicates the entire program. The value attribute is an array of nodes, each of which represents an include directive or a function definition.
+
+The function definition node has a type of "function_definition", and its value attribute contains information about the function declarator (i.e., the function's name and parameter list). The body attribute contains a compound statement node, which represents the body of the function.
+
+The compound statement contains two nodes: a declaration node, which declares a static integer array, and an expression statement node, which assigns a value to the first element of the array. The nodes representing the declaration and assignment both have their own type and value attributes, indicating the specific kind of

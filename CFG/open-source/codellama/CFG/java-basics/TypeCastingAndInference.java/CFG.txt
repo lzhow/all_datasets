@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "Animal"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "makeSound"
+    },
+    {
+      "id": 3,
+      "type": "class",
+      "label": "Dog"
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "label": "makeSound"
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "label": "fetch"
+    },
+    {
+      "id": 6,
+      "type": "class",
+      "label": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 7,
+      "type": "method",
+      "label": "main"
+    },
+    {
+      "id": 8,
+      "type": "variable",
+      "label": "animal"
+    },
+    {
+      "id": 9,
+      "type": "variable",
+      "label": "dog"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 4
+    },
+    {
+      "source": 7,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 5
+    }
+  ]
+}

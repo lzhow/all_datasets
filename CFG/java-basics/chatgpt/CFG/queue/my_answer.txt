@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "Queue<Integer> queue = new LinkedList<>()"
+    },
+    {
+      "id": 2,
+      "type": "method_call",
+      "statement": "queue.offer(1)"
+    },
+    {
+      "id": 3,
+      "type": "method_call",
+      "statement": "queue.offer(2)"
+    },
+    {
+      "id": 4,
+      "type": "method_call",
+      "statement": "queue.offer(3)"
+    },
+    {
+      "id": 5,
+      "type": "method_call",
+      "statement": "System.out.println(\"top of the queue \" + queue.peek())"
+    },
+    {
+      "id": 6,
+      "type": "loop",
+      "statement": "while (!queue.isEmpty())"
+    },
+    {
+      "id": 7,
+      "type": "method_call",
+      "statement": "System.out.println(queue.poll())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 6
+    }
+  ]
+}

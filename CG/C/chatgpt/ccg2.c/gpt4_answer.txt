@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {"id": "main", "type": "function"},
+    {"id": "insertSortedLL", "type": "function"},
+    {"id": "printList", "type": "function"},
+    {"id": "removeAllItems", "type": "function"},
+    {"id": "findNode", "type": "function"},
+    {"id": "insertNode", "type": "function"},
+    {"id": "removeNode", "type": "function"}
+  ],
+  "edges": [
+    {"from": "main", "to": "insertSortedLL"},
+    {"from": "main", "to": "printList"},
+    {"from": "main", "to": "removeAllItems"},
+    {"from": "insertSortedLL", "to": "insertNode"},
+    {"from": "insertSortedLL", "to": "findNode"},
+    {"from": "insertNode", "to": "findNode"}
+  ]
+}

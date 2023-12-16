@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "method",
+      "name": "printArray",
+      "parameters": [
+        "arr"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "for_loop",
+      "condition": "i < arr.length"
+    },
+    {
+      "id": 2,
+      "type": "if",
+      "condition": "i > 9"
+    },
+    {
+      "id": 3,
+      "type": "break"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "statement": "System.out.print(arr[i] + \" \");"
+    },
+    {
+      "id": 5,
+      "type": "println",
+      "statement": "System.out.println(\"\");"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "label": "true"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "label": "false"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "label": "true"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "label": "false"
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 1
+    },
+    {
+      "source": 5,
+      "target": 1
+    }
+  ]
+}

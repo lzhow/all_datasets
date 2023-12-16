@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "contract",
+      "label": "ErrorHandling"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "label": "testRequire(uint256)"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "testRevert(uint256)"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "testAssert()"
+    },
+    {
+      "id": 4,
+      "type": "require",
+      "label": "Input must be greater than 10"
+    },
+    {
+      "id": 5,
+      "type": "revert",
+      "label": "Input must be greater than 10"
+    },
+    {
+      "id": 6,
+      "type": "assert",
+      "label": "This will always fail"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 6
+    }
+  ]
+}

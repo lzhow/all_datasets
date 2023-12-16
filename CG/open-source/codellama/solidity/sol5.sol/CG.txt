@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "name": "SimpleToken",
+      "type": "contract",
+      "children": [
+        {
+          "name": "constructor",
+          "type": "function",
+          "children": [
+            {
+              "name": "balances",
+              "type": "mapping",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "transfer",
+          "type": "function",
+          "children": [
+            {
+              "name": "balances",
+              "type": "mapping",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "balanceOf",
+          "type": "function",
+          "children": [
+            {
+              "name": "balances",
+              "type": "mapping",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "SimpleToken",
+      "to": "constructor",
+      "type": "call"
+    },
+    {
+      "from": "SimpleToken",
+      "to": "transfer",
+      "type": "call"
+    },
+    {
+      "from": "SimpleToken",
+      "to": "balanceOf",
+      "type": "call"
+    },
+    {
+      "from": "constructor",
+      "to": "balances",
+      "type": "access"
+    },
+    {
+      "from": "transfer",
+      "to": "balances",
+      "type": "access"
+    },
+    {
+      "from": "balanceOf",
+      "to": "balances",
+      "type": "access"
+    }
+  ]
+}

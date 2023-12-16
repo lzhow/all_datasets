@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id": 1, "type": "pragma_directive", "label": "pragma solidity ^0.8.0;"},
+    {"id": 2, "type": "contract_definition", "label": "contract ArrayExample {"},
+    {"id": 3, "type": "state_variable_declaration", "label": "uint[] public dynamicArray;"},
+    {"id": 4, "type": "state_variable_declaration", "label": "uint[5] public fixedArray;"},
+    {"id": 5, "type": "function_definition", "label": "function addElement(uint element) public {"},
+    {"id": 6, "type": "method_call", "label": "dynamicArray.push(element);"}
+  ],
+  "edges": [
+    {"source": 2, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 2, "target": 5},
+    {"source": 5, "target": 6}
+  ]
+}

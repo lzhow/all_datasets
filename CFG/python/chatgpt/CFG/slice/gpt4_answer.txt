@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {"id": 1, "type": "variable_initialization", "label": "example_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"},
+    {"id": 2, "type": "variable_initialization", "label": "slice1 = example_list[2:5]"},
+    {"id": 3, "type": "function_call", "label": "print(slice1)"},
+    {"id": 4, "type": "variable_initialization", "label": "slice2 = example_list[1::2]"},
+    {"id": 5, "type": "function_call", "label": "print(slice2)"},
+    {"id": 6, "type": "variable_initialization", "label": "slice3 = example_list[-3:]"},
+    {"id": 7, "type": "function_call", "label": "print(slice3)"},
+    {"id": 8, "type": "variable_initialization", "label": "slice4 = example_list[:5]"},
+    {"id": 9, "type": "function_call", "label": "print(slice4)"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 1, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 1, "target": 6},
+    {"source": 6, "target": 7},
+    {"source": 1, "target": 8},
+    {"source": 8, "target": 9}
+  ]
+}

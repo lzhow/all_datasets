@@ -1,0 +1,217 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Keyword",
+              "value": "unsigned"
+            },
+            {
+              "type": "Keyword",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "f"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "unsigned"
+                    },
+                    {
+                      "type": "Keyword",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "unsigned"
+                    },
+                    {
+                      "type": "Keyword",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "s"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "s"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ForStatement",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Keyword",
+                          "value": "unsigned"
+                        },
+                        {
+                          "type": "Keyword",
+                          "value": "int"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "i"
+                        },
+                        {
+                          "type": "Number",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BinaryExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "Operator",
+                      "value": "<="
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "l"
+                    }
+                  ]
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "BinaryExpression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "i"
+                        },
+                        {
+                          "type": "Operator",
+                          "value": "+"
+                        },
+                        {
+                          "type": "Number",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "s"
+                        },
+                        {
+                          "type": "BinaryExpression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "s"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "+"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

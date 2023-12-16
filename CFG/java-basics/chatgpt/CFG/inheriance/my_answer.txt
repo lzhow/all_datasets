@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "name": "m",
+      "value": "A"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "name": "p"
+    },
+    {
+      "id": 3,
+      "type": "print",
+      "value": "A"
+    },
+    {
+      "id": 4,
+      "type": "declaration",
+      "name": "n",
+      "value": "B"
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "name": "main"
+    },
+    {
+      "id": 6,
+      "type": "declaration",
+      "name": "b",
+      "value": "B"
+    },
+    {
+      "id": 7,
+      "type": "methodCall",
+      "name": "p"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

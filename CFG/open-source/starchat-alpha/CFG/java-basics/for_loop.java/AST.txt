@@ -1,0 +1,211 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "int_literal",
+              "value": "0"
+            }
+          ],
+          "type": "variable_declaration",
+          "value": "int"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "arr"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "length"
+            }
+          ],
+          "type": "array_access",
+          "value": "["
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "i"
+            }
+          ],
+          "type": "variable_access",
+          "value": "."
+        }
+      ],
+      "type": "for_loop",
+      "value": "for"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "System"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "out"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "print"
+            }
+          ],
+          "type": "function_call",
+          "value": "("
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "arr"
+            },
+            {
+              "children": [],
+              "type": "array_access",
+              "value": "["
+            },
+            {
+              "children": [],
+              "type": "id",
+              "value": "i"
+            },
+            {
+              "children": [],
+              "type": "array_access",
+              "value": "]"
+            }
+          ],
+          "type": "variable_access",
+          "value": "."
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "string_literal",
+              "value": " "
+            }
+          ],
+          "type": "function_call",
+          "value": "+"
+        }
+      ],
+      "type": "expression_statement",
+      "value": ";"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "i"
+            },
+            {
+              "children": [],
+              "type": "operator",
+              "value": "<"
+            },
+            {
+              "children": [],
+              "type": "id",
+              "value": "arr"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "length"
+            }
+          ],
+          "type": "binary_operation",
+          "value": "<"
+        }
+      ],
+      "type": "if_statement",
+      "value": "if"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "i"
+            },
+            {
+              "children": [],
+              "type": "operator",
+              "value": ">"
+            },
+            {
+              "children": [],
+              "type": "int_literal",
+              "value": "9"
+            }
+          ],
+          "type": "binary_operation",
+          "value": ">"
+        }
+      ],
+      "type": "if_statement",
+      "value": "if"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "id",
+              "value": "System"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "out"
+            },
+            {
+              "children": [],
+              "type": "member_access",
+              "value": "println"
+            }
+          ],
+          "type": "function_call",
+          "value": "("
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "string_literal",
+              "value": ""
+            }
+          ],
+          "type": "function_call",
+          "value": "+"
+        }
+      ],
+      "type": "expression_statement",
+      "value": ";"
+    }
+  ]
+}

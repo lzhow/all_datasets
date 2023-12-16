@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "int a = 0;"
+    },
+    {
+      "id": 2,
+      "type": "loop",
+      "label": "while (a < 100)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "label": "a += 1;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 2
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "label": "num_nucleotide"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "label": "_count"
+    },
+    {
+      "id": "2",
+      "type": "function",
+      "label": "specific_count"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "num_count"
+    },
+    {
+      "id": 4,
+      "type": "Function",
+      "label": "get_all"
+    },
+    {
+      "id": "5",
+      "type": "Function",
+      "label": "get_cod"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": "2"
+    },
+    {
+      "source": "2",
+      "target": 3
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

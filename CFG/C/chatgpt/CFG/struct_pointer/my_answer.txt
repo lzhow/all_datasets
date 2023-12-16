@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "Point *a = (Point *)malloc(sizeof(Point));"
+    },
+    {
+      "id": 2,
+      "type": "assignment",
+      "label": "a->x = 2;"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "label": "a->y = 1;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    }
+  ]
+}

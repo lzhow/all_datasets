@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    { "id": "BuyMeACoffee", "type": "contract" },
+    { "id": "getMemos", "type": "function", "parent": "BuyMeACoffee" },
+    { "id": "buyCoffee", "type": "function", "parent": "BuyMeACoffee" },
+    { "id": "withdrawTips", "type": "function", "parent": "BuyMeACoffee" },
+    { "id": "changeOwner", "type": "function", "parent": "BuyMeACoffee" },
+    { "id": "constructor", "type": "function", "parent": "BuyMeACoffee" },
+    { "id": "ownerOnly", "type": "modifier", "parent": "BuyMeACoffee" }
+  ],
+  "edges": [
+    { "from": "buyCoffee", "to": "NewMemo", "type": "eventEmission" },
+    { "from": "changeOwner", "to": "ownerOnly", "type": "modifierUse" }
+  ]
+}

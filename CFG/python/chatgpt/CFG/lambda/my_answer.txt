@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "name": "l",
+      "code": "def l(n):\n  return lambda a : a * n"
+    },
+    {
+      "id": 1,
+      "type": "return",
+      "code": "return lambda a : a * n"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    }
+  ]
+}

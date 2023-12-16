@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "name": "trycach"
+    },
+    {
+      "id": 1,
+      "type": "try",
+      "name": "try"
+    },
+    {
+      "id": 2,
+      "type": "print",
+      "name": "print(x)"
+    },
+    {
+      "id": 3,
+      "type": "except",
+      "name": "except NameError"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "name": "print(\"Variable x is not defined\")"
+    },
+    {
+      "id": 5,
+      "type": "except",
+      "name": "except"
+    },
+    {
+      "id": 6,
+      "type": "print",
+      "name": "print(\"Something else went wrong\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    }
+  ]
+}

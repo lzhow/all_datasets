@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Entry",
+      "code": "Entry point"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "Map<String, Integer> map = new HashMap<>()"
+    },
+    {
+      "id": 3,
+      "type": "Assignment",
+      "code": "map.put('apple', 5)"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "code": "map.put('banana', 3)"
+    },
+    {
+      "id": 5,
+      "type": "Assignment",
+      "code": "map.put('orange', 8)"
+    },
+    {
+      "id": 6,
+      "type": "Output",
+      "code": "System.out.println('amount of apple ' + map.get('apple'))"
+    },
+    {
+      "id": 7,
+      "type": "LoopStart",
+      "code": "for (Map.Entry<String, Integer> entry : map.entrySet())"
+    },
+    {
+      "id": 8,
+      "type": "Output",
+      "code": "System.out.println(entry.getKey() + ': ' + entry.getValue())"
+    },
+    {
+      "id": 9,
+      "type": "LoopEnd",
+      "code": "End of for loop"
+    },
+    {
+      "id": 10,
+      "type": "Exit",
+      "code": "Exit point"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 7,
+      "condition": "Loop continuation"
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "condition": "Loop exit"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+
+[
+    {
+        "children": [],
+        "type": "ImportDeclaration",
+        "value": "import java.util.ArrayList;"
+    },
+    {
+        "children": [],
+        "type": "ImportDeclaration",
+        "value": "import java.util.Scanner;"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "PrimitiveType",
+                        "value": "int"
+                    }
+                ],
+                "type": "FormalParameter",
+                "value": "readInt"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public int readInt() {"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "PrimitiveType",
+                        "value": "double"
+                    }
+                ],
+                "type": "FormalParameter",
+                "value": "readDouble"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public double readDouble() {"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "PrimitiveType",
+                        "value": "String"
+                    }
+                ],
+                "type": "FormalParameter",
+                "value": "readString"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public String readString() {"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "PrimitiveType",
+                        "value": "char"
+                    }
+                ],
+                "type": "FormalParameter",
+                "value": "readChar"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public char readChar() {"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "type": "FormalParameter",
+                "value": "hasNextChar"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public boolean hasNextChar() {"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "type": "FormalParameter",
+                "value": "hasNextLine"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public boolean hasNextLine() {"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "type": "FormalParameter",
+                "value": "readLine"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public String readLine() {"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "PrimitiveType",
+                        "value": "int"
+                    }
+                ],
+                "type": "FormalParameter",
+                "value": "ints"
+            }
+        ],
+        "type": "MethodDeclaration",
+        "value": "public int[] readAllInts() {"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "type": "ClassOrInterfaceType",
+                        "value": "SimpleReader"
+                    },
+                    {
+                        "children": [],
+                        "type": "SimpleName",
+                        "value": "scanner"
+                    }
+                ],
+                "type": "VariableDeclarator",
+                "value": "reader"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "type": "String",
+                                "value": "Reading an integer: "
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "type": "MethodInvocation",
+                                        "value": "readInt"
+                                    }
+                                ],
+                                "type": "MethodInvocation",
+                                "value": "System.out.println"
+                            }
+                        ],
+                        "type": "ExpressionStatement",
+                        "value": "System.out.println"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "type": "String",
+                                        "value": "Reading a double: "
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "children": [],
+                                                "type": "MethodInvocation",
+                                                "value": "readDouble"
+                                            }
+                                        ],
+                                        "type": "MethodInvocation",
+                                        "value": "System.out.println"
+                                    }
+                                ],
+                                "type": "ExpressionStatement",
+                                "value": "System.out.println"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "children": [],
+                                                "type": "String",
+                                                "value": "Reading a string: "
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "children": [],
+                                                        "type": "MethodInvocation",
+                                                        "value": "readString"
+                                                    }
+                                                ],
+                                                "type": "MethodInvocation",
+                                                "value": "System.out.println"
+                                            }
+                                        ],
+                                        "type": "ExpressionStatement",
+                                        "value": "System.out.println"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "children": [],
+                                                        "type": "String",
+                                                        "value": "Reading a char: "
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [],
+                                                                "type": "MethodInvocation",
+                                                                "value": "readChar"
+                                                            }
+                                                        ],
+                                                        "type": "MethodInvocation",
+                                                        "value": "System.out.println"
+                                                    }
+                                                ],
+                                                "type": "ExpressionStatement",
+                                                "value": "System.out.println"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [],
+                                                                "type": "String",
+                                                                "value": "Has next char: "
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "children": [],
+                                                                        "type": "MethodInvocation",
+                                                                        "value": "hasNextChar"
+                                                                    }
+                                                                ],
+                                                                "type": "MethodInvocation",
+                                                                "value": "System.out.println"
+                                                            }
+                                                        ],
+                                                        "type": "ExpressionStatement",
+                                                        "value": "System.out.println"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "children": [],
+                                                                        "type": "String",
+                                                                        "value": "Has next line: "
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "children": [],
+                                                                                "type": "MethodInvocation",
+                                                                                "value": "hasNextLine"
+                                                                            }
+                                                                        ],
+                                                                        "type": "MethodInvocation",
+                                                                        "value": "System.out.println"
+                                                                    }
+                                                                ],
+                                                                "type": "ExpressionStatement",
+                                                                "value": "System.out.println"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "children": [],
+                                                                                "type": "String",
+                                                                                "value": "Reading a line: "
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "children": [],
+                                                                                        "type": "MethodInvocation",
+                                                                                        "value": "readLine"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "MethodInvocation",
+                                                                                "value": "System.out.println"
+                                                                            }
+                                                                        ],
+                                                                        "type": "ExpressionStatement",
+                                                                        "value": "System.out.println"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "children": [],
+                                                                                        "type": "String",
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+                                                                                       

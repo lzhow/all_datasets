@@ -1,0 +1,152 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "union_definition",
+      "children": [
+        {
+          "type": "identifier",
+          "value": "Data"
+        },
+        {
+          "type": "struct_or_union",
+          "value": "union"
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "float"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "f"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "char"
+                },
+                {
+                  "type": "array_declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "str"
+                    },
+                    {
+                      "type": "constant_expression",
+                      "value": "20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "int"
+        },
+        {
+          "type": "declarator",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "main"
+            },
+            {
+              "type": "parameter_type_list"
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "union Data"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "data"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "data"
+                    },
+                    {
+                      "type": "constant",
+                      "value": "10"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "return_statement",
+              "children": [
+                {
+                  "type": "constant",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

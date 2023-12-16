@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "numbers.forEach(n -> System.out.println(n));"
+    },
+    {
+      "id": 3,
+      "type": "expression",
+      "label": "numbers.forEach(n -> System.out.println(n));"
+    },
+    {
+      "id": 4,
+      "type": "expression",
+      "label": "numbers"
+    },
+    {
+      "id": 5,
+      "type": "expression",
+      "label": "n -> System.out.println(n)"
+    },
+    {
+      "id": 6,
+      "type": "expression",
+      "label": "System.out.println(n)"
+    },
+    {
+      "id": 7,
+      "type": "expression",
+      "label": "n"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

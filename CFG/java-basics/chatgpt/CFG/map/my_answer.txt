@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "code": "Map<String, Integer> map = new HashMap<>()"
+    },
+    {
+      "id": 2,
+      "type": "method_call",
+      "code": "map.put(\"apple\", 5)"
+    },
+    {
+      "id": 3,
+      "type": "method_call",
+      "code": "map.put(\"banana\", 3)"
+    },
+    {
+      "id": 4,
+      "type": "method_call",
+      "code": "map.put(\"orange\", 8)"
+    },
+    {
+      "id": 5,
+      "type": "method_call",
+      "code": "System.out.println(\"amount of apple \" + map.get(\"apple\"))"
+    },
+    {
+      "id": 6,
+      "type": "loop",
+      "code": "for (Map.Entry<String, Integer> entry : map.entrySet())"
+    },
+    {
+      "id": 7,
+      "type": "method_call",
+      "code": "System.out.println(entry.getKey() + \": \" + entry.getValue())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 6
+    }
+  ]
+}

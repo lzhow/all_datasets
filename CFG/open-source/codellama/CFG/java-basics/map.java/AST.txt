@@ -1,0 +1,243 @@
+{
+  "type": "class",
+  "value": "MapExample",
+  "children": [
+    {
+      "type": "method",
+      "value": "main",
+      "children": [
+        {
+          "type": "variable",
+          "value": "map",
+          "children": [
+            {
+              "type": "type",
+              "value": "Map",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "String",
+                  "children": []
+                },
+                {
+                  "type": "type",
+                  "value": "Integer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "value",
+              "value": "new HashMap()",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "value": "map.put(\"apple\", 5)",
+          "children": [
+            {
+              "type": "method",
+              "value": "put",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "map",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "\"apple\"",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "5",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "value": "map.put(\"banana\", 3)",
+          "children": [
+            {
+              "type": "method",
+              "value": "put",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "map",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "\"banana\"",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "3",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "value": "map.put(\"orange\", 8)",
+          "children": [
+            {
+              "type": "method",
+              "value": "put",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "map",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "\"orange\"",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "8",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "value": "System.out.println(\"amount of apple \" + map.get(\"apple\"))",
+          "children": [
+            {
+              "type": "method",
+              "value": "println",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "System.out",
+                  "children": []
+                },
+                {
+                  "type": "value",
+                  "value": "\"amount of apple \" + map.get(\"apple\")",
+                  "children": [
+                    {
+                      "type": "value",
+                      "value": "\"amount of apple \"",
+                      "children": []
+                    },
+                    {
+                      "type": "method",
+                      "value": "get",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "value": "map",
+                          "children": []
+                        },
+                        {
+                          "type": "value",
+                          "value": "\"apple\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "value": "for (Map.Entry<String, Integer> entry : map.entrySet()) { System.out.println(entry.getKey() + \": \" + entry.getValue()); }",
+          "children": [
+            {
+              "type": "for",
+              "value": "for (Map.Entry<String, Integer> entry : map.entrySet()) { System.out.println(entry.getKey() + \": \" + entry.getValue()); }",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "entry",
+                  "children": [
+                    {
+                      "type": "type",
+                      "value": "Map.Entry",
+                      "children": [
+                        {
+                          "type": "type",
+                          "value": "String",
+                          "children": []
+                        },
+                        {
+                          "type": "type",
+                          "value": "Integer",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "method",
+                  "value": "entrySet",
+                  "children": [
+                    {
+                      "type": "variable",
+                      "value": "map",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "statement",
+                  "value": "System.out.println(entry.getKey() + \": \" + entry.getValue())",
+                  "children": [
+                    {
+                      "type": "method",
+                      "value": "println",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "value": "System.out",
+                          "children": []
+                        },
+                        {
+                          "type": "value",
+                          "value": "entry.getKey() + \": \" + entry.getValue()",
+                          "children": [
+                            {
+                              "type": "method",
+                              "value": "getKey",
+                              "children": [
+                                {
+                                  "type": "variable",
+                                  "value": "entry",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

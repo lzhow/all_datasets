@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "class",
+      "name": "Animal"
+    },
+    {
+      "id": 1,
+      "type": "method",
+      "name": "makeSound",
+      "class": "Animal"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "code": "System.out.println(\"Some sound\");",
+      "method": "makeSound",
+      "class": "Animal"
+    },
+    {
+      "id": 3,
+      "type": "class",
+      "name": "Dog"
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "name": "makeSound",
+      "class": "Dog"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "code": "System.out.println(\"Bark\");",
+      "method": "makeSound",
+      "class": "Dog"
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "name": "fetch",
+      "class": "Dog"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "code": "System.out.println(\"Fetching...\");",
+      "method": "fetch",
+      "class": "Dog"
+    },
+    {
+      "id": 8,
+      "type": "class",
+      "name": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 9,
+      "type": "method",
+      "name": "main",
+      "class": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "code": "Animal animal = new Dog();",
+      "method": "main",
+      "class": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "code": "animal.makeSound(); // \"Bark\"",
+      "method": "main",
+      "class": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "code": "if (animal instanceof Dog) {",
+      "method": "main",
+      "class": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "code": "Dog dog = (Dog) animal;",
+      "method": "main",
+      "class": "TypeCastingAndInferenceExample"
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "code": "dog.fetch(); // \"Fetching...\"",
+      "method": "main",
+      "class": "TypeCastingAndInferenceExample"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    }
+  ]
+}

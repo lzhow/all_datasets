@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "PriorityQueue<Integer> minHeap = new PriorityQueue<>()"
+    },
+    {
+      "id": 2,
+      "type": "method_call",
+      "statement": "minHeap.offer(10)"
+    },
+    {
+      "id": 3,
+      "type": "method_call",
+      "statement": "minHeap.offer(5)"
+    },
+    {
+      "id": 4,
+      "type": "method_call",
+      "statement": "minHeap.offer(15)"
+    },
+    {
+      "id": 5,
+      "type": "method_call",
+      "statement": "System.out.println(\"stack top: \" + minHeap.peek())"
+    },
+    {
+      "id": 6,
+      "type": "loop",
+      "statement": "while (!minHeap.isEmpty())"
+    },
+    {
+      "id": 7,
+      "type": "method_call",
+      "statement": "System.out.println(minHeap.poll())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 6
+    }
+  ]
+}

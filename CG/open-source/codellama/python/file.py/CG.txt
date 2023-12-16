@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "id": "read_file",
+      "name": "read_file",
+      "type": "function",
+      "file": "example.py",
+      "line": 1
+    },
+    {
+      "id": "open",
+      "name": "open",
+      "type": "function",
+      "file": "example.py",
+      "line": 2
+    },
+    {
+      "id": "file.readlines",
+      "name": "file.readlines",
+      "type": "function",
+      "file": "example.py",
+      "line": 3
+    },
+    {
+      "id": "process_lines",
+      "name": "process_lines",
+      "type": "function",
+      "file": "example.py",
+      "line": 4
+    },
+    {
+      "id": "print_lines",
+      "name": "print_lines",
+      "type": "function",
+      "file": "example.py",
+      "line": 5
+    },
+    {
+      "id": "file.read",
+      "name": "file.read",
+      "type": "function",
+      "file": "example.py",
+      "line": 6
+    },
+    {
+      "id": "file.close",
+      "name": "file.close",
+      "type": "function",
+      "file": "example.py",
+      "line": 7
+    },
+    {
+      "id": "print",
+      "name": "print",
+      "type": "function",
+      "file": "example.py",
+      "line": 8
+    },
+    {
+      "id": "line.strip",
+      "name": "line.strip",
+      "type": "function",
+      "file": "example.py",
+      "line": 9
+    },
+    {
+      "id": "line.upper",
+      "name": "line.upper",
+      "type": "function",
+      "file": "example.py",
+      "line": 10
+    }
+  ],
+  "edges": [
+    {
+      "from": "read_file",
+      "to": "open"
+    },
+    {
+      "from": "read_file",
+      "to": "process_lines"
+    },
+    {
+      "from": "read_file",
+      "to": "print_lines"
+    },
+    {
+      "from": "open",
+      "to": "file.readlines"
+    },
+    {
+      "from": "process_lines",
+      "to": "line.strip"
+    },
+    {
+      "from": "process_lines",
+      "to": "line.upper"
+    },
+    {
+      "from": "print_lines",
+      "to": "print"
+    },
+    {
+      "from": "file.readlines",
+      "to": "file.read"
+    },
+    {
+      "from": "file.read",
+      "to": "file.close"
+    }
+  ]
+}

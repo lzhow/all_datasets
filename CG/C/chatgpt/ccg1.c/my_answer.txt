@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "label": "main"
+    },
+    {
+      "id": "readin",
+      "label": "readin"
+    },
+    {
+      "id": "printEmp",
+      "label": "printEmp"
+    },
+    {
+      "id": "search",
+      "label": "search"
+    },
+    {
+      "id": "addEmployee",
+      "label": "addEmployee"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "readin"
+    },
+    {
+      "from": "main",
+      "to": "search"
+    },
+    {
+      "from": "search",
+      "to": "addEmployee"
+    },
+    {
+      "from": "main",
+      "to": "printEmp"
+    }
+  ]
+}

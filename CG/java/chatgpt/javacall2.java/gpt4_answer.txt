@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {"id": "Animal", "type": "class"},
+    {"id": "Dog", "type": "class"},
+    {"id": "AnimalInheritanceTest", "type": "class"},
+    {"id": "Animal constructor", "type": "method"},
+    {"id": "Animal constructor with name", "type": "method"},
+    {"id": "getName in Animal", "type": "method"},
+    {"id": "sound in Animal", "type": "method"},
+    {"id": "Dog constructor", "type": "method"},
+    {"id": "Dog constructor with name", "type": "method"},
+    {"id": "getName in Dog", "type": "method"},
+    {"id": "sound in Dog", "type": "method"},
+    {"id": "main in AnimalInheritanceTest", "type": "method"}
+  ],
+  "edges": [
+    {"from": "Dog", "to": "Animal"},
+    {"from": "main in AnimalInheritanceTest", "to": "sound in Animal"},
+    {"from": "main in AnimalInheritanceTest", "to": "sound in Dog"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {"id": 1, "type": "function_definition", "label": "def whileloop():"},
+    {"id": 2, "type": "variable_initialization", "label": "i = 1"},
+    {"id": 3, "type": "while_loop", "label": "while i < 6:"},
+    {"id": 4, "type": "expression", "label": "print(i)"},
+    {"id": 5, "type": "assignment", "label": "i += 1"},
+    {"id": 6, "type": "conditional_statement", "label": "if i > 4:"},
+    {"id": 7, "type": "break_statement", "label": "break"},
+    {"id": 8, "type": "else_clause", "label": "else:"},
+    {"id": 9, "type": "expression", "label": "print('i is no longer less than 4')"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 3, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 5, "target": 6},
+    {"source": 6, "target": 7},
+    {"source": 3, "target": 8},
+    {"source": 8, "target": 9}
+  ]
+}

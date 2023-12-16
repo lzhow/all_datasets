@@ -1,0 +1,105 @@
+{
+  "type": "class",
+  "children": [
+    {
+      "type": "enum",
+      "children": [
+        {
+          "type": "enum_constant",
+          "value": "L"
+        },
+        {
+          "type": "enum_constant",
+          "value": "M"
+        },
+        {
+          "type": "enum_constant",
+          "value": "H"
+        }
+      ]
+    },
+    {
+      "type": "method",
+      "children": [
+        {
+          "type": "type",
+          "value": "void"
+        },
+        {
+          "type": "identifier",
+          "value": "main"
+        },
+        {
+          "type": "formal_parameters",
+          "children": [
+            {
+              "type": "type",
+              "value": "String"
+            },
+            {
+              "type": "identifier",
+              "value": "args"
+            }
+          ]
+        },
+        {
+          "type": "block",
+          "children": [
+            {
+              "type": "local_variable_declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "T"
+                },
+                {
+                  "type": "identifier",
+                  "value": "m"
+                },
+                {
+                  "type": "assignment",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "T"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "M"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "method_invocation",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "System"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "out"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "println"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "m"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

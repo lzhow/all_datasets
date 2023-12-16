@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"id": 1, "type": "pragma_directive", "label": "pragma solidity ^0.5.0;"},
+    {"id": 2, "type": "library_definition", "label": "library S {"},
+    {"id": 3, "type": "function_definition", "label": "function a(uint[] memory d) public pure returns (uint o) {"},
+    {"id": 4, "type": "assembly_block", "label": "assembly {"},
+    {"id": 5, "type": "assembly_expression", "label": "o := add(o, mload(add(d, 0x20)))"}
+  ],
+  "edges": [
+    {"source": 2, "target": 3},
+    {"id": 3, "target": 4},
+    {"id": 4, "target": 5}
+  ]
+}

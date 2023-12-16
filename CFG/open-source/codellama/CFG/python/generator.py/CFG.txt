@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "label": "square_numbers"
+    },
+    {
+      "id": 1,
+      "type": "for",
+      "label": "for i in range(n)"
+    },
+    {
+      "id": 2,
+      "type": "yield",
+      "label": "yield i ** 2"
+    },
+    {
+      "id": 3,
+      "type": "assign",
+      "label": "squares = square_numbers(5)"
+    },
+    {
+      "id": 4,
+      "type": "for",
+      "label": "for num in squares"
+    },
+    {
+      "id": 5,
+      "type": "print",
+      "label": "print(num)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

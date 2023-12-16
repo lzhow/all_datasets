@@ -1,0 +1,17 @@
+You are a C Abstract Syntax Tree (AST) parser. I will give you a  C code file. You give me its 
+        AST in Json. Each AST node only has three attributes, children, type and value.
+        
+        The input file is 
+        ```
+        #include <stdio.h>
+
+
+int main(void)
+{
+    int a = 0;
+    while (a < 100){
+        a += 1;
+    }
+}
+        ```
+        

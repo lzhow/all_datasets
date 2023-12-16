@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "interface",
+      "name": "Flyable",
+      "methods": [
+        "fly()"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "interface",
+      "name": "Swimmable",
+      "methods": [
+        "swim()"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "class",
+      "name": "Bird",
+      "implements": [
+        "Flyable"
+      ],
+      "methods": [
+        "fly()"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "class",
+      "name": "Fish",
+      "implements": [
+        "Swimmable"
+      ],
+      "methods": [
+        "swim()"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "name": "FlyingFish",
+      "implements": [
+        "Flyable",
+        "Swimmable"
+      ],
+      "methods": [
+        "fly()",
+        "swim()"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "object",
+      "name": "bird",
+      "class": "Bird"
+    },
+    {
+      "id": 7,
+      "type": "object",
+      "name": "fish",
+      "class": "Fish"
+    },
+    {
+      "id": 8,
+      "type": "object",
+      "name": "flyingFish",
+      "class": "FlyingFish"
+    }
+  ],
+  "edges": [
+    {
+      "source": 6,
+      "target": 3,
+      "method": "fly()"
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "method": "swim()"
+    },
+    {
+      "source": 8,
+      "target": 5,
+      "method": "fly()"
+    },
+    {
+      "source": 8,
+      "target": 5,
+      "method": "swim()"
+    }
+  ]
+}

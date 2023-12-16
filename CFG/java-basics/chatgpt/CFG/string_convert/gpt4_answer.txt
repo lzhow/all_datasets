@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "StringConverter"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "stringToInt(String str)"
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "label": "stringToDouble(String str)"
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "label": "stringToLong(String str)"
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 6,
+      "type": "try_block",
+      "label": "Try Block"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "Call stringToInt"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "Call stringToDouble"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "Call stringToLong"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "Print converted values"
+    },
+    {
+      "id": 11,
+      "type": "catch_block",
+      "label": "Catch NumberFormatException"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 6,
+      "target": 11,
+      "condition": "NumberFormatException occurs"
+    }
+  ]
+}

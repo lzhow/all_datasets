@@ -1,0 +1,129 @@
+{
+  "type": "class",
+  "value": "while_loop",
+  "children": [
+    {
+      "type": "method",
+      "value": "main",
+      "children": [
+        {
+          "type": "int",
+          "value": "i",
+          "children": []
+        },
+        {
+          "type": "while",
+          "value": "while",
+          "children": [
+            {
+              "type": "expression",
+              "value": "i++ < 6",
+              "children": [
+                {
+                  "type": "expression",
+                  "value": "i++",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "i",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "value": "< 6",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "i",
+                      "children": []
+                    },
+                    {
+                      "type": "int",
+                      "value": "6",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "block",
+              "value": "block",
+              "children": [
+                {
+                  "type": "if",
+                  "value": "if",
+                  "children": [
+                    {
+                      "type": "expression",
+                      "value": "i==2",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "value": "i",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "i",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "expression",
+                          "value": "2",
+                          "children": [
+                            {
+                              "type": "int",
+                              "value": "2",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "continue",
+                      "value": "continue",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "value": "System.out.println(\"Hello World\")",
+                  "children": [
+                    {
+                      "type": "expression",
+                      "value": "System.out.println",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "System.out.println",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "value": "\"Hello World\"",
+                      "children": [
+                        {
+                          "type": "string",
+                          "value": "Hello World",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

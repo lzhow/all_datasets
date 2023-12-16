@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main(void)"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "float arr[3]"
+    },
+    {
+      "id": 3,
+      "type": "Assignment",
+      "code": "arr[0] = 1"
+    },
+    {
+      "id": 4,
+      "type": "Declaration & Initialization",
+      "code": "int mul_arr[][COL] = {{1,2}, {3,4}}"
+    },
+    {
+      "id": 5,
+      "type": "Declaration & Initialization",
+      "code": "static int array[] = {12, 23, 54,}"
+    },
+    {
+      "id": 6,
+      "type": "Return",
+      "code": "return (0)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    }
+  ]
+}

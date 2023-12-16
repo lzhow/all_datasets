@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class for_loop"
+    },
+    {
+      "id": 2,
+      "type": "Method",
+      "code": "void printArray(int arr[])"
+    },
+    {
+      "id": 3,
+      "type": "ForLoop",
+      "code": "for (int i = 0; i < arr.length; i++)"
+    },
+    {
+      "id": 4,
+      "type": "Conditional",
+      "code": "if(i > 9)"
+    },
+    {
+      "id": 5,
+      "type": "Break",
+      "code": "break"
+    },
+    {
+      "id": 6,
+      "type": "IOOperation",
+      "code": "System.out.print(arr[i] + \" \")"
+    },
+    {
+      "id": 7,
+      "type": "IOOperation",
+      "code": "System.out.println(\"\")"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "true"
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "condition": "after break"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "condition": "false"
+    },
+    {
+      "from": 6,
+      "to": 3,
+      "condition": "next iteration"
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "condition": "loop exit"
+    }
+  ]
+}

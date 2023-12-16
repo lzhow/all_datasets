@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "open",
+      "code": "with open(\"file.txt\", \"r\") as file:"
+    },
+    {
+      "id": 2,
+      "type": "read",
+      "code": "data = file.read()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    }
+  ]
+}

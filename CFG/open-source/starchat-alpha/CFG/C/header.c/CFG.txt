@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "label": "main",
+      "type": "function",
+      "attributes": []
+    },
+    {
+      "id": 1,
+      "label": "include <inbuilt.h>",
+      "type": "directive",
+      "attributes": []
+    },
+    {
+      "id": 2,
+      "label": "include \"./custom.h\"",
+      "type": "directive",
+      "attributes": []
+    },
+    {
+      "id": 3,
+      "label": "#define N 1000",
+      "type": "preprocessor",
+      "attributes": []
+    },
+    {
+      "id": 4,
+      "label": "typedef ll long long",
+      "type": "typedef",
+      "attributes": []
+    },
+    {
+      "id": 5,
+      "label": "void",
+      "type": "type",
+      "attributes": []
+    },
+    {
+      "id": 6,
+      "label": "main",
+      "type": "function",
+      "attributes": []
+    },
+    {
+      "id": 7,
+      "label": "{",
+      "type": "block",
+      "attributes": []
+    },
+    {
+      "id": 8,
+      "label": "}",
+      "type": "block",
+      "attributes": []
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 6,
+      "attributes": []
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "attributes": []
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "attributes": []
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "attributes": []
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "attributes": []
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "attributes": []
+    }
+  ]
+}

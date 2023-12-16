@@ -1,0 +1,78 @@
+{
+  "type": "SourceUnit",
+  "value": "",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity >=0.4.22 <0.9.0",
+      "children": []
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "P",
+      "children": [
+        {
+          "type": "StateVariableDeclaration",
+          "value": "address public s",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "s",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "ModifierDefinition",
+          "value": "mm()",
+          "children": [
+            {
+              "type": "FunctionCall",
+              "value": "require(msg.sender == s, \"not\")",
+              "children": [
+                {
+                  "type": "BinaryOperation",
+                  "value": "msg.sender == s",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "msg.sender",
+                      "children": []
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "s",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "StringLiteral",
+                  "value": "\"not\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "f() public view mm",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "uint a = 10",
+              "children": [
+                {
+                  "type": "Literal",
+                  "value": "10",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

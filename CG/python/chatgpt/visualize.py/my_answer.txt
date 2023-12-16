@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "average",
+      "label": "average"
+    },
+    {
+      "id": "median",
+      "label": "median"
+    },
+    {
+      "id": "visualize_data",
+      "label": "visualize_data"
+    },
+    {
+      "id": "plt.plot",
+      "label": "plt.plot"
+    },
+    {
+      "id": "plt.axhline",
+      "label": "plt.axhline"
+    },
+    {
+      "id": "plt.legend",
+      "label": "plt.legend"
+    },
+    {
+      "id": "plt.show",
+      "label": "plt.show"
+    },
+    {
+      "id": "data",
+      "label": "data"
+    }
+  ],
+  "edges": [
+    {
+      "from": "average",
+      "to": "sum"
+    },
+    {
+      "from": "average",
+      "to": "len"
+    },
+    {
+      "from": "average",
+      "to": "division"
+    },
+    {
+      "from": "median",
+      "to": "sorted"
+    },
+    {
+      "from": "median",
+      "to": "len"
+    },
+    {
+      "from": "median",
+      "to": "n"
+    },
+    {
+      "from": "median",
+      "to": "mid"
+    },
+    {
+      "from": "median",
+      "to": "mod"
+    },
+    {
+      "from": "median",
+      "to": "sorted_data"
+    },
+    {
+      "from": "median",
+      "to": "return"
+    },
+    {
+      "from": "visualize_data",
+      "to": "average"
+    },
+    {
+      "from": "visualize_data",
+      "to": "median"
+    },
+    {
+      "from": "visualize_data",
+      "to": "plt.plot"
+    },
+    {
+      "from": "visualize_data",
+      "to": "plt.axhline"
+    },
+    {
+      "from": "visualize_data",
+      "to": "plt.legend"
+    },
+    {
+      "from": "visualize_data",
+      "to": "plt.show"
+    },
+    {
+      "from": "visualize_data",
+      "to": "data"
+    }
+  ]
+}

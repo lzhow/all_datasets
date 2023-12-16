@@ -1,0 +1,138 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity ^0.5.0",
+      "children": []
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "S",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "A",
+          "children": [
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "j",
+                  "children": [
+                    {
+                      "type": "TypeName",
+                      "value": "uint",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "children": [
+                {
+                  "type": "ModifierInvocation",
+                  "value": "internal",
+                  "children": []
+                },
+                {
+                  "type": "ModifierInvocation",
+                  "value": "pure",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "Statement",
+                  "children": [
+                    {
+                      "type": "DoWhileStatement",
+                      "children": [
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "Statement",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "j",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "Subtract",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "j",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "NumberLiteral",
+                                              "value": "10",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "NotEqual",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "j",
+                                  "children": []
+                                },
+                                {
+                                  "type": "NumberLiteral",
+                                  "value": "0",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Return",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "j",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "DeclarationSpecifier",
+          "children": [
+            {
+              "type": "StorageClassSpecifier",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "InitDeclarator",
+          "children": [
+            {
+              "type": "Declarator",
+              "children": [
+                {
+                  "type": "DirectDeclarator",
+                  "value": "main"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "CompoundStatement",
+      "children": [
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "DeclarationSpecifier",
+              "children": [
+                {
+                  "type": "StorageClassSpecifier",
+                  "value": "char"
+                }
+              ]
+            },
+            {
+              "type": "InitDeclarator",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "children": [
+                    {
+                      "type": "DirectDeclarator",
+                      "value": "str1"
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "children": [
+                    {
+                      "type": "InitializerList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "Hello"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "DeclarationSpecifier",
+              "children": [
+                {
+                  "type": "StorageClassSpecifier",
+                  "value": "char"
+                }
+              ]
+            },
+            {
+              "type": "InitDeclarator",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "children": [
+                    {
+                      "type": "DirectDeclarator",
+                      "value": "str2"
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "children": [
+                    {
+                      "type": "InitializerList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "World"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "DeclarationSpecifier",
+              "children": [
+                {
+                  "type": "StorageClassSpecifier",
+                  "value": "char"
+                }
+              ]
+            },
+            {
+              "type": "InitDeclarator",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "children": [
+                    {
+                      "type": "DirectDeclarator",
+                      "value": "str3"
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "children": [
+                    {
+                      "type": "InitializerList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "Hello"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ExpressionStatement",
+          "children": [
+            {
+              "type": "Expression",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "Length of str1: %zu\\n"
+                        },
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "FunctionCall",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "strlen"
+                                },
+                                {
+                                  "type": "ArgumentList",
+                                  "children": [
+                                    {
+                                      "type": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "str1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ExpressionStatement",
+          "children": [
+            {
+              "type": "Expression",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

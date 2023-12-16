@@ -1,0 +1,219 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "FunctionDefinition",
+      "children": [
+        {
+          "type": "Type",
+          "value": "void"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "numbers"
+                },
+                {
+                  "type": "ArrayDeclarator",
+                  "children": [
+                    {
+                      "type": "ConstantExpression",
+                      "value": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "children": [
+                    {
+                      "type": "InitializerList",
+                      "children": [
+                        {
+                          "type": "ConstantExpression",
+                          "value": "1"
+                        },
+                        {
+                          "type": "ConstantExpression",
+                          "value": "2"
+                        },
+                        {
+                          "type": "ConstantExpression",
+                          "value": "3"
+                        },
+                        {
+                          "type": "ConstantExpression",
+                          "value": "4"
+                        },
+                        {
+                          "type": "ConstantExpression",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "PointerDeclarator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "ptr"
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "children": [
+                    {
+                      "type": "InitializerList",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "numbers"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "printf"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "ConstantExpression",
+                              "value": "%d\n"
+                            },
+                            {
+                              "type": "UnaryExpression",
+                              "children": [
+                                {
+                                  "type": "PointerDereference",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "ptr"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "UnaryExpression",
+                      "children": [
+                        {
+                          "type": "PostfixExpression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "ptr"
+                            },
+                            {
+                              "type": "Operator",
+                              "value": "++"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "printf"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "ConstantExpression",
+                              "value": "%d\n"
+                            },
+                            {
+                              "type": "UnaryExpression",
+                              "children": [
+                                {
+                                  "type": "PointerDereference",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "ptr"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

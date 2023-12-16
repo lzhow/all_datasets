@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "label": "main"
+    },
+    {
+      "id": "fibonacci",
+      "label": "fibonacci"
+    },
+    {
+      "id": "printf",
+      "label": "printf"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "printf"
+    },
+    {
+      "from": "main",
+      "to": "fibonacci"
+    },
+    {
+      "from": "fibonacci",
+      "to": "fibonacci"
+    }
+  ]
+}

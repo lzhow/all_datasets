@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": "factorial",
+      "name": "factorial",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "display_factorial",
+      "name": "display_factorial",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "num",
+          "type": "int"
+        }
+      ],
+      "return_type": "None"
+    }
+  ],
+  "edges": [
+    {
+      "source": "factorial",
+      "target": "factorial",
+      "type": "recursive"
+    },
+    {
+      "source": "display_factorial",
+      "target": "factorial",
+      "type": "call"
+    }
+  ]
+}

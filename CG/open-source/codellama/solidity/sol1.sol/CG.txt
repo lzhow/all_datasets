@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "BuyMeACoffee",
+      "label": "BuyMeACoffee",
+      "type": "contract",
+      "x": 100,
+      "y": 100
+    },
+    {
+      "id": "owner",
+      "label": "owner",
+      "type": "variable",
+      "x": 200,
+      "y": 100
+    },
+    {
+      "id": "memos",
+      "label": "memos",
+      "type": "variable",
+      "x": 300,
+      "y": 100
+    },
+    {
+      "id": "getMemos",
+      "label": "getMemos",
+      "type": "function",
+      "x": 400,
+      "y": 100
+    },
+    {
+      "id": "buyCoffee",
+      "label": "buyCoffee",
+      "type": "function",
+      "x": 500,
+      "y": 100
+    },
+    {
+      "id": "withdrawTips",
+      "label": "withdrawTips",
+      "type": "function",
+      "x": 600,
+      "y": 100
+    },
+    {
+      "id": "changeOwner",
+      "label": "changeOwner",
+      "type": "function",
+      "x": 700,
+      "y": 100
+    }
+  ],
+  "edges": [
+    {
+      "from": "BuyMeACoffee",
+      "to": "owner",
+      "type": "variable"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "memos",
+      "type": "variable"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "getMemos",
+      "type": "function"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "buyCoffee",
+      "type": "function"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "withdrawTips",
+      "type": "function"
+    },
+    {
+      "from": "BuyMeACoffee",
+      "to": "changeOwner",
+      "type": "function"
+    }
+  ]
+}

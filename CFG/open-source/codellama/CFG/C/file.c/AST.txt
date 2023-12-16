@@ -1,0 +1,146 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "int"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "FunctionBody",
+          "children": [
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "Statement",
+                  "children": [
+                    {
+                      "type": "Declaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "FILE"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "file"
+                        },
+                        {
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "type": "FunctionCall",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "fopen"
+                                },
+                                {
+                                  "type": "ArgumentList",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "example.txt"
+                                    },
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "r"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Statement",
+                      "children": [
+                        {
+                          "type": "IfStatement",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "file"
+                                },
+                                {
+                                  "type": "Operator",
+                                  "value": "!="
+                                },
+                                {
+                                  "type": "NullLiteral"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Block",
+                              "children": [
+                                {
+                                  "type": "Statement",
+                                  "children": [
+                                    {
+                                      "type": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "FunctionCall",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "fclose"
+                                            },
+                                            {
+                                              "type": "ArgumentList",
+                                              "children": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "value": "file"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Statement",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "IntegerLiteral",
+                              "value": "0"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

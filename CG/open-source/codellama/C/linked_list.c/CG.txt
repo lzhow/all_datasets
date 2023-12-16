@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "name": "main",
+      "type": "function",
+      "address": "0x400530",
+      "size": 100,
+      "children": [
+        {
+          "name": "insertNode",
+          "type": "function",
+          "address": "0x400560",
+          "size": 50,
+          "children": [
+            {
+              "name": "createNode",
+              "type": "function",
+              "address": "0x400590",
+              "size": 20,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "insertNode",
+          "type": "function",
+          "address": "0x400560",
+          "size": 50,
+          "children": [
+            {
+              "name": "createNode",
+              "type": "function",
+              "address": "0x400590",
+              "size": 20,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "insertNode",
+          "type": "function",
+          "address": "0x400560",
+          "size": 50,
+          "children": [
+            {
+              "name": "createNode",
+              "type": "function",
+              "address": "0x400590",
+              "size": 20,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "printList",
+          "type": "function",
+          "address": "0x4005c0",
+          "size": 30,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "insertNode",
+      "type": "function",
+      "address": "0x400560",
+      "size": 50,
+      "children": [
+        {
+          "name": "createNode",
+          "type": "function",
+          "address": "0x400590",
+          "size": 20,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "createNode",
+      "type": "function",
+      "address": "0x400590",
+      "size": 20,
+      "children": []
+    },
+    {
+      "name": "printList",
+      "type": "function",
+      "address": "0x4005c0",
+      "size": 30,
+      "children": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "insertNode",
+      "type": "call"
+    },
+    {
+      "from": "main",
+      "to": "insertNode",
+      "type": "call"
+    },
+    {
+      "from": "main",
+      "to": "insertNode",
+      "type": "call"
+    },
+    {
+      "from": "main",
+      "to": "printList",
+      "type": "call"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode",
+      "type": "call"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode",
+      "type": "call"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode",
+      "type": "call"
+    }
+  ]
+}

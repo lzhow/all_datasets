@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": "main", "label": "main()"},
+    {"id": "sum", "label": "sum()"},
+    {"id": "printf", "label": "printf()"},
+    {"id": "scanf", "label": "scanf()"}
+  ],
+  "edges": [
+    {"from": "main", "to": "printf"},
+    {"from": "main", "to": "scanf"},
+    {"from": "main", "to": "sum"},
+    {"from": "sum", "to": "sum"},
+    {"from": "sum", "to": "main"},
+    {"from": "printf", "to": null},
+    {"from": "scanf", "to": null}
+  ]
+}

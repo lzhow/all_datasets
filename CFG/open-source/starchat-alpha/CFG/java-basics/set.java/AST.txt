@@ -1,0 +1,157 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [],
+      "type": "ImportDeclaration",
+      "value": "import java.util.HashSet;"
+    },
+    {
+      "children": [],
+      "type": "ImportDeclaration",
+      "value": "import java.util.Set;"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "VariableDeclarator",
+              "value": "set"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "NewExpression",
+                  "value": "new HashSet"
+                },
+                {
+                  "children": [],
+                  "type": "EmptyList",
+                  "value": "<>"
+                }
+              ],
+              "type": "VariableDeclarationExpr",
+              "value": "="
+            }
+          ],
+          "type": "LocalVariableDeclaration",
+          "value": "Set"
+        }
+      ],
+      "type": "ClassOrInterfaceDeclaration",
+      "value": "public class SetExample {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "Name",
+                  "value": "String"
+                }
+              ],
+              "type": "ParameterizedType",
+              "value": "Set"
+            },
+            {
+              "children": [],
+              "type": "SimpleName",
+              "value": "set"
+            }
+          ],
+          "type": "VariableDeclarator",
+          "value": "Set"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "Name",
+                  "value": "String"
+                }
+              ],
+              "type": "SimpleType",
+              "value": "String"
+            },
+            {
+              "children": [],
+              "type": "Name",
+              "value": "fruit"
+            }
+          ],
+          "type": "VariableDeclarator",
+          "value": "String"
+        }
+      ],
+      "type": "ForEachStmt",
+      "value": "for (String fruit : set) {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "Name",
+              "value": "System"
+            },
+            {
+              "children": [],
+              "type": "Name",
+              "value": "out"
+            },
+            {
+              "children": [],
+              "type": "Name",
+              "value": "println"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "Name",
+                  "value": "fruit"
+                }
+              ],
+              "type": "VariableDeclarator",
+              "value": "("
+            }
+          ],
+          "type": "MethodCallExpr",
+          "value": "System.out.println("
+        },
+        {
+          "children": [],
+          "type": "Name",
+          "value": "fruit"
+        },
+        {
+          "children": [],
+          "type": "VariableDeclarator",
+          "value": ")"
+        }
+      ],
+      "type": "ExpressionStmt",
+      "value": "System.out.println(fruit);"
+    },
+    {
+      "children": [],
+      "type": "BlockStmt",
+      "value": "}"
+    },
+    {
+      "children": [],
+      "type": "BlockStmt",
+      "value": "}"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "while_loop"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "Initialize i"
+    },
+    {
+      "id": 4,
+      "type": "loop",
+      "label": "while (i++ < 6)"
+    },
+    {
+      "id": 5,
+      "type": "conditional",
+      "label": "if (i == 2)"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "continue"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "Print 'Hello World'"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "condition": "true"
+    },
+    {
+      "source": 6,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "condition": "false"
+    },
+    {
+      "source": 7,
+      "target": 4
+    }
+  ]
+}

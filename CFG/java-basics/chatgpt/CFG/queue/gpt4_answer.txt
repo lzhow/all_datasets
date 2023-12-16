@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "QueueExample"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "Queue Initialization"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "queue.offer(1)"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "queue.offer(2)"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "queue.offer(3)"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "peek and print top of queue"
+    },
+    {
+      "id": 8,
+      "type": "loop",
+      "label": "while (!queue.isEmpty())"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "poll and print queue element"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "condition": "queue not empty"
+    },
+    {
+      "source": 9,
+      "target": 8
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "function",
+      "name": "Bubble_sort"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "name": "j"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "name": "i"
+    },
+    {
+      "id": 4,
+      "type": "declaration",
+      "name": "tem"
+    },
+    {
+      "id": 5,
+      "type": "loop",
+      "condition": "i < size - 1"
+    },
+    {
+      "id": 6,
+      "type": "declaration",
+      "name": "count"
+    },
+    {
+      "id": 7,
+      "type": "loop",
+      "condition": "j < size - 1 - i"
+    },
+    {
+      "id": 8,
+      "type": "condition",
+      "condition": "arr[j] > arr[j + 1]"
+    },
+    {
+      "id": 9,
+      "type": "assignment",
+      "name": "tem = arr[j]"
+    },
+    {
+      "id": 10,
+      "type": "assignment",
+      "name": "arr[j] = arr[j + 1]"
+    },
+    {
+      "id": 11,
+      "type": "assignment",
+      "name": "arr[j + 1] = tem"
+    },
+    {
+      "id": 12,
+      "type": "assignment",
+      "name": "count = 1"
+    },
+    {
+      "id": 13,
+      "type": "condition",
+      "condition": "count == 0"
+    },
+    {
+      "id": 14,
+      "type": "break"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 8,
+      "target": 13
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 5,
+      "target": 13
+    },
+    {
+      "source": 14,
+      "target": 5
+    }
+  ]
+}

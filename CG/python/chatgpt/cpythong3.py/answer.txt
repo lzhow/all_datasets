@@ -1,0 +1,102 @@
+{
+    "nodes": [
+        {
+            "id": "generate_number",
+            "label": "generate_number"
+        },
+        {
+            "id": "check_repeat",
+            "label": "check_repeat"
+        },
+        {
+            "id": "discard_repetition",
+            "label": "discard_repetition"
+        },
+        {
+            "id": "bulls",
+            "label": "bulls"
+        },
+        {
+            "id": "cows",
+            "label": "cows"
+        },
+        {
+            "id": "player_wins",
+            "label": "player_wins"
+        },
+        {
+            "id": "user_input",
+            "label": "user_input"
+        },
+        {
+            "id": "main_func",
+            "label": "main_func"
+        },
+        {
+            "id": "<module>",
+            "label": "<module>"
+        }
+    ],
+    "edges": [
+        {
+            "from": "<module>",
+            "to": "main_func"
+        },
+        {
+            "from": "main_func",
+            "to": "generate_number"
+        },
+        {
+            "from": "main_func",
+            "to": "user_input"
+        },
+        {
+            "from": "main_func",
+            "to": "bulls"
+        },
+        {
+            "from": "main_func",
+            "to": "discard_repetition"
+        },
+        {
+            "from": "main_func",
+            "to": "cows"
+        },
+        {
+            "from": "main_func",
+            "to": "player_wins"
+        },
+        {
+            "from": "main_func",
+            "to": "user_continue"
+        },
+        {
+            "from": "user_input",
+            "to": "check_repeat"
+        },
+        {
+            "from": "bulls",
+            "to": "discard_repetition"
+        },
+        {
+            "from": "discard_repetition",
+            "to": "cows"
+        },
+        {
+            "from": "bulls",
+            "to": "player_wins"
+        },
+        {
+            "from": "player_wins",
+            "to": "user_guess"
+        },
+        {
+            "from": "<module>",
+            "to": "user_guess"
+        },
+        {
+            "from": "<module>",
+            "to": "user_continue"
+        }
+    ]
+}

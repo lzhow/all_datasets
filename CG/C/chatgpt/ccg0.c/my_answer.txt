@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "label": "main"
+    },
+    {
+      "id": "readInput",
+      "label": "readInput"
+    },
+    {
+      "id": "computeSalary1",
+      "label": "computeSalary1"
+    },
+    {
+      "id": "computeSalary2",
+      "label": "computeSalary2"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "readInput"
+    },
+    {
+      "from": "main",
+      "to": "computeSalary1"
+    },
+    {
+      "from": "computeSalary1",
+      "to": "computeSalary2"
+    },
+    {
+      "from": "computeSalary2",
+      "to": "readInput"
+    }
+  ]
+}

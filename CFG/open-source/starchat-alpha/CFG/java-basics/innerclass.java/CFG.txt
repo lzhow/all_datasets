@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "label": "O"
+    },
+    {
+      "id": 2,
+      "type": "FieldDeclaration",
+      "label": "x"
+    },
+    {
+      "id": 3,
+      "type": "ClassDeclaration",
+      "label": "I"
+    },
+    {
+      "id": 4,
+      "type": "FieldDeclaration",
+      "label": "y"
+    },
+    {
+      "id": 5,
+      "type": "MethodDeclaration",
+      "label": "main"
+    },
+    {
+      "id": 6,
+      "type": "LocalVariableDeclaration",
+      "label": "m"
+    },
+    {
+      "id": 7,
+      "type": "LocalVariableDeclaration",
+      "label": "i"
+    },
+    {
+      "id": 8,
+      "type": "MethodInvocation",
+      "label": "new"
+    },
+    {
+      "id": 9,
+      "type": "FieldAccess",
+      "label": "y"
+    },
+    {
+      "id": 10,
+      "type": "FieldAccess",
+      "label": "x"
+    },
+    {
+      "id": 11,
+      "type": "PrintStatement",
+      "label": "println"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 3
+    },
+    {
+      "source": 7,
+      "target": 9
+    },
+    {
+      "source": 6,
+      "target": 10
+    },
+    {
+      "source": 11,
+      "target": 9
+    },
+    {
+      "source": 11,
+      "target": 10
+    }
+  ]
+}

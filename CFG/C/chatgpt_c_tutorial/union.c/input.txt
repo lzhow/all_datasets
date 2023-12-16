@@ -1,0 +1,19 @@
+You are a C Abstract Syntax Tree (AST) parser. I will give you a  C code file. You give me its 
+    AST in Json. Each AST node only has three attributes, children, type and value.
+
+    The input file is 
+    ```
+    union Data {
+    int i;
+    float f;
+    char str[20];
+};
+
+int main() {
+    union Data data;
+    data.i = 10;
+    return 0;
+}
+
+    ```
+    

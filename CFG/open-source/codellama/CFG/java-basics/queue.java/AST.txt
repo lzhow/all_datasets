@@ -1,0 +1,242 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "PackageDeclaration",
+      "children": [
+        {
+          "type": "Name",
+          "value": "java.util"
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "Name",
+          "value": "java.util.LinkedList"
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "Name",
+          "value": "java.util.Queue"
+        }
+      ]
+    },
+    {
+      "type": "TypeDeclaration",
+      "children": [
+        {
+          "type": "ClassDeclaration",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            },
+            {
+              "type": "Type",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QueueExample"
+                }
+              ]
+            },
+            {
+              "type": "BodyDeclaration",
+              "children": [
+                {
+                  "type": "MethodDeclaration",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "static"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "void"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Name",
+                      "value": "main"
+                    },
+                    {
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "String"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": "args"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "Statement",
+                          "children": [
+                            {
+                              "type": "VariableDeclarationStatement",
+                              "children": [
+                                {
+                                  "type": "Type",
+                                  "children": [
+                                    {
+                                      "type": "Name",
+                                      "value": "Queue"
+                                    },
+                                    {
+                                      "type": "Name",
+                                      "value": "<Integer>"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "queue"
+                                },
+                                {
+                                  "type": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "Name",
+                                      "value": "new"
+                                    },
+                                    {
+                                      "type": "Name",
+                                      "value": "LinkedList"
+                                    },
+                                    {
+                                      "type": "ArgumentList",
+                                      "children": [
+                                        {
+                                          "type": "Expression",
+                                          "children": [
+                                            {
+                                              "type": "Name",
+                                              "value": "Integer"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Statement",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "Name",
+                                          "value": "queue"
+                                        },
+                                        {
+                                          "type": "Name",
+                                          "value": "offer"
+                                        },
+                                        {
+                                          "type": "ArgumentList",
+                                          "children": [
+                                            {
+                                              "type": "Expression",
+                                              "children": [
+                                                {
+                                                  "type": "Literal",
+                                                  "value": "1"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Statement",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "Name",
+                                          "value": "queue"
+                                        },
+                                        {
+                                          "type": "Name",
+                                          "value": "offer"
+                                        },
+                                        {
+                                          "type": "ArgumentList",
+                                          "children": [
+                                            {
+                                              "type": "Expression",
+                                              "children": [
+                                                {
+                                                  "type": "Literal",
+                                                  "value": "2"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Statement",
+                              "children": [],
+                              "value": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

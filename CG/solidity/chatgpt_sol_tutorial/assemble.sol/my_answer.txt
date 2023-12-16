@@ -1,0 +1,73 @@
+{
+  "type": "SourceUnit",
+  "value": [
+    {
+      "type": "PragmaDirective",
+      "value": {
+        "type": "Version",
+        "value": "^0.5.0"
+      }
+    },
+    {
+      "type": "LibraryDefinition",
+      "value": {
+        "type": "Identifier",
+        "value": "S"
+      },
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": {
+            "type": "FunctionDeclaration",
+            "value": {
+              "type": "FunctionTypeName",
+              "value": {
+                "type": "ParameterList",
+                "value": [
+                  {
+                    "type": "Parameter",
+                    "value": {
+                      "type": "ArrayTypeName",
+                      "value": {
+                        "type": "ElementaryTypeName",
+                        "value": "uint"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": [
+            {
+              "type": "ModifierList",
+              "value": []
+            },
+            {
+              "type": "Block",
+              "value": {
+                "type": "Statement",
+                "value": {
+                  "type": "AssemblyBlock",
+                  "value": {
+                    "type": "AssemblyItem",
+                    "value": {
+                      "type": "AssemblyExpression",
+                      "value": {
+                        "type": "AssemblyCall",
+                        "value": {
+                          "type": "Identifier",
+                          "value": "add"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

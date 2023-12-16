@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "Animal.<init>()",
+      "type": "constructor"
+    },
+    {
+      "id": "Animal.<init>(String)",
+      "type": "constructor"
+    },
+    {
+      "id": "Animal.getName()",
+      "type": "method"
+    },
+    {
+      "id": "Animal.sound()",
+      "type": "method"
+    },
+    {
+      "id": "Dog.<init>()",
+      "type": "constructor"
+    },
+    {
+      "id": "Dog.<init>(String)",
+      "type": "constructor"
+    },
+    {
+      "id": "Dog.getName()",
+      "type": "method"
+    },
+    {
+      "id": "Dog.sound()",
+      "type": "method"
+    },
+    {
+      "id": "AnimalInheritanceTest.main(String[])",
+      "type": "method"
+    }
+  ],
+  "edges": [
+    {
+      "source": "AnimalInheritanceTest.main(String[])",
+      "target": "Dog.<init>(String)"
+    },
+    {
+      "source": "Dog.<init>(String)",
+      "target": "Animal.<init>(String)"
+    },
+    {
+      "source": "AnimalInheritanceTest.main(String[])",
+      "target": "Animal.sound()"
+    },
+    {
+      "source": "AnimalInheritanceTest.main(String[])",
+      "target": "Dog.getName()"
+    },
+    {
+      "source": "Dog.getName()",
+      "target": "Animal.getName()"
+    },
+    {
+      "source": "AnimalInheritanceTest.main(String[])",
+      "target": "Dog.sound()"
+    }
+  ]
+}

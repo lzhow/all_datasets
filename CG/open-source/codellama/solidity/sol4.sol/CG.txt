@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "name": "SimpleSwap",
+      "type": "contract",
+      "children": [
+        {
+          "name": "swapRouter",
+          "type": "variable",
+          "children": [
+            {
+              "name": "ISwapRouter",
+              "type": "interface"
+            }
+          ]
+        },
+        {
+          "name": "DAI",
+          "type": "variable",
+          "children": [
+            {
+              "name": "address",
+              "type": "type"
+            }
+          ]
+        },
+        {
+          "name": "WETH9",
+          "type": "variable",
+          "children": [
+            {
+              "name": "address",
+              "type": "type"
+            }
+          ]
+        },
+        {
+          "name": "feeTier",
+          "type": "variable",
+          "children": [
+            {
+              "name": "uint24",
+              "type": "type"
+            }
+          ]
+        },
+        {
+          "name": "constructor",
+          "type": "function",
+          "children": [
+            {
+              "name": "ISwapRouter",
+              "type": "interface"
+            }
+          ]
+        },
+        {
+          "name": "swapWETHForDAI",
+          "type": "function",
+          "children": [
+            {
+              "name": "uint256",
+              "type": "type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ISwapRouter",
+      "type": "interface",
+      "children": [
+        {
+          "name": "ExactInputSingleParams",
+          "type": "struct",
+          "children": [
+            {
+              "name": "tokenIn",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "address",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "tokenOut",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "address",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "fee",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "uint24",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "recipient",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "address",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "deadline",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "uint256",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "amountIn",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "uint256",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "amountOutMinimum",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "uint256",
+                  "type": "type"
+                }
+              ]
+            },
+            {
+              "name": "sqrtPriceLimitX96",
+              "type": "variable",
+              "children": [
+                {
+                  "name": "uint160",
+                  "type": "type"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "exactInputSingle",
+          "type": "function",
+          "children": [
+            {
+              "name": "ExactInputSingleParams",
+              "type": "struct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TransferHelper",
+      "type": "library",
+      "children": [
+        {
+          "name": "safeTransferFrom",
+          "type": "function",
+          "children": [
+            {
+              "name": "address",
+              "type": "type"
+            },
+            {
+              "name": "address",
+              "type": "type"
+            },
+            {
+              "name": "address",
+              "type": "type"
+            },
+            {
+              "name": "uint256",
+              "type": "type"
+            }
+          ]
+        },
+        {
+          "name": "safeApprove",
+          "type": "function",
+          "children": [
+            {
+              "name": "address",
+              "type": "type"
+            },
+            {
+              "name": "address",
+              "type": "type"
+            },
+            {
+              "name": "uint256",
+              "type": "type"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "SimpleSwap",
+      "to": "ISwapRouter",
+      "type": "inheritance"
+    },
+    {
+      "from": "SimpleSwap",
+      "to": "ISwapRouter",
+      "type": "inheritance"
+    }
+  ]
+}

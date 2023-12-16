@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "label": "void Bubble_sort(int arr[], int size)"
+    },
+    {
+      "id": 1,
+      "label": "int j"
+    },
+    {
+      "id": 2,
+      "label": "int i"
+    },
+    {
+      "id": 3,
+      "label": "int tem"
+    },
+    {
+      "id": 4,
+      "label": "for (i = 0; i < size - 1; i++)"
+    },
+    {
+      "id": 5,
+      "label": "for (j = 0; j < size - 1 - i; j++)"
+    },
+    {
+      "id": 6,
+      "label": "if (arr[j] > arr[j + 1])"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1
+    },
+    {
+      "from": 0,
+      "to": 2
+    },
+    {
+      "from": 0,
+      "to": 3
+    },
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 3
+    },
+    {
+      "from": 6,
+      "to": 1
+    }
+  ]
+}

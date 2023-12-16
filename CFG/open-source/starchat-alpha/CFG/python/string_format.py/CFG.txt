@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "string",
+      "label": "name = \"Alice\""
+    },
+    {
+      "id": 2,
+      "type": "number",
+      "label": "age = 30"
+    },
+    {
+      "id": 3,
+      "type": "string",
+      "label": "formatted_str1 = \"Hello, %s. You are %d years old.\" % (name, age)"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "label": "print(formatted_str1)"
+    },
+    {
+      "id": 5,
+      "type": "string",
+      "label": "name = \"Bob\""
+    },
+    {
+      "id": 6,
+      "type": "number",
+      "label": "age = 25"
+    },
+    {
+      "id": 7,
+      "type": "string",
+      "label": "formatted_str2 = \"Hello, {}. You are {} years old.\".format(name, age)"
+    },
+    {
+      "id": 8,
+      "type": "print",
+      "label": "print(formatted_str2)"
+    },
+    {
+      "id": 9,
+      "type": "string",
+      "label": "name = \"Carol\""
+    },
+    {
+      "id": 10,
+      "type": "number",
+      "label": "age = 35"
+    },
+    {
+      "id": 11,
+      "type": "string",
+      "label": "formatted_str3 = f\"Hello, {name}. You are {age} years old.\""
+    },
+    {
+      "id": 12,
+      "type": "print",
+      "label": "print(formatted_str3)"
+    },
+    {
+      "id": 13,
+      "type": "string",
+      "label": "formatted_str4 = \"Hello, {name}. You are {age} years old.\".format(name=\"Dave\", age=40)"
+    },
+    {
+      "id": 14,
+      "type": "print",
+      "label": "print(formatted_str4)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 9,
+      "target": 11
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 13,
+      "target": 12
+    },
+    {
+      "source": 14,
+      "target": 12
+    }
+  ]
+}

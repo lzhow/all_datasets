@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {"id": 1, "type": "class_definition", "label": "class Animal:"},
+    {"id": 2, "type": "function_definition", "label": "def __init__(self, name, sound):"},
+    {"id": 3, "type": "assignment", "label": "self.name = name"},
+    {"id": 4, "type": "assignment", "label": "self.sound = sound"},
+    {"id": 5, "type": "function_definition", "label": "def make_sound(self):"},
+    {"id": 6, "type": "return_statement", "label": "return f'{self.name} says {self.sound}'"},
+    {"id": 7, "type": "function_definition", "label": "def __repr__(self):"},
+    {"id": 8, "type": "return_statement", "label": "return f'Animal('{self.name}', '{self.sound}')'"},
+    {"id": 9, "type": "class_definition", "label": "class Dog(Animal):"},
+    {"id": 10, "type": "function_definition", "label": "def __init__(self, name, sound, breed):"},
+    {"id": 11, "type": "super_function_call", "label": "super().__init__(name, sound)"},
+    {"id": 12, "type": "assignment", "label": "self.breed = breed"},
+    {"id": 13, "type": "function_definition", "label": "def __repr__(self):"},
+    {"id": 14, "type": "return_statement", "label": "return f'Dog('{self.name}', '{self.sound}', '{self.breed}')'"},
+    {"id": 15, "type": "variable_initialization", "label": "generic_animal = Animal('Generic Animal', 'some sound')"},
+    {"id": 16, "type": "function_call", "label": "print(generic_animal)"},
+    {"id": 17, "type": "function_call", "label": "print(generic_animal.make_sound())"},
+    {"id": 18, "type": "variable_initialization", "label": "my_dog = Dog('Rex', 'Bark', 'Golden Retriever')"},
+    {"id": 19, "type": "function_call", "label": "print(my_dog)"},
+    {"id": 20, "type": "function_call", "label": "print(my_dog.make_sound())"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 1, "target": 5},
+    {"source": 5, "target": 6},
+    {"source": 1, "target": 7},
+    {"source": 7, "target": 8},
+    {"source": 9, "target": 10},
+    {"source": 10, "target": 11},
+    {"source": 10, "target": 12},
+    {"source": 9, "target": 13},
+    {"source": 13, "target": 14},
+    {"source": 15, "target": 16},
+    {"source": 15, "target": 17},
+    {"source": 18, "target": 19},
+    {"source": 18, "target": 20}
+  ]
+}

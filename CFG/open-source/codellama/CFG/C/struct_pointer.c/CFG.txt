@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "entry"
+    },
+    {
+      "id": 1,
+      "type": "malloc",
+      "label": "malloc"
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "label": "a->x = 2"
+    },
+    {
+      "id": 3,
+      "type": "assign",
+      "label": "a->y = 1"
+    },
+    {
+      "id": 4,
+      "type": "exit",
+      "label": "exit"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

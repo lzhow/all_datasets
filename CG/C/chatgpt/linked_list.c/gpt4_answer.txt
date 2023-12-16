@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {"id": "main", "type": "function"},
+    {"id": "createNode", "type": "function"},
+    {"id": "insertNode", "type": "function"},
+    {"id": "printList", "type": "function"}
+  ],
+  "edges": [
+    {"from": "main", "to": "insertNode"},
+    {"from": "main", "to": "printList"},
+    {"from": "insertNode", "to": "createNode"}
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void Bubble_sort(int arr[], int size)"
+    },
+    {
+      "id": 2,
+      "type": "ForLoop",
+      "code": "for (i = 0; i < size - 1; i++)"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "int count = 0"
+    },
+    {
+      "id": 4,
+      "type": "ForLoop",
+      "code": "for (j = 0; j < size - 1 - i; j++)"
+    },
+    {
+      "id": 5,
+      "type": "Conditional",
+      "code": "if (arr[j] > arr[j + 1])"
+    },
+    {
+      "id": 6,
+      "type": "Assignment",
+      "code": "tem = arr[j]"
+    },
+    {
+      "id": 7,
+      "type": "Assignment",
+      "code": "arr[j] = arr[j + 1]"
+    },
+    {
+      "id": 8,
+      "type": "Assignment",
+      "code": "arr[j + 1] = tem"
+    },
+    {
+      "id": 9,
+      "type": "Assignment",
+      "code": "count = 1"
+    },
+    {
+      "id": 10,
+      "type": "Conditional",
+      "code": "if (count == 0)"
+    },
+    {
+      "id": 11,
+      "type": "Break",
+      "code": "break"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "condition": "true"
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 4,
+      "condition": "after swap"
+    },
+    {
+      "from": 5,
+      "to": 4,
+      "condition": "false"
+    },
+    {
+      "from": 4,
+      "to": 2,
+      "condition": "next outer iteration"
+    },
+    {
+      "from": 2,
+      "to": 10
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "condition": "true"
+    },
+    {
+      "from": 10,
+      "to": 2,
+      "condition": "false"
+    }
+  ]
+}

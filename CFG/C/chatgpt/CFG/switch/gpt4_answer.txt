@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main(void)"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "unsigned int aCount = 0"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "int grade"
+    },
+    {
+      "id": 4,
+      "type": "WhileLoop",
+      "code": "while ((grade = getchar()) != EOF)"
+    },
+    {
+      "id": 5,
+      "type": "Switch",
+      "code": "switch (grade)"
+    },
+    {
+      "id": 6,
+      "type": "Case",
+      "code": "case 'a': ++aCount; break"
+    },
+    {
+      "id": 7,
+      "type": "Case",
+      "code": "case 'b': printf(\"%d\\n\", aCount)"
+    },
+    {
+      "id": 8,
+      "type": "FallThrough",
+      "code": "Fall through from 'b' to 'c'"
+    },
+    {
+      "id": 9,
+      "type": "Case",
+      "code": "case 'c': --aCount; break"
+    },
+    {
+      "id": 10,
+      "type": "DefaultCase",
+      "code": "default: break"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "loop continuation"
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "condition": "grade == 'a'"
+    },
+    {
+      "from": 6,
+      "to": 4,
+      "condition": "after case 'a'"
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "condition": "grade == 'b'"
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 4,
+      "condition": "after case 'c'"
+    },
+    {
+      "from": 5,
+      "to": 10,
+      "condition": "grade != 'a', 'b', 'c'"
+    },
+    {
+      "from": 10,
+      "to": 4,
+      "condition": "after default case"
+    }
+  ]
+}

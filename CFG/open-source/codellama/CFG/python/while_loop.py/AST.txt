@@ -1,0 +1,112 @@
+{
+  "type": "function",
+  "value": "whileloop",
+  "children": [
+    {
+      "type": "assignment",
+      "value": "i",
+      "children": [
+        {
+          "type": "number",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "while",
+      "value": "while",
+      "children": [
+        {
+          "type": "comparison",
+          "value": "<",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "i"
+            },
+            {
+              "type": "number",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "type": "block",
+          "value": "block",
+          "children": [
+            {
+              "type": "print",
+              "value": "print",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "i"
+                }
+              ]
+            },
+            {
+              "type": "assignment",
+              "value": "+=",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "i"
+                },
+                {
+                  "type": "number",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "if",
+              "value": "if",
+              "children": [
+                {
+                  "type": "comparison",
+                  "value": ">",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "number",
+                      "value": "4"
+                    }
+                  ]
+                },
+                {
+                  "type": "block",
+                  "value": "block",
+                  "children": [
+                    {
+                      "type": "break",
+                      "value": "break"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "else",
+      "value": "else",
+      "children": [
+        {
+          "type": "print",
+          "value": "print",
+          "children": [
+            {
+              "type": "string",
+              "value": "i is no longer less than 4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

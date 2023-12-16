@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "import",
+      "code": "import threading"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "code": "def print_numbers():\n    for i in range(1, 6):\n        print(i)"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "code": "def print_letters():\n    for letter in \"ABCDE\":\n        print(letter)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "code": "thread1 = threading.Thread(target=print_numbers)"
+    },
+    {
+      "id": 4,
+      "type": "assignment",
+      "code": "thread2 = threading.Thread(target=print_letters)"
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "code": "thread1.start()"
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "code": "thread2.start()"
+    },
+    {
+      "id": 7,
+      "type": "method",
+      "code": "thread1.join()"
+    },
+    {
+      "id": 8,
+      "type": "method",
+      "code": "thread2.join()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 8
+    }
+  ]
+}

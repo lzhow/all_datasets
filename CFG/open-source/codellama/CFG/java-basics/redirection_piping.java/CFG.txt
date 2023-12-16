@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "start",
+      "label": "start"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "PrintStream ps = new PrintStream(new FileOutputStream(\"output.txt\"));"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "System.setOut(ps);"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "System.setIn(new FileInputStream(\"input.txt\"));"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "String line;"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "while ((line = reader.readLine()) != null) {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "System.out.println(\"read from the file \" + line);"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "PipedOutputStream pout = new PipedOutputStream();"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "PipedInputStream pin = new PipedInputStream();"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "pout.connect(pin);"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "Thread producer = new Thread(() -> {"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "label": "try {"
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "label": "pout.write(\"Hello from one thread to another!\".getBytes());"
+    },
+    {
+      "id": 15,
+      "type": "statement",
+      "label": "pout.close();"
+    },
+    {
+      "id": 16,
+      "type": "statement",
+      "label": "} catch (IOException e) {"
+    },
+    {
+      "id": 17,
+      "type": "statement",
+      "label": "e.printStackTrace();"
+    },
+    {
+      "id": 18,
+      "type": "statement",
+      "label": "});"
+    },
+    {
+      "id": 19,
+      "type": "statement",
+      "label": "Thread consumer = new Thread(() -> {"
+    },
+    {
+      "id": 20,
+      "type": "statement",
+      "label": "try {"
+    },
+    {
+      "id": 21,
+      "type": "statement",
+      "label": "int data = pin.read();"
+    },
+    {
+      "id": 22,
+      "type": "statement",
+      "label": "while (data != -1) {"
+    },
+    {
+      "id": 23,
+      "type": "statement",
+      "label": "System.out.print((char) data);"
+    },
+    {
+      "id": 24,
+      "type": "statement",
+      "label": "data = pin.read();"
+    },
+    {
+      "id": 25,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 26,
+      "type": "statement",
+      "label": "pin.close();"
+    },
+    {
+      "id": 27,
+      "type": "statement",
+      "label": "} catch (IOException e) {"
+    },
+    {
+      "id": 28,
+      "type": "statement",
+      "label": "e.printStackTrace();"
+    },
+    {
+      "id": 29,
+      "type": "statement",
+      "label": "});"
+    },
+    {
+      "id": 30,
+      "type": "statement",
+      "label": "producer.start();"
+    },
+    {
+      "id": 31,
+      "type": "statement",
+      "label": "consumer.start();"
+    },
+    {
+      "id": 32,
+      "type": "end",
+      "label": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    },
+    {
+      "source": 15,
+      "target": 16
+    },
+    {
+      "source": 16,
+      "target": 17
+    }
+  ]
+}

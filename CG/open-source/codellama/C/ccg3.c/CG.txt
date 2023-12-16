@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "name": "main",
+      "type": "function",
+      "file": "main.c",
+      "line": 1
+    },
+    {
+      "id": "sum",
+      "name": "sum",
+      "type": "function",
+      "file": "main.c",
+      "line": 6
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "sum",
+      "type": "call"
+    },
+    {
+      "from": "sum",
+      "to": "sum",
+      "type": "call"
+    }
+  ]
+}

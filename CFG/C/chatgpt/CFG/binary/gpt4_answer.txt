@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "unsigned int a = 5"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "unsigned int b = 3"
+    },
+    {
+      "id": 4,
+      "type": "Declaration & Assignment",
+      "code": "unsigned int result = a & b"
+    },
+    {
+      "id": 5,
+      "type": "Assignment",
+      "code": "result = a | b"
+    },
+    {
+      "id": 6,
+      "type": "Assignment",
+      "code": "result = a ^ b"
+    },
+    {
+      "id": 7,
+      "type": "Assignment",
+      "code": "result = ~a"
+    },
+    {
+      "id": 8,
+      "type": "Assignment",
+      "code": "result = a << 2"
+    },
+    {
+      "id": 9,
+      "type": "Assignment",
+      "code": "result = a >> 1"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    }
+  ]
+}

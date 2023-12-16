@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "pragma solidity ^0.5.0;"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "contract S {"
+    },
+    {
+      "id": 3,
+      "type": "stmt",
+      "label": "function f(uint a, uint b, uint c, uint r) public view returns(uint) {"
+    },
+    {
+      "id": 4,
+      "type": "if_stmt",
+      "label": "if( a > b) {"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "r = a;"
+    },
+    {
+      "id": 6,
+      "type": "else_stmt",
+      "label": "} else {"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "r = b+c;"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "return r;"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "method",
+      "name": "stringToInt",
+      "parameters": [
+        "str"
+      ],
+      "exceptions": [
+        "NumberFormatException"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "method",
+      "name": "stringToDouble",
+      "parameters": [
+        "str"
+      ],
+      "exceptions": [
+        "NumberFormatException"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "name": "stringToLong",
+      "parameters": [
+        "str"
+      ],
+      "exceptions": [
+        "NumberFormatException"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "name": "main",
+      "parameters": [
+        "args"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "code": "int intValue = stringToInt(\"123\");"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "code": "double doubleValue = stringToDouble(\"123.45\");"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "code": "long longValue = stringToLong(\"123456789\");"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "code": "System.out.println(\"Integer: \" + intValue);"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "code": "System.out.println(\"Double: \" + doubleValue);"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "code": "System.out.println(\"Float: \" + longValue);"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "code": "System.out.println(\"Invalid string format: \" + e.getMessage());"
+    }
+  ],
+  "edges": [
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 8
+    },
+    {
+      "source": 6,
+      "target": 9
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    }
+  ]
+}

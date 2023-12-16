@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "name": "BankAccount",
+      "type": "class"
+    },
+    {
+      "name": "main",
+      "type": "method"
+    },
+    {
+      "name": "deposit",
+      "type": "method"
+    },
+    {
+      "name": "withdraw",
+      "type": "method"
+    },
+    {
+      "name": "getBalance",
+      "type": "method"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "BankAccount"
+    },
+    {
+      "from": "main",
+      "to": "deposit"
+    },
+    {
+      "from": "main",
+      "to": "withdraw"
+    },
+    {
+      "from": "main",
+      "to": "getBalance"
+    },
+    {
+      "from": "deposit",
+      "to": "BankAccount"
+    },
+    {
+      "from": "withdraw",
+      "to": "BankAccount"
+    },
+    {
+      "from": "getBalance",
+      "to": "BankAccount"
+    }
+  ]
+}

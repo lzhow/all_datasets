@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "type": "function"
+    },
+    {
+      "id": "readInput",
+      "type": "function"
+    },
+    {
+      "id": "computeSalary1",
+      "type": "function"
+    },
+    {
+      "id": "computeSalary2",
+      "type": "function"
+    }
+  ],
+  "edges": [
+    {
+      "source": "main",
+      "target": "readInput"
+    },
+    {
+      "source": "main",
+      "target": "computeSalary1"
+    },
+    {
+      "source": "main",
+      "target": "computeSalary2"
+    },
+    {
+      "source": "readInput",
+      "target": "main"
+    },
+    {
+      "source": "computeSalary1",
+      "target": "main"
+    },
+    {
+      "source": "computeSalary2",
+      "target": "main"
+    }
+  ]
+}

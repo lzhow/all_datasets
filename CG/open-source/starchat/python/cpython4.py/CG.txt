@@ -1,0 +1,31 @@
+Here is the call graph for the given program:
+
+```json
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "function",
+      "label": "tkinter.Tk"
+    },
+    {
+        "id" : 2,
+        "type" : "function",
+        "label" : "'from tkcalender import Calendar'"
+    },
+     {
+        id: 3,
+        type: "function,
+        label: "window.geometrty"
+    }
+   ...
+  ],
+  "edges": [
+     {
+       "source": 2,
+       "target": 3
+     },
+    ...
+  ]
+}
+```

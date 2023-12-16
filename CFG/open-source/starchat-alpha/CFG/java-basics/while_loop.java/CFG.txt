@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "public class while_loop {"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "public static void main(String args[])"
+    },
+    {
+      "id": 3,
+      "type": "decl",
+      "label": "i : int = 1"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "while (i++ < 6) {"
+    },
+    {
+      "id": 5,
+      "type": "cond",
+      "label": "i++ < 6"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "if(i==2):"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "continue;"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "System.out.println(\"Hello World\");"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 4
+    },
+    {
+      "source": 6,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 9
+    }
+  ]
+}

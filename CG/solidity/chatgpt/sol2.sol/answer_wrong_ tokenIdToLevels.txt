@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "id": "ChainBattles",
+      "label": "ChainBattles"
+    },
+    {
+      "id": "ERC721URIStorage",
+      "label": "ERC721URIStorage"
+    },
+    {
+      "id": "Counters",
+      "label": "Counters"
+    },
+    {
+      "id": "Strings",
+      "label": "Strings"
+    },
+    {
+      "id": "Base64",
+      "label": "Base64"
+    },
+    {
+      "id": "RandomNumbers",
+      "label": "RandomNumbers"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ChainBattles",
+      "to": "ERC721URIStorage",
+      "label": "inherit"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "Counters",
+      "label": "use"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "Strings",
+      "label": "use"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "Base64",
+      "label": "use"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "RandomNumbers",
+      "label": "create"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "tokenIdToLevels",
+      "label": "access"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "_tokenIds",
+      "label": "access"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "_safeMint",
+      "label": "call"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "_setTokenURI",
+      "label": "call"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "generateCharacter",
+      "label": "call"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "getLevels",
+      "label": "call"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "getTokenURI",
+      "label": "call"
+    },
+    {
+      "from": "ChainBattles",
+      "to": "train",
+      "label": "call"
+    },
+    {
+      "from": "train",
+      "to": "_exists",
+      "label": "call"
+    },
+    {
+      "from": "train",
+      "to": "ownerOf",
+      "label": "call"
+    }
+  ]
+}

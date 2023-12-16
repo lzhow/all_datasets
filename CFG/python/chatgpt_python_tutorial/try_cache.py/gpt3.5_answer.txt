@@ -1,0 +1,69 @@
+{
+  "type": "Module",
+  "value": null,
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "trycach",
+      "children": [
+        {
+          "type": "arguments",
+          "value": null,
+          "children": [
+            {
+              "type": "arg",
+              "value": "x",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "Try",
+          "value": null,
+          "children": [
+            {
+              "type": "Expr",
+              "value": null,
+              "children": [
+                {
+                  "type": "Call",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "print",
+                      "children": []
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "handlers": [
+            {
+              "type": "ExceptHandler",
+              "value": null,
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "NameError",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ExceptHandler",
+              "value": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

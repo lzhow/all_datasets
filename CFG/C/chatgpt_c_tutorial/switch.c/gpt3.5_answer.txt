@@ -1,0 +1,152 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "function_declaration",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "int"
+            },
+            {
+              "type": "identifier",
+              "value": "main"
+            },
+            {
+              "type": "parameter_list",
+              "children": [
+                {
+                  "type": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "aCount"
+                },
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "constant",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "grade"
+                }
+              ]
+            },
+            {
+              "type": "while_loop",
+              "children": [
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "grade"
+                    },
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "getchar"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "switch_statement",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "grade"
+                        },
+                        {
+                          "type": "case_statement",
+                          "children": [
+                            {
+                              "type": "constant",
+                              "value": "'a'"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "compound_statement",
+                          "children": [
+                            {
+                              "type": "expression_statement",
+                              "children": [
+                                {
+                                  "type": "increment_expression",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "value": "aCount"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "break_statement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "default_statement",
+                          "children": [
+                            {
+                              "type": "compound_statement",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

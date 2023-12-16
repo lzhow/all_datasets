@@ -1,0 +1,121 @@
+{
+"type": "SourceUnit",
+"value": null,
+"children": [
+{
+"type": "PragmaDirective",
+"value": "solidity >=0.4.22 <0.9.0",
+"children": []
+},
+{
+"type": "ContractDefinition",
+"value": "P",
+"children": [
+{
+"type": "StateVariableDeclaration",
+"value": "address public s",
+"children": [
+{
+"type": "VariableDeclaration",
+"value": "address",
+"children": []
+},
+{
+"type": "Identifier",
+"value": "s",
+"children": []
+}
+]
+},
+{
+"type": "ModifierDefinition",
+"value": "mm",
+"children": [
+{
+"type": "Block",
+"value": null,
+"children": [
+{
+"type": "ExpressionStatement",
+"value": null,
+"children": [
+{
+"type": "FunctionCall",
+"value": "require(msg.sender == s, "not")",
+"children": [
+{
+"type": "BinaryOperation",
+"value": "msg.sender == s",
+"children": [
+{
+"type": "Identifier",
+"value": "msg.sender",
+"children": []
+},
+{
+"type": "Identifier",
+"value": "s",
+"children": []
+}
+]
+},
+{
+"type": "StringLiteral",
+"value": "not",
+"children": []
+}
+]
+}
+]
+},
+{
+"type": "PlaceholderStatement",
+"value": "_",
+"children": []
+}
+]
+}
+]
+},
+{
+"type": "FunctionDefinition",
+"value": "f",
+"children": [
+{
+"type": "FunctionParameterList",
+"value": "",
+"children": []
+},
+{
+"type": "Block",
+"value": null,
+"children": [
+{
+"type": "VariableDeclaration",
+"value": "uint a = 10",
+"children": [
+{
+"type": "ElementaryTypeName",
+"value": "uint",
+"children": []
+},
+{
+"type": "Identifier",
+"value": "a",
+"children": []
+},
+{
+"type": "Literal",
+"value": "10",
+"children": []
+}
+]
+}
+]
+}
+]
+}
+]
+}
+]
+}

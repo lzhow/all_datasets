@@ -1,0 +1,131 @@
+{
+    "type": "SourceUnit",
+    "value": {
+        "children": [
+            {
+                "type": "PragmaDirective",
+                "value": {
+                    "name": "solidity",
+                    "value": "^0.5.0"
+                }
+            },
+            {
+                "type": "LibraryDefinition",
+                "value": {
+                    "name": "S",
+                    "members": [
+                        {
+                            "type": "FunctionDefinition",
+                            "value": {
+                                "name": "a",
+                                "parameters": {
+                                    "type": "ParameterList",
+                                    "value": {
+                                        "parameters": [
+                                            {
+                                                "type": "VariableDeclaration",
+                                                "value": {
+                                                    "name": "d",
+                                                    "typeName": {
+                                                        "type": "ArrayTypeName",
+                                                        "value": {
+                                                            "baseTypeName": "uint",
+                                                            "length": null
+                                                        }
+                                                    },
+                                                    "storageLocation": "memory"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "returnParameters": {
+                                    "type": "ParameterList",
+                                    "value": {
+                                        "parameters": [
+                                            {
+                                                "type": "VariableDeclaration",
+                                                "value": {
+                                                    "name": "o",
+                                                    "typeName": "uint",
+                                                    "storageLocation": null
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "visibility": "public",
+                                "stateMutability": "pure",
+                                "implementation": {
+                                    "type": "AssemblyBlock",
+                                    "value": {
+                                        "operations": [
+                                            {
+                                                "type": "AssemblyCall",
+                                                "value": {
+                                                    "functionName": "add",
+                                                    "arguments": [
+                                                        {
+                                                            "type": "AssemblyStack",
+                                                            "value": {
+                                                                "offset": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "AssemblyLoad",
+                                                            "value": {
+                                                                "offset": 32,
+                                                                "size": 32,
+                                                                "location": {
+                                                                    "type": "AssemblyAdd",
+                                                                    "value": {
+                                                                        "location": {
+                                                                            "type": "AssemblyLocal",
+                                                                            "value": {
+                                                                                "name": "d"
+                                                                            }
+                                                                        },
+                                                                        "offset": {
+                                                                            "type": "AssemblyLiteral",
+                                                                            "value": {
+                                                                                "number": "32",
+                                                                                "subdenomination": null
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "AssemblyAssignment",
+                                                "value": {
+                                                    "assignments": [
+                                                        {
+                                                            "type": "AssemblyAssignmentSingle",
+                                                            "value": {
+                                                                "name": "o",
+                                                                "value": {
+                                                                    "type": "AssemblyStack",
+                                                                    "value": {
+                                                                        "offset": 0
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

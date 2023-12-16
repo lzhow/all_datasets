@@ -1,0 +1,122 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "int"
+        },
+        {
+          "type": "declarator",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "main"
+            },
+            {
+              "type": "parameter_list",
+              "children": [
+                {
+                  "type": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "init_declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "c"
+                    },
+                    {
+                      "type": "assignment_expression",
+                      "children": [
+                        {
+                          "type": "constant",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "do_while_statement",
+              "children": [
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "function_call",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "printf"
+                            },
+                            {
+                              "type": "argument_list",
+                              "children": [
+                                {
+                                  "type": "string_literal",
+                                  "value": "%d\\n"
+                                },
+                                {
+                                  "type": "identifier",
+                                  "value": "c"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "relational_expression",
+                  "children": [
+                    {
+                      "type": "postfix_expression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "c"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "constant",
+                      "value": "5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

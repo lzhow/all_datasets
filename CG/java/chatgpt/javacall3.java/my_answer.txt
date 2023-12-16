@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "label": "main"
+    },
+    {
+      "id": "BankAccount",
+      "label": "BankAccount"
+    },
+    {
+      "id": "deposit",
+      "label": "deposit"
+    },
+    {
+      "id": "withdraw",
+      "label": "withdraw"
+    },
+    {
+      "id": "getBalance",
+      "label": "getBalance"
+    },
+    {
+      "id": "println",
+      "label": "println"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "BankAccount"
+    },
+    {
+      "from": "BankAccount",
+      "to": "deposit"
+    },
+    {
+      "from": "BankAccount",
+      "to": "withdraw"
+    },
+    {
+      "from": "BankAccount",
+      "to": "getBalance"
+    },
+    {
+      "from": "main",
+      "to": "println"
+    }
+  ]
+}

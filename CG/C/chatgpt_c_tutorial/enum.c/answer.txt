@@ -1,0 +1,112 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "Directive",
+      "value": "include <stdio.h>"
+    },
+    {
+      "type": "EnumSpecifier",
+      "value": "Le",
+      "children": [
+        {
+          "type": "Enumerator",
+          "value": "L"
+        },
+        {
+          "type": "Enumerator",
+          "value": "M"
+        },
+        {
+          "type": "Enumerator",
+          "value": "H"
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "children": [
+        {
+          "type": "TypeSpecifier",
+          "value": "int"
+        },
+        {
+          "type": "Declarator",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "ParameterTypeList",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "enum Le"
+                },
+                {
+                  "type": "InitDeclarator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "m"
+                    },
+                    {
+                      "type": "Enumerator",
+                      "value": "M"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "%d"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "m"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "children": [
+                {
+                  "type": "IntegerLiteral",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

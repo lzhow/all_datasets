@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "main",
+      "label": "main"
+    },
+    {
+      "id": "createNode",
+      "label": "createNode"
+    },
+    {
+      "id": "insertNode",
+      "label": "insertNode"
+    },
+    {
+      "id": "printList",
+      "label": "printList"
+    }
+  ],
+  "edges": [
+    {
+      "from": "main",
+      "to": "insertNode"
+    },
+    {
+      "from": "main",
+      "to": "printList"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode"
+    },
+    {
+      "from": "insertNode",
+      "to": "createNode"
+    },
+    {
+      "from": "printList",
+      "to": "printf"
+    }
+  ]
+}

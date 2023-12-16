@@ -1,0 +1,102 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "FunctionDeclaration",
+      "value": "copy",
+      "children": [
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "ParameterDeclaration",
+              "value": "char * const s1"
+            },
+            {
+              "type": "ParameterDeclaration",
+              "value": "char * const s2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "copy",
+      "children": [
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "ParameterDeclaration",
+              "value": "char * const s1"
+            },
+            {
+              "type": "ParameterDeclaration",
+              "value": "char * const s2"
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "ForLoop",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "value": "i",
+                  "children": [
+                    {
+                      "type": "TypeSpecifier",
+                      "value": "size_t"
+                    },
+                    {
+                      "type": "InitDeclarator",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "AssignmentExpression",
+                  "children": [
+                    {
+                      "type": "ArraySubscript",
+                      "value": "s2[i]"
+                    },
+                    {
+                      "type": "ArraySubscript",
+                      "value": "s1[1]"
+                    }
+                  ]
+                },
+                {
+                  "type": "Inequality",
+                  "children": [
+                    {
+                      "type": "CharacterConstant",
+                      "value": "'\\0'"
+                    }
+                  ]
+                },
+                {
+                  "type": "PreIncrement",
+                  "value": "++i"
+                },
+                {
+                  "type": "NullStatement",
+                  "value": ";"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

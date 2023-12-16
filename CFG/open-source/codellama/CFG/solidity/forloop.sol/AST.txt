@@ -1,0 +1,39 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.5.0;"
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "contract S",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "function f(uint j) internal pure  returns (uint)",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "uint i;"
+            },
+            {
+              "type": "ForStatement",
+              "value": "for (j = _i; j != 0; j /= 10)",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "value": "len++;"
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "value": "return i;"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

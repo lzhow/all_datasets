@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "char x = 1"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "label": "char y = 2"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "label": "float z"
+    },
+    {
+      "id": 4,
+      "type": "assignment",
+      "label": "z = (float)x / y"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

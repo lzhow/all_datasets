@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "SimpleSwap",
+      "label": "contract SimpleSwap"
+    },
+    {
+      "id": "ISwapRouter",
+      "label": "interface ISwapRouter"
+    },
+    {
+      "id": "TransferHelper",
+      "label": "library TransferHelper"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SimpleSwap",
+      "to": "ISwapRouter",
+      "label": "ISwapRouter"
+    },
+    {
+      "from": "SimpleSwap",
+      "to": "TransferHelper",
+      "label": "TransferHelper"
+    }
+  ]
+}

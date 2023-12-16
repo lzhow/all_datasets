@@ -1,0 +1,163 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Keyword",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "void"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "float"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "arr"
+                },
+                {
+                  "type": "ArrayDeclarator",
+                  "children": [
+                    {
+                      "type": "Constant",
+                      "value": "3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "ArrayAccess",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "arr"
+                    },
+                    {
+                      "type": "Constant",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "type": "Constant",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "mul_arr"
+                },
+                {
+                  "type": "ArrayDeclarator",
+                  "children": [
+                    {
+                      "type": "Constant",
+                      "value": "2"
+                    },
+                    {
+                      "type": "Constant",
+                      "value": "COL"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "array"
+                },
+                {
+                  "type": "ArrayDeclarator",
+                  "children": [
+                    {
+                      "type": "Constant",
+                      "value": "4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Return",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

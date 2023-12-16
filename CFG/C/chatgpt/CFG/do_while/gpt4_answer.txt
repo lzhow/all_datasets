@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main(void)"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "int c = 0"
+    },
+    {
+      "id": 3,
+      "type": "DoWhileLoopEntry",
+      "code": "do"
+    },
+    {
+      "id": 4,
+      "type": "IOOperation",
+      "code": "printf(\"%d\\n\", c)"
+    },
+    {
+      "id": 5,
+      "type": "DoWhileLoopCondition",
+      "code": "while (c++ < 5)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 3,
+      "condition": "true"
+    },
+    {
+      "from": 5,
+      "to": null,
+      "condition": "false"
+    }
+  ]
+}

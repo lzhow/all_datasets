@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main()"
+    },
+    {
+      "id": 2,
+      "type": "Declaration",
+      "code": "char str[100]"
+    },
+    {
+      "id": 3,
+      "type": "Declaration",
+      "code": "int i"
+    },
+    {
+      "id": 4,
+      "type": "Declaration",
+      "code": "char ch"
+    },
+    {
+      "id": 5,
+      "type": "IOOperation",
+      "code": "printf(\"Enter a string: \")"
+    },
+    {
+      "id": 6,
+      "type": "IOOperation",
+      "code": "fgets(str, sizeof(str), stdin)"
+    },
+    {
+      "id": 7,
+      "type": "IOOperation",
+      "code": "puts(\"You entered: \")"
+    },
+    {
+      "id": 8,
+      "type": "IOOperation",
+      "code": "puts(str)"
+    },
+    {
+      "id": 9,
+      "type": "IOOperation",
+      "code": "scanf(\"%d\", &i)"
+    },
+    {
+      "id": 10,
+      "type": "WhileLoop",
+      "code": "while ((getchar()) != '\\n')"
+    },
+    {
+      "id": 11,
+      "type": "IOOperation",
+      "code": "ch = getchar()"
+    },
+    {
+      "id": 12,
+      "type": "IOOperation",
+      "code": "putchar(ch)"
+    },
+    {
+      "id": 13,
+      "type": "IOOperation",
+      "code": "putchar('\\n')"
+    },
+    {
+      "id": 14,
+      "type": "Return",
+      "code": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 10
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "condition": "loop exit"
+    },
+    {
+      "from": 11,
+      "to": 12
+    },
+    {
+      "from": 12,
+      "to": 13
+    },
+    {
+      "from": 13,
+      "to": 14
+    }
+  ]
+}

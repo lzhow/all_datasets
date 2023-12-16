@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "int money = args[1];"
+    },
+    {
+      "id": 2,
+      "type": "conditional",
+      "statement": "String result = (money < 18) ? \"Enough.\" : \"Insufficient.\";"
+    },
+    {
+      "id": 3,
+      "type": "output",
+      "statement": "System.out.println(result);"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    {"id": "A", "type": "class"},
+    {"id": "B", "type": "class"},
+    {"id": "JC", "type": "class"},
+    {"id": "aa in A", "type": "method"},
+    {"id": "cc in A", "type": "method"},
+    {"id": "aa in B", "type": "method"},
+    {"id": "cc in B", "type": "method"},
+    {"id": "c in JC", "type": "method"},
+    {"id": "main in JC", "type": "method"}
+  ],
+  "edges": [
+    {"from": "c in JC", "to": "aa in A"},
+    {"from": "c in JC", "to": "cc in A"},
+    {"from": "c in JC", "to": "aa in B"},
+    {"from": "c in JC", "to": "cc in B"},
+    {"from": "main in JC", "to": "c in JC"}
+  ]
+}

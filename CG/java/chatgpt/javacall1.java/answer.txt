@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    { "id": "JC", "type": "class" },
+    { "id": "main", "type": "method" },
+    { "id": "c", "type": "method" },
+    { "id": "A", "type": "class" },
+    { "id": "aa", "type": "method" },
+    { "id": "cc", "type": "method" },
+    { "id": "B", "type": "class" }
+  ],
+  "edges": [
+    { "source": "JC", "target": "main", "label": "calls" },
+    { "source": "main", "target": "c", "label": "calls" },
+    { "source": "c", "target": "A", "label": "creates" },
+    { "source": "A", "target": "aa", "label": "calls" },
+    { "source": "A", "target": "cc", "label": "calls" },
+    { "source": "c", "target": "B", "label": "creates" },
+    { "source": "B", "target": "aa", "label": "calls" },
+    { "source": "B", "target": "cc", "label": "calls" }
+  ]
+}

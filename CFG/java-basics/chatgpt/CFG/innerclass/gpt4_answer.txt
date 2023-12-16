@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "class O"
+    },
+    {
+      "id": 2,
+      "type": "FieldDeclaration",
+      "code": "int x = 10"
+    },
+    {
+      "id": 3,
+      "type": "InnerClassDeclaration",
+      "code": "class I"
+    },
+    {
+      "id": 4,
+      "type": "FieldDeclaration",
+      "code": "int y = 5"
+    },
+    {
+      "id": 5,
+      "type": "ClassDeclaration",
+      "code": "public class M"
+    },
+    {
+      "id": 6,
+      "type": "Method",
+      "code": "public static void main(String[] args)"
+    },
+    {
+      "id": 7,
+      "type": "ObjectCreation",
+      "code": "O m = new O()"
+    },
+    {
+      "id": 8,
+      "type": "ObjectCreation",
+      "code": "O.I i = m.new I()"
+    },
+    {
+      "id": 9,
+      "type": "IOOperation",
+      "code": "System.out.println(i.y + m.x)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    }
+  ]
+}

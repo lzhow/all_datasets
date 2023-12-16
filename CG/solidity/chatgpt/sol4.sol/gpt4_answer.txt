@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    { "id": "constructor", "type": "function", "contract": "SimpleSwap" },
+    { "id": "swapWETHForDAI", "type": "function", "contract": "SimpleSwap" },
+    { "id": "safeTransferFrom", "type": "function", "contract": "TransferHelper" },
+    { "id": "safeApprove", "type": "function", "contract": "TransferHelper" },
+    { "id": "exactInputSingle", "type": "function", "contract": "ISwapRouter" }
+  ],
+  "edges": [
+    {
+      "from": "constructor",
+      "to": "swapRouter",
+      "type": "assignment"
+    },
+    {
+      "from": "swapWETHForDAI",
+      "to": "safeTransferFrom",
+      "type": "function_call",
+      "description": "Transfers WETH9 from sender to contract"
+    },
+    {
+      "from": "swapWETHForDAI",
+      "to": "safeApprove",
+      "type": "function_call",
+      "description": "Approves the swapRouter to spend WETH9"
+    },
+    {
+      "from": "swapWETHForDAI",
+      "to": "exactInputSingle",
+      "type": "function_call",
+      "description": "Executes a single swap from WETH9 to DAI"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "function",
+      "name": "swap",
+      "code": "void swap(int *a, int *b) { ... }"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "name": "tmp",
+      "code": "int tmp = *a;"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "name": "*a",
+      "code": "*a = *b;"
+    },
+    {
+      "id": 4,
+      "type": "assignment",
+      "name": "*b",
+      "code": "*b = tmp;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "contract",
+      "label": "ArrayExample"
+    },
+    {
+      "id": 1,
+      "type": "uint[]",
+      "label": "dynamicArray"
+    },
+    {
+      "id": 2,
+      "type": "uint[5]",
+      "label": "fixedArray"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "addElement"
+    },
+    {
+      "id": 4,
+      "type": "uint",
+      "label": "element"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 1
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

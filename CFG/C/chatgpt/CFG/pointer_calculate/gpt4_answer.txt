@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "void main()"
+    },
+    {
+      "id": 2,
+      "type": "Declaration & Initialization",
+      "code": "int numbers[5] = {1, 2, 3, 4, 5}"
+    },
+    {
+      "id": 3,
+      "type": "PointerInitialization",
+      "code": "int *ptr = numbers"
+    },
+    {
+      "id": 4,
+      "type": "IOOperation",
+      "code": "printf(\"%d\\n\", *ptr)"
+    },
+    {
+      "id": 5,
+      "type": "PointerArithmetic",
+      "code": "ptr++"
+    },
+    {
+      "id": 6,
+      "type": "IOOperation",
+      "code": "printf(\"%d\\n\", *ptr)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    }
+  ]
+}

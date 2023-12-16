@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "name": "A",
+      "parameters": [
+        "j"
+      ],
+      "modifiers": [
+        "internal",
+        "pure"
+      ],
+      "returns": [
+        "uint"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "do-while",
+      "condition": "j != 0"
+    },
+    {
+      "id": 2,
+      "type": "assignment",
+      "expression": "j -= 10"
+    },
+    {
+      "id": 3,
+      "type": "return",
+      "expression": "j"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "control"
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "type": "control"
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "type": "conditional"
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "type": "conditional"
+    }
+  ]
+}

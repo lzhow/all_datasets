@@ -1,0 +1,225 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "import",
+      "children": [
+        {
+          "type": "import_name",
+          "children": [
+            {
+              "type": "name",
+              "value": "threading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "children": [
+        {
+          "type": "name",
+          "value": "print_numbers"
+        },
+        {
+          "type": "parameters",
+          "children": []
+        },
+        {
+          "type": "suite",
+          "children": [
+            {
+              "type": "for",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "i"
+                },
+                {
+                  "type": "in",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "range"
+                    },
+                    {
+                      "type": "number",
+                      "value": "1"
+                    },
+                    {
+                      "type": "number",
+                      "value": "6"
+                    }
+                  ]
+                },
+                {
+                  "type": "print",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "i"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "children": [
+        {
+          "type": "name",
+          "value": "print_letters"
+        },
+        {
+          "type": "parameters",
+          "children": []
+        },
+        {
+          "type": "suite",
+          "children": [
+            {
+              "type": "for",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "letter"
+                },
+                {
+                  "type": "in",
+                  "children": [
+                    {
+                      "type": "string",
+                      "value": "ABCDE"
+                    }
+                  ]
+                },
+                {
+                  "type": "print",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "letter"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread1"
+        },
+        {
+          "type": "call",
+          "children": [
+            {
+              "type": "name",
+              "value": "threading.Thread"
+            },
+            {
+              "type": "arglist",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "target"
+                },
+                {
+                  "type": "equal",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "print_numbers"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread2"
+        },
+        {
+          "type": "call",
+          "children": [
+            {
+              "type": "name",
+              "value": "threading.Thread"
+            },
+            {
+              "type": "arglist",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "target"
+                },
+                {
+                  "type": "equal",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "print_letters"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread1.start"
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread2.start"
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread1.join"
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "children": [
+        {
+          "type": "name",
+          "value": "thread2.join"
+        }
+      ]
+    }
+  ]
+}

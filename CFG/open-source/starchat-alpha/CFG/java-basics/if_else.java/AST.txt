@@ -1,0 +1,72 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "public class if_else {",
+      "children": [
+        {
+          "children": [],
+          "type": "FieldDeclaration",
+          "value": "private static void permutation(String prefix, String str) {"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [],
+          "type": "VariableDeclaration",
+          "value": "int n = str.length();"
+        },
+        {
+          "children": [],
+          "type": "IfStatement",
+          "value": "if (n == 0)"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [],
+          "type": "ExpressionStatement",
+          "value": "System.out.println(prefix);"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "}"
+        },
+        {
+          "children": [],
+          "type": "ElseStatement",
+          "value": "else"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [],
+          "type": "ForStatement",
+          "value": "for (int i = 0; i < n; i++)"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [],
+          "type": "ExpressionStatement",
+          "value": "permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n));"
+        }
+      ]
+    }
+  ]
+}

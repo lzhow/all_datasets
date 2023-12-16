@@ -1,0 +1,154 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "FunctionDefinition",
+      "value": "f",
+      "children": [
+        {
+          "type": "ParameterList",
+          "value": "()",
+          "children": [
+            {
+              "type": "ParameterDeclaration",
+              "value": "unsigned int l",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "unsigned int s",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "=",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s",
+                  "children": []
+                },
+                {
+                  "type": "IntegerConstant",
+                  "value": "0",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ForStatement",
+              "value": "for",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "value": "unsigned int i",
+                  "children": []
+                },
+                {
+                  "type": "BinaryExpression",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "IntegerConstant",
+                      "value": "1",
+                      "children": []
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "i",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BinaryExpression",
+                  "value": "<=",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "l",
+                      "children": []
+                    },
+                    {
+                      "type": "IntegerConstant",
+                      "value": "1",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "value": ";",
+                  "children": [
+                    {
+                      "type": "BinaryExpression",
+                      "value": "+=",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "i",
+                          "children": []
+                        },
+                        {
+                          "type": "IntegerConstant",
+                          "value": "1",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "value": "{",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "value": ";",
+                      "children": [
+                        {
+                          "type": "BinaryExpression",
+                          "value": "+=",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "s",
+                              "children": []
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "i",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "value": "return",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

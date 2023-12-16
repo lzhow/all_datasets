@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "input",
+      "label": "scanf"
+    },
+    {
+      "id": 2,
+      "type": "conditional",
+      "label": "if"
+    },
+    {
+      "id": 3,
+      "type": "output",
+      "label": "printf"
+    },
+    {
+      "id": 4,
+      "type": "conditional",
+      "label": "else if"
+    },
+    {
+      "id": 5,
+      "type": "output",
+      "label": "printf"
+    },
+    {
+      "id": 6,
+      "type": "output",
+      "label": "print"
+    },
+    {
+      "id": 7,
+      "type": "return",
+      "label": "return"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "condition": "n > 0"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "condition": "n <= 0"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "condition": "n > -5"
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "condition": "n <= -5"
+    },
+    {
+      "source": 3,
+      "target": 7
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

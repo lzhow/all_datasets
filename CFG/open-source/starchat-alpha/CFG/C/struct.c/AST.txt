@@ -1,0 +1,60 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "Struct",
+      "value": "Person",
+      "children": [
+        {
+          "type": "Field",
+          "value": "name",
+          "children": [
+            {
+              "type": "Array",
+              "value": 20,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "Field",
+          "value": "age",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Variable",
+      "value": "person1",
+      "children": []
+    },
+    {
+      "type": "Assignment",
+      "value": "=",
+      "children": [
+        {
+          "type": "FieldAccess",
+          "value": ".",
+          "children": [
+            {
+              "type": "Variable",
+              "value": "person1",
+              "children": []
+            },
+            {
+              "type": "Identifier",
+              "value": "age",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "Literal",
+          "value": 25,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

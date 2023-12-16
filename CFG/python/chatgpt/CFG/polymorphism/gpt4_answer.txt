@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    {"id": 1, "type": "class_definition", "label": "class A:"},
+    {"id": 2, "type": "function_definition", "label": "def a(self):"},
+    {"id": 3, "type": "expression", "label": "print('A.a')"},
+    {"id": 4, "type": "function_definition", "label": "def f(self):"},
+    {"id": 5, "type": "expression", "label": "print('A.f')"},
+    {"id": 6, "type": "class_definition", "label": "class B(A):"},
+    {"id": 7, "type": "function_definition", "label": "def f(self):"},
+    {"id": 8, "type": "expression", "label": "print('B.f')"}
+  ],
+  "edges": [
+    {"source": 1, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 1, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 6, "target": 7},
+    {"source": 7, "target": 8}
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "class",
+      "name": "Box<T>"
+    },
+    {
+      "id": 1,
+      "type": "field",
+      "name": "t"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "name": "add(T t)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "name": "this.t = t"
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "name": "get()"
+    },
+    {
+      "id": 5,
+      "type": "return",
+      "name": "return t"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

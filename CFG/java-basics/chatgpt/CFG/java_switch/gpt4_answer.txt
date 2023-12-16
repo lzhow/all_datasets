@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public class java_switch"
+    },
+    {
+      "id": 2,
+      "type": "Method",
+      "code": "public static void main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "Assignment",
+      "code": "int day = Integer.parseInt(args[1])"
+    },
+    {
+      "id": 4,
+      "type": "Switch",
+      "code": "switch (day)"
+    },
+    {
+      "id": 5,
+      "type": "Case",
+      "code": "case 1: System.out.println(\"1\"); break"
+    },
+    {
+      "id": 6,
+      "type": "Case",
+      "code": "case 2: System.out.println(\"2\"); break"
+    },
+    {
+      "id": 7,
+      "type": "DefaultCase",
+      "code": "default: System.out.println(\"default\")"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "condition": "day == 1"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "condition": "day == 2"
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "condition": "default"
+    }
+  ]
+}

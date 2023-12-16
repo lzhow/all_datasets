@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "FunctionDeclaration",
+      "code": "void copy(char * const s1, char * const s2)"
+    },
+    {
+      "id": 2,
+      "type": "Function",
+      "code": "void copy(char * const s1, char * const s2)"
+    },
+    {
+      "id": 3,
+      "type": "ForLoop",
+      "code": "for (size_t i = 0; (s2[i] = s1[1]) != '\\0'; ++i)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 3,
+      "condition": "loop continuation"
+    }
+  ]
+}

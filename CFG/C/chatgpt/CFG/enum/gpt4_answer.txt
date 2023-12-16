@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "EnumDeclaration",
+      "code": "enum Le { L, M, H }"
+    },
+    {
+      "id": 2,
+      "type": "Function",
+      "code": "int main()"
+    },
+    {
+      "id": 3,
+      "type": "Declaration & Initialization",
+      "code": "enum Le m = M"
+    },
+    {
+      "id": 4,
+      "type": "IOOperation",
+      "code": "printf(\"%d\", m)"
+    },
+    {
+      "id": 5,
+      "type": "Return",
+      "code": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    }
+  ]
+}

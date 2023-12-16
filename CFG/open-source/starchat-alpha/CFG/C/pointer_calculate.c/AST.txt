@@ -1,0 +1,212 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "FunctionDeclaration",
+      "value": "void main()",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "()",
+          "children": []
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "int numbers[5] = {1, 2, 3, 4, 5};",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "int",
+                  "children": []
+                },
+                {
+                  "type": "Declarator",
+                  "value": "numbers",
+                  "children": [
+                    {
+                      "type": "ArrayDeclarator",
+                      "value": "[",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "5",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Initializer",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "BraceExpression",
+                      "value": "{",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "1",
+                          "children": []
+                        },
+                        {
+                          "type": "Comma",
+                          "value": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "Constant",
+                          "value": "2",
+                          "children": []
+                        },
+                        {
+                          "type": "Comma",
+                          "value": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "Constant",
+                          "value": "3",
+                          "children": []
+                        },
+                        {
+                          "type": "Comma",
+                          "value": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "Constant",
+                          "value": "4",
+                          "children": []
+                        },
+                        {
+                          "type": "Comma",
+                          "value": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "Constant",
+                          "value": "5",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "value": "int *ptr = numbers;",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "int",
+                  "children": []
+                },
+                {
+                  "type": "Pointer",
+                  "value": "*",
+                  "children": []
+                },
+                {
+                  "type": "Declarator",
+                  "value": "ptr",
+                  "children": []
+                },
+                {
+                  "type": "Initializer",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "numbers",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": "printf(\"%d\\n\", *ptr);",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf",
+                  "children": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "\"%d\\n\"",
+                      "children": []
+                    },
+                    {
+                      "type": "UnaryExpression",
+                      "value": "*",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "ptr",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "PostfixExpression",
+              "value": "ptr++;",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "ptr",
+                  "children": []
+                },
+                {
+                  "type": "Increment",
+                  "value": "++",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": "printf(\"%d\\n\", *ptr);",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf",
+                  "children": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "\"%d\\n\"",
+                      "children": []
+                    },
+                    {
+                      "type": "UnaryExpression",
+                      "value": "*",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "ptr",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

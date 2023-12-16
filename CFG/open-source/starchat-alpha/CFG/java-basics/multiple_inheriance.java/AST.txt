@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [],
+      "type": "CompilationUnit",
+      "value": "public interface Flyable {\n    void fly();\n}\n\npublic interface Swimmable {\n    void swim();\n}\n\npublic class Bird implements Flyable {\n    @Override\n    public void fly() {\n        System.out.println(\"Bird is flying\");\n    }\n}\n\npublic class Fish implements Swimmable {\n    @Override\n    public void swim() {\n        System.out.println(\"Fish is swimming\");\n    }\n}\n\npublic class FlyingFish implements Flyable, Swimmable {\n    @Override\n    public void fly() {\n        System.out.println(\"Flying fish is flying\");\n    }\n\n    @Override\n    public void swim() {\n        System.out.println(\"Flying fish is swimming\");\n    }\n}"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "type": "TypeDeclaration",
+          "value": "public interface Flyable {\n    void fly();\n}"
+        },
+        {
+          "children": [],
+          "type": "TypeDeclaration",
+          "value": "public interface Swimmable {\n    void swim();\n}"
+        },
+        {
+          "children": [],
+          "type": "TypeDeclaration",
+          "value": "public class Bird implements Flyable {\n    @Override\n    public void fly() {\n        System.out.println(\"Bird is flying\");\n    }\n}"
+        },
+        {
+          "children": [],
+          "type": "TypeDeclaration",
+          "value": "public class Fish implements Swimmable {\n    @Override\n    public void swim() {\n        System.out.println(\"Fish is swimming\");\n    }\n}"
+        },
+        {
+          "children": [],
+          "type": "TypeDeclaration",
+          "value": "public class FlyingFish implements Flyable, Swimmable {\n    @Override\n    public void fly() {\n        System.out.println(\"Flying fish is flying\");\n    }\n\n    @Override\n    public void swim() {\n        System.out.println(\"Flying fish is swimming\");\n    }\n}"
+        }
+      ],
+      "type": "Unparsable",
+      "value": "Unparsable"
+    }
+  ]
+}

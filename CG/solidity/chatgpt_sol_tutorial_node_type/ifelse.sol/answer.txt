@@ -1,0 +1,146 @@
+{
+  "type": "SourceUnit",
+  "value": [
+    {
+      "type": "PragmaDirective",
+      "value": {
+        "name": "solidity",
+        "value": "^0.5.0"
+      }
+    },
+    {
+      "type": "ContractDefinition",
+      "value": {
+        "name": "S",
+        "functions": [
+          {
+            "type": "FunctionDefinition",
+            "value": {
+              "name": "f",
+              "visibility": "public",
+              "stateMutability": "view",
+              "parameters": [
+                {
+                  "type": "FunctionParameter",
+                  "value": {
+                    "name": "",
+                    "type": "uint256"
+                  }
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": {
+                    "name": "",
+                    "type": "uint256"
+                  }
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": {
+                    "name": "",
+                    "type": "uint256"
+                  }
+                },
+                {
+                  "type": "FunctionParameter",
+                  "value": {
+                    "name": "",
+                    "type": "uint256"
+                  }
+                }
+              ],
+              "returnParameters": [
+                {
+                  "type": "FunctionParameter",
+                  "value": {
+                    "name": "",
+                    "type": "uint256"
+                  }
+                }
+              ],
+              "body": {
+                "type": "Block",
+                "value": [
+                  {
+                    "type": "IfStatement",
+                    "value": {
+                      "condition": {
+                        "type": "BinaryOperation",
+                        "value": {
+                          "operator": ">",
+                          "left": {
+                            "type": "Identifier",
+                            "value": "a"
+                          },
+                          "right": {
+                            "type": "Identifier",
+                            "value": "b"
+                          }
+                        }
+                      },
+                      "trueBody": {
+                        "type": "Block",
+                        "value": [
+                          {
+                            "type": "Assignment",
+                            "value": {
+                              "leftHandSide": {
+                                "type": "Identifier",
+                                "value": "r"
+                              },
+                              "rightHandSide": {
+                                "type": "Identifier",
+                                "value": "a"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "falseBody": {
+                        "type": "Block",
+                        "value": [
+                          {
+                            "type": "Assignment",
+                            "value": {
+                              "leftHandSide": {
+                                "type": "Identifier",
+                                "value": "r"
+                              },
+                              "rightHandSide": {
+                                "type": "BinaryOperation",
+                                "value": {
+                                  "operator": "+",
+                                  "left": {
+                                    "type": "Identifier",
+                                    "value": "b"
+                                  },
+                                  "right": {
+                                    "type": "Identifier",
+                                    "value": "c"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "Return",
+                    "value": {
+                      "expression": {
+                        "type": "Identifier",
+                        "value": "r"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

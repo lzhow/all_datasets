@@ -1,0 +1,124 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "stdio.h",
+      "children": []
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "f",
+      "children": [
+        {
+          "type": "FunctionParam",
+          "value": "unsigned int l",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "f",
+      "children": [
+        {
+          "type": "FunctionParam",
+          "value": "unsigned int l",
+          "children": []
+        },
+        {
+          "type": "Declaration",
+          "value": "unsigned int s",
+          "children": []
+        },
+        {
+          "type": "Assignment",
+          "value": "=",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "s",
+              "children": []
+            },
+            {
+              "type": "Constant",
+              "value": "0",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "ForLoop",
+          "value": "",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "unsigned int i",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "1",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "RelationalOperator",
+              "value": "<=",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i",
+                  "children": []
+                },
+                {
+                  "type": "Identifier",
+                  "value": "l",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "value": "+=",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s",
+                  "children": []
+                },
+                {
+                  "type": "Identifier",
+                  "value": "i",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "UnaryOperator",
+              "value": "++",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ReturnStatement",
+          "value": "",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "s",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

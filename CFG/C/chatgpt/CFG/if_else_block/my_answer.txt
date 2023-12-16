@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "int n;"
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "statement": "scanf(\"%d\", &n);"
+    },
+    {
+      "id": 3,
+      "type": "conditional",
+      "statement": "if (n > 10)"
+    },
+    {
+      "id": 4,
+      "type": "output",
+      "statement": "puts(\"Large\");"
+    },
+    {
+      "id": 5,
+      "type": "output",
+      "statement": "puts(\"Small\");"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "condition": "true"
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "condition": "false"
+    }
+  ]
+}

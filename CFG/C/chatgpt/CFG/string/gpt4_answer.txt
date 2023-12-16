@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Function",
+      "code": "int main()"
+    },
+    {
+      "id": 2,
+      "type": "StringDeclaration",
+      "code": "char str1[20] = \"Hello\""
+    },
+    {
+      "id": 3,
+      "type": "StringDeclaration",
+      "code": "char str2[20] = \"World\""
+    },
+    {
+      "id": 4,
+      "type": "StringDeclaration",
+      "code": "char str3[40]"
+    },
+    {
+      "id": 5,
+      "type": "StringFunction",
+      "code": "printf(\"Length of str1: %zu\\n\", strlen(str1))"
+    },
+    {
+      "id": 6,
+      "type": "StringFunction",
+      "code": "strcpy(str3, str1)"
+    },
+    {
+      "id": 7,
+      "type": "StringFunction",
+      "code": "strncpy(str3, str2, 3)"
+    },
+    {
+      "id": 8,
+      "type": "Assignment",
+      "code": "str3[3] = '\\0'"
+    },
+    {
+      "id": 9,
+      "type": "IOOperation",
+      "code": "printf(\"str3 after strncpy: %s\\n\", str3)"
+    },
+    {
+      "id": 10,
+      "type": "StringFunction",
+      "code": "strcat(str3, str2)"
+    },
+    {
+      "id": 11,
+      "type": "StringFunction",
+      "code": "strncat(str3, \"!!!\", 2)"
+    },
+    {
+      "id": 12,
+      "type": "IOOperation",
+      "code": "printf(\"str3 after strncat: %s\\n\", str3)"
+    },
+    {
+      "id": 13,
+      "type": "StringFunction",
+      "code": "printf(\"strcmp(str1, str2): %d\\n\", strcmp(str1, str2))"
+    },
+    {
+      "id": 14,
+      "type": "StringFunction",
+      "code": "printf(\"strncmp(str1, str2, 3): %d\\n\", strncmp(str1, str2, 3))"
+    },
+    {
+      "id": 15,
+      "type": "StringFunction",
+      "code": "printf(\"First occurrence of 'l' in str1: %s\\n\", strchr(str1, 'l'))"
+    },
+    {
+      "id": 16,
+      "type": "StringFunction",
+      "code": "printf(\"Last occurrence of 'l' in str1: %s\\n\", strrchr(str1, 'l'))"
+    },
+    {
+      "id": 17,
+      "type": "StringFunction",
+      "code": "printf(\"Substring 'lo' in str1: %s\\n\", strstr(str1, \"lo\"))"
+    },
+    {
+      "id": 18,
+      "type": "Return",
+      "code": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 9,
+      "to": 10
+    },
+    {
+      "from": 10,
+      "to": 11
+    },
+    {
+      "from": 11,
+      "to": 12
+    },
+    {
+      "from": 12,
+      "to": 13
+    },
+    {
+      "from": 13,
+      "to": 14
+    },
+    {
+      "from": 14,
+      "to": 15
+    },
+    {
+      "from": 15,
+      "to": 16
+    },
+    {
+      "from": 16,
+      "to": 17
+    },
+    {
+      "from": 17,
+      "to": 18
+    }
+  ]
+}

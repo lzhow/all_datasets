@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "String[] number = {\"1\", \"2\", \"3\", \"4\"};"
+    },
+    {
+      "id": 2,
+      "type": "print",
+      "statement": "System.out.println(number[0]);"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "statement": "int[][] mularray = { {1, 2, 3, 4}, {5, 6, 7} };"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "statement": "System.out.println(mularray[1][1]);"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

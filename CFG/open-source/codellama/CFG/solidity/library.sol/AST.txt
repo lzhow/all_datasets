@@ -1,0 +1,251 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.8.0;"
+    },
+    {
+      "type": "LibraryDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "Math"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "FunctionDefinition",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "add"
+                },
+                {
+                  "type": "ParameterList",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "x"
+                        },
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "y"
+                        },
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ModifierList",
+                  "children": [
+                    {
+                      "type": "ModifierInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "internal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ModifierInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "pure"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ReturnStatement",
+                      "children": [
+                        {
+                          "type": "BinaryOperation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "x"
+                            },
+                            {
+                              "type": "BinaryOperator",
+                              "value": "+"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "y"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "UsingMath"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "FunctionDefinition",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "testAdd"
+                },
+                {
+                  "type": "ParameterList",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "_a"
+                        },
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "_b"
+                        },
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ModifierList",
+                  "children": [
+                    {
+                      "type": "ModifierInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "public"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ModifierInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "pure"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ReturnStatement",
+                      "children": [
+                        {
+                          "type": "FunctionCall",
+                          "children": [
+                            {
+                              "type": "MemberAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "Math"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "add"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "IdentifierList",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "_a"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "_b"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

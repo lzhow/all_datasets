@@ -1,0 +1,169 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "function",
+      "children": [
+        {
+          "type": "type",
+          "value": "void"
+        },
+        {
+          "type": "name",
+          "value": "main"
+        },
+        {
+          "type": "block",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "int"
+                },
+                {
+                  "type": "name",
+                  "value": "n"
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "scanf"
+                },
+                {
+                  "type": "string",
+                  "value": "%d"
+                },
+                {
+                  "type": "name",
+                  "value": "n"
+                }
+              ]
+            },
+            {
+              "type": "if",
+              "children": [
+                {
+                  "type": "condition",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "n"
+                    },
+                    {
+                      "type": "operator",
+                      "value": ">"
+                    },
+                    {
+                      "type": "number",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "type": "block",
+                  "children": [
+                    {
+                      "type": "statement",
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "printf"
+                        },
+                        {
+                          "type": "string",
+                          "value": "large\n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "else",
+                  "children": [
+                    {
+                      "type": "block",
+                      "children": [
+                        {
+                          "type": "if",
+                          "children": [
+                            {
+                              "type": "condition",
+                              "children": [
+                                {
+                                  "type": "name",
+                                  "value": "n"
+                                },
+                                {
+                                  "type": "operator",
+                                  "value": ">"
+                                },
+                                {
+                                  "type": "number",
+                                  "value": "-5"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "block",
+                              "children": [
+                                {
+                                  "type": "statement",
+                                  "children": [
+                                    {
+                                      "type": "name",
+                                      "value": "printf"
+                                    },
+                                    {
+                                      "type": "string",
+                                      "value": "mid\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "else",
+                              "children": [
+                                {
+                                  "type": "block",
+                                  "children": [
+                                    {
+                                      "type": "statement",
+                                      "children": [
+                                        {
+                                          "type": "name",
+                                          "value": "printf"
+                                        },
+                                        {
+                                          "type": "string",
+                                          "value": "small\n"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "return"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "name": "Factorial.factorial(int)",
+      "type": "method",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returnType": "int"
+    },
+    {
+      "name": "Factorial.main(String[])",
+      "type": "method",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "String[]"
+        }
+      ],
+      "returnType": "void"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Factorial.factorial(int)",
+      "to": "Factorial.factorial(int)",
+      "type": "call"
+    },
+    {
+      "from": "Factorial.main(String[])",
+      "to": "Factorial.factorial(int)",
+      "type": "call"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "type": "SourceUnit",
+  "value": [
+    {
+      "type": "PragmaDirective",
+      "value": {
+        "type": "Version",
+        "value": "^0.5.0"
+      }
+    },
+    {
+      "type": "ContractDefinition",
+      "value": {
+        "type": "Contract",
+        "value": {
+          "type": "Identifier",
+          "value": "S"
+        },
+        "children": [
+          {
+            "type": "FunctionDefinition",
+            "value": {
+              "type": "Function",
+              "value": {
+                "type": "Identifier",
+                "value": "f"
+              },
+              "children": [
+                {
+                  "type": "ParameterList",
+                  "value": {
+                    "type": "Parameter",
+                    "value": {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    "children": [
+                      {
+                        "type": "Identifier",
+                        "value": "j"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Visibility",
+                  "value": "internal"
+                },
+                {
+                  "type": "StateMutability",
+                  "value": "pure"
+                },
+                {
+                  "type": "ReturnParameterList",
+                  "value": {
+                    "type": "Parameter",
+                    "value": {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": {
+                    "type": "Statement",
+                    "value": [
+                      {
+                        "type": "VariableDeclaration",
+                        "value": {
+                          "type": "Variable",
+                          "value": {
+                            "type": "ElementaryTypeName",
+                            "value": "uint"
+                          },
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "i"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "ForStatement",
+                        "value": {
+                          "type": "For",
+                          "value": {
+                            "type": "Assignment",
+                            "value": {
+                              "type": "BinaryOperation",
+                              "value": {
+                                "type": "Identifier",
+                                "value": "j"
+                              },
+                              "operator": "=",
+                              "left": {
+                                "type": "Identifier",
+                                "value": "_i"
+                              },
+                              "right": {
+                                "type": "Identifier",
+                                "value": "j"
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "type": "BinaryOperation",
+                              "value": {
+                                "type": "Identifier",
+                                "value": "j"
+                              },
+                              "operator": "!=",
+                              "left": {
+                                "type": "Identifier",
+                                "value": "j"
+                              },
+                              "right": {
+                                "type": "NumberLiteral",
+                                "value": "0"
+                              }
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "value": {
+                                "type": "UnaryOperation",
+                                "value": {
+                                  "type": "Identifier",
+                                  "value": "j"
+                                },
+                                "operator": "/=",
+                                "subExpression": {
+                                  "type": "NumberLiteral",
+                                  "value": "10"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "value": {
+                          "type": "Identifier",
+                          "value": "len"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Return",
+                  "value": {
+                    "type": "Identifier",
+                    "value": "i"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

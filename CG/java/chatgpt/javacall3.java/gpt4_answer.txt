@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id": "BankAccount", "type": "class"},
+    {"id": "BankAccount constructor", "type": "method"},
+    {"id": "deposit", "type": "method"},
+    {"id": "withdraw", "type": "method"},
+    {"id": "getBalance", "type": "method"},
+    {"id": "main", "type": "method"}
+  ],
+  "edges": [
+    {"from": "main", "to": "BankAccount constructor"},
+    {"from": "main", "to": "deposit"},
+    {"from": "main", "to": "withdraw"},
+    {"from": "main", "to": "getBalance"}
+  ]
+}

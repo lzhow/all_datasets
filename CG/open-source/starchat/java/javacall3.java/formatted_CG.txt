@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "label": "BankAccount"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "label": "<init>"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "deposit"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "withdraw"
+    },
+    {
+      "id": 4,
+      "type": "function",
+      "label": "getBalance"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0
+    },
+    {
+      "source": 2,
+      "target": 0
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

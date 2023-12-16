@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {"id": "JC.main", "type": "method"},
+    {"id": "JC.f", "type": "method"},
+    {"id": "JC.b", "type": "method"},
+    {"id": "JC.c", "type": "method"}
+  ],
+  "edges": [
+    {"source": "JC.main", "target": "JC.f"},
+    {"source": "JC.main", "target": "JC.c"},
+    {"source": "JC.f", "target": "JC.b"},
+    {"source": "JC.b", "target": "JC.c"},
+    {"source": "JC.b", "target": "JC.b"}
+  ]
+}

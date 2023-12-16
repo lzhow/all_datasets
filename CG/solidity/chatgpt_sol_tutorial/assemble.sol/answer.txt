@@ -1,0 +1,106 @@
+{
+    "type": "SourceUnit",
+    "value": null,
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "^0.5.0",
+            "children": []
+        },
+        {
+            "type": "LibraryDefinition",
+            "value": "S",
+            "children": [
+                {
+                    "type": "FunctionDefinition",
+                    "value": "a",
+                    "children": [
+                        {
+                            "type": "ParameterList",
+                            "value": null,
+                            "children": [
+                                {
+                                    "type": "Parameter",
+                                    "value": "d",
+                                    "children": [
+                                        {
+                                            "type": "ElementaryTypeName",
+                                            "value": "uint",
+                                            "children": []
+                                        },
+                                        {
+                                            "type": "StateMutability",
+                                            "value": "memory",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure",
+                            "children": []
+                        },
+                        {
+                            "type": "ReturnParameterList",
+                            "value": null,
+                            "children": [
+                                {
+                                    "type": "Parameter",
+                                    "value": "o",
+                                    "children": [
+                                        {
+                                            "type": "ElementaryTypeName",
+                                            "value": "uint",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AssemblyBlock",
+                            "value": null,
+                            "children": [
+                                {
+                                    "type": "AssemblyCall",
+                                    "value": "add",
+                                    "children": [
+                                        {
+                                            "type": "Identifier",
+                                            "value": "o",
+                                            "children": []
+                                        },
+                                        {
+                                            "type": "FunctionCall",
+                                            "value": "mload",
+                                            "children": [
+                                                {
+                                                    "type": "BinaryOperation",
+                                                    "value": "add",
+                                                    "children": [
+                                                        {
+                                                            "type": "Identifier",
+                                                            "value": "d",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "type": "NumberLiteral",
+                                                            "value": "32",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

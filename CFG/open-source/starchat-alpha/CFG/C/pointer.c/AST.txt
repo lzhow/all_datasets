@@ -1,0 +1,55 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "translation_unit",
+      "value": null,
+      "children": [
+        {
+          "type": "include_directive",
+          "value": "<stdio.h>",
+          "children": []
+        },
+        {
+          "type": "function_definition",
+          "value": null,
+          "children": [
+            {
+              "type": "function_declarator",
+              "value": "void copy(char * const s1, char * const s2)",
+              "children": []
+            },
+            {
+              "type": "compound_statement",
+              "value": null,
+              "children": [
+                {
+                  "type": "for_statement",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "for_init_statement",
+                      "value": "size_t i = 0",
+                      "children": []
+                    },
+                    {
+                      "type": "expression",
+                      "value": "(s2[i] = s1[1])!= '\\0'",
+                      "children": []
+                    },
+                    {
+                      "type": "expression_statement",
+                      "value": "++i",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {"id": "main", "type": "function"},
+    {"id": "bubbleSort", "type": "function"},
+    {"id": "selectionSort", "type": "function"},
+    {"id": "sort", "type": "function"}
+  ],
+  "edges": [
+    {"from": "main", "to": "sort"},
+    {"from": "sort", "to": "bubbleSort"},
+    {"from": "sort", "to": "selectionSort"}
+  ]
+}

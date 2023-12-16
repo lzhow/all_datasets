@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "RedirectionAndPipingExample"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "main(String[] args)"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "Redirect System.out"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "Redirect System.in"
+    },
+    {
+      "id": 5,
+      "type": "loop",
+      "label": "while ((line = reader.readLine()) != null)"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "Print read line"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "Setup PipedOutputStream and PipedInputStream"
+    },
+    {
+      "id": 8,
+      "type": "thread",
+      "label": "Producer Thread"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "Producer writes to PipedOutputStream"
+    },
+    {
+      "id": 10,
+      "type": "thread",
+      "label": "Consumer Thread"
+    },
+    {
+      "id": 11,
+      "type": "loop",
+      "label": "Consumer reads from PipedInputStream"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "condition": "line is not null"
+    },
+    {
+      "source": 6,
+      "target": 5
+    },
+    {
+      "source": 2,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 7,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    }
+  ]
+}

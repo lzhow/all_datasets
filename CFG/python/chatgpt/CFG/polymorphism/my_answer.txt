@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "class",
+      "name": "A"
+    },
+    {
+      "id": 1,
+      "type": "function",
+      "name": "a"
+    },
+    {
+      "id": 2,
+      "type": "print",
+      "name": "print(\"A.a\")"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "name": "f"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "name": "print(\"A.f\")"
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "name": "B"
+    },
+    {
+      "id": 6,
+      "type": "function",
+      "name": "f"
+    },
+    {
+      "id": 7,
+      "type": "print",
+      "name": "print(\"B.f\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "FunctionDeclaration",
+      "name": "ArrayExample",
+      "parameters": [],
+      "returnType": "",
+      "modifiers": [],
+      "visibility": "default",
+      "isConstructor": false
+    },
+    {
+      "id": 1,
+      "type": "VariableDeclaration",
+      "name": "dynamicArray",
+      "dataType": "uint[]",
+      "visibility": "public",
+      "isStateVariable": true
+    },
+    {
+      "id": 2,
+      "type": "VariableDeclaration",
+      "name": "fixedArray",
+      "dataType": "uint[5]",
+      "visibility": "public",
+      "isStateVariable": true
+    },
+    {
+      "id": 3,
+      "type": "FunctionDeclaration",
+      "name": "addElement",
+      "parameters": [
+        {
+          "name": "element",
+          "dataType": "uint"
+        }
+      ],
+      "returnType": "",
+      "modifiers": [
+        "public"
+      ],
+      "visibility": "default",
+      "isConstructor": false
+    },
+    {
+      "id": 4,
+      "type": "ExpressionStatement",
+      "expression": "dynamicArray.push(element)"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1
+    },
+    {
+      "from": 0,
+      "to": 2
+    },
+    {
+      "from": 0,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    }
+  ]
+}

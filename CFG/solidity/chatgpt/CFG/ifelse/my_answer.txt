@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "FunctionDeclaration",
+      "name": "f",
+      "parameters": [
+        "a",
+        "b",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "IfStatement"
+    },
+    {
+      "id": 2,
+      "type": "Assignment",
+      "variable": "r",
+      "value": "a"
+    },
+    {
+      "id": 3,
+      "type": "ElseStatement"
+    },
+    {
+      "id": 4,
+      "type": "Assignment",
+      "variable": "r",
+      "value": "b+c"
+    },
+    {
+      "id": 5,
+      "type": "ReturnStatement",
+      "value": "r"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "condition": "a > b"
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "condition": "!(a > b)"
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+
+
+   {
+  "nodes": [
+    {
+      "id": 0,
+      "type": "statement",
+      "label": "import java.util.ArrayList;"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "import java.util.Scanner;"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "public class SimpleReader {"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "private Scanner scanner;"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "public SimpleReader() {"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "scanner = new Scanner(System.in);"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "public int readInt() {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "return scanner.nextInt();"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "public double readDouble() {"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "return scanner.nextDouble();"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "public String readString() {"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "label": "return scanner.next();"
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 15,
+      "type": "statement",
+      "label": "public char readChar() {"
+    },
+    {
+      "id": 16,
+      "type": "statement",
+      "label": "return scanner.next().charAt(0);"
+    },
+    {
+      "id": 17,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 18,
+      "type": "statement",
+      "label": "public boolean hasNextChar() {"
+    },
+    {
+      "id": 19,
+      "type": "statement",
+      "label": "return scanner.hasNext();"
+    },
+    {
+      "id": 20,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 21,
+      "type": "statement",
+      "label": "public boolean hasNextLine() {"
+    },
+    {
+      "id": 22,
+      "type": "statement",
+      "label": "return scanner.hasNextLine();"
+    },
+    {
+      "id": 23,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 24,
+      "type": "statement",
+      "label": "public String readLine() {"
+    },
+    {
+      "id": 25,
+      "type": "statement",
+      "label": "return scanner.nextLine();"
+    },
+    {
+      "id": 26,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 27,
+      "type": "statement",
+      "label": "public int[] readAllInts() {"
+    },
+    {
+      "id": 28,
+      "type": "statement",
+      "label": "ArrayList<Integer> ints = new ArrayList<>();"
+    },
+    {
+      "id": 29,
+      "type": "statement",
+      "label": "while (scanner.hasNextInt()) {"
+    },
+    {
+      "id": 30,
+      "type": "statement",
+      "label": "ints.add(scanner.nextInt());"
+    },
+    {
+      "id": 31,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 32,
+      "type": "statement",
+      "label": "return ints.stream().mapToInt(i -> i).toArray();"
+    },
+    {
+      "id": 33,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 34,
+      "type": "statement",
+      "label": "public static void main(String[] args) {"
+    },
+    {
+      "id": 35,
+      "type": "statement",
+      "label": "SimpleReader reader = new SimpleReader();"
+    },
+    {
+      "id": 36,
+      "type": "statement",
+      "label": "System.out.println(\"Reading an integer: \" + reader.readInt());"
+    },
+    {
+      "id": 37,
+      "type": "statement",
+      "label": "System.out.println(\"Reading a double: \" + reader.readDouble());"
+    },
+    {
+      "id": 38,
+      "type": "statement",
+      "label": "System.out.println(\"Reading a string: \" + reader.readString());"
+    },
+    {
+      "id": 39,
+      "type": "statement",
+      "label": "System.out.println(\"Reading a char: \" + reader.readChar());"
+    },
+    {
+      "id": 40,
+      "type": "statement",
+      "label": "System.out.println(\"Has next char: \" + reader.hasNextChar());"
+    },
+    {
+      "id": 41,
+      "type": "statement",
+      "label": "System.out.println(\"Has next line: \" + reader.hasNextLine());"
+    },
+    {
+      "id": 42,
+      "type": "statement",
+      "label": "System.out.println(\"Reading a line: \" + reader.readLine());"
+    },
+    {
+      "id": 43,
+      "type": "statement",
+      "label": "System.out.println(\"Reading all integers: \");"
+    },
+    {
+      "id": 44,
+      "type": "statement",
+      "label": "int[] allInts = reader.readAllInts();"
+    },
+    {
+      "id": 45,
+      "type": "statement",
+      "label": "for (int i : allInts) {"
+    },
+    {
+      "id": 46,
+      "type": "statement",
+      "label": "System.out.print(i + \" \");"
+    },
+    {
+      "id": 47,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 48,
+      "type": "statement",
+      "label": "

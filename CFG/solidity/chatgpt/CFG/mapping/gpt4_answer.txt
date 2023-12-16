@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"id": 1, "type": "pragma_directive", "label": "pragma solidity ^0.8.0;"},
+    {"id": 2, "type": "contract_definition", "label": "contract MappingExample {"},
+    {"id": 3, "type": "state_variable_declaration", "label": "mapping(address => uint) public balances;"},
+    {"id": 4, "type": "function_definition", "label": "function updateBalance(uint newBalance) public {"},
+    {"id": 5, "type": "assignment", "label": "balances[msg.sender] = newBalance;"}
+  ],
+  "edges": [
+    {"source": 2, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 4, "target": 5}
+  ]
+}

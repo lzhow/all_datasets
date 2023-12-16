@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "code": "float arr[3];"
+    },
+    {
+      "id": 2,
+      "type": "assignment",
+      "code": "arr[0] = 1;"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "code": "int mul_arr[][COL] = {{1,2}, {3,4}};"
+    },
+    {
+      "id": 4,
+      "type": "declaration",
+      "code": "static int array[] = {12, 23, 54,};"
+    },
+    {
+      "id": 5,
+      "type": "return",
+      "code": "return (0);"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+Here is the call graph for the given program:
+
+```json
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "function",
+      "label": "Animal"
+    },
+    {
+        "id" : 1,
+        "type" : "function",
+        "label" : "(constructor)"
+    },
+	{
+      " id": 2,
+     	"type":  "function ",
+     	 "label":"getName"
+    },
+	{"id":3,"type":"function","label":"setName"},
+	"sound"
+  ],
+  "edges": [
+	["0", "1"],
+	[ "1", "2"],
+["1", 3],
+["0","2"],["0", "3"]
+  ]
+}
+```

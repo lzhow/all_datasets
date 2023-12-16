@@ -1,0 +1,30 @@
+You are a C call graph analyzer for programs. I will give you a C program 
+        and you tell me its call graph. 
+
+        The input file is 
+        ```
+        // Sum of natural numbers using recursion
+
+#include <stdio.h>
+int sum(int n);
+
+int main() {
+  int number, result;
+
+  printf("Enter a positive integer: ");
+  scanf("%d", & number);
+
+  result = sum(number);
+
+  printf("sum = %d", result);
+  return 0;
+}
+
+int sum(int num) {
+  if (num != 0)
+    return num + sum(num - 1); // sum() function calls itself
+  else
+    return num;
+}
+        ```
+        

@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "label": "import random",
+      "type": "import"
+    },
+    {
+      "id": "1",
+      "label": "user_guess",
+      "type": "variable"
+    },
+    {
+      "id": "2",
+      "label": "user_continue",
+      "type": "variable"
+    },
+    {
+      "id": "3",
+      "label": "generate_number",
+      "type": "function"
+    },
+    {
+      "id": "4",
+      "label": "user_input",
+      "type": "function"
+    },
+    {
+      "id": "5",
+      "label": "bulls",
+      "type": "function"
+    },
+    {
+      "id": "6",
+      "label": "discard_repetition",
+      "type": "function"
+    },
+    {
+      "id": "7",
+      "label": "cows",
+      "type": "function"
+    },
+    {
+      "id": "8",
+      "label": "player_wins",
+      "type": "function"
+    },
+    {
+      "id": "9",
+      "label": "main_func",
+      "type": "function"
+    }
+  ],
+  "edges": [
+    {
+      "from": "0",
+      "to": "3"
+    },
+    {
+      "from": "0",
+      "to": "4"
+    },
+    {
+      "from": "3",
+      "to": "5"
+    },
+    {
+      "from": "4",
+      "to": "5"
+    },
+    {
+      "from": "5",
+      "to": "6"
+    },
+    {
+      "from": "5",
+      "to": "7"
+    },
+    {
+      "from": "6",
+      "to": "7"
+    },
+    {
+      "from": "7",
+      "to": "8"
+    },
+    {
+      "from": "8",
+      "to": "9"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "method",
+      "name": "SimpleReader",
+      "parameters": [],
+      "returnType": "void"
+    },
+    {
+      "id": 1,
+      "type": "method",
+      "name": "readInt",
+      "parameters": [],
+      "returnType": "int"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "name": "readDouble",
+      "parameters": [],
+      "returnType": "double"
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "name": "readString",
+      "parameters": [],
+      "returnType": "String"
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "name": "readChar",
+      "parameters": [],
+      "returnType": "char"
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "name": "hasNextChar",
+      "parameters": [],
+      "returnType": "boolean"
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "name": "hasNextLine",
+      "parameters": [],
+      "returnType": "boolean"
+    },
+    {
+      "id": 7,
+      "type": "method",
+      "name": "readLine",
+      "parameters": [],
+      "returnType": "String"
+    },
+    {
+      "id": 8,
+      "type": "method",
+      "name": "readAllInts",
+      "parameters": [],
+      "returnType": "int[]"
+    },
+    {
+      "id": 9,
+      "type": "method",
+      "name": "main",
+      "parameters": [
+        "String[]"
+      ],
+      "returnType": "void"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "code": "SimpleReader reader = new SimpleReader();"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "code": "System.out.println(\"Reading an integer: \" + reader.readInt());"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "code": "System.out.println(\"Reading a double: \" + reader.readDouble());"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "code": "System.out.println(\"Reading a string: \" + reader.readString());"
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "code": "System.out.println(\"Reading a char: \" + reader.readChar());"
+    },
+    {
+      "id": 15,
+      "type": "statement",
+      "code": "System.out.println(\"Has next char: \" + reader.hasNextChar());"
+    },
+    {
+      "id": 16,
+      "type": "statement",
+      "code": "System.out.println(\"Has next line: \" + reader.hasNextLine());"
+    },
+    {
+      "id": 17,
+      "type": "statement",
+      "code": "System.out.println(\"Reading a line: \" + reader.readLine());"
+    },
+    {
+      "id": 18,
+      "type": "statement",
+      "code": "System.out.println(\"Reading all integers: \");"
+    },
+    {
+      "id": 19,
+      "type": "statement",
+      "code": "int[] allInts = reader.readAllInts();"
+    },
+    {
+      "id": 20,
+      "type": "statement",
+      "code": "for (int i : allInts) {"
+    },
+    {
+      "id": 21,
+      "type": "statement",
+      "code": "System.out.print(i + \" \");"
+    },
+    {
+      "id": 22,
+      "type": "statement",
+      "code": "}"
+    },
+    {
+      "id": 23,
+      "type": "statement",
+      "code": "System.out.println();"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    },
+    {
+      "source": 15,
+      "target": 16
+    },
+    {
+      "source": 16,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 18
+    },
+    {
+      "source": 18,
+      "target": 19
+    },
+    {
+      "source": 19,
+      "target": 20
+    },
+    {
+      "source": 20,
+      "target": 21
+    },
+    {
+      "source": 21,
+      "target": 22
+    },
+    {
+      "source": 22,
+      "target": 20
+    },
+    {
+      "source": 20,
+      "target": 23
+    }
+  ]
+}

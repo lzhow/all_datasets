@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "FunctionDeclaration",
+      "name": "S.a",
+      "parameters": [
+        {
+          "name": "d",
+          "type": "uint[] memory"
+        }
+      ],
+      "returns": [
+        {
+          "name": "o",
+          "type": "uint"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "Assembly",
+      "code": "o := add(o, mload(add(d, 0x20)))"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    }
+  ]
+}

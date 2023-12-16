@@ -1,0 +1,88 @@
+{
+  "type": "SourceUnit",
+  "value": null,
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "^0.5.0"
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "S",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "A",
+          "children": [
+            {
+              "type": "ParameterList",
+              "value": null,
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "j"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "value": null,
+              "children": [
+                {
+                  "type": "WhileStatement",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "value": "!=",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "value": "+=",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "j"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "10"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Return",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "j"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

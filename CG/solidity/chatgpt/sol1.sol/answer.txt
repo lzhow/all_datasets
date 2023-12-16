@@ -1,0 +1,55 @@
+{
+  "nodes": [
+    {
+      "id": "BuyMeACoffee.constructor()",
+      "label": "constructor()"
+    },
+    {
+      "id": "BuyMeACoffee.getMemos()",
+      "label": "getMemos()"
+    },
+    {
+      "id": "BuyMeACoffee.buyCoffee(string,string)",
+      "label": "buyCoffee(string, string)"
+    },
+    {
+      "id": "BuyMeACoffee.withdrawTips()",
+      "label": "withdrawTips()"
+    },
+    {
+      "id": "BuyMeACoffee.changeOwner(address)",
+      "label": "changeOwner(address)"
+    },
+    {
+      "id": "NewMemo",
+      "label": "NewMemo"
+    }
+  ],
+  "edges": [
+    {
+      "from": "BuyMeACoffee.constructor()",
+      "to": "BuyMeACoffee.owner",
+      "label": "assigns"
+    },
+    {
+      "from": "BuyMeACoffee.buyCoffee(string,string)",
+      "to": "BuyMeACoffee.memos",
+      "label": "pushes"
+    },
+    {
+      "from": "BuyMeACoffee.buyCoffee(string,string)",
+      "to": "NewMemo",
+      "label": "emits"
+    },
+    {
+      "from": "BuyMeACoffee.withdrawTips()",
+      "to": "BuyMeACoffee.owner",
+      "label": "sends ether to"
+    },
+    {
+      "from": "BuyMeACoffee.changeOwner(address)",
+      "to": "BuyMeACoffee.owner",
+      "label": "assigns"
+    }
+  ]
+}

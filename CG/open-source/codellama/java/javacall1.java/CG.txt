@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "name": "JC",
+      "methods": [
+        {
+          "name": "c",
+          "parameters": [],
+          "returnType": "void"
+        },
+        {
+          "name": "main",
+          "parameters": [
+            {
+              "name": "args",
+              "type": "String[]"
+            }
+          ],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "name": "A",
+      "methods": [
+        {
+          "name": "aa",
+          "parameters": [],
+          "returnType": "void"
+        },
+        {
+          "name": "cc",
+          "parameters": [],
+          "returnType": "void"
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "methods": [
+        {
+          "name": "aa",
+          "parameters": [],
+          "returnType": "void"
+        },
+        {
+          "name": "cc",
+          "parameters": [],
+          "returnType": "void"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "JC",
+      "to": "A",
+      "method": "c"
+    },
+    {
+      "from": "JC",
+      "to": "B",
+      "method": "c"
+    },
+    {
+      "from": "A",
+      "to": "A",
+      "method": "aa"
+    },
+    {
+      "from": "A",
+      "to": "A",
+      "method": "cc"
+    },
+    {
+      "from": "B",
+      "to": "B",
+      "method": "aa"
+    },
+    {
+      "from": "B",
+      "to": "B",
+      "method": "cc"
+    }
+  ]
+}

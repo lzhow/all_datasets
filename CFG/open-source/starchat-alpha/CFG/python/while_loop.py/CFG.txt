@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "def whileloop():"
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "label": "i = 1"
+    },
+    {
+      "id": 3,
+      "type": "while",
+      "label": "while i < 6:"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "print(i)"
+    },
+    {
+      "id": 5,
+      "type": "assign",
+      "label": "i += 1"
+    },
+    {
+      "id": 6,
+      "type": "if",
+      "label": "if i > 4:"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "break"
+    },
+    {
+      "id": 8,
+      "type": "else",
+      "label": "else:"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "print(\"i is no longer less than 4\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 8,
+      "target": 9
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "declaration",
+      "statement": "FILE *file = fopen(\"example.txt\", \"r\");"
+    },
+    {
+      "id": 2,
+      "type": "condition",
+      "statement": "if (file != NULL)"
+    },
+    {
+      "id": 3,
+      "type": "function_call",
+      "statement": "fclose(file);"
+    },
+    {
+      "id": 4,
+      "type": "return",
+      "statement": "return 0;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "condition": "true"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "condition": "false"
+    }
+  ]
+}

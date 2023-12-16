@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClassDeclaration",
+      "code": "public abstract class Shape"
+    },
+    {
+      "id": 2,
+      "type": "MethodDeclaration",
+      "code": "public abstract void draw()"
+    },
+    {
+      "id": 3,
+      "type": "ClassDeclaration",
+      "code": "public class Circle extends Shape"
+    },
+    {
+      "id": 4,
+      "type": "MethodOverride",
+      "code": "public void draw() { System.out.println(\"Drawing a circle\"); }"
+    },
+    {
+      "id": 5,
+      "type": "ObjectCreation",
+      "code": "Shape shape = new Circle()"
+    },
+    {
+      "id": 6,
+      "type": "MethodInvocation",
+      "code": "shape.draw()  // 调用Circle类中的draw方法"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    }
+  ]
+}
