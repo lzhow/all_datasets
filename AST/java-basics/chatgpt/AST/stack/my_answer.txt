@@ -1,0 +1,355 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "Stack"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "StackExample"
+        },
+        {
+          "type": "MethodDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "FormalParameterList",
+              "children": [
+                {
+                  "type": "ArrayType",
+                  "children": [
+                    {
+                      "type": "SimpleType",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "String"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "SimpleType",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "Stack"
+                            },
+                            {
+                              "type": "TypeArgument",
+                              "children": [
+                                {
+                                  "type": "SimpleType",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "Integer"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "stack"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "ExpressionName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "stack"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "push"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "NumberLiteral",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "ExpressionName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "stack"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "push"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "NumberLiteral",
+                              "value": "2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "ExpressionName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "stack"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "push"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "NumberLiteral",
+                              "value": "3"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "children": [
+                            {
+                              "type": "ExpressionName",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "out"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "println"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "StringLiteral",
+                              "value": "栈顶元素: "
+                            },
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "ExpressionName",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "stack"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "peek"
+                                },
+                                {
+                                  "type": "ArgumentList"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "WhileStatement",
+                  "children": [
+                    {
+                      "type": "PrefixExpression",
+                      "children": [
+                        {
+                          "type": "ExpressionName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "stack"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "PrefixOperator",
+                          "value": "!"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "ExpressionName",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "System"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                },
+                                {
+                                  "type": "ArgumentList",
+                                  "children": [
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "ExpressionName",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "stack"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "pop"
+                                        },
+                                        {
+                                          "type": "ArgumentList"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

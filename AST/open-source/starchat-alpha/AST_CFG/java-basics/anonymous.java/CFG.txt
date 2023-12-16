@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MethodDeclaration",
+      "label": "public interface Greeting {\nvoid greet();\n}"
+    },
+    {
+      "id": 2,
+      "type": "LocalVariableDeclarationStatement",
+      "label": "Greeting greeting = new Greeting()"
+    },
+    {
+      "id": 3,
+      "type": "Annotation",
+      "label": "@Override"
+    },
+    {
+      "id": 4,
+      "type": "MethodDeclaration",
+      "label": "@Override\npublic void greet() {\nSystem.out.println(\"Hello!\");\n}"
+    },
+    {
+      "id": 5,
+      "type": "MethodCallStatement",
+      "label": "greeting.greet()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 1
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 1
+    },
+    {
+      "source": 5,
+      "target": 4
+    }
+  ]
+}

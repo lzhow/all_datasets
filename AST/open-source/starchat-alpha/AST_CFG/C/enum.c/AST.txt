@@ -1,0 +1,86 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "Preprocessor",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "EnumSpecifier",
+      "value": "enum Le",
+      "children": [
+        {
+          "type": "Enumerator",
+          "value": "L",
+          "children": []
+        },
+        {
+          "type": "Enumerator",
+          "value": "M",
+          "children": []
+        },
+        {
+          "type": "Enumerator",
+          "value": "H",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "int main()",
+      "children": [
+        {
+          "type": "DeclarationSpecifier",
+          "value": "enum Le",
+          "children": []
+        },
+        {
+          "type": "Declarator",
+          "value": "m",
+          "children": []
+        },
+        {
+          "type": "AssignmentExpression",
+          "value": "=",
+          "children": [
+            {
+              "type": "EnumeratorConstant",
+              "value": "M",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "%d",
+              "children": []
+            },
+            {
+              "type": "Identifier",
+              "value": "m",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "ReturnStatement",
+          "value": "return",
+          "children": [
+            {
+              "type": "IntegerConstant",
+              "value": "0",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

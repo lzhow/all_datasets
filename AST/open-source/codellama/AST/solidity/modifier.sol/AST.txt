@@ -1,0 +1,207 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "PragmaName",
+          "value": "solidity"
+        },
+        {
+          "type": "PragmaValue",
+          "value": ">=0.4.22 <0.9.0"
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "ContractKeyword",
+          "value": "contract"
+        },
+        {
+          "type": "Identifier",
+          "value": "P"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "StateVariableDeclaration",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "TypeName",
+                      "children": [
+                        {
+                          "type": "ElementaryTypeName",
+                          "value": "address"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "s"
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "TypeName",
+                      "children": [
+                        {
+                          "type": "ElementaryTypeName",
+                          "value": "address"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "s"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ModifierDefinition",
+              "children": [
+                {
+                  "type": "ModifierKeyword",
+                  "value": "modifier"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "mm"
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "RequireExpression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "msg"
+                            },
+                            {
+                              "type": "MemberAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "sender"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BinaryOperation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "s"
+                                },
+                                {
+                                  "type": "BinaryOperator",
+                                  "value": "=="
+                                }
+                              ]
+                            },
+                            {
+                              "type": "StringLiteral",
+                              "value": "not"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SpecialStatement",
+                      "children": [
+                        {
+                          "type": "SpecialKeyword",
+                          "value": "_"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FunctionDefinition",
+              "children": [
+                {
+                  "type": "FunctionKeyword",
+                  "value": "function"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "f"
+                },
+                {
+                  "type": "ParameterList",
+                  "children": []
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "VariableDeclarationStatement",
+                      "children": [
+                        {
+                          "type": "VariableDeclaration",
+                          "children": [
+                            {
+                              "type": "TypeName",
+                              "children": [
+                                {
+                                  "type": "ElementaryTypeName",
+                                  "value": "uint"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "a"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclaration",
+                          "children": [
+                            {
+                              "type": "TypeName",
+                              "children": [
+                                {
+                                  "type": "ElementaryTypeName",
+                                  "value": "uint"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "a"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

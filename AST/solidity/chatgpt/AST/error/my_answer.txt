@@ -1,0 +1,176 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity ^0.8.0",
+      "children": []
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "ErrorHandling",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "testRequire",
+          "children": [
+            {
+              "type": "ParameterList",
+              "value": "",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "_i",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "value": "public pure",
+              "children": []
+            },
+            {
+              "type": "Block",
+              "value": "",
+              "children": [
+                {
+                  "type": "RequireStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "value": ">",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "_i",
+                          "children": []
+                        },
+                        {
+                          "type": "NumberLiteral",
+                          "value": "10",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "StringLiteral",
+                      "value": "Input must be greater than 10",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "testRevert",
+          "children": [
+            {
+              "type": "ParameterList",
+              "value": "",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "_i",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "value": "public pure",
+              "children": []
+            },
+            {
+              "type": "Block",
+              "value": "",
+              "children": [
+                {
+                  "type": "IfStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "value": "<=",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "_i",
+                          "children": []
+                        },
+                        {
+                          "type": "NumberLiteral",
+                          "value": "10",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "RevertStatement",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "Input must be greater than 10",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "testAssert",
+          "children": [
+            {
+              "type": "ParameterList",
+              "value": "",
+              "children": []
+            },
+            {
+              "type": "ModifierList",
+              "value": "public pure",
+              "children": []
+            },
+            {
+              "type": "Block",
+              "value": "",
+              "children": [
+                {
+                  "type": "AssertStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "value": "==",
+                      "children": [
+                        {
+                          "type": "NumberLiteral",
+                          "value": "1",
+                          "children": []
+                        },
+                        {
+                          "type": "NumberLiteral",
+                          "value": "2",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

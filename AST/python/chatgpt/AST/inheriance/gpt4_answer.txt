@@ -1,0 +1,202 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "Animal",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "__init__",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "self"
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "name"
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "sound"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "self.name = name"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "self.sound = sound"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "make_sound",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "self"
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "f\"{self.name} says {self.sound}\""
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "__repr__",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "self"
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "f\"Animal('{self.name}', '{self.sound}')\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "Dog",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "__init__",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "self"
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "name"
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "sound"
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "breed"
+                        },
+                        {
+                            "type": "SuperConstructorInvocation",
+                            "value": "super().__init__(name, sound)"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "self.breed = breed"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "__repr__",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "self"
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "f\"Dog('{self.name}', '{self.sound}', '{self.breed}')\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "generic_animal",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "Animal",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "\"Generic Animal\""
+                        },
+                        {
+                            "type": "Argument",
+                            "value": "\"some sound\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "generic_animal"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "generic_animal.make_sound",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "my_dog",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "Dog",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "\"Rex\""
+                        },
+                        {
+                            "type": "Argument",
+                            "value": "\"Bark\""
+                        },
+                        {
+                            "type": "Argument",
+                            "value": "\"Golden Retriever\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "my_dog"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "my_dog.make_sound",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "def forloop():"
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "label": "cdic = {\"a\": 3, \"b\": 2, \"c\": 1}"
+    },
+    {
+      "id": 3,
+      "type": "for",
+      "label": "for x in cdic:"
+    },
+    {
+      "id": 4,
+      "type": "if",
+      "label": "if x == \"d\":"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "break"
+    },
+    {
+      "id": 6,
+      "type": "for",
+      "label": "for y in range(2, 3):"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "print(x, y)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

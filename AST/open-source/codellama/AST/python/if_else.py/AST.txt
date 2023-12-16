@@ -1,0 +1,82 @@
+{
+  "type": "function",
+  "value": "ifelse",
+  "children": [
+    {
+      "type": "parameter",
+      "value": "a",
+      "children": []
+    },
+    {
+      "type": "parameter",
+      "value": "b",
+      "children": []
+    },
+    {
+      "type": "print",
+      "value": ">",
+      "children": [
+        {
+          "type": "condition",
+          "value": ">",
+          "children": [
+            {
+              "type": "variable",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "variable",
+              "value": "b",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "print",
+      "value": "=",
+      "children": [
+        {
+          "type": "condition",
+          "value": "==",
+          "children": [
+            {
+              "type": "variable",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "variable",
+              "value": "b",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "print",
+      "value": "<",
+      "children": [
+        {
+          "type": "condition",
+          "value": "<",
+          "children": [
+            {
+              "type": "variable",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "variable",
+              "value": "b",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

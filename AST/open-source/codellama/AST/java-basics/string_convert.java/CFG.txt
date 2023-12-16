@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "method",
+      "label": "stringToInt"
+    },
+    {
+      "id": 1,
+      "type": "method",
+      "label": "stringToDouble"
+    },
+    {
+      "id": 2,
+      "type": "method",
+      "label": "stringToLong"
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "label": "main"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "intValue = stringToInt(\"123\")"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "doubleValue = stringToDouble(\"123.45\")"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "longValue = stringToLong(\"123456789\")"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "System.out.println(\"Integer: \" + intValue)"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "System.out.println(\"Double: \" + doubleValue)"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "System.out.println(\"Float: \" + longValue)"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "catch (NumberFormatException e)"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "System.out.println(\"Invalid string format: \" + e.getMessage())"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 2,
+      "target": 6
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 4,
+      "target": 7
+    },
+    {
+      "source": 5,
+      "target": 8
+    },
+    {
+      "source": 6,
+      "target": 9
+    },
+    {
+      "source": 7,
+      "target": 10
+    },
+    {
+      "source": 8,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    }
+  ]
+}

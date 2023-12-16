@@ -1,0 +1,42 @@
+{
+  "type": "FunctionDeclaration",
+  "value": "main",
+  "children": [
+    {
+      "type": "VariableDeclaration",
+      "value": "ptr",
+      "children": [
+        {"type": "Type", "value": "int*"},
+        {"type": "VariableInitializer", "value": "(int *)malloc(sizeof(int))"}
+      ]
+    },
+    {
+      "type": "IfStatement",
+      "value": "",
+      "children": [
+        {
+          "type": "RelationalExpression",
+          "value": "ptr != NULL"
+        },
+        {
+          "type": "Assignment",
+          "value": "*ptr = 10"
+        },
+        {
+          "type": "MethodInvocation",
+          "value": "printf",
+          "children": [
+            {"type": "Argument", "value": "\"%d\\n\", *ptr"}
+          ]
+        },
+        {
+          "type": "MethodInvocation",
+          "value": "free",
+          "children": [
+            {"type": "Argument", "value": "ptr"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifiers",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "while_loop"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifiers",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Modifier",
+                      "value": "static"
+                    }
+                  ]
+                },
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "FormalParameters",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "value": "String[]"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "args"
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "int"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "i"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "WhileStatement",
+                      "children": [
+                        {
+                          "type": "LessThanExpression",
+                          "children": [
+                            {
+                              "type": "PostfixExpression",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "i"
+                                },
+                                {
+                                  "type": "PostfixOperator",
+                                  "value": "++"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "IfStatement",
+                              "children": [
+                                {
+                                  "type": "EqualsExpression",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "i"
+                                    },
+                                    {
+                                      "type": "Literal",
+                                      "value": "2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Block",
+                                  "children": [
+                                    {
+                                      "type": "ContinueStatement"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "println"
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "Hello World"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

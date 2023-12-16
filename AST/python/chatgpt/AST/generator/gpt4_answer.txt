@@ -1,0 +1,80 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionDeclaration",
+            "value": "square_numbers",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "n",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "int"
+                        }
+                    ]
+                },
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i"
+                        },
+                        {
+                            "type": "RangeExpression",
+                            "value": "range(n)"
+                        },
+                        {
+                            "type": "YieldStatement",
+                            "value": "i ** 2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "squares",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "square_numbers",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ForStatement",
+            "value": "",
+            "children": [
+                {
+                    "type": "VariableDeclaration",
+                    "value": "num"
+                },
+                {
+                    "type": "Iterable",
+                    "value": "squares"
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "print",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "num"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

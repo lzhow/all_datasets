@@ -1,0 +1,88 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionPrototype",
+            "value": "f",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "l",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "unsigned int"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "FunctionDeclaration",
+            "value": "f",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "l",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "unsigned int"
+                        }
+                    ]
+                },
+                {
+                    "type": "VariableDeclaration",
+                    "value": "s",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "unsigned int"
+                        },
+                        {
+                            "type": "VariableInitializer",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "unsigned int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "RelationalExpression",
+                            "value": "i <= l"
+                        },
+                        {
+                            "type": "UpdateExpression",
+                            "value": "i += 1"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "s += i"
+                        }
+                    ]
+                },
+                {
+                    "type": "ReturnStatement",
+                    "value": "s"
+                }
+            ]
+        }
+    ]
+}

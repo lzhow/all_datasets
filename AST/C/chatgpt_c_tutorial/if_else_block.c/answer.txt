@@ -1,0 +1,150 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "<stdio.h>",
+      "children": []
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "main",
+      "children": [
+        {
+          "type": "TypeSpecifier",
+          "value": "int",
+          "children": []
+        },
+        {
+          "type": "Declarator",
+          "value": "main",
+          "children": [
+            {
+              "type": "ParameterDeclaration",
+              "value": "void",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "int",
+                  "children": []
+                },
+                {
+                  "type": "InitDeclarator",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "n",
+                      "children": []
+                    },
+                    {
+                      "type": "Expression",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "AssignmentExpression",
+                          "value": "",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "n",
+                              "children": []
+                            },
+                            {
+                              "type": "UnaryExpression",
+                              "value": "&",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "n",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "SelectionStatement",
+              "value": "",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": ">",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "n",
+                      "children": []
+                    },
+                    {
+                      "type": "Constant",
+                      "value": "10",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "value": "puts",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "\"Large\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ElseStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "FunctionCall",
+                          "value": "puts",
+                          "children": [
+                            {
+                              "type": "Constant",
+                              "value": "\"Small\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

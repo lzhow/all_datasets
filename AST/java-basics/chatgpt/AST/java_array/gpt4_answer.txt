@@ -1,0 +1,66 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "java_array",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "number",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "String[]"
+                                },
+                                {
+                                    "type": "ArrayInitializer",
+                                    "value": "{\"1\", \"2\", \"3\", \"4\"}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "ArrayAccess",
+                                    "value": "number[0]"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "mularray",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int[][]"
+                                },
+                                {
+                                    "type": "ArrayInitializer",
+                                    "value": "{{1, 2, 3, 4}, {5, 6, 7}}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "ArrayAccess",
+                                    "value": "mularray[1][1]"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

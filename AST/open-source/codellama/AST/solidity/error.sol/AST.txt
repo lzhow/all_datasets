@@ -1,0 +1,225 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.8.0;"
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "contract ErrorHandling",
+      "children": [
+        {
+          "type": "FunctionDefinition",
+          "value": "function testRequire(uint _i) public pure",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "testRequire"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "uint _i"
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "children": [
+                {
+                  "type": "ModifierInvocation",
+                  "value": "public"
+                },
+                {
+                  "type": "ModifierInvocation",
+                  "value": "pure"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "value": "require(_i > 10, \"Input must be greater than 10\")",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "require"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "_i"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "10"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "Input must be greater than 10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "function testRevert(uint _i) public pure",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "testRevert"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "uint _i"
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "children": [
+                {
+                  "type": "ModifierInvocation",
+                  "value": "public"
+                },
+                {
+                  "type": "ModifierInvocation",
+                  "value": "pure"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "IfStatement",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "BinaryOperation",
+                          "value": "_i <= 10",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "_i"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "10"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "FunctionCall",
+                              "value": "revert(\"Input must be greater than 10\")",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "revert"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "Input must be greater than 10"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "function testAssert() public pure",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "testAssert"
+            },
+            {
+              "type": "ParameterList",
+              "children": []
+            },
+            {
+              "type": "ModifierList",
+              "children": [
+                {
+                  "type": "ModifierInvocation",
+                  "value": "public"
+                },
+                {
+                  "type": "ModifierInvocation",
+                  "value": "pure"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "value": "assert(1 == 2)",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "assert"
+                        },
+                        {
+                          "type": "BinaryOperation",
+                          "value": "1 == 2",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "1"
+                            },
+                            {
+                              "type": "Literal",
+                              "value": "2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

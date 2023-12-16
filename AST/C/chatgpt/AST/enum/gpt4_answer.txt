@@ -1,0 +1,64 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "EnumDeclaration",
+                    "value": "Le",
+                    "children": [
+                        {
+                            "type": "EnumConstant",
+                            "value": "L"
+                        },
+                        {
+                            "type": "EnumConstant",
+                            "value": "M"
+                        },
+                        {
+                            "type": "EnumConstant",
+                            "value": "H"
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "m",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "enum Le"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "M"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "printf",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"%d\", m"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

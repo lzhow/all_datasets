@@ -1,0 +1,82 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionDeclaration",
+            "value": "ifelse",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "a",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "int"
+                        }
+                    ]
+                },
+                {
+                    "type": "Parameter",
+                    "value": "b",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "int"
+                        }
+                    ]
+                },
+                {
+                    "type": "TernaryExpression",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "RelationalExpression",
+                            "value": "a > b"
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\">\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TernaryExpression",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "a == b"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "print",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"=\""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "print",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"<\""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

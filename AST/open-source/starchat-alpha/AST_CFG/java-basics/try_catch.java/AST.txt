@@ -1,0 +1,88 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "type": "MethodDeclaration",
+          "value": "public static void main(String[] args)"
+        }
+      ],
+      "type": "ClassDeclaration",
+      "value": "public class Main {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "LocalVariableDeclarationStatement",
+              "value": "int[] arr = new int[5];"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "ExpressionStatement",
+                  "value": "System.out.println(arr[10]);"
+                }
+              ],
+              "type": "TryStatement",
+              "value": "try {"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "CatchClause",
+                  "value": "catch (ArrayIndexOutOfBoundsException e) {"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "ExpressionStatement",
+                      "value": "System.out.println(\"Array Index is Out Of Bounds\");"
+                    }
+                  ],
+                  "type": "BlockStatement",
+                  "value": "{"
+                }
+              ],
+              "type": "TryStatement",
+              "value": "} catch (ArrayIndexOutOfBoundsException e) {"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "BlockStatement",
+                  "value": "{"
+                }
+              ],
+              "type": "TryStatement",
+              "value": "} finally {"
+            },
+            {
+              "children": [],
+              "type": "BlockStatement",
+              "value": "{"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        }
+      ],
+      "type": "MethodDeclaration",
+      "value": "public static void main(String[] args)"
+    },
+    {
+      "children": [],
+      "type": "ClassDeclaration",
+      "value": "}"
+    }
+  ]
+}

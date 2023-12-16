@@ -1,0 +1,133 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "forloop",
+      "children": [
+        {
+          "type": "Assign",
+          "value": "cdic = {\"a\": 3, \"b\": 2, \"c\": 1}",
+          "children": [
+            {
+              "type": "Name",
+              "value": "cdic"
+            },
+            {
+              "type": "Dict",
+              "value": "{\"a\": 3, \"b\": 2, \"c\": 1}",
+              "children": [
+                {
+                  "type": "Str",
+                  "value": "\"a\""
+                },
+                {
+                  "type": "Num",
+                  "value": "3"
+                },
+                {
+                  "type": "Str",
+                  "value": "\"b\""
+                },
+                {
+                  "type": "Num",
+                  "value": "2"
+                },
+                {
+                  "type": "Str",
+                  "value": "\"c\""
+                },
+                {
+                  "type": "Num",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "For",
+          "value": "for x in cdic:",
+          "children": [
+            {
+              "type": "Name",
+              "value": "x"
+            },
+            {
+              "type": "Name",
+              "value": "cdic"
+            },
+            {
+              "type": "If",
+              "value": "if x == \"d\":",
+              "children": [
+                {
+                  "type": "Compare",
+                  "value": "x == \"d\"",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    },
+                    {
+                      "type": "Str",
+                      "value": "\"d\""
+                    }
+                  ]
+                },
+                {
+                  "type": "Break",
+                  "value": "break"
+                }
+              ]
+            },
+            {
+              "type": "For",
+              "value": "for y in range(2, 3):",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "y"
+                },
+                {
+                  "type": "Call",
+                  "value": "range(2, 3)",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": "2"
+                    },
+                    {
+                      "type": "Num",
+                      "value": "3"
+                    }
+                  ]
+                },
+                {
+                  "type": "Expr",
+                  "value": "print(x, y)",
+                  "children": [
+                    {
+                      "type": "Call",
+                      "value": "print(x, y)",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "x"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "y"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

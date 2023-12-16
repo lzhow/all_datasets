@@ -1,0 +1,207 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifiers",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "Main"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifiers",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Modifier",
+                      "value": "static"
+                    }
+                  ]
+                },
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "FormalParameters",
+                  "children": [
+                    {
+                      "type": "Array",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "String"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "args"
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "TryStatement",
+                      "children": [
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "VariableDeclaration",
+                              "children": [
+                                {
+                                  "type": "Type",
+                                  "value": "int"
+                                },
+                                {
+                                  "type": "Array",
+                                  "children": [
+                                    {
+                                      "type": "Literal",
+                                      "value": "5"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "FieldAccess",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "System"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "out"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "println"
+                                    },
+                                    {
+                                      "type": "ArrayAccess",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "arr"
+                                        },
+                                        {
+                                          "type": "Literal",
+                                          "value": "10"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CatchClause",
+                          "children": [
+                            {
+                              "type": "FormalParameter",
+                              "children": [
+                                {
+                                  "type": "Type",
+                                  "value": "ArrayIndexOutOfBoundsException"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "e"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Block",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "FieldAccess",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "System"
+                                            },
+                                            {
+                                              "type": "Identifier",
+                                              "value": "out"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "println"
+                                        },
+                                        {
+                                          "type": "Literal",
+                                          "value": "Array Index is Out Of Bounds"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FinallyClause",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity ^0.8.0"
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "MappingExample",
+      "children": [
+        {
+          "type": "StateVariableDeclaration",
+          "value": "mapping(address => uint) public balances"
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "updateBalance(uint newBalance)",
+          "children": [
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "IndexAccess",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "balances"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "msg.sender"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "newBalance"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

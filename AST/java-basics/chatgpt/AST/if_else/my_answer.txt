@@ -1,0 +1,86 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "if_else",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "permutation",
+          "children": [
+            {
+              "type": "Parameter",
+              "value": "String prefix"
+            },
+            {
+              "type": "Parameter",
+              "value": "String str"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "int n",
+                  "children": [
+                    {
+                      "type": "VariableInitializer",
+                      "value": "str.length()"
+                    }
+                  ]
+                },
+                {
+                  "type": "IfStatement",
+                  "children": [
+                    {
+                      "type": "BinaryExpression",
+                      "value": "n == 0"
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "value": "System.out.println(prefix)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ForStatement",
+                          "children": [
+                            {
+                              "type": "VariableDeclaration",
+                              "value": "int i",
+                              "children": [
+                                {
+                                  "type": "VariableInitializer",
+                                  "value": "0"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BinaryExpression",
+                              "value": "i < n"
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "value": "permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n))"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

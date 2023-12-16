@@ -1,0 +1,104 @@
+{
+  "type": "function_definition",
+  "value": "swap",
+  "children": [
+    {
+      "type": "pointer",
+      "value": "int",
+      "children": []
+    },
+    {
+      "type": "identifier",
+      "value": "a",
+      "children": []
+    },
+    {
+      "type": "pointer",
+      "value": "int",
+      "children": []
+    },
+    {
+      "type": "identifier",
+      "value": "b",
+      "children": []
+    },
+    {
+      "type": "compound_statement",
+      "value": "",
+      "children": [
+        {
+          "type": "declaration",
+          "value": "int",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "tmp",
+              "children": []
+            },
+            {
+              "type": "dereference",
+              "value": "",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "a",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "",
+          "children": [
+            {
+              "type": "dereference",
+              "value": "",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "a",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "dereference",
+              "value": "",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "b",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "",
+          "children": [
+            {
+              "type": "dereference",
+              "value": "",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "b",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "identifier",
+              "value": "tmp",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

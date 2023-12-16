@@ -1,0 +1,264 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "SimpleName",
+          "value": "threading"
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "SimpleName",
+          "value": "print_numbers"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "ForStatement",
+              "children": [
+                {
+                  "type": "VariableDeclarationExpression",
+                  "children": [
+                    {
+                      "type": "VariableDeclarationFragment",
+                      "children": [
+                        {
+                          "type": "SimpleName",
+                          "value": "i"
+                        },
+                        {
+                          "type": "InfixExpression",
+                          "children": [
+                            {
+                              "type": "NumberLiteral",
+                              "value": "1"
+                            },
+                            {
+                              "type": "NumberLiteral",
+                              "value": "6"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "SimpleName",
+                              "value": "print"
+                            },
+                            {
+                              "type": "SimpleName",
+                              "value": "i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MethodDeclaration",
+      "children": [
+        {
+          "type": "SimpleName",
+          "value": "print_letters"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "EnhancedForStatement",
+              "children": [
+                {
+                  "type": "SingleVariableDeclaration",
+                  "children": [
+                    {
+                      "type": "SimpleName",
+                      "value": "letter"
+                    }
+                  ]
+                },
+                {
+                  "type": "StringLiteral",
+                  "value": "ABCDE"
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "SimpleName",
+                              "value": "print"
+                            },
+                            {
+                              "type": "SimpleName",
+                              "value": "letter"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclarationStatement",
+      "children": [
+        {
+          "type": "VariableDeclarationFragment",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread1"
+            },
+            {
+              "type": "ClassInstanceCreation",
+              "children": [
+                {
+                  "type": "SimpleName",
+                  "value": "Thread"
+                },
+                {
+                  "type": "SimpleName",
+                  "value": "print_numbers"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclarationStatement",
+      "children": [
+        {
+          "type": "VariableDeclarationFragment",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread2"
+            },
+            {
+              "type": "ClassInstanceCreation",
+              "children": [
+                {
+                  "type": "SimpleName",
+                  "value": "Thread"
+                },
+                {
+                  "type": "SimpleName",
+                  "value": "print_letters"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "children": [
+        {
+          "type": "MethodInvocation",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread1"
+            },
+            {
+              "type": "SimpleName",
+              "value": "start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "children": [
+        {
+          "type": "MethodInvocation",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread2"
+            },
+            {
+              "type": "SimpleName",
+              "value": "start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "children": [
+        {
+          "type": "MethodInvocation",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread1"
+            },
+            {
+              "type": "SimpleName",
+              "value": "join"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "children": [
+        {
+          "type": "MethodInvocation",
+          "children": [
+            {
+              "type": "SimpleName",
+              "value": "thread2"
+            },
+            {
+              "type": "SimpleName",
+              "value": "join"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

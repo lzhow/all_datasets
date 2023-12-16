@@ -1,0 +1,117 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "int"
+        },
+        {
+          "type": "declarator",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "main"
+            },
+            {
+              "type": "parameter_list",
+              "children": [
+                {
+                  "type": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "init_declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "assignment_expression",
+                      "children": [
+                        {
+                          "type": "constant",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "while_loop",
+              "children": [
+                {
+                  "type": "relational_expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "constant",
+                      "value": "100"
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "a"
+                            },
+                            {
+                              "type": "additive_expression",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "a"
+                                },
+                                {
+                                  "type": "constant",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

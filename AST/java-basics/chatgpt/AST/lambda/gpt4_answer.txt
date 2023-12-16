@@ -1,0 +1,32 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "VariableDeclaration",
+            "value": "numbers",
+            "children": [
+                {
+                    "type": "Type",
+                    "value": "List<Integer>"
+                },
+                {
+                    "type": "VariableInitializer",
+                    "value": "Arrays.asList(1, 2, 3, 4, 5)",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "forEach",
+                            "children": [
+                                {
+                                    "type": "LambdaExpression",
+                                    "value": "n -> System.out.println(n)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "Version",
+          "value": "^0.8.0"
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "ArrayExample"
+        },
+        {
+          "type": "VariableDeclaration",
+          "children": [
+            {
+              "type": "ElementaryTypeName",
+              "value": "uint"
+            },
+            {
+              "type": "ArrayTypeName",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "dynamicArray"
+                }
+              ]
+            },
+            {
+              "type": "StateVariableVisibility",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "VariableDeclaration",
+          "children": [
+            {
+              "type": "ElementaryTypeName",
+              "value": "uint"
+            },
+            {
+              "type": "ArrayTypeName",
+              "children": [
+                {
+                  "type": "Literal",
+                  "value": "5"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "fixedArray"
+                }
+              ]
+            },
+            {
+              "type": "StateVariableVisibility",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "addElement"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "element"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "StateMutability",
+              "value": "public"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "MemberAccess",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "dynamicArray"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "push"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "element"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

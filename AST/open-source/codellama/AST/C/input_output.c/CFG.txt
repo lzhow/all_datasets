@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "char str[100]"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "label": "int i"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "label": "char ch"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "printf(\"Enter a string: \");"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "fgets(str, sizeof(str), stdin);"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "puts(\"You entered: \");"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "puts(str);"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "scanf(\"%d\", &i);"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "while ((getchar()) != '\\n')"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "ch = getchar();"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "putchar(ch);"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "putchar('\\n');"
+    },
+    {
+      "id": 13,
+      "type": "exit",
+      "label": "return 0;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 0,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    }
+  ]
+}

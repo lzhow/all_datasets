@@ -1,0 +1,267 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "stdio.h",
+      "children": []
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "Bubble_sort",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "arr",
+          "children": []
+        },
+        {
+          "type": "Parameter",
+          "value": "size",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Block",
+      "value": "",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "value": "j",
+          "children": []
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "i",
+          "children": []
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "tem",
+          "children": []
+        },
+        {
+          "type": "ForLoop",
+          "value": "",
+          "children": [
+            {
+              "type": "Assignment",
+              "value": "i = 0",
+              "children": []
+            },
+            {
+              "type": "BinaryExpression",
+              "value": "i < size - 1",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i",
+                  "children": []
+                },
+                {
+                  "type": "BinaryOperator",
+                  "value": "<",
+                  "children": []
+                },
+                {
+                  "type": "BinaryExpression",
+                  "value": "size - 1",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "size",
+                      "children": []
+                    },
+                    {
+                      "type": "BinaryOperator",
+                      "value": "-",
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "1",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "value": "",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "count",
+                  "children": []
+                },
+                {
+                  "type": "ForLoop",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "Assignment",
+                      "value": "j = 0",
+                      "children": []
+                    },
+                    {
+                      "type": "BinaryExpression",
+                      "value": "j < size - 1 - i",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j",
+                          "children": []
+                        },
+                        {
+                          "type": "BinaryOperator",
+                          "value": "<",
+                          "children": []
+                        },
+                        {
+                          "type": "BinaryExpression",
+                          "value": "size - 1 - i",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "size",
+                              "children": []
+                            },
+                            {
+                              "type": "BinaryOperator",
+                              "value": "-",
+                              "children": []
+                            },
+                            {
+                              "type": "BinaryExpression",
+                              "value": "i",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "i",
+                                  "children": []
+                                },
+                                {
+                                  "type": "BinaryOperator",
+                                  "value": "-",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "1",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "IfStatement",
+                          "value": "",
+                          "children": [
+                            {
+                              "type": "BinaryExpression",
+                              "value": "arr[j] > arr[j + 1]",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "arr[j]",
+                                  "children": []
+                                },
+                                {
+                                  "type": "BinaryOperator",
+                                  "value": ">",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "arr[j + 1]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Block",
+                              "value": "",
+                              "children": [
+                                {
+                                  "type": "Assignment",
+                                  "value": "tem = arr[j]",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Assignment",
+                                  "value": "arr[j] = arr[j + 1]",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Assignment",
+                                  "value": "arr[j + 1] = tem",
+                                  "children": []
+                                },
+                                {
+                                  "type": "Assignment",
+                                  "value": "count = 1",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "IfStatement",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "BinaryExpression",
+                      "value": "count == 0",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "count",
+                          "children": []
+                        },
+                        {
+                          "type": "BinaryOperator",
+                          "value": "==",
+                          "children": []
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "0",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "BreakStatement",
+                          "value": "",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

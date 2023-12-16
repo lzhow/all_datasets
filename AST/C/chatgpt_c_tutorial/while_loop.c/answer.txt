@@ -1,0 +1,78 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "IncludeDeclaration",
+      "value": "<stdio.h>",
+      "children": []
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "Declaration",
+          "value": "int",
+          "children": [
+            {
+              "type": "VariableDeclarator",
+              "value": "a",
+              "children": [
+                {
+                  "type": "NumericLiteral",
+                  "value": "0",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WhileStatement",
+          "value": "",
+          "children": [
+            {
+              "type": "BinaryExpression",
+              "value": "<",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "a",
+                  "children": []
+                },
+                {
+                  "type": "NumericLiteral",
+                  "value": "100",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "BlockStatement",
+              "value": "",
+              "children": [
+                {
+                  "type": "AssignmentExpression",
+                  "value": "+=",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "NumericLiteral",
+                      "value": "1",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

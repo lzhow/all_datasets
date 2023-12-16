@@ -1,0 +1,324 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "stdio.h"
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "declaration_specifiers",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "declarator",
+          "children": [
+            {
+              "type": "direct_declarator",
+              "value": "main",
+              "children": [
+                {
+                  "type": "parameter_type_list",
+                  "children": [
+                    {
+                      "type": "parameter_declaration",
+                      "children": [
+                        {
+                          "type": "declaration_specifiers",
+                          "children": [
+                            {
+                              "type": "type_specifier",
+                              "value": "void"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "declaration_specifiers",
+                  "children": [
+                    {
+                      "type": "type_specifier",
+                      "value": "unsigned int"
+                    }
+                  ]
+                },
+                {
+                  "type": "init_declarator",
+                  "children": [
+                    {
+                      "type": "declarator",
+                      "children": [
+                        {
+                          "type": "direct_declarator",
+                          "value": "aCount"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "initializer",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "0"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "declaration_specifiers",
+                  "children": [
+                    {
+                      "type": "type_specifier",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "direct_declarator",
+                      "value": "grade"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "iteration_statement",
+              "children": [
+                {
+                  "type": "expression",
+                  "children": [
+                    {
+                      "type": "assignment_expression",
+                      "children": [
+                        {
+                          "type": "primary_expression",
+                          "value": "grade"
+                        },
+                        {
+                          "type": "unary_operator",
+                          "value": "="
+                        },
+                        {
+                          "type": "function_call",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "getchar"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "selection_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "grade"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "case_statement",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "'a'"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "compound_statement",
+                          "children": [
+                            {
+                              "type": "expression_statement",
+                              "children": [
+                                {
+                                  "type": "expression",
+                                  "children": [
+                                    {
+                                      "type": "unary_operator",
+                                      "value": "++"
+                                    },
+                                    {
+                                      "type": "primary_expression",
+                                      "value": "aCount"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "jump_statement",
+                              "children": [
+                                {
+                                  "type": "keyword",
+                                  "value": "break"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "selection_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "grade"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "case_statement",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "'b'"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "compound_statement",
+                          "children": [
+                            {
+                              "type": "expression_statement",
+                              "children": [
+                                {
+                                  "type": "expression",
+                                  "children": [
+                                    {
+                                      "type": "function_call",
+                                      "children": [
+                                        {
+                                          "type": "primary_expression",
+                                          "value": "printf"
+                                        },
+                                        {
+                                          "type": "argument_expression_list",
+                                          "children": [
+                                            {
+                                              "type": "primary_expression",
+                                              "value": "\"%d\\n\""
+                                            },
+                                            {
+                                              "type": "primary_expression",
+                                              "value": "aCount"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "selection_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "grade"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "case_statement",
+                          "children": [
+                            {
+                              "type": "primary_expression",
+                              "value": "'c'"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "compound_statement",
+                          "children": [
+                            {
+                              "type": "expression_statement",
+                              "children": [
+                                {
+                                  "type": "expression",
+                                  "children": [
+                                    {
+                                      "type": "unary_operator",
+                                      "value": "--"
+                                    },
+                                    {
+                                      "type": "primary_expression",
+                                      "value": "aCount"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "default_statement"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "preprocessor_directive",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "declaration",
+      "value": "int",
+      "children": [
+        {
+          "type": "identifier",
+          "value": "main",
+          "children": []
+        },
+        {
+          "type": "parameter_list",
+          "value": "(void)",
+          "children": [
+            {
+              "type": "parameter_declaration",
+              "value": "void",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "compound_statement",
+      "value": "{",
+      "children": [
+        {
+          "type": "declaration",
+          "value": "float",
+          "children": [
+            {
+              "type": "array_declarator",
+              "value": "[",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "arr",
+                  "children": []
+                },
+                {
+                  "type": "constant_expression",
+                  "value": "3",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expression_statement",
+          "value": ";",
+          "children": [
+            {
+              "type": "assignment_expression",
+              "value": "=",
+              "children": [
+                {
+                  "type": "array_subscript_expression",
+                  "value": "[",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "arr",
+                      "children": []
+                    },
+                    {
+                      "type": "constant_expression",
+                      "value": "0",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "assignment_operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "constant_expression",
+                  "value": "1",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "declaration",
+          "value": "int",
+          "children": [
+            {
+              "type": "array_declarator",
+              "value": "[",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "mul_arr",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "value": "COL",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "initializer_list",
+              "value": "=",
+              "children": [
+                {
+                  "type": "initializer_list",
+                  "value": "{",
+                  "children": [
+                    {
+                      "type": "initializer_list",
+                      "value": "{",
+                      "children": [
+                        {
+                          "type": "constant_expression",
+                          "value": "1",
+                          "children": []
+                        },
+                        {
+                          "type": "constant_expression",
+                          "value": "2",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "initializer_list",
+                      "value": ",",
+                      "children": [
+                        {
+                          "type": "constant_expression",
+                          "value": "3",
+                          "children": []
+                        },
+                        {
+                          "type": "constant_expression",
+                          "value": "4",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "declaration",
+          "value": "static",
+          "children": [
+            {
+              "type": "array_declarator",
+              "value": "[",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "array",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "initializer_list",
+              "value": "=",
+              "children": [
+                {
+                  "type": "initializer_list",
+                  "value": "{",
+                  "children": [
+                    {
+                      "type": "constant_expression",
+                      "value": "12",
+                      "children": []
+                    },
+                    {
+                      "type": "constant_expression",
+                      "value": "23",
+                      "children": []
+                    },
+                    {
+                      "type": "constant_expression",
+                      "value": "54",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "return_statement",
+          "value": "return",
+          "children": [
+            {
+              "type": "constant_expression",
+              "value": "0",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

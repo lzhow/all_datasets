@@ -1,0 +1,23 @@
+You are a Solidtiy Abstract Syntax Tree (AST) parser. I will give you a Solidtiy code file. You give me its AST in Json format. Each AST node only has two attributes, type and value.
+    
+    The input file is 
+    ```
+    pragma solidity >=0.4.22 <0.9.0;
+
+contract P {
+    address public s;
+
+    modifier mm() { 
+        require(
+            msg.sender == s,
+            "not"
+        );
+        _;
+    }
+
+    function f() public view mm { 
+        uint a = 10;
+    }
+}
+    ```
+    

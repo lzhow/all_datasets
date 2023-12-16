@@ -1,0 +1,92 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionPrototype",
+            "value": "copy",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "s1",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "char * const"
+                        }
+                    ]
+                },
+                {
+                    "type": "Parameter",
+                    "value": "s2",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "char * const"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "FunctionDeclaration",
+            "value": "copy",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "s1",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "char * const"
+                        }
+                    ]
+                },
+                {
+                    "type": "Parameter",
+                    "value": "s2",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "char * const"
+                        }
+                    ]
+                },
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "size_t"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "s2[i] = s1[1]",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "(s2[i] = s1[1]) != '\\0'"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "UpdateExpression",
+                            "value": "++i"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

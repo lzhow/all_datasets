@@ -1,0 +1,169 @@
+{
+  "main": [
+    {
+      "node_id": 1,
+      "node_name": "main",
+      "node_type": "function_decl",
+      "edges": [
+        {
+          "edge_type": "AST",
+          "target_id": 2
+        }
+      ]
+    },
+    {
+      "node_id": 2,
+      "node_name": "n",
+      "node_type": "var_decl",
+      "edges": []
+    },
+    {
+      "node_id": 3,
+      "node_name": "scanf",
+      "node_type": "function_call",
+      "edges": [
+        {
+          "edge_type": "argument",
+          "target_id": 4
+        },
+        {
+          "edge_type": "argument",
+          "target_id": 5
+        }
+      ]
+    },
+    {
+      "node_id": 4,
+      "node_name": "%d",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 5,
+      "node_name": "&n",
+      "node_type": "address",
+      "edges": [
+        {
+          "edge_type": "indirect_access",
+          "target_id": 2
+        }
+      ]
+    },
+    {
+      "node_id": 6,
+      "node_name": "n>0",
+      "node_type": "binary_op",
+      "edges": [
+        {
+          "edge_type": "left_operand",
+          "target_id": 2
+        },
+        {
+          "edge_type": "right_operand",
+          "target_id": 7
+        }
+      ]
+    },
+    {
+      "node_id": 7,
+      "node_name": "0",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 8,
+      "node_name": "printf",
+      "node_type": "function_call",
+      "edges": [
+        {
+          "edge_type": "argument",
+          "target_id": 9
+        }
+      ]
+    },
+    {
+      "node_id": 9,
+      "node_name": "large\\n",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 10,
+      "node_name": "n>-5",
+      "node_type": "binary_op",
+      "edges": [
+        {
+          "edge_type": "left_operand",
+          "target_id": 2
+        },
+        {
+          "edge_type": "right_operand",
+          "target_id": 11
+        }
+      ]
+    },
+    {
+      "node_id": 11,
+      "node_name": "-5",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 12,
+      "node_name": "else",
+      "node_type": "conditional_block",
+      "edges": [
+        {
+          "edge_type": "condition",
+          "target_id": 10
+        }
+      ]
+    },
+    {
+      "node_id": 13,
+      "node_name": "printf",
+      "node_type": "function_call",
+      "edges": [
+        {
+          "edge_type": "argument",
+          "target_id": 14
+        }
+      ]
+    },
+    {
+      "node_id": 14,
+      "node_name": "mid\\n",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 15,
+      "node_name": "else",
+      "node_type": "conditional_block",
+      "edges": []
+    },
+    {
+      "node_id": 16,
+      "node_name": "printf",
+      "node_type": "function_call",
+      "edges": [
+        {
+          "edge_type": "argument",
+          "target_id": 17
+        }
+      ]
+    },
+    {
+      "node_id": 17,
+      "node_name": "small\\n",
+      "node_type": "literal",
+      "edges": []
+    },
+    {
+      "node_id": 18,
+      "node_name": "return",
+      "node_type": "return_stmt",
+      "edges": []
+    }
+  ]
+}

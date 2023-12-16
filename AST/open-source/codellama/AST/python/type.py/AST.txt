@@ -1,0 +1,179 @@
+{
+  "type": "Module",
+  "children": [
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "str_val"
+        },
+        {
+          "type": "Str",
+          "value": "123"
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "int_val"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "int"
+            },
+            {
+              "type": "Name",
+              "value": "str_val"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "int_val"
+        },
+        {
+          "type": "Num",
+          "value": 42
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "float_val"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "float"
+            },
+            {
+              "type": "Name",
+              "value": "int_val"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "float_val"
+        },
+        {
+          "type": "Num",
+          "value": 3.14
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "str_val"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "str"
+            },
+            {
+              "type": "Name",
+              "value": "float_val"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "list_val"
+        },
+        {
+          "type": "List",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Num",
+              "value": 2
+            },
+            {
+              "type": "Num",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "tuple_val"
+        },
+        {
+          "type": "Call",
+          "children": [
+            {
+              "type": "Name",
+              "value": "tuple"
+            },
+            {
+              "type": "Name",
+              "value": "list_val"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Print",
+      "children": [
+        {
+          "type": "Str",
+          "value": "list "
+        },
+        {
+          "type": "Name",
+          "value": "list_val"
+        },
+        {
+          "type": "Str",
+          "value": " => tuple: "
+        },
+        {
+          "type": "Name",
+          "value": "tuple_val"
+        }
+      ]
+    }
+  ]
+}

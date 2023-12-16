@@ -1,0 +1,344 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "LinkedList"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "Queue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "QueueExample"
+        },
+        {
+          "type": "MethodDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "FormalParameterList",
+              "children": [
+                {
+                  "type": "FormalParameter",
+                  "children": [
+                    {
+                      "type": "ArrayType",
+                      "children": [
+                        {
+                          "type": "PrimitiveType",
+                          "value": "String"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "args"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "children": [
+                            {
+                              "type": "ParameterizedType",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "Queue"
+                                },
+                                {
+                                  "type": "TypeArgument",
+                                  "children": [
+                                    {
+                                      "type": "PrimitiveType",
+                                      "value": "Integer"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "queue"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "queue"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "offer"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "queue"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "offer"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Literal",
+                                  "value": "2"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "queue"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "offer"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Literal",
+                                  "value": "3"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "System"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "out"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "println"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "BinaryExpression",
+                                  "children": [
+                                    {
+                                      "type": "Literal",
+                                      "value": "top of the queue "
+                                    },
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "queue"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "peek"
+                                        },
+                                        {
+                                          "type": "ArgumentList"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "WhileStatement",
+                      "children": [
+                        {
+                          "type": "UnaryExpression",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "queue"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "isEmpty"
+                                },
+                                {
+                                  "type": "ArgumentList"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "println"
+                                    },
+                                    {
+                                      "type": "ArgumentList",
+                                      "children": [
+                                        {
+                                          "type": "MethodInvocation",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "queue"
+                                            },
+                                            {
+                                              "type": "Identifier",
+                                              "value": "poll"
+                                            },
+                                            {
+                                              "type": "ArgumentList"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

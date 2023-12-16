@@ -1,0 +1,145 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity ^0.5.0",
+      "children": []
+    },
+    {
+      "type": "LibraryDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "S",
+          "children": []
+        },
+        {
+          "type": "FunctionDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "TypeName",
+                      "children": [
+                        {
+                          "type": "ElementaryTypeName",
+                          "value": "uint",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "d",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ModifierList",
+              "children": [
+                {
+                  "type": "ModifierInvocation",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "pure",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "AssemblyBlock",
+                      "children": [
+                        {
+                          "type": "AssemblyItem",
+                          "children": [
+                            {
+                              "type": "AssemblyCall",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "o",
+                                  "children": []
+                                },
+                                {
+                                  "type": "AssemblyCall",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "add",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "AssemblyCall",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "mload",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "AssemblyCall",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "add",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "AssemblyCall",
+                                              "children": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "value": "d",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "AssemblyNumber",
+                                                  "value": "0x20",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

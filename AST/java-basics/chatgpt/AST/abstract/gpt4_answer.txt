@@ -1,0 +1,62 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "Shape",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "draw",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "Circle",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "draw",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "StringLiteral",
+                                    "value": "Drawing a circle",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "shape",
+            "children": [
+                {
+                    "type": "ClassInstanceCreation",
+                    "value": "Circle",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "draw",
+            "children": [
+                {
+                    "type": "Variable",
+                    "value": "shape",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

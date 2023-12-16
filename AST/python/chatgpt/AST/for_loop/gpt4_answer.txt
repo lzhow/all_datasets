@@ -1,0 +1,84 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionDeclaration",
+            "value": "forloop",
+            "children": [
+                {
+                    "type": "VariableDeclaration",
+                    "value": "cdic",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "dict"
+                        },
+                        {
+                            "type": "VariableInitializer",
+                            "value": "{\"a\": 3, \"b\": 2, \"c\": 1}"
+                        }
+                    ]
+                },
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "x"
+                        },
+                        {
+                            "type": "Iterable",
+                            "value": "cdic"
+                        },
+                        {
+                            "type": "Block",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "IfStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "RelationalExpression",
+                                            "value": "x == \"d\""
+                                        },
+                                        {
+                                            "type": "BreakStatement",
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ForStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "VariableDeclaration",
+                                            "value": "y"
+                                        },
+                                        {
+                                            "type": "RangeExpression",
+                                            "value": "range(2, 3)"
+                                        },
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "print",
+                                            "children": [
+                                                {
+                                                    "type": "Argument",
+                                                    "value": "x, y"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

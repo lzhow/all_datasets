@@ -1,0 +1,92 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "A",
+            "children": [
+                {
+                    "type": "FieldDeclaration",
+                    "value": "m",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "String"
+                        },
+                        {
+                            "type": "VariableInitializer",
+                            "value": "\"A\""
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "p",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "printl",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"A\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "B",
+            "children": [
+                {
+                    "type": "FieldDeclaration",
+                    "value": "n",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "String"
+                        },
+                        {
+                            "type": "VariableInitializer",
+                            "value": "\"B\""
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "b",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "B"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new B()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "p",
+                            "children": [
+                                {
+                                    "type": "Target",
+                                    "value": "b"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

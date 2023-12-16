@@ -1,0 +1,165 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "stdio.h"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "f",
+      "children": [
+        {
+          "type": "TypeSpecifier",
+          "value": "unsigned int"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "unsigned int"
+            },
+            {
+              "type": "Identifier",
+              "value": "l"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "f",
+      "children": [
+        {
+          "type": "TypeSpecifier",
+          "value": "unsigned int"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "unsigned int"
+            },
+            {
+              "type": "Identifier",
+              "value": "l"
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "s"
+                }
+              ]
+            },
+            {
+              "type": "AssignmentExpression",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s"
+                },
+                {
+                  "type": "Constant",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "type": "ForLoop",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "TypeSpecifier",
+                      "value": "unsigned int"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    }
+                  ]
+                },
+                {
+                  "type": "BinaryExpression",
+                  "value": "<=",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "l"
+                    }
+                  ]
+                },
+                {
+                  "type": "AssignmentExpression",
+                  "value": "+=",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    },
+                    {
+                      "type": "Constant",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "AssignmentExpression",
+                          "value": "+=",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "s"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.8.0",
+            "children": []
+        },
+        {
+            "type": "LibraryDeclaration",
+            "value": "Math",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "add",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "x",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "y",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "internal"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "ReturnParameter",
+                            "value": "uint"
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "x + y"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "UsingMath",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "testAdd",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "_a",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "_b",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "ReturnParameter",
+                            "value": "uint"
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "Math.add",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "_a"
+                                },
+                                {
+                                    "type": "Argument",
+                                    "value": "_b"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

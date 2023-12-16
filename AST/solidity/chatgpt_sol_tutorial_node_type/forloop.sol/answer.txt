@@ -1,0 +1,145 @@
+{
+    "type": "SourceUnit",
+    "value": null,
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "^0.5.0",
+            "children": []
+        },
+        {
+            "type": "ContractDefinition",
+            "value": "S",
+            "children": [
+                {
+                    "type": "FunctionDefinition",
+                    "value": "f",
+                    "children": [
+                        {
+                            "type": "ParameterList",
+                            "value": null,
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "j",
+                                    "children": [
+                                        {
+                                            "type": "ElementaryTypeName",
+                                            "value": "uint",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Block",
+                            "value": null,
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "i",
+                                    "children": [
+                                        {
+                                            "type": "ElementaryTypeName",
+                                            "value": "uint",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ForStatement",
+                                    "value": null,
+                                    "children": [
+                                        {
+                                            "type": "Assignment",
+                                            "value": "=",
+                                            "children": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "value": "j",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Identifier",
+                                                    "value": "_i",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "BinaryOperation",
+                                            "value": "!=",
+                                            "children": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "value": "j",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Literal",
+                                                    "value": 0,
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "UnaryOperation",
+                                            "value": "/=",
+                                            "children": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "value": "j",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Literal",
+                                                    "value": 10,
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Block",
+                                            "value": null,
+                                            "children": [
+                                                {
+                                                    "type": "ExpressionStatement",
+                                                    "value": null,
+                                                    "children": [
+                                                        {
+                                                            "type": "UnaryOperation",
+                                                            "value": "++",
+                                                            "children": [
+                                                                {
+                                                                    "type": "Identifier",
+                                                                    "value": "len",
+                                                                    "children": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ReturnStatement",
+                                    "value": null,
+                                    "children": [
+                                        {
+                                            "type": "Identifier",
+                                            "value": "i",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

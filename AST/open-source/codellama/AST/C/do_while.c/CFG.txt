@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "entry"
+    },
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "int c = 0"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "label": "do"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "printf(\"%d\\n\", c)"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "c++ < 5"
+    },
+    {
+      "id": 5,
+      "type": "exit",
+      "label": "exit"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 5
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "SetExample",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "set",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Set<String>"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new HashSet<>()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "add",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"apple\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "add",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"banana\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "add",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"orange\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "add",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"banana\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ForEachLoop",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "fruit",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "String"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "fruit"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

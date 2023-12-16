@@ -1,0 +1,261 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifiers",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "java_array"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifiers",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Modifier",
+                      "value": "static"
+                    }
+                  ]
+                },
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "FormalParameters",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "value": "String[]"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "args"
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "String[]"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "number"
+                            },
+                            {
+                              "type": "ArrayInitializer",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "1"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "2"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "3"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "4"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "FieldAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "out"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "println"
+                            },
+                            {
+                              "type": "ArrayAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "number"
+                                },
+                                {
+                                  "type": "IntegerLiteral",
+                                  "value": "0"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "int[][]"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "mularray"
+                            },
+                            {
+                              "type": "ArrayInitializer",
+                              "children": [
+                                {
+                                  "type": "ArrayInitializer",
+                                  "children": [
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "1"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "2"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "3"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "ArrayInitializer",
+                                  "children": [
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "5"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "6"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "7"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "FieldAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "out"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "println"
+                            },
+                            {
+                              "type": "ArrayAccess",
+                              "children": [
+                                {
+                                  "type": "ArrayAccess",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "mularray"
+                                    },
+                                    {
+                                      "type": "IntegerLiteral",
+                                      "value": "1"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "IntegerLiteral",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

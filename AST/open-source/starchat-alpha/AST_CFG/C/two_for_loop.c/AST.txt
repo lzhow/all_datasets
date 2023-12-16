@@ -1,0 +1,77 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "preprocessor_directive",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "function_definition",
+      "value": "void Bubble_sort(int arr[], int size)",
+      "children": [
+        {
+          "type": "compound_statement",
+          "value": "{",
+          "children": [
+            {
+              "type": "for_statement",
+              "value": "for (i = 0; i < size - 1; i++)",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "value": "int count = 0;",
+                  "children": []
+                },
+                {
+                  "type": "for_statement",
+                  "value": "for (j = 0; j < size - 1 - i; j++)",
+                  "children": [
+                    {
+                      "type": "if_statement",
+                      "value": "if (arr[j] > arr[j + 1])",
+                      "children": [
+                        {
+                          "type": "expression_statement",
+                          "value": "tem = arr[j];",
+                          "children": []
+                        },
+                        {
+                          "type": "expression_statement",
+                          "value": "arr[j] = arr[j + 1];",
+                          "children": []
+                        },
+                        {
+                          "type": "expression_statement",
+                          "value": "arr[j + 1] = tem;",
+                          "children": []
+                        },
+                        {
+                          "type": "expression_statement",
+                          "value": "count = 1;",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "if_statement",
+                  "value": "if (count == 0)",
+                  "children": [
+                    {
+                      "type": "break_statement",
+                      "value": "break;",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

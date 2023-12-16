@@ -1,0 +1,191 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "function_declaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "void",
+          "value": "void"
+        },
+        {
+          "type": "parameter_list",
+          "children": []
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "numbers"
+                    },
+                    {
+                      "type": "array",
+                      "children": [
+                        {
+                          "type": "constant",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "initializer",
+                  "children": [
+                    {
+                      "type": "initializer_list",
+                      "children": [
+                        {
+                          "type": "constant",
+                          "value": "1"
+                        },
+                        {
+                          "type": "constant",
+                          "value": "2"
+                        },
+                        {
+                          "type": "constant",
+                          "value": "3"
+                        },
+                        {
+                          "type": "constant",
+                          "value": "4"
+                        },
+                        {
+                          "type": "constant",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "pointer",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "ptr"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "initializer",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "numbers"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "function_call",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "argument_list",
+                      "children": [
+                        {
+                          "type": "string_literal",
+                          "value": "%d\\n"
+                        },
+                        {
+                          "type": "dereference",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "ptr"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "postfix_increment",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "ptr"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "function_call",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "argument_list",
+                      "children": [
+                        {
+                          "type": "string_literal",
+                          "value": "%d\\n"
+                        },
+                        {
+                          "type": "dereference",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "ptr"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

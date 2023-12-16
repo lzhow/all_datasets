@@ -1,0 +1,383 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "classDef",
+      "value": "Animal",
+      "children": [
+        {
+          "type": "functionDef",
+          "value": "__init__",
+          "children": [
+            {
+              "type": "parameters",
+              "value": [
+                {
+                  "type": "param",
+                  "value": "self"
+                },
+                {
+                  "type": "param",
+                  "value": "name"
+                },
+                {
+                  "type": "param",
+                  "value": "sound"
+                }
+              ]
+            },
+            {
+              "type": "assign",
+              "value": [
+                {
+                  "type": "attribute",
+                  "value": "self.name"
+                },
+                {
+                  "type": "name",
+                  "value": "name"
+                }
+              ]
+            },
+            {
+              "type": "assign",
+              "value": [
+                {
+                  "type": "attribute",
+                  "value": "self.sound"
+                },
+                {
+                  "type": "name",
+                  "value": "sound"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "functionDef",
+          "value": "make_sound",
+          "children": [
+            {
+              "type": "parameters",
+              "value": [
+                {
+                  "type": "param",
+                  "value": "self"
+                }
+              ]
+            },
+            {
+              "type": "return",
+              "value": {
+                "type": "f-string",
+                "value": [
+                  {
+                    "type": "attribute",
+                    "value": "self.name"
+                  },
+                  {
+                    "type": "string",
+                    "value": " says "
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.sound"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "functionDef",
+          "value": "__repr__",
+          "children": [
+            {
+              "type": "parameters",
+              "value": [
+                {
+                  "type": "param",
+                  "value": "self"
+                }
+              ]
+            },
+            {
+              "type": "return",
+              "value": {
+                "type": "f-string",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "Animal('"
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.name"
+                  },
+                  {
+                    "type": "string",
+                    "value": "', '"
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.sound"
+                  },
+                  {
+                    "type": "string",
+                    "value": "')"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "classDef",
+      "value": "Dog",
+      "children": [
+        {
+          "type": "functionDef",
+          "value": "__init__",
+          "children": [
+            {
+              "type": "parameters",
+              "value": [
+                {
+                  "type": "param",
+                  "value": "self"
+                },
+                {
+                  "type": "param",
+                  "value": "name"
+                },
+                {
+                  "type": "param",
+                  "value": "sound"
+                },
+                {
+                  "type": "param",
+                  "value": "breed"
+                }
+              ]
+            },
+            {
+              "type": "expr",
+              "value": {
+                "type": "call",
+                "value": {
+                  "type": "attribute",
+                  "value": "super().__init__"
+                },
+                "children": [
+                  {
+                    "type": "name",
+                    "value": "name"
+                  },
+                  {
+                    "type": "name",
+                    "value": "sound"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "assign",
+              "value": [
+                {
+                  "type": "attribute",
+                  "value": "self.breed"
+                },
+                {
+                  "type": "name",
+                  "value": "breed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "functionDef",
+          "value": "__repr__",
+          "children": [
+            {
+              "type": "parameters",
+              "value": [
+                {
+                  "type": "param",
+                  "value": "self"
+                }
+              ]
+            },
+            {
+              "type": "return",
+              "value": {
+                "type": "f-string",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "Dog('"
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.name"
+                  },
+                  {
+                    "type": "string",
+                    "value": "', '"
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.sound"
+                  },
+                  {
+                    "type": "string",
+                    "value": "', '"
+                  },
+                  {
+                    "type": "attribute",
+                    "value": "self.breed"
+                  },
+                  {
+                    "type": "string",
+                    "value": "')"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": [
+        {
+          "type": "name",
+          "value": "generic_animal"
+        },
+        {
+          "type": "call",
+          "value": {
+            "type": "attribute",
+            "value": "Animal"
+          },
+          "children": [
+            {
+              "type": "string",
+              "value": "Generic Animal"
+            },
+            {
+              "type": "string",
+              "value": "some sound"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "expr",
+      "value": {
+        "type": "call",
+        "value": {
+          "type": "name",
+          "value": "print"
+        },
+        "children": [
+          {
+            "type": "name",
+            "value": "generic_animal"
+          }
+        ]
+      }
+    },
+    {
+      "type": "expr",
+      "value": {
+        "type": "call",
+        "value": {
+          "type": "attribute",
+          "value": "print"
+        },
+        "children": [
+          {
+            "type": "call",
+            "value": {
+              "type": "attribute",
+              "value": "generic_animal.make_sound"
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "assign",
+      "value": [
+        {
+          "type": "name",
+          "value": "my_dog"
+        },
+        {
+          "type": "call",
+          "value": {
+            "type": "attribute",
+            "value": "Dog"
+          },
+          "children": [
+            {
+              "type": "string",
+              "value": "Rex"
+            },
+            {
+              "type": "string",
+              "value": "Bark"
+            },
+            {
+              "type": "string",
+              "value": "Golden Retriever"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "expr",
+      "value": {
+        "type": "call",
+        "value": {
+          "type": "name",
+          "value": "print"
+        },
+        "children": [
+          {
+            "type": "name",
+            "value": "my_dog"
+          }
+        ]
+      }
+    },
+    {
+      "type": "expr",
+      "value": {
+        "type": "call",
+        "value": {
+          "type": "attribute",
+          "value": "print"
+        },
+        "children": [
+          {
+            "type": "call",
+            "value": {
+              "type": "attribute",
+              "value": "my_dog.make_sound"
+            },
+            "children": []
+          }
+        ]
+      }
+    }
+  ]
+}

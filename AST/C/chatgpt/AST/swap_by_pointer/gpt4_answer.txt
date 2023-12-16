@@ -1,0 +1,60 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "swap",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "a",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int*"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "b",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int*"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "tmp",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "*a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "*a = *b"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "*b = tmp"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

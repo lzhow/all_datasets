@@ -1,0 +1,142 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "int"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "void"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "aCount"
+                },
+                {
+                  "type": "Assignment",
+                  "value": "="
+                },
+                {
+                  "type": "Expression",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "grade"
+                }
+              ]
+            },
+            {
+              "type": "WhileStatement",
+              "children": [
+                {
+                  "type": "Expression",
+                  "value": "grade = getchar() != EOF"
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "SwitchStatement",
+                      "children": [
+                        {
+                          "type": "Expression",
+                          "value": "grade"
+                        },
+                        {
+                          "type": "CaseStatement",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "value": "'a'"
+                            },
+                            {
+                              "type": "Expression",
+                              "value": "++aCount"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CaseStatement",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "value": "'b'"
+                            },
+                            {
+                              "type": "Expression",
+                              "value": "printf(\"%d\\n\", aCount)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CaseStatement",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "value": "'c'"
+                            },
+                            {
+                              "type": "Expression",
+                              "value": "--aCount"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "DefaultStatement",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "value": "break"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

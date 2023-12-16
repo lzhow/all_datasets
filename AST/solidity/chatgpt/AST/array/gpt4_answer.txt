@@ -1,0 +1,75 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.8.0",
+            "children": []
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "ArrayExample",
+            "children": [
+                {
+                    "type": "StateVariableDeclaration",
+                    "value": "dynamicArray",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "uint[]"
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        }
+                    ]
+                },
+                {
+                    "type": "StateVariableDeclaration",
+                    "value": "fixedArray",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "uint[5]"
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "addElement",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "element",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "dynamicArray.push",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "element"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

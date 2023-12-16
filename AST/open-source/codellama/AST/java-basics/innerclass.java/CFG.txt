@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "O"
+    },
+    {
+      "id": 2,
+      "type": "field",
+      "label": "x"
+    },
+    {
+      "id": 3,
+      "type": "class",
+      "label": "I"
+    },
+    {
+      "id": 4,
+      "type": "field",
+      "label": "y"
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "label": "M"
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "label": "main"
+    },
+    {
+      "id": 7,
+      "type": "local",
+      "label": "m"
+    },
+    {
+      "id": 8,
+      "type": "local",
+      "label": "i"
+    },
+    {
+      "id": 9,
+      "type": "method",
+      "label": "InnerClass"
+    },
+    {
+      "id": 10,
+      "type": "method",
+      "label": "println"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 9
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 4
+    },
+    {
+      "source": 10,
+      "target": 4
+    },
+    {
+      "source": 10,
+      "target": 2
+    }
+  ]
+}

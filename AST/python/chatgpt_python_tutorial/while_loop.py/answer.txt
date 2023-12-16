@@ -1,0 +1,149 @@
+{
+  "type": "module",
+  "value": null,
+  "children": [
+    {
+      "type": "functiondef",
+      "value": "whileloop",
+      "children": [
+        {
+          "type": "arguments",
+          "value": null,
+          "children": []
+        },
+        {
+          "type": "assign",
+          "value": null,
+          "children": [
+            {
+              "type": "name",
+              "value": "i",
+              "children": []
+            },
+            {
+              "type": "num",
+              "value": 1,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "while",
+          "value": null,
+          "children": [
+            {
+              "type": "compare",
+              "value": "<",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "i",
+                  "children": []
+                },
+                {
+                  "type": "num",
+                  "value": 6,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "suite",
+              "value": null,
+              "children": [
+                {
+                  "type": "expr",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "call",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "print",
+                          "children": []
+                        },
+                        {
+                          "type": "name",
+                          "value": "i",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "augassign",
+                  "value": "+=",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "i",
+                      "children": []
+                    },
+                    {
+                      "type": "num",
+                      "value": 1,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "if",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "compare",
+                      "value": ">",
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "i",
+                          "children": []
+                        },
+                        {
+                          "type": "num",
+                          "value": 4,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "suite",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "expr",
+                          "value": null,
+                          "children": [
+                            {
+                              "type": "call",
+                              "value": null,
+                              "children": [
+                                {
+                                  "type": "name",
+                                  "value": "print",
+                                  "children": []
+                                },
+                                {
+                                  "type": "str",
+                                  "value": "i is no longer less than 4",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

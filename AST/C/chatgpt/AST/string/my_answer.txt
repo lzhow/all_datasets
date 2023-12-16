@@ -1,0 +1,343 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "IncludeDirective",
+      "value": "<string.h>"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "value": "str1",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "char"
+            },
+            {
+              "type": "ArrayDeclarator",
+              "value": "str1",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "str2",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "char"
+            },
+            {
+              "type": "ArrayDeclarator",
+              "value": "str2",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "str3",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "char"
+            },
+            {
+              "type": "ArrayDeclarator",
+              "value": "str3",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strlen"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "Length of str1: %zu\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strlen",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strcpy and strncpy"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "strcpy",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str3"
+            },
+            {
+              "type": "Identifier",
+              "value": "str1"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "strncpy",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str3"
+            },
+            {
+              "type": "Identifier",
+              "value": "str2"
+            },
+            {
+              "type": "Constant",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "type": "AssignmentExpression",
+          "value": "str3[3] = '\\0'"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "str3 after strncpy: %s\\n"
+            },
+            {
+              "type": "Identifier",
+              "value": "str3"
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strcat and strncat"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "strcat",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str3"
+            },
+            {
+              "type": "Identifier",
+              "value": "str2"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "strncat",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str3"
+            },
+            {
+              "type": "StringLiteral",
+              "value": "\"!!!\""
+            },
+            {
+              "type": "Constant",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "str3 after strncat: %s\\n"
+            },
+            {
+              "type": "Identifier",
+              "value": "str3"
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strcmp and strncmp"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "strcmp(str1, str2): %d\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strcmp",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "str2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "strncmp(str1, str2, 3): %d\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strncmp",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "str2"
+                },
+                {
+                  "type": "Constant",
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strchr and strrchr"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "First occurrence of 'l' in str1: %s\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strchr",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                },
+                {
+                  "type": "Constant",
+                  "value": "'l'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "Last occurrence of 'l' in str1: %s\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strrchr",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                },
+                {
+                  "type": "Constant",
+                  "value": "'l'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "// strstr"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "Substring 'lo' in str1: %s\\n"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "strstr",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str1"
+                },
+                {
+                  "type": "StringLiteral",
+                  "value": "\"lo\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

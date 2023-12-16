@@ -1,0 +1,92 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "HeapExample",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "minHeap",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "PriorityQueue<Integer>"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new PriorityQueue<>()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "offer",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "10"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "offer",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "offer",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "15"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"stack top: \" + minHeap.peek()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "NegationExpression",
+                                    "value": "minHeap.isEmpty()"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "minHeap.poll()"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

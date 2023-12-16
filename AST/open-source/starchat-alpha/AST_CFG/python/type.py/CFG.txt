@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "str_val = \"123\""
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "int_val = int(str_val)"
+    },
+    {
+      "id": 3,
+      "type": "stmt",
+      "label": "int_val = 42"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "float_val = float(int_val)"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "float_val = 3.14"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "str_val = str(float_val)"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "list_val = [1, 2, 3]"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "tuple_val = tuple(list_val)"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "print(f\"list {list_val} => tuple: {tuple_val}\")"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    }
+  ]
+}

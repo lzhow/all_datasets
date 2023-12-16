@@ -1,0 +1,141 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "Version",
+          "value": ">=0.4.22 <0.9.0"
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "P"
+        },
+        {
+          "type": "VariableDeclaration",
+          "children": [
+            {
+              "type": "ElementaryTypeName",
+              "value": "address"
+            },
+            {
+              "type": "Identifier",
+              "value": "public"
+            },
+            {
+              "type": "Identifier",
+              "value": "s"
+            }
+          ]
+        },
+        {
+          "type": "ModifierDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "mm"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "require"
+                        },
+                        {
+                          "type": "BinaryOperation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "msg.sender"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "=="
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "s"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "StringLiteral",
+                          "value": "not"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "PlaceholderStatement",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FunctionDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "f"
+            },
+            {
+              "type": "FunctionModifier",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "public"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "view"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "mm"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "DecimalNumber",
+                      "value": "10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

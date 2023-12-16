@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "pragma",
+      "label": "pragma solidity ^0.8.0;"
+    },
+    {
+      "id": 2,
+      "type": "contract",
+      "label": "contract MappingExample {"
+    },
+    {
+      "id": 3,
+      "type": "mapping",
+      "label": "mapping(address => uint) public balances;"
+    },
+    {
+      "id": 4,
+      "type": "function",
+      "label": "function updateBalance(uint newBalance) public {"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "balances[msg.sender] = newBalance;"
+    },
+    {
+      "id": 6,
+      "type": "endfunction",
+      "label": "}"
+    },
+    {
+      "id": 7,
+      "type": "endcontract",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

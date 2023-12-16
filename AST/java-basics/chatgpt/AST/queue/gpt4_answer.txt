@@ -1,0 +1,98 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "ClassDeclaration",
+                    "value": "QueueExample",
+                    "children": [
+                        {
+                            "type": "MethodDeclaration",
+                            "value": "main",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "queue",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "Queue<Integer>"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "new LinkedList<>()"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "offer",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "offer",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "offer",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"top of the queue \" + queue.peek()"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "WhileStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "NegationExpression",
+                                            "value": "queue.isEmpty()"
+                                        },
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "println",
+                                            "children": [
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "queue.poll()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "Box",
+            "children": [
+                {
+                    "type": "TypeParameter",
+                    "value": "T"
+                },
+                {
+                    "type": "FieldDeclaration",
+                    "value": "t",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "T"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "add",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "t",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "T"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "this.t = t"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "get",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "t"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

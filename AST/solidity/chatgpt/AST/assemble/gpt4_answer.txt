@@ -1,0 +1,55 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.5.0",
+            "children": []
+        },
+        {
+            "type": "LibraryDeclaration",
+            "value": "S",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "a",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "d",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint[] memory"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "ReturnParameter",
+                            "value": "uint o"
+                        },
+                        {
+                            "type": "InlineAssemblyBlock",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "AssemblyAssignment",
+                                    "value": "o := add(o, mload(add(d, 0x20)))"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

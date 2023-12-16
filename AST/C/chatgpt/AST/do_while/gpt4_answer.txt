@@ -1,0 +1,52 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "c",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "DoWhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "printf",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"%d\\n\", c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "c++ < 5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+  "type": "Module",
+  "value": null,
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "ifelse",
+      "children": [
+        {
+          "type": "arguments",
+          "value": null,
+          "children": [
+            {
+              "type": "arg",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "arg",
+              "value": "b",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "Expr",
+          "value": null,
+          "children": [
+            {
+              "type": "IfExp",
+              "value": null,
+              "children": [
+                {
+                  "type": "Compare",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "Gt",
+                      "value": null,
+                      "children": []
+                    },
+                    {
+                      "type": "Name",
+                      "value": "b",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "Call",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "print",
+                      "children": []
+                    },
+                    {
+                      "type": "arguments",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Str",
+                          "value": ">",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "IfExp",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "Compare",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "a",
+                          "children": []
+                        },
+                        {
+                          "type": "Eq",
+                          "value": null,
+                          "children": []
+                        },
+                        {
+                          "type": "Name",
+                          "value": "b",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Call",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "print",
+                          "children": []
+                        },
+                        {
+                          "type": "arguments",
+                          "value": null,
+                          "children": [
+                            {
+                              "type": "Str",
+                              "value": "=",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Call",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "print",
+                          "children": []
+                        },
+                        {
+                          "type": "arguments",
+                          "value": null,
+                          "children": [
+                            {
+                              "type": "Str",
+                              "value": "<",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

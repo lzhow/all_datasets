@@ -1,0 +1,94 @@
+{
+  "type": "Module",
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "trycach",
+      "children": [
+        {
+          "type": "arguments",
+          "children": [
+            {
+              "type": "arg",
+              "value": "x",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "Try",
+          "children": [
+            {
+              "type": "Expr",
+              "children": [
+                {
+                  "type": "Call",
+                  "value": "print",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "x",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "handlers": [
+            {
+              "type": "ExceptHandler",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "NameError",
+                  "children": []
+                }
+              ],
+              "body": [
+                {
+                  "type": "Expr",
+                  "children": [
+                    {
+                      "type": "Call",
+                      "value": "print",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "Variable x is not defined",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExceptHandler",
+              "children": [],
+              "body": [
+                {
+                  "type": "Expr",
+                  "children": [
+                    {
+                      "type": "Call",
+                      "value": "print",
+                      "children": [
+                        {
+                          "type": "Constant",
+                          "value": "Something else went wrong",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

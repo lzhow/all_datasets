@@ -1,0 +1,56 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "file",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "FILE*"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "fopen(\"example.txt\", \"r\")"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "file != NULL"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "fclose",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

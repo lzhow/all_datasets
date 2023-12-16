@@ -1,0 +1,228 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "RedirectionAndPipingExample",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "ps",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "PrintStream"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new PrintStream(new FileOutputStream(\"output.txt\"))"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "setOut",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "ps"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "setIn",
+                            "children": [
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new FileInputStream(\"input.txt\")"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "reader",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "BufferedReader"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new BufferedReader(new InputStreamReader(System.in))"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "readLine"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"read from the file \" + line"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "pout",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "PipedOutputStream"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new PipedOutputStream()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "pin",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "PipedInputStream"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new PipedInputStream()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "connect",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "pin"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "producer",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Thread"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new Thread(() -> {...})",
+                                    "children": [
+                                        {
+                                            "type": "LambdaExpression",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "write",
+                                                    "children": [
+                                                        {
+                                                            "type": "Argument",
+                                                            "value": "\"Hello from one thread to another!\".getBytes()"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "close",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "consumer",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Thread"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new Thread(() -> {...})",
+                                    "children": [
+                                        {
+                                            "type": "LambdaExpression",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "WhileStatement",
+                                                    "value": "",
+                                                    "children": [
+                                                        {
+                                                            "type": "MethodInvocation",
+                                                            "value": "read"
+                                                        },
+                                                        {
+                                                            "type": "MethodInvocation",
+                                                            "value": "print",
+                                                            "children": [
+                                                                {
+                                                                    "type": "Argument",
+                                                                    "value": "(char) data"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "close",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "start",
+                            "children": [
+                                {
+                                    "type": "Target",
+                                    "value": "producer"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "start",
+                            "children": [
+                                {
+                                    "type": "Target",
+                                    "value": "consumer"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

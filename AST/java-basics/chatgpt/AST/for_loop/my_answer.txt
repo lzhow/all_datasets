@@ -1,0 +1,64 @@
+{
+  "type": "class",
+  "value": "for_loop",
+  "children": [
+    {
+      "type": "method",
+      "value": "printArray",
+      "children": [
+        {
+          "type": "parameter",
+          "value": "int arr[]"
+        },
+        {
+          "type": "block",
+          "value": "",
+          "children": [
+            {
+              "type": "for_loop",
+              "value": "",
+              "children": [
+                {
+                  "type": "declaration",
+                  "value": "int i = 0"
+                },
+                {
+                  "type": "condition",
+                  "value": "i < arr.length"
+                },
+                {
+                  "type": "increment",
+                  "value": "i++"
+                },
+                {
+                  "type": "block",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "if_statement",
+                      "value": "i > 9",
+                      "children": [
+                        {
+                          "type": "break_statement",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "value": "System.out.print(arr[i] + \" \")"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression",
+              "value": "System.out.println(\"\")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

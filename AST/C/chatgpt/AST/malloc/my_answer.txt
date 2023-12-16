@@ -1,0 +1,259 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdlib.h>"
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "void"
+        },
+        {
+          "type": "declarator",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "main"
+            },
+            {
+              "type": "parameter_type_list",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "int"
+                },
+                {
+                  "type": "declarator",
+                  "children": [
+                    {
+                      "type": "pointer",
+                      "children": [
+                        {
+                          "type": "type_specifier",
+                          "value": "int"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "ptr"
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "children": [
+                    {
+                      "type": "cast_expression",
+                      "children": [
+                        {
+                          "type": "type_specifier",
+                          "value": "int"
+                        },
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "sizeof_expression",
+                              "children": [
+                                {
+                                  "type": "type_specifier",
+                                  "value": "int"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "assignment_expression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "ptr"
+                        },
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "constant",
+                              "value": "NULL"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "selection_statement",
+              "children": [
+                {
+                  "type": "expression",
+                  "children": [
+                    {
+                      "type": "relational_expression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "ptr"
+                        },
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "constant",
+                              "value": "NULL"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "relational_operator",
+                          "value": "!="
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "assignment_expression",
+                              "children": [
+                                {
+                                  "type": "dereference_expression",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "value": "ptr"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "expression",
+                                  "children": [
+                                    {
+                                      "type": "constant",
+                                      "value": "10"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "function_call",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "printf"
+                                },
+                                {
+                                  "type": "argument_expression_list",
+                                  "children": [
+                                    {
+                                      "type": "expression",
+                                      "children": [
+                                        {
+                                          "type": "string_literal",
+                                          "value": "%d\\n"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "expression",
+                                      "children": [
+                                        {
+                                          "type": "dereference_expression",
+                                          "children": [
+                                            {
+                                              "type": "identifier",
+                                              "value": "ptr"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "expression",
+                          "children": [
+                            {
+                              "type": "function_call",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "free"
+                                },
+                                {
+                                  "type": "argument_expression_list",
+                                  "children": [
+                                    {
+                                      "type": "expression",
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "value": "ptr"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

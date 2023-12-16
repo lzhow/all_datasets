@@ -1,0 +1,197 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: pragma solidity ^0.8.0;
+
+library Math {
+    function add(uint x, uint y) internal pure returns (uint) {
+        return x + y;
+    }
+}
+
+contract UsingMath {
+    function testAdd(uint _a, uint _b) public pure returns (uint) {
+        return Math.add(_a, _b);
+    }
+}
+
+
+    Here's your output:
+
+   {
+    "nodes": [
+        {
+            "id": 0,
+            "label": "UsingMath"
+        },
+        {
+            "id": 1,
+            "label": "Math"
+        },
+        {
+            "id": 2,
+            "label": "add"
+        },
+        {
+            "id": 3,
+            "label": "uint"
+        }
+    ],
+    "edges": [
+        {
+            "from": 0,
+            "to": 1
+        },
+        {
+            "from": 1,
+            "to": 2
+        },
+        {
+            "from": 2,
+            "to": 3
+        },
+        {
+            "from": 2,
+            "to": 3
+        }
+    ]
+}
+
+Please note that the input format may change in the future.<|end|>
+<|assistant|>
+Here is the updated input format:
+
+```
+pragma solidity ^0.8.0;
+
+library Math {
+    function add(uint x, uint y) internal pure returns (uint) {
+        return x + y;
+    }
+}
+
+contract UsingMath {
+    function testAdd(uint _a, uint _b) public pure returns (uint) {
+        return Math.add(_a, _b);
+    }
+}
+```<|end|>
+<|user|>
+Can you please provide me with a more complex example?<|end|>
+<|assistant|>
+Sure, here's a more complex example:
+
+```
+pragma solidity ^0.8.0;
+
+library Math {
+    function add(uint x, uint y) internal pure returns (uint) {
+        return x + y;
+    }
+
+    function multiply(uint x, uint y) internal pure returns (uint) {
+        return x * y;
+    }
+}
+
+contract UsingMath {
+    function testAdd(uint _a, uint _b) public pure returns (uint) {
+        return Math.add(_a, _b);
+    }
+
+    function testMultiply(uint _a, uint _b) public pure returns (uint) {
+        return Math.multiply(_a, _b);
+    }
+}
+```
+
+This program has two library functions, `add` and `multiply`, and two test functions, `testAdd` and `testMultiply`. The call graph for this program is as follows:
+
+```
+UsingMath -> Math.add
+UsingMath -> Math.multiply
+```
+
+Note that the call graph may contain multiple edges between the same two nodes, as in the case of the `testMultiply` function.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a raspberry pi and an esp32? What is better suited for interfacing with a SD card?<|end|>
+<|assistant|>
+The Raspberry Pi is a single-board computer that runs a full-fledged operating system, while the ESP32 is a microcontroller that is typically used for IoT applications. The Raspberry Pi is better suited for interfacing with an SD card as it has a full-fledged operating system and a large number of libraries available for interfacing with various peripherals, including SD cards. The ESP32, on the other hand, is optimized for low-power consumption and limited memory, and may require more effort to interface with an SD card.<|end|>
+<|user|>
+What are some of the advantages of using an ESP32 over a Raspberry Pi?<|end|>
+<|assistant|>
+The ESP32 has a number of advantages over the Raspberry Pi for IoT applications. Some of the key advantages include:
+
+1. Smaller form factor: The ESP32 is much smaller and lighter than the Raspberry Pi, making it ideal for IoT applications that require a small form factor.
+
+2. Lower power consumption: The ESP32 is designed to consume less power compared to the Raspberry Pi, making it suitable for devices that require a long battery life.
+
+3. Faster processing speeds: The ESP32 has a faster CPU and RAM compared to the Raspberry Pi, making it suitable for applications that require high-performance processing.
+
+4. More memory: The ESP32 has more memory compared to the Raspberry Pi, making it suitable for applications that require a large amount of memory for data storage.
+
+5. Wider range of peripherals: The ESP32 has a wider range of peripherals and interfaces compared to the Raspberry Pi, making it easier to interface with various sensors and actuators.
+
+6. Easier programming: The ESP-IDF (Espressif IoT Development Framework) is a popular development framework for the ESP32, making it easier to program compared to the Raspberry Pi.
+
+7. Lower cost: The ESP32 is generally less expensive than the Raspberry Pi, making it an attractive option for IoT projects that require a low cost solution.
+
+Overall, the ESP32 is a great choice for IoT applications that require a small, efficient, and powerful microcontroller.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are typically used for playing basslines, rhythms, and solos

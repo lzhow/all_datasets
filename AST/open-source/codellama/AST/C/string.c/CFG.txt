@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "char str1[20] = \"Hello\";"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "char str2[20] = \"World\";"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "char str3[40];"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "printf(\"Length of str1: %zu\\n\", strlen(str1));"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "strcpy(str3, str1);"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "strncpy(str3, str2, 3);"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "str3[3] = '\\0';"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "printf(\"str3 after strncpy: %s\\n\", str3);"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "strcat(str3, str2);"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "strncat(str3, \"!!!\", 2);"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "printf(\"str3 after strncat: %s\\n\", str3);"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "printf(\"strcmp(str1, str2): %d\\n\", strcmp(str1, str2));"
+    },
+    {
+      "id": 13,
+      "type": "statement",
+      "label": "printf(\"strncmp(str1, str2, 3): %d\\n\", strncmp(str1, str2, 3));"
+    },
+    {
+      "id": 14,
+      "type": "statement",
+      "label": "printf(\"First occurrence of 'l' in str1: %s\\n\", strchr(str1, 'l'));"
+    },
+    {
+      "id": 15,
+      "type": "statement",
+      "label": "printf(\"Last occurrence of 'l' in str1: %s\\n\", strrchr(str1, 'l'));"
+    },
+    {
+      "id": 16,
+      "type": "statement",
+      "label": "printf(\"Substring 'lo' in str1: %s\\n\", strstr(str1, \"lo\"));"
+    },
+    {
+      "id": 17,
+      "type": "exit",
+      "label": "return 0;"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 0,
+      "target": 5
+    },
+    {
+      "source": 0,
+      "target": 6
+    },
+    {
+      "source": 0,
+      "target": 7
+    },
+    {
+      "source": 0,
+      "target": 8
+    },
+    {
+      "source": 0,
+      "target": 9
+    },
+    {
+      "source": 0,
+      "target": 10
+    },
+    {
+      "source": 0,
+      "target": 11
+    },
+    {
+      "source": 0,
+      "target": 12
+    },
+    {
+      "source": 0,
+      "target": 13
+    },
+    {
+      "source": 0,
+      "target": 14
+    },
+    {
+      "source": 0,
+      "target": 15
+    },
+    {
+      "source": 0,
+      "target": 16
+    },
+    {
+      "source": 0,
+      "target": 17
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "str",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "char[100]"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "ch",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "char"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "printf",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Enter a string: \""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "fgets",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "str"
+                                },
+                                {
+                                    "type": "Argument",
+                                    "value": "sizeof(str)"
+                                },
+                                {
+                                    "type": "Argument",
+                                    "value": "stdin"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "puts",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"You entered: \""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "puts",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "str"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "scanf",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"%d\", &i"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "getchar"
+                                },
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "(getchar()) != '\\n'"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "ch = getchar()"
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "putchar",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "ch"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "putchar",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "'\\n'"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

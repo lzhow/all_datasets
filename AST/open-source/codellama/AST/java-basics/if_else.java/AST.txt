@@ -1,0 +1,173 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "class",
+      "value": "if_else",
+      "children": [
+        {
+          "type": "method",
+          "value": "permutation",
+          "children": [
+            {
+              "type": "parameter",
+              "value": "prefix",
+              "children": []
+            },
+            {
+              "type": "parameter",
+              "value": "str",
+              "children": []
+            },
+            {
+              "type": "block",
+              "value": null,
+              "children": [
+                {
+                  "type": "if",
+                  "value": null,
+                  "children": [
+                    {
+                      "type": "binary",
+                      "value": "==",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "n",
+                          "children": []
+                        },
+                        {
+                          "type": "literal",
+                          "value": "0",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "block",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "expression",
+                          "value": null,
+                          "children": [
+                            {
+                              "type": "method",
+                              "value": "println",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "prefix",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "block",
+                      "value": null,
+                      "children": [
+                        {
+                          "type": "for",
+                          "value": null,
+                          "children": [
+                            {
+                              "type": "binary",
+                              "value": "==",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "i",
+                                  "children": []
+                                },
+                                {
+                                  "type": "literal",
+                                  "value": "0",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "binary",
+                              "value": "<",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "n",
+                                  "children": []
+                                },
+                                {
+                                  "type": "literal",
+                                  "value": "0",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "block",
+                              "value": null,
+                              "children": [
+                                {
+                                  "type": "expression",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "type": "method",
+                                      "value": "permutation",
+                                      "children": [
+                                        {
+                                          "type": "binary",
+                                          "value": "+",
+                                          "children": [
+                                            {
+                                              "type": "identifier",
+                                              "value": "prefix",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "identifier",
+                                              "value": "str.charAt(i)",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "binary",
+                                          "value": "+",
+                                          "children": [
+                                            {
+                                              "type": "identifier",
+                                              "value": "str.substring(0, i)",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "identifier",
+                                              "value": "str.substring(i + 1, n)",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

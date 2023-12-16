@@ -1,0 +1,172 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "StringConverter",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "stringToInt",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "str",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "Integer.parseInt(str)"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "stringToDouble",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "str",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "Double.parseDouble(str)"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "stringToLong",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "str",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "Long.parseLong(str)"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "TryBlock",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "intValue",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "stringToInt(\"123\")"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "doubleValue",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "double"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "stringToDouble(\"123.45\")"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "longValue",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "long"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "stringToLong(\"123456789\")"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"Integer: \" + intValue"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"Double: \" + doubleValue"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"Float: \" + longValue"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "CatchBlock",
+                            "value": "NumberFormatException",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"Invalid string format: \" + e.getMessage()"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

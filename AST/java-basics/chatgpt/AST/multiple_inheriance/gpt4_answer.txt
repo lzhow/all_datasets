@@ -1,0 +1,192 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "InterfaceDeclaration",
+            "value": "Flyable",
+            "children": [
+                {
+                    "type": "AbstractMethodDeclaration",
+                    "value": "fly",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "InterfaceDeclaration",
+            "value": "Swimmable",
+            "children": [
+                {
+                    "type": "AbstractMethodDeclaration",
+                    "value": "swim",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "Bird",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "fly",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Bird is flying\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "Fish",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "swim",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Fish is swimming\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "FlyingFish",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "fly",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Flying fish is flying\""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "swim",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Flying fish is swimming\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "bird",
+            "children": [
+                {
+                    "type": "Type",
+                    "value": "Bird"
+                },
+                {
+                    "type": "VariableInitializer",
+                    "value": "new Bird()"
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "fly",
+                    "children": [
+                        {
+                            "type": "Target",
+                            "value": "bird"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "fish",
+            "children": [
+                {
+                    "type": "Type",
+                    "value": "Fish"
+                },
+                {
+                    "type": "VariableInitializer",
+                    "value": "new Fish()"
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "swim",
+                    "children": [
+                        {
+                            "type": "Target",
+                            "value": "fish"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "flyingFish",
+            "children": [
+                {
+                    "type": "Type",
+                    "value": "FlyingFish"
+                },
+                {
+                    "type": "VariableInitializer",
+                    "value": "new FlyingFish()"
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "fly",
+                    "children": [
+                        {
+                            "type": "Target",
+                            "value": "flyingFish"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "swim",
+                    "children": [
+                        {
+                            "type": "Target",
+                            "value": "flyingFish"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

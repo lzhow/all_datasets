@@ -1,0 +1,69 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "Main",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "TryBlock",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "arr",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int[]"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "new int[5]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "ArrayAccess",
+                                            "value": "arr[10]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "CatchBlock",
+                            "value": "ArrayIndexOutOfBoundsException",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"Array Index is Out Of Bounds\""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FinallyBlock",
+                            "value": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

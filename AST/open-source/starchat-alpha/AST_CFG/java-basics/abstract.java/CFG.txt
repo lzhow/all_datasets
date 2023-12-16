@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "public abstract class Shape {"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "public abstract void draw();"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "public class Circle extends Shape {"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "@Override"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "public void draw() {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "System.out.println(\"Drawing a circle\");"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "}"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "Shape shape = new Circle();"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "shape.draw();"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 4,
+      "target": 3
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 8
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 4
+    }
+  ]
+}

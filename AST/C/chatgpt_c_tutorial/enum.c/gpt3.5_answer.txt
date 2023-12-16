@@ -1,0 +1,164 @@
+{
+  "type": "TranslationUnit",
+  "children": [
+    {
+      "type": "IncludeDirective",
+      "children": [
+        {
+          "type": "HeaderName",
+          "value": "stdio.h"
+        }
+      ]
+    },
+    {
+      "type": "EnumDeclaration",
+      "children": [
+        {
+          "type": "EnumSpecifier",
+          "children": [
+            {
+              "type": "EnumName",
+              "value": "Le"
+            },
+            {
+              "type": "EnumeratorList",
+              "children": [
+                {
+                  "type": "Enumerator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "L"
+                    }
+                  ]
+                },
+                {
+                  "type": "Enumerator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "M"
+                    }
+                  ]
+                },
+                {
+                  "type": "Enumerator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "H"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "children": [
+        {
+          "type": "DeclarationSpecifiers",
+          "children": [
+            {
+              "type": "TypeSpecifier",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "Declarator",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "ParameterTypeList"
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "TypeSpecifier",
+                  "value": "enum Le"
+                },
+                {
+                  "type": "InitDeclarator",
+                  "children": [
+                    {
+                      "type": "Declarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "m"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Initializer",
+                      "children": [
+                        {
+                          "type": "Enumerator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "M"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "ArgumentExpressionList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "%d"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "m"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "children": [
+                {
+                  "type": "Constant",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

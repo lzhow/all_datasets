@@ -1,0 +1,95 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "type": "MethodDeclaration",
+          "value": "public static int stringToInt(String str) throws NumberFormatException {"
+        },
+        {
+          "children": [],
+          "type": "MethodDeclaration",
+          "value": "public static double stringToDouble(String str) throws NumberFormatException {"
+        },
+        {
+          "children": [],
+          "type": "MethodDeclaration",
+          "value": "public static long stringToLong(String str) throws NumberFormatException {"
+        }
+      ],
+      "type": "ClassOrInterfaceDeclaration",
+      "value": "public class StringConverter {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "ExpressionStatement",
+              "value": "intValue = stringToInt(\"123\");"
+            },
+            {
+              "children": [],
+              "type": "ExpressionStatement",
+              "value": "doubleValue = stringToDouble(\"123.45\");"
+            },
+            {
+              "children": [],
+              "type": "ExpressionStatement",
+              "value": "longValue = stringToLong(\"123456789\");"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": "System.out.println(\"Integer: \" + intValue);"
+            },
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": "System.out.println(\"Double: \" + doubleValue);"
+            },
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": "System.out.println(\"Float: \" + longValue);"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "try {"
+        },
+        {
+          "children": [],
+          "type": "CatchClause",
+          "value": "} catch (NumberFormatException e) {"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [],
+          "type": "MethodInvocation",
+          "value": "System.out.println(\"Invalid string format: \" + e.getMessage());"
+        },
+        {
+          "children": [],
+          "type": "BlockStatement",
+          "value": "}"
+        }
+      ],
+      "type": "MethodDeclaration",
+      "value": "public static void main(String[] args) {"
+    }
+  ]
+}

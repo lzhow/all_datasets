@@ -1,0 +1,57 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "function_declaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "variable_declaration",
+          "value": "x",
+          "children": [
+            {
+              "type": "literal",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "type": "variable_declaration",
+          "value": "y",
+          "children": [
+            {
+              "type": "literal",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "variable_declaration",
+          "value": "z",
+          "children": [
+            {
+              "type": "binary_expression",
+              "value": "/",
+              "children": [
+                {
+                  "type": "cast_expression",
+                  "value": "float",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "identifier",
+                  "value": "y"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

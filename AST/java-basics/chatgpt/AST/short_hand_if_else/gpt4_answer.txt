@@ -1,0 +1,62 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "ClassDeclaration",
+                    "value": "short_hand_if_else",
+                    "children": [
+                        {
+                            "type": "MethodDeclaration",
+                            "value": "main",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "money",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "args[1]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "result",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "String"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "(money < 18) ? \"Enough.\" : \"Insufficient.\""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "result"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

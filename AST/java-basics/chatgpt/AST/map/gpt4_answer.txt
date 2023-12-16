@@ -1,0 +1,116 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "ClassDeclaration",
+                    "value": "MapExample",
+                    "children": [
+                        {
+                            "type": "MethodDeclaration",
+                            "value": "main",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "map",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "Map<String, Integer>"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "new HashMap<>()"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "put",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"apple\""
+                                        },
+                                        {
+                                            "type": "Argument",
+                                            "value": "5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "put",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"banana\""
+                                        },
+                                        {
+                                            "type": "Argument",
+                                            "value": "3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "put",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"orange\""
+                                        },
+                                        {
+                                            "type": "Argument",
+                                            "value": "8"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "value": "\"amount of apple \" + map.get(\"apple\")"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ForEachLoop",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "VariableDeclaration",
+                                            "value": "entry",
+                                            "children": [
+                                                {
+                                                    "type": "Type",
+                                                    "value": "Map.Entry<String, Integer>"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "println",
+                                            "children": [
+                                                {
+                                                    "type": "BinaryExpression",
+                                                    "value": "entry.getKey() + \": \" + entry.getValue()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

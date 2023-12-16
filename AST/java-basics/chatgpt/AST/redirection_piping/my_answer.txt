@@ -1,0 +1,917 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "io"
+            },
+            {
+              "type": "Identifier",
+              "value": "*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "RedirectionAndPipingExample"
+        },
+        {
+          "type": "MethodDeclaration",
+          "children": [
+            {
+              "type": "Modifiers",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "public"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "static"
+                }
+              ]
+            },
+            {
+              "type": "Identifier",
+              "value": "void"
+            },
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "FormalParameters",
+              "children": [
+                {
+                  "type": "ArrayType",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "String"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "args"
+                }
+              ]
+            },
+            {
+              "type": "ThrowsClause",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "IOException"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "PrintStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "ps"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "PrintStream"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "ClassInstanceCreation",
+                                  "children": [
+                                    {
+                                      "type": "Type",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "FileOutputStream"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": [
+                                        {
+                                          "type": "StringLiteral",
+                                          "value": "output.txt"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "setOut"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "ps"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "setIn"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "ClassInstanceCreation",
+                              "children": [
+                                {
+                                  "type": "Type",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "FileInputStream"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "input.txt"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "BufferedReader"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "reader"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "BufferedReader"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "ClassInstanceCreation",
+                                  "children": [
+                                    {
+                                      "type": "Type",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "InputStreamReader"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": [
+                                        {
+                                          "type": "FieldAccess",
+                                          "children": [
+                                            {
+                                              "type": "Type",
+                                              "children": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "value": "System"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "Identifier",
+                                              "value": "in"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "String"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "line"
+                        },
+                        {
+                          "type": "NullLiteral"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "WhileStatement",
+                  "children": [
+                    {
+                      "type": "ParenthesizedExpression",
+                      "children": [
+                        {
+                          "type": "BinaryExpression",
+                          "children": [
+                            {
+                              "type": "AssignmentExpression",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "line"
+                                },
+                                {
+                                  "type": "AssignmentOperator",
+                                  "value": "="
+                                },
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "reader"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "readLine"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Operator",
+                                      "value": "!="
+                                    },
+                                    {
+                                      "type": "NullLiteral"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "Type",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "System"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "PipedOutputStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "pout"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "PipedOutputStream"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "PipedInputStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "pin"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "PipedInputStream"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "pout"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "connect"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "pin"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "Thread"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "producer"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "Thread"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "LambdaExpression",
+                                  "children": [
+                                    {
+                                      "type": "Block",
+                                      "children": [
+                                        {
+                                          "type": "TryStatement",
+                                          "children": [
+                                            {
+                                              "type": "Block",
+                                              "children": [
+                                                {
+                                                  "type": "ExpressionStatement",
+                                                  "children": [
+                                                    {
+                                                      "type": "MethodInvocation",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "pout"
+                                                        },
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "write"
+                                                        },
+                                                        {
+                                                          "type": "Arguments",
+                                                          "children": [
+                                                            {
+                                                              "type": "MethodInvocation",
+                                                              "children": [
+                                                                {
+                                                                  "type": "StringLiteral",
+                                                                  "value": "Hello from one thread to another!"
+                                                                },
+                                                                {
+                                                                  "type": "Identifier",
+                                                                  "value": "getBytes"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "ExpressionStatement",
+                                                  "children": [
+                                                    {
+                                                      "type": "MethodInvocation",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "pout"
+                                                        },
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "close"
+                                                        },
+                                                        {
+                                                          "type": "Arguments"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "CatchClause",
+                                              "children": [
+                                                {
+                                                  "type": "FormalParameter",
+                                                  "children": [
+                                                    {
+                                                      "type": "Type",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "IOException"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "Identifier",
+                                                      "value": "e"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "Block",
+                                                  "children": [
+                                                    {
+                                                      "type": "ExpressionStatement",
+                                                      "children": [
+                                                        {
+                                                          "type": "MethodInvocation",
+                                                          "children": [
+                                                            {
+                                                              "type": "FieldAccess",
+                                                              "children": [
+                                                                {
+                                                                  "type": "Type",
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "Identifier",
+                                                                      "value": "e"
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "type": "Identifier",
+                                                                  "value": "printStackTrace"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "Arguments"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "Thread"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclarator",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "consumer"
+                        },
+                        {
+                          "type": "ClassInstanceCreation",
+                          "children": [
+                            {
+                              "type": "Type",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "Thread"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "LambdaExpression",
+                                  "children": [
+                                    {
+                                      "type": "Block",
+                                      "children": [
+                                        {
+                                          "type": "TryStatement",
+                                          "children": [
+                                            {
+                                              "type": "Block",
+                                              "children": [
+                                                {
+                                                  "type": "VariableDeclarationStatement",
+                                                  "children": [
+                                                    {
+                                                      "type": "Type",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "int"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "VariableDeclarator",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "data"
+                                                        },
+                                                        {
+                                                          "type": "MethodInvocation",
+                                                          "children": [
+                                                            {
+                                                              "type": "Identifier",
+                                                              "value": "pin"
+                                                            },
+                                                            {
+                                                              "type": "Identifier",
+                                                              "value": "read"
+                                                            },
+                                                            {
+                                                              "type": "Arguments"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "WhileStatement",
+                                                  "children": [
+                                                    {
+                                                      "type": "BinaryExpression",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "data"
+                                                        },
+                                                        {
+                                                          "type": "Operator",
+                                                          "value": "!="
+                                                        },
+                                                        {
+                                                          "type": "IntegerLiteral",
+                                                          "value": "-1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "Block",
+                                                      "children": [
+                                                        {
+                                                          "type": "ExpressionStatement",
+                                                          "children": [
+                                                            {
+                                                              "type": "MethodInvocation",
+                                                              "children": [
+                                                                {
+                                                                  "type": "FieldAccess",
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "Type",
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "Identifier",
+                                                                          "value": "System"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "type": "Identifier",
+                                                                      "value": "out"
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "type": "Identifier",
+                                                                  "value": "print"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "ExpressionStatement",
+                                                          "children": [
+                                                            {
+                                                              "type": "AssignmentExpression",
+                                                              "children": [
+                                                                {
+                                                                  "type": "Identifier",
+                                                                  "value": "data"
+                                                                },
+                                                                {
+                                                                  "type": "AssignmentOperator",
+                                                                  "value": "="
+                                                                },
+                                                                {
+                                                                  "type": "MethodInvocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "Identifier",
+                                                                      "value": "pin"
+                                                                    },
+                                                                    {
+                                                                      "type": "Identifier",
+                                                                      "value": "read"
+                                                                    },
+                                                                    {
+                                                                      "type": "Arguments"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "ExpressionStatement",
+                                                  "children": [
+                                                    {
+                                                      "type": "MethodInvocation",
+                                                      "children": [
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "pin"
+                                                        },
+                                                        {
+                                                          "type": "Identifier",
+                                                          "value": "close"
+                                                        },
+                                                       

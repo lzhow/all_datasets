@@ -1,0 +1,255 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifiers",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "java_switch"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifiers",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Modifier",
+                      "value": "static"
+                    }
+                  ]
+                },
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "FormalParameters",
+                  "children": [
+                    {
+                      "type": "Array",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "String"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "int"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "day"
+                            },
+                            {
+                              "type": "ArrayAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "args"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SwitchStatement",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "day"
+                        },
+                        {
+                          "type": "SwitchBlock",
+                          "children": [
+                            {
+                              "type": "SwitchCase",
+                              "children": [
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "FieldAccess",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "System"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "out"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "println"
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BreakStatement"
+                            },
+                            {
+                              "type": "SwitchCase",
+                              "children": [
+                                {
+                                  "type": "Literal",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "FieldAccess",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "System"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "out"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "println"
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "2"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BreakStatement"
+                            },
+                            {
+                              "type": "SwitchDefault",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "FieldAccess",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "System"
+                                            },
+                                            {
+                                              "type": "Identifier",
+                                              "value": "out"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "println"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": [
+                                            {
+                                              "type": "Literal",
+                                              "value": "default"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "arr",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "float[3]"
+                                },
+                                {
+                                    "type": "ArrayAssignment",
+                                    "value": "arr[0] = 1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "mul_arr",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int[][]"
+                                },
+                                {
+                                    "type": "ArrayInitializer",
+                                    "value": "{{1, 2}, {3, 4}}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "array",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "static int[]"
+                                },
+                                {
+                                    "type": "ArrayInitializer",
+                                    "value": "{12, 23, 54,}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

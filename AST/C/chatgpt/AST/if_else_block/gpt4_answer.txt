@@ -1,0 +1,74 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "n",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "scanf",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"%d\", &n"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "n > 10"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "puts",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"Large\""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ElseBlock",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "puts",
+                                            "children": [
+                                                {
+                                                    "type": "Argument",
+                                                    "value": "\"Small\""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

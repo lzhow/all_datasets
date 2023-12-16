@@ -1,0 +1,43 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "Shape",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "draw",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "value": "Circle",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "draw",
+          "children": [
+            {
+              "type": "Statement",
+              "value": "System.out.println(\"Drawing a circle\");",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Statement",
+      "value": "Shape shape = new Circle();",
+      "children": []
+    },
+    {
+      "type": "Statement",
+      "value": "shape.draw();",
+      "children": []
+    }
+  ]
+}

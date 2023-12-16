@@ -1,0 +1,144 @@
+{
+  "type": "compilationUnit",
+  "children": [
+    {
+      "type": "interfaceDeclaration",
+      "value": "Flyable",
+      "children": [
+        {
+          "type": "methodDeclaration",
+          "value": "fly",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "interfaceDeclaration",
+      "value": "Swimmable",
+      "children": [
+        {
+          "type": "methodDeclaration",
+          "value": "swim",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "classDeclaration",
+      "value": "Bird",
+      "children": [
+        {
+          "type": "implementsClause",
+          "value": "Flyable",
+          "children": []
+        },
+        {
+          "type": "methodDeclaration",
+          "value": "fly",
+          "children": [
+            {
+              "type": "statement",
+              "value": "System.out.println(\"Bird is flying\");",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "classDeclaration",
+      "value": "Fish",
+      "children": [
+        {
+          "type": "implementsClause",
+          "value": "Swimmable",
+          "children": []
+        },
+        {
+          "type": "methodDeclaration",
+          "value": "swim",
+          "children": [
+            {
+              "type": "statement",
+              "value": "System.out.println(\"Fish is swimming\");",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "classDeclaration",
+      "value": "FlyingFish",
+      "children": [
+        {
+          "type": "implementsClause",
+          "value": "Flyable",
+          "children": []
+        },
+        {
+          "type": "implementsClause",
+          "value": "Swimmable",
+          "children": []
+        },
+        {
+          "type": "methodDeclaration",
+          "value": "fly",
+          "children": [
+            {
+              "type": "statement",
+              "value": "System.out.println(\"Flying fish is flying\");",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "methodDeclaration",
+          "value": "swim",
+          "children": [
+            {
+              "type": "statement",
+              "value": "System.out.println(\"Flying fish is swimming\");",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "variableDeclaration",
+      "value": "Bird bird = new Bird();",
+      "children": []
+    },
+    {
+      "type": "expressionStatement",
+      "value": "bird.fly();",
+      "children": []
+    },
+    {
+      "type": "variableDeclaration",
+      "value": "Fish fish = new Fish();",
+      "children": []
+    },
+    {
+      "type": "expressionStatement",
+      "value": "fish.swim();",
+      "children": []
+    },
+    {
+      "type": "variableDeclaration",
+      "value": "FlyingFish flyingFish = new FlyingFish();",
+      "children": []
+    },
+    {
+      "type": "expressionStatement",
+      "value": "flyingFish.fly();",
+      "children": []
+    },
+    {
+      "type": "expressionStatement",
+      "value": "flyingFish.swim();",
+      "children": []
+    }
+  ]
+}

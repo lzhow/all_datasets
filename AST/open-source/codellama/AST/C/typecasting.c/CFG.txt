@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "entry"
+    },
+    {
+      "id": 1,
+      "type": "declaration",
+      "label": "char x = 1"
+    },
+    {
+      "id": 2,
+      "type": "declaration",
+      "label": "char y = 2"
+    },
+    {
+      "id": 3,
+      "type": "declaration",
+      "label": "float z = (float)x / y"
+    },
+    {
+      "id": 4,
+      "type": "exit",
+      "label": "exit"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    }
+  ]
+}

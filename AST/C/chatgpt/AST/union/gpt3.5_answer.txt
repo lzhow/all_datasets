@@ -1,0 +1,86 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "union_definition",
+      "value": "Data",
+      "children": [
+        {
+          "type": "declaration",
+          "value": "i",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "declaration",
+          "value": "f",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "float"
+            }
+          ]
+        },
+        {
+          "type": "declaration",
+          "value": "str",
+          "children": [
+            {
+              "type": "array_type",
+              "value": "20",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "char"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "value": "main",
+      "children": [
+        {
+          "type": "declaration",
+          "value": "data",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "union Data"
+            }
+          ]
+        },
+        {
+          "type": "assignment_expression",
+          "value": "=",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "data"
+            },
+            {
+              "type": "constant",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "type": "return_statement",
+          "children": [
+            {
+              "type": "constant",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

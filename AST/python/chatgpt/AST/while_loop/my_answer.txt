@@ -1,0 +1,120 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "functiondef",
+      "value": "whileloop",
+      "children": [
+        {
+          "type": "assign",
+          "value": "i",
+          "children": [
+            {
+              "type": "num",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "type": "while",
+          "children": [
+            {
+              "type": "compare",
+              "value": "<",
+              "children": [
+                {
+                  "type": "name",
+                  "value": "i"
+                },
+                {
+                  "type": "num",
+                  "value": "6"
+                }
+              ]
+            },
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "print",
+                  "children": [
+                    {
+                      "type": "name",
+                      "value": "i"
+                    }
+                  ]
+                },
+                {
+                  "type": "assign",
+                  "value": "i",
+                  "children": [
+                    {
+                      "type": "binop",
+                      "value": "+=",
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "i"
+                        },
+                        {
+                          "type": "num",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "if",
+                  "children": [
+                    {
+                      "type": "compare",
+                      "value": ">",
+                      "children": [
+                        {
+                          "type": "name",
+                          "value": "i"
+                        },
+                        {
+                          "type": "num",
+                          "value": "4"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "block",
+                      "children": [
+                        {
+                          "type": "break"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "else",
+          "children": [
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "print",
+                  "children": [
+                    {
+                      "type": "str",
+                      "value": "i is no longer less than 4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

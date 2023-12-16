@@ -1,0 +1,246 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Keyword",
+              "value": "void"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "void"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Pointer",
+                  "children": [
+                    {
+                      "type": "Asterisk",
+                      "value": "*"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "ptr"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "AssignmentOperator",
+                      "value": "="
+                    },
+                    {
+                      "type": "CastExpression",
+                      "children": [
+                        {
+                          "type": "Keyword",
+                          "value": "int"
+                        },
+                        {
+                          "type": "Asterisk",
+                          "value": "*"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "malloc"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "Argument",
+                              "children": [
+                                {
+                                  "type": "Keyword",
+                                  "value": "sizeof"
+                                },
+                                {
+                                  "type": "Keyword",
+                                  "value": "int"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "children": [
+                {
+                  "type": "If",
+                  "children": [
+                    {
+                      "type": "Keyword",
+                      "value": "if"
+                    },
+                    {
+                      "type": "Expression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "ptr"
+                        },
+                        {
+                          "type": "RelationalOperator",
+                          "value": "!="
+                        },
+                        {
+                          "type": "Keyword",
+                          "value": "NULL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CompoundStatement",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "ptr"
+                            },
+                            {
+                              "type": "AssignmentOperator",
+                              "value": "="
+                            },
+                            {
+                              "type": "IntegerLiteral",
+                              "value": "10"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "printf"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Argument",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "%d\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Argument",
+                                  "children": [
+                                    {
+                                      "type": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "ptr"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "free"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "Argument",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "ptr"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "while_loop",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "i++ < 6"
+                                },
+                                {
+                                    "type": "IfStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "RelationalExpression",
+                                            "value": "i == 2"
+                                        },
+                                        {
+                                            "type": "ContinueStatement",
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"Hello World\""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

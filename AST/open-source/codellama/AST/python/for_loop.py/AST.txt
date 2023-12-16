@@ -1,0 +1,125 @@
+{
+  "type": "function",
+  "value": "forloop",
+  "children": [
+    {
+      "type": "dictionary",
+      "value": "cdic",
+      "children": [
+        {
+          "type": "key",
+          "value": "a",
+          "children": [
+            {
+              "type": "number",
+              "value": 3,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "key",
+          "value": "b",
+          "children": [
+            {
+              "type": "number",
+              "value": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "key",
+          "value": "c",
+          "children": [
+            {
+              "type": "number",
+              "value": 1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "for",
+      "value": "for x in cdic:",
+      "children": [
+        {
+          "type": "identifier",
+          "value": "x",
+          "children": []
+        },
+        {
+          "type": "identifier",
+          "value": "cdic",
+          "children": []
+        },
+        {
+          "type": "if",
+          "value": "if x == \"d\":",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "x",
+              "children": []
+            },
+            {
+              "type": "string",
+              "value": "d",
+              "children": []
+            },
+            {
+              "type": "break",
+              "value": "break",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "for",
+          "value": "for y in range(2, 3):",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "y",
+              "children": []
+            },
+            {
+              "type": "function",
+              "value": "range",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 2,
+                  "children": []
+                },
+                {
+                  "type": "number",
+                  "value": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "print",
+              "value": "print(x, y)",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "x",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "value": "y",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

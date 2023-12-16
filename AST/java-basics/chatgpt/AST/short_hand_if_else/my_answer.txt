@@ -1,0 +1,183 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifiers",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "short_hand_if_else"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifiers",
+                  "children": [
+                    {
+                      "type": "Modifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Modifier",
+                      "value": "static"
+                    }
+                  ]
+                },
+                {
+                  "type": "Type",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "FormalParameters",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "value": "String[]"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "args"
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "int"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "money"
+                            },
+                            {
+                              "type": "ArrayAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "args"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Type",
+                          "value": "String"
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "result"
+                            },
+                            {
+                              "type": "ConditionalExpression",
+                              "children": [
+                                {
+                                  "type": "LessThan",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "money"
+                                    },
+                                    {
+                                      "type": "Literal",
+                                      "value": "18"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "Enough."
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "Insufficient."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "FieldAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "out"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "println"
+                            },
+                            {
+                              "type": "Arguments",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "result"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

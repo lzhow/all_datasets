@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MethodDeclaration",
+      "label": "public static void permutation(String prefix, String str)"
+    },
+    {
+      "id": 2,
+      "type": "VariableDeclarationStatement",
+      "label": "int n = str.length()"
+    },
+    {
+      "id": 3,
+      "type": "IfStatement",
+      "label": "if (n == 0)"
+    },
+    {
+      "id": 4,
+      "type": "ExpressionStatement",
+      "label": "System.out.println(prefix)"
+    },
+    {
+      "id": 5,
+      "type": "ForStatement",
+      "label": "for (int i = 0; i < n; i++)"
+    },
+    {
+      "id": 6,
+      "type": "MethodInvocationStatement",
+      "label": "permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n))"
+    },
+    {
+      "id": 7,
+      "type": "ExpressionStatement",
+      "label": "System.out.println(prefix)"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

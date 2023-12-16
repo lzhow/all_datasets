@@ -1,0 +1,253 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "preprocessor_directive",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "declaration",
+      "value": "int",
+      "children": [
+        {
+          "type": "identifier",
+          "value": "main",
+          "children": []
+        },
+        {
+          "type": "parameter_list",
+          "value": "()",
+          "children": []
+        },
+        {
+          "type": "compound_statement",
+          "value": "{",
+          "children": [
+            {
+              "type": "declaration",
+              "value": "char",
+              "children": [
+                {
+                  "type": "array_specifier",
+                  "value": "[100]",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "str",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "value": "int",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "i",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "value": "char",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "ch",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "value": "printf",
+              "children": [
+                {
+                  "type": "string_literal",
+                  "value": "Enter a string: ",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "value": "fgets",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "str",
+                  "children": []
+                },
+                {
+                  "type": "constant",
+                  "value": "sizeof",
+                  "children": [
+                    {
+                      "type": "parenthesized_expression",
+                      "value": "(",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "str",
+                          "children": []
+                        },
+                        {
+                          "type": "binary_operator",
+                          "value": "+",
+                          "children": [
+                            {
+                              "type": "constant",
+                              "value": "1",
+                              "children": []
+                            },
+                            {
+                              "type": "parenthesized_expression",
+                              "value": "(",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "sizeof",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "value": "str",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "identifier",
+                  "value": "stdin",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "value": "puts",
+              "children": [
+                {
+                  "type": "string_literal",
+                  "value": "You entered: ",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "value": "puts",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "str",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "value": "scanf",
+              "children": [
+                {
+                  "type": "string_literal",
+                  "value": "%d",
+                  "children": []
+                },
+                {
+                  "type": "unary_operator",
+                  "value": "&",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "i",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "value": "while",
+              "children": [
+                {
+                  "type": "function_call",
+                  "value": "getchar",
+                  "children": []
+                },
+                {
+                  "type": "binary_operator",
+                  "value": "!=",
+                  "children": [
+                    {
+                      "type": "parenthesized_expression",
+                      "value": "(",
+                      "children": [
+                        {
+                          "type": "constant",
+                          "value": "\u2018\n\u2019",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "constant",
+                      "value": "\u2018\n\u2019",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "value": "putchar",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "ch",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "value": "putchar",
+              "children": [
+                {
+                  "type": "constant",
+                  "value": "\u2018\n\u2019",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "return_statement",
+              "value": "return",
+              "children": [
+                {
+                  "type": "constant",
+                  "value": "0",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

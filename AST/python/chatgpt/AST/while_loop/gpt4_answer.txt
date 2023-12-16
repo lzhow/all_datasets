@@ -1,0 +1,82 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionDeclaration",
+            "value": "whileloop",
+            "children": [
+                {
+                    "type": "VariableDeclaration",
+                    "value": "i",
+                    "children": [
+                        {
+                            "type": "VariableInitializer",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "type": "WhileStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "RelationalExpression",
+                            "value": "i < 6"
+                        },
+                        {
+                            "type": "Block",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "print",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "i"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "i += 1"
+                                },
+                                {
+                                    "type": "IfStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "RelationalExpression",
+                                            "value": "i > 4"
+                                        },
+                                        {
+                                            "type": "BreakStatement",
+                                            "value": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ElseBlock",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "print",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"i is no longer less than 4\""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

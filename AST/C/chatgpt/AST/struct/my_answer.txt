@@ -1,0 +1,86 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "struct_declaration",
+      "children": [
+        {
+          "type": "struct",
+          "value": "Person"
+        },
+        {
+          "type": "struct_declaration_list",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "primitive_type",
+                  "value": "char"
+                },
+                {
+                  "type": "array",
+                  "value": "name",
+                  "children": [
+                    {
+                      "type": "constant",
+                      "value": "20"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "primitive_type",
+                  "value": "int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "age"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "declaration",
+      "children": [
+        {
+          "type": "struct",
+          "value": "Person"
+        },
+        {
+          "type": "identifier",
+          "value": "person1"
+        }
+      ]
+    },
+    {
+      "type": "assignment",
+      "children": [
+        {
+          "type": "member_access",
+          "children": [
+            {
+              "type": "identifier",
+              "value": "person1"
+            },
+            {
+              "type": "identifier",
+              "value": "age"
+            }
+          ]
+        },
+        {
+          "type": "constant",
+          "value": "25"
+        }
+      ]
+    }
+  ]
+}

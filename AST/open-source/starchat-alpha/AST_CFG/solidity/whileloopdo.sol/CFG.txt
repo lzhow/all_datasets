@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "pragma solidity ^0.5.0;"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "contract S {"
+    },
+    {
+      "id": 3,
+      "type": "func",
+      "label": "function A(uint j) internal pure  returns (uint) {"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "do {"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "j -= 10;"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "} while (j!= 0);"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "return j;"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    }
+  ]
+}

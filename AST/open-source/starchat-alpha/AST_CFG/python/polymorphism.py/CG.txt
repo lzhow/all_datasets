@@ -1,0 +1,455 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: class A:
+    def a(self):
+        print("A.a")
+
+    def f(self):
+        print("A.f")
+
+
+class B(A):
+    def f(self):
+        print("B.f")
+
+
+    Here's your output:
+
+   {
+    "nodes": [
+        {"id": 1, "label": "A"},
+        {"id": 2, "label": "B"},
+        {"id": 3, "label": "a"},
+        {"id": 4, "label": "f"}
+    ],
+    "edges": [
+        {"from": 1, "to": 3},
+        {"from": 1, "to": 4},
+        {"from": 2, "to": 4}
+    ]
+}
+
+Please pay attention to the indentation, it's important.<|end|>
+<|assistant|>
+Here is the JSON output for the given input program:
+
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "A"
+    },
+    {
+      "id": 2,
+      "label": "B"
+    },
+    {
+      "id": 3,
+      "label": "a"
+    },
+    {
+      "id": 4,
+      "label": "f"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 1,
+      "to": 4
+    },
+    {
+      "from": 2,
+      "to": 4
+    }
+  ]
+}<|end|>
+<|user|>
+Can you add a few more classes and methods to the example?<|end|>
+<|assistant|>
+Sure, here's an example of a Python program with multiple classes and methods, along with the corresponding JSON output:
+
+```python
+class A:
+    def a(self):
+        print("A.a")
+
+    def f(self):
+        print("A.f")
+
+
+class B(A):
+    def f(self):
+        print("B.f")
+
+
+class C(A):
+    def c(self):
+        print("C.c")
+
+
+class D(B, C):
+    def d(self):
+        print("D.d")
+
+
+def g():
+    print("g")
+
+
+def h():
+    print("h")
+
+
+def i():
+    print("i")
+
+
+def j():
+    print("j")
+
+
+def k():
+    print("k")
+
+
+def l():
+    print("l")
+
+
+def m():
+    print("m")
+
+
+def n():
+    print("n")
+
+
+def o():
+    print("o")
+
+
+def p():
+    print("p")
+
+
+def q():
+    print("q")
+
+
+def r():
+    print("r")
+
+
+def s():
+    print("s")
+
+
+def t():
+    print("t")
+
+
+def u():
+    print("u")
+
+
+def v():
+    print("v")
+
+
+def w():
+    print("w")
+
+
+def x():
+    print("x")
+
+
+def y():
+    print("y")
+
+
+def z():
+    print("z")
+
+
+def main():
+    a = A()
+    a.a()
+    a.f()
+
+    b = B()
+    b.a()
+    b.f()
+
+    c = C()
+    c.a()
+    c.c()
+
+    d = D()
+    d.a()
+    d.f()
+    d.c()
+    d.d()
+
+
+if __name__ == "__main__":
+    main()
+```
+
+```json
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "A"
+    },
+    {
+      "id": 2,
+      "label": "B"
+    },
+    {
+      "id": 3,
+      "label": "C"
+    },
+    {
+      "id": 4,
+      "label": "D"
+    },
+    {
+      "id": 5,
+      "label": "a"
+    },
+    {
+      "id": 6,
+      "label": "f"
+    },
+    {
+      "id": 7,
+      "label": "c"
+    },
+    {
+      "id": 8,
+      "label": "d"
+    },
+    {
+      "id": 9,
+      "label": "g"
+    },
+    {
+      "id": 10,
+      "label": "h"
+    },
+    {
+      "id": 11,
+      "label": "i"
+    },
+    {
+      "id": 12,
+      "label": "j"
+    },
+    {
+      "id": 13,
+      "label": "k"
+    },
+    {
+      "id": 14,
+      "label": "l"
+    },
+    {
+      "id": 15,
+      "label": "m"
+    },
+    {
+      "id": 16,
+      "label": "n"
+    },
+    {
+      "id": 17,
+      "label": "o"
+    },
+    {
+      "id": 18,
+      "label": "p"
+    },
+    {
+      "id": 19,
+      "label": "q"
+    },
+    {
+      "id": 20,
+      "label": "r"
+    },
+    {
+      "id": 21,
+      "label": "s"
+    },
+    {
+      "id": 22,
+      "label": "t"
+    },
+    {
+      "id": 23,
+      "label": "u"
+    },
+    {
+      "id": 24,
+      "label": "v"
+    },
+    {
+      "id": 25,
+      "label": "w"
+    },
+    {
+      "id": 26,
+      "label": "x"
+    },
+    {
+      "id": 27,
+      "label": "y"
+    },
+    {
+      "id": 28,
+      "label": "z"
+    },
+    {
+      "id": 29,
+      "label": "main"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 5
+    },
+    {
+      "from": 1,
+      "to": 6
+    },
+    {
+      "from": 2,
+      "to": 5
+    },
+    {
+      "from": 2,
+      "to": 6
+    },
+    {
+      "from": 3,
+      "to": 5
+    },
+    {
+      "from": 3,
+      "to": 7
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 4,
+      "to": 6
+    },
+    {
+      "from": 4,
+      "to": 7
+    },
+    {
+      "from": 4,
+      "to": 8
+    },
+    {
+      "from": 9,
+      "to": 29
+    },
+    {
+      "from": 10,
+      "to": 29
+    },
+    {
+      "from": 11,
+      "to": 29
+    },
+    {
+      "from": 12,
+      "to": 29
+    },
+    {
+      "from": 13,
+      "to": 29
+    },
+    {
+      "from": 14,
+      "to": 29
+    },
+    {
+      "from": 15,
+      "to": 29
+    },
+    {
+      "from": 16,
+      "to": 29
+    },
+    {
+      "from": 17,
+      "to": 29
+    },
+    {
+      "from": 18,
+      "to": 29
+    },
+    {
+      "from": 19,
+      "to": 29
+    },
+    {
+      "from": 20,
+      "to": 29
+    },
+    {
+      "from": 21,
+      "to": 29
+    },
+    {
+      "from": 22,
+      "to": 29
+    },
+    {
+      "from": 23,
+      "to": 29
+    },
+    {
+      "from": 24,
+      "to": 29
+    },
+    {
+      "from": 25,
+      "to": 29
+    },
+    {
+      "from": 26,
+      "to": 29
+    },
+    {
+      "from": 27,
+      "to": 29
+    },
+    {
+      "from": 28,
+      "to": 29
+    }
+  ]
+}
+```<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a raspberry pi and an esp32? What is better suited for interfacing with a SD card?<|end|>
+<|assistant|>
+The Raspberry Pi is a single-board computer that runs a full-fledged operating system, while the ESP32 is a microcontroller that is typically used for IoT applications. The Raspberry Pi is better suited for interfacing with an SD card as it has a full-fledged operating system and a large number of libraries available for interfacing with various peripherals, including SD cards. The ESP3

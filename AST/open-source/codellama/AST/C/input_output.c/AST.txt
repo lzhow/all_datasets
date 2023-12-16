@@ -1,0 +1,274 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "declaration",
+      "children": [
+        {
+          "type": "type",
+          "value": "int"
+        },
+        {
+          "type": "identifier",
+          "value": "main"
+        },
+        {
+          "type": "parameters",
+          "children": []
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "char"
+                },
+                {
+                  "type": "identifier",
+                  "value": "str"
+                },
+                {
+                  "type": "array_size",
+                  "children": [
+                    {
+                      "type": "number",
+                      "value": "100"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "i"
+                }
+              ]
+            },
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "char"
+                },
+                {
+                  "type": "identifier",
+                  "value": "ch"
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "printf"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "string_literal",
+                              "value": "Enter a string: "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "fgets"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "str"
+                            },
+                            {
+                              "type": "number",
+                              "value": "sizeof(str)"
+                            },
+                            {
+                              "type": "identifier",
+                              "value": "stdin"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "puts"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "string_literal",
+                              "value": "You entered: "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "puts"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "str"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "scanf"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "string_literal",
+                              "value": "%d"
+                            },
+                            {
+                              "type": "identifier",
+                              "value": "i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "getchar"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "statement",
+              "children": [
+                {
+                  "type": "expression_statement",
+                  "children": [
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "putchar"
+                        },
+                        {
+                          "type": "arguments",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "ch"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

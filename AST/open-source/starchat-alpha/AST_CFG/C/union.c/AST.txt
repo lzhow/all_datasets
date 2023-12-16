@@ -1,0 +1,148 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "UnionSpecifier",
+      "value": "union",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "Data",
+          "children": []
+        },
+        {
+          "type": "StructDeclarationList",
+          "value": "{",
+          "children": [
+            {
+              "type": "StructDeclaration",
+              "value": "int",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "StructDeclaration",
+              "value": "float",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "f",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "StructDeclaration",
+              "value": "char",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "str",
+                  "children": []
+                },
+                {
+                  "type": "ArraySubscript",
+                  "value": "[",
+                  "children": [
+                    {
+                      "type": "IntegerConstant",
+                      "value": "20",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FunctionDefinition",
+      "value": "int",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "main",
+          "children": []
+        },
+        {
+          "type": "ParameterList",
+          "value": "(",
+          "children": []
+        },
+        {
+          "type": "ParameterList",
+          "value": ")",
+          "children": []
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "DeclarationStatement",
+              "value": "union",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "Data",
+                  "children": []
+                },
+                {
+                  "type": "Identifier",
+                  "value": "data",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": "=",
+              "children": [
+                {
+                  "type": "MemberAccess",
+                  "value": ".",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "data",
+                      "children": []
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "i",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "IntegerConstant",
+                  "value": "10",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "value": "return",
+              "children": [
+                {
+                  "type": "IntegerConstant",
+                  "value": "0",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

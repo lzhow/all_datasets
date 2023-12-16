@@ -1,0 +1,72 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "Typedef",
+                    "value": "Point",
+                    "children": [
+                        {
+                            "type": "StructDeclaration",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "FieldDeclaration",
+                                    "value": "x",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "FieldDeclaration",
+                                    "value": "y",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "a",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Point*"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "(Point *)malloc(sizeof(Point))"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "a->x = 2"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "a->y = 1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

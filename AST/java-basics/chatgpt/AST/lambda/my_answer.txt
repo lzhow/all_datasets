@@ -1,0 +1,124 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedIdentifier",
+          "value": "List"
+        },
+        {
+          "type": "QualifiedIdentifier",
+          "value": "Integer"
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedIdentifier",
+          "value": "Arrays"
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "children": [
+            {
+              "type": "QualifiedIdentifier",
+              "value": "List"
+            },
+            {
+              "type": "QualifiedIdentifier",
+              "value": "Integer"
+            }
+          ],
+          "value": "numbers",
+          "children": [
+            {
+              "type": "MethodInvocation",
+              "children": [
+                {
+                  "type": "QualifiedIdentifier",
+                  "value": "Arrays"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "asList"
+                },
+                {
+                  "type": "Literal",
+                  "value": "1"
+                },
+                {
+                  "type": "Literal",
+                  "value": "2"
+                },
+                {
+                  "type": "Literal",
+                  "value": "3"
+                },
+                {
+                  "type": "Literal",
+                  "value": "4"
+                },
+                {
+                  "type": "Literal",
+                  "value": "5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodInvocation",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "numbers"
+            },
+            {
+              "type": "Identifier",
+              "value": "forEach"
+            },
+            {
+              "type": "LambdaExpression",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "value": "n"
+                },
+                {
+                  "type": "MethodInvocation",
+                  "children": [
+                    {
+                      "type": "QualifiedIdentifier",
+                      "value": "System"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "out"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "println"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "n"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

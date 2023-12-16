@@ -1,0 +1,228 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "FunctionDefinition",
+      "children": [
+        {
+          "type": "Type",
+          "value": "void"
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "CompoundStatement",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "a"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "Number",
+                      "value": "5"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "b"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "Number",
+                      "value": "3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "Assignment",
+                  "children": [
+                    {
+                      "type": "BinaryExpression",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "BinaryOperator",
+                          "value": "&"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "b"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "BinaryExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "BinaryOperator",
+                      "value": "|"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "b"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "BinaryExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "BinaryOperator",
+                      "value": "^"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "b"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "UnaryExpression",
+                  "children": [
+                    {
+                      "type": "UnaryOperator",
+                      "value": "~"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "BinaryExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "BinaryOperator",
+                      "value": "<<"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "result"
+                },
+                {
+                  "type": "BinaryExpression",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "BinaryOperator",
+                      "value": ">>"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

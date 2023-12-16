@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 2,
+      "type": "malloc",
+      "label": "ptr"
+    },
+    {
+      "id": 3,
+      "type": "if",
+      "label": "if (ptr != NULL)"
+    },
+    {
+      "id": 4,
+      "type": "assign",
+      "label": "*ptr = 10"
+    },
+    {
+      "id": 5,
+      "type": "printf",
+      "label": "printf(\"%d\\n\", *ptr)"
+    },
+    {
+      "id": 6,
+      "type": "free",
+      "label": "free(ptr)"
+    },
+    {
+      "id": 7,
+      "type": "exit",
+      "label": "main"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "string",
+      "label": "original_string = \"Hello, Python!\""
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "len"
+    },
+    {
+      "id": 3,
+      "type": "string",
+      "label": "upper_string = original_string.upper()"
+    },
+    {
+      "id": 4,
+      "type": "function",
+      "label": "split"
+    },
+    {
+      "id": 5,
+      "type": "string",
+      "label": "joined_string = \" \".join([\"Joined\", \"string\"])"
+    },
+    {
+      "id": 6,
+      "type": "function",
+      "label": "find"
+    },
+    {
+      "id": 7,
+      "type": "variable",
+      "label": "length"
+    },
+    {
+      "id": 8,
+      "type": "variable",
+      "label": "split_string"
+    },
+    {
+      "id": 9,
+      "type": "variable",
+      "label": "position"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 5
+    },
+    {
+      "source": 2,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8
+    },
+    {
+      "source": 4,
+      "target": 8
+    },
+    {
+      "source": 5,
+      "target": 9
+    },
+    {
+      "source": 6,
+      "target": 9
+    }
+  ]
+}

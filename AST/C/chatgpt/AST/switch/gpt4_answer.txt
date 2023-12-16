@@ -1,0 +1,117 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "aCount",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "unsigned int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "grade",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "Assignment",
+                                    "value": "grade = getchar()",
+                                    "children": [
+                                        {
+                                            "type": "RelationalExpression",
+                                            "value": "(grade = getchar()) != EOF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "SwitchStatement",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "SwitchExpression",
+                                            "value": "grade"
+                                        },
+                                        {
+                                            "type": "Case",
+                                            "value": "'a'",
+                                            "children": [
+                                                {
+                                                    "type": "UpdateExpression",
+                                                    "value": "++aCount"
+                                                },
+                                                {
+                                                    "type": "BreakStatement",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Case",
+                                            "value": "'b'",
+                                            "children": [
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "printf",
+                                                    "children": [
+                                                        {
+                                                            "type": "Argument",
+                                                            "value": "\"%d\\n\", aCount"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Case",
+                                            "value": "'c'",
+                                            "children": [
+                                                {
+                                                    "type": "UpdateExpression",
+                                                    "value": "--aCount"
+                                                },
+                                                {
+                                                    "type": "BreakStatement",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "DefaultCase",
+                                            "value": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

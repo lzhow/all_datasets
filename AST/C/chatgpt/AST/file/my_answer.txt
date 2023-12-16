@@ -1,0 +1,90 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "stdio.h"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "value": "file",
+          "children": [
+            {
+              "type": "Type",
+              "value": "FILE"
+            },
+            {
+              "type": "Assignment",
+              "value": "="
+            },
+            {
+              "type": "FunctionCall",
+              "value": "fopen",
+              "children": [
+                {
+                  "type": "StringLiteral",
+                  "value": "example.txt"
+                },
+                {
+                  "type": "StringLiteral",
+                  "value": "r"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "IfStatement",
+          "children": [
+            {
+              "type": "BinaryExpression",
+              "value": "!=",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "file"
+                },
+                {
+                  "type": "NullLiteral",
+                  "value": "NULL"
+                }
+              ]
+            },
+            {
+              "type": "BlockStatement",
+              "children": [
+                {
+                  "type": "Comment",
+                  "value": "执行文件操作"
+                },
+                {
+                  "type": "FunctionCall",
+                  "value": "fclose",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "file"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ReturnStatement",
+          "children": [
+            {
+              "type": "NumericLiteral",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

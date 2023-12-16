@@ -1,0 +1,434 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+
+        System.out.println("top of the queue " + queue.peek());
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+    }
+}
+
+
+    Here's your output:
+
+   {
+  "nodes": [
+    {
+      "name": "java.util.LinkedList",
+      "type": "class"
+    },
+    {
+      "name": "java.util.Queue",
+      "type": "interface"
+    },
+    {
+      "name": "QueueExample",
+      "type": "class"
+    },
+    {
+      "name": "main",
+      "type": "method"
+    },
+    {
+      "name": "args",
+      "type": "parameter"
+    },
+    {
+      "name": "queue",
+      "type": "variable"
+    },
+    {
+      "name": "offer",
+      "type": "method"
+    },
+    {
+      "name": "1",
+      "type": "literal"
+    },
+    {
+      "name": "2",
+      "type": "literal"
+    },
+    {
+      "name": "3",
+      "type": "literal"
+    },
+    {
+      "name": "peek",
+      "type": "method"
+    },
+    {
+      "name": "isEmpty",
+      "type": "method"
+    },
+    {
+      "name": "poll",
+      "type": "method"
+    },
+    {
+      "name": "System.out.println",
+      "type": "method"
+    },
+    {
+      "name": "top of the queue ",
+      "type": "string"
+    },
+    {
+      "name": "while",
+      "type": "keyword"
+    },
+    {
+      "name": "!queue.isEmpty()",
+      "type": "condition"
+    }
+  ],
+  "edges": [
+    {
+      "from": 3,
+      "to": 0
+    },
+    {
+      "from": 4,
+      "to": 0
+    },
+    {
+      "from": 5,
+      "to": 0
+    },
+    {
+      "from": 6,
+      "to": 1
+    },
+    {
+      "from": 7,
+      "to": 1
+    },
+    {
+      "from": 8,
+      "to": 1
+    },
+    {
+      "from": 9,
+      "to": 2
+    },
+    {
+      "from": 10,
+      "to": 2
+    },
+    {
+      "from": 11,
+      "to": 2
+    },
+    {
+      "from": 12,
+      "to": 3
+    },
+    {
+      "from": 13,
+      "to": 3
+    },
+    {
+      "from": 14,
+      "to": 3
+    },
+    {
+      "from": 15,
+      "to": 4
+    },
+    {
+      "from": 16,
+      "to": 4
+    },
+    {
+      "from": 17,
+      "to": 4
+    },
+    {
+      "from": 18,
+      "to": 5
+    },
+    {
+      "from": 19,
+      "to": 5
+    },
+    {
+      "from": 20,
+      "to": 5
+    },
+    {
+      "from": 21,
+      "to": 6
+    },
+    {
+      "from": 22,
+      "to": 6
+    },
+    {
+      "from": 23,
+      "to": 6
+    },
+    {
+      "from": 24,
+      "to": 7
+    },
+    {
+      "from": 25,
+      "to": 7
+    },
+    {
+      "from": 26,
+      "to": 7
+    },
+    {
+      "from": 27,
+      "to": 8
+    },
+    {
+      "from": 28,
+      "to": 8
+    },
+    {
+      "from": 29,
+      "to": 8
+    },
+    {
+      "from": 30,
+      "to": 9
+    },
+    {
+      "from": 31,
+      "to": 9
+    },
+    {
+      "from": 32,
+      "to": 9
+    },
+    {
+      "from": 33,
+      "to": 10
+    },
+    {
+      "from": 34,
+      "to": 10
+    },
+    {
+      "from": 35,
+      "to": 10
+    },
+    {
+      "from": 36,
+      "to": 11
+    },
+    {
+      "from": 37,
+      "to": 11
+    },
+    {
+      "from": 38,
+      "to": 11
+    },
+    {
+      "from": 39,
+      "to": 12
+    },
+    {
+      "from": 40,
+      "to": 12
+    },
+    {
+      "from": 41,
+      "to": 12
+    },
+    {
+      "from": 42,
+      "to": 13
+    },
+    {
+      "from": 43,
+      "to": 13
+    },
+    {
+      "from": 44,
+      "to": 13
+    },
+    {
+      "from": 45,
+      "to": 14
+    },
+    {
+      "from": 46,
+      "to": 14
+    },
+    {
+      "from": 47,
+      "to": 14
+    },
+    {
+      "from": 48,
+      "to": 15
+    },
+    {
+      "from": 49,
+      "to": 15
+    },
+    {
+      "from": 50,
+      "to": 15
+    },
+    {
+      "from": 51,
+      "to": 16
+    },
+    {
+      "from": 52,
+      "to": 16
+    },
+    {
+      "from": 53,
+      "to": 16
+    },
+    {
+      "from": 54,
+      "to": 17
+    },
+    {
+      "from": 55,
+      "to": 17
+    },
+    {
+      "from": 56,
+      "to": 17
+    },
+    {
+      "from": 57,
+      "to": 18
+    },
+    {
+      "from": 58,
+      "to": 18
+    },
+    {
+      "from": 59,
+      "to": 18
+    },
+    {
+      "from": 60,
+      "to": 19
+    },
+    {
+      "from": 61,
+      "to": 19
+    },
+    {
+      "from": 62,
+      "to": 19
+    },
+    {
+      "from": 63,
+      "to": 20
+    },
+    {
+      "from": 64,
+      "to": 20
+    },
+    {
+      "from": 65,
+      "to": 20
+    },
+    {
+      "from": 66,
+      "to": 21
+    },
+    {
+      "from": 67,
+      "to": 21
+    },
+    {
+      "from": 68,
+      "to": 21
+    },
+    {
+      "from": 69,
+      "to": 22
+    },
+    {
+      "from": 70,
+      "to": 22
+    },
+    {
+      "from": 71,
+      "to": 22
+    },
+    {
+      "from": 72,
+      "to": 23
+    },
+    {
+      "from": 73,
+      "to": 23
+    },
+    {
+      "from": 74,
+      "to": 23
+    },
+    {
+      "from": 75,
+      "to": 24
+    },
+    {
+      "from": 76,
+      "to": 24
+    },
+    {
+      "from": 77,
+      "to": 24
+    },
+    {
+      "from": 78,
+      "to": 25
+    },
+    {
+      "from": 79,
+      "to": 25
+    },
+    {
+      "from": 80,
+      "to": 25
+    },
+    {
+      "from": 81,
+      "to": 26
+    },
+    {
+      "from": 82,
+      "to": 26
+    },
+    {
+      "from": 83,
+      "to": 26
+    },
+    {
+      "from": 84,
+      "to": 27
+    },
+    {
+      "from": 85,
+      "to": 27
+    },
+    {
+      "from": 86,
+      "to": 

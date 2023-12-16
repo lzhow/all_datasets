@@ -1,0 +1,148 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "O",
+      "children": [
+        {
+          "type": "FieldDeclaration",
+          "value": "int x = 10",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "int x = 10",
+              "children": [
+                {
+                  "type": "VariableDeclarator",
+                  "value": "x = 10",
+                  "children": [
+                    {
+                      "type": "VariableInitializer",
+                      "value": "10",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ClassDeclaration",
+          "value": "I",
+          "children": [
+            {
+              "type": "FieldDeclaration",
+              "value": "int y = 5",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "int y = 5",
+                  "children": [
+                    {
+                      "type": "VariableDeclarator",
+                      "value": "y = 5",
+                      "children": [
+                        {
+                          "type": "VariableInitializer",
+                          "value": "5",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "value": "M",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "public static void main(String[] args)",
+          "children": [
+            {
+              "type": "Block",
+              "value": "{\n  O m = new O();\n  O.I i = m.new InnerClass();\n  System.out.println(i.y + m.x);\n}",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "O m = new O()",
+                  "children": [
+                    {
+                      "type": "VariableDeclarator",
+                      "value": "m = new O()",
+                      "children": [
+                        {
+                          "type": "ObjectCreation",
+                          "value": "new O()",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclaration",
+                  "value": "O.I i = m.new InnerClass()",
+                  "children": [
+                    {
+                      "type": "VariableDeclarator",
+                      "value": "i = m.new InnerClass()",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "value": "m.new InnerClass()",
+                          "children": [
+                            {
+                              "type": "FieldAccess",
+                              "value": "m",
+                              "children": []
+                            },
+                            {
+                              "type": "InnerClassCreation",
+                              "value": "new InnerClass()",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "value": "System.out.println(i.y + m.x)",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "value": "System.out.println(i.y + m.x)",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "value": "i.y",
+                          "children": []
+                        },
+                        {
+                          "type": "FieldAccess",
+                          "value": "m.x",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

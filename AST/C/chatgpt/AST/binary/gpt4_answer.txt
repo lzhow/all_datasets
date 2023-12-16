@@ -1,0 +1,80 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "a",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "unsigned int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "b",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "unsigned int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "result",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "unsigned int"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "a & b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "result = a | b"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "result = a ^ b"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "result = ~a"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "result = a << 2"
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "result = a >> 1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [],
+      "type": "ImportDeclaration",
+      "value": "import java.util.PriorityQueue;"
+    },
+    {
+      "children": [],
+      "type": "ClassDeclaration",
+      "value": "public class HeapExample {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "VariableDeclarator",
+              "value": "PriorityQueue<Integer> minHeap"
+            }
+          ],
+          "type": "VariableDeclaration",
+          "value": "="
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "NewExpression",
+              "value": "new PriorityQueue<>()"
+            }
+          ],
+          "type": "ExpressionStatement",
+          "value": ";"
+        }
+      ],
+      "type": "BlockStatement",
+      "value": "{"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "MethodInvocation",
+                  "value": "minHeap.offer(10)"
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "MethodInvocation",
+                  "value": "minHeap.offer(5)"
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "MethodInvocation",
+                  "value": "minHeap.offer(15)"
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": "System.out.println(\"stack top: \" + minHeap.peek())"
+            }
+          ],
+          "type": "ExpressionStatement",
+          "value": ";"
+        }
+      ],
+      "type": "IfStatement",
+      "value": "while (!minHeap.isEmpty()) {"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "MethodInvocation",
+                  "value": "minHeap.poll()"
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "type": "MethodInvocation",
+              "value": "System.out.println(minHeap.poll())"
+            }
+          ],
+          "type": "ExpressionStatement",
+          "value": ";"
+        }
+      ],
+      "type": "IfStatement",
+      "value": "}"
+    }
+  ]
+}

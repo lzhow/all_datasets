@@ -1,0 +1,361 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "HashMap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "Map"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "MapExample"
+        },
+        {
+          "type": "MethodDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "ArrayType",
+                  "children": [
+                    {
+                      "type": "PrimitiveType",
+                      "value": "String"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "args"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "QualifiedName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "Map"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "String"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "Integer"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "map"
+                    },
+                    {
+                      "type": "ClassInstanceCreation",
+                      "children": [
+                        {
+                          "type": "QualifiedName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "HashMap"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "MethodInvocation",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "map"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "put"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "apple"
+                        },
+                        {
+                          "type": "IntegerLiteral",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "MethodInvocation",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "map"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "put"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "banana"
+                        },
+                        {
+                          "type": "IntegerLiteral",
+                          "value": "3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "MethodInvocation",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "map"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "put"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "orange"
+                        },
+                        {
+                          "type": "IntegerLiteral",
+                          "value": "8"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "MethodInvocation",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "System"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "out"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "println"
+                    },
+                    {
+                      "type": "ArgumentList",
+                      "children": [
+                        {
+                          "type": "StringLiteral",
+                          "value": "amount of apple "
+                        },
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "map"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "get"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "apple"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "EnhancedForStatement",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "QualifiedName",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "Map"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "Entry"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "String"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "Integer"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "entry"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "map"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "entrySet"
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "System"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "out"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "println"
+                            },
+                            {
+                              "type": "ArgumentList",
+                              "children": [
+                                {
+                                  "type": "BinaryExpression",
+                                  "children": [
+                                    {
+                                      "type": "BinaryExpression",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "entry"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "getKey"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": ": "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "entry"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "getValue"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

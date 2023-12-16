@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "pragma solidity ^0.8.0;"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "contract ErrorHandling {"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "function testRequire(uint _i) public pure {"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "require(_i > 10, \"Input must be greater than 10\");"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "function testRevert(uint _i) public pure {"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "if (_i <= 10) {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "revert(\"Input must be greater than 10\");"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "function testAssert() public pure {"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "assert(1 == 2); // This will always fail"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 5,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    }
+  ]
+}

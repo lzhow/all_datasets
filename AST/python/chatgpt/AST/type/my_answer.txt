@@ -1,0 +1,187 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "str_val"
+        }
+      ],
+      "value": {
+        "type": "Str",
+        "s": "123"
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "int_val"
+        }
+      ],
+      "value": {
+        "type": "Call",
+        "func": {
+          "type": "Name",
+          "id": "int"
+        },
+        "args": [
+          {
+            "type": "Name",
+            "id": "str_val"
+          }
+        ],
+        "keywords": []
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "int_val"
+        }
+      ],
+      "value": {
+        "type": "Num",
+        "n": 42
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "float_val"
+        }
+      ],
+      "value": {
+        "type": "Call",
+        "func": {
+          "type": "Name",
+          "id": "float"
+        },
+        "args": [
+          {
+            "type": "Name",
+            "id": "int_val"
+          }
+        ],
+        "keywords": []
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "float_val"
+        }
+      ],
+      "value": {
+        "type": "Num",
+        "n": 3.14
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "str_val"
+        }
+      ],
+      "value": {
+        "type": "Call",
+        "func": {
+          "type": "Name",
+          "id": "str"
+        },
+        "args": [
+          {
+            "type": "Name",
+            "id": "float_val"
+          }
+        ],
+        "keywords": []
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "list_val"
+        }
+      ],
+      "value": {
+        "type": "List",
+        "elts": [
+          {
+            "type": "Num",
+            "n": 1
+          },
+          {
+            "type": "Num",
+            "n": 2
+          },
+          {
+            "type": "Num",
+            "n": 3
+          }
+        ],
+        "ctx": {
+          "type": "Load"
+        }
+      }
+    },
+    {
+      "type": "Assign",
+      "targets": [
+        {
+          "type": "Name",
+          "id": "tuple_val"
+        }
+      ],
+      "value": {
+        "type": "Call",
+        "func": {
+          "type": "Name",
+          "id": "tuple"
+        },
+        "args": [
+          {
+            "type": "Name",
+            "id": "list_val"
+          }
+        ],
+        "keywords": []
+      }
+    },
+    {
+      "type": "Expr",
+      "value": {
+        "type": "Call",
+        "func": {
+          "type": "Name",
+          "id": "print"
+        },
+        "args": [
+          {
+            "type": "FormattedValue",
+            "value": {
+              "type": "Str",
+              "s": "list {list_val} => tuple: {tuple_val}"
+            },
+            "conversion": -1,
+            "format_spec": null
+          }
+        ],
+        "keywords": []
+      }
+    }
+  ]
+}

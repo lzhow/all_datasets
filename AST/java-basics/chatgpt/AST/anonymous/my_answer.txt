@@ -1,0 +1,43 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "InterfaceDeclaration",
+      "value": "Greeting",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "greet",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "value": "greeting",
+      "children": [
+        {
+          "type": "AnonymousClassDeclaration",
+          "children": [
+            {
+              "type": "MethodDeclaration",
+              "value": "greet",
+              "children": [
+                {
+                  "type": "Statement",
+                  "value": "System.out.println(\"Hello!\");",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "value": "greeting.greet();",
+      "children": []
+    }
+  ]
+}

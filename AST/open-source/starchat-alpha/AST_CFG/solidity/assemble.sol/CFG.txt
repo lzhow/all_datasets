@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "pragma solidity ^0.5.0;"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "library S {"
+    },
+    {
+      "id": 3,
+      "type": "decl",
+      "label": "function a(uint[] memory d) public pure returns (uint o) {"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "assembly {"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "o := add(o, mload(add(d, 0x20)))"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 3,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    }
+  ]
+}

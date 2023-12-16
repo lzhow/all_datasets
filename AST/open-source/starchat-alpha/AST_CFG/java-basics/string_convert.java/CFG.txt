@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "public class StringConverter {"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "public static int stringToInt(String str) throws NumberFormatException {"
+    },
+    {
+      "id": 3,
+      "type": "stmt",
+      "label": "return Integer.parseInt(str);"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "public static double stringToDouble(String str) throws NumberFormatException {"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "return Double.parseDouble(str);"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "public static long stringToLong(String str) throws NumberFormatException {"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "return Long.parseLong(str);"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "public static void main(String[] args) {"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "try {"
+    },
+    {
+      "id": 10,
+      "type": "stmt",
+      "label": "int intValue = stringToInt(\"123\");"
+    },
+    {
+      "id": 11,
+      "type": "stmt",
+      "label": "double doubleValue = stringToDouble(\"123.45\");"
+    },
+    {
+      "id": 12,
+      "type": "stmt",
+      "label": "long longValue = stringToLong(\"123456789\");"
+    },
+    {
+      "id": 13,
+      "type": "stmt",
+      "label": "System.out.println(\"Integer: \" + intValue);"
+    },
+    {
+      "id": 14,
+      "type": "stmt",
+      "label": "System.out.println(\"Double: \" + doubleValue);"
+    },
+    {
+      "id": 15,
+      "type": "stmt",
+      "label": "System.out.println(\"Float: \" + longValue);"
+    },
+    {
+      "id": 16,
+      "type": "stmt",
+      "label": "} catch (NumberFormatException e) {"
+    },
+    {
+      "id": 17,
+      "type": "stmt",
+      "label": "System.out.println(\"Invalid string format: \" + e.getMessage());"
+    },
+    {
+      "id": 18,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 19,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 8
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 2,
+      "target": 6
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 11
+    },
+    {
+      "source": 9,
+      "target": 12
+    },
+    {
+      "source": 9,
+      "target": 13
+    },
+    {
+      "source": 9,
+      "target": 14
+    },
+    {
+      "source": 9,
+      "target": 15
+    },
+    {
+      "source": 15,
+      "target": 16
+    },
+    {
+      "source": 16,
+      "target": 17
+    }
+  ]
+}

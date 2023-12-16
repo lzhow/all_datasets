@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "pragma solidity ^0.5.0;"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "contract S {"
+    },
+    {
+      "id": 3,
+      "type": "decl",
+      "label": "function f(uint j) internal pure  returns (uint) {"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "uint i;"
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "for (j = _i; j!= 0; j /= 10) {"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "len++;"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "return i;"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8
+    },
+    {
+      "source": 2,
+      "target": 9
+    }
+  ]
+}

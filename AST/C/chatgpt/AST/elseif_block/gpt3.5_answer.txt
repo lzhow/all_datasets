@@ -1,0 +1,89 @@
+{
+  "type": "function",
+  "value": "main",
+  "children": [
+    {
+      "type": "declaration",
+      "value": "n",
+      "children": [
+        {
+          "type": "type",
+          "value": "int",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "input",
+      "value": "scanf",
+      "children": [
+        {
+          "type": "format",
+          "value": "%d",
+          "children": []
+        },
+        {
+          "type": "address",
+          "value": "&n",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "if",
+      "value": "n>0",
+      "children": [
+        {
+          "type": "output",
+          "value": "printf",
+          "children": [
+            {
+              "type": "string",
+              "value": "large",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "else if",
+      "value": "n>-5",
+      "children": [
+        {
+          "type": "output",
+          "value": "printf",
+          "children": [
+            {
+              "type": "string",
+              "value": "mid",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "else",
+      "value": "",
+      "children": [
+        {
+          "type": "output",
+          "value": "print",
+          "children": [
+            {
+              "type": "string",
+              "value": "small",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "return",
+      "value": "",
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "FunctionDeclaration",
+            "value": "trycach",
+            "children": [
+                {
+                    "type": "Parameter",
+                    "value": "x",
+                    "children": []
+                },
+                {
+                    "type": "TryBlock",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "x"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "CatchBlock",
+                    "value": "NameError",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Variable x is not defined\""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "CatchBlock",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Something else went wrong\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

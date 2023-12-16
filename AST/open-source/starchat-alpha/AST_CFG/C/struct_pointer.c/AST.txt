@@ -1,0 +1,99 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "Preprocessor",
+      "value": "#include <stdlib.h>",
+      "children": []
+    },
+    {
+      "type": "Typedef",
+      "value": "typedef struct Point",
+      "children": [
+        {
+          "type": "Struct",
+          "value": "Point",
+          "children": [
+            {
+              "type": "Field",
+              "value": "x",
+              "children": []
+            },
+            {
+              "type": "Field",
+              "value": "y",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Function",
+      "value": "void main()",
+      "children": [
+        {
+          "type": "Declaration",
+          "value": "Point *a",
+          "children": []
+        },
+        {
+          "type": "Assignment",
+          "value": "a",
+          "children": [
+            {
+              "type": "Cast",
+              "value": "(Point *)",
+              "children": [
+                {
+                  "type": "Function",
+                  "value": "malloc",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "sizeof(Point)",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MemberAccess",
+          "value": "a->x",
+          "children": []
+        },
+        {
+          "type": "Assignment",
+          "value": "a->x",
+          "children": [
+            {
+              "type": "Literal",
+              "value": "2",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "MemberAccess",
+          "value": "a->y",
+          "children": []
+        },
+        {
+          "type": "Assignment",
+          "value": "a->y",
+          "children": [
+            {
+              "type": "Literal",
+              "value": "1",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

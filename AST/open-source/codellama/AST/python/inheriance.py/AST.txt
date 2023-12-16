@@ -1,0 +1,251 @@
+{
+  "type": "Module",
+  "children": [
+    {
+      "type": "ClassDef",
+      "children": [
+        {
+          "type": "Name",
+          "value": "Animal"
+        },
+        {
+          "type": "Parameters",
+          "children": [
+            {
+              "type": "Name",
+              "value": "self"
+            },
+            {
+              "type": "Name",
+              "value": "name"
+            },
+            {
+              "type": "Name",
+              "value": "sound"
+            }
+          ]
+        },
+        {
+          "type": "FunctionDef",
+          "children": [
+            {
+              "type": "Name",
+              "value": "__init__"
+            },
+            {
+              "type": "Parameters",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "self"
+                },
+                {
+                  "type": "Name",
+                  "value": "name"
+                },
+                {
+                  "type": "Name",
+                  "value": "sound"
+                }
+              ]
+            },
+            {
+              "type": "FunctionDef",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "make_sound"
+                },
+                {
+                  "type": "Parameters",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "self"
+                    }
+                  ]
+                },
+                {
+                  "type": "Return",
+                  "children": [
+                    {
+                      "type": "BinOp",
+                      "children": [
+                        {
+                          "type": "Attribute",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "self"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "name"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": "says"
+                        },
+                        {
+                          "type": "Attribute",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "self"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "sound"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FunctionDef",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "__repr__"
+                },
+                {
+                  "type": "Parameters",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "self"
+                    }
+                  ]
+                },
+                {
+                  "type": "Return",
+                  "children": [
+                    {
+                      "type": "BinOp",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Animal"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "("
+                        },
+                        {
+                          "type": "BinOp",
+                          "children": [
+                            {
+                              "type": "Attribute",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "self"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "name"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Name",
+                              "value": ","
+                            },
+                            {
+                              "type": "BinOp",
+                              "children": [
+                                {
+                                  "type": "Attribute",
+                                  "children": [
+                                    {
+                                      "type": "Name",
+                                      "value": "self"
+                                    },
+                                    {
+                                      "type": "Name",
+                                      "value": "sound"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": ","
+                                },
+                                {
+                                  "type": "Str",
+                                  "value": "'"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": ")"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDef",
+      "children": [
+        {
+          "type": "Name",
+          "value": "Dog"
+        },
+        {
+          "type": "Parameters",
+          "children": [
+            {
+              "type": "Name",
+              "value": "self"
+            },
+            {
+              "type": "Name",
+              "value": "name"
+            },
+            {
+              "type": "Name",
+              "value": "sound"
+            },
+            {
+              "type": "Name",
+              "value": "breed"
+            }
+          ]
+        },
+        {
+          "type": "FunctionDef",
+          "children": [
+            {
+              "type": "Name",
+              "value": "__init__"
+            },
+            {
+              "type": "Parameters",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

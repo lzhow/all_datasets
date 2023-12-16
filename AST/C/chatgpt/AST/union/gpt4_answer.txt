@@ -1,0 +1,72 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "UnionDeclaration",
+                    "value": "Data",
+                    "children": [
+                        {
+                            "type": "FieldDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FieldDeclaration",
+                            "value": "f",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "float"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FieldDeclaration",
+                            "value": "str",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "char[20]"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "data",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "union Data"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Assignment",
+                            "value": "data.i = 10"
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

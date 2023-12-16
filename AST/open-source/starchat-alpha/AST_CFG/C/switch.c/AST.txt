@@ -1,0 +1,104 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "preprocessor_directive",
+      "value": "#include <stdio.h>",
+      "children": []
+    },
+    {
+      "type": "function_definition",
+      "value": "int main(void)",
+      "children": [
+        {
+          "type": "declaration_statement",
+          "value": "unsigned int aCount = 0;",
+          "children": []
+        },
+        {
+          "type": "empty_statement",
+          "value": ";",
+          "children": []
+        },
+        {
+          "type": "while_statement",
+          "value": "while ((grade = getchar())!= EOF)",
+          "children": [
+            {
+              "type": "declaration_statement",
+              "value": "int grade;",
+              "children": []
+            },
+            {
+              "type": "compound_statement",
+              "value": "{",
+              "children": [
+                {
+                  "type": "switch_statement",
+                  "value": "switch (grade)",
+                  "children": [
+                    {
+                      "type": "case_statement",
+                      "value": "case 'a':",
+                      "children": [
+                        {
+                          "type": "expression_statement",
+                          "value": "++aCount;",
+                          "children": []
+                        },
+                        {
+                          "type": "break_statement",
+                          "value": "break;",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "case_statement",
+                      "value": "case 'b':",
+                      "children": [
+                        {
+                          "type": "expression_statement",
+                          "value": "printf(\"%d\\n\", aCount);",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "case_statement",
+                      "value": "case 'c':",
+                      "children": [
+                        {
+                          "type": "expression_statement",
+                          "value": "--aCount;",
+                          "children": []
+                        },
+                        {
+                          "type": "break_statement",
+                          "value": "break;",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "default_statement",
+                      "value": "default:",
+                      "children": [
+                        {
+                          "type": "break_statement",
+                          "value": "break;",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

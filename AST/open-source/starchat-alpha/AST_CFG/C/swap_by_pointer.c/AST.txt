@@ -1,0 +1,129 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "FunctionDefinition",
+      "value": "void swap(int *a, int *b)",
+      "children": [
+        {
+          "type": "ParameterList",
+          "value": "(int *a, int *b)",
+          "children": [
+            {
+              "type": "Pointer",
+              "value": "int *",
+              "children": [
+                {
+                  "type": "PrimitiveType",
+                  "value": "int",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "Identifier",
+              "value": "a",
+              "children": []
+            },
+            {
+              "type": "Operator",
+              "value": ",",
+              "children": []
+            },
+            {
+              "type": "Pointer",
+              "value": "int *",
+              "children": [
+                {
+                  "type": "PrimitiveType",
+                  "value": "int",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "Identifier",
+              "value": "b",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "int",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "tmp",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "Operator",
+              "value": "=",
+              "children": []
+            },
+            {
+              "type": "Identifier",
+              "value": "*a",
+              "children": []
+            },
+            {
+              "type": "StatementTerminator",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "*a",
+              "children": [
+                {
+                  "type": "Operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "Identifier",
+                  "value": "*b",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "StatementTerminator",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "*b",
+              "children": [
+                {
+                  "type": "Operator",
+                  "value": "=",
+                  "children": []
+                },
+                {
+                  "type": "Identifier",
+                  "value": "tmp",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "StatementTerminator",
+              "value": ";",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

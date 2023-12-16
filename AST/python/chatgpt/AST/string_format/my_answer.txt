@@ -1,0 +1,255 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "assign",
+      "value": "name = \"Alice\"",
+      "children": [
+        {
+          "type": "name",
+          "value": "name"
+        },
+        {
+          "type": "str",
+          "value": "\"Alice\""
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "age = 30",
+      "children": [
+        {
+          "type": "name",
+          "value": "age"
+        },
+        {
+          "type": "num",
+          "value": "30"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "formatted_str1 = \"Hello, %s. You are %d years old.\" % (name, age)",
+      "children": [
+        {
+          "type": "name",
+          "value": "formatted_str1"
+        },
+        {
+          "type": "str",
+          "value": "\"Hello, %s. You are %d years old.\""
+        },
+        {
+          "type": "format",
+          "value": "(name, age)",
+          "children": [
+            {
+              "type": "name",
+              "value": "name"
+            },
+            {
+              "type": "name",
+              "value": "age"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "value": "print(formatted_str1)",
+      "children": [
+        {
+          "type": "name",
+          "value": "print"
+        },
+        {
+          "type": "name",
+          "value": "formatted_str1"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "name = \"Bob\"",
+      "children": [
+        {
+          "type": "name",
+          "value": "name"
+        },
+        {
+          "type": "str",
+          "value": "\"Bob\""
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "age = 25",
+      "children": [
+        {
+          "type": "name",
+          "value": "age"
+        },
+        {
+          "type": "num",
+          "value": "25"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "formatted_str2 = \"Hello, {}. You are {} years old.\".format(name, age)",
+      "children": [
+        {
+          "type": "name",
+          "value": "formatted_str2"
+        },
+        {
+          "type": "str",
+          "value": "\"Hello, {}. You are {} years old.\""
+        },
+        {
+          "type": "format",
+          "value": "(name, age)",
+          "children": [
+            {
+              "type": "name",
+              "value": "name"
+            },
+            {
+              "type": "name",
+              "value": "age"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "value": "print(formatted_str2)",
+      "children": [
+        {
+          "type": "name",
+          "value": "print"
+        },
+        {
+          "type": "name",
+          "value": "formatted_str2"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "name = \"Carol\"",
+      "children": [
+        {
+          "type": "name",
+          "value": "name"
+        },
+        {
+          "type": "str",
+          "value": "\"Carol\""
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "age = 35",
+      "children": [
+        {
+          "type": "name",
+          "value": "age"
+        },
+        {
+          "type": "num",
+          "value": "35"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "formatted_str3 = f\"Hello, {name}. You are {age} years old.\"",
+      "children": [
+        {
+          "type": "name",
+          "value": "formatted_str3"
+        },
+        {
+          "type": "str",
+          "value": "f\"Hello, {name}. You are {age} years old.\""
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "value": "print(formatted_str3)",
+      "children": [
+        {
+          "type": "name",
+          "value": "print"
+        },
+        {
+          "type": "name",
+          "value": "formatted_str3"
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "formatted_str4 = \"Hello, {name}. You are {age} years old.\".format(name=\"Dave\", age=40)",
+      "children": [
+        {
+          "type": "name",
+          "value": "formatted_str4"
+        },
+        {
+          "type": "str",
+          "value": "\"Hello, {name}. You are {age} years old.\""
+        },
+        {
+          "type": "format",
+          "value": "(name=\"Dave\", age=40)",
+          "children": [
+            {
+              "type": "keyword",
+              "value": "name",
+              "children": [
+                {
+                  "type": "str",
+                  "value": "\"Dave\""
+                }
+              ]
+            },
+            {
+              "type": "keyword",
+              "value": "age",
+              "children": [
+                {
+                  "type": "num",
+                  "value": "40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "call",
+      "value": "print(formatted_str4)",
+      "children": [
+        {
+          "type": "name",
+          "value": "print"
+        },
+        {
+          "type": "name",
+          "value": "formatted_str4"
+        }
+      ]
+    }
+  ]
+}

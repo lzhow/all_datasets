@@ -1,0 +1,81 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.5.0",
+            "children": []
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "S",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "f",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "j",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "internal"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "ReturnParameter",
+                            "value": "uint"
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ForStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "Assignment",
+                                    "value": "j = _i"
+                                },
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "j != 0"
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "j /= 10"
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "len++"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "i"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

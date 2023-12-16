@@ -1,0 +1,159 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "function_declaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "variable_declaration",
+          "value": "a",
+          "children": [
+            {
+              "type": "type",
+              "value": "unsigned int"
+            },
+            {
+              "type": "value",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "type": "variable_declaration",
+          "value": "b",
+          "children": [
+            {
+              "type": "type",
+              "value": "unsigned int"
+            },
+            {
+              "type": "value",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "type": "variable_declaration",
+          "value": "result",
+          "children": [
+            {
+              "type": "type",
+              "value": "unsigned int"
+            },
+            {
+              "type": "operation",
+              "value": "&",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                },
+                {
+                  "type": "variable",
+                  "value": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "result",
+          "children": [
+            {
+              "type": "operation",
+              "value": "|",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                },
+                {
+                  "type": "variable",
+                  "value": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "result",
+          "children": [
+            {
+              "type": "operation",
+              "value": "^",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                },
+                {
+                  "type": "variable",
+                  "value": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "result",
+          "children": [
+            {
+              "type": "operation",
+              "value": "~",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "result",
+          "children": [
+            {
+              "type": "operation",
+              "value": "<<",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                },
+                {
+                  "type": "value",
+                  "value": "2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "assignment",
+          "value": "result",
+          "children": [
+            {
+              "type": "operation",
+              "value": ">>",
+              "children": [
+                {
+                  "type": "variable",
+                  "value": "a"
+                },
+                {
+                  "type": "value",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

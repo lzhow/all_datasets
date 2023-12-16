@@ -1,0 +1,71 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "FunctionDeclaration",
+      "value": "void main()",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "()",
+          "children": []
+        },
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "int n;",
+              "children": []
+            },
+            {
+              "type": "FunctionCall",
+              "value": "scanf(\"%d\", &n);",
+              "children": []
+            },
+            {
+              "type": "IfStatement",
+              "value": "if (n > 0)",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf(\"large\\n\");",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "value": "else if (n > -5)",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf(\"mid\\n\");",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "value": "else",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "printf(\"small\\n\");",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ReturnStatement",
+              "value": "return;",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

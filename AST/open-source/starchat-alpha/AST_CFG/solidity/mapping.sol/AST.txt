@@ -1,0 +1,203 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "mapping"
+            },
+            {
+              "type": "Punctuator",
+              "value": "("
+            },
+            {
+              "type": "Identifier",
+              "value": "address"
+            },
+            {
+              "type": "Operator",
+              "value": "=>"
+            },
+            {
+              "type": "Identifier",
+              "value": "uint"
+            },
+            {
+              "type": "Punctuator",
+              "value": ")"
+            }
+          ],
+          "type": "Mapping"
+        },
+        {
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "public"
+            }
+          ],
+          "type": "Visibility"
+        },
+        {
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "balances"
+            }
+          ],
+          "type": "Identifier"
+        },
+        {
+          "children": [
+            {
+              "type": "Punctuator",
+              "value": "("
+            },
+            {
+              "type": "Identifier",
+              "value": "address"
+            },
+            {
+              "type": "Punctuator",
+              "value": ")"
+            }
+          ],
+          "type": "ElementaryTypeName"
+        },
+        {
+          "children": [
+            {
+              "type": "Operator",
+              "value": "="
+            }
+          ],
+          "type": "Assignment"
+        },
+        {
+          "children": [
+            {
+              "type": "NumberLiteral",
+              "value": "0"
+            }
+          ],
+          "type": "NumberLiteral"
+        }
+      ],
+      "type": "VariableDeclaration"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "function"
+            },
+            {
+              "type": "Identifier",
+              "value": "updateBalance"
+            },
+            {
+              "type": "Punctuator",
+              "value": "("
+            },
+            {
+              "type": "Punctuator",
+              "value": ")"
+            }
+          ],
+          "type": "FunctionDefinition"
+        },
+        {
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "public"
+            }
+          ],
+          "type": "Visibility"
+        },
+        {
+          "children": [
+            {
+              "type": "Punctuator",
+              "value": "{"
+            }
+          ],
+          "type": "Block"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "balances"
+                    },
+                    {
+                      "type": "Punctuator",
+                      "value": "["
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "msg"
+                    },
+                    {
+                      "type": "Punctuator",
+                      "value": "."
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "sender"
+                    },
+                    {
+                      "type": "Punctuator",
+                      "value": "]"
+                    }
+                  ],
+                  "type": "MemberAccess"
+                },
+                {
+                  "children": [
+                    {
+                      "type": "Operator",
+                      "value": "="
+                    }
+                  ],
+                  "type": "Assignment"
+                },
+                {
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "newBalance"
+                    }
+                  ],
+                  "type": "Identifier"
+                }
+              ],
+              "type": "ExpressionStatement"
+            }
+          ],
+          "type": "Block"
+        },
+        {
+          "children": [
+            {
+              "type": "Punctuator",
+              "value": "}"
+            }
+          ],
+          "type": "Block"
+        }
+      ],
+      "type": "ContractDefinition"
+    }
+  ]
+}

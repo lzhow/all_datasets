@@ -1,0 +1,134 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "stdio.h",
+      "children": []
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "void",
+          "children": []
+        },
+        {
+          "type": "Block",
+          "value": "",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "int",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "n",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": "",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "scanf",
+                  "children": [
+                    {
+                      "type": "FormatSpecifier",
+                      "value": "%d",
+                      "children": []
+                    },
+                    {
+                      "type": "AddressOf",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "n",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "IfStatement",
+              "value": "",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": ">",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "n",
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "10",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "FunctionCall",
+                          "value": "puts",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "Large",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "value": "",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "value": "",
+                      "children": [
+                        {
+                          "type": "FunctionCall",
+                          "value": "puts",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "Small",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

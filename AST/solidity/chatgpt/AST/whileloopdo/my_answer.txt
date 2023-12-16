@@ -1,0 +1,140 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "Version",
+          "value": "^0.5.0"
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "S"
+        },
+        {
+          "type": "FunctionDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "A"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "j"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FunctionModifier",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "internal"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "pure"
+                }
+              ]
+            },
+            {
+              "type": "ReturnParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "DoWhileStatement",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "BinaryOperation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "j"
+                                },
+                                {
+                                  "type": "SubtractionOperator",
+                                  "value": "-"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "10"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BinaryOperation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j"
+                        },
+                        {
+                          "type": "InequalityOperator",
+                          "value": "!="
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ReturnStatement",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "j"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

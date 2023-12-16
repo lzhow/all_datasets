@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "Queue<Integer> queue = new LinkedList<>();"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "queue.offer(1);"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "queue.offer(2);"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "queue.offer(3);"
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "label": "System.out.println(\"top of the queue \" + queue.peek());"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "while (!queue.isEmpty()) {"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "System.out.println(queue.poll());"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 4
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 3,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    }
+  ]
+}

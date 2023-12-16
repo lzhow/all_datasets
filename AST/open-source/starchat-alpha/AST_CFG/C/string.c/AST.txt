@@ -1,0 +1,314 @@
+[
+  {
+    "type": "preprocessor_directive",
+    "value": "#include",
+    "children": [
+      {
+        "type": "string_literal",
+        "value": "<stdio.h>",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "preprocessor_directive",
+    "value": "#include",
+    "children": [
+      {
+        "type": "string_literal",
+        "value": "<string.h>",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "declaration",
+    "value": "int",
+    "children": [
+      {
+        "type": "function_definition",
+        "value": "main",
+        "children": [
+          {
+            "type": "compound_statement",
+            "value": "{",
+            "children": [
+              {
+                "type": "declaration",
+                "value": "char",
+                "children": [
+                  {
+                    "type": "array_subscript",
+                    "value": "[",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str1",
+                        "children": []
+                      },
+                      {
+                        "type": "constant",
+                        "value": "20",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "assignment_operator",
+                    "value": "=",
+                    "children": []
+                  },
+                  {
+                    "type": "string_literal",
+                    "value": "Hello",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "declaration",
+                "value": "char",
+                "children": [
+                  {
+                    "type": "array_subscript",
+                    "value": "[",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str2",
+                        "children": []
+                      },
+                      {
+                        "type": "constant",
+                        "value": "20",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "assignment_operator",
+                    "value": "=",
+                    "children": []
+                  },
+                  {
+                    "type": "string_literal",
+                    "value": "World",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "declaration",
+                "value": "char",
+                "children": [
+                  {
+                    "type": "array_subscript",
+                    "value": "[",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str3",
+                        "children": []
+                      },
+                      {
+                        "type": "constant",
+                        "value": "40",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "printf",
+                    "children": [
+                      {
+                        "type": "string_literal",
+                        "value": "Length of str1: %zu\n",
+                        "children": []
+                      },
+                      {
+                        "type": "function_call",
+                        "value": "strlen",
+                        "children": [
+                          {
+                            "type": "identifier",
+                            "value": "str1",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "strcpy",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str3",
+                        "children": []
+                      },
+                      {
+                        "type": "identifier",
+                        "value": "str1",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "strncpy",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str3",
+                        "children": []
+                      },
+                      {
+                        "type": "identifier",
+                        "value": "str2",
+                        "children": []
+                      },
+                      {
+                        "type": "constant",
+                        "value": "3",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "strcat",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str3",
+                        "children": []
+                      },
+                      {
+                        "type": "identifier",
+                        "value": "str2",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "strncat",
+                    "children": [
+                      {
+                        "type": "identifier",
+                        "value": "str3",
+                        "children": []
+                      },
+                      {
+                        "type": "string_literal",
+                        "value": "!!!",
+                        "children": []
+                      },
+                      {
+                        "type": "constant",
+                        "value": "2",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "printf",
+                    "children": [
+                      {
+                        "type": "string_literal",
+                        "value": "strcmp(str1, str2): %d\n",
+                        "children": []
+                      },
+                      {
+                        "type": "function_call",
+                        "value": "strcmp",
+                        "children": [
+                          {
+                            "type": "identifier",
+                            "value": "str1",
+                            "children": []
+                          },
+                          {
+                            "type": "identifier",
+                            "value": "str2",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "expression_statement",
+                "value": ";",
+                "children": [
+                  {
+                    "type": "function_call",
+                    "value": "printf",
+                    "children": [
+                      {
+                        "type": "string_literal",
+                        "value": "strncmp(str1, str2, 3): %d\n",
+                        "children": []
+                      },
+                      {
+                        "type": "function_call",
+                        "value": "strncmp",
+                        "children": [
+                          {
+                            "type": "identifier",
+                            "value" ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

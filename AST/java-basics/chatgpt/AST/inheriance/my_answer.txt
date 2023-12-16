@@ -1,0 +1,137 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "A",
+      "children": [
+        {
+          "type": "FieldDeclaration",
+          "value": "protected String m = \"A\"",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "protected String m = \"A\"",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "protected"
+                },
+                {
+                  "type": "Type",
+                  "value": "String"
+                },
+                {
+                  "type": "VariableDeclarator",
+                  "value": "m = \"A\"",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "m"
+                    },
+                    {
+                      "type": "VariableInitializer",
+                      "value": "\"A\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "value": "public void p()",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public"
+            },
+            {
+              "type": "Type",
+              "value": "void"
+            },
+            {
+              "type": "MethodName",
+              "value": "p"
+            },
+            {
+              "type": "ParameterList",
+              "value": ""
+            },
+            {
+              "type": "Block",
+              "value": "{\n  System.out.printl(\"A\");\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "value": "B",
+      "children": [
+        {
+          "type": "FieldDeclaration",
+          "value": "private String n = \"B\"",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "private String n = \"B\"",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "private"
+                },
+                {
+                  "type": "Type",
+                  "value": "String"
+                },
+                {
+                  "type": "VariableDeclarator",
+                  "value": "n = \"B\"",
+                  "children": [
+                    {
+                      "type": "VariableName",
+                      "value": "n"
+                    },
+                    {
+                      "type": "VariableInitializer",
+                      "value": "\"B\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "value": "public static void main(String[] args)",
+          "children": [
+            {
+              "type": "Modifier",
+              "value": "public static"
+            },
+            {
+              "type": "Type",
+              "value": "void"
+            },
+            {
+              "type": "MethodName",
+              "value": "main"
+            },
+            {
+              "type": "ParameterList",
+              "value": "String[] args"
+            },
+            {
+              "type": "Block",
+              "value": "{\n  B b = new B();\n  b.p();\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+
+    
+  You are a call graph analyzer for programs. I will give you a program and you tell me its call graph. The output format is json file, including nodes and edges.
+
+
+    Here's your input file: pragma solidity ^0.8.0;
+
+contract MappingExample {
+    mapping(address => uint) public balances;
+
+    function updateBalance(uint newBalance) public {
+        balances[msg.sender] = newBalance;
+    }
+}
+
+
+    Here's your output:
+
+   {
+    "nodes": [
+        {
+            "id": 0,
+            "label": "MappingExample"
+        },
+        {
+            "id": 1,
+            "label": "balances"
+        },
+        {
+            "id": 2,
+            "label": "address"
+        },
+        {
+            "id": 3,
+            "label": "uint"
+        },
+        {
+            "id": 4,
+            "label": "msg.sender"
+        },
+        {
+            "id": 5,
+            "label": "newBalance"
+        },
+        {
+            "id": 6,
+            "label": "updateBalance"
+        },
+        {
+            "id": 7,
+            "label": "public"
+        }
+    ],
+    "edges": [
+        {
+            "from": 0,
+            "to": 1
+        },
+        {
+            "from": 1,
+            "to": 2
+        },
+        {
+            "from": 1,
+            "to": 3
+        },
+        {
+            "from": 4,
+            "to": 2
+        },
+        {
+            "from": 6,
+            "to": 4
+        },
+        {
+            "from": 6,
+            "to": 5
+        },
+        {
+            "from": 6,
+            "to": 3
+        },
+        {
+            "from": 6,
+            "to": 7
+        }
+    ]
+}
+
+Please note that the output format is json, and the id field for each node is used to match up with the id field for each edge.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars are also typically made of a different material than regular guitars, such as steel or nickel, which helps to give them a lighter and more aerodynamic sound.<|end|>
+<|system|>
+<|end|>
+<|user|>
+What is the difference between a bass guitar and a regular guitar?<|end|>
+<|assistant|>
+A bass guitar is a guitar that is tuned to a lower frequency than a regular guitar. This is done to allow the bass guitar to play a wider range of notes than a regular guitar. Bass guitars

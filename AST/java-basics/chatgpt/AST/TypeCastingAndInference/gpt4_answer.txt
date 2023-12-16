@@ -1,0 +1,136 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "Animal",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "makeSound",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Some sound\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "Dog",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "makeSound",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Bark\""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "fetch",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"Fetching...\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ClassDeclaration",
+            "value": "TypeCastingAndInferenceExample",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "animal",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Animal"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new Dog()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "makeSound",
+                            "children": [
+                                {
+                                    "type": "Target",
+                                    "value": "animal"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "TypeCheck",
+                                    "value": "animal instanceof Dog"
+                                },
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "dog",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "Dog"
+                                        },
+                                        {
+                                            "type": "TypeCast",
+                                            "value": "(Dog) animal"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "fetch",
+                                    "children": [
+                                        {
+                                            "type": "Target",
+                                            "value": "dog"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

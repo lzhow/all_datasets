@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "def trycach(x):"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "print(x)"
+    },
+    {
+      "id": 3,
+      "type": "stmt",
+      "label": "print(\"Variable x is not defined\")"
+    },
+    {
+      "id": 4,
+      "type": "stmt",
+      "label": "print(\"Something else went wrong\")"
+    },
+    {
+      "id": 5,
+      "type": "ex",
+      "label": "NameError"
+    },
+    {
+      "id": 6,
+      "type": "ex",
+      "label": "Exception"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "exception": 5
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "exception": 6
+    }
+  ]
+}

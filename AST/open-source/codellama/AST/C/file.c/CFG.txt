@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 1,
+      "type": "statement",
+      "label": "FILE *file = fopen(\"example.txt\", \"r\");"
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "label": "if (file != NULL)"
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "label": "fclose(file);"
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "label": "return 0;"
+    },
+    {
+      "id": 5,
+      "type": "exit",
+      "label": "main"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    }
+  ]
+}

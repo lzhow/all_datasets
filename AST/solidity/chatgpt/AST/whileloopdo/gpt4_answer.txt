@@ -1,0 +1,63 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.5.0",
+            "children": []
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "S",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "A",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "j",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "internal"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "ReturnParameter",
+                            "value": "uint"
+                        },
+                        {
+                            "type": "DoWhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "j -= 10"
+                                },
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "j != 0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "j"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

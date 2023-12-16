@@ -1,0 +1,275 @@
+{
+  "type": "Module",
+  "children": [
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "name",
+          "children": []
+        },
+        {
+          "type": "Str",
+          "value": "Alice",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "age",
+          "children": []
+        },
+        {
+          "type": "Num",
+          "value": 30,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str1",
+          "children": []
+        },
+        {
+          "type": "BinOp",
+          "children": [
+            {
+              "type": "Str",
+              "value": "Hello, %s. You are %d years old.",
+              "children": []
+            },
+            {
+              "type": "Mod",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "name",
+                  "children": []
+                },
+                {
+                  "type": "Name",
+                  "value": "age",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Print",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "name",
+          "children": []
+        },
+        {
+          "type": "Str",
+          "value": "Bob",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "age",
+          "children": []
+        },
+        {
+          "type": "Num",
+          "value": 25,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str2",
+          "children": []
+        },
+        {
+          "type": "BinOp",
+          "children": [
+            {
+              "type": "Str",
+              "value": "Hello, {}. You are {} years old.",
+              "children": []
+            },
+            {
+              "type": "Mod",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "name",
+                  "children": []
+                },
+                {
+                  "type": "Name",
+                  "value": "age",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Print",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str2",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "name",
+          "children": []
+        },
+        {
+          "type": "Str",
+          "value": "Carol",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "age",
+          "children": []
+        },
+        {
+          "type": "Num",
+          "value": 35,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str3",
+          "children": []
+        },
+        {
+          "type": "BinOp",
+          "children": [
+            {
+              "type": "Str",
+              "value": "Hello, {name}. You are {age} years old.",
+              "children": []
+            },
+            {
+              "type": "Mod",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "name",
+                  "children": []
+                },
+                {
+                  "type": "Name",
+                  "value": "age",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Print",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str3",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str4",
+          "children": []
+        },
+        {
+          "type": "BinOp",
+          "children": [
+            {
+              "type": "Str",
+              "value": "Hello, {name}. You are {age} years old.",
+              "children": []
+            },
+            {
+              "type": "Mod",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "name",
+                  "children": []
+                },
+                {
+                  "type": "Name",
+                  "value": "age",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Print",
+      "children": [
+        {
+          "type": "Name",
+          "value": "formatted_str4",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

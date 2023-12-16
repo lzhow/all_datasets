@@ -1,0 +1,135 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "solidity ^0.8.0"
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "MappingExample"
+        },
+        {
+          "type": "InheritanceSpecifier",
+          "children": [
+            {
+              "type": "UserDefinedTypeName",
+              "value": "Contract"
+            }
+          ]
+        },
+        {
+          "type": "ContractPart",
+          "children": [
+            {
+              "type": "StateVariableDeclaration",
+              "children": [
+                {
+                  "type": "MappingType",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "address"
+                    },
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclaration",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "public"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "balances"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FunctionDefinition",
+              "children": [
+                {
+                  "type": "FunctionVisibility",
+                  "value": "public"
+                },
+                {
+                  "type": "FunctionDeclaration",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "updateBalance"
+                    },
+                    {
+                      "type": "ParameterList",
+                      "children": [
+                        {
+                          "type": "VariableDeclaration",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "newBalance"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "type": "IndexAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "balances"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "msg"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "sender"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "newBalance"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "contract",
+      "label": "MappingExample"
+    },
+    {
+      "id": 1,
+      "type": "mapping",
+      "label": "balances"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "updateBalance"
+    },
+    {
+      "id": 3,
+      "type": "uint",
+      "label": "newBalance"
+    },
+    {
+      "id": 4,
+      "type": "address",
+      "label": "msg.sender"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 2,
+      "target": 1
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 2,
+      "target": 4
+    }
+  ]
+}

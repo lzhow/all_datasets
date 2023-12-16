@@ -1,0 +1,191 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdlib.h>"
+    },
+    {
+      "type": "typedef_declaration",
+      "children": [
+        {
+          "type": "struct_declaration",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "struct"
+            },
+            {
+              "type": "identifier",
+              "value": "Point"
+            },
+            {
+              "type": "struct_declaration_list",
+              "children": [
+                {
+                  "type": "declaration",
+                  "children": [
+                    {
+                      "type": "type_specifier",
+                      "value": "int"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "declaration",
+                  "children": [
+                    {
+                      "type": "type_specifier",
+                      "value": "int"
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "y"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "identifier",
+          "value": "Point"
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "void"
+        },
+        {
+          "type": "identifier",
+          "value": "main"
+        },
+        {
+          "type": "parameter_list",
+          "children": []
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "Point"
+                },
+                {
+                  "type": "pointer",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "value": "a"
+                },
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "type_cast",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "Point"
+                        },
+                        {
+                          "type": "pointer",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "function_call",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "malloc"
+                        },
+                        {
+                          "type": "sizeof_expression",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "Point"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "member_access",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "x"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "constant",
+                      "value": "2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "member_access",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "y"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "constant",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

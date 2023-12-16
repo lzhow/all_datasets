@@ -1,0 +1,191 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Struct",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "Point"
+            },
+            {
+              "type": "StructBody",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "int"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "int"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "y"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "void"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "FunctionBody",
+          "children": [
+            {
+              "type": "Statement",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "Point"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "malloc"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "Expression",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "sizeof"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "Point"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Statement",
+                  "children": [
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "x"
+                        },
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Number",
+                              "value": "2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Statement",
+                  "children": [
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "y"
+                        },
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Number",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

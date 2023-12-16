@@ -1,0 +1,160 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "Bubble_sort",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "arr",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int[]"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Parameter",
+                            "value": "size",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ForStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "i",
+                                    "children": [
+                                        {
+                                            "type": "Type",
+                                            "value": "int"
+                                        },
+                                        {
+                                            "type": "VariableInitializer",
+                                            "value": "0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "i < size - 1"
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "i++"
+                                },
+                                {
+                                    "type": "Block",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "VariableDeclaration",
+                                            "value": "count",
+                                            "children": [
+                                                {
+                                                    "type": "Type",
+                                                    "value": "int"
+                                                },
+                                                {
+                                                    "type": "VariableInitializer",
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ForStatement",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "VariableDeclaration",
+                                                    "value": "j",
+                                                    "children": [
+                                                        {
+                                                            "type": "Type",
+                                                            "value": "int"
+                                                        },
+                                                        {
+                                                            "type": "VariableInitializer",
+                                                            "value": "0"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "RelationalExpression",
+                                                    "value": "j < size - 1 - i"
+                                                },
+                                                {
+                                                    "type": "UpdateExpression",
+                                                    "value": "j++"
+                                                },
+                                                {
+                                                    "type": "IfStatement",
+                                                    "value": "",
+                                                    "children": [
+                                                        {
+                                                            "type": "RelationalExpression",
+                                                            "value": "arr[j] > arr[j + 1]"
+                                                        },
+                                                        {
+                                                            "type": "Block",
+                                                            "value": "",
+                                                            "children": [
+                                                                {
+                                                                    "type": "Assignment",
+                                                                    "value": "tem = arr[j]"
+                                                                },
+                                                                {
+                                                                    "type": "Assignment",
+                                                                    "value": "arr[j] = arr[j + 1]"
+                                                                },
+                                                                {
+                                                                    "type": "Assignment",
+                                                                    "value": "arr[j + 1] = tem"
+                                                                },
+                                                                {
+                                                                    "type": "Assignment",
+                                                                    "value": "count = 1"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "IfStatement",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "RelationalExpression",
+                                                    "value": "count == 0"
+                                                },
+                                                {
+                                                    "type": "BreakStatement",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

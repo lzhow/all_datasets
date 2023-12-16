@@ -1,0 +1,53 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.8.0;"
+    },
+    {
+      "type": "ContractDefinition",
+      "value": "contract ArrayExample",
+      "children": [
+        {
+          "type": "StateVariableDeclaration",
+          "value": "uint[] public dynamicArray;"
+        },
+        {
+          "type": "StateVariableDeclaration",
+          "value": "uint[5] public fixedArray;"
+        },
+        {
+          "type": "FunctionDefinition",
+          "value": "function addElement(uint element)",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "addElement"
+            },
+            {
+              "type": "ParameterList",
+              "value": "uint element",
+              "children": [
+                {
+                  "type": "VariableDeclaration",
+                  "value": "uint element"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "value": "{\n        dynamicArray.push(element);\n    }",
+              "children": [
+                {
+                  "type": "ExpressionStatement",
+                  "value": "dynamicArray.push(element);"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

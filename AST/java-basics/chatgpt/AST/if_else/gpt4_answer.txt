@@ -1,0 +1,86 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "if_else",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "permutation",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "n",
+                            "children": [
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "str.length()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "n == 0"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "prefix"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ElseBlock",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "ForStatement",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "VariableDeclaration",
+                                                    "value": "i"
+                                                },
+                                                {
+                                                    "type": "RelationalExpression",
+                                                    "value": "i < n"
+                                                },
+                                                {
+                                                    "type": "UpdateExpression",
+                                                    "value": "i++"
+                                                },
+                                                {
+                                                    "type": "MethodInvocation",
+                                                    "value": "permutation",
+                                                    "children": [
+                                                        {
+                                                            "type": "BinaryExpression",
+                                                            "value": "prefix + str.charAt(i)"
+                                                        },
+                                                        {
+                                                            "type": "BinaryExpression",
+                                                            "value": "str.substring(0, i) + str.substring(i + 1, n)"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

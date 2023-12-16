@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "import",
+      "label": "import threading"
+    },
+    {
+      "id": 2,
+      "type": "def",
+      "label": "def print_numbers():"
+    },
+    {
+      "id": 3,
+      "type": "for",
+      "label": "for i in range(1, 6):"
+    },
+    {
+      "id": 4,
+      "type": "print",
+      "label": "print(i)"
+    },
+    {
+      "id": 5,
+      "type": "def",
+      "label": "def print_letters():"
+    },
+    {
+      "id": 6,
+      "type": "for",
+      "label": "for letter in \"ABCDE\":"
+    },
+    {
+      "id": 7,
+      "type": "print",
+      "label": "print(letter)"
+    },
+    {
+      "id": 8,
+      "type": "thread",
+      "label": "thread1 = threading.Thread(target=print_numbers)"
+    },
+    {
+      "id": 9,
+      "type": "thread",
+      "label": "thread2 = threading.Thread(target=print_letters)"
+    },
+    {
+      "id": 10,
+      "type": "start",
+      "label": "thread1.start()"
+    },
+    {
+      "id": 11,
+      "type": "start",
+      "label": "thread2.start()"
+    },
+    {
+      "id": 12,
+      "type": "join",
+      "label": "thread1.join()"
+    },
+    {
+      "id": 13,
+      "type": "join",
+      "label": "thread2.join()"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 2,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 13
+    }
+  ]
+}

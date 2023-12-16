@@ -1,0 +1,123 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ImportStatement",
+            "value": "threading",
+            "children": []
+        },
+        {
+            "type": "FunctionDeclaration",
+            "value": "print_numbers",
+            "children": [
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "i"
+                        },
+                        {
+                            "type": "RangeExpression",
+                            "value": "range(1, 6)"
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "i"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "FunctionDeclaration",
+            "value": "print_letters",
+            "children": [
+                {
+                    "type": "ForStatement",
+                    "value": "",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "letter"
+                        },
+                        {
+                            "type": "Iterable",
+                            "value": "\"ABCDE\""
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "print",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "letter"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "thread1",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "threading.Thread",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "target=print_numbers"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "thread2",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "threading.Thread",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "target=print_letters"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "thread1.start",
+            "children": []
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "thread2.start",
+            "children": []
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "thread1.join",
+            "children": []
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "thread2.join",
+            "children": []
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "InterfaceDeclaration",
+                    "value": "Greeting",
+                    "children": [
+                        {
+                            "type": "MethodDeclaration",
+                            "value": "greet",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "VariableDeclaration",
+                    "value": "greeting",
+                    "children": [
+                        {
+                            "type": "AnonymousClassDeclaration",
+                            "value": "Greeting",
+                            "children": [
+                                {
+                                    "type": "MethodDeclaration",
+                                    "value": "greet",
+                                    "children": [
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "println",
+                                            "children": [
+                                                {
+                                                    "type": "StringLiteral",
+                                                    "value": "Hello!",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodInvocation",
+                    "value": "greet",
+                    "children": [
+                        {
+                            "type": "Variable",
+                            "value": "greeting",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

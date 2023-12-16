@@ -1,0 +1,310 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "value": "void"
+        },
+        {
+          "type": "Identifier",
+          "value": "Bubble_sort"
+        },
+        {
+          "type": "ParameterList",
+          "children": [
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "arr"
+                }
+              ]
+            },
+            {
+              "type": "Parameter",
+              "children": [
+                {
+                  "type": "Type",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "size"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "CompoundStatement",
+      "children": [
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "Type",
+              "value": "int"
+            },
+            {
+              "type": "Identifier",
+              "value": "j"
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "j"
+                },
+                {
+                  "type": "Number",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "Type",
+              "value": "int"
+            },
+            {
+              "type": "Identifier",
+              "value": "i"
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i"
+                },
+                {
+                  "type": "Number",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Declaration",
+          "children": [
+            {
+              "type": "Type",
+              "value": "int"
+            },
+            {
+              "type": "Identifier",
+              "value": "tem"
+            }
+          ]
+        },
+        {
+          "type": "ForStatement",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "i"
+            },
+            {
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "type": "LessThan",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i"
+                },
+                {
+                  "type": "Subtraction",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "size"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Increment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "i"
+                }
+              ]
+            },
+            {
+              "type": "CompoundStatement",
+              "children": [
+                {
+                  "type": "Declaration",
+                  "children": [
+                    {
+                      "type": "Type",
+                      "value": "int"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "count"
+                    },
+                    {
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "count"
+                        },
+                        {
+                          "type": "Number",
+                          "value": "0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ForStatement",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "j"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "0"
+                    },
+                    {
+                      "type": "LessThan",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j"
+                        },
+                        {
+                          "type": "Subtraction",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "size"
+                            },
+                            {
+                              "type": "Number",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Increment",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "CompoundStatement",
+                      "children": [
+                        {
+                          "type": "IfStatement",
+                          "children": [
+                            {
+                              "type": "GreaterThan",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "arr"
+                                },
+                                {
+                                  "type": "Index",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "j"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "arr"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Index",
+                                  "children": [
+                                    {
+                                      "type": "Addition",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "j"
+                                        },
+                                        {
+                                          "type": "Number",
+                                          "value": "1"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "arr"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "CompoundStatement",
+                              "children": [
+                                {
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "tem"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "arr"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

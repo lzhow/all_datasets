@@ -1,0 +1,284 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "PriorityQueue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "HeapExample"
+        },
+        {
+          "type": "MethodDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "main"
+            },
+            {
+              "type": "FormalParameterList",
+              "children": [
+                {
+                  "type": "ArrayType",
+                  "children": [
+                    {
+                      "type": "PrimitiveType",
+                      "value": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "minHeap"
+                        },
+                        {
+                          "type": "ParameterizedType",
+                          "children": [
+                            {
+                              "type": "QualifiedName",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "PriorityQueue"
+                                },
+                                {
+                                  "type": "TypeArgument",
+                                  "children": [
+                                    {
+                                      "type": "PrimitiveType",
+                                      "value": "Integer"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "minHeap"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "offer"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "minHeap"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "offer"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "minHeap"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "offer"
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "15"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "children": [
+                        {
+                          "type": "FieldAccess",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "System"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "out"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "println"
+                        },
+                        {
+                          "type": "BinaryExpression",
+                          "children": [
+                            {
+                              "type": "Literal",
+                              "value": "stack top: "
+                            },
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "minHeap"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "peek"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "WhileStatement",
+                  "children": [
+                    {
+                      "type": "UnaryExpression",
+                      "children": [
+                        {
+                          "type": "MethodInvocation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "minHeap"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "isEmpty"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                },
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "minHeap"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "poll"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

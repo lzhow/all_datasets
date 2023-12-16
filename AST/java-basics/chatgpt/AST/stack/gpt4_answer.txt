@@ -1,0 +1,92 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "StackExample",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "stack",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "Stack<Integer>"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new Stack<>()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "push",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "push",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "push",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"\u6808\u9876\u5143\u7d20: \" + stack.peek()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "NegationExpression",
+                                    "value": "stack.isEmpty()"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "println",
+                                    "children": [
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "stack.pop()"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

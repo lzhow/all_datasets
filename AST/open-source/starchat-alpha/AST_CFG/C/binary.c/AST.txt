@@ -1,0 +1,252 @@
+{
+  "type": "Program",
+  "value": "",
+  "children": [
+    {
+      "type": "FunctionDeclaration",
+      "value": "void main()",
+      "children": [
+        {
+          "type": "CompoundStatement",
+          "value": "{",
+          "children": [
+            {
+              "type": "VariableDeclaration",
+              "value": "unsigned int a = 5;",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "value": "a",
+                  "children": []
+                },
+                {
+                  "type": "AssignmentExpression",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "5",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": [
+                {
+                  "type": "Comment",
+                  "value": "// \u4e8c\u8fdb\u5236\u8868\u793a\u4e3a 00000101",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "value": "unsigned int b = 3;",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "value": "b",
+                  "children": []
+                },
+                {
+                  "type": "AssignmentExpression",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "value": "3",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": [
+                {
+                  "type": "Comment",
+                  "value": "// \u4e8c\u8fdb\u5236\u8868\u793a\u4e3a 00000011",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "VariableDeclaration",
+              "value": "unsigned int result = a & b;",
+              "children": [
+                {
+                  "type": "Declarator",
+                  "value": "result",
+                  "children": []
+                },
+                {
+                  "type": "AssignmentExpression",
+                  "value": "=",
+                  "children": [
+                    {
+                      "type": "BinaryExpression",
+                      "value": "&",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "a",
+                          "children": []
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "b",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "result = a | b;",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": "|",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "b",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "result = a ^ b;",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": "^",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "b",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "result = ~a;",
+              "children": [
+                {
+                  "type": "UnaryExpression",
+                  "value": "~",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "result = a << 2;",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": "<<",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "2",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            },
+            {
+              "type": "AssignmentExpression",
+              "value": "result = a >> 1;",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": ">>",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "a",
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "1",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "ExpressionStatement",
+              "value": ";",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

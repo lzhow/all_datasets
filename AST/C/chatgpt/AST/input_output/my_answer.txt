@@ -1,0 +1,173 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "value": "str",
+          "children": [
+            {
+              "type": "Type",
+              "value": "char"
+            },
+            {
+              "type": "Array",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "i",
+          "children": [
+            {
+              "type": "Type",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "VariableDeclaration",
+          "value": "ch",
+          "children": [
+            {
+              "type": "Type",
+              "value": "char"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "printf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "Enter a string: "
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "fgets",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str"
+            },
+            {
+              "type": "Sizeof",
+              "value": "str"
+            },
+            {
+              "type": "Identifier",
+              "value": "stdin"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "puts",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "You entered: "
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "puts",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "str"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "scanf",
+          "children": [
+            {
+              "type": "StringLiteral",
+              "value": "%d"
+            },
+            {
+              "type": "AddressOf",
+              "value": "i"
+            }
+          ]
+        },
+        {
+          "type": "WhileLoop",
+          "children": [
+            {
+              "type": "NotEqual",
+              "children": [
+                {
+                  "type": "FunctionCall",
+                  "value": "getchar"
+                },
+                {
+                  "type": "CharacterLiteral",
+                  "value": "'\\n'"
+                }
+              ]
+            },
+            {
+              "type": "EmptyStatement"
+            }
+          ]
+        },
+        {
+          "type": "Assignment",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "ch"
+            },
+            {
+              "type": "FunctionCall",
+              "value": "getchar"
+            }
+          ]
+        },
+        {
+          "type": "Comment",
+          "value": "Ê¹ÓÃ putchar Êä³ö×Ö·û"
+        },
+        {
+          "type": "FunctionCall",
+          "value": "putchar",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "ch"
+            }
+          ]
+        },
+        {
+          "type": "FunctionCall",
+          "value": "putchar",
+          "children": [
+            {
+              "type": "CharacterLiteral",
+              "value": "'\\n'"
+            }
+          ]
+        },
+        {
+          "type": "ReturnStatement",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "class",
+      "label": "A"
+    },
+    {
+      "id": 2,
+      "type": "field",
+      "label": "m"
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "label": "p"
+    },
+    {
+      "id": 4,
+      "type": "class",
+      "label": "B"
+    },
+    {
+      "id": 5,
+      "type": "field",
+      "label": "n"
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "label": "main"
+    },
+    {
+      "id": 7,
+      "type": "local",
+      "label": "b"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 3
+    }
+  ]
+}

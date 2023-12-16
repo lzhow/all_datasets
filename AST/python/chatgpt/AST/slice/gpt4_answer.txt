@@ -1,0 +1,100 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "VariableDeclaration",
+            "value": "example_list",
+            "children": [
+                {
+                    "type": "Type",
+                    "value": "list"
+                },
+                {
+                    "type": "VariableInitializer",
+                    "value": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "slice1",
+            "children": [
+                {
+                    "type": "ListSlice",
+                    "value": "example_list[2:5]"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "slice1"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "slice2",
+            "children": [
+                {
+                    "type": "ListSlice",
+                    "value": "example_list[1::2]"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "slice2"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "slice3",
+            "children": [
+                {
+                    "type": "ListSlice",
+                    "value": "example_list[-3:]"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "slice3"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "slice4",
+            "children": [
+                {
+                    "type": "ListSlice",
+                    "value": "example_list[:5]"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "slice4"
+                }
+            ]
+        }
+    ]
+}

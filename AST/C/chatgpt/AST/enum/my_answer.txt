@@ -1,0 +1,149 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "enum_declaration",
+      "children": [
+        {
+          "type": "enum_specifier",
+          "children": [
+            {
+              "type": "enum_name",
+              "value": "Le"
+            },
+            {
+              "type": "enumerator_list",
+              "children": [
+                {
+                  "type": "enumerator",
+                  "children": [
+                    {
+                      "type": "enumerator_name",
+                      "value": "L"
+                    }
+                  ]
+                },
+                {
+                  "type": "enumerator",
+                  "children": [
+                    {
+                      "type": "enumerator_name",
+                      "value": "M"
+                    }
+                  ]
+                },
+                {
+                  "type": "enumerator",
+                  "children": [
+                    {
+                      "type": "enumerator_name",
+                      "value": "H"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "function_declaration",
+          "children": [
+            {
+              "type": "type_specifier",
+              "value": "int"
+            },
+            {
+              "type": "function_name",
+              "value": "main"
+            },
+            {
+              "type": "parameter_list"
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "enum Le"
+                },
+                {
+                  "type": "init_declarator",
+                  "children": [
+                    {
+                      "type": "declarator",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "m"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "initializer",
+                      "children": [
+                        {
+                          "type": "enumerator_name",
+                          "value": "M"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "function_call",
+                  "children": [
+                    {
+                      "type": "function_name",
+                      "value": "printf"
+                    },
+                    {
+                      "type": "argument_list",
+                      "children": [
+                        {
+                          "type": "string_literal",
+                          "value": "\"%d\""
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "m"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "return_statement",
+              "children": [
+                {
+                  "type": "constant",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

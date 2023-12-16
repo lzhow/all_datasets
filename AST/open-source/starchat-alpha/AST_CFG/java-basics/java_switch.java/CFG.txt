@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "public class java_switch {"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "public static void main(String[] args) {"
+    },
+    {
+      "id": 3,
+      "type": "assign",
+      "label": "int day = args[1];"
+    },
+    {
+      "id": 4,
+      "type": "switch",
+      "label": "switch (day) {"
+    },
+    {
+      "id": 5,
+      "type": "case",
+      "label": "case 1:"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "System.out.println(\"1\");"
+    },
+    {
+      "id": 7,
+      "type": "break",
+      "label": "break;"
+    },
+    {
+      "id": 8,
+      "type": "case",
+      "label": "case 2:"
+    },
+    {
+      "id": 9,
+      "type": "stmt",
+      "label": "System.out.println(\"2\");"
+    },
+    {
+      "id": 10,
+      "type": "break",
+      "label": "break;"
+    },
+    {
+      "id": 11,
+      "type": "default",
+      "label": "default:"
+    },
+    {
+      "id": 12,
+      "type": "stmt",
+      "label": "System.out.println(\"default\");"
+    },
+    {
+      "id": 13,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 14,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 4,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 8,
+      "target": 10
+    },
+    {
+      "source": 11,
+      "target": 12
+    },
+    {
+      "source": 13,
+      "target": 14
+    }
+  ]
+}

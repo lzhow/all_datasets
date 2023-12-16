@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "stmt",
+      "label": "class A {"
+    },
+    {
+      "id": 2,
+      "type": "stmt",
+      "label": "public void a() {"
+    },
+    {
+      "id": 3,
+      "type": "method_invocation",
+      "label": "System.out.println"
+    },
+    {
+      "id": 4,
+      "type": "literal",
+      "label": "\"A\""
+    },
+    {
+      "id": 5,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 6,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 7,
+      "type": "stmt",
+      "label": "class P extends A {"
+    },
+    {
+      "id": 8,
+      "type": "stmt",
+      "label": "public void a() {"
+    },
+    {
+      "id": 9,
+      "type": "method_invocation",
+      "label": "System.out.println"
+    },
+    {
+      "id": 10,
+      "type": "literal",
+      "label": "\"P\""
+    },
+    {
+      "id": 11,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 12,
+      "type": "stmt",
+      "label": "}"
+    },
+    {
+      "id": 13,
+      "type": "stmt",
+      "label": "class D extends A {"
+    },
+    {
+      "id": 14,
+      "type": "stmt",
+      "label": "public void a() {"
+    },
+    {
+      "id": 15,
+      "type": "method_invocation",
+      "label": "System.out.println"
+    },
+    {
+      "id": 16,
+      "type": "literal",
+      "label": "\"D\""
+    },
+    {
+      "id": 17,
+      "type": "stmt",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 5,
+      "target": 3
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 11,
+      "target": 9
+    },
+    {
+      "source": 12,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 15
+    },
+    {
+      "source": 15,
+      "target": 16
+    },
+    {
+      "source": 17,
+      "target": 15
+    }
+  ]
+}

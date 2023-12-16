@@ -1,0 +1,26 @@
+The AST in JSON format for the given Java class file is as follows:
+
+```json
+{
+  "type": "interface_declaration",
+  "value": "Animal",
+  "children": [
+    {
+      "type": "method_declaration",
+      "value": "a",
+      "children": []
+    },
+    {
+      "type": "method_declaration",
+      "value": "r",
+      "children": []
+    }
+  ]
+}
+```
+
+Explanation:
+- The root node represents the interface declaration with the name "Animal".
+- The interface declaration has two method declarations as its children.
+- Each method declaration node has a "type" attribute set to "method_declaration" and a "value" attribute representing the method name.
+- Since the methods do not have any parameters or body, their "children" arrays are empty.

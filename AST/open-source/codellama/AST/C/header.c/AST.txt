@@ -1,0 +1,46 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "include",
+      "value": "inbuilt.h"
+    },
+    {
+      "type": "include",
+      "value": "./custom.h"
+    },
+    {
+      "type": "define",
+      "value": "N",
+      "children": [
+        {
+          "type": "number",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "type": "typedef",
+      "value": "ll",
+      "children": [
+        {
+          "type": "type",
+          "value": "long"
+        },
+        {
+          "type": "type",
+          "value": "long"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "value": "main",
+      "children": [
+        {
+          "type": "void"
+        }
+      ]
+    }
+  ]
+}

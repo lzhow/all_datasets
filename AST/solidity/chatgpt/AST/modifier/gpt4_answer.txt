@@ -1,0 +1,83 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity >=0.4.22 <0.9.0",
+            "children": []
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "P",
+            "children": [
+                {
+                    "type": "StateVariableDeclaration",
+                    "value": "s",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "address"
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModifierDeclaration",
+                    "value": "mm",
+                    "children": [
+                        {
+                            "type": "RequireStatement",
+                            "value": "msg.sender == s",
+                            "children": [
+                                {
+                                    "type": "ErrorMessage",
+                                    "value": "\"not\""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "PlaceholderStatement",
+                            "value": "_"
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "f",
+                    "children": [
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "view"
+                        },
+                        {
+                            "type": "ModifierInvocation",
+                            "value": "mm"
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "a",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "10"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

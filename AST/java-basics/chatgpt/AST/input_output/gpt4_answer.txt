@@ -1,0 +1,263 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "SimpleReader",
+            "children": [
+                {
+                    "type": "FieldDeclaration",
+                    "value": "scanner",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "Scanner"
+                        }
+                    ]
+                },
+                {
+                    "type": "ConstructorDeclaration",
+                    "value": "SimpleReader",
+                    "children": [
+                        {
+                            "type": "Assignment",
+                            "value": "scanner = new Scanner(System.in)"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readInt",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.nextInt()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readDouble",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.nextDouble()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readString",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.next()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readChar",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.next().charAt(0)"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "hasNextChar",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.hasNext()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "hasNextLine",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.hasNextLine()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readLine",
+                    "children": [
+                        {
+                            "type": "ReturnStatement",
+                            "value": "scanner.nextLine()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "readAllInts",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "ints",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "ArrayList<Integer>"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new ArrayList<>()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WhileStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "NegationExpression",
+                                    "value": "scanner.hasNextInt()"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "ints.add(scanner.nextInt())"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": "ints.stream().mapToInt(i -> i).toArray()"
+                        }
+                    ]
+                },
+                {
+                    "type": "MethodDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "reader",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "SimpleReader"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "new SimpleReader()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Reading an integer: \" + reader.readInt()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Reading a double: \" + reader.readDouble()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Reading a string: \" + reader.readString()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Reading a char: \" + reader.readChar()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Has next char: \" + reader.hasNextChar()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Has next line: \" + reader.hasNextLine()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "BinaryExpression",
+                                    "value": "\"Reading a line: \" + reader.readLine()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "allInts",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int[]"
+                                },
+                                {
+                                    "type": "VariableInitializer",
+                                    "value": "reader.readAllInts()"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ForStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "i"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "print(i + \" \")"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

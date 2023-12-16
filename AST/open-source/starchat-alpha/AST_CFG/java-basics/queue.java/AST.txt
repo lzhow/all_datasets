@@ -1,0 +1,455 @@
+
+    
+  
+  You are an Abstract Syntax Tree (AST) parser. I will give you a code file. You give me its 
+          AST in Json. Each AST node only has three attributes, children, type and value.
+
+    Here's your input file: import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+
+        System.out.println("top of the queue " + queue.peek());
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+    }
+}
+
+
+    Here's your output:
+
+   {
+      "children": [
+        {
+          "children": [],
+          "type": "ImportDeclaration",
+          "value": "import java.util.LinkedList;"
+        },
+        {
+          "children": [],
+          "type": "ImportDeclaration",
+          "value": "import java.util.Queue;"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "SimpleType",
+                  "value": "Queue"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "SimpleType",
+                      "value": "Integer"
+                    }
+                  ],
+                  "type": "ParameterizedType",
+                  "value": "<"
+                },
+                {
+                  "children": [],
+                  "type": "SimpleType",
+                  "value": ">"
+                }
+              ],
+              "type": "ClassOrInterfaceType",
+              "value": "Queue"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "SimpleType",
+                  "value": "LinkedList"
+                }
+              ],
+              "type": "ClassOrInterfaceType",
+              "value": "LinkedList"
+            }
+          ],
+          "type": "VariableDeclarationStatement",
+          "value": "Queue"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "type": "Name",
+                  "value": "queue"
+                }
+              ],
+              "type": "VariableDeclarator",
+              "value": "="
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "SimpleType",
+                      "value": "new"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "Name",
+                          "value": "LinkedList"
+                        }
+                      ],
+                      "type": "ClassOrInterfaceType",
+                      "value": "LinkedList"
+                    }
+                  ],
+                  "type": "ClassInstanceCreationExpression",
+                  "value": "new"
+                },
+                {
+                  "children": [],
+                  "type": "EmptyParentheses",
+                  "value": "("
+                },
+                {
+                  "children": [],
+                  "type": "EmptyBrackets",
+                  "value": "["
+                },
+                {
+                  "children": [],
+                  "type": "EmptyBraces",
+                  "value": "{"
+                }
+              ],
+              "type": "VariableDeclaratorId",
+              "value": "queue"
+            }
+          ],
+          "type": "LocalVariableDeclaration",
+          "value": "Queue"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "queue"
+                    },
+                    {
+                      "children": [],
+                      "type": "Dot",
+                      "value": "."
+                    },
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "offer"
+                    }
+                  ],
+                  "type": "MethodInvocation",
+                  "value": "offer"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "IntegerLiteral",
+                      "value": "1"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": "("
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "queue"
+                    },
+                    {
+                      "children": [],
+                      "type": "Dot",
+                      "value": "."
+                    },
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "offer"
+                    }
+                  ],
+                  "type": "MethodInvocation",
+                  "value": "offer"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "IntegerLiteral",
+                      "value": "2"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": "("
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "queue"
+                    },
+                    {
+                      "children": [],
+                      "type": "Dot",
+                      "value": "."
+                    },
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "offer"
+                    }
+                  ],
+                  "type": "MethodInvocation",
+                  "value": "offer"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "IntegerLiteral",
+                      "value": "3"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": "("
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "System"
+                    },
+                    {
+                      "children": [],
+                      "type": "Dot",
+                      "value": "."
+                    },
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "out"
+                    },
+                    {
+                      "children": [],
+                      "type": "Dot",
+                      "value": "."
+                    },
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "println"
+                    }
+                  ],
+                  "type": "MethodInvocation",
+                  "value": "println"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "type": "StringLiteral",
+                          "value": "top of the queue "
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "queue"
+                            },
+                            {
+                              "children": [],
+                              "type": "Dot",
+                              "value": "."
+                            },
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "peek"
+                            }
+                          ],
+                          "type": "MethodInvocation",
+                          "value": "peek"
+                        }
+                      ],
+                      "type": "BinaryExpression",
+                      "value": "+"
+                    }
+                  ],
+                  "type": "Expression",
+                  "value": "("
+                }
+              ],
+              "type": "ExpressionStatement",
+              "value": ";"
+            }
+          ],
+          "type": "BlockStatement",
+          "value": "{"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "type": "Name",
+                      "value": "while"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "!"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "type": "Name",
+                                      "value": "queue"
+                                    },
+                                    {
+                                      "children": [],
+                                      "type": "Dot",
+                                      "value": "."
+                                    },
+                                    {
+                                      "children": [],
+                                      "type": "Name",
+                                      "value": "isEmpty"
+                                    }
+                                  ],
+                                  "type": "MethodInvocation",
+                                  "value": "isEmpty"
+                                }
+                              ],
+                              "type": "ParenthesizedExpression",
+                              "value": "("
+                                }
+                          ],
+                          "type": "PrefixExpression",
+                          "value": "!"
+                        }
+                      ],
+                      "type": "ParExpression",
+                      "value": "("
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "System"
+                            },
+                            {
+                              "children": [],
+                              "type": "Dot",
+                              "value": "."
+                            },
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "out"
+                            },
+                            {
+                              "children": [],
+                              "type": "Dot",
+                              "value": "."
+                            },
+                            {
+                              "children": [],
+                              "type": "Name",
+                              "value": "println"
+                            }
+                          ],
+                          "type": "MethodInvocation",
+                          "value": "println"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "type": "Name",
+                                  "value": "queue"
+                                },
+                                {
+                                  "children": [],
+                                  "type": "Dot",
+                                  "value": "."
+                                },
+                                {
+                                  "children": [],
+                                  "type": "Name",
+                                  "value": "poll"
+                                }
+                              ],
+                              "type": "MethodInvocation",
+                              "value

@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "void main()",
+      "nodeType": "function"
+    },
+    {
+      "id": 2,
+      "label": "{",
+      "nodeType": "block"
+    },
+    {
+      "id": 3,
+      "label": "int numbers[5] = {1, 2, 3, 4, 5};",
+      "nodeType": "statement"
+    },
+    {
+      "id": 4,
+      "label": "int *ptr = numbers;",
+      "nodeType": "statement"
+    },
+    {
+      "id": 5,
+      "label": "printf(\"%d\\n\", *ptr);",
+      "nodeType": "statement"
+    },
+    {
+      "id": 6,
+      "label": "ptr++;",
+      "nodeType": "statement"
+    },
+    {
+      "id": 7,
+      "label": "printf(\"%d\\n\", *ptr);",
+      "nodeType": "statement"
+    },
+    {
+      "id": 8,
+      "label": "}",
+      "nodeType": "block"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 2,
+      "to": 4
+    },
+    {
+      "from": 2,
+      "to": 5
+    },
+    {
+      "from": 2,
+      "to": 6
+    },
+    {
+      "from": 2,
+      "to": 7
+    }
+  ]
+}

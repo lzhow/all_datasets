@@ -1,0 +1,76 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "ClassDeclaration",
+            "value": "for_loop",
+            "children": [
+                {
+                    "type": "MethodDeclaration",
+                    "value": "printArray",
+                    "children": [
+                        {
+                            "type": "ForStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "value": "i"
+                                },
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "i < arr.length"
+                                },
+                                {
+                                    "type": "UpdateExpression",
+                                    "value": "i++"
+                                },
+                                {
+                                    "type": "Block",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "IfStatement",
+                                            "value": "",
+                                            "children": [
+                                                {
+                                                    "type": "RelationalExpression",
+                                                    "value": "i > 9"
+                                                },
+                                                {
+                                                    "type": "BreakStatement",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "print",
+                                            "children": [
+                                                {
+                                                    "type": "BinaryExpression",
+                                                    "value": "arr[i] + \" \""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "println",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"\""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

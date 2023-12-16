@@ -1,0 +1,120 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "VariableDeclaration",
+            "value": "str_val",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "\"123\""
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "int_val",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "int",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "str_val"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "int_val",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "42"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "float_val",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "float",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "int_val"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "float_val",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "3.14"
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "str_val",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "str",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "float_val"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "list_val",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "[1, 2, 3]"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "tuple_val",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "tuple",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "list_val"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "StringInterpolation",
+                    "value": "f\"list {list_val} => tuple: {tuple_val}\""
+                }
+            ]
+        }
+    ]
+}

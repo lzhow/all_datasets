@@ -1,0 +1,193 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "Version",
+          "value": "^0.8.0"
+        }
+      ]
+    },
+    {
+      "type": "LibraryDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "Math"
+        },
+        {
+          "type": "FunctionDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "add"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "y"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Internal",
+              "value": true
+            },
+            {
+              "type": "Returns",
+              "children": [
+                {
+                  "type": "ElementaryTypeName",
+                  "value": "uint"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "Return",
+                  "children": [
+                    {
+                      "type": "BinaryOperation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "x"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "y"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ContractDeclaration",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "UsingMath"
+        },
+        {
+          "type": "FunctionDeclaration",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "testAdd"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "_a"
+                    }
+                  ]
+                },
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "_b"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Public",
+              "value": true
+            },
+            {
+              "type": "Returns",
+              "children": [
+                {
+                  "type": "ElementaryTypeName",
+                  "value": "uint"
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "Return",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "Math.add"
+                        },
+                        {
+                          "type": "ArgumentList",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "_a"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "_b"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

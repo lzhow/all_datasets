@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "interface",
+      "label": "Flyable"
+    },
+    {
+      "id": 2,
+      "type": "interface",
+      "label": "Swimmable"
+    },
+    {
+      "id": 3,
+      "type": "class",
+      "label": "Bird"
+    },
+    {
+      "id": 4,
+      "type": "class",
+      "label": "Fish"
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "label": "FlyingFish"
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "label": "public void fly()"
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "label": "public void swim()"
+    },
+    {
+      "id": 8,
+      "type": "statement",
+      "label": "@Override"
+    },
+    {
+      "id": 9,
+      "type": "statement",
+      "label": "System.out.println(\"Bird is flying\");"
+    },
+    {
+      "id": 10,
+      "type": "statement",
+      "label": "System.out.println(\"Fish is swimming\");"
+    },
+    {
+      "id": 11,
+      "type": "statement",
+      "label": "System.out.println(\"Flying fish is flying\");"
+    },
+    {
+      "id": 12,
+      "type": "statement",
+      "label": "System.out.println(\"Flying fish is swimming\");"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 6
+    },
+    {
+      "source": 2,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "label": "implements"
+    },
+    {
+      "source": 4,
+      "target": 9
+    },
+    {
+      "source": 5,
+      "target": 10
+    },
+    {
+      "source": 5,
+      "target": 11
+    },
+    {
+      "source": 5,
+      "target": 12
+    }
+  ]
+}

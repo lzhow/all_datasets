@@ -1,0 +1,110 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "square_numbers",
+      "children": [
+        {
+          "type": "arguments",
+          "children": [
+            {
+              "type": "arg",
+              "value": "n"
+            }
+          ]
+        },
+        {
+          "type": "For",
+          "children": [
+            {
+              "type": "Name",
+              "value": "i"
+            },
+            {
+              "type": "Call",
+              "value": "range",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "n"
+                }
+              ]
+            },
+            {
+              "type": "Expr",
+              "children": [
+                {
+                  "type": "Yield",
+                  "children": [
+                    {
+                      "type": "BinOp",
+                      "value": "**",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "i"
+                        },
+                        {
+                          "type": "Num",
+                          "value": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Assign",
+      "children": [
+        {
+          "type": "Name",
+          "value": "squares"
+        },
+        {
+          "type": "Call",
+          "value": "square_numbers",
+          "children": [
+            {
+              "type": "Num",
+              "value": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "For",
+      "children": [
+        {
+          "type": "Name",
+          "value": "num"
+        },
+        {
+          "type": "Name",
+          "value": "squares"
+        },
+        {
+          "type": "Expr",
+          "children": [
+            {
+              "type": "Call",
+              "value": "print",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "num"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

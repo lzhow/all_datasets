@@ -1,0 +1,162 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "Data"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "Data"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "i"
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "float"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "f"
+                }
+              ]
+            },
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "char"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "str"
+                },
+                {
+                  "type": "Array",
+                  "children": [
+                    {
+                      "type": "Number",
+                      "value": "20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Declaration",
+      "children": [
+        {
+          "type": "Type",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "int"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "value": "main"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "Declaration",
+              "children": [
+                {
+                  "type": "Type",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "union"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "Data"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "data"
+                }
+              ]
+            },
+            {
+              "type": "Assignment",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "value": "data"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "i"
+                },
+                {
+                  "type": "Number",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "type": "Return",
+              "children": [
+                {
+                  "type": "Number",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

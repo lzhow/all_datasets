@@ -1,0 +1,193 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "children": [
+        {
+          "type": "Version",
+          "value": "^0.5.0"
+        }
+      ]
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "Identifier",
+          "value": "S"
+        },
+        {
+          "type": "FunctionDefinition",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "f"
+            },
+            {
+              "type": "ParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    },
+                    {
+                      "type": "Identifier",
+                      "value": "j"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Visibility",
+              "value": "internal"
+            },
+            {
+              "type": "StateMutability",
+              "value": "pure"
+            },
+            {
+              "type": "ReturnParameterList",
+              "children": [
+                {
+                  "type": "Parameter",
+                  "children": [
+                    {
+                      "type": "ElementaryTypeName",
+                      "value": "uint"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "VariableDeclarationStatement",
+                  "children": [
+                    {
+                      "type": "VariableDeclaration",
+                      "children": [
+                        {
+                          "type": "ElementaryTypeName",
+                          "value": "uint"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "i"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ForStatement",
+                  "children": [
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "j"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "_i"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BinaryOperation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "j"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "!="
+                        },
+                        {
+                          "type": "Literal",
+                          "value": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "j"
+                            },
+                            {
+                              "type": "BinaryOperation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "j"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "/="
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "10"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "len"
+                        },
+                        {
+                          "type": "UnaryOperation",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "++"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ReturnStatement",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "i"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

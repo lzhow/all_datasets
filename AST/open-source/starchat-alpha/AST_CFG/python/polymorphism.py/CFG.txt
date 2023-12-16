@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "function",
+      "label": "def a(self):"
+    },
+    {
+      "id": 2,
+      "type": "function",
+      "label": "def f(self):"
+    },
+    {
+      "id": 3,
+      "type": "function",
+      "label": "def f(self):"
+    },
+    {
+      "id": 4,
+      "type": "class",
+      "label": "class A:"
+    },
+    {
+      "id": 5,
+      "type": "class",
+      "label": "class B(A):"
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 4,
+      "target": 1
+    },
+    {
+      "source": 5,
+      "target": 3
+    },
+    {
+      "source": 5,
+      "target": 4
+    }
+  ]
+}

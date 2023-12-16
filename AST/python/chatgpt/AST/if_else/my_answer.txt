@@ -1,0 +1,125 @@
+{
+  "type": "Module",
+  "children": [
+    {
+      "type": "FunctionDef",
+      "value": "ifelse",
+      "children": [
+        {
+          "type": "arguments",
+          "children": [
+            {
+              "type": "arg",
+              "value": "a"
+            },
+            {
+              "type": "arg",
+              "value": "b"
+            }
+          ]
+        },
+        {
+          "type": "Expr",
+          "children": [
+            {
+              "type": "IfExp",
+              "children": [
+                {
+                  "type": "Compare",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "a"
+                    },
+                    {
+                      "type": "Gt"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "b"
+                    }
+                  ]
+                },
+                {
+                  "type": "Expr",
+                  "children": [
+                    {
+                      "type": "Call",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "print"
+                        },
+                        {
+                          "type": "Str",
+                          "value": ">"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "IfExp",
+                  "children": [
+                    {
+                      "type": "Compare",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "a"
+                        },
+                        {
+                          "type": "Eq"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Expr",
+                      "children": [
+                        {
+                          "type": "Call",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "print"
+                            },
+                            {
+                              "type": "Str",
+                              "value": "="
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Expr",
+                      "children": [
+                        {
+                          "type": "Call",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "print"
+                            },
+                            {
+                              "type": "Str",
+                              "value": "<"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

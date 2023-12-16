@@ -1,0 +1,237 @@
+{
+  "type": "SourceUnit",
+  "children": [
+    {
+      "type": "PragmaDirective",
+      "value": "pragma solidity ^0.5.0;"
+    },
+    {
+      "type": "ContractDefinition",
+      "children": [
+        {
+          "type": "ContractKeyword",
+          "value": "contract"
+        },
+        {
+          "type": "Identifier",
+          "value": "S"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "FunctionDefinition",
+              "children": [
+                {
+                  "type": "FunctionKeyword",
+                  "value": "function"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "f"
+                },
+                {
+                  "type": "ParameterList",
+                  "children": [
+                    {
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "a"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "c"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "type": "TypeName",
+                          "children": [
+                            {
+                              "type": "ElementaryTypeName",
+                              "value": "uint"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "r"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "IfStatement",
+                      "children": [
+                        {
+                          "type": "IfKeyword",
+                          "value": "if"
+                        },
+                        {
+                          "type": "Expression",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "a"
+                            },
+                            {
+                              "type": "GreaterThan",
+                              "value": ">"
+                            },
+                            {
+                              "type": "Identifier",
+                              "value": "b"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "r"
+                                    },
+                                    {
+                                      "type": "AssignmentOperator",
+                                      "value": "="
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "a"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ElseStatement",
+                          "children": [
+                            {
+                              "type": "ElseKeyword",
+                              "value": "else"
+                            },
+                            {
+                              "type": "Block",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "r"
+                                        },
+                                        {
+                                          "type": "AssignmentOperator",
+                                          "value": "="
+                                        },
+                                        {
+                                          "type": "BinaryOperation",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "b"
+                                            },
+                                            {
+                                              "type": "Plus",
+                                              "value": "+"
+                                            },
+                                            {
+                                              "type": "Identifier",
+                                              "value": "c"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "children": [
+                        {
+                          "type": "ReturnKeyword",
+                          "value": "return"
+                        },
+                        {
+                          "type": "Identifier",
+                          "value": "r"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

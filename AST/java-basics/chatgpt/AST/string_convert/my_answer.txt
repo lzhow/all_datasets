@@ -1,0 +1,287 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ClassDeclaration",
+      "value": "StringConverter",
+      "children": [
+        {
+          "type": "MethodDeclaration",
+          "value": "stringToInt",
+          "children": [
+            {
+              "type": "Parameter",
+              "value": "str"
+            },
+            {
+              "type": "Exception",
+              "value": "NumberFormatException"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ReturnStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "value": "parseInt",
+                      "children": [
+                        {
+                          "type": "SimpleName",
+                          "value": "str"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "value": "stringToDouble",
+          "children": [
+            {
+              "type": "Parameter",
+              "value": "str"
+            },
+            {
+              "type": "Exception",
+              "value": "NumberFormatException"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ReturnStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "value": "parseDouble",
+                      "children": [
+                        {
+                          "type": "SimpleName",
+                          "value": "str"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "value": "stringToLong",
+          "children": [
+            {
+              "type": "Parameter",
+              "value": "str"
+            },
+            {
+              "type": "Exception",
+              "value": "NumberFormatException"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "ReturnStatement",
+                  "children": [
+                    {
+                      "type": "MethodInvocation",
+                      "value": "parseLong",
+                      "children": [
+                        {
+                          "type": "SimpleName",
+                          "value": "str"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "MethodDeclaration",
+          "value": "main",
+          "children": [
+            {
+              "type": "Parameter",
+              "value": "args"
+            },
+            {
+              "type": "Block",
+              "children": [
+                {
+                  "type": "TryStatement",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "VariableDeclarationStatement",
+                          "value": "intValue",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "stringToInt",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "\"123\""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclarationStatement",
+                          "value": "doubleValue",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "stringToDouble",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "\"123.45\""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclarationStatement",
+                          "value": "longValue",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "stringToLong",
+                              "children": [
+                                {
+                                  "type": "StringLiteral",
+                                  "value": "\"123456789\""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "println",
+                              "children": [
+                                {
+                                  "type": "InfixExpression",
+                                  "value": "\"Integer: \"",
+                                  "children": [
+                                    {
+                                      "type": "SimpleName",
+                                      "value": "intValue"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "println",
+                              "children": [
+                                {
+                                  "type": "InfixExpression",
+                                  "value": "\"Double: \"",
+                                  "children": [
+                                    {
+                                      "type": "SimpleName",
+                                      "value": "doubleValue"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "value": "println",
+                              "children": [
+                                {
+                                  "type": "InfixExpression",
+                                  "value": "\"Float: \"",
+                                  "children": [
+                                    {
+                                      "type": "SimpleName",
+                                      "value": "longValue"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "CatchClause",
+                      "value": "NumberFormatException",
+                      "children": [
+                        {
+                          "type": "Block",
+                          "children": [
+                            {
+                              "type": "ExpressionStatement",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "value": "println",
+                                  "children": [
+                                    {
+                                      "type": "InfixExpression",
+                                      "value": "\"Invalid string format: \"",
+                                      "children": [
+                                        {
+                                          "type": "MethodInvocation",
+                                          "value": "getMessage",
+                                          "children": [
+                                            {
+                                              "type": "SimpleName",
+                                              "value": "e"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

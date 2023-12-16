@@ -1,0 +1,111 @@
+{
+  "type": "program",
+  "children": [
+    {
+      "type": "declaration",
+      "children": [
+        {
+          "type": "type",
+          "value": "int"
+        },
+        {
+          "type": "identifier",
+          "value": "main"
+        },
+        {
+          "type": "parameters",
+          "children": [
+            {
+              "type": "type",
+              "value": "void"
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type",
+                  "value": "int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "a"
+                },
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "assignment_operator",
+                      "value": "="
+                    },
+                    {
+                      "type": "integer_constant",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "while_statement",
+              "children": [
+                {
+                  "type": "expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "a"
+                    },
+                    {
+                      "type": "relational_operator",
+                      "value": "<"
+                    },
+                    {
+                      "type": "integer_constant",
+                      "value": "100"
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "children": [
+                    {
+                      "type": "expression_statement",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "value": "a"
+                            },
+                            {
+                              "type": "assignment_operator",
+                              "value": "+"
+                            },
+                            {
+                              "type": "integer_constant",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

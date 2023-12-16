@@ -1,0 +1,52 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "StructDeclaration",
+                    "value": "Person",
+                    "children": [
+                        {
+                            "type": "FieldDeclaration",
+                            "value": "name",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "char[20]"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FieldDeclaration",
+                            "value": "age",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "VariableDeclaration",
+                    "value": "person1",
+                    "children": [
+                        {
+                            "type": "Type",
+                            "value": "struct Person"
+                        }
+                    ]
+                },
+                {
+                    "type": "Assignment",
+                    "value": "person1.age = 25"
+                }
+            ]
+        }
+    ]
+}

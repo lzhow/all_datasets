@@ -1,0 +1,43 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "WithStatement",
+            "value": "",
+            "children": [
+                {
+                    "type": "ResourceManagement",
+                    "value": "file",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "open",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"file.txt\""
+                                },
+                                {
+                                    "type": "Argument",
+                                    "value": "\"r\""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "VariableDeclaration",
+                    "value": "data",
+                    "children": [
+                        {
+                            "type": "MethodInvocation",
+                            "value": "file.read",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

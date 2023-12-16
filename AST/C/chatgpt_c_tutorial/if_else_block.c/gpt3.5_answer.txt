@@ -1,0 +1,87 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "Include",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "FunctionDeclaration",
+      "value": "main",
+      "children": [
+        {
+          "type": "Parameter",
+          "value": "void"
+        },
+        {
+          "type": "Block",
+          "children": [
+            {
+              "type": "Declaration",
+              "value": "int n"
+            },
+            {
+              "type": "Scanf",
+              "value": "%d",
+              "children": [
+                {
+                  "type": "AddressOf",
+                  "value": "&n"
+                }
+              ]
+            },
+            {
+              "type": "If",
+              "children": [
+                {
+                  "type": "BinaryExpression",
+                  "value": ">",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "n"
+                    },
+                    {
+                      "type": "Number",
+                      "value": "10"
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "value": "puts",
+                      "children": [
+                        {
+                          "type": "String",
+                          "value": "Large"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Block",
+                  "children": [
+                    {
+                      "type": "FunctionCall",
+                      "value": "puts",
+                      "children": [
+                        {
+                          "type": "String",
+                          "value": "Small"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

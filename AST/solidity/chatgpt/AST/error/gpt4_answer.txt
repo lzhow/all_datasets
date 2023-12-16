@@ -1,0 +1,107 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "PragmaDirective",
+            "value": "solidity ^0.8.0",
+            "children": []
+        },
+        {
+            "type": "ContractDeclaration",
+            "value": "ErrorHandling",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "testRequire",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "_i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "RequireStatement",
+                            "value": "_i > 10",
+                            "children": [
+                                {
+                                    "type": "ErrorMessage",
+                                    "value": "\"Input must be greater than 10\""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "testRevert",
+                    "children": [
+                        {
+                            "type": "Parameter",
+                            "value": "_i",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "uint"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "_i <= 10"
+                                },
+                                {
+                                    "type": "RevertStatement",
+                                    "value": "Input must be greater than 10"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "testAssert",
+                    "children": [
+                        {
+                            "type": "Visibility",
+                            "value": "public"
+                        },
+                        {
+                            "type": "StateMutability",
+                            "value": "pure"
+                        },
+                        {
+                            "type": "AssertStatement",
+                            "value": "1 == 2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,197 @@
+{
+  "type": "compilationUnit",
+  "children": [
+    {
+      "type": "classDeclaration",
+      "value": "Animal",
+      "children": [
+        {
+          "type": "methodDeclaration",
+          "value": "makeSound",
+          "children": [
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "expressionStatement",
+                  "children": [
+                    {
+                      "type": "methodInvocation",
+                      "value": "System.out.println",
+                      "children": [
+                        {
+                          "type": "stringLiteral",
+                          "value": "Some sound"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "classDeclaration",
+      "value": "Dog",
+      "children": [
+        {
+          "type": "methodDeclaration",
+          "value": "makeSound",
+          "children": [
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "expressionStatement",
+                  "children": [
+                    {
+                      "type": "methodInvocation",
+                      "value": "System.out.println",
+                      "children": [
+                        {
+                          "type": "stringLiteral",
+                          "value": "Bark"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "methodDeclaration",
+          "value": "fetch",
+          "children": [
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "expressionStatement",
+                  "children": [
+                    {
+                      "type": "methodInvocation",
+                      "value": "System.out.println",
+                      "children": [
+                        {
+                          "type": "stringLiteral",
+                          "value": "Fetching..."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "classDeclaration",
+      "value": "TypeCastingAndInferenceExample",
+      "children": [
+        {
+          "type": "methodDeclaration",
+          "value": "main",
+          "children": [
+            {
+              "type": "block",
+              "children": [
+                {
+                  "type": "variableDeclaration",
+                  "value": "Animal animal = new Dog();",
+                  "children": [
+                    {
+                      "type": "variableDeclarator",
+                      "value": "animal",
+                      "children": [
+                        {
+                          "type": "classInstanceCreation",
+                          "value": "new Dog()",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "expressionStatement",
+                  "children": [
+                    {
+                      "type": "methodInvocation",
+                      "value": "animal.makeSound",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "ifStatement",
+                  "children": [
+                    {
+                      "type": "instanceofExpression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "animal"
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "Dog"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "block",
+                      "children": [
+                        {
+                          "type": "variableDeclaration",
+                          "value": "Dog dog = (Dog) animal;",
+                          "children": [
+                            {
+                              "type": "variableDeclarator",
+                              "value": "dog",
+                              "children": [
+                                {
+                                  "type": "castExpression",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "value": "Dog"
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "value": "animal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "expressionStatement",
+                          "children": [
+                            {
+                              "type": "methodInvocation",
+                              "value": "dog.fetch",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "type": "module",
+  "children": [
+    {
+      "type": "assign",
+      "value": "original_string",
+      "children": [
+        {
+          "type": "str",
+          "value": "\"Hello, Python!\""
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "length",
+      "children": [
+        {
+          "type": "call",
+          "value": "len",
+          "children": [
+            {
+              "type": "name",
+              "value": "original_string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "upper_string",
+      "children": [
+        {
+          "type": "call",
+          "value": "upper",
+          "children": [
+            {
+              "type": "name",
+              "value": "original_string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "split_string",
+      "children": [
+        {
+          "type": "call",
+          "value": "split",
+          "children": [
+            {
+              "type": "name",
+              "value": "original_string"
+            },
+            {
+              "type": "str",
+              "value": "\",\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "position",
+      "children": [
+        {
+          "type": "call",
+          "value": "find",
+          "children": [
+            {
+              "type": "name",
+              "value": "original_string"
+            },
+            {
+              "type": "str",
+              "value": "\"Python\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assign",
+      "value": "joined_string",
+      "children": [
+        {
+          "type": "call",
+          "value": "join",
+          "children": [
+            {
+              "type": "list",
+              "value": [
+                {
+                  "type": "str",
+                  "value": "\"Joined\""
+                },
+                {
+                  "type": "str",
+                  "value": "\"string\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

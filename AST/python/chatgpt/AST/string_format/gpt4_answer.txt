@@ -1,0 +1,146 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "VariableDeclaration",
+            "value": "name",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "\"Alice\""
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "age",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "30"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "formatted_str1",
+            "children": [
+                {
+                    "type": "StringFormatting",
+                    "value": "\"Hello, %s. You are %d years old.\" % (name, age)"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "formatted_str1"
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "name",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "\"Bob\""
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "age",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "25"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "formatted_str2",
+            "children": [
+                {
+                    "type": "StringFormatting",
+                    "value": "\"Hello, {}. You are {} years old.\".format(name, age)"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "formatted_str2"
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "name",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "\"Carol\""
+                }
+            ]
+        },
+        {
+            "type": "VariableAssignment",
+            "value": "age",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "35"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "formatted_str3",
+            "children": [
+                {
+                    "type": "StringInterpolation",
+                    "value": "f\"Hello, {name}. You are {age} years old.\""
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "formatted_str3"
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "formatted_str4",
+            "children": [
+                {
+                    "type": "StringFormatting",
+                    "value": "\"Hello, {name}. You are {age} years old.\".format(name=\"Dave\", age=40)"
+                }
+            ]
+        },
+        {
+            "type": "MethodInvocation",
+            "value": "print",
+            "children": [
+                {
+                    "type": "Argument",
+                    "value": "formatted_str4"
+                }
+            ]
+        }
+    ]
+}

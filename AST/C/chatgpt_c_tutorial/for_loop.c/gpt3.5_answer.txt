@@ -1,0 +1,209 @@
+{
+  "type": "translation_unit",
+  "children": [
+    {
+      "type": "include_directive",
+      "value": "<stdio.h>"
+    },
+    {
+      "type": "function_declaration",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "unsigned int"
+        },
+        {
+          "type": "identifier",
+          "value": "f"
+        },
+        {
+          "type": "parameter_list",
+          "children": [
+            {
+              "type": "parameter_declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "l"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "children": [
+        {
+          "type": "type_specifier",
+          "value": "unsigned int"
+        },
+        {
+          "type": "identifier",
+          "value": "f"
+        },
+        {
+          "type": "parameter_list",
+          "children": [
+            {
+              "type": "parameter_declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "children": [
+            {
+              "type": "declaration",
+              "children": [
+                {
+                  "type": "type_specifier",
+                  "value": "unsigned int"
+                },
+                {
+                  "type": "identifier",
+                  "value": "s"
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "children": [
+                {
+                  "type": "assignment_expression",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "value": "s"
+                    },
+                    {
+                      "type": "constant",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "iteration_statement",
+              "children": [
+                {
+                  "type": "for_loop",
+                  "children": [
+                    {
+                      "type": "declaration",
+                      "children": [
+                        {
+                          "type": "type_specifier",
+                          "value": "unsigned int"
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "i"
+                        },
+                        {
+                          "type": "assignment_expression",
+                          "children": [
+                            {
+                              "type": "constant",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "relational_expression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "i"
+                        },
+                        {
+                          "type": "less_than_or_equal_to",
+                          "value": "<="
+                        },
+                        {
+                          "type": "identifier",
+                          "value": "l"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "assignment_expression",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "value": "i"
+                        },
+                        {
+                          "type": "addition_assignment",
+                          "value": "+="
+                        },
+                        {
+                          "type": "constant",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "compound_statement",
+                      "children": [
+                        {
+                          "type": "expression_statement",
+                          "children": [
+                            {
+                              "type": "assignment_expression",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "value": "s"
+                                },
+                                {
+                                  "type": "addition_assignment",
+                                  "value": "+="
+                                },
+                                {
+                                  "type": "identifier",
+                                  "value": "i"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "return_statement",
+              "children": [
+                {
+                  "type": "identifier",
+                  "value": "s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

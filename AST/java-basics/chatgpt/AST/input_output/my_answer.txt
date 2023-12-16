@@ -1,0 +1,878 @@
+{
+  "type": "CompilationUnit",
+  "children": [
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "ArrayList"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "children": [
+        {
+          "type": "QualifiedName",
+          "children": [
+            {
+              "type": "Identifier",
+              "value": "java"
+            },
+            {
+              "type": "Identifier",
+              "value": "util"
+            },
+            {
+              "type": "Identifier",
+              "value": "Scanner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "children": [
+        {
+          "type": "Modifier",
+          "value": "private"
+        },
+        {
+          "type": "Identifier",
+          "value": "SimpleReader"
+        },
+        {
+          "type": "ClassBody",
+          "children": [
+            {
+              "type": "FieldDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "private"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "Scanner"
+                },
+                {
+                  "type": "VariableDeclarator",
+                  "children": [
+                    {
+                      "type": "Identifier",
+                      "value": "scanner"
+                    },
+                    {
+                      "type": "ClassInstanceCreation",
+                      "children": [
+                        {
+                          "type": "Identifier",
+                          "value": "Scanner"
+                        },
+                        {
+                          "type": "Arguments",
+                          "children": [
+                            {
+                              "type": "FieldAccess",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "System"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "in"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "SimpleReader"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "int"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readInt"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "nextInt"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "double"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readDouble"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "nextDouble"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "String"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readString"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "next"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "char"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readChar"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "next"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "charAt"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "Literal",
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "boolean"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "hasNextChar"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "hasNext"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "boolean"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "hasNextLine"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "hasNextLine"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "String"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readLine"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "nextLine"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "ArrayType",
+                  "children": [
+                    {
+                      "type": "PrimitiveType",
+                      "value": "int"
+                    }
+                  ]
+                },
+                {
+                  "type": "Identifier",
+                  "value": "readAllInts"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "LocalVariableDeclaration",
+                          "children": [
+                            {
+                              "type": "ArrayType",
+                              "children": [
+                                {
+                                  "type": "PrimitiveType",
+                                  "value": "Integer"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "VariableDeclarator",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "ints"
+                                },
+                                {
+                                  "type": "ClassInstanceCreation",
+                                  "children": [
+                                    {
+                                      "type": "QualifiedName",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "ArrayList"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "WhileStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "scanner"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "hasNextInt"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Block",
+                              "children": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "children": [
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "ints"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "add"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": [
+                                            {
+                                              "type": "MethodInvocation",
+                                              "children": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "value": "scanner"
+                                                },
+                                                {
+                                                  "type": "Identifier",
+                                                  "value": "nextInt"
+                                                },
+                                                {
+                                                  "type": "Arguments",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ReturnStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "MethodInvocation",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "ints"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "stream"
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "mapToInt"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "LambdaExpression",
+                                      "children": [
+                                        {
+                                          "type": "SingleVariableDeclaration",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "i"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "LambdaBody",
+                                          "children": [
+                                            {
+                                              "type": "Identifier",
+                                              "value": "i"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "MethodDeclaration",
+              "children": [
+                {
+                  "type": "Modifier",
+                  "value": "public"
+                },
+                {
+                  "type": "PrimitiveType",
+                  "value": "void"
+                },
+                {
+                  "type": "Identifier",
+                  "value": "main"
+                },
+                {
+                  "type": "MethodBody",
+                  "children": [
+                    {
+                      "type": "Block",
+                      "children": [
+                        {
+                          "type": "LocalVariableDeclaration",
+                          "children": [
+                            {
+                              "type": "Identifier",
+                              "value": "SimpleReader"
+                            },
+                            {
+                              "type": "VariableDeclarator",
+                              "children": [
+                                {
+                                  "type": "Identifier",
+                                  "value": "reader"
+                                },
+                                {
+                                  "type": "ClassInstanceCreation",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "SimpleReader"
+                                    },
+                                    {
+                                      "type": "Arguments",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "Reading an integer: "
+                                    },
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "reader"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "readInt"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "StringLiteral",
+                                      "value": "Reading a double: "
+                                    },
+                                    {
+                                      "type": "MethodInvocation",
+                                      "children": [
+                                        {
+                                          "type": "Identifier",
+                                          "value": "reader"
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "value": "readDouble"
+                                        },
+                                        {
+                                          "type": "Arguments",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "children": [
+                            {
+                              "type": "MethodInvocation",
+                              "children": [
+                                {
+                                  "type": "FieldAccess",
+                                  "children": [
+                                    {
+                                      "type": "Identifier",
+                                      "value": "System"
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "value": "out"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "value": "println"
+                                },
+                                {
+                                  "type": "Arguments",
+                                  "children": [
+                                    {
+                                      "type": "String

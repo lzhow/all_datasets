@@ -1,0 +1,126 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "label": "int main() {"
+    },
+    {
+      "id": 1,
+      "label": "char str[100];"
+    },
+    {
+      "id": 2,
+      "label": "int i;"
+    },
+    {
+      "id": 3,
+      "label": "char ch;"
+    },
+    {
+      "id": 4,
+      "label": "printf(\"Enter a string: \");"
+    },
+    {
+      "id": 5,
+      "label": "fgets(str, sizeof(str), stdin);"
+    },
+    {
+      "id": 6,
+      "label": "puts(\"You entered: \");"
+    },
+    {
+      "id": 7,
+      "label": "puts(str);"
+    },
+    {
+      "id": 8,
+      "label": "scanf(\"%d\", &i);"
+    },
+    {
+      "id": 9,
+      "label": "while ((getchar())!= '\\n')"
+    },
+    {
+      "id": 10,
+      "label": "ch = getchar();"
+    },
+    {
+      "id": 11,
+      "label": "// \u4f7f\u7528 putchar \u8f93\u51fa\u5b57\u7b26"
+    },
+    {
+      "id": 12,
+      "label": "putchar(ch);"
+    },
+    {
+      "id": 13,
+      "label": "putchar('\\n');"
+    },
+    {
+      "id": 14,
+      "label": "return 0;"
+    },
+    {
+      "id": 15,
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1
+    },
+    {
+      "from": 0,
+      "to": 2
+    },
+    {
+      "from": 0,
+      "to": 3
+    },
+    {
+      "from": 1,
+      "to": 4
+    },
+    {
+      "from": 2,
+      "to": 5
+    },
+    {
+      "from": 3,
+      "to": 6
+    },
+    {
+      "from": 4,
+      "to": 7
+    },
+    {
+      "from": 5,
+      "to": 8
+    },
+    {
+      "from": 6,
+      "to": 9
+    },
+    {
+      "from": 7,
+      "to": 10
+    },
+    {
+      "from": 8,
+      "to": 11
+    },
+    {
+      "from": 9,
+      "to": 12
+    },
+    {
+      "from": 10,
+      "to": 13
+    },
+    {
+      "from": 11,
+      "to": 14
+    }
+  ]
+}

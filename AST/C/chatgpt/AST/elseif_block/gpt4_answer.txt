@@ -1,0 +1,98 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "Program",
+            "value": "",
+            "children": [
+                {
+                    "type": "FunctionDeclaration",
+                    "value": "main",
+                    "children": [
+                        {
+                            "type": "VariableDeclaration",
+                            "value": "n",
+                            "children": [
+                                {
+                                    "type": "Type",
+                                    "value": "int"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "MethodInvocation",
+                            "value": "scanf",
+                            "children": [
+                                {
+                                    "type": "Argument",
+                                    "value": "\"%d\", &n"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "IfStatement",
+                            "value": "",
+                            "children": [
+                                {
+                                    "type": "RelationalExpression",
+                                    "value": "n > 0"
+                                },
+                                {
+                                    "type": "MethodInvocation",
+                                    "value": "printf",
+                                    "children": [
+                                        {
+                                            "type": "Argument",
+                                            "value": "\"large\\n\""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ElseIfBlock",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "RelationalExpression",
+                                            "value": "n > -5"
+                                        },
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "printf",
+                                            "children": [
+                                                {
+                                                    "type": "Argument",
+                                                    "value": "\"mid\\n\""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ElseBlock",
+                                    "value": "",
+                                    "children": [
+                                        {
+                                            "type": "MethodInvocation",
+                                            "value": "print",
+                                            "children": [
+                                                {
+                                                    "type": "Argument",
+                                                    "value": "\"small\\n\""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ReturnStatement",
+                            "value": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

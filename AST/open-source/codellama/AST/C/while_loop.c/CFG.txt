@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "entry",
+      "label": "main"
+    },
+    {
+      "id": 1,
+      "type": "assignment",
+      "label": "a = 0"
+    },
+    {
+      "id": 2,
+      "type": "while",
+      "label": "while (a < 100)"
+    },
+    {
+      "id": 3,
+      "type": "assignment",
+      "label": "a += 1"
+    },
+    {
+      "id": 4,
+      "type": "exit",
+      "label": "return 0"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 4
+    }
+  ]
+}

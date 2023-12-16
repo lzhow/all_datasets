@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "ImportDeclaration",
+      "label": "import java.util.LinkedList;"
+    },
+    {
+      "id": 1,
+      "type": "ImportDeclaration",
+      "label": "import java.util.Queue;"
+    },
+    {
+      "id": 2,
+      "type": "ClassDeclaration",
+      "label": "public class QueueExample {"
+    },
+    {
+      "id": 3,
+      "type": "MethodDeclaration",
+      "label": "public static void main(String[] args) {"
+    },
+    {
+      "id": 4,
+      "type": "LocalVariableDeclaration",
+      "label": "Queue<Integer> queue = new LinkedList<>();"
+    },
+    {
+      "id": 5,
+      "type": "ExpressionStatement",
+      "label": "queue.offer(1);"
+    },
+    {
+      "id": 6,
+      "type": "ExpressionStatement",
+      "label": "queue.offer(2);"
+    },
+    {
+      "id": 7,
+      "type": "ExpressionStatement",
+      "label": "queue.offer(3);"
+    },
+    {
+      "id": 8,
+      "type": "IfStatement",
+      "label": "while (!queue.isEmpty()) {"
+    },
+    {
+      "id": 9,
+      "type": "ExpressionStatement",
+      "label": "System.out.println(queue.poll());"
+    },
+    {
+      "id": 10,
+      "type": "BlockStatement",
+      "label": "}"
+    },
+    {
+      "id": 11,
+      "type": "BlockStatement",
+      "label": "}"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 5
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 4,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 8,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 11
+    }
+  ]
+}

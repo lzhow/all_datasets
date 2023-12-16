@@ -1,0 +1,91 @@
+{
+    "type": "Program",
+    "value": "",
+    "children": [
+        {
+            "type": "VariableDeclaration",
+            "value": "original_string",
+            "children": [
+                {
+                    "type": "VariableInitializer",
+                    "value": "\"Hello, Python!\""
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "length",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "len",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "original_string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "upper_string",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "original_string.upper",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "split_string",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "original_string.split",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "\",\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "position",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "original_string.find",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "\"Python\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "VariableDeclaration",
+            "value": "joined_string",
+            "children": [
+                {
+                    "type": "MethodInvocation",
+                    "value": "\" \".join",
+                    "children": [
+                        {
+                            "type": "Argument",
+                            "value": "[\"Joined\", \"string\"]"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
